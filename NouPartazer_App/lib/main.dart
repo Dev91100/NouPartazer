@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget
   {
     return MaterialApp(
       title: 'NouPartazer',
-      home: , // <-- Insert page class here
+      home:, // <-- Insert page class here
     );
   }
 }
