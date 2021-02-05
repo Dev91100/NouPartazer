@@ -5,7 +5,7 @@ final foods =[
   FoodData(
     id:"1",
     name: "Vegetable Item",
-    imagePath: "assets/images/food.jpeg",
+    imagePath: "assets/JPEG/food.jpeg",
     category: "Vegetable",
     price: 33.0,
     discount: 30.0,
@@ -14,7 +14,7 @@ final foods =[
   FoodData(
     id:"2",
     name: "Fast Food",
-    imagePath: "assets/images/junk.jpeg",
+    imagePath: "assets/JPEG/junk.jpeg",
     category: "Fast Food",
     price: 43.0,
     discount: 50.0,
@@ -23,7 +23,7 @@ final foods =[
   FoodData(
     id:"3",
     name: "Cofee Item",
-    imagePath: "assets/images/verCofee.jpeg",
+    imagePath: "assets/JPEG/verCofee.jpeg",
     category: "Cofee",
     price: 20.0,
     discount: 10.0,
@@ -32,7 +32,7 @@ final foods =[
   FoodData(
     id:"1",
     name: "Vegetable Item",
-    imagePath: "assets/images/food.jpeg",
+    imagePath: "assets/JPEG/food.jpeg",
     category: "Vegetable",
     price: 37.0,
     discount: 70.0,

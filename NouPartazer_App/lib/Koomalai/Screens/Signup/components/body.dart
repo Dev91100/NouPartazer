@@ -143,7 +143,7 @@ class Body extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 SocalIcon(
-                  iconSrc: "assets/icons/NGO.svg",
+                  iconSrc: "assets/SVG/NGO.svg",
                   press: () {
                     Navigator.push(
                       context,
@@ -156,7 +156,7 @@ class Body extends StatelessWidget {
                   },
                 ),
                 SocalIcon(
-                  iconSrc: "assets/icons/Business.svg",
+                  iconSrc: "assets/SVG/Business.svg",
                   press: () {
                     Navigator.push(
                       context,

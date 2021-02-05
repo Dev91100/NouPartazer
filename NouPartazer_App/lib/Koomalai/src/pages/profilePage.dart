@@ -70,7 +70,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 height: 200.0,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("assets/images/Rectangle 13.jpg"),
+                    image: AssetImage("assets/JPEG/Rectangle 13.jpg"),
                     fit: BoxFit.cover,
                   ),
                   borderRadius: BorderRadius.circular(0.0),
@@ -111,7 +111,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     height: 200.0,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage("assets/images/Rectangle 13.jpg"),
+                        image: AssetImage("assets/JPEG/Rectangle 13.jpg"),
                         fit: BoxFit.cover,
                       ),
                       borderRadius: BorderRadius.circular(0.0),
@@ -169,7 +169,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     height: 135.0,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage("assets/images/Rectangle 12.jpg"),
+                        image: AssetImage("assets/JPEG/Rectangle 12.jpg"),
                         fit: BoxFit.cover,
                       ),
                       borderRadius: BorderRadius.circular(80.0),
@@ -691,7 +691,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       height: 70.0,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: AssetImage("assets/images/Photo.jpg"),
+                              image: AssetImage("assets/JPEG/Photo.jpg"),
                               fit: BoxFit.cover,
                             ),
                             borderRadius: BorderRadius.circular(80.0),

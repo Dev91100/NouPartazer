@@ -36,7 +36,7 @@ class Background extends StatelessWidget {
           Container(
             margin: EdgeInsets.only(top: 0,bottom: 389.0),
             child: Image(
-              image: AssetImage('assets/images/image.jpg'),
+              image: AssetImage('assets/JPEG/image.jpg'),
               height: size.height * 1.0,
 
             ),

@@ -3,24 +3,24 @@ import '../models/categoryModel.dart';
 final categories =[
   Category(
     categoryName: "Burger",
-    imagePath: "assets/images/bolRenverser.jpg",
+    imagePath: "assets/JPEG/bolRenverser.jpg",
     noOfItem: 96,
   ),
   Category(
     categoryName: "Pizza",
-    imagePath: "assets/images/pizza.jpeg",
+    imagePath: "assets/JPEG/pizza.jpeg",
     noOfItem: 67,
   ),
 
   Category(
     categoryName: "Coffee Tea",
-    imagePath: "assets/images/cofee.jpeg",
+    imagePath: "assets/JPEG/cofee.jpeg",
     noOfItem: 45,
   ),
 
   Category(
     categoryName: "Beer",
-    imagePath: "assets/images/beer.jpeg",
+    imagePath: "assets/JPEG/beer.jpeg",
     noOfItem: 64,
   ),
 ];

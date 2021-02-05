@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Container(
             /*margin: EdgeInsets.only(top: 0.0),*/
             child:Image(
-              image: AssetImage('assets/images/Splash Screen 2.jpg'),
+              image: AssetImage('assets/JPEG/Splash Screen 2.jpg'),
               height: 700.0,
             ),
           ),
