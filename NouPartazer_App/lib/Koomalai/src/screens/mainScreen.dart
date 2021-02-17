@@ -1,3 +1,7 @@
+//import 'package:NouPartazer_App/Koomalai/src/NGO%20Donation/NGO%20donation.dart';
+import 'package:NouPartazer_App/Koomalai/src/NGO%20donation/NGO%20donation.dart';
+import 'package:NouPartazer_App/Koomalai/src/NGO%20profile/NGOProfile.dart';
+import 'package:NouPartazer_App/Koomalai/src/NGODonation/NGO%20donation.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:NouPartazer_App/Koomalai/Screens/Login/login_screen.dart';
@@ -7,8 +11,18 @@ import 'package:NouPartazer_App/Koomalai/src/pages/mapsPage.dart';
 import 'package:NouPartazer_App/Koomalai/src/pages/orderPage.dart';
 import 'package:NouPartazer_App/Koomalai/src/pages/profilePage.dart';
 
+import 'NGO task tab bar.dart';
+
 class MainScreen extends StatefulWidget
 {
+  final Widget child;
+  const MainScreen({
+
+    Key key,
+    @required this.child,
+  }) : super(key: key);
+
+
   @override
   _MainScreenState createState() => _MainScreenState();
 }
@@ -18,19 +32,20 @@ class _MainScreenState extends State<MainScreen> {
   List<Widget> pages;
   Widget currentPage;
   HomePage homePage;
+  NGOProfile profilePage;
   OrderPage orderPage;
-  MapsPage mapsPage;
-  ProfilePage profilePage;
-  LoginScreen login_screen;
+  NGODonation donation;
+  NGOTaskTab task;
   @override
   void initState() {
     super.initState();
     homePage=HomePage();
+    profilePage=NGOProfile();
     orderPage=OrderPage();
-    mapsPage=MapsPage();
-    profilePage=ProfilePage();
-    login_screen=LoginScreen();
-    pages=[homePage,orderPage,mapsPage,profilePage,login_screen];
+    donation= NGODonation();
+
+   task=NGOTaskTab();
+    pages=[homePage,profilePage,orderPage,donation,task];
     currentPage=homePage;
 
   }
@@ -65,7 +80,7 @@ class _MainScreenState extends State<MainScreen> {
 
             ),
             BottomNavigationBarItem(
-            icon:Icon(Icons.add_circle_rounded,color: Colors.amber,size: 80.0,),
+            icon:Icon(Icons.add_circle_rounded,color: Colors.amber,size: 50.0,),
             // ignore: deprecated_member_use
             title: Text("Add stories"),
             ),
@@ -84,7 +99,7 @@ class _MainScreenState extends State<MainScreen> {
 
 
         ],
-        selectedItemColor: Colors.lightBlue,
+        selectedItemColor: Colors.blueAccent[700],
 
       ),
       body: currentPage,

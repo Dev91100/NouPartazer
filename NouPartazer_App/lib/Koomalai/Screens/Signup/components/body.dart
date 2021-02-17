@@ -1,3 +1,4 @@
+import 'package:NouPartazer_App/Koomalai/src/screens/secondMainScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:NouPartazer_App/Koomalai/Screens/Business/Business.dart';
 import 'package:NouPartazer_App/Koomalai/Screens/Login/login_screen.dart';
@@ -33,8 +34,35 @@ class Body extends StatelessWidget {
               "assets/icons/signup.svg",
               height: size.height * 0.35,
             ),*/
+            Container(
+              margin: EdgeInsets.only(top: 10.0,right: 20.0),
+              alignment: Alignment.topRight,
 
-            SizedBox(height: size.height * 0.236),
+              child: RaisedButton(
+                child: Text("Skip",style: TextStyle(color: Colors.white, fontSize: 20.0),),
+
+                onPressed: () {
+
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+
+                      return SecondMainScreen();
+
+                    },
+                  ),
+                );
+                },
+                color:Colors.black26,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+              ),
+            ),
+
+
+            SizedBox(height: size.height * 0.295),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
@@ -53,7 +81,7 @@ class Body extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) {
-                          return SignInScreen();
+                          return LoginScreen();
                         },
                       ),
                     );
@@ -139,11 +167,43 @@ class Body extends StatelessWidget {
               },
             ),
             OrDivider(),*/
-            Row(
+            Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                SocalIcon(
-                  iconSrc: "assets/SVG/NGO.svg",
+                /*SizedBox(height: size.height * 0.03),
+                RaisedButton.icon(
+                  icon: Icon(Icons.favorite,color: Colors.blueAccent[700],size: 50.0,),
+
+                  label: Text("NGO",style: TextStyle(color: Colors.blueAccent[700], fontSize: 50.0
+
+                  ),
+                  ),
+
+
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+
+                            return NGO();
+
+                          },
+                        ),
+                      );
+                  },
+
+                  color:Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                    /*side: BorderSide(width: 2.0),*/
+                  ),
+
+
+                ),*/
+             SocalIcon(
+                  iconSrc: "assets/SVG/NGO Button.svg",
+
                   press: () {
                     Navigator.push(
                       context,
@@ -156,7 +216,8 @@ class Body extends StatelessWidget {
                   },
                 ),
                 SocalIcon(
-                  iconSrc: "assets/SVG/Business.svg",
+
+                  iconSrc: "assets/SVG/Business Button.svg",
                   press: () {
                     Navigator.push(
                       context,
@@ -174,9 +235,12 @@ class Body extends StatelessWidget {
                 ),*/
               ],
             )
-          ],
+          ]
         ),
+
+
       ),
-    );
+      );
+
   }
 }

@@ -17,7 +17,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
 import 'package:settings_ui/settings_ui.dart';
 
-import '../NGOProfile.dart';
+import '../IndividualNGOProfile.dart';
 import 'background.dart';
 
 /*import '../Business.dart';*/

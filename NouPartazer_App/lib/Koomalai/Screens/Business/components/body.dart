@@ -1,3 +1,4 @@
+import 'package:NouPartazer_App/Koomalai/src/screens/BusinessNGOmainScreen.dart';
 import 'package:flutter/material.dart';
 /*import 'package:flutter_auth/Screens/Login/components/background.dart';*/
 import 'package:NouPartazer_App/Koomalai/Screens/Login/login_screen.dart';
@@ -273,7 +274,18 @@ class Body extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10.0),
                   side: BorderSide(color:Colors.amber),
                 ),
-                press: () {}
+                press: () {
+
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return BusinessMainScreen();
+                      },
+                    ),
+                  );
+
+                }
 
 
             ),

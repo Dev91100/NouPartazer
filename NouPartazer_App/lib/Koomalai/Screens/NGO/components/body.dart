@@ -26,27 +26,81 @@ class Body extends StatelessWidget {
     Key key,
   }) : super(key: key);*/
 
-  /*TextEditingController user = TextEditingController();
-  TextEditingController pass = TextEditingController();*/
-  TextEditingController regNumberctrl,namectrl,expertisectrl,sizectrl,addressctrl,phonectrl,websitectrl,emailctrl,passctrl;
+  /*TextEditingController regNumber = TextEditingController();
+  TextEditingController name = TextEditingController();
+  TextEditingController expertise = TextEditingController();
+  TextEditingController memberSize = TextEditingController();
+  TextEditingController address = TextEditingController();
+  TextEditingController website = TextEditingController();
+  TextEditingController phone = TextEditingController();
+  TextEditingController email = TextEditingController();
+  TextEditingController password = TextEditingController();*/
+  TextEditingController regNumber,name,expertise,memberSize,address,phone,website,email,password;
 
 
-  Future register() async {
+   Future register(String RegistrationNumber,String RegisteredName,String NGOExpertise,String MemberSize,String Address,String Website,String PhoneNumber) async {
 
     var url = "https://foodsharingapp.000webhostapp.com/register.php";
-    var data = {
-      "RegistrationNumber":regNumberctrl.text,
-      "RegisteredName":namectrl.text,
-      "NGOExpertise":expertisectrl.text,
-      "MemberSize":sizectrl.text,
-      "Address":addressctrl.text,
-      "Website":websitectrl.text,
-      "PhoneNumber":phonectrl.text,
-      "Email":emailctrl.text,
-      "Password":passctrl.text,
-    };
 
-    var res = await http.post(url,body:data);
+    /*var response=await http.post(url,body: {
+      "RegistrationNumber": regNumber.text,
+      "RegisteredName": name.text,
+      "NGOExpertise": expertise.text,
+      "MemberSize":memberSize.text,
+      "Address":address.text,
+      "Website":website.text,
+      "PhoneNumber":phone.text,
+      "Email":email.text,
+      "Password":password.text,
+    });
+
+    var data = json.decode(response.body);
+
+    if (data == "Error") {
+      Fluttertoast.showToast(
+        msg: "This User already Exist!",
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.CENTER,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.red,
+        textColor: Colors.white,
+        fontSize: 16.0,
+      );
+    }
+
+    else{
+      Fluttertoast.showToast(
+        msg: "Registration Successful",
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.CENTER,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.green,
+        textColor: Colors.white,
+        fontSize: 16.0,
+      );
+    }*/
+    /*var data = {
+      "RegistrationNumber":regNumber.text,
+      "RegisteredName":name.text,
+      "NGOExpertise":expertise.text,
+      "MemberSize":memberSize.text,
+      "Address":address.text,
+      "Website":website.text,
+      "PhoneNumber":phone.text,
+      "Email":email.text,
+      "Password":password.text,
+    };*/
+
+    var res = await http.post(url,body: /*body: */{
+    "RegistrationNumber":regNumber,
+    "RegisteredName":name,
+    "NGOExpertise":expertise,
+    "MemberSize":memberSize,
+    "Address":address,
+    "Website":website,
+    "PhoneNumber":phone,
+    /*:data*/
+    });
 
     if(jsonDecode(res.body) == "account already exists"){
       Fluttertoast.showToast(msg: "account exists, Please login",toastLength: Toast.LENGTH_SHORT);
@@ -223,6 +277,16 @@ class Body extends StatelessWidget {
             ),*/
 
             SizedBox(height: size.height * 0.01),
+            /*TextField(
+              controller: regNumber,
+              decoration: InputDecoration(
+                hintText: 'RegistrationNumber',
+                prefixIcon: Icon(Icons.person),
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8)),
+              ),
+
+            ),*/
          Container(
           margin: EdgeInsets.only(left: 25.0),
           alignment: Alignment.bottomLeft,
@@ -233,7 +297,7 @@ class Body extends StatelessWidget {
             ),
         ),
             RoundedInput(
-              controller:regNumberctrl,
+              controller:regNumber,
               hintText: "RegistrationNumber",
               onChanged: (value) {},
 
@@ -251,7 +315,7 @@ class Body extends StatelessWidget {
             ),
             RoundedInput(
               hintText: "RegisteredName",
-              controller:namectrl,
+              controller:name,
               onChanged: (value) {},
             ),
 
@@ -266,7 +330,7 @@ class Body extends StatelessWidget {
             ),
             RoundedInput(
               hintText: "NGO Expertise",
-              controller:expertisectrl,
+              controller:expertise,
               onChanged: (value) {},
             ),
 
@@ -282,7 +346,7 @@ class Body extends StatelessWidget {
             ),
             RoundedInput(
               hintText: "MemberSize",
-              controller:sizectrl,
+              controller:memberSize,
               onChanged: (value) {},
             ),
 
@@ -297,7 +361,7 @@ class Body extends StatelessWidget {
             ),
             RoundedInput(
               hintText: "Address",
-              controller:addressctrl,
+              controller:address,
               onChanged: (value) {},
             ),
 
@@ -312,7 +376,7 @@ class Body extends StatelessWidget {
             ),
             RoundedInput(
               hintText: "Website",
-              controller:websitectrl,
+              controller:website,
               onChanged: (value) {},
             ),
 
@@ -405,7 +469,7 @@ class Body extends StatelessWidget {
             ),
             RoundedInput(
               hintText: "PhoneNumber",
-              controller:phonectrl,
+              controller:phone,
               onChanged: (value) {},
             ),
 
@@ -420,7 +484,7 @@ class Body extends StatelessWidget {
             ),
             RoundedInput(
               hintText: "Email",
-              controller:emailctrl,
+              controller:email,
               onChanged: (value) {},
             ),
 
@@ -435,7 +499,7 @@ class Body extends StatelessWidget {
             ),
             RoundedInput(
               hintText: "Password",
-              controller:passctrl,
+              controller:password,
               onChanged: (value) {},
             ),
 
@@ -452,12 +516,14 @@ class Body extends StatelessWidget {
                 ),
                 /*press: () {}*/
                 press:() {
-                  register();
+                  register(regNumber.text,name.text,expertise.text,memberSize.text,address.text,
+                  website.text, phone.text);
+
                 },
 
 
-            ),
-          /*Container(
+                  ),
+                  /*Container(
             margin: EdgeInsets.symmetric(vertical: 10),
             child: FlatButton(
               child: Text("Register",
@@ -476,7 +542,7 @@ class Body extends StatelessWidget {
           )*/
 
 
-            /*AlreadyHaveAnAccountCheck(
+                  /*AlreadyHaveAnAccountCheck(
               press: () {
                 Navigator.push(
                   context,
@@ -497,8 +563,9 @@ class Body extends StatelessWidget {
 
 
 
-          ],
-        ),
+                  ],
+                  ),
+
       ),
     );
   }

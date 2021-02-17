@@ -3,6 +3,7 @@ import 'package:NouPartazer_App/Koomalai/src/Help%20and%20support/helpAndSupport
 import 'package:NouPartazer_App/Koomalai/src/Security/Security.dart';
 import 'package:NouPartazer_App/Koomalai/src/Settings/Setting.dart';
 import 'package:NouPartazer_App/Koomalai/src/pages/profilePage.dart';
+import 'package:NouPartazer_App/Koomalai/src/screens/IndividualNGOMainScreen.dart';
 import 'package:NouPartazer_App/Koomalai/src/screens/mainScreen.dart';
 import 'package:NouPartazer_App/Koomalai/src/widget/bottomSheetWidget.dart';
 import 'package:NouPartazer_App/Koomalai/src/widget/foodCategory.dart';
@@ -14,83 +15,43 @@ import 'package:settings_ui/settings_ui.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:NouPartazer_App/Koomalai/src/NGO profile/components/Body.dart';
 
-class NGOProfile extends StatelessWidget {
+class IndividualNGOProfile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
 
     return Scaffold(
-      body: Stack(
-        fit: StackFit.expand,
-        children: <Widget>[
-          SingleChildScrollView(
-
-            padding: const EdgeInsets.all(0.0),
-
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-             Positioned(
-            width: MediaQuery.of(context).size.width,
-        top: MediaQuery.of(context).size.height / 6.0,
-
-            // left: 76.0,
-            child: Column(
+        body: Stack(
+            fit: StackFit.expand,
             children: <Widget>[
-              Stack(
-                  children: <Widget>[
-                    Container(
-                      margin: EdgeInsets.only(bottom: 0.0,top: 20.0),
-                      width: 360.0,
-                      height: 200.0,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage("assets/JPEG/Rectangle 13.jpg"),
-                          fit: BoxFit.cover,
-                        ),
-                        borderRadius: BorderRadius.circular(0.0),
-                        /*boxShadow: [
-                    BoxShadow(
-                      blurRadius: 5.0,
-                      color: Colors.black,
-                      offset: Offset(5.0, 6.0),
-                    ),
+              SingleChildScrollView(
 
-                  ],*/
-                      ),
-                    ),
+                  padding: const EdgeInsets.all(0.0),
 
-                    Positioned(
-                      bottom: 20.0,
-                      right: 20.0,
-                      child: InkWell(
-                        child: Icon(
-                          Icons.camera_alt,
-                          color: Colors.white,
-                          size: 28.0,
-                        ),
-                        onTap: () {
-                          showModalBottomSheet(
-                              context: context,
-                              builder: ((builder) => BottomShhetWidget()));
-                        },
-                      ),
-                    ),
-                    Column(
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Stack(
-                          children: <Widget>[
-                            Container(
-                              margin: EdgeInsets.only(bottom: 0.0,top: 20.0),
-                              width: 360.0,
-                              height: 200.0,
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                  image: AssetImage("assets/JPEG/Rectangle 13.jpg"),
-                                  fit: BoxFit.cover,
-                                ),
-                                borderRadius: BorderRadius.circular(0.0),
-                                /*boxShadow: [
+                        Positioned(
+                            width: MediaQuery.of(context).size.width,
+                            top: MediaQuery.of(context).size.height / 6.0,
+
+                            // left: 76.0,
+                            child: Column(
+                                children: <Widget>[
+                                  Stack(
+                                      children: <Widget>[
+
+                                        Container(
+                                          margin: EdgeInsets.only(bottom: 0.0,top: 20.0),
+                                          width: 360.0,
+                                          height: 200.0,
+                                          decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                              image: AssetImage("assets/JPEG/Rectangle 13.jpg"),
+                                              fit: BoxFit.cover,
+                                            ),
+                                            borderRadius: BorderRadius.circular(0.0),
+                                            /*boxShadow: [
                     BoxShadow(
                       blurRadius: 5.0,
                       color: Colors.black,
@@ -98,220 +59,161 @@ class NGOProfile extends StatelessWidget {
                     ),
 
                   ],*/
-                              ),
-                            ),
-
-                            Positioned(
-                              bottom: 20.0,
-                              right: 20.0,
-                              child: InkWell(
-                                child: Icon(
-                                  Icons.camera_alt,
-                                  color: Colors.white,
-                                  size: 28.0,
-                                ),
-                                onTap: () {
-                                  showModalBottomSheet(
-                                      context: context,
-                                      builder: ((builder) => BottomShhetWidget()));
-                                },
-                              ),
-                            ),
+                                          ),
+                                        ),
 
 
-
-                          ],
-                        ),
-
-
-                      ],
+                                        Column(
+                                          children: <Widget>[
+                                            Stack(
+                                                children: <Widget>[
+                                                Container(
+                                                  margin: EdgeInsets.only(bottom: 0.0,top: 20.0),
+                                                  width: 360.0,
+                                                  height: 200.0,
+                                                  decoration: BoxDecoration(
+                                                    image: DecorationImage(
+                                                      image: AssetImage("assets/JPEG/Rectangle 13.jpg"),
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                    borderRadius: BorderRadius.circular(0.0),
+                                                    /*boxShadow: [
+                    BoxShadow(
+                      blurRadius: 5.0,
+                      color: Colors.black,
+                      offset: Offset(5.0, 6.0),
                     ),
 
+                  ],*/
+                                                  ),
+                                                ),
 
-                    Positioned(
-                      /*width: MediaQuery.of(context).size.width,
+
+                                                  Positioned(
+                                                    top: 50.0,
+                                                    left: 20.0,
+                                                    child: InkWell(
+                                                      child: Icon(
+                                                        Icons.arrow_back_ios,
+                                                        color: Colors.black54,
+                                                        size: 28.0,
+                                                      ),
+                                                      onTap: () {
+
+                                                        Navigator.push(
+                                                          context,
+                                                          MaterialPageRoute(
+                                                            builder: (context) {
+                                                              return IndividualNGOMainScreen();
+                                                            },
+                                                          ),
+                                                        );
+
+                                                      },
+                                                    ),
+                                                  ),
+
+
+
+
+                                              ],
+                                            ),
+
+
+                                          ],
+                                        ),
+
+
+                                        Positioned(
+                                          /*width: MediaQuery.of(context).size.width,
             top: MediaQuery.of(context).size.height / 6.0,*/
 
 
-                      // left: 76.0,
-                      child: Column(
-                        children: <Widget>[
-                          Stack(
-                            children: <Widget>[
-                              Container(
-                                margin: EdgeInsets.only(bottom: 0.0,top: 130.0),
-                                width: 135.0,
-                                height: 135.0,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage("assets/JPEG/Rectangle 12.jpg"),
-                                    fit: BoxFit.cover,
-                                  ),
-                                  borderRadius: BorderRadius.circular(80.0),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      blurRadius: 10.0,
-                                      color: Colors.black45,
-                                      offset: Offset(3.0, 4.0),
+                                          // left: 76.0,
+                                          child: Column(
+                                            children: <Widget>[
+                                              Stack(
+                                                children: <Widget>[
+                                                  Container(
+                                                    margin: EdgeInsets.only(bottom: 0.0,top: 130.0),
+                                                    width: 135.0,
+                                                    height: 135.0,
+                                                    decoration: BoxDecoration(
+                                                      image: DecorationImage(
+                                                        image: AssetImage("assets/JPEG/Rectangle 12.jpg"),
+                                                        fit: BoxFit.cover,
+                                                      ),
+                                                      borderRadius: BorderRadius.circular(80.0),
+                                                      boxShadow: [
+                                                        BoxShadow(
+                                                          blurRadius: 10.0,
+                                                          color: Colors.black45,
+                                                          offset: Offset(3.0, 4.0),
 
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Positioned(
-                                bottom: 20.0,
-                                right: 20.0,
-                                child: InkWell(
-                                  child: Icon(
-                                    Icons.camera_alt,
-                                    color: Colors.white,
-                                    size: 28.0,
-                                  ),
-                                  onTap: () {
-                                    showModalBottomSheet(
-                                        context: context,
-                                        builder: ((builder) => BottomShhetWidget()));
-                                  },
-                                ),
-                              ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
 
 
 
 
-                            ],
-                          ),
 
-                          Container(
-                            alignment: Alignment.centerRight,
-
-                            margin: EdgeInsets.only(top:0.0),
-                            child: IconButton(
-                              icon: Icon (Icons.settings_outlined),
-                              /*child: Text("Sign In",
-                style: TextStyle(color: Colors.black, fontFamily: 'risotto',fontSize: 20.0),
-              ),
-
-              shape: Border.all(color:Colors.white,width: 2.0),*/
-                              iconSize: 30.0,
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) {
-                                      return Settings();
-                                    },
-                                  ),
-                                );
-                              },
-
-                              /*color: Colors.white,*/
-                              /*minWidth: size.width * 0.5,
-              height: 50.0,*/
-
-
-                            ),
-                          ),
+                                                ],
+                                              ),
 
 
 
-                          SizedBox(
-                            height: 18.0,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: <Widget>[
-                              SizedBox(
-                                width: 25.0,
-                              ),
-
-                              Text(
-                                "MY STORIES",
-                                style: TextStyle(
-                                  fontFamily: "risotto",
-                                  fontSize: 22.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                             /* SizedBox(
-                                width: 10.0,
-                              ),
-                              InkWell(
-                                child: Icon(
-                                  Icons.info_outline,
-                                  size: 22.0,
-                                  color: Colors.black54,
-                                ),
-                                onTap: () {},
-                              ),*/
-                            ],
-                          ),
-                          SizedBox(
-                            height: 10.0,
-
-                          ),
 
 
-                          FoodCategoryStories(),
+
+                                              SizedBox(
+                                                height: 10.0,
+                                              ),
+
+                                              Row(
+                                                mainAxisAlignment: MainAxisAlignment.start,
+                                                children: <Widget>[
+                                                  SizedBox(
+                                                    width: 25.0,
+                                                  ),
 
 
-                          SizedBox(
-                            height: 0.0,
-                          ),
+                                                  Text(
+                                                    "Manzer Partazer ",
 
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: <Widget>[
-                              SizedBox(
-                                width: 25.0,
-                              ),
+                                                    style: TextStyle(
+                                                      fontSize: 25.0,
+                                                      fontWeight: FontWeight.bold,
+                                                      color: Colors.blueAccent[700],
+                                                    ),
 
-
-                              Text(
-                                "Manzer Partazer ",
-
-                                style: TextStyle(
-                                  fontSize: 25.0,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.blueAccent[700],
-                                ),
-
-                              ),
-
-                              SizedBox(
-                                width: 100.0,
-                              ),
-                              InkWell(
-                                child: Icon(
-                                  Icons.create_outlined,
-                                  size: 25.0,
-                                  color: Colors.black,
-                                ),
-                                onTap: () {},
-                              ),
+                                                  ),
 
 
-                            ],
-                          ),
+
+                                                ],
+                                              ),
 
 
-                          SizedBox(
-                            height: 10.0,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: <Widget>[
-                              SizedBox(
-                                width: 25.0,
-                              ),
-                              Text(
-                                "Food sharing project of Mauritius",
-                                style: TextStyle(
-                                  fontSize: 20.0,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black54,
-                                ),
-                              ),
-                              /*SizedBox(
+                                              SizedBox(
+                                                height: 10.0,
+                                              ),
+                                              Row(
+                                                mainAxisAlignment: MainAxisAlignment.start,
+                                                children: <Widget>[
+                                                  SizedBox(
+                                                    width: 25.0,
+                                                  ),
+                                                  Text(
+                                                    "Food sharing project of Mauritius",
+                                                    style: TextStyle(
+                                                      fontSize: 20.0,
+                                                      fontWeight: FontWeight.bold,
+                                                      color: Colors.black54,
+                                                    ),
+                                                  ),
+                                                  /*SizedBox(
                   width: 10.0,
                 ),
                 InkWell(
@@ -323,189 +225,178 @@ class NGOProfile extends StatelessWidget {
                   onTap: () {},
                 ),*/
 
-                            ],
-                          ),
+                                                ],
+                                              ),
 
 
-                          /*added*/
+                                              /*added*/
 
-                          SizedBox(
-                            height: 10.0,
-                          ),
+                                              SizedBox(
+                                                height: 10.0,
+                                              ),
 
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(left:25.0,right:30.0),
+                                              SizedBox(
+                                                width: 10.0,
+                                              ),
+                                              Container(
+                                                margin: EdgeInsets.only(left:25.0,right:30.0),
 
-                            child: Text(
-                              "MANZER PARTAZER is the the first food sharing project of Mauritius. Our aim is to reduce the wastage of high quality ready to eat food by simply sharing it!"
-                                  "We ‘save’ food which would otherwise go to waste, such as buffet leftovers in hotels or restaurants, donating it to people in need through a very simple and no-cost food sharing system.",
-                              style: TextStyle(
-                                fontSize: 16.0,
+                                                child: Text(
+                                                  "MANZER PARTAZER is the the first food sharing project of Mauritius. Our aim is to reduce the wastage of high quality ready to eat food by simply sharing it!"
+                                                      "We ‘save’ food which would otherwise go to waste, such as buffet leftovers in hotels or restaurants, donating it to people in need through a very simple and no-cost food sharing system.",
+                                                  style: TextStyle(
+                                                    fontSize: 16.0,
 
-                                color: Colors.black54,
-                              ),
-                              textAlign: TextAlign.justify,
-                            ),
+                                                    color: Colors.black54,
+                                                  ),
+                                                  textAlign: TextAlign.justify,
+                                                ),
 
-                          ),
-                          //added end
-
-
-                          SizedBox(
-                            width: 25.0,
-                            height:40.0,
-                          ),
-
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: <Widget>[
-                              SizedBox(
-                                width: 25.0,
-                              ),
+                                              ),
+                                              //added end
 
 
-                              Text(
-                                "CONTACT INFO ",
+                                              SizedBox(
+                                                width: 25.0,
+                                                height:40.0,
+                                              ),
 
-                                style: TextStyle(
-                                  fontSize: 20.0,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black,
-                                  fontFamily: "risotto",
-                                ),
-
-                              ),
-
-                              SizedBox(
-                                width: 150.0,
-                              ),
-                              InkWell(
-                                child: Icon(
-                                  Icons.create_outlined,
-                                  size: 25.0,
-                                  color: Colors.black,
-                                ),
-                                onTap: () {},
-                              ),
+                                              Row(
+                                                mainAxisAlignment: MainAxisAlignment.start,
+                                                children: <Widget>[
+                                                  SizedBox(
+                                                    width: 25.0,
+                                                  ),
 
 
-                            ],
-                          ),
+                                                  Text(
+                                                    "CONTACT INFO ",
 
-                          SizedBox(
-                            width: 25.0,
-                            height:20,
-                          ),
-                          Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: <Widget>[
+                                                    style: TextStyle(
+                                                      fontSize: 20.0,
+                                                      fontWeight: FontWeight.bold,
+                                                      color: Colors.black,
+                                                      fontFamily: "risotto",
+                                                    ),
 
-                                SizedBox(
-                                  width: 25.0,
-                                ),
-                                Icon(
-                                    Icons.language_outlined
-                                ),
+                                                  ),
 
 
-                                SizedBox(
-                                  width: 10.0,
-                                ),
 
-                                InkWell(
-                                  child: Text(
-                                    "manzerpartazer.org",
+                                                ],
+                                              ),
 
-                                    style: TextStyle(
-                                      fontSize: 16.0,
-                                      color: Colors.blueAccent[700],
-                                      fontFamily: "risotto",
-                                      decoration: TextDecoration.underline,
-                                    ),
+                                              SizedBox(
+                                                width: 25.0,
+                                                height:20,
+                                              ),
+                                              Row(
+                                                  mainAxisAlignment: MainAxisAlignment.start,
+                                                  children: <Widget>[
 
-                                  ),
-                                  onTap: () {openurl();},
-                                ),
-                              ]
-                          ),
-
-                          SizedBox(
-                            width: 25.0,
-                            height:20,
-                          ),
-
-                          Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: <Widget>[
-
-                                SizedBox(
-                                  width: 25.0,
-                                ),
-
-                                Icon(
-                                  Icons.mail_outline,
-                                ),
-
-                                SizedBox(
-                                  width: 10.0,
-                                ),
+                                                    SizedBox(
+                                                      width: 25.0,
+                                                    ),
+                                                    Icon(
+                                                        Icons.language_outlined
+                                                    ),
 
 
-                                InkWell(
-                                  child: Text(
-                                    "info@manzerpartazer.org",
-                                    style: TextStyle(
-                                      fontSize: 16.0,
-                                      color: Colors.blueAccent[700],
-                                      fontFamily: "risotto",
-                                      decoration: TextDecoration.underline,
-                                    ),
-                                  ),
-                                  onTap: () {},
-                                ),
-                              ]
-                          ),
+                                                    SizedBox(
+                                                      width: 10.0,
+                                                    ),
 
-                          SizedBox(
-                            width: 25.0,
-                            height:20,
-                          ),
-                          Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: <Widget>[
-                                SizedBox(
-                                  width: 25.0,
-                                ),
+                                                    InkWell(
+                                                      child: Text(
+                                                        "manzerpartazer.org",
 
-                                Icon(
-                                  Icons.phone,
+                                                        style: TextStyle(
+                                                          fontSize: 16.0,
+                                                          color: Colors.blueAccent[700],
+                                                          fontFamily: "risotto",
+                                                          decoration: TextDecoration.underline,
+                                                        ),
 
-                                ),
+                                                      ),
+                                                      onTap: () {openurl();},
+                                                    ),
+                                                  ]
+                                              ),
 
-                                SizedBox(
-                                  width: 10.0,
-                                ),
+                                              SizedBox(
+                                                width: 25.0,
+                                                height:20,
+                                              ),
+
+                                              Row(
+                                                  mainAxisAlignment: MainAxisAlignment.start,
+                                                  children: <Widget>[
+
+                                                    SizedBox(
+                                                      width: 25.0,
+                                                    ),
+
+                                                    Icon(
+                                                      Icons.mail_outline,
+                                                    ),
+
+                                                    SizedBox(
+                                                      width: 10.0,
+                                                    ),
 
 
-                                InkWell(
-                                  child: Text(
-                                    "+230 5820 7691",
-                                    style: TextStyle(
-                                      fontSize: 16.0,
-                                      color: Colors.blueAccent[700],
-                                      fontFamily: "risotto",
-                                      decoration: TextDecoration.underline,
-                                    ),
-                                  ),
+                                                    InkWell(
+                                                      child: Text(
+                                                        "info@manzerpartazer.org",
+                                                        style: TextStyle(
+                                                          fontSize: 16.0,
+                                                          color: Colors.blueAccent[700],
+                                                          fontFamily: "risotto",
+                                                          decoration: TextDecoration.underline,
+                                                        ),
+                                                      ),
+                                                      onTap: () {},
+                                                    ),
+                                                  ]
+                                              ),
 
-                                ),
-                              ]
-                          ),
+                                              SizedBox(
+                                                width: 25.0,
+                                                height:20,
+                                              ),
+                                              Row(
+                                                  mainAxisAlignment: MainAxisAlignment.start,
+                                                  children: <Widget>[
+                                                    SizedBox(
+                                                      width: 25.0,
+                                                    ),
 
-                          /*Divider(
+                                                    Icon(
+                                                      Icons.phone,
+
+                                                    ),
+
+                                                    SizedBox(
+                                                      width: 10.0,
+                                                    ),
+
+
+                                                    InkWell(
+                                                      child: Text(
+                                                        "+230 5820 7691",
+                                                        style: TextStyle(
+                                                          fontSize: 16.0,
+                                                          color: Colors.blueAccent[700],
+                                                          fontFamily: "risotto",
+                                                          decoration: TextDecoration.underline,
+                                                        ),
+                                                      ),
+
+                                                    ),
+                                                  ]
+                                              ),
+
+                                              /*Divider(
                   height: 30.0,
                   color: Colors.black,
                 ),
@@ -599,70 +490,47 @@ class NGOProfile extends StatelessWidget {
                   height: 20.0,
                   color: Colors.black,
                 ),*/
-                          SizedBox(
-                            height: 30.0,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: <Widget>[
-                              SizedBox(
-                                width: 25.0,
-                              ),
+                                              SizedBox(
+                                                height: 30.0,
+                                              ),
+                                              Row(
+                                                mainAxisAlignment: MainAxisAlignment.start,
+                                                children: <Widget>[
+                                                  SizedBox(
+                                                    width: 25.0,
+                                                  ),
 
-                              Text(
-                                "MEMBERS",
-                                style: TextStyle(
-                                  fontFamily: "risotto",
-                                  fontSize: 22.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 5.0,
-                              ),
-                              InkWell(
-                                child: Icon(
-                                  Icons.info_outline,
-                                  size: 22.0,
-                                  color: Colors.black54,
-                                ),
-                                onTap: () {},
-                              ),
+                                                  Text(
+                                                    "MEMBERS",
+                                                    style: TextStyle(
+                                                      fontFamily: "risotto",
+                                                      fontSize: 22.0,
+                                                      fontWeight: FontWeight.bold,
+                                                    ),
+                                                  ),
 
 
-                              SizedBox(
-                                width: 160.0,
-                              ),
-                              InkWell(
-                                child: Icon(
-                                  Icons.add_circle_outline,
-                                  size: 22.0,
-                                  color: Colors.black54,
-                                ),
-                                onTap: () {},
-                              ),
+                                                ],
+                                              ),
+                                              SizedBox(
+                                                height: 1.0,
+                                              ),
 
-                            ],
-                          ),
-                          SizedBox(
-                            height: 1.0,
-                          ),
-
-                          Container(
-                            /*color: Colors.lightGreen,*/
-                            /*width: MediaQuery.of(context).size.width,*/
-                            height: 100.0,
-                            width: 400,
-                            child: Card(
-                              // color: Colors.amber,
-                              margin: EdgeInsets.symmetric(horizontal: 10.0,vertical: 10.0),
-                              elevation: 5.0,
-                              child: Padding(
-                                padding: const EdgeInsets.all(0.0),
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    /*Text(
+                                              Container(
+                                                /*color: Colors.lightGreen,*/
+                                                /*width: MediaQuery.of(context).size.width,*/
+                                                height: 100.0,
+                                                width: 400,
+                                                child: Card(
+                                                  // color: Colors.amber,
+                                                  margin: EdgeInsets.symmetric(horizontal: 10.0,vertical: 10.0),
+                                                  elevation: 5.0,
+                                                  child: Padding(
+                                                    padding: const EdgeInsets.all(0.0),
+                                                    child: Row(
+                                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                                      children: <Widget>[
+                                                        /*Text(
                             "About",
                             style: TextStyle(
                               fontSize: 20.0,
@@ -670,115 +538,91 @@ class NGOProfile extends StatelessWidget {
                               color: Colors.lightBlue,
                             ),
                           ),*/
-                                    Container(
-                                      margin: EdgeInsets.only(bottom: 0.0,top: 5.0,left:8.0),
-                                      width: 70.0,
-                                      height: 70.0,
-                                      decoration: BoxDecoration(
-                                        image: DecorationImage(
-                                          image: AssetImage("assets/JPEG/Photo.jpg"),
-                                          fit: BoxFit.cover,
-                                        ),
-                                        borderRadius: BorderRadius.circular(80.0),
+                                                        Container(
+                                                          margin: EdgeInsets.only(bottom: 0.0,top: 5.0,left:8.0),
+                                                          width: 70.0,
+                                                          height: 70.0,
+                                                          decoration: BoxDecoration(
+                                                            image: DecorationImage(
+                                                              image: AssetImage("assets/JPEG/Photo.jpg"),
+                                                              fit: BoxFit.cover,
+                                                            ),
+                                                            borderRadius: BorderRadius.circular(80.0),
 
 
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 20.0,
-                                      width:20.0,
-                                    ),
-                                    Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: <Widget>[
-                                          Text(
-                                            "Julia Venn",
-                                            style: TextStyle(
-                                              fontSize: 18.0,
-                                              color: Colors.blueAccent[700],
-                                              fontWeight: FontWeight.bold,
-                                            ),
+                                                          ),
+                                                        ),
+                                                        SizedBox(
+                                                          height: 20.0,
+                                                          width:20.0,
+                                                        ),
+                                                        Column(
+                                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                                            children: <Widget>[
+                                                              Text(
+                                                                "Julia Venn",
+                                                                style: TextStyle(
+                                                                  fontSize: 18.0,
+                                                                  color: Colors.blueAccent[700],
+                                                                  fontWeight: FontWeight.bold,
+                                                                ),
+                                                              ),
+
+                                                              Text(
+                                                                "Co-founder and",
+                                                                style: TextStyle(
+                                                                  fontSize: 15.0,
+                                                                  color: Colors.blueAccent[700],
+                                                                ),
+                                                              ),
+
+
+                                                              Text(
+                                                                "Magadascar Coordinator",
+                                                                style: TextStyle(
+                                                                  fontSize: 15.0,
+                                                                  color: Colors.blueAccent[700],
+                                                                ),
+                                                              ),
+
+                                                            ]
+                                                        ),
+
+
+
+
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+
+                                              SizedBox(
+                                                height: 30.0,
+                                                width:20.0,
+                                              ),
+
+
+
+
+                                            ],
                                           ),
-
-                                          Text(
-                                            "Co-founder and",
-                                            style: TextStyle(
-                                              fontSize: 15.0,
-                                              color: Colors.blueAccent[700],
-                                            ),
-                                          ),
-
-
-                                          Text(
-                                            "Magadascar Coordinator",
-                                            style: TextStyle(
-                                              fontSize: 15.0,
-                                              color: Colors.blueAccent[700],
-                                            ),
-                                          ),
-
-                                        ]
-                                    ),
-
-                                    SizedBox(
-                                      width: 15.0,
-                                      height: 20.0,
-                                    ),
-
-
-                                    InkWell(
-                                      child: Icon(
-                                        Icons.create_outlined,
-                                        size: 22.0,
-                                        color: Colors.black54,
-                                      ),
-                                      onTap: () {},
-                                    ),
-
-                                    SizedBox(
-                                      width: 5.0,
-                                    ),
-                                    InkWell(
-                                      child: Icon(
-                                        Icons.clear,
-                                        size: 22.0,
-                                        color: Colors.black54,
-                                      ),
-                                      onTap: () {},
-                                    ),
-
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-
-                          SizedBox(
-                            height: 30.0,
-                            width:20.0,
-                          ),
+                                        )
+                                      ]
+                                  ),
+                                ]
+                            )
+                        ),
 
 
 
+                      ]
+                  )
 
-                        ],
-                      ),
-                    )
-                  ]
-              ),
+
+              )
             ]
         )
-    ),
-
-
-
-    ]
-    )
-
-
-          )
-        ]
-    )
     );
 
   }

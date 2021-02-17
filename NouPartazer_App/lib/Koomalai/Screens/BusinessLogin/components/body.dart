@@ -1,3 +1,5 @@
+import 'package:NouPartazer_App/Koomalai/src/screens/BusinessNGOmainScreen.dart';
+import 'package:NouPartazer_App/Koomalai/src/screens/BusinessmainScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:NouPartazer_App/Koomalai/Screens/BusinessLogin/components/background.dart';
 import 'package:NouPartazer_App/Koomalai/Screens/NGO/NGO.dart';
@@ -30,7 +32,7 @@ class Body extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             /*Text(
-              "LOGIN",
+              "LBusinessMainScreenOGIN",
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             SizedBox(height: size.height * 0.03),*/
@@ -175,7 +177,7 @@ class Body extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) {
-                            return MainScreen();
+                            return BusinessMainScreen();
                           },
                         ),
                       );

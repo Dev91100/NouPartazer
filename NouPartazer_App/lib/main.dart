@@ -50,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // TODO: implement initState
     super.initState();
     Timer(Duration(seconds: 3), ()=>Navigator.push(
-        context, MaterialPageRoute(builder: (context)=>SignInScreen())));
+        context, MaterialPageRoute(builder: (context)=>LoginScreen())));
   }
 
   @override

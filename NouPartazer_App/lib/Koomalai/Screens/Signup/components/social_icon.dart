@@ -17,15 +17,15 @@ class SocalIcon extends StatelessWidget {
       onTap: press,
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 1),
-        padding: EdgeInsets.all(20),
-        decoration: BoxDecoration(
+        padding: EdgeInsets.all(5),
+        /*decoration: BoxDecoration(
           border: Border.all(
             /*width: 2,*/
             color: Colors.blueAccent,
           ),
           /*shape: BoxShape.circle,*/
-        ),
-         child: SvgPicture.asset(
+        ),*/
+        child: SvgPicture.asset(
           iconSrc,
           height: 125,
           width: 120,

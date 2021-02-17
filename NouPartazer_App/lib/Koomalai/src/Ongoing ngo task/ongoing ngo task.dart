@@ -4,9 +4,12 @@ import 'package:NouPartazer_App/Koomalai/src/Business ongoing events/components/
 import 'package:NouPartazer_App/Koomalai/components/rounded_button.dart';
 import 'package:NouPartazer_App/Koomalai/src/Business%20Cancelled%20posts/Business%20cancelled%20posts.dart';
 import 'package:NouPartazer_App/Koomalai/src/Business%20Event%20Ongoing/Business%20event%20ongoing.dart';
+import 'package:NouPartazer_App/Koomalai/src/Business%20Task%20NGO%20profile/BusinessTaskNGOProfile.dart';
 import 'package:NouPartazer_App/Koomalai/src/Business%20profile/BusinessProfile.dart';
 import 'package:NouPartazer_App/Koomalai/src/BusinessSettings/Setting.dart';
 import 'package:NouPartazer_App/Koomalai/src/Help%20and%20support/helpAndSupport.dart';
+import 'package:NouPartazer_App/Koomalai/src/NGO%20Confirmed%20Event%20Details/NGO%20confirmed%20event%20details.dart';
+import 'package:NouPartazer_App/Koomalai/src/NGO%20ongoing%20Event%20Details/NGO%20event%20details.dart';
 import 'package:NouPartazer_App/Koomalai/src/Security/Security.dart';
 import 'package:NouPartazer_App/Koomalai/src/Settings/Setting.dart';
 import 'package:NouPartazer_App/Koomalai/src/pages/profilePage.dart';
@@ -22,7 +25,7 @@ import 'package:settings_ui/settings_ui.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:NouPartazer_App/Koomalai/src/NGO profile/components/Body.dart';
 
-    class UnassignedNGOTask extends StatelessWidget {
+    class OngoingNGOTask extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -435,7 +438,7 @@ import 'package:NouPartazer_App/Koomalai/src/NGO profile/components/Body.dart';
                             margin: EdgeInsets.only(top: 2.0,left: 10.0),
                             /*color: Colors.lightGreen,*/
                             /*width: MediaQuery.of(context).size.width,*/
-                            height: 410.0,
+                            height: 320.0,
                             width: 340.0,
                             child: Card(
                               // color: Colors.amber,
@@ -474,24 +477,24 @@ import 'package:NouPartazer_App/Koomalai/src/NGO profile/components/Body.dart';
                                                    ),*/
                                                      MaterialButton(
                                                      child: Image(
-                                                     image:AssetImage('assets/JPEG/blue photo.jpg'),
+                                                     image:AssetImage('assets/JPEG/Rectangle 12.jpg'),
                                                        width: 60.0,
 
 
                                                      ),
 
-                                                       /*onPressed: () {
+                                                       onPressed: () {
                                                          Navigator.push(
                                                            context,
                                                            MaterialPageRoute(
                                                              builder: (context) {
 
-                                                               return BusinessProfile();
+                                                               return BusinessTaskNGOProfile();
 
                                                              },
                                                            ),
                                                          );
-                                                       },*/
+                                                       },
                                                      ),
                                                 Container(
                                                  height: 85.0,
@@ -630,8 +633,10 @@ import 'package:NouPartazer_App/Koomalai/src/NGO profile/components/Body.dart';
                                           Container(
                                             margin: EdgeInsets.only(top:3.0,left:11.0,right: 0.0),
                                               alignment: Alignment.topLeft,
-                                              child: Text(
-                                        "Accepted By:",
+                                              child: Row(
+                                                children: <Widget>[
+                                                Text(
+                                                  "Accepted By:",
                                             style: TextStyle(
                                               fontSize: 16.0,
                                               fontWeight: FontWeight.bold,
@@ -639,8 +644,41 @@ import 'package:NouPartazer_App/Koomalai/src/NGO profile/components/Body.dart';
                                             ),
                                             textAlign: TextAlign.left,
                                           ),
-                                          ),
 
+                                                  SizedBox(
+                                                    width: 0.0,
+
+                                                  ),
+
+                                                  MaterialButton(
+                                                  child: Text(
+                                                    "Manzer Partazer",
+                                                    style: TextStyle(
+                                                      fontSize: 16.0,
+                                                      fontWeight: FontWeight.bold,
+                                                      color: Colors.blue,
+                                                        decoration: TextDecoration.underline,
+                                                    ),
+                                                    textAlign: TextAlign.left,
+                                                  ),
+
+                                                    onPressed: () {
+                                                      Navigator.push(
+                                                        context,
+                                                        MaterialPageRoute(
+                                                          builder: (context) {
+
+                                                            return BusinessTaskNGOProfile();
+
+                                                          },
+                                                        ),
+                                                      );
+                                                    },
+
+                                                  )
+                                            ]
+                                          ),
+                                          ),
                                           Container(
                                             child: Row(
                                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -720,10 +758,10 @@ import 'package:NouPartazer_App/Koomalai/src/NGO profile/components/Body.dart';
                                                             // color: Colors.amber,
                                                             margin: EdgeInsets.symmetric(horizontal: 1.0,vertical: 10.0),
                                                             elevation: 10.0,
-                                                            color: Colors.black26,
+                                                            color: Colors.amber[50],
                                                             shape: RoundedRectangleBorder(
                                                               borderRadius: BorderRadius.circular(5.0),
-                                                              side: BorderSide(color:Colors.black),
+                                                              side: BorderSide(color:Colors.amber),
                                                             ),
                                                             child: Padding(
                                                               padding: const EdgeInsets.all(0.0),
@@ -741,15 +779,15 @@ import 'package:NouPartazer_App/Koomalai/src/NGO profile/components/Body.dart';
 
 
                                                                   SizedBox(
-                                                                    width: 20.0,
+                                                                    width: 25.5,
                                                                     height: 20.0,
                                                                   ),
 
                                                                   Text(
-                                                                    "unassigned",
+                                                                    "On Hold",
                                                                     style: TextStyle(
                                                                       fontSize: 15.0,
-                                                                      color: Colors.black,
+                                                                      color: Colors.amber,
                                                                       fontWeight: FontWeight.bold,
                                                                     ),
                                                                   ),
@@ -787,16 +825,16 @@ import 'package:NouPartazer_App/Koomalai/src/NGO profile/components/Body.dart';
                                                         label: Text("View Details",style: TextStyle(color: Colors.white, fontSize: 18.0),),
 
                                                         onPressed: () {
-                                                          /*Navigator.push(
+                                                          Navigator.push(
                                                               context,
                                                               MaterialPageRoute(
                                                                 builder: (context) {
 
-                                                                  return BusinessCancelled();
+                                                                  return NGOOngoingEvent();
 
                                                                 },
                                                               ),
-                                                            );*/
+                                                            );
                                                         },
 
                                                         color:Colors.blueAccent[700],
@@ -807,7 +845,7 @@ import 'package:NouPartazer_App/Koomalai/src/NGO profile/components/Body.dart';
                                                       ),
                                                     ),
 
-                                                    /*Container(
+                                                    Container(
                                                       margin: EdgeInsets.only(top: 10.0,left: 10.0),
 
                                                       child: RaisedButton.icon(
@@ -834,13 +872,16 @@ import 'package:NouPartazer_App/Koomalai/src/NGO profile/components/Body.dart';
                                                           /*side: BorderSide(color:Colors.amber,width: 2.0),*/
                                                         ),
                                                       ),
-                                                    )*/
+                                                    )
 
 
 
                                                   ]
                                               )
-                                        )
+                                        ),
+
+
+
 
 
                                          ]
@@ -877,16 +918,473 @@ import 'package:NouPartazer_App/Koomalai/src/NGO profile/components/Body.dart';
                         height: 5.0,
                       ),
 
+                      //second
+                      Container(
+                        margin: EdgeInsets.only(top: 2.0,left: 10.0),
+                        /*color: Colors.lightGreen,*/
+                        /*width: MediaQuery.of(context).size.width,*/
+                        height: 320.0,
+                        width: 340.0,
+                        child: Card(
+                          // color: Colors.amber,
+                          margin: EdgeInsets.symmetric(horizontal: 1.0,vertical: 10.0),
+                          elevation: 10.0,
+                          /*color: Colors.white,*/
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                            /*side: BorderSide(color:Colors.white),*/
+                          ),
+                          child: Padding(
+                              padding: const EdgeInsets.all(0.0),
+
+                              child: Container(
+
+                                  margin: EdgeInsets.only(top: 5.0,left: 1.0),
+
+                                  child: Column(
+                                      children: <Widget>[
+
+                                        Row(
+                                            children: <Widget>[
+                                              /*SocalIcon(
+                                                     iconSrc: "assets/SVG/Profile Photo.svg",
+
+                                                     press: () {
+                                                       Navigator.push(
+                                                         context,
+                                                         MaterialPageRoute(
+                                                           builder: (context) {
+                                                             return Business();
+                                                           },
+                                                         ),
+                                                       );
+                                                     },
+                                                   ),*/
+                                              MaterialButton(
+                                                child: Image(
+                                                  image:AssetImage('assets/JPEG/Rectangle 12.jpg'),
+                                                  width: 60.0,
+
+
+                                                ),
+
+                                                onPressed: () {
+                                                  Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                      builder: (context) {
+
+                                                        return BusinessTaskNGOProfile();
+
+                                                      },
+                                                    ),
+                                                  );
+                                                },
+                                              ),
+                                              Container(
+                                                  height: 85.0,
+                                                  width: 240.0,
+                                                  margin: EdgeInsets.only(right:0.0,left: 0.0),
+                                                  child: Card(
+                                                    // color: Colors.amber,
+                                                      margin: EdgeInsets.symmetric(horizontal: 1.0,vertical: 10.0),
+
+                                                      elevation: 5.0,
+                                                      color: Colors.white,
+                                                      shape: RoundedRectangleBorder(
+                                                        borderRadius: BorderRadius.circular(10.0),
+                                                        /*side: BorderSide(color:Colors.white),*/
+                                                      ),
+                                                      child: Padding(
+                                                        padding: const EdgeInsets.all(0.0),
+                                                        child: Column(
+                                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                                            children: <Widget>[
+
+                                                              Row(
+                                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                                  children: <Widget>[
+
+                                                                    Container(
+                                                                      margin: EdgeInsets.only(top: 10.0,left: 5.0),
+                                                                      child: Icon(
+                                                                        Icons.calendar_today,
+                                                                        size: 20.0,
+                                                                        color: Colors.black,
+                                                                      ),
+
+                                                                    ),
+
+                                                                    Container(
+                                                                      margin: EdgeInsets.only(top: 10.0,left: 0.0),
+                                                                      child: Text(
+                                                                        "19/01/2020",
+                                                                        style: TextStyle(
+                                                                          fontSize: 15.0,
+                                                                          color: Colors.black,
+                                                                          /*fontWeight: FontWeight.bold,*/
+                                                                        ),
+                                                                      ),
 
 
 
-                      SizedBox(
-                        width: 0.0,
+                                                                    ),
+
+                                                                    Container(
+                                                                      margin: EdgeInsets.only(top: 10.0,left: 25.0),
+                                                                      child: Icon(
+                                                                        Icons.access_time_outlined,
+                                                                        size: 20.0,
+                                                                        color: Colors.black,
+                                                                      ),
+
+                                                                    ),
+
+                                                                    Container(
+                                                                      margin: EdgeInsets.only(top: 10.0,left: 0.0),
+                                                                      child: Text(
+                                                                        "9:00 - 17:00",
+                                                                        style: TextStyle(
+                                                                          fontSize: 15.0,
+                                                                          color: Colors.black,
+                                                                          /*fontWeight: FontWeight.bold,*/
+                                                                        ),
+                                                                      ),
+
+
+
+                                                                    )
+                                                                  ]
+                                                              ),
+
+
+                                                              Row(
+                                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                                  children: <Widget>[
+                                                                    Container(
+                                                                      margin: EdgeInsets.only(top: 10.0,left: 5.0),
+                                                                      child: Icon(
+                                                                        Icons.location_on_outlined,
+                                                                        size: 20.0,
+                                                                        color: Colors.black,
+                                                                      ),
+
+                                                                    ),
+
+                                                                    Container(
+                                                                      margin: EdgeInsets.only(top: 10.0,left: 0.0),
+                                                                      child: Text(
+                                                                        "Jumbo Supermarket",
+                                                                        style: TextStyle(
+                                                                          fontSize: 15.0,
+                                                                          color: Colors.black,
+                                                                          /*fontWeight: FontWeight.bold,*/
+                                                                        ),
+                                                                      ),
+
+
+
+                                                                    ),
+
+
+
+                                                                  ]
+                                                              ),
+                                                            ]
+                                                        ),
+                                                      )
+                                                  )
+                                              )
+                                            ]
+                                        ),
+
+
+                                        Container(
+                                          alignment: Alignment.topLeft,
+                                          margin: EdgeInsets.only(top:5.0,left:10.0),
+                                          child: Text(
+                                            "Grocery Donation",
+
+                                            style: TextStyle(
+                                              fontSize: 20.0,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.black,
+                                              fontFamily: "risotto",
+                                            ),
+
+                                          ),
+                                        ),
+
+                                        Container(
+                                          margin: EdgeInsets.only(top:3.0,left:11.0,right: 0.0),
+                                          alignment: Alignment.topLeft,
+                                          child: Row(
+                                              children: <Widget>[
+                                                Text(
+                                                  "Accepted By:",
+                                                  style: TextStyle(
+                                                    fontSize: 16.0,
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Colors.black,
+                                                  ),
+                                                  textAlign: TextAlign.left,
+                                                ),
+
+                                                SizedBox(
+                                                  width: 0.0,
+
+                                                ),
+
+                                                MaterialButton(
+                                                  child: Text(
+                                                    "Manzer Partazer",
+                                                    style: TextStyle(
+                                                      fontSize: 16.0,
+                                                      fontWeight: FontWeight.bold,
+                                                      color: Colors.blue,
+                                                      decoration: TextDecoration.underline,
+                                                    ),
+                                                    textAlign: TextAlign.left,
+                                                  ),
+
+                                                  onPressed: () {
+                                                    Navigator.push(
+                                                      context,
+                                                      MaterialPageRoute(
+                                                        builder: (context) {
+
+                                                          return BusinessTaskNGOProfile();
+
+                                                        },
+                                                      ),
+                                                    );
+                                                  },
+
+                                                )
+                                              ]
+                                          ),
+                                        ),
+                                        Container(
+                                            child: Row(
+                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                children: <Widget>[
+
+                                                  Container(
+                                                    margin: EdgeInsets.only(top: 10.0,left: 10.0),
+                                                    /*color: Colors.lightGreen,*/
+                                                    /*width: MediaQuery.of(context).size.width,*/
+                                                    height: 40.0,
+                                                    width: 80.0,
+                                                    child: Card(
+                                                      color: Colors.black,
+                                                      margin: EdgeInsets.symmetric(horizontal: 1.0,vertical: 10.0),
+                                                      elevation: 5.0,
+                                                      child: Padding(
+                                                        padding: const EdgeInsets.all(0.0),
+                                                        child: Row(
+                                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                                          children: <Widget>[
+                                                            /*Text(
+                              "About",
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.lightBlue,
+                              ),
+                            ),*/
+
+                                                            SizedBox(
+                                                              height: 20.0,
+                                                              width:5.0,
+                                                            ),
+
+                                                            InkWell(
+                                                              child: Icon(
+                                                                Icons.online_prediction_outlined,
+                                                                size: 19.0,
+                                                                color: Colors.white,
+                                                              ),
+                                                              onTap: () {},
+                                                            ),
+
+                                                            SizedBox(
+                                                              width: 5.0,
+                                                              height: 20.0,
+                                                            ),
+
+                                                            Text(
+                                                              "Status",
+                                                              style: TextStyle(
+                                                                fontSize: 15.0,
+                                                                color: Colors.white,
+                                                                fontWeight: FontWeight.bold,
+                                                              ),
+                                                            ),
+
+
+
+
+                                                          ],
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+
+                                                  Row(
+                                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                                      children: <Widget>[
+                                                        Container(
+                                                          margin: EdgeInsets.only(top: 10.0,left: 10.0),
+                                                          /*color: Colors.lightGreen,*/
+                                                          /*width: MediaQuery.of(context).size.width,*/
+                                                          height: 40.0,
+                                                          width: 110.0,
+                                                          child: Card(
+                                                            // color: Colors.amber,
+                                                            margin: EdgeInsets.symmetric(horizontal: 1.0,vertical: 10.0),
+                                                            elevation: 10.0,
+                                                            color: Colors.blue[50],
+                                                            shape: RoundedRectangleBorder(
+                                                              borderRadius: BorderRadius.circular(5.0),
+                                                              side: BorderSide(color:Colors.blue),
+                                                            ),
+                                                            child: Padding(
+                                                              padding: const EdgeInsets.all(0.0),
+                                                              child: Row(
+                                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                                children: <Widget>[
+                                                                  /*Text(
+                              "About",
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.lightBlue,
+                              ),
+                            ),*/
+
+
+                                                                  SizedBox(
+                                                                    width: 20.0,
+                                                                    height: 20.0,
+                                                                  ),
+
+                                                                  Text(
+                                                                    "Confirmed",
+                                                                    style: TextStyle(
+                                                                      fontSize: 15.0,
+                                                                      color: Colors.blue,
+                                                                      fontWeight: FontWeight.bold,
+                                                                    ),
+                                                                  ),
+
+
+
+
+                                                                ],
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ]
+                                                  ),
+
+
+
+                                                ]
+                                            )
+
+                                        ),
+
+                                        Container(
+                                            child: Row(
+                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                children: <Widget>[
+
+                                                  Container(
+                                                    margin: EdgeInsets.only(top: 10.0,left: 10.0),
+
+
+                                                    child: RaisedButton.icon(
+                                                      icon: Icon(Icons.visibility_outlined,color: Colors.white,size: 20.0,),
+
+                                                      label: Text("View Details",style: TextStyle(color: Colors.white, fontSize: 18.0),),
+
+                                                      onPressed: () {
+                                                        Navigator.push(
+                                                              context,
+                                                              MaterialPageRoute(
+                                                                builder: (context) {
+
+                                                                  return NGOConfirmedEvent();
+
+                                                                },
+                                                              ),
+                                                            );
+                                                      },
+
+                                                      color:Colors.blueAccent[700],
+                                                      shape: RoundedRectangleBorder(
+                                                        borderRadius: BorderRadius.circular(10.0),
+                                                        /*side: BorderSide(color:Colors.amber,width: 2.0),*/
+                                                      ),
+                                                    ),
+                                                  ),
+
+                                                  Container(
+                                                    margin: EdgeInsets.only(top: 10.0,left: 10.0),
+
+                                                    child: RaisedButton.icon(
+                                                      icon: Icon(Icons.phone_forwarded_outlined,color: Colors.white,size: 18.0,),
+                                                      label: Text("Call",style: TextStyle(color: Colors.white, fontSize: 18.0),),
+
+                                                      onPressed: () {
+                                                        /*Navigator.push(
+                                                              context,
+                                                              MaterialPageRoute(
+                                                                builder: (context) {
+
+                                                                  return SecondMainScreen();
+
+                                                                },
+                                                              ),
+                                                            );*/
+                                                      },
+
+                                                      color:Colors.amber,
+
+                                                      shape: RoundedRectangleBorder(
+                                                        borderRadius: BorderRadius.circular(10.0),
+                                                        /*side: BorderSide(color:Colors.amber,width: 2.0),*/
+                                                      ),
+                                                    ),
+                                                  )
+
+
+
+                                                ]
+                                            )
+                                        ),
+
+
+
+
+
+                                      ]
+                                  )
+
+
+
+                              )
+
+                          ),
+                        ),
                       ),
 
 
                     ],
                               ),
+
+
                             )
                           ]
                       ),

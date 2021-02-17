@@ -3,6 +3,7 @@ import 'dart:convert';
 /*import 'dart:js';*/
 import 'dart:math';
 
+import 'package:NouPartazer_App/Koomalai/src/screens/secondMainScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:NouPartazer_App/Koomalai/Screens/Login/components/background.dart';
 import 'package:NouPartazer_App/Koomalai/Screens/NGO/NGO.dart';
@@ -104,10 +105,39 @@ class Body extends StatelessWidget {
 
             ),*/
 
-            SizedBox(height: size.height * 0.346),
+            Container(
+              margin: EdgeInsets.only(top: 10.0,right: 20.0),
+              alignment: Alignment.topRight,
+
+              child: RaisedButton(
+                child: Text("Skip",style: TextStyle(color: Colors.white, fontSize: 20.0),),
+
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+
+                        return SecondMainScreen();
+
+                      },
+                    ),
+                  );
+                },
+                color:Colors.black26,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+              ),
+            ),
+
+            SizedBox(height: size.height * 0.298),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
                 FlatButton(
                   child: Text("Sign In",
                     style: TextStyle(color: Colors.black, fontFamily: 'risotto',fontSize: 20.0),
@@ -124,7 +154,7 @@ class Body extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) {
-                          return SignInScreen();
+                          return LoginScreen();
                         },
                       ),
                     );
@@ -136,6 +166,9 @@ class Body extends StatelessWidget {
 
                 ),
 
+                   
+                  ]
+                ),
 
 
                 FlatButton(
@@ -233,13 +266,27 @@ class Body extends StatelessWidget {
                 );
               },
             ),*/
-
-            Text(
+            MaterialButton(
+              child: Text(
               "Forgot Password?",
-              style: TextStyle(color: Colors.white, fontFamily: 'risotto',fontSize: 22.0, decoration: TextDecoration.underline, fontWeight: FontWeight.bold),
+              style: TextStyle(color: Colors.white, fontFamily: 'risotto',fontSize: 22.0, decoration: TextDecoration.underline, fontWeight: FontWeight.bold
+              ),
+            ),
 
-            )
+                onPressed: () {
+                /*Navigator.push(
+                context,
+                MaterialPageRoute(
+                builder: (context) {
+                return LoginScreen();
+                },
+                ),
+                );*/
+                },
 
+
+
+              )
 
 
           ],

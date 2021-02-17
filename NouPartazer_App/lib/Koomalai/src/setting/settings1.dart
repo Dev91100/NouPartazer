@@ -3,8 +3,8 @@
  * profile: https://github.com/lohanidamodar
   */
 
-import 'package:flutter/material.dart';
-import 'package:flutter_ui_challenges/core/presentation/res/assets.dart';
+/*import 'package:flutter/material.dart';
+import 'package:NouPartazer_App/Koomalai/core/presentation/res/assets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SettingsOnePage extends StatefulWidget {
@@ -217,4 +217,4 @@ class _SettingsOnePageState extends State<SettingsOnePage> {
       color: Colors.grey.shade400,
     );
   }
-}
+}*/

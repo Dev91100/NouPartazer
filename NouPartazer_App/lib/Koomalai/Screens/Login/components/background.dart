@@ -1,3 +1,4 @@
+import 'package:NouPartazer_App/Koomalai/src/screens/secondMainScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -39,20 +40,31 @@ class Background extends StatelessWidget {
 
     ),*/
 
-           Container(
-            margin: EdgeInsets.only(top: 35.0,right: 20.0),
+           /*Container(
+            margin: EdgeInsets.only(top: 40.0,right: 20.0),
             alignment: Alignment.topRight,
 
             child: RaisedButton(
               child: Text("Skip",style: TextStyle(color: Colors.white, fontSize: 20.0),),
 
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+
+                      return SecondMainScreen();
+
+                    },
+                  ),
+                );
+              },
               color:Colors.black26,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0),
               ),
             ),
-          ),
+          ),*/
 
 
 

@@ -1,7 +1,10 @@
+import 'package:NouPartazer_App/Koomalai/src/Settings/Setting.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:NouPartazer_App/Koomalai/src/widget/bottomSheetWidget.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+
 
 class ProfilePage extends StatefulWidget {
   @override
@@ -153,13 +156,13 @@ class _ProfilePageState extends State<ProfilePage> {
           ),
 
 
-      Positioned(
+            Positioned(
         /*width: MediaQuery.of(context).size.width,
             top: MediaQuery.of(context).size.height / 6.0,*/
 
 
         // left: 76.0,
-          child: Column(
+            child: Column(
             children: <Widget>[
               Stack(
                 children: <Widget>[
@@ -219,14 +222,14 @@ class _ProfilePageState extends State<ProfilePage> {
               shape: Border.all(color:Colors.white,width: 2.0),*/
                   iconSize: 30.0,
                   onPressed: () {
-                    /*Navigator.push(
+                    Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) {
-                        return SignUpScreen();
+                        return Settings();
                       },
                     ),
-                  );*/
+                  );
                   },
 
                   /*color: Colors.white,*/
