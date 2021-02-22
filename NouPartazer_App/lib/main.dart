@@ -7,9 +7,27 @@ class MyApp extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return MaterialApp(
+    return MaterialApp
+    (
       title: 'NouPartazer',
-      home: , // <-- Insert page class here
+      home: Story(),
+    );
+  }
+}
+
+class Story extends StatelessWidget
+{
+  @override
+  Widget build(BuildContext context)
+  {
+    return Scaffold
+    (
+      backgroundColor: Colors.white,
+      body: 
+        Container
+        (
+          
+        ),
     );
   }
 }
