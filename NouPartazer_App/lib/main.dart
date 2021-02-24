@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import './Atish/StoryModel.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget
@@ -9,25 +10,10 @@ class MyApp extends StatelessWidget
   {
     return MaterialApp
     (
+      debugShowCheckedModeBanner: false,
       title: 'NouPartazer',
-      home: Story(),
+      home: StoryModel(),
     );
   }
 }
 
-class Story extends StatelessWidget
-{
-  @override
-  Widget build(BuildContext context)
-  {
-    return Scaffold
-    (
-      backgroundColor: Colors.white,
-      body: 
-        Container
-        (
-          
-        ),
-    );
-  }
-}
