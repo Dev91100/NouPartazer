@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import './Story.dart';
+import './InfoTab.dart';
+import './TagsTab.dart';
 
 class StoryModel extends StatelessWidget
 {
@@ -27,6 +29,17 @@ class StoryModel extends StatelessWidget
       foodType: 'PERISHABLE FOOD'
     ),
     
+    Story
+    (
+      image: './assets/JPEG/burger.jpeg',
+      locationName: 'Winners Supermarket',
+      locationAddress: 'La Place Belgath',
+      date: '19/03/21',
+      time: '19:00-00:30',
+      tag: 'PARTY',
+      foodType: 'NON-PERISHABLE FOOD'
+    ),
+
   ];
 
   @override
@@ -36,7 +49,8 @@ class StoryModel extends StatelessWidget
       height: 800,
       child: SingleChildScrollView
       (
-        child: Column
+        scrollDirection: Axis.horizontal,
+        child: Row
         (
           children:
             stories.map((st) 
@@ -47,6 +61,7 @@ class StoryModel extends StatelessWidget
                 child: Container
                 (
                   height: 700,
+                  width: 350,
                   decoration: BoxDecoration
                   (
                     image: DecorationImage
@@ -70,7 +85,7 @@ class StoryModel extends StatelessWidget
                           (
                             fontWeight: FontWeight.bold,
                             fontSize: 25,
-                            color: Colors.yellow,
+                            color: new Color.fromRGBO(245, 197, 41, 1),
                           ),
                         ),
                         Text
@@ -87,51 +102,31 @@ class StoryModel extends StatelessWidget
                         (
                           children: 
                           [
-                            Text
+                            InfoTab
                             (
-                              st.date,
-                              style: TextStyle
-                                (
-                                  fontWeight: FontWeight.normal,
-                                  fontSize: 25,
-                                  color: Colors.white,
-                                ),
+                              icon: Icons.calendar_today_outlined, 
+                              date: st.date
                             ),
-                            Text
+                            
+                            InfoTab
                             (
-                              st.time,
-                              style: TextStyle
-                              (
-                                fontWeight: FontWeight.normal,
-                                fontSize: 25,
-                                color: Colors.white,
-                              )
+                              icon: Icons.query_builder_outlined, 
+                              date: st.time
                             ),
                           ],
                         ),
-                        Row(
-                          children: [
-                            Text
-                            (
-                              st.tag,
-                              style: TextStyle
-                              (
-                                fontWeight: FontWeight.normal,
-                                fontSize: 25,
-                                color: Colors.white,
-                              ),
+                        SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Container(
+                            width: 680,
+                            child: Row(
+                              children: [
+                                TagsTab(data: st.tag),
+                                TagsTab(data: st.foodType),
+                                TagsTab(data: st.foodType),
+                              ],
                             ),
-                            Text
-                            (
-                              st.foodType,
-                              style: TextStyle
-                              (
-                                fontWeight: FontWeight.normal,
-                                fontSize: 25,
-                                color: Colors.white,
-                              ),
-                            ),
-                          ],
+                          ),
                         ),
                       ],
                     ),
