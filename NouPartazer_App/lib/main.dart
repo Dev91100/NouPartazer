@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:NouPartazer_App/Koomalai/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 import 'Koomalai/Screens/Login/login_screen.dart';
 
@@ -45,31 +44,126 @@ class _MyHomePageState extends State<MyHomePage> {
     super.initState();
     Timer(Duration(seconds: 3), ()=>Navigator.push(
         context, MaterialPageRoute(builder: (context)=>LoginScreen())));
+    
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: <Widget>[
-          Container(
-            /*margin: EdgeInsets.only(top: 0.0),*/
-            child:Image(
-              image: AssetImage('assets/JPEG/Splash Screen 2.jpg'),
-              height: 700.0,
+      body: Stack(
+        children: 
+        [
+          Container
+          (
+            decoration: BoxDecoration
+            (
+              image: DecorationImage
+              (
+                image: AssetImage('assets/JPEG/SplashScreen.jpg'),
+                fit: BoxFit.cover,
+              ),
             ),
+            // SpinKitSquareCircle(color:Colors.orangeAccent,size: 25.0,),
           ),
-
-
-          SpinKitSquareCircle(color:Colors.orangeAccent,size: 25.0,),
-
-          /*Image.asset("assets/images/WanderingCubes.gif", width: 1.0,color: Colors.orangeAccent,),*/
-
+          Container
+          (
+            color: Color.fromRGBO(0, 0, 0, 0.3)
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 110, 0, 0),
+            width: double.infinity,
+            child: Column
+              (
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children:
+                [
+                  Image.asset
+                  (
+                    'assets/PNG/NouPartazer LogoOnly_Large.png',
+                    height: 150,
+                    fit: BoxFit.cover,
+                  ),
+                  SizedBox
+                  (
+                    height: 25,
+                  ),
+                  RichText
+                  (
+                    text: TextSpan
+                    (
+                      style: TextStyle
+                      (
+                        fontSize: 45,
+                        color: Colors.white,
+                      ),
+                      children:
+                      [
+                        TextSpan
+                        (
+                          text: 'nou',
+                          style: TextStyle
+                          (
+                            color: Color.fromRGBO(245, 197, 41, 1)
+                          ),
+                        ),
+                        TextSpan
+                        (
+                          text: 'partazer'
+                        ),
+                      ]
+                    )
+                  ),
+                  Container
+                  (
+                    margin: EdgeInsets.fromLTRB(0, 40, 0, 0),
+                    height: 200,
+                    width: 270,
+                    child: RichText
+                    (
+                      text: TextSpan
+                      (
+                        style: TextStyle
+                        (
+                          fontSize: 30,
+                          color: Colors.white,
+                        ),
+                        children:
+                        [
+                          TextSpan
+                          (
+                            text: '“If you can’t feed a hundred people, then feed just ',
+                          ),
+                          TextSpan
+                          (
+                            text: 'one',
+                            style: TextStyle
+                            (
+                              color: Color.fromRGBO(245,197,41,1),
+                              fontWeight: FontWeight.bold,
+                            )
+                          ),
+                          TextSpan
+                          (
+                            text: '.” - Mother Teresa',
+                          )
+                        ],
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  Container
+                  (
+                    child:
+                      CircularProgressIndicator(),
+                  )
+                ]
+              ),
+          ),
         ],
       ),
     );
   }
-
 }
 
 
