@@ -14,7 +14,7 @@ class InfoTab extends StatelessWidget
   {
     return Container
     (
-      margin: EdgeInsets.fromLTRB(0,5,15,5),
+      margin: EdgeInsets.fromLTRB(0,5,15,10),
       padding: EdgeInsets.fromLTRB(5,5,5,5),
       decoration: BoxDecoration
       (
@@ -32,7 +32,7 @@ class InfoTab extends StatelessWidget
           Icon
           (
             icon,
-            color: Colors.white,
+            color: new Color.fromRGBO(245, 197, 41, 1),
           ),
           Container(
             margin: EdgeInsets.fromLTRB(5,5,0,0),
