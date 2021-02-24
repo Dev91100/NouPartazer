@@ -2,7 +2,7 @@
 import 'dart:ui';
 
 import 'package:NouPartazer_App/Koomalai/src/Business%20Cancelled%20events/Business%20cancelled%20event%20details.dart';
-import 'file:///C:/Users/appan/OneDrive/Documents/NouPartazer/NouPartazer_App/lib/Koomalai/src/Business%20completedEvent%20Details/Business%20completed%20event%20details.dart';
+import 'package:NouPartazer_App/Koomalai/src/Business%20completedEvent%20Details/Business%20completed%20event%20details.dart';
 import 'package:NouPartazer_App/Koomalai/src/Business%20ongoing%20events/Business%20ongoing%20event%20details.dart';
 import 'package:NouPartazer_App/Koomalai/src/NGO%20donation/NGO%20donation.dart';
 import 'package:NouPartazer_App/Koomalai/src/NGO%20profile/NGOProfile.dart';

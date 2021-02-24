@@ -20,7 +20,7 @@ import 'package:NouPartazer_App/Koomalai/splashscreen.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:settings_ui/settings_ui.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:NouPartazer_App/Koomalai/src/NGO profile/components/Body.dart';
+import 'package:NouPartazer_App/Koomalai/src/NGO profile/components/body.dart';
 
     class BusinessConfirmed extends StatelessWidget {
       Completer<GoogleMapController> _controller=Completer();
