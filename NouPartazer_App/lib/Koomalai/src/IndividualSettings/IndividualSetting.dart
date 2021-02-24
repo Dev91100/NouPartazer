@@ -1,13 +1,7 @@
 
 import 'package:NouPartazer_App/Koomalai/Screens/Login/login_screen.dart';
-import 'package:NouPartazer_App/Koomalai/Screens/Signin/signin_screen.dart';
-import 'package:NouPartazer_App/Koomalai/src/Help%20and%20support/helpAndSupport.dart';
 import 'package:NouPartazer_App/Koomalai/src/Individual%20Help%20and%20support/IndividualhelpAndSupport.dart';
-import 'package:NouPartazer_App/Koomalai/src/pages/profilePage.dart';
 import 'package:flutter/material.dart';
-import 'package:NouPartazer_App/Koomalai/src/Settings/components/body.dart';
-import 'package:NouPartazer_App/Koomalai/splashscreen.dart';
-import 'package:settings_ui/settings_ui.dart';
 
 class IndividualSettings extends StatelessWidget {
   @override

@@ -1,16 +1,10 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
-import 'package:NouPartazer_App/Koomalai/Screens/Welcome/welcome_screen.dart';
 import 'package:NouPartazer_App/Koomalai/constants.dart';
-
-import 'package:NouPartazer_App/Koomalai/splashscreen.dart';
-import 'package:NouPartazer_App/Koomalai/src/pages/homePage.dart';
-import 'package:NouPartazer_App/Koomalai/src/screens/mainScreen.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 import 'Koomalai/Screens/Login/login_screen.dart';
-import 'Koomalai/Screens/Signin/signin_screen.dart';
 
 
 void main() => runApp( MyApp());

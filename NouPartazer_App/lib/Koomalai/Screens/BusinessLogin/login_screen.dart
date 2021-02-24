@@ -1,6 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:NouPartazer_App/Koomalai/Screens/BusinessLogin/components/body.dart';
-import 'package:NouPartazer_App/Koomalai/splashscreen.dart';
+import 'package:flutter/material.dart';
 
 class BusinessLoginScreen extends StatelessWidget {
   @override

@@ -1,19 +1,11 @@
-import 'package:NouPartazer_App/Koomalai/src/screens/BusinessNGOmainScreen.dart';
-import 'package:NouPartazer_App/Koomalai/src/screens/BusinessmainScreen.dart';
-import 'package:flutter/material.dart';
 import 'package:NouPartazer_App/Koomalai/Screens/BusinessLogin/components/background.dart';
-import 'package:NouPartazer_App/Koomalai/Screens/NGO/NGO.dart';
 import 'package:NouPartazer_App/Koomalai/Screens/Signin/signin_screen.dart';
 import 'package:NouPartazer_App/Koomalai/Screens/Signup/signup_screen.dart';
-import 'package:NouPartazer_App/Koomalai/components/already_have_an_account_acheck.dart';
 import 'package:NouPartazer_App/Koomalai/components/rounded_button.dart';
 import 'package:NouPartazer_App/Koomalai/components/rounded_input_field.dart';
 import 'package:NouPartazer_App/Koomalai/components/rounded_password_field.dart';
-import 'package:NouPartazer_App/Koomalai/src/pages/homePage.dart';
-import 'package:NouPartazer_App/Koomalai/src/screens/mainScreen.dart';
-import 'package:flutter_svg/svg.dart';
-
-import '../login_screen.dart';
+import 'package:NouPartazer_App/Koomalai/src/screens/BusinessNGOmainScreen.dart';
+import 'package:flutter/material.dart';
 
 class Body extends StatelessWidget {
   const Body({

@@ -1,13 +1,8 @@
 
 import 'package:NouPartazer_App/Koomalai/Screens/Signin/components/social_icon.dart';
 import 'package:NouPartazer_App/Koomalai/components/rounded_button.dart';
-import 'package:NouPartazer_App/Koomalai/src/Help%20and%20support/helpAndSupport.dart';
 import 'package:NouPartazer_App/Koomalai/src/Security/Security.dart';
-import 'package:NouPartazer_App/Koomalai/src/pages/profilePage.dart';
 import 'package:flutter/material.dart';
-import 'package:NouPartazer_App/Koomalai/src/Settings/components/body.dart';
-import 'package:NouPartazer_App/Koomalai/splashscreen.dart';
-import 'package:settings_ui/settings_ui.dart';
 
 class AlertBox extends StatelessWidget {
   @override

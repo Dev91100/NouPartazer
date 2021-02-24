@@ -1,30 +1,6 @@
-import 'dart:convert';
-/*import 'dart:js';*/
 
-import 'package:NouPartazer_App/Koomalai/Screens/Signin/components/social_icon.dart';
-import 'package:NouPartazer_App/Koomalai/components/ChangePassword.dart';
-import 'package:NouPartazer_App/Koomalai/components/CreateNewPassword.dart';
-import 'package:NouPartazer_App/Koomalai/src/AlertDialogue/AlertDialogue.dart';
-import 'package:NouPartazer_App/Koomalai/src/BusinessSecurity/Security.dart';
-import 'package:NouPartazer_App/Koomalai/src/BusinessSettings/Setting.dart';
-import 'package:NouPartazer_App/Koomalai/src/Settings/Setting.dart';
 import 'package:flutter/material.dart';
-/*import 'package:flutter_auth/Screens/Login/components/background.dart';*/
-import 'package:NouPartazer_App/Koomalai/Screens/Login/login_screen.dart';
-import 'package:NouPartazer_App/Koomalai/Screens/Signup/signup_screen.dart';
-import 'package:NouPartazer_App/Koomalai/components/already_have_an_account_acheck.dart';
-import 'package:NouPartazer_App/Koomalai/components/rounded_button.dart';
-import 'package:NouPartazer_App/Koomalai/components/rounded_input.dart';
-import 'package:NouPartazer_App/Koomalai/components/rounded_input_field.dart';
-import 'package:NouPartazer_App/Koomalai/components/rounded_password_field.dart';
-import 'package:NouPartazer_App/Koomalai/components/text_field.dart';
-import 'package:NouPartazer_App/Koomalai/src/screens/mainScreen.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:fluttertoast/fluttertoast.dart';
-import 'package:http/http.dart' as http;
 
-
-import '../NGO donation.dart';
 import 'background.dart';
 
 /*import '../Business.dart';*/

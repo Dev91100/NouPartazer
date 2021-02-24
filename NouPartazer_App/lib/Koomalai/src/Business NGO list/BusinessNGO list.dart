@@ -1,12 +1,6 @@
 
 import 'package:NouPartazer_App/Koomalai/src/Business%20NGO%20profile/BusinessNGOProfile.dart';
-import 'package:NouPartazer_App/Koomalai/src/Individual%20NGO%20profile/IndividualNGOProfile.dart';
-import 'package:NouPartazer_App/Koomalai/src/NGO%20profile/NGOProfile.dart';
-import 'package:NouPartazer_App/Koomalai/src/pages/profilePage.dart';
 import 'package:flutter/material.dart';
-import 'package:NouPartazer_App/Koomalai/src/Settings/components/body.dart';
-import 'package:NouPartazer_App/Koomalai/splashscreen.dart';
-import 'package:settings_ui/settings_ui.dart';
 
 class BusinessNGOList extends StatelessWidget {
   @override

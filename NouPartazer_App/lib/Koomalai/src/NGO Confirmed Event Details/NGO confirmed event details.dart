@@ -1,27 +1,10 @@
 
 import 'dart:async';
 
-import 'package:NouPartazer_App/Koomalai/components/rounded_button.dart';
-import 'package:NouPartazer_App/Koomalai/src/BusinessSettings/Setting.dart';
-import 'package:NouPartazer_App/Koomalai/src/Help%20and%20support/helpAndSupport.dart';
-import 'package:NouPartazer_App/Koomalai/src/Security/Security.dart';
-import 'package:NouPartazer_App/Koomalai/src/Settings/Setting.dart';
-import 'package:NouPartazer_App/Koomalai/src/pages/profilePage.dart';
-import 'package:NouPartazer_App/Koomalai/src/screens/Business%20task%20tab%20bar.dart';
 import 'package:NouPartazer_App/Koomalai/src/screens/BusinessTaskmainScreen.dart';
-import 'package:NouPartazer_App/Koomalai/src/screens/BusinessmainScreen.dart';
-import 'package:NouPartazer_App/Koomalai/src/screens/DonationMainScreen.dart';
-import 'package:NouPartazer_App/Koomalai/src/screens/mainScreen.dart';
-import 'package:NouPartazer_App/Koomalai/src/widget/bottomSheetWidget.dart';
-import 'package:NouPartazer_App/Koomalai/src/widget/foodCategory.dart';
-import 'package:NouPartazer_App/Koomalai/src/widget/foodCategoryStories.dart';
 import 'package:flutter/material.dart';
-import 'package:NouPartazer_App/Koomalai/src/Settings/components/body.dart';
-import 'package:NouPartazer_App/Koomalai/splashscreen.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:settings_ui/settings_ui.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:NouPartazer_App/Koomalai/src/NGO profile/components/body.dart';
 
     class NGOConfirmedEvent extends StatelessWidget {
       Completer<GoogleMapController> _controller=Completer();

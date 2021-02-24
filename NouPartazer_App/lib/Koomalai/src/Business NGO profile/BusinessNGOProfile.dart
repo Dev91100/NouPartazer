@@ -1,20 +1,7 @@
 
-import 'package:NouPartazer_App/Koomalai/src/Help%20and%20support/helpAndSupport.dart';
-import 'package:NouPartazer_App/Koomalai/src/Security/Security.dart';
-import 'package:NouPartazer_App/Koomalai/src/Settings/Setting.dart';
-import 'package:NouPartazer_App/Koomalai/src/pages/profilePage.dart';
 import 'package:NouPartazer_App/Koomalai/src/screens/BusinessmainScreen.dart';
-import 'package:NouPartazer_App/Koomalai/src/screens/IndividualNGOMainScreen.dart';
-import 'package:NouPartazer_App/Koomalai/src/screens/mainScreen.dart';
-import 'package:NouPartazer_App/Koomalai/src/widget/bottomSheetWidget.dart';
-import 'package:NouPartazer_App/Koomalai/src/widget/foodCategory.dart';
-import 'package:NouPartazer_App/Koomalai/src/widget/foodCategoryStories.dart';
 import 'package:flutter/material.dart';
-import 'package:NouPartazer_App/Koomalai/src/Settings/components/body.dart';
-import 'package:NouPartazer_App/Koomalai/splashscreen.dart';
-import 'package:settings_ui/settings_ui.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:NouPartazer_App/Koomalai/src/NGO profile/components/body.dart';
 
 class BusinessNGOProfile extends StatelessWidget {
 

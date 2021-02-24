@@ -1,7 +1,6 @@
 
-import 'package:flutter/material.dart';
 import 'package:NouPartazer_App/Koomalai/src/NGODonation/components/body.dart';
-import 'package:NouPartazer_App/Koomalai/splashscreen.dart';
+import 'package:flutter/material.dart';
 
 class NGODonations extends StatelessWidget {
   @override

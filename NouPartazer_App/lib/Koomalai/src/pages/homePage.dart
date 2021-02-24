@@ -1,9 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:NouPartazer_App/Koomalai/src/screens/mainScreen.dart';
-import 'package:NouPartazer_App/Koomalai/src/widget/foodBought.dart';
 import 'package:NouPartazer_App/Koomalai/src/widget/foodCategory.dart';
 import 'package:NouPartazer_App/Koomalai/src/widget/homeTopWidget.dart';
-import 'package:NouPartazer_App/Koomalai/src/widget/searchBar.dart';
+import 'package:flutter/material.dart';
 
 import '../data/foodData.dart';
 import '../models/foodModel.dart';

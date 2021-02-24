@@ -1,15 +1,10 @@
 //import 'package:NouPartazer_App/Koomalai/src/NGO%20Donation/NGO%20donation.dart';
 import 'package:NouPartazer_App/Koomalai/src/NGO%20donation/NGO%20donation.dart';
 import 'package:NouPartazer_App/Koomalai/src/NGO%20profile/NGOProfile.dart';
-import 'package:NouPartazer_App/Koomalai/src/NGODonation/NGO%20donation.dart';
+import 'package:NouPartazer_App/Koomalai/src/pages/homePage.dart';
+import 'package:NouPartazer_App/Koomalai/src/pages/orderPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:NouPartazer_App/Koomalai/Screens/Login/login_screen.dart';
-import 'package:NouPartazer_App/Koomalai/Screens/Signup/components/social_icon.dart';
-import 'package:NouPartazer_App/Koomalai/src/pages/homePage.dart';
-import 'package:NouPartazer_App/Koomalai/src/pages/mapsPage.dart';
-import 'package:NouPartazer_App/Koomalai/src/pages/orderPage.dart';
-import 'package:NouPartazer_App/Koomalai/src/pages/profilePage.dart';
 
 import 'NGO task tab bar.dart';
 

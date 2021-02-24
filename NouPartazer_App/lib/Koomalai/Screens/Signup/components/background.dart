@@ -1,4 +1,3 @@
-import 'package:NouPartazer_App/Koomalai/src/screens/secondMainScreen.dart';
 import 'package:flutter/material.dart';
 
 class Background extends StatelessWidget {

@@ -1,27 +1,16 @@
 import 'dart:convert';
-// ignore: avoid_web_libraries_in_flutter
-/*import 'dart:js';*/
-import 'dart:math';
 
-import 'package:NouPartazer_App/Koomalai/src/screens/secondMainScreen.dart';
-import 'package:flutter/material.dart';
 import 'package:NouPartazer_App/Koomalai/Screens/Login/components/background.dart';
-import 'package:NouPartazer_App/Koomalai/Screens/NGO/NGO.dart';
-import 'package:NouPartazer_App/Koomalai/Screens/Signin/signin_screen.dart';
 import 'package:NouPartazer_App/Koomalai/Screens/Signup/signup_screen.dart';
-import 'package:NouPartazer_App/Koomalai/components/already_have_an_account_acheck.dart';
 import 'package:NouPartazer_App/Koomalai/components/rounded_button.dart';
-import 'package:NouPartazer_App/Koomalai/components/rounded_drop_down.dart';
 import 'package:NouPartazer_App/Koomalai/components/rounded_input_field.dart';
 import 'package:NouPartazer_App/Koomalai/components/rounded_password_field.dart';
-import 'package:NouPartazer_App/Koomalai/src/pages/homePage.dart';
 import 'package:NouPartazer_App/Koomalai/src/screens/mainScreen.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:NouPartazer_App/Koomalai/src/screens/secondMainScreen.dart';
+import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 import '../login_screen.dart';
-import 'package:NouPartazer_App/Koomalai/components/custom_dropdown.dart';
-import 'package:fluttertoast/fluttertoast.dart';
-import 'package:http/http.dart' as http;
 
 
 class Body extends StatelessWidget {

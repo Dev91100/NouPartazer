@@ -3,12 +3,6 @@ import 'package:NouPartazer_App/Koomalai/src/NGO%20list/NGO%20list.dart';
 import 'package:NouPartazer_App/Koomalai/src/pages/individualHomePage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:NouPartazer_App/Koomalai/Screens/Login/login_screen.dart';
-import 'package:NouPartazer_App/Koomalai/Screens/Signup/components/social_icon.dart';
-import 'package:NouPartazer_App/Koomalai/src/pages/homePage.dart';
-import 'package:NouPartazer_App/Koomalai/src/pages/mapsPage.dart';
-import 'package:NouPartazer_App/Koomalai/src/pages/orderPage.dart';
-import 'package:NouPartazer_App/Koomalai/src/pages/profilePage.dart';
 
 class HelpAndSupportMainScreen extends StatefulWidget
 {

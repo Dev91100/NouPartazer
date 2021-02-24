@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:NouPartazer_App/Koomalai/constants.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class SocalIcon extends StatelessWidget {

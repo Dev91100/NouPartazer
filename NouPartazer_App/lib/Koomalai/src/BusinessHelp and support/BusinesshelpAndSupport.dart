@@ -1,12 +1,6 @@
 
 import 'package:NouPartazer_App/Koomalai/src/BusinessSettings/Setting.dart';
-import 'package:NouPartazer_App/Koomalai/src/IndividualSettings/IndividualSetting.dart';
-import 'package:NouPartazer_App/Koomalai/src/Settings/Setting.dart';
-import 'package:NouPartazer_App/Koomalai/src/pages/profilePage.dart';
 import 'package:flutter/material.dart';
-import 'package:NouPartazer_App/Koomalai/src/Settings/components/body.dart';
-import 'package:NouPartazer_App/Koomalai/splashscreen.dart';
-import 'package:settings_ui/settings_ui.dart';
 
 class BusinessHelpAndSupport extends StatelessWidget {
   @override

@@ -1,16 +1,8 @@
 
 import 'package:NouPartazer_App/Koomalai/src/BusinessHelp%20and%20support/BusinesshelpAndSupport.dart';
 import 'package:NouPartazer_App/Koomalai/src/BusinessSecurity/Security.dart';
-import 'package:NouPartazer_App/Koomalai/src/Help%20and%20support/helpAndSupport.dart';
-import 'package:NouPartazer_App/Koomalai/src/NGO%20profile/NGOProfile.dart';
-import 'package:NouPartazer_App/Koomalai/src/Security/Security.dart';
-import 'package:NouPartazer_App/Koomalai/src/pages/profilePage.dart';
 import 'package:NouPartazer_App/Koomalai/src/screens/BusinessProfilemainScreen.dart';
-import 'package:NouPartazer_App/Koomalai/src/screens/NGOmainScreen.dart';
 import 'package:flutter/material.dart';
-import 'package:NouPartazer_App/Koomalai/src/Settings/components/body.dart';
-import 'package:NouPartazer_App/Koomalai/splashscreen.dart';
-import 'package:settings_ui/settings_ui.dart';
 
 class BusinessSettings extends StatelessWidget {
   @override
