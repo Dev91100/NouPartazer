@@ -6,6 +6,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'NGO task tab bar.dart';
+import 'package:NouPartazer_App/Atish/StoryModel.dart';
 
 class MainScreen extends StatefulWidget
 {
@@ -101,7 +102,7 @@ class _MainScreenState extends State<MainScreen>
 
         selectedItemColor: Color.fromRGBO(41, 90, 245, 1),
       ),
-      body: ,
+      body: StoryModel(),
     );
   }
 }
