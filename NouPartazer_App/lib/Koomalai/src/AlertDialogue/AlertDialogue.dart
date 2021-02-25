@@ -23,7 +23,7 @@ class AlertBox extends StatelessWidget {
            child: Text(
               "Success" ,
               style: TextStyle(
-                fontFamily: "risotto",
+                
                 fontSize: 25.0,
                 fontWeight: FontWeight.bold,
               ),
@@ -37,7 +37,7 @@ class AlertBox extends StatelessWidget {
               child: Text(
                 "Changes updated!",
                 style: TextStyle(
-                  fontFamily: "risotto",
+                  
                   fontSize: 18.0,
                   /*fontWeight: FontWeight.bold,*/
                 ),

@@ -264,7 +264,7 @@ import 'package:url_launcher/url_launcher.dart';
                                                       fontSize: 20.0,
                                                       fontWeight: FontWeight.bold,
                                                       color: Colors.black,
-                                                      fontFamily: "risotto",
+                                                      
                                                     ),
 
                                                   ),
@@ -301,7 +301,7 @@ import 'package:url_launcher/url_launcher.dart';
                                                         style: TextStyle(
                                                           fontSize: 16.0,
                                                           color: Colors.blueAccent[700],
-                                                          fontFamily: "risotto",
+                                                          
                                                           decoration: TextDecoration.underline,
                                                         ),
 
@@ -339,7 +339,7 @@ import 'package:url_launcher/url_launcher.dart';
                                                         style: TextStyle(
                                                           fontSize: 16.0,
                                                           color: Colors.blueAccent[700],
-                                                          fontFamily: "risotto",
+                                                          
                                                           decoration: TextDecoration.underline,
                                                         ),
                                                       ),
@@ -375,7 +375,7 @@ import 'package:url_launcher/url_launcher.dart';
                                                         style: TextStyle(
                                                           fontSize: 16.0,
                                                           color: Colors.blueAccent[700],
-                                                          fontFamily: "risotto",
+                                                          
                                                           decoration: TextDecoration.underline,
                                                         ),
                                                       ),
@@ -491,7 +491,7 @@ import 'package:url_launcher/url_launcher.dart';
                                                   Text(
                                                     "MEMBERS",
                                                     style: TextStyle(
-                                                      fontFamily: "risotto",
+                                                      
                                                       fontSize: 22.0,
                                                       fontWeight: FontWeight.bold,
                                                     ),

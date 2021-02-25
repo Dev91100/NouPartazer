@@ -81,7 +81,7 @@ class IndividualHelpAndSupport extends StatelessWidget {
                                 child: Text(
                                 "HELP & SUPPORT",
                                 style: TextStyle(
-                                fontFamily: "risotto",
+                                
                                 fontSize: 22.0,
                                 //fontWeight: FontWeight.bold,
                                 ),
@@ -117,7 +117,7 @@ class IndividualHelpAndSupport extends StatelessWidget {
                         ),
                         title: Text("About Us" ,
                           style: TextStyle(
-                          fontFamily: "risotto",
+                          
                           fontSize: 18.0,
                           fontWeight: FontWeight.bold,
                         ),
@@ -125,7 +125,7 @@ class IndividualHelpAndSupport extends StatelessWidget {
 
                         subtitle: Text('Learn more about NouPartazer',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 13.0,
 
                           ),
@@ -139,14 +139,14 @@ class IndividualHelpAndSupport extends StatelessWidget {
                       ListTile(
                         title: Text('Terms & Conditions',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 18.0,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         subtitle: Text('Learn more about NouPartazer',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 13.0,
 
                           ),
@@ -162,14 +162,14 @@ class IndividualHelpAndSupport extends StatelessWidget {
                       ListTile(
                         title: Text('Privacy Policy',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 18.0,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         subtitle: Text('Learn more about NouPartazer',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 13.0,
 
                           ),
@@ -185,14 +185,14 @@ class IndividualHelpAndSupport extends StatelessWidget {
                       ListTile(
                         title: Text('FAQ',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 18.0,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         subtitle: Text('Learn more about NouPartazer',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 13.0,
 
                           ),
@@ -209,7 +209,7 @@ class IndividualHelpAndSupport extends StatelessWidget {
                       ListTile(
                         title: Text('Contact Us',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 18.0,
                             fontWeight: FontWeight.bold,
                           ),
@@ -217,7 +217,7 @@ class IndividualHelpAndSupport extends StatelessWidget {
 
                         subtitle: Text('Learn more about NouPartazer',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 13.0,
 
                           ),

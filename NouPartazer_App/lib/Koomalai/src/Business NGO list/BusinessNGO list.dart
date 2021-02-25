@@ -52,7 +52,7 @@ class BusinessNGOList extends StatelessWidget {
                                 child: Text(
                                 "NGO LIST",
                                 style: TextStyle(
-                                fontFamily: "risotto",
+                                
                                 fontSize: 22.0,
                                 //fontWeight: FontWeight.bold,
                                 ),
@@ -90,7 +90,7 @@ class BusinessNGOList extends StatelessWidget {
                        ),
                         title: Text("Manzer Partazer" ,
                           style: TextStyle(
-                          fontFamily: "risotto",
+                          
                           fontSize: 18.0,
                           fontWeight: FontWeight.bold,
                         ),
@@ -98,7 +98,7 @@ class BusinessNGOList extends StatelessWidget {
 
                         subtitle: Text('First food project in Mauritius',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 13.0,
 
                           ),

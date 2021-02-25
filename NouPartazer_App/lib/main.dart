@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:NouPartazer_App/Koomalai/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'Koomalai/Screens/Login/login_screen.dart';
 
@@ -70,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
             color: Color.fromRGBO(0, 0, 0, 0.3)
           ),
           Container(
-            margin: EdgeInsets.fromLTRB(0, 110, 0, 0),
+            margin: EdgeInsets.fromLTRB(0, 200, 0, 0),
             width: double.infinity,
             child: Column
               (
@@ -86,16 +87,20 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   SizedBox
                   (
-                    height: 25,
+                    height: 15,
                   ),
                   RichText
                   (
                     text: TextSpan
                     (
-                      style: TextStyle
+                      style: GoogleFonts.comfortaa
                       (
-                        fontSize: 45,
-                        color: Colors.white,
+                        textStyle: TextStyle
+                        (
+                          fontWeight: FontWeight.bold,
+                          fontSize: 45,
+                          color: Colors.white,
+                        ),
                       ),
                       children:
                       [
@@ -116,18 +121,22 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   Container
                   (
-                    margin: EdgeInsets.fromLTRB(0, 40, 0, 0),
+                    margin: EdgeInsets.fromLTRB(0, 110, 0, 0),
                     height: 200,
                     width: 270,
                     child: RichText
                     (
                       text: TextSpan
                       (
-                        style: TextStyle
+                        style: GoogleFonts.comfortaa
                         (
-                          fontSize: 30,
-                          color: Colors.white,
-                        ),
+                          textStyle: TextStyle
+                          (
+                            height: 1.2,
+                            fontSize: 29,
+                            color: Colors.white,
+                          ),
+                          ),
                         children:
                         [
                           TextSpan
@@ -154,6 +163,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   Container
                   (
+                    margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
                     child:
                       CircularProgressIndicator(),
                   )

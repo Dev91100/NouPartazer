@@ -61,7 +61,7 @@ class Body extends StatelessWidget {
               children: <Widget>[
                 FlatButton(
                   child: Text("Sign In",
-                    style: TextStyle(color: Colors.white, fontFamily: 'risotto',fontSize: 20.0),
+                    style: TextStyle(color: Colors.white, fontSize: 20.0),
                   ),
 
                   shape: RoundedRectangleBorder(
@@ -90,7 +90,7 @@ class Body extends StatelessWidget {
 
                 FlatButton(
                   child: Text("Sign Up",
-                    style: TextStyle(color: Colors.black, fontFamily: 'risotto', fontSize: 20.0),),
+                    style: TextStyle(color: Colors.black,  fontSize: 20.0),),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(0.0),
 
@@ -123,14 +123,14 @@ class Body extends StatelessWidget {
               margin: EdgeInsets.only(left: 25.0),
               alignment: Alignment.bottomLeft,
               child: Text("Let's get started,",
-                style: TextStyle(color: Colors.amber, fontFamily: 'risotto',fontSize: 40.0,fontWeight: FontWeight.bold),),
+                style: TextStyle(color: Colors.amber, fontSize: 40.0,fontWeight: FontWeight.bold),),
             ),
 
             Container(
               margin: EdgeInsets.only(left: 30.0),
               alignment: Alignment.bottomLeft,
               child: Text("Choose your organisational type",
-                style: TextStyle(color: Colors.white, fontFamily: 'risotto',fontSize: 22.0),),
+                style: TextStyle(color: Colors.white, fontSize: 22.0),),
             ),
 
 

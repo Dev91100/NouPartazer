@@ -83,7 +83,7 @@ class Settings extends StatelessWidget {
                                 child: Text(
                                 "ALL SETTINGS",
                                 style: TextStyle(
-                                fontFamily: "risotto",
+                                
                                 fontSize: 22.0,
                                 //fontWeight: FontWeight.bold,
                                 ),
@@ -119,7 +119,7 @@ class Settings extends StatelessWidget {
                         ),
                         title: Text("Notifications" ,
                           style: TextStyle(
-                          fontFamily: "risotto",
+                          
                           fontSize: 18.0,
                           fontWeight: FontWeight.bold,
                         ),
@@ -127,7 +127,7 @@ class Settings extends StatelessWidget {
 
                         subtitle: Text('Receive notifications from the app',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 13.0,
 
                           ),
@@ -141,14 +141,14 @@ class Settings extends StatelessWidget {
                       ListTile(
                         title: Text('Language',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 18.0,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         subtitle: Text('English',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 13.0,
 
                           ),
@@ -164,14 +164,14 @@ class Settings extends StatelessWidget {
                       ListTile(
                         title: Text('Security',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 18.0,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         subtitle: Text('Update password and account settings',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 13.0,
 
                           ),
@@ -194,14 +194,14 @@ class Settings extends StatelessWidget {
                       ListTile(
                         title: Text('Help & Support',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 18.0,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         subtitle: Text('For any questions, contact us',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 13.0,
 
                           ),
@@ -225,7 +225,7 @@ class Settings extends StatelessWidget {
                       ListTile(
                         title: Text('Log out',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 18.0,
                             fontWeight: FontWeight.bold,
                           ),

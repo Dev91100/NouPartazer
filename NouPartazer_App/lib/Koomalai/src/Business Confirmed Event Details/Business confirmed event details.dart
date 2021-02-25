@@ -119,7 +119,7 @@ class BusinessConfirmedEvent extends StatelessWidget {
                   child: Text(
                   "EVENT DETAILS",
                   style: TextStyle(
-                  fontFamily: "risotto",
+                  
                   fontSize: 20.0,
                   /* fontWeight: FontWeight.bold,*/
                   ),
@@ -168,7 +168,7 @@ class BusinessConfirmedEvent extends StatelessWidget {
                       child: Text(
                         "GROCERY DONATIONS",
                         style: TextStyle(
-                          fontFamily: "risotto",
+                          
                           fontSize: 20.0,
                           /* fontWeight: FontWeight.bold,*/
                         ),
@@ -611,7 +611,7 @@ class BusinessConfirmedEvent extends StatelessWidget {
                                     child: IconButton(
                                       icon: Icon (Icons.settings_outlined),
                                       /*child: Text("Sign In",
-                        style: TextStyle(color: Colors.black, fontFamily: 'risotto',fontSize: 20.0),
+                        style: TextStyle(color: Colors.black, fontSize: 20.0),
                       ),
 
                       shape: Border.all(color:Colors.white,width: 2.0),*/
@@ -649,7 +649,7 @@ class BusinessConfirmedEvent extends StatelessWidget {
                           child: Text(
                         "DATE & TIME",
                         style: TextStyle(
-                          fontFamily: "risotto",
+                          
                           fontSize: 22.0,
                           fontWeight: FontWeight.bold,
                         ),
@@ -814,7 +814,7 @@ class BusinessConfirmedEvent extends StatelessWidget {
                                       Text(
                                         "FOOD TYPE ",
                                         style: TextStyle(
-                                          fontFamily: "risotto",
+                                          
                                           fontSize: 22.0,
                                           fontWeight: FontWeight.bold,
                                         ),
@@ -1095,7 +1095,7 @@ class BusinessConfirmedEvent extends StatelessWidget {
                                           fontSize: 20.0,
                                           fontWeight: FontWeight.bold,
                                           color: Colors.black,
-                                          fontFamily: "risotto",
+                                          
                                         ),
 
                                       ),

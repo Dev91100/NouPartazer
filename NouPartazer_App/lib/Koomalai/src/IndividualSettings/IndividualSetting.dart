@@ -53,7 +53,7 @@ class IndividualSettings extends StatelessWidget {
                                 child: Text(
                                 "ALL SETTINGS",
                                 style: TextStyle(
-                                fontFamily: "risotto",
+                                
                                 fontSize: 22.0,
                                 //fontWeight: FontWeight.bold,
                                 ),
@@ -87,7 +87,7 @@ class IndividualSettings extends StatelessWidget {
                         ),
                         title: Text("Notifications" ,
                           style: TextStyle(
-                          fontFamily: "risotto",
+                          
                           fontSize: 18.0,
                           fontWeight: FontWeight.bold,
                         ),
@@ -95,7 +95,7 @@ class IndividualSettings extends StatelessWidget {
 
                         subtitle: Text('Receive notifications from the app',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 13.0,
 
                           ),
@@ -109,14 +109,14 @@ class IndividualSettings extends StatelessWidget {
                       ListTile(
                         title: Text('Language',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 18.0,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         subtitle: Text('English',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 13.0,
 
                           ),
@@ -133,14 +133,14 @@ class IndividualSettings extends StatelessWidget {
                       ListTile(
                         title: Text('Help & Support',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 18.0,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         subtitle: Text('For any questions, contact us',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 13.0,
 
                           ),
@@ -164,7 +164,7 @@ class IndividualSettings extends StatelessWidget {
                       ListTile(
                         title: Text('Log in',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 18.0,
                             fontWeight: FontWeight.bold,
                           ),

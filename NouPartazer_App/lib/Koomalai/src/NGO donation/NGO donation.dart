@@ -47,7 +47,7 @@ class NGODonation extends StatelessWidget {
                   child: Text(
                     "DONATIONS",
                     style: TextStyle(
-                      fontFamily: "risotto",
+                      
                       fontSize: 22.0,
                       //fontWeight: FontWeight.bold,
                     ),
@@ -92,7 +92,7 @@ class NGODonation extends StatelessWidget {
                         children: <Widget>[
                       Text("Grocery donation" ,
                       style: TextStyle(
-                        fontFamily: "risotto",
+                        
                         fontSize: 18.0,
                         fontWeight: FontWeight.bold,
                       ),
@@ -135,7 +135,7 @@ class NGODonation extends StatelessWidget {
 
                           Text('19/01/2021',
                             style: TextStyle(
-                              fontFamily: "risotto",
+                              
                               /*fontSize: 13.0,*/
                             ),
 
@@ -149,7 +149,7 @@ class NGODonation extends StatelessWidget {
 
                           Text('Jumbo Supermarket',
                             style: TextStyle(
-                              fontFamily: "risotto",
+                              
                               /*fontSize: 13.0,*/
                             ),
 
@@ -159,7 +159,7 @@ class NGODonation extends StatelessWidget {
                     ),
                     /*Text('First food project in Mauritius',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 13.0,
                           ),
 
@@ -202,7 +202,7 @@ class NGODonation extends StatelessWidget {
                         children: <Widget>[
                           Text("Grocery donation" ,
                             style: TextStyle(
-                              fontFamily: "risotto",
+                              
                               fontSize: 18.0,
                               fontWeight: FontWeight.bold,
                             ),
@@ -245,7 +245,7 @@ class NGODonation extends StatelessWidget {
 
                           Text('19/01/2021',
                             style: TextStyle(
-                              fontFamily: "risotto",
+                              
                               /*fontSize: 13.0,*/
                             ),
 
@@ -259,7 +259,7 @@ class NGODonation extends StatelessWidget {
 
                           Text('Jumbo Supermarket',
                             style: TextStyle(
-                              fontFamily: "risotto",
+                              
                               /*fontSize: 13.0,*/
                             ),
 
@@ -269,7 +269,7 @@ class NGODonation extends StatelessWidget {
                     ),
                     /*Text('First food project in Mauritius',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 13.0,
                           ),
 
@@ -312,7 +312,7 @@ class NGODonation extends StatelessWidget {
                         children: <Widget>[
                           Text("Grocery donation" ,
                             style: TextStyle(
-                              fontFamily: "risotto",
+                              
                               fontSize: 18.0,
                               fontWeight: FontWeight.bold,
                             ),
@@ -355,7 +355,7 @@ class NGODonation extends StatelessWidget {
 
                           Text('19/01/2021',
                             style: TextStyle(
-                              fontFamily: "risotto",
+                              
                               /*fontSize: 13.0,*/
                             ),
 
@@ -369,7 +369,7 @@ class NGODonation extends StatelessWidget {
 
                           Text('Jumbo Supermarket',
                             style: TextStyle(
-                              fontFamily: "risotto",
+                              
                               /*fontSize: 13.0,*/
                             ),
 
@@ -379,7 +379,7 @@ class NGODonation extends StatelessWidget {
                     ),
                     /*Text('First food project in Mauritius',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 13.0,
                           ),
 
@@ -442,7 +442,7 @@ class NGODonation extends StatelessWidget {
                                 child: Text(
                                 "ALL SETTINGS",
                                 style: TextStyle(
-                                fontFamily: "risotto",
+                                
                                 fontSize: 22.0,
                                 //fontWeight: FontWeight.bold,
                                 ),
@@ -478,7 +478,7 @@ class NGODonation extends StatelessWidget {
                         ),
                         title: Text("Notifications" ,
                           style: TextStyle(
-                          fontFamily: "risotto",
+                          
                           fontSize: 18.0,
                           fontWeight: FontWeight.bold,
                         ),
@@ -486,7 +486,7 @@ class NGODonation extends StatelessWidget {
 
                         subtitle: Text('Receive notifications from the app',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 13.0,
 
                           ),
@@ -500,14 +500,14 @@ class NGODonation extends StatelessWidget {
                       ListTile(
                         title: Text('Language',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 18.0,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         subtitle: Text('English',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 13.0,
 
                           ),
@@ -523,14 +523,14 @@ class NGODonation extends StatelessWidget {
                       ListTile(
                         title: Text('Security',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 18.0,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         subtitle: Text('Update password and account settings',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 13.0,
 
                           ),
@@ -553,14 +553,14 @@ class NGODonation extends StatelessWidget {
                       ListTile(
                         title: Text('Help & Support',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 18.0,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         subtitle: Text('For any questions, contact us',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 13.0,
 
                           ),
@@ -584,7 +584,7 @@ class NGODonation extends StatelessWidget {
                       ListTile(
                         title: Text('Log out',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 18.0,
                             fontWeight: FontWeight.bold,
                           ),

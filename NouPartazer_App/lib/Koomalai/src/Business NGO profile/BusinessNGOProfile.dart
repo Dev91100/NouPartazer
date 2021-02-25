@@ -264,7 +264,7 @@ class BusinessNGOProfile extends StatelessWidget {
                                                       fontSize: 20.0,
                                                       fontWeight: FontWeight.bold,
                                                       color: Colors.black,
-                                                      fontFamily: "risotto",
+                                                      
                                                     ),
 
                                                   ),
@@ -301,7 +301,7 @@ class BusinessNGOProfile extends StatelessWidget {
                                                         style: TextStyle(
                                                           fontSize: 16.0,
                                                           color: Colors.blueAccent[700],
-                                                          fontFamily: "risotto",
+                                                          
                                                           decoration: TextDecoration.underline,
                                                         ),
 
@@ -339,7 +339,7 @@ class BusinessNGOProfile extends StatelessWidget {
                                                         style: TextStyle(
                                                           fontSize: 16.0,
                                                           color: Colors.blueAccent[700],
-                                                          fontFamily: "risotto",
+                                                          
                                                           decoration: TextDecoration.underline,
                                                         ),
                                                       ),
@@ -375,7 +375,7 @@ class BusinessNGOProfile extends StatelessWidget {
                                                         style: TextStyle(
                                                           fontSize: 16.0,
                                                           color: Colors.blueAccent[700],
-                                                          fontFamily: "risotto",
+                                                          
                                                           decoration: TextDecoration.underline,
                                                         ),
                                                       ),
@@ -491,7 +491,7 @@ class BusinessNGOProfile extends StatelessWidget {
                                                   Text(
                                                     "MEMBERS",
                                                     style: TextStyle(
-                                                      fontFamily: "risotto",
+                                                      
                                                       fontSize: 22.0,
                                                       fontWeight: FontWeight.bold,
                                                     ),

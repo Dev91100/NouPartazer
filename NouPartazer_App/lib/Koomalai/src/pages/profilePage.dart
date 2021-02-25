@@ -216,7 +216,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 child: IconButton(
                   icon: Icon (Icons.settings_outlined),
                   /*child: Text("Sign In",
-                style: TextStyle(color: Colors.black, fontFamily: 'risotto',fontSize: 20.0),
+                style: TextStyle(color: Colors.black, fontSize: 20.0),
               ),
 
               shape: Border.all(color:Colors.white,width: 2.0),*/
@@ -255,7 +255,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     Text(
                       "AT A GLANCE",
                       style: TextStyle(
-                        fontFamily: "risotto",
+                        
                         fontSize: 22.0,
                         fontWeight: FontWeight.bold,
                       ),
@@ -392,7 +392,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       fontSize: 20.0,
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
-                      fontFamily: "risotto",
+                      
                     ),
 
                   ),
@@ -440,7 +440,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   style: TextStyle(
                     fontSize: 16.0,
                     color: Colors.blueAccent[700],
-                    fontFamily: "risotto",
+                    
                     decoration: TextDecoration.underline,
                   ),
 
@@ -478,7 +478,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         style: TextStyle(
                           fontSize: 16.0,
                           color: Colors.blueAccent[700],
-                          fontFamily: "risotto",
+                          
                           decoration: TextDecoration.underline,
                         ),
                       ),
@@ -514,7 +514,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         style: TextStyle(
                           fontSize: 16.0,
                           color: Colors.blueAccent[700],
-                          fontFamily: "risotto",
+                          
                           decoration: TextDecoration.underline,
                         ),
                       ),
@@ -630,7 +630,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   Text(
                     "MEMBERS",
                     style: TextStyle(
-                      fontFamily: "risotto",
+                      
                       fontSize: 22.0,
                       fontWeight: FontWeight.bold,
                     ),

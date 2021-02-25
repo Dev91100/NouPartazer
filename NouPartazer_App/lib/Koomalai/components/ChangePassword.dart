@@ -17,7 +17,7 @@ class ChangePasswordField extends StatelessWidget {
         cursorColor:Colors.black54,
         decoration: InputDecoration(
           hintText: "ENTER OLD PASSWORD",
-          hintStyle: TextStyle(color: Colors.black54,fontSize: 15,fontFamily: "risotto"),
+          hintStyle: TextStyle(color: Colors.black54,fontSize: 15,),
           prefixIcon: Icon(
             Icons.lock_outline,
             color: Colors.black54,

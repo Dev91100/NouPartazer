@@ -179,7 +179,7 @@ class NGOProfile extends StatelessWidget {
                             child: IconButton(
                               icon: Icon (Icons.settings_outlined),
                               /*child: Text("Sign In",
-                style: TextStyle(color: Colors.black, fontFamily: 'risotto',fontSize: 20.0),
+                style: TextStyle(color: Colors.black, fontSize: 20.0),
               ),
 
               shape: Border.all(color:Colors.white,width: 2.0),*/
@@ -218,7 +218,7 @@ class NGOProfile extends StatelessWidget {
                               Text(
                                 "MY STORIES",
                                 style: TextStyle(
-                                  fontFamily: "risotto",
+                                  
                                   fontSize: 22.0,
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -365,7 +365,7 @@ class NGOProfile extends StatelessWidget {
                                   fontSize: 20.0,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black,
-                                  fontFamily: "risotto",
+                                  
                                 ),
 
                               ),
@@ -413,7 +413,7 @@ class NGOProfile extends StatelessWidget {
                                     style: TextStyle(
                                       fontSize: 16.0,
                                       color: Colors.blueAccent[700],
-                                      fontFamily: "risotto",
+                                      
                                       decoration: TextDecoration.underline,
                                     ),
 
@@ -451,7 +451,7 @@ class NGOProfile extends StatelessWidget {
                                     style: TextStyle(
                                       fontSize: 16.0,
                                       color: Colors.blueAccent[700],
-                                      fontFamily: "risotto",
+                                      
                                       decoration: TextDecoration.underline,
                                     ),
                                   ),
@@ -487,7 +487,7 @@ class NGOProfile extends StatelessWidget {
                                     style: TextStyle(
                                       fontSize: 16.0,
                                       color: Colors.blueAccent[700],
-                                      fontFamily: "risotto",
+                                      
                                       decoration: TextDecoration.underline,
                                     ),
                                   ),
@@ -603,7 +603,7 @@ class NGOProfile extends StatelessWidget {
                               Text(
                                 "MEMBERS",
                                 style: TextStyle(
-                                  fontFamily: "risotto",
+                                  
                                   fontSize: 22.0,
                                   fontWeight: FontWeight.bold,
                                 ),

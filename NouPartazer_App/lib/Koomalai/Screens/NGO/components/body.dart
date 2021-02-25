@@ -183,7 +183,7 @@ class Body extends StatelessWidget {
                 child: IconButton(
                   icon: Icon (Icons.arrow_back_ios_outlined),
                   /*child: Text("Sign In",
-                    style: TextStyle(color: Colors.black, fontFamily: 'risotto',fontSize: 20.0),
+                    style: TextStyle(color: Colors.black, fontSize: 20.0),
                   ),
 
                   shape: Border.all(color:Colors.white,width: 2.0),*/
@@ -211,7 +211,7 @@ class Body extends StatelessWidget {
 
                /* FlatButton(
                   child: Text("Sign Up",
-                    style: TextStyle(color: Colors.white, fontFamily: 'risotto', fontSize: 20.0),),
+                    style: TextStyle(color: Colors.white,  fontSize: 20.0),),
 
                   onPressed: () {
                     Colors.white;
@@ -243,7 +243,7 @@ class Body extends StatelessWidget {
               margin: EdgeInsets.only(left: 25.0),
               alignment: Alignment.bottomLeft,
               child: Text("Let's continue,",
-                style: TextStyle(color: Colors.amber, fontFamily: 'roboto',fontSize: 45.0,fontWeight: FontWeight.bold),),
+                style: TextStyle(color: Colors.amber, fontSize: 45.0,fontWeight: FontWeight.bold),),
             ),
 
             SizedBox(height: size.height * 0.01),
@@ -251,7 +251,7 @@ class Body extends StatelessWidget {
               margin: EdgeInsets.only(left: 25.0),
               alignment: Alignment.bottomLeft,
               child: Text("Fill in the following information",
-                style: TextStyle(color: Colors.black, fontFamily: 'roboto',fontSize: 22.0),),
+                style: TextStyle(color: Colors.black, fontSize: 22.0),),
             ),
 
             SizedBox(height: size.height * 0.01),
@@ -259,7 +259,7 @@ class Body extends StatelessWidget {
               margin: EdgeInsets.only(left: 25.0),
               alignment: Alignment.bottomLeft,
               child: Text("NGO Information",
-                style: TextStyle(color: Colors.black, fontFamily: 'roboto',fontSize: 25.0,fontWeight: FontWeight.bold),
+                style: TextStyle(color: Colors.black, fontSize: 25.0,fontWeight: FontWeight.bold),
               ),
             ),
 
@@ -284,7 +284,7 @@ class Body extends StatelessWidget {
           alignment: Alignment.bottomLeft,
             child: Text(
               "Registration Number",
-              style: TextStyle(color: Colors.black, fontFamily: 'roboto',fontSize: 20.0,fontWeight: FontWeight.bold),
+              style: TextStyle(color: Colors.black, fontSize: 20.0,fontWeight: FontWeight.bold),
 
             ),
         ),
@@ -301,7 +301,7 @@ class Body extends StatelessWidget {
               alignment: Alignment.bottomLeft,
               child: Text(
                 "Registered Name",
-                style: TextStyle(color: Colors.black, fontFamily: 'roboto',fontSize: 20.0,fontWeight: FontWeight.bold),
+                style: TextStyle(color: Colors.black, fontSize: 20.0,fontWeight: FontWeight.bold),
 
               ),
             ),
@@ -316,7 +316,7 @@ class Body extends StatelessWidget {
               alignment: Alignment.bottomLeft,
               child: Text(
                 "NGOExpertise",
-                style: TextStyle(color: Colors.black, fontFamily: 'roboto',fontSize: 20.0,fontWeight: FontWeight.bold),
+                style: TextStyle(color: Colors.black, fontSize: 20.0,fontWeight: FontWeight.bold),
 
               ),
             ),
@@ -332,7 +332,7 @@ class Body extends StatelessWidget {
               alignment: Alignment.bottomLeft,
               child: Text(
                 "Member Size",
-                style: TextStyle(color: Colors.black, fontFamily: 'roboto',fontSize: 20.0,fontWeight: FontWeight.bold),
+                style: TextStyle(color: Colors.black, fontSize: 20.0,fontWeight: FontWeight.bold),
 
               ),
             ),
@@ -347,7 +347,7 @@ class Body extends StatelessWidget {
               alignment: Alignment.bottomLeft,
               child: Text(
                 "Address",
-                style: TextStyle(color: Colors.black, fontFamily: 'roboto',fontSize: 20.0,fontWeight: FontWeight.bold),
+                style: TextStyle(color: Colors.black, fontSize: 20.0,fontWeight: FontWeight.bold),
 
               ),
             ),
@@ -362,7 +362,7 @@ class Body extends StatelessWidget {
               alignment: Alignment.bottomLeft,
               child: Text(
                 "Website",
-                style: TextStyle(color: Colors.black, fontFamily: 'roboto',fontSize: 20.0,fontWeight: FontWeight.bold),
+                style: TextStyle(color: Colors.black, fontSize: 20.0,fontWeight: FontWeight.bold),
 
               ),
             ),
@@ -392,7 +392,7 @@ class Body extends StatelessWidget {
               alignment: Alignment.bottomLeft,
               child: Text(
                 "ACCOUNT HOLDER INFORMATION",
-                style: TextStyle(color: Colors.black, fontFamily: 'roboto',fontSize: 20.0,fontWeight: FontWeight.bold),
+                style: TextStyle(color: Colors.black, fontSize: 20.0,fontWeight: FontWeight.bold),
 
               ),
             ),
@@ -402,7 +402,7 @@ class Body extends StatelessWidget {
               alignment: Alignment.bottomLeft,
               child: Text(
                 "Title",
-                style: TextStyle(color: Colors.black, fontFamily: 'roboto',fontSize: 20.0,fontWeight: FontWeight.bold),
+                style: TextStyle(color: Colors.black, fontSize: 20.0,fontWeight: FontWeight.bold),
 
               ),
             ),
@@ -416,7 +416,7 @@ class Body extends StatelessWidget {
               alignment: Alignment.bottomLeft,
               child: Text(
                 "Name",
-                style: TextStyle(color: Colors.black, fontFamily: 'roboto',fontSize: 20.0,fontWeight: FontWeight.bold),
+                style: TextStyle(color: Colors.black, fontSize: 20.0,fontWeight: FontWeight.bold),
 
               ),
             ),
@@ -429,7 +429,7 @@ class Body extends StatelessWidget {
               alignment: Alignment.bottomLeft,
               child: Text(
                 "Surname",
-                style: TextStyle(color: Colors.black, fontFamily: 'roboto',fontSize: 20.0,fontWeight: FontWeight.bold),
+                style: TextStyle(color: Colors.black, fontSize: 20.0,fontWeight: FontWeight.bold),
 
               ),
             ),
@@ -442,7 +442,7 @@ class Body extends StatelessWidget {
               alignment: Alignment.bottomLeft,
               child: Text(
                 "Position",
-                style: TextStyle(color: Colors.black, fontFamily: 'roboto',fontSize: 20.0,fontWeight: FontWeight.bold),
+                style: TextStyle(color: Colors.black, fontSize: 20.0,fontWeight: FontWeight.bold),
 
               ),
             ),
@@ -455,7 +455,7 @@ class Body extends StatelessWidget {
               alignment: Alignment.bottomLeft,
               child: Text(
                 "Phone Number",
-                style: TextStyle(color: Colors.black, fontFamily: 'roboto',fontSize: 20.0,fontWeight: FontWeight.bold),
+                style: TextStyle(color: Colors.black, fontSize: 20.0,fontWeight: FontWeight.bold),
 
               ),
             ),
@@ -470,7 +470,7 @@ class Body extends StatelessWidget {
               alignment: Alignment.bottomLeft,
               child: Text(
                 "Email",
-                style: TextStyle(color: Colors.black, fontFamily: 'roboto',fontSize: 20.0,fontWeight: FontWeight.bold),
+                style: TextStyle(color: Colors.black, fontSize: 20.0,fontWeight: FontWeight.bold),
 
               ),
             ),
@@ -485,7 +485,7 @@ class Body extends StatelessWidget {
               alignment: Alignment.bottomLeft,
               child: Text(
                 "Password",
-                style: TextStyle(color: Colors.black, fontFamily: 'roboto',fontSize: 20.0,fontWeight: FontWeight.bold),
+                style: TextStyle(color: Colors.black, fontSize: 20.0,fontWeight: FontWeight.bold),
 
               ),
             ),
@@ -519,7 +519,7 @@ class Body extends StatelessWidget {
             margin: EdgeInsets.symmetric(vertical: 10),
             child: FlatButton(
               child: Text("Register",
-                style: TextStyle(color: Colors.amber, fontFamily: 'risotto', fontSize: 22.0),),
+                style: TextStyle(color: Colors.amber,  fontSize: 22.0),),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0),
                 side: BorderSide(color:Colors.amber),
@@ -549,7 +549,7 @@ class Body extends StatelessWidget {
 
             Text(
               "Forgot Password?",
-              style: TextStyle(color: Colors.white, fontFamily: 'risotto',fontSize: 22.0, decoration: TextDecoration.underline, fontWeight: FontWeight.bold),
+              style: TextStyle(color: Colors.white, fontSize: 22.0, decoration: TextDecoration.underline, fontWeight: FontWeight.bold),
 
             ),*/
 

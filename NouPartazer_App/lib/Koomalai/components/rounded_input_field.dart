@@ -30,7 +30,7 @@ class RoundedInputField extends StatelessWidget {
 
 
           hintText: hintText,
-          hintStyle: TextStyle(color: Colors.white,fontSize: 20,fontFamily: "risotto"),
+          hintStyle: TextStyle(color: Colors.white,fontSize: 20,),
           border: InputBorder.none,
 
           ),

@@ -26,7 +26,7 @@ class Body extends StatelessWidget {
               child: Text(
                 "DONATIONS",
                 style: TextStyle(
-                  fontFamily: "risotto",
+                  
                   fontSize: 22.0,
                   //fontWeight: FontWeight.bold,
                 ),
@@ -64,7 +64,7 @@ class Body extends StatelessWidget {
                 ),
                 title: Text("Grocery donation" ,
                   style: TextStyle(
-                    fontFamily: "risotto",
+                    
                     fontSize: 18.0,
                     fontWeight: FontWeight.bold,
                   ),
@@ -81,7 +81,7 @@ class Body extends StatelessWidget {
 
                       Text('19/01/2021',
                         style: TextStyle(
-                          fontFamily: "risotto",
+                          
                           /*fontSize: 13.0,*/
                         ),
 
@@ -94,7 +94,7 @@ class Body extends StatelessWidget {
 
                       Text('Jumbo Supermarket',
                         style: TextStyle(
-                          fontFamily: "risotto",
+                          
                           /*fontSize: 13.0,*/
                         ),
 
@@ -104,7 +104,7 @@ class Body extends StatelessWidget {
                 ),
                 /*Text('First food project in Mauritius',
                           style: TextStyle(
-                            fontFamily: "risotto",
+                            
                             fontSize: 13.0,
                           ),
 

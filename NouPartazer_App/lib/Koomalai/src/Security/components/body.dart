@@ -44,7 +44,7 @@ class Body extends StatelessWidget {
             child: Text(
               "Success" ,
               style: TextStyle(
-                fontFamily: "risotto",
+                
                 fontSize: 25.0,
                 fontWeight: FontWeight.bold,
               ),
@@ -61,7 +61,7 @@ class Body extends StatelessWidget {
             child: Text(
               "Changes updated!",
               style: TextStyle(
-                fontFamily: "risotto",
+                
                 fontSize: 18.0,
                 /*fontWeight: FontWeight.bold,*/
               ),
@@ -141,7 +141,7 @@ class Body extends StatelessWidget {
             child: Text(
               "Please enter your password" ,
               style: TextStyle(
-                fontFamily: "risotto",
+                
                 fontSize: 20.0,
                 fontWeight: FontWeight.bold,
               ),
@@ -322,7 +322,7 @@ class Body extends StatelessWidget {
                     child: Text(
                       "SECURITY",
                       style: TextStyle(
-                        fontFamily: "risotto",
+                        
                         fontSize: 22.0,
                         //fontWeight: FontWeight.bold,
                       ),
@@ -336,7 +336,7 @@ class Body extends StatelessWidget {
 
             /* FlatButton(
                   child: Text("Sign Up",
-                    style: TextStyle(color: Colors.white, fontFamily: 'risotto', fontSize: 20.0),),
+                    style: TextStyle(color: Colors.white,  fontSize: 20.0),),
 
                   onPressed: () {
                     Colors.white;
@@ -368,7 +368,7 @@ class Body extends StatelessWidget {
               margin: EdgeInsets.only(left: 0.0),
               alignment: Alignment.bottomCenter,
               child: Text("CHANGE PASSWORD",
-                style: TextStyle(color: Colors.black, fontFamily: 'roboto',fontSize: 20.0,fontWeight: FontWeight.bold),
+                style: TextStyle(color: Colors.black, fontSize: 20.0,fontWeight: FontWeight.bold),
               ),
             ),
 
@@ -419,7 +419,7 @@ class Body extends StatelessWidget {
             ListTile(
               title: Text('Delete my account',
                 style: TextStyle(
-                  fontFamily: "risotto",
+                  
                   fontSize: 18.0,
                   fontWeight: FontWeight.bold,
                   color: Colors.redAccent
@@ -437,7 +437,7 @@ class Body extends StatelessWidget {
             margin: EdgeInsets.symmetric(vertical: 10),
             child: FlatButton(
               child: Text("Register",
-                style: TextStyle(color: Colors.amber, fontFamily: 'risotto', fontSize: 22.0),),
+                style: TextStyle(color: Colors.amber,  fontSize: 22.0),),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0),
                 side: BorderSide(color:Colors.amber),
@@ -467,7 +467,7 @@ class Body extends StatelessWidget {
 
             Text(
               "Forgot Password?",
-              style: TextStyle(color: Colors.white, fontFamily: 'risotto',fontSize: 22.0, decoration: TextDecoration.underline, fontWeight: FontWeight.bold),
+              style: TextStyle(color: Colors.white, fontSize: 22.0, decoration: TextDecoration.underline, fontWeight: FontWeight.bold),
 
             ),*/
 

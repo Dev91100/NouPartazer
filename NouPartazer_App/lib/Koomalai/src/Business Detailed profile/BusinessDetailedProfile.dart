@@ -204,7 +204,7 @@ import 'package:url_launcher/url_launcher.dart';
                             child: IconButton(
                               icon: Icon (Icons.settings_outlined),
                               /*child: Text("Sign In",
-                style: TextStyle(color: Colors.black, fontFamily: 'risotto',fontSize: 20.0),
+                style: TextStyle(color: Colors.black, fontSize: 20.0),
               ),
 
               shape: Border.all(color:Colors.white,width: 2.0),*/
@@ -243,7 +243,7 @@ import 'package:url_launcher/url_launcher.dart';
                               Text(
                                 "AT A GLANCE",
                                 style: TextStyle(
-                                  fontFamily: "risotto",
+                                  
                                   fontSize: 22.0,
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -389,7 +389,7 @@ import 'package:url_launcher/url_launcher.dart';
                                   fontSize: 20.0,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black,
-                                  fontFamily: "risotto",
+                                  
                                 ),
 
                               ),
@@ -437,7 +437,7 @@ import 'package:url_launcher/url_launcher.dart';
                                     style: TextStyle(
                                       fontSize: 16.0,
                                       color: Colors.blueAccent[700],
-                                      fontFamily: "risotto",
+                                      
                                       decoration: TextDecoration.underline,
                                     ),
 
@@ -475,7 +475,7 @@ import 'package:url_launcher/url_launcher.dart';
                                     style: TextStyle(
                                       fontSize: 16.0,
                                       color: Colors.blueAccent[700],
-                                      fontFamily: "risotto",
+                                      
                                       decoration: TextDecoration.underline,
                                     ),
                                   ),
@@ -511,7 +511,7 @@ import 'package:url_launcher/url_launcher.dart';
                                     style: TextStyle(
                                       fontSize: 16.0,
                                       color: Colors.blueAccent[700],
-                                      fontFamily: "risotto",
+                                      
                                       decoration: TextDecoration.underline,
                                     ),
                                   ),

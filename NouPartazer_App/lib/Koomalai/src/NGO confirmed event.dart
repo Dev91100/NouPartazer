@@ -120,7 +120,7 @@ import 'NGO ongoing Event Details/NGO event details.dart';
                   child: Text(
                   "EVENT DETAILS",
                   style: TextStyle(
-                  fontFamily: "risotto",
+                  
                   fontSize: 20.0,
                   /* fontWeight: FontWeight.bold,*/
                   ),
@@ -169,7 +169,7 @@ import 'NGO ongoing Event Details/NGO event details.dart';
                       child: Text(
                         "GROCERY DONATIONS",
                         style: TextStyle(
-                          fontFamily: "risotto",
+                          
                           fontSize: 20.0,
                           /* fontWeight: FontWeight.bold,*/
                         ),
@@ -583,7 +583,7 @@ import 'NGO ongoing Event Details/NGO event details.dart';
                                     child: IconButton(
                                       icon: Icon (Icons.settings_outlined),
                                       /*child: Text("Sign In",
-                        style: TextStyle(color: Colors.black, fontFamily: 'risotto',fontSize: 20.0),
+                        style: TextStyle(color: Colors.black, fontSize: 20.0),
                       ),
 
                       shape: Border.all(color:Colors.white,width: 2.0),*/
@@ -621,7 +621,7 @@ import 'NGO ongoing Event Details/NGO event details.dart';
                           child: Text(
                         "DATE & TIME",
                         style: TextStyle(
-                          fontFamily: "risotto",
+                          
                           fontSize: 22.0,
                           fontWeight: FontWeight.bold,
                         ),
@@ -786,7 +786,7 @@ import 'NGO ongoing Event Details/NGO event details.dart';
                                       Text(
                                         "FOOD TYPE ",
                                         style: TextStyle(
-                                          fontFamily: "risotto",
+                                          
                                           fontSize: 22.0,
                                           fontWeight: FontWeight.bold,
                                         ),
@@ -1067,7 +1067,7 @@ import 'NGO ongoing Event Details/NGO event details.dart';
                                           fontSize: 20.0,
                                           fontWeight: FontWeight.bold,
                                           color: Colors.black,
-                                          fontFamily: "risotto",
+                                          
                                         ),
 
                                       ),

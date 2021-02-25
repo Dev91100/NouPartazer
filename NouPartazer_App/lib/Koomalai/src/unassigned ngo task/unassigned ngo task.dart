@@ -41,7 +41,7 @@ import 'package:url_launcher/url_launcher.dart';
                           child: Text(
                         "DATE & TIME",
                         style: TextStyle(
-                          fontFamily: "risotto",
+                          
                           fontSize: 22.0,
                           fontWeight: FontWeight.bold,
                         ),
@@ -206,7 +206,7 @@ import 'package:url_launcher/url_launcher.dart';
                                       Text(
                                         "FOOD TYPE ",
                                         style: TextStyle(
-                                          fontFamily: "risotto",
+                                          
                                           fontSize: 22.0,
                                           fontWeight: FontWeight.bold,
                                         ),
@@ -602,7 +602,7 @@ import 'package:url_launcher/url_launcher.dart';
                                                   fontSize: 20.0,
                                                   fontWeight: FontWeight.bold,
                                                   color: Colors.black,
-                                                  fontFamily: "risotto",
+                                                  
                                                 ),
 
                                               ),
