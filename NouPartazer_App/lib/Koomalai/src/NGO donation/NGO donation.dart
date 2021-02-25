@@ -59,7 +59,7 @@ class NGODonation extends StatelessWidget {
                 /* SwitchListTile(
 
                         /* Icon(Icons.notifications_none_outlined),*/
-                             activeColor: Colors.blueAccent,
+                             activeColor: Color.fromRGBO(41, 90, 245, 1),
                             contentPadding: const EdgeInsets.all(0),
                             title: Text('Notifications'),
                             subtitle: Text('Receive notifications from the app'),
@@ -456,7 +456,7 @@ class NGODonation extends StatelessWidget {
                      /* SwitchListTile(
 
                         /* Icon(Icons.notifications_none_outlined),*/
-                             activeColor: Colors.blueAccent,
+                             activeColor: Color.fromRGBO(41, 90, 245, 1),
                             contentPadding: const EdgeInsets.all(0),
                             title: Text('Notifications'),
                             subtitle: Text('Receive notifications from the app'),
@@ -491,7 +491,7 @@ class NGODonation extends StatelessWidget {
 
                           ),
                         ),
-                        trailing: Icon(Icons.toggle_on,color: Colors.blueAccent[700],size: 50.0,),
+                        trailing: Icon(Icons.toggle_on,color: Color.fromRGBO(41, 90, 245, 1),size: 50.0,),
                         onTap: () {
                           //open change password
                         },

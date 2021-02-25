@@ -263,7 +263,7 @@ import 'package:url_launcher/url_launcher.dart';
                                 style: TextStyle(
                                   fontSize: 25.0,
                                   fontWeight: FontWeight.bold,
-                                  color: Colors.blueAccent[700],
+                                  color: Color.fromRGBO(41, 90, 245, 1),
                                 ),
 
                               ),
@@ -411,7 +411,7 @@ import 'package:url_launcher/url_launcher.dart';
 
                                     style: TextStyle(
                                       fontSize: 16.0,
-                                      color: Colors.blueAccent[700],
+                                      color: Color.fromRGBO(41, 90, 245, 1),
                                       
                                       decoration: TextDecoration.underline,
                                     ),
@@ -449,7 +449,7 @@ import 'package:url_launcher/url_launcher.dart';
                                     "jumbo@gmail.com",
                                     style: TextStyle(
                                       fontSize: 16.0,
-                                      color: Colors.blueAccent[700],
+                                      color: Color.fromRGBO(41, 90, 245, 1),
                                       
                                       decoration: TextDecoration.underline,
                                     ),
@@ -485,7 +485,7 @@ import 'package:url_launcher/url_launcher.dart';
                                     "+230 5758 0236",
                                     style: TextStyle(
                                       fontSize: 16.0,
-                                      color: Colors.blueAccent[700],
+                                      color: Color.fromRGBO(41, 90, 245, 1),
                                       
                                       decoration: TextDecoration.underline,
                                     ),

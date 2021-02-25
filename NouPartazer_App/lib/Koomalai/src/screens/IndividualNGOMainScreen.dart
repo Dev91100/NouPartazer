@@ -68,7 +68,7 @@ class _IndividualNGOMainScreenState extends State<IndividualNGOMainScreen> {
 
 
         ],
-        selectedItemColor: Colors.blueAccent[700],
+        selectedItemColor: Color.fromRGBO(41, 90, 245, 1),
 
       ),
       body: currentPage,

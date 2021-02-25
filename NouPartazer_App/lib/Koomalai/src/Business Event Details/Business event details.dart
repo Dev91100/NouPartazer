@@ -46,7 +46,6 @@ import 'package:url_launcher/url_launcher.dart';
                 child: Text(
                   "Please tick the checkbox to confirm" ,
                   style: TextStyle(
-                    
                     fontSize: 25.0,
                     fontWeight: FontWeight.bold,
                   ),
@@ -65,7 +64,7 @@ import 'package:url_launcher/url_launcher.dart';
 
                     child: Icon(
                   Icons.check_box_outlined,
-                  color: Colors.blueAccent[700],
+                  color: Color.fromRGBO(41, 90, 245, 1),
                   size: 25.0,
 
                 ),
@@ -85,7 +84,7 @@ import 'package:url_launcher/url_launcher.dart';
                   style: TextStyle(
                     
                     fontSize: 18.0,
-                    color: Colors.blueAccent[700],
+                    color: Color.fromRGBO(41, 90, 245, 1),
                     /*fontWeight: FontWeight.bold,*/
                   ),
                         textAlign: TextAlign.justify,
@@ -134,7 +133,7 @@ import 'package:url_launcher/url_launcher.dart';
 
                     MaterialButton(
                       child:Text("Confirm",
-                        style: TextStyle(decoration: TextDecoration.underline,fontSize: 15.0,color: Colors.amber
+                        style: TextStyle(decoration: TextDecoration.underline,fontSize: 15.0,color: Color.fromRGBO(245, 197, 41, 1)
                         ),
                       ),
 
@@ -342,7 +341,7 @@ import 'package:url_launcher/url_launcher.dart';
               height: 40.0,
               width: 80.0,
                 child: Card(
-                // color: Colors.amber,
+                // color: Color.fromRGBO(245, 197, 41, 1),
                 margin: EdgeInsets.symmetric(horizontal: 1.0,vertical: 10.0),
                 elevation: 5.0,
                   child: Padding(
@@ -406,7 +405,7 @@ import 'package:url_launcher/url_launcher.dart';
               height: 40.0,
               width: 110.0,
               child: Card(
-                // color: Colors.amber,
+                // color: Color.fromRGBO(245, 197, 41, 1),
                 margin: EdgeInsets.symmetric(horizontal: 1.0,vertical: 10.0),
                 elevation: 10.0,
                 color: Colors.black12,
@@ -461,8 +460,8 @@ import 'package:url_launcher/url_launcher.dart';
 
                   alignment: Alignment.center,
                    child: RaisedButton.icon(
-                     icon: Icon(Icons.download_done_outlined,color: Colors.amber),
-                    label: Text("Accept Donation",style: TextStyle(color: Colors.amber, fontSize: 20.0),),
+                     icon: Icon(Icons.download_done_outlined,color: Color.fromRGBO(245, 197, 41, 1)),
+                    label: Text("Accept Donation",style: TextStyle(color: Color.fromRGBO(245, 197, 41, 1), fontSize: 20.0),),
 
                      onPressed: () {
                       /*Navigator.push(
@@ -480,7 +479,7 @@ import 'package:url_launcher/url_launcher.dart';
                     color:Colors.transparent,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
-                      side: BorderSide(color:Colors.amber,width: 2.0),
+                      side: BorderSide(color:Color.fromRGBO(245, 197, 41, 1),width: 2.0),
                     ),
                   ),
                 )
@@ -796,7 +795,7 @@ import 'package:url_launcher/url_launcher.dart';
                               height: 120.0,
                               width: 150.0,
                               child: Card(
-                                // color: Colors.amber,
+                                // color: Color.fromRGBO(245, 197, 41, 1),
                                 margin: EdgeInsets.symmetric(horizontal: 1.0,vertical: 10.0),
                                 elevation: 10.0,
                                 color: Colors.grey[200],
@@ -864,7 +863,7 @@ import 'package:url_launcher/url_launcher.dart';
                                 height: 120.0,
                                 width: 150.0,
                                 child: Card(
-                                  // color: Colors.amber,
+                                  // color: Color.fromRGBO(245, 197, 41, 1),
                                   margin: EdgeInsets.symmetric(horizontal: 1.0,vertical: 10.0),
                                   elevation: 10.0,
                                   color: Colors.grey[200],
@@ -979,7 +978,7 @@ import 'package:url_launcher/url_launcher.dart';
                               height: 120.0,
                               width: 150.0,
                               child: Card(
-                                // color: Colors.amber,
+                                // color: Color.fromRGBO(245, 197, 41, 1),
                                 margin: EdgeInsets.symmetric(horizontal: 1.0,vertical: 10.0),
                                 elevation: 10.0,
                                 color: Colors.redAccent,
@@ -1047,7 +1046,7 @@ import 'package:url_launcher/url_launcher.dart';
                               height: 120.0,
                               width: 150.0,
                               child: Card(
-                                // color: Colors.amber,
+                                // color: Color.fromRGBO(245, 197, 41, 1),
                                 margin: EdgeInsets.symmetric(horizontal: 1.0,vertical: 10.0),
                                 elevation: 10.0,
                                 color: Colors.green,
@@ -1155,7 +1154,7 @@ import 'package:url_launcher/url_launcher.dart';
                           height: 250.0,
                           width: 300.0,
                           child: Card(
-                            // color: Colors.amber,
+                            // color: Color.fromRGBO(245, 197, 41, 1),
                               margin: EdgeInsets.symmetric(horizontal: 1.0,vertical: 10.0),
                               elevation: 10.0,
                               color: Colors.grey[200],
@@ -1243,10 +1242,10 @@ import 'package:url_launcher/url_launcher.dart';
                         height: 150.0,
                         width: 300.0,
                         child: Card(
-                          // color: Colors.amber,
+                          // color: Color.fromRGBO(245, 197, 41, 1),
                           margin: EdgeInsets.symmetric(horizontal: 1.0,vertical: 10.0),
                           elevation: 10.0,
-                          color: Colors.amber,
+                          color: Color.fromRGBO(245, 197, 41, 1),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10.0),
                             /*side: BorderSide(color:Colors.white),*/

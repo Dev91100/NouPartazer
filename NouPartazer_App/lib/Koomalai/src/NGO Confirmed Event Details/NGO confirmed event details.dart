@@ -185,7 +185,7 @@ import 'package:url_launcher/url_launcher.dart';
               height: 40.0,
               width: 80.0,
                 child: Card(
-                // color: Colors.amber,
+                // color: Color.fromRGBO(245, 197, 41, 1),
                 margin: EdgeInsets.symmetric(horizontal: 1.0,vertical: 10.0),
                 elevation: 5.0,
                   child: Padding(
@@ -249,10 +249,10 @@ import 'package:url_launcher/url_launcher.dart';
               height: 40.0,
               width: 110.0,
               child: Card(
-                // color: Colors.amber,
+                // color: Color.fromRGBO(245, 197, 41, 1),
                 margin: EdgeInsets.symmetric(horizontal: 1.0,vertical: 10.0),
                 elevation: 10.0,
-                color: Colors.blue[50],
+                color: Colors.blue,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(5.0),
                   side: BorderSide(color:Colors.blue),
@@ -639,7 +639,7 @@ import 'package:url_launcher/url_launcher.dart';
                               height: 120.0,
                               width: 150.0,
                               child: Card(
-                                // color: Colors.amber,
+                                // color: Color.fromRGBO(245, 197, 41, 1),
                                 margin: EdgeInsets.symmetric(horizontal: 1.0,vertical: 10.0),
                                 elevation: 10.0,
                                 color: Colors.grey[200],
@@ -707,7 +707,7 @@ import 'package:url_launcher/url_launcher.dart';
                                 height: 120.0,
                                 width: 150.0,
                                 child: Card(
-                                  // color: Colors.amber,
+                                  // color: Color.fromRGBO(245, 197, 41, 1),
                                   margin: EdgeInsets.symmetric(horizontal: 1.0,vertical: 10.0),
                                   elevation: 10.0,
                                   color: Colors.grey[200],
@@ -822,7 +822,7 @@ import 'package:url_launcher/url_launcher.dart';
                               height: 120.0,
                               width: 150.0,
                               child: Card(
-                                // color: Colors.amber,
+                                // color: Color.fromRGBO(245, 197, 41, 1),
                                 margin: EdgeInsets.symmetric(horizontal: 1.0,vertical: 10.0),
                                 elevation: 10.0,
                                 color: Colors.redAccent,
@@ -890,7 +890,7 @@ import 'package:url_launcher/url_launcher.dart';
                               height: 120.0,
                               width: 150.0,
                               child: Card(
-                                // color: Colors.amber,
+                                // color: Color.fromRGBO(245, 197, 41, 1),
                                 margin: EdgeInsets.symmetric(horizontal: 1.0,vertical: 10.0),
                                 elevation: 10.0,
                                 color: Colors.green,
@@ -998,7 +998,7 @@ import 'package:url_launcher/url_launcher.dart';
                           height: 250.0,
                           width: 300.0,
                           child: Card(
-                            // color: Colors.amber,
+                            // color: Color.fromRGBO(245, 197, 41, 1),
                               margin: EdgeInsets.symmetric(horizontal: 1.0,vertical: 10.0),
                               elevation: 10.0,
                               color: Colors.grey[200],
@@ -1086,10 +1086,10 @@ import 'package:url_launcher/url_launcher.dart';
                         height: 150.0,
                         width: 300.0,
                         child: Card(
-                          // color: Colors.amber,
+                          // color: Color.fromRGBO(245, 197, 41, 1),
                           margin: EdgeInsets.symmetric(horizontal: 1.0,vertical: 10.0),
                           elevation: 10.0,
-                          color: Colors.amber,
+                          color: Color.fromRGBO(245, 197, 41, 1),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10.0),
                             /*side: BorderSide(color:Colors.white),*/

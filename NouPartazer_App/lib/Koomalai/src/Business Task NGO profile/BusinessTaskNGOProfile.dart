@@ -173,7 +173,7 @@ import 'package:url_launcher/url_launcher.dart';
                                                     style: TextStyle(
                                                       fontSize: 25.0,
                                                       fontWeight: FontWeight.bold,
-                                                      color: Colors.blueAccent[700],
+                                                      color: Color.fromRGBO(41, 90, 245, 1),
                                                     ),
 
                                                   ),
@@ -300,7 +300,7 @@ import 'package:url_launcher/url_launcher.dart';
 
                                                         style: TextStyle(
                                                           fontSize: 16.0,
-                                                          color: Colors.blueAccent[700],
+                                                          color: Color.fromRGBO(41, 90, 245, 1),
                                                           
                                                           decoration: TextDecoration.underline,
                                                         ),
@@ -338,7 +338,7 @@ import 'package:url_launcher/url_launcher.dart';
                                                         "info@manzerpartazer.org",
                                                         style: TextStyle(
                                                           fontSize: 16.0,
-                                                          color: Colors.blueAccent[700],
+                                                          color: Color.fromRGBO(41, 90, 245, 1),
                                                           
                                                           decoration: TextDecoration.underline,
                                                         ),
@@ -374,7 +374,7 @@ import 'package:url_launcher/url_launcher.dart';
                                                         "+230 5820 7691",
                                                         style: TextStyle(
                                                           fontSize: 16.0,
-                                                          color: Colors.blueAccent[700],
+                                                          color: Color.fromRGBO(41, 90, 245, 1),
                                                           
                                                           decoration: TextDecoration.underline,
                                                         ),
@@ -510,7 +510,7 @@ import 'package:url_launcher/url_launcher.dart';
                                                 height: 100.0,
                                                 width: 400,
                                                 child: Card(
-                                                  // color: Colors.amber,
+                                                  // color: Color.fromRGBO(245, 197, 41, 1),
                                                   margin: EdgeInsets.symmetric(horizontal: 10.0,vertical: 10.0),
                                                   elevation: 5.0,
                                                   child: Padding(
@@ -551,7 +551,7 @@ import 'package:url_launcher/url_launcher.dart';
                                                                 "Julia Venn",
                                                                 style: TextStyle(
                                                                   fontSize: 18.0,
-                                                                  color: Colors.blueAccent[700],
+                                                                  color: Color.fromRGBO(41, 90, 245, 1),
                                                                   fontWeight: FontWeight.bold,
                                                                 ),
                                                               ),
@@ -560,7 +560,7 @@ import 'package:url_launcher/url_launcher.dart';
                                                                 "Co-founder and",
                                                                 style: TextStyle(
                                                                   fontSize: 15.0,
-                                                                  color: Colors.blueAccent[700],
+                                                                  color: Color.fromRGBO(41, 90, 245, 1),
                                                                 ),
                                                               ),
 
@@ -569,7 +569,7 @@ import 'package:url_launcher/url_launcher.dart';
                                                                 "Magadascar Coordinator",
                                                                 style: TextStyle(
                                                                   fontSize: 15.0,
-                                                                  color: Colors.blueAccent[700],
+                                                                  color: Color.fromRGBO(41, 90, 245, 1),
                                                                 ),
                                                               ),
 

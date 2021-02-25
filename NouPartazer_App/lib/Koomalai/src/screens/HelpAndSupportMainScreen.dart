@@ -68,7 +68,7 @@ class _HelpAndSupportMainScreenState extends State<HelpAndSupportMainScreen> {
 
 
         ],
-        selectedItemColor: Colors.blueAccent[700],
+        selectedItemColor: Color.fromRGBO(41, 90, 245, 1),
 
       ),
       body: currentPage,

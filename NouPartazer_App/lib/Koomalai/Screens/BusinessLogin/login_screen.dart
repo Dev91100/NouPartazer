@@ -6,7 +6,7 @@ class BusinessLoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Body(),
-      backgroundColor: Colors.blueAccent,
+      backgroundColor: Color.fromRGBO(41, 90, 245, 1),
 
     );
   }

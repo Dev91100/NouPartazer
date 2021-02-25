@@ -79,7 +79,7 @@ class _BusinessTaskState extends State<BusinessTask> {
 
             ),
             BottomNavigationBarItem(
-            icon:Icon(Icons.add_circle_rounded,color: Colors.amber,size: 50.0,),
+            icon:Icon(Icons.add_circle_rounded,color: Color.fromRGBO(245, 197, 41, 1),size: 50.0,),
             // ignore: deprecated_member_use
             title: Text("Add stories"),
             ),
@@ -98,7 +98,7 @@ class _BusinessTaskState extends State<BusinessTask> {
 
 
         ],
-        selectedItemColor: Colors.blueAccent[700],
+        selectedItemColor: Color.fromRGBO(41, 90, 245, 1),
 
       ),
       body: currentPage,*/

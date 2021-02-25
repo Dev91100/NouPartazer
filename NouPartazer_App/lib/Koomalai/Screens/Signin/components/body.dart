@@ -11,43 +11,50 @@ import '../signin_screen.dart';
 
 class Body extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) 
+  {
     Size size = MediaQuery.of(context).size;
-    return Background(
-      child: SingleChildScrollView(
-        child: Column(
+
+    return Background
+    (
+      child: SingleChildScrollView
+      (
+        child: Column
+        (
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            /*Text(
-              "SIGNUP",
-              style: TextStyle(fontWeight: FontWeight.bold),
+          
+          children: 
+          [
+            SizedBox
+            (
+              height: size.height * 0.236
             ),
-            SizedBox(height: size.height * 0.03),*/
-            /*SvgPicture.asset(
-              "assets/icons/signup.svg",
-              height: size.height * 0.35,
-            ),*/
 
-            SizedBox(height: size.height * 0.236),
-            Row(
+            Row
+            (
               mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                FlatButton(
-                  child: Text("Sign In",
-                    style: TextStyle(color: Colors.black,fontSize: 20.0),
+              children: 
+              [
+                FlatButton
+                (
+                  child: Text
+                  (
+                    "Sign In",
+                    style: TextStyle
+                    (
+                      color: Colors.black,fontSize: 20.0
+                    ),
                   ),
 
-                  /*shape: Border.all(color:Colors.white,width: 1.0),*/
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(0.0),
-
-                  ),
-
-                  onPressed: () {
-                    Navigator.push(
+                  onPressed: () 
+                  {
+                    Navigator.push
+                    (
                       context,
-                      MaterialPageRoute(
-                        builder: (context) {
+                      MaterialPageRoute
+                      (
+                        builder: (context) 
+                        {
                           return SignInScreen();
                         },
                       ),
@@ -60,23 +67,31 @@ class Body extends StatelessWidget {
 
                 ),
 
-
-
-                FlatButton(
-                  child: Text("Sign Up",
-                    style: TextStyle(color: Colors.white,  fontSize: 20.0),),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(0.0),
-
+                FlatButton
+                (
+                  child: Text
+                  (
+                    "Sign Up",
+                    style: TextStyle
+                    (
+                      color: Colors.white,
+                      fontSize: 20.0
+                    ),
                   ),
-                  onPressed: () {
-
-                    Navigator.push(
+                  shape: RoundedRectangleBorder
+                  (
+                    borderRadius: BorderRadius.circular(0.0),
+                  ),
+                  onPressed: () 
+                  {
+                    Navigator.push
+                    (
                       context,
-                      MaterialPageRoute(
-                        builder: (context) {
+                      MaterialPageRoute
+                      (
+                        builder: (context)
+                        {
                           return SignUpScreen();
-
                         },
                       ),
                     );
@@ -84,89 +99,86 @@ class Body extends StatelessWidget {
                   color: Colors.black54,
                   minWidth: size.width * 0.5,
                   height: 50.0,
-
-
                 ),
-
               ],
             ),
 
-            SizedBox(height: size.height * 0.03),
+            SizedBox
+            (
+              height: size.height * 0.03
+            ),
 
-            Container(
+            Container
+            (
               margin: EdgeInsets.only(left: 25.0),
               alignment: Alignment.bottomLeft,
-              child: Text("Welcome,",
-                style: TextStyle(color: Colors.amber, fontSize: 40.0,fontWeight: FontWeight.bold),),
+              child: Text
+              (
+                "Welcome,",
+                style: TextStyle
+                (
+                  color: Color.fromRGBO(245, 197, 41, 1),
+                  fontSize: 40.0,
+                  fontWeight: FontWeight.bold
+                ),
+              ),
             ),
 
-            Container(
+            Container
+            (
               margin: EdgeInsets.only(left: 30.0),
               alignment: Alignment.bottomLeft,
-              child: Text("Sign in to continue",
-                style: TextStyle(color: Colors.white, fontSize: 22.0),),
+              child: Text
+              (
+                "Sign in to continue",
+                style: TextStyle
+                (
+                  color: Colors.white,
+                  fontSize: 22.0
+                ),
+              ),
             ),
 
-
-           /* RoundedInputField(
-              hintText: "Your Email",
-              onChanged: (value) {},
-            ),
-            RoundedPasswordField(
-              onChanged: (value) {},
-            ),
-            RoundedButton(
-              text: "SIGNUP",
-              press: () {},
-            ),
-            SizedBox(height: size.height * 0.03),
-            AlreadyHaveAnAccountCheck(
-              login: false,
-              press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return LoginScreen();
-                    },
-                  ),
-                );
-              },
-            ),
-            OrDivider(),*/
-            Row(
+            Row
+            (
               mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
+              children: [
                 SocalIcon(
                   iconSrc: "assets/SVG/NGO.svg",
-                  press: () {
-                    Navigator.push(
+                  press: () 
+                  {
+                    Navigator.push
+                    (
                       context,
-                      MaterialPageRoute(
-                        builder: (context) {
+                      MaterialPageRoute
+                      (
+                        builder: (context) 
+                        {
                           return LoginScreen();
                         },
                       ),
                     );
                   },
                 ),
-                SocalIcon(
+
+                SocalIcon
+                (
                   iconSrc: "assets/SVG/Business.svg",
-                  press: () {
-                    Navigator.push(
+                  press: ()
+                  {
+                    Navigator.push
+                    (
                       context,
-                      MaterialPageRoute(
-                        builder: (context) {
+                      MaterialPageRoute
+                      (
+                        builder: (context)
+                        {
                           return BusinessLoginScreen();
                         },
                       ),
                     );
                   },
                 ),
-                /*SocalIcon(
-                  iconSrc: "assets/icons/google-plus.svg",
-                  press: () {},
-                ),*/
               ],
             )
           ],

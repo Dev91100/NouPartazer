@@ -70,12 +70,12 @@ class Body extends StatelessWidget {
 
           RoundedButton(
             text: "Done",
-            color:Colors.amber[50],
-            textColor: Colors.amber,
+            color:Color.fromRGBO(245, 197, 41, 1),
+            textColor: Color.fromRGBO(245, 197, 41, 1),
 
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10.0),
-              side: BorderSide(color:Colors.amber),
+              side: BorderSide(color:Color.fromRGBO(245, 197, 41, 1)),
             ),
 
 
@@ -397,12 +397,12 @@ class Body extends StatelessWidget {
             /* SizedBox(height: size.height * 0.03),*/
             RoundedButton(
               text: "Change Password",
-              color:Colors.amber[50],
-              textColor: Colors.amber,
+              color:Color.fromRGBO(245, 197, 41, 1),
+              textColor: Color.fromRGBO(245, 197, 41, 1),
 
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0),
-                side: BorderSide(color:Colors.amber),
+                side: BorderSide(color:Color.fromRGBO(245, 197, 41, 1)),
               ),
 
               press: (){
@@ -437,14 +437,14 @@ class Body extends StatelessWidget {
             margin: EdgeInsets.symmetric(vertical: 10),
             child: FlatButton(
               child: Text("Register",
-                style: TextStyle(color: Colors.amber,  fontSize: 22.0),),
+                style: TextStyle(color: Color.fromRGBO(245, 197, 41, 1),  fontSize: 22.0),),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0),
-                side: BorderSide(color:Colors.amber),
+                side: BorderSide(color:Color.fromRGBO(245, 197, 41, 1)),
               ),
               onPressed: () {
               },
-              color: Colors.amber[100],
+              color: Color.fromRGBO(245, 197, 41, 1)[100],
               minWidth: size.width * 0.8,
               padding: EdgeInsets.symmetric(vertical: 9.0, horizontal: 100.0),
             ),

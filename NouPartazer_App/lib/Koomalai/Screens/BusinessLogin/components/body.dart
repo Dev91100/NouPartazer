@@ -133,7 +133,7 @@ class Body extends StatelessWidget {
               margin: EdgeInsets.only(left: 25.0),
               alignment: Alignment.bottomLeft,
               child: Text("Welcome,",
-                style: TextStyle(color: Colors.amber, fontSize: 45.0,fontWeight: FontWeight.bold),),
+                style: TextStyle(color: Color.fromRGBO(245, 197, 41, 1), fontSize: 45.0,fontWeight: FontWeight.bold),),
             ),
 
             Container(
@@ -159,7 +159,7 @@ class Body extends StatelessWidget {
 
               RoundedButton(
                   text: "Log In",
-                  color: Colors.amber,
+                  color: Color.fromRGBO(245, 197, 41, 1),
                   textColor: Colors.white,
 
                   press: () {

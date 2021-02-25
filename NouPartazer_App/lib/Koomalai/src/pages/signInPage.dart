@@ -137,7 +137,7 @@ class _SignInPageState extends State<SignInPage> {
                       "Sign up",
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          color: Colors.blueAccent,
+                          color: Color.fromRGBO(41, 90, 245, 1),
                           fontSize: 17.0),
                     ),
                   ),

@@ -46,12 +46,12 @@ class AlertBox extends StatelessWidget {
 
         RoundedButton(
           text: "Done",
-          color:Colors.amber[50],
-          textColor: Colors.amber,
+          color:Color.fromRGBO(245, 197, 41, 1),
+          textColor: Color.fromRGBO(245, 197, 41, 1),
 
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.0),
-            side: BorderSide(color:Colors.amber),
+            side: BorderSide(color:Color.fromRGBO(245, 197, 41, 1)),
           ),
 
 

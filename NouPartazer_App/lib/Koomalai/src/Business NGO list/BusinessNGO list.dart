@@ -64,7 +64,7 @@ class BusinessNGOList extends StatelessWidget {
                      /* SwitchListTile(
 
                         /* Icon(Icons.notifications_none_outlined),*/
-                             activeColor: Colors.blueAccent,
+                             activeColor: Color.fromRGBO(41, 90, 245, 1),
                             contentPadding: const EdgeInsets.all(0),
                             title: Text('Notifications'),
                             subtitle: Text('Receive notifications from the app'),
