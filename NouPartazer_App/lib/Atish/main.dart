@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import './Atish/StoryModel.dart';
+import 'StoryModel.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget
