@@ -46,155 +46,175 @@ class StoryModel extends StatelessWidget {
   @override
   Widget build(BuildContext context)
   {
-    return Stack(
-        children:
-        [
-          Container
-          (
-            decoration: BoxDecoration
+    return LayoutBuilder
+    (
+      builder: (ctx, constraints)
+      {
+        return Stack
+        (
+          children:
+          [
+            Container
             (
-              image: DecorationImage
+              height: constraints.maxHeight,
+              decoration: BoxDecoration
               (
-                image: AssetImage('assets/JPEG/Blur.jpg'),
-                fit: BoxFit.fill,
+                image: DecorationImage
+                (
+                  image: AssetImage('assets/JPEG/Blur.jpg'),
+                  fit: BoxFit.fill,
+                )
               )
-            )
-          ),
-          
-          ListView
-          (
-            children:
-            [
-              Container(
-                margin: EdgeInsets.fromLTRB(0, 15, 0, 15),
-                child: Text
-                (
-                  'STORIES',
-                  style: GoogleFonts.comfortaa
+            ),
+            
+            ListView
+            (
+              children:
+              [
+                Container(
+                  margin: EdgeInsets.fromLTRB
                   (
-                    textStyle: TextStyle
-                    (
-                      fontWeight: FontWeight.normal,
-                      fontSize: 18,
-                      color: new Color.fromRGBO(255, 255, 255, 1),
-                    ),
+                    0,
+                    constraints.maxHeight * 0.02,
+                    0,
+                    constraints.maxHeight * 0.01
                   ),
-                  textAlign: TextAlign.center,
-                ),
-              ),
-
-              CarouselSlider
-              (
-                options: CarouselOptions
-                (
-                  height: 800,
-                  initialPage: 0,
-                  viewportFraction: 0.9,
-                  enableInfiniteScroll: false,
-                ),
-                items: 
-                  stories.map((st)
-                  {
-                    return Card
+                  child: Text
+                  (
+                    'STORIES',
+                    style: GoogleFonts.comfortaa
                     (
-                      margin: EdgeInsets.fromLTRB(5, 0, 5, 110),
-                      child: Container
+                      textStyle: TextStyle
                       (
-                        height: 700,
-                        decoration: BoxDecoration
+                        fontWeight: FontWeight.normal,
+                        fontSize: 18,
+                        color: new Color.fromRGBO(255, 255, 255, 1),
+                      ),
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+
+                CarouselSlider
+                (
+                  options: CarouselOptions
+                  (
+                    height: constraints.maxHeight,
+                    initialPage: 0,
+                    viewportFraction: 0.9,
+                    enableInfiniteScroll: false,
+                  ),
+                  items: 
+                    stories.map((st)
+                    {
+                      return Card
+                      (
+                        margin: EdgeInsets.fromLTRB
                         (
-                          image: DecorationImage
-                          (
-                            image: AssetImage(st.image),
-                            fit: BoxFit.cover,
-                          ),
+                          constraints.maxHeight * 0.01,
+                          0,
+                          constraints.maxHeight * 0.01,
+                          constraints.maxHeight * 0.12
                         ),
-                        child: Container(
+                        child: Container
+                        (
+                          height: 700,
                           decoration: BoxDecoration
                           (
-                            gradient: LinearGradient
+                            image: DecorationImage
                             (
-                              colors: 
-                              [
-                                new Color.fromRGBO(0, 0, 0, 1),
-                                new Color.fromRGBO(0, 0, 0, 0),
-                              ],
-                              begin: FractionalOffset(0.0, 1.0),
-                              end: FractionalOffset(1.0, 0.0),
-                              stops: [0.0,0.4],
-                              tileMode: TileMode.clamp,
-                            )
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.fromLTRB(20,5,10,20),
-                            child: Column
-                            (
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              crossAxisAlignment: CrossAxisAlignment.stretch,
-                              children: 
-                              [
-                                Text
-                                ( 
-                                  st.locationName,
-                                  style: TextStyle
-                                  (
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 25,
-                                    color: new Color.fromRGBO(245, 197, 41, 1),
-                                  ),
-                                ),
-                                Text
-                                (
-                                  st.locationAddress,
-                                  style: TextStyle
-                                    (
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 30,
-                                      color: Colors.white,
-                                    ),
-                                ),
-                                Row
-                                (
-                                  children: 
-                                  [
-                                    InfoTab
-                                    (
-                                      icon: Icons.calendar_today_outlined, 
-                                      date: st.date
-                                    ),
-                                    
-                                    InfoTab
-                                    (
-                                      icon: Icons.query_builder_outlined, 
-                                      date: st.time
-                                    ),
-                                  ],
-                                ),
-                                SingleChildScrollView
-                                (
-                                  scrollDirection: Axis.horizontal,
-                                  child: Container(
-                                    width: 680,
-                                    child: Row(
-                                      children: [
-                                        TagsTab(data: st.tag),
-                                        TagsTab(data: st.foodType),
-                                        TagsTab(data: st.foodType),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ],
+                              image: AssetImage(st.image),
+                              fit: BoxFit.cover,
                             ),
                           ),
-                        )
-                      ),
-                    );
-                  }).toList(),
-              )
-            ],
-          ),
-        ],
+                          child: Container(
+                            decoration: BoxDecoration
+                            (
+                              gradient: LinearGradient
+                              (
+                                colors: 
+                                [
+                                  new Color.fromRGBO(0, 0, 0, 1),
+                                  new Color.fromRGBO(0, 0, 0, 0),
+                                ],
+                                begin: FractionalOffset(0.0, 1.0),
+                                end: FractionalOffset(1.0, 0.0),
+                                stops: [0.0,0.4],
+                                tileMode: TileMode.clamp,
+                              )
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.fromLTRB(20,5,10,20),
+                              child: Column
+                              (
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                crossAxisAlignment: CrossAxisAlignment.stretch,
+                                children: 
+                                [
+                                  Text
+                                  ( 
+                                    st.locationName,
+                                    style: TextStyle
+                                    (
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 25,
+                                      color: new Color.fromRGBO(245, 197, 41, 1),
+                                    ),
+                                  ),
+                                  Text
+                                  (
+                                    st.locationAddress,
+                                    style: TextStyle
+                                      (
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 30,
+                                        color: Colors.white,
+                                      ),
+                                  ),
+                                  Row
+                                  (
+                                    children: 
+                                    [
+                                      InfoTab
+                                      (
+                                        icon: Icons.calendar_today_outlined, 
+                                        date: st.date
+                                      ),
+                                      
+                                      InfoTab
+                                      (
+                                        icon: Icons.query_builder_outlined, 
+                                        date: st.time
+                                      ),
+                                    ],
+                                  ),
+                                  SingleChildScrollView
+                                  (
+                                    scrollDirection: Axis.horizontal,
+                                    child: Container(
+                                      width: 680,
+                                      child: Row(
+                                        children: [
+                                          TagsTab(data: st.tag),
+                                          TagsTab(data: st.foodType),
+                                          TagsTab(data: st.foodType),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          )
+                        ),
+                      );
+                    }).toList(),
+                )
+              ],
+            ),
+          ],
+        );
+      }
     );
   }
 }
