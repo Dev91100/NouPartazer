@@ -41,87 +41,80 @@ class Body extends StatelessWidget {
                   (
                     alignment: Alignment.bottomCenter,
 
-                    child: Row
+                    child: Container
                     (
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children:
-                      [
-                        Column
-                        (
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: 
-                          [
-                            FlatButton
+                      height: constraints.maxHeight * 0.06,
+                      child: Row
+                      (
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children:
+                        [
+                          FlatButton
+                          (
+                            child: FittedBox
                             (
-                              child: FittedBox
+                              fit: BoxFit.contain,
+                              child: Text
                               (
-                                fit: BoxFit.contain,
-                                child: Text
+                                "Sign In",
+                                style: TextStyle
                                 (
-                                  "Sign In",
-                                  style: TextStyle
-                                  (
-                                    color: Colors.white,
-                                    fontSize: 20.0
-                                  ),
+                                  color: Colors.white,
+                                  fontSize: 20.0
                                 ),
                               ),
-                              shape: RoundedRectangleBorder
-                              (
-                                borderRadius: BorderRadius.circular(0.0),
-                              ),
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) {
-                                      return LoginScreen();
-                                    },
-                                  ),
-                                );
-                              },
-                              color: Colors.black54,
-                              minWidth: size.width * 0.5,
-                              height: constraints.maxHeight * 0.06,
                             ),
-                          ]
-                        ),
-
-                        FlatButton(
-                          child: FittedBox
-                          (
-                            fit: BoxFit.contain,
-                            child: Text
+                            shape: RoundedRectangleBorder
                             (
-                              "Sign Up",
-                              style: TextStyle
-                              (
-                                color: Colors.black,
-                                fontSize: 20.0
-                              ),
+                              borderRadius: BorderRadius.circular(0.0),
                             ),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return LoginScreen();
+                                  },
+                                ),
+                              );
+                            },
+                            color: Colors.black54,
+                            minWidth: size.width * 0.5,
                           ),
-                          onPressed: ()
-                          {
-                            Navigator.push
+
+                          FlatButton(
+                            child: FittedBox
                             (
-                              context,
-                              MaterialPageRoute
+                              fit: BoxFit.contain,
+                              child: Text
                               (
-                                builder: (context)
-                                {
-                                  return SignUpScreen();
-                                },
+                                "Sign Up",
+                                style: TextStyle
+                                (
+                                  color: Colors.black,
+                                  fontSize: 20.0
+                                ),
                               ),
-                            );
-                          },
-                          color: Colors.white,
-                          minWidth: size.width * 0.5,
-                          height: constraints.maxHeight * 0.06,
-                        ),
-                      ],
+                            ),
+                            onPressed: ()
+                            {
+                              Navigator.push
+                              (
+                                context,
+                                MaterialPageRoute
+                                (
+                                  builder: (context)
+                                  {
+                                    return SignUpScreen();
+                                  },
+                                ),
+                              );
+                            },
+                            color: Colors.white,
+                            minWidth: size.width * 0.5,
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),

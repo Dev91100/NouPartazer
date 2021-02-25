@@ -55,15 +55,16 @@ class Body extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                   ),
+
                   child: Align
                   (
                     alignment: Alignment.bottomCenter,
 
-                    child: Container(
+                    child: Container
+                    (
                       height: constraints.maxHeight * 0.06,
                       child: Row
                       (
-                        // mainAxisAlignment: MainAxisAlignment.end,
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children:
                         [
@@ -98,7 +99,6 @@ class Body extends StatelessWidget {
                             },
                             color: Colors.white,
                             minWidth: size.width * 0.5,
-                            // height: constraints.maxHeight * 0.01,
                           ),
 
                           FlatButton
@@ -132,7 +132,6 @@ class Body extends StatelessWidget {
                             },
                             color: Colors.black54,
                             minWidth: size.width * 0.5,
-                            // height: constraints.maxHeight * 0.01,
                           ),
                         ],
                       ),
