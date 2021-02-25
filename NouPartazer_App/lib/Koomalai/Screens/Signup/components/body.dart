@@ -1,7 +1,6 @@
 import 'package:NouPartazer_App/Koomalai/Screens/Business/Business.dart';
 import 'package:NouPartazer_App/Koomalai/Screens/Login/login_screen.dart';
 import 'package:NouPartazer_App/Koomalai/Screens/NGO/NGO.dart';
-import 'package:NouPartazer_App/Koomalai/Screens/Signup/components/background.dart';
 import 'package:NouPartazer_App/Koomalai/Screens/Signup/components/social_icon.dart';
 import 'package:NouPartazer_App/Koomalai/src/screens/secondMainScreen.dart';
 import 'package:flutter/material.dart';
@@ -185,7 +184,7 @@ class Body extends StatelessWidget {
 
                 Container
                 (
-                  margin: EdgeInsets.only(left: 30.0),
+                  margin: EdgeInsets.fromLTRB(30, 0, 0, 30),
                   alignment: Alignment.bottomLeft,
                   child: Text
                   (
