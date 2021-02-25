@@ -16,15 +16,13 @@ class SpashScreen extends StatefulWidget {
 class _SpashScreenState extends State<SpashScreen> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    Timer(Duration(seconds: 300000), ()=>Navigator.push(
+    Timer(Duration(seconds: 3), ()=>Navigator.push(
         context, MaterialPageRoute(builder: (context)=>LoginScreen())));
   }
 
   @override
   Widget build(BuildContext context) {
-    final screen = MediaQuery.of(context).size;
 
     return LayoutBuilder
     (
@@ -47,12 +45,13 @@ class _SpashScreenState extends State<SpashScreen> {
                     fit: BoxFit.cover,
                   ),
                 ),
-                // SpinKitSquareCircle(color:Colors.orangeAccent,size: 25.0,),
               ),
+
               Container
               (
                 color: Color.fromRGBO(0, 0, 0, 0.3)
               ),
+
               Container
               (
                 margin: EdgeInsets.fromLTRB
@@ -75,10 +74,12 @@ class _SpashScreenState extends State<SpashScreen> {
                       height: constraints.maxHeight * 0.2,
                       fit: BoxFit.cover,
                     ),
+
                     SizedBox
                     (
                       height: constraints.maxHeight * 0.04,
                     ),
+
                     FittedBox(
                       child: RichText
                       (
@@ -121,11 +122,12 @@ class _SpashScreenState extends State<SpashScreen> {
                         0,
                         0
                       ),
-                      height: screen.height * 0.14,
-                      width: screen.width * 0.6,
+                      height: constraints.maxHeight * 0.2,
+                      width: constraints.maxWidth * 0.6,
                       child: FittedBox
                       (
-                        fit: BoxFit.fitWidth,
+                        clipBehavior: Clip.none,
+                        fit: BoxFit.contain,
                         child: RichText
                           (
                           text: TextSpan
@@ -164,12 +166,13 @@ class _SpashScreenState extends State<SpashScreen> {
                         ),
                       ),
                     ),
+
                     Container
                     (
                       margin: EdgeInsets.fromLTRB
                       (
                         0,
-                        constraints.maxHeight * 0.1,
+                        constraints.maxHeight * 0.05,
                         0,
                         0
                       ),

@@ -31,234 +31,244 @@ class Body extends StatelessWidget {
   {
     Size size = MediaQuery.of(context).size;
 
-    return Container
+    return LayoutBuilder
     (
-      child: SingleChildScrollView
-      (
-        child: Stack
-        (  
-          children:
-          [
-            Container
-            (
-              height: 407,
-              decoration: BoxDecoration
-              (
-                image: DecorationImage
-                (
-                  image: AssetImage('assets/JPEG/image.jpg'),
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-            
-            Column
-            (
+      builder: (ctx, constraints)
+      {
+        return Container
+        (
+          child: SingleChildScrollView
+          (
+            child: Stack
+            (  
               children:
               [
                 Container
                 (
-                  margin: EdgeInsets.only(top: 50,right: 20.0),
-                  alignment: Alignment.topRight,
-
-                  child: RaisedButton
+                  height: constraints.maxHeight * 0.47,
+                  decoration: BoxDecoration
                   (
-                    child: Text
+                    image: DecorationImage
                     (
-                      "Skip",
-                      style: TextStyle
-                      (
-                        color: Colors.white,
-                        fontSize: 20.0
-                      ),
-                    ),
-                    onPressed: () 
-                    {
-                      Navigator.push
-                      (
-                        context,
-                        MaterialPageRoute
-                        (
-                          builder: (context)
-                          {
-                            return SecondMainScreen();
-                          },
-                        ),
-                      );
-                    },
-                    color:Colors.black26,
-                    shape: RoundedRectangleBorder
-                    (
-                      borderRadius: BorderRadius.circular(10.0),
+                      image: AssetImage('assets/JPEG/image.jpg'),
+                      fit: BoxFit.cover,
                     ),
                   ),
-                ),
+                  child: Align
+                  (
+                    alignment: Alignment.topCenter,
 
-                SizedBox
-                (
-                  height: size.height * 0.298
-                ),
-
-                Row
-                (
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children:
-                  [
-                    Column
+                    child: Row
                     (
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: 
+                      children:
                       [
-                        FlatButton
+                        Column
                         (
-                          child: Text(
-                            "Sign In",
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: 
+                          [
+                            FlatButton
+                            (
+                              child: Text(
+                                "Sign In",
+                                style: TextStyle
+                                (
+                                  color: Colors.black,
+                                  fontSize: 20.0
+                                ),
+                              ),
+                              shape: RoundedRectangleBorder
+                              (
+                                borderRadius: BorderRadius.circular(0.0),
+                              ),
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return LoginScreen();
+                                    },
+                                  ),
+                                );
+                              },
+                              color: Colors.white,
+                              minWidth: size.width * 0.5,
+                              height: 50.0,
+                            ),
+                          ]
+                        ),
+
+                        FlatButton(
+                          child: Text
+                          (
+                            "Sign Up",
                             style: TextStyle
                             (
-                              color: Colors.black,
+                              color: Colors.white,
                               fontSize: 20.0
                             ),
                           ),
-                          shape: RoundedRectangleBorder
-                          (
-                            borderRadius: BorderRadius.circular(0.0),
-                          ),
-                          onPressed: () {
-                            Navigator.push(
+                          onPressed: ()
+                          {
+                            Navigator.push
+                            (
                               context,
-                              MaterialPageRoute(
-                                builder: (context) {
-                                  return LoginScreen();
+                              MaterialPageRoute
+                              (
+                                builder: (context)
+                                {
+                                  return SignUpScreen();
                                 },
                               ),
                             );
                           },
-                          color: Colors.white,
+                          color: Colors.black54,
                           minWidth: size.width * 0.5,
                           height: 50.0,
+                          shape: RoundedRectangleBorder
+                          (
+                            borderRadius: BorderRadius.circular(0.0),
+                          ),
                         ),
-                      ]
+                      ],
+                    ),
+                  ),
+                ),
+                
+                Column
+                (
+                  children:
+                  [
+                    Container
+                    (
+                      margin: EdgeInsets.only(top: 50,right: 20.0),
+                      alignment: Alignment.topRight,
+
+                      child: RaisedButton
+                      (
+                        child: Text
+                        (
+                          "Skip",
+                          style: TextStyle
+                          (
+                            color: Colors.white,
+                            fontSize: 20.0
+                          ),
+                        ),
+                        onPressed: () 
+                        {
+                          Navigator.push
+                          (
+                            context,
+                            MaterialPageRoute
+                            (
+                              builder: (context)
+                              {
+                                return SecondMainScreen();
+                              },
+                            ),
+                          );
+                        },
+                        color:Colors.black26,
+                        shape: RoundedRectangleBorder
+                        (
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                      ),
                     ),
 
-                    FlatButton(
+                    SizedBox
+                    (
+                      height: size.height * 0.298
+                    ),
+
+                    SizedBox
+                    (
+                      height: size.height * 0.03
+                    ),
+
+                    Container
+                    (
+                      margin: EdgeInsets.only(left: 25.0),
+                      alignment: Alignment.bottomLeft,
                       child: Text
                       (
-                        "Sign Up",
+                        "Welcome,",
+                        style: TextStyle
+                        (
+                          color: Color.fromRGBO(245, 197, 41, 1),
+                          fontSize: 45.0,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    ),
+
+                    Container
+                    (
+                      margin: EdgeInsets.only(left: 30.0),
+                      alignment: Alignment.bottomLeft,
+                      child: Text
+                      (
+                        "Sign in to continue",
                         style: TextStyle
                         (
                           color: Colors.white,
-                          fontSize: 20.0
+                          fontSize: 22.0
                         ),
                       ),
-                      onPressed: ()
-                      {
-                        Navigator.push
-                        (
+                    ),
+
+
+                    RoundedInputField
+                    (
+                      hintText: "Email",
+                      onChanged: (value) {},
+                    ),
+
+                    RoundedPasswordField(
+                      onChanged: (value) {},
+                    ),
+
+                    RoundedButton
+                    (
+                      text: "Log In",
+                      color: Color.fromRGBO(245, 197, 41, 1),
+                      textColor: Colors.white,
+
+                      press: () {
+                        Navigator.push(
                           context,
-                          MaterialPageRoute
-                          (
-                            builder: (context)
-                            {
-                              return SignUpScreen();
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return MainScreen();
                             },
                           ),
                         );
-                      },
-                      color: Colors.black54,
-                      minWidth: size.width * 0.5,
-                      height: 50.0,
-                      shape: RoundedRectangleBorder
-                      (
-                        borderRadius: BorderRadius.circular(0.0),
-                      ),
+                      }
                     ),
+
+                    MaterialButton
+                    (
+                      child: Text
+                      (
+                      "Forgot Password?",
+                      style: TextStyle
+                        (
+                          color: Colors.white,
+                          fontSize: 22.0,
+                          decoration: TextDecoration.underline,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    )
                   ],
                 ),
-
-                SizedBox
-                (
-                  height: size.height * 0.03
-                ),
-
-                Container
-                (
-                  margin: EdgeInsets.only(left: 25.0),
-                  alignment: Alignment.bottomLeft,
-                  child: Text
-                  (
-                    "Welcome,",
-                    style: TextStyle
-                    (
-                      color: Color.fromRGBO(245, 197, 41, 1),
-                      fontSize: 45.0,
-                      fontWeight: FontWeight.bold
-                    ),
-                  ),
-                ),
-
-                Container
-                (
-                  margin: EdgeInsets.only(left: 30.0),
-                  alignment: Alignment.bottomLeft,
-                  child: Text
-                  (
-                    "Sign in to continue",
-                    style: TextStyle
-                    (
-                      color: Colors.white,
-                      fontSize: 22.0
-                    ),
-                  ),
-                ),
-
-
-                RoundedInputField
-                (
-                  hintText: "Email",
-                  onChanged: (value) {},
-                ),
-
-                RoundedPasswordField(
-                  onChanged: (value) {},
-                ),
-
-                RoundedButton
-                (
-                  text: "Log In",
-                  color: Color.fromRGBO(245, 197, 41, 1),
-                  textColor: Colors.white,
-
-                  press: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) {
-                          return MainScreen();
-                        },
-                      ),
-                    );
-                  }
-                ),
-
-                MaterialButton
-                (
-                  child: Text
-                  (
-                  "Forgot Password?",
-                  style: TextStyle
-                    (
-                      color: Colors.white,
-                      fontSize: 22.0,
-                      decoration: TextDecoration.underline,
-                      fontWeight: FontWeight.bold
-                    ),
-                  ),
-                )
               ],
             ),
-          ],
-        ),
-      ),
+          ),
+        );
+      }
     );
   }
 }
