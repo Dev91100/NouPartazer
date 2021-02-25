@@ -14,239 +14,250 @@ class Body extends StatelessWidget {
   {
     Size size = MediaQuery.of(context).size;
 
-    return Container
+    return LayoutBuilder
     (
-      child: SingleChildScrollView
-      (
-        child: Stack
+      builder: (ctx, constraints)
+      {
+        return Container
         (
-          children:
-          [
-            Container
-            (
-              height: 407,
-              decoration: BoxDecoration
-              (
-                image: DecorationImage
-                (
-                  image: AssetImage('assets/JPEG/image.jpg'),
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-
-            Column
+          child: SingleChildScrollView
+          (
+            child: Stack
             (
               children:
               [
                 Container
                 (
-                  margin: EdgeInsets.only(top: 50,right: 20.0),
-                  alignment: Alignment.topRight,
-
-                  child: RaisedButton
+                  height: constraints.maxHeight * 0.47,
+                  decoration: BoxDecoration
                   (
-                    child: Text
+                    image: DecorationImage
                     (
-                      "Skip",
-                      style: TextStyle
-                      (
-                        color: Colors.white,
-                        fontSize: 20.0
-                      ),
+                      image: AssetImage('assets/JPEG/image.jpg'),
+                      fit: BoxFit.cover,
                     ),
+                  ),
+                  child: Align
+                  (
+                    alignment: Alignment.bottomCenter,
 
-                    onPressed: ()
-                    {
-                      Navigator.push
-                      (
-                        context,
-                        MaterialPageRoute
+                    child: Row
+                    (
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children:
+                      [
+                        Column
                         (
-                          builder: (context)
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: 
+                          [
+                            FlatButton
+                            (
+                              child: Text(
+                                "Sign In",
+                                style: TextStyle
+                                (
+                                  color: Colors.white,
+                                  fontSize: 20.0
+                                ),
+                              ),
+                              shape: RoundedRectangleBorder
+                              (
+                                borderRadius: BorderRadius.circular(0.0),
+                              ),
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return LoginScreen();
+                                    },
+                                  ),
+                                );
+                              },
+                              color: Colors.black54,
+                              minWidth: size.width * 0.5,
+                              height: constraints.maxHeight * 0.06,
+                            ),
+                          ]
+                        ),
+
+                        FlatButton(
+                          child: Text
+                          (
+                            "Sign Up",
+                            style: TextStyle
+                            (
+                              color: Colors.black,
+                              fontSize: 20.0
+                            ),
+                          ),
+                          onPressed: ()
                           {
-                            return SecondMainScreen();
+                            Navigator.push
+                            (
+                              context,
+                              MaterialPageRoute
+                              (
+                                builder: (context)
+                                {
+                                  return SignUpScreen();
+                                },
+                              ),
+                            );
                           },
-                        ),
-                      );
-                    },
-                    color:Colors.black26,
-                    shape: RoundedRectangleBorder
-                    (
-                      borderRadius: BorderRadius.circular(10.0),
-                    ),
-                  ),
-                ),
-
-                SizedBox
-                (
-                  height: size.height * 0.298
-                ),
-
-                Row
-                (
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children:
-                  [
-                    FlatButton
-                    (
-                      child: Text
-                      (
-                        "Sign In",
-                        style: TextStyle
-                        (
                           color: Colors.white,
-                          fontSize: 20.0
+                          minWidth: size.width * 0.5,
+                          height: constraints.maxHeight * 0.06,
                         ),
-                      ),
-
-                      shape: RoundedRectangleBorder
-                      (
-                        borderRadius: BorderRadius.circular(0.0),
-                      ),
-
-                      onPressed: ()
-                      {
-                        Navigator.push
-                        (
-                          context,
-                          MaterialPageRoute
-                          (
-                            builder: (context)
-                            {
-                              return LoginScreen();
-                            },
-                          ),
-                        );
-                      },
-
-                      color: Colors.black54,
-                      minWidth: size.width * 0.5,
-                      height: 50.0,
-                    ),
-
-                    FlatButton
-                    (
-                      child: Text
-                      (
-                        "Sign Up",
-                        style: TextStyle
-                        (
-                          color: Colors.black,
-                          fontSize: 20.0
-                        ),
-                      ),
-                      shape: RoundedRectangleBorder
-                      (
-                        borderRadius: BorderRadius.circular(0.0),
-                      ),
-                      onPressed: ()
-                      {
-                        Navigator.push
-                        (
-                          context,
-                          MaterialPageRoute
-                          (
-                            builder: (context)
-                            {
-                              return SignUpScreen();
-                            },
-                          ),
-                        );
-                      },
-                      color: Colors.white,
-                      minWidth: size.width * 0.5,
-                      height: 50.0,
-                    ),
-                  ],
-                ),
-
-                SizedBox
-                (
-                  height: size.height * 0.03
-                ),
-
-                Container
-                (
-                  margin: EdgeInsets.only(left: 25.0),
-                  alignment: Alignment.bottomLeft,
-                  child: Text
-                  (
-                    "Let's get started,",
-                    style: TextStyle
-                    (
-                      color: Color.fromRGBO(245, 197, 41, 1),
-                      fontSize: 40.0,
-                      fontWeight: FontWeight.bold
-                    ),
-                  ),
-                ),
-
-                Container
-                (
-                  margin: EdgeInsets.fromLTRB(30, 0, 0, 30),
-                  alignment: Alignment.bottomLeft,
-                  child: Text
-                  (
-                    "Choose your organisational type",
-                    style: TextStyle
-                    (
-                      color: Colors.white,
-                      fontSize: 22.0
+                      ],
                     ),
                   ),
                 ),
 
                 Column
                 (
-                  mainAxisAlignment: MainAxisAlignment.center,
                   children:
-                  [  
-                    SocalIcon
+                  [
+                    Container
                     (
-                      iconSrc: "assets/SVG/NGO Button.svg",
+                      margin: EdgeInsets.only
+                      (
+                        top: constraints.maxHeight * 0.06,
+                        right: constraints.maxHeight * 0.03,
+                      ),
+                      alignment: Alignment.topRight,
 
-                      press: ()
-                      {
-                        Navigator.push
+                      child: RaisedButton
+                      (
+                        child: Text
                         (
-                          context,
-                          MaterialPageRoute
+                          "Skip",
+                          style: TextStyle
                           (
-                            builder: (context)
-                            {
-                              return NGO();
-                            },
+                            color: Colors.white,
+                            fontSize: 20.0
                           ),
-                        );
-                      },
+                        ),
+                        onPressed: () 
+                        {
+                          Navigator.push
+                          (
+                            context,
+                            MaterialPageRoute
+                            (
+                              builder: (context)
+                              {
+                                return SecondMainScreen();
+                              },
+                            ),
+                          );
+                        },
+                        color:Colors.black54,
+                        shape: RoundedRectangleBorder
+                        (
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                      ),
                     ),
 
-                    SocalIcon
+                    SizedBox
                     (
-                      iconSrc: "assets/SVG/Business Button.svg",
-                      press: ()
-                      {
-                        Navigator.push
-                        (
-                          context,
-                          MaterialPageRoute
-                          (
-                            builder: (context)
-                            {
-                              return Business();
-                            },
-                          ),
-                        );
-                      },
+                      height: constraints.maxHeight * 0.38
                     ),
-                  ],
-                )
+
+                    Container
+                    (
+                      margin: EdgeInsets.only
+                      (
+                        left: constraints.maxHeight * 0.025
+                      ),
+                      alignment: Alignment.bottomLeft,
+                      child: Text
+                      (
+                        "Let's get started,",
+                        style: TextStyle
+                        (
+                          color: Color.fromRGBO(245, 197, 41, 1),
+                          fontSize: 45.0,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    ),
+
+                    Container
+                    (
+                      margin: EdgeInsets.only
+                      (
+                        left: constraints.maxHeight * 0.025,
+                        bottom: constraints.maxHeight * 0.02,
+                      ),
+                      alignment: Alignment.bottomLeft,
+                      child: Text
+                      (
+                        "Choose your organisation type",
+                        style: TextStyle
+                        (
+                          color: Colors.white,
+                          fontSize: 22.0
+                        ),
+                      ),
+                    ),
+
+                    Column
+                    (
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children:
+                      [  
+                        SocalIcon
+                        (
+                          iconSrc: "assets/SVG/NGO Button.svg",
+
+                          press: ()
+                          {
+                            Navigator.push
+                            (
+                              context,
+                              MaterialPageRoute
+                              (
+                                builder: (context)
+                                {
+                                  return NGO();
+                                },
+                              ),
+                            );
+                          },
+                        ),
+
+                        SocalIcon
+                        (
+                          iconSrc: "assets/SVG/Business Button.svg",
+                          press: ()
+                          {
+                            Navigator.push
+                            (
+                              context,
+                              MaterialPageRoute
+                              (
+                                builder: (context)
+                                {
+                                  return Business();
+                                },
+                              ),
+                            );
+                          },
+                        ),
+                      ],
+                    )
+                  ]
+                ),
               ]
             ),
-          ]
-        ),
-      ),
+          ),
+        );
+      }
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:NouPartazer_App/Koomalai/Screens/Signup/signup_screen.dart';
+import 'package:NouPartazer_App/Koomalai/components/CreateNewPassword.dart';
 import 'package:NouPartazer_App/Koomalai/components/rounded_button.dart';
 import 'package:NouPartazer_App/Koomalai/components/rounded_input_field.dart';
 import 'package:NouPartazer_App/Koomalai/components/rounded_password_field.dart';
@@ -56,16 +57,18 @@ class Body extends StatelessWidget {
                   ),
                   child: Align
                   (
-                    alignment: Alignment.topCenter,
+                    alignment: Alignment.bottomCenter,
 
                     child: Row
                     (
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.end,
                       children:
                       [
                         Column
                         (
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.end,
                           children: 
                           [
                             FlatButton
@@ -94,7 +97,7 @@ class Body extends StatelessWidget {
                               },
                               color: Colors.white,
                               minWidth: size.width * 0.5,
-                              height: 50.0,
+                              height: constraints.maxHeight * 0.06,
                             ),
                           ]
                         ),
@@ -125,11 +128,7 @@ class Body extends StatelessWidget {
                           },
                           color: Colors.black54,
                           minWidth: size.width * 0.5,
-                          height: 50.0,
-                          shape: RoundedRectangleBorder
-                          (
-                            borderRadius: BorderRadius.circular(0.0),
-                          ),
+                          height: constraints.maxHeight * 0.06,
                         ),
                       ],
                     ),
@@ -142,7 +141,11 @@ class Body extends StatelessWidget {
                   [
                     Container
                     (
-                      margin: EdgeInsets.only(top: 50,right: 20.0),
+                      margin: EdgeInsets.only
+                      (
+                        top: constraints.maxHeight * 0.06,
+                        right: constraints.maxHeight * 0.03,
+                      ),
                       alignment: Alignment.topRight,
 
                       child: RaisedButton
@@ -170,7 +173,7 @@ class Body extends StatelessWidget {
                             ),
                           );
                         },
-                        color:Colors.black26,
+                        color:Colors.black54,
                         shape: RoundedRectangleBorder
                         (
                           borderRadius: BorderRadius.circular(10.0),
@@ -180,17 +183,15 @@ class Body extends StatelessWidget {
 
                     SizedBox
                     (
-                      height: size.height * 0.298
-                    ),
-
-                    SizedBox
-                    (
-                      height: size.height * 0.03
+                      height: constraints.maxHeight * 0.38
                     ),
 
                     Container
                     (
-                      margin: EdgeInsets.only(left: 25.0),
+                      margin: EdgeInsets.only
+                      (
+                        left: constraints.maxHeight * 0.025
+                      ),
                       alignment: Alignment.bottomLeft,
                       child: Text
                       (
@@ -206,7 +207,11 @@ class Body extends StatelessWidget {
 
                     Container
                     (
-                      margin: EdgeInsets.only(left: 30.0),
+                      margin: EdgeInsets.only
+                      (
+                        left: constraints.maxHeight * 0.025,
+                        bottom: constraints.maxHeight * 0.01,
+                      ),
                       alignment: Alignment.bottomLeft,
                       child: Text
                       (
@@ -218,7 +223,6 @@ class Body extends StatelessWidget {
                         ),
                       ),
                     ),
-
 
                     RoundedInputField
                     (
@@ -252,8 +256,8 @@ class Body extends StatelessWidget {
                     (
                       child: Text
                       (
-                      "Forgot Password?",
-                      style: TextStyle
+                        "Forgot Password?",
+                        style: TextStyle
                         (
                           color: Colors.white,
                           fontSize: 22.0,
