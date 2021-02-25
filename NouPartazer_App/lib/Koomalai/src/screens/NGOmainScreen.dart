@@ -1,7 +1,7 @@
 //import 'package:NouPartazer_App/Koomalai/src/NGO%20Donation/NGO%20donation.dart';
+import 'package:NouPartazer_App/Atish/StoryModel.dart';
 import 'package:NouPartazer_App/Koomalai/src/NGO%20donation/NGO%20donation.dart';
 import 'package:NouPartazer_App/Koomalai/src/NGO%20profile/NGOProfile.dart';
-import 'package:NouPartazer_App/Koomalai/src/pages/homePage.dart';
 import 'package:NouPartazer_App/Koomalai/src/pages/orderPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +26,7 @@ class _NGOMainScreenState extends State<NGOMainScreen> {
   int currentIndex =1;
   List<Widget> pages;
   Widget currentPage;
-  HomePage homePage;
+  StoryModel homePage;
   NGOProfile profilePage;
   OrderPage orderPage;
   NGODonation donation;
@@ -35,7 +35,7 @@ class _NGOMainScreenState extends State<NGOMainScreen> {
   @override
   void initState() {
     super.initState();
-    homePage=HomePage();
+    homePage=StoryModel();
     profilePage=NGOProfile();
     orderPage=OrderPage();
     donation= NGODonation();

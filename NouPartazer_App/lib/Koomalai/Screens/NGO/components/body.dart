@@ -500,7 +500,7 @@ class Body extends StatelessWidget {
             RoundedButton(
                 text: "Register",
                 color:Color.fromRGBO(245, 197, 41, 1),
-                textColor: Color.fromRGBO(245, 197, 41, 1),
+                textColor: Color.fromRGBO(255,255 , 255, 1),
 
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10.0),

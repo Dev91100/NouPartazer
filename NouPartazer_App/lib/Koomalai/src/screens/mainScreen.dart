@@ -1,6 +1,5 @@
 import 'package:NouPartazer_App/Koomalai/src/NGO%20donation/NGO%20donation.dart';
 import 'package:NouPartazer_App/Koomalai/src/NGO%20profile/NGOProfile.dart';
-import 'package:NouPartazer_App/Koomalai/src/pages/homePage.dart';
 import 'package:NouPartazer_App/Koomalai/src/pages/orderPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +25,7 @@ class _MainScreenState extends State<MainScreen>
   int currentIndex =0;
   List<Widget> pages;
   Widget currentPage;
-  HomePage homePage;
+  StoryModel homePage;
   NGOProfile profilePage;
   OrderPage orderPage;
   NGODonation donation;
@@ -36,7 +35,7 @@ class _MainScreenState extends State<MainScreen>
   void initState()
   {
     super.initState();
-    homePage=HomePage();
+    homePage=StoryModel();
     profilePage=NGOProfile();
     orderPage=OrderPage();
     donation= NGODonation();
@@ -102,7 +101,7 @@ class _MainScreenState extends State<MainScreen>
 
         selectedItemColor: Color.fromRGBO(41, 90, 245, 1),
       ),
-      body: StoryModel(),
+      body:currentPage,
     );
   }
 }

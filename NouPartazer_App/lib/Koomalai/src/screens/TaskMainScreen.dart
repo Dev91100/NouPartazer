@@ -1,4 +1,5 @@
 //import 'package:NouPartazer_App/Koomalai/src/NGO%20Donation/NGO%20donation.dart';
+import 'package:NouPartazer_App/Atish/StoryModel.dart';
 import 'package:NouPartazer_App/Koomalai/src/NGO%20donation/NGO%20donation.dart';
 import 'package:NouPartazer_App/Koomalai/src/NGO%20profile/NGOProfile.dart';
 import 'package:NouPartazer_App/Koomalai/src/pages/homePage.dart';
@@ -26,7 +27,7 @@ class _TaskMainScreenState extends State<TaskMainScreen> {
   int currentIndex =4;
   List<Widget> pages;
   Widget currentPage;
-  HomePage homePage;
+  StoryModel homePage;
   NGOProfile profilePage;
   OrderPage orderPage;
   NGODonation donation;
@@ -35,7 +36,7 @@ class _TaskMainScreenState extends State<TaskMainScreen> {
   @override
   void initState() {
     super.initState();
-    homePage=HomePage();
+    homePage=StoryModel();
     profilePage=NGOProfile();
     orderPage=OrderPage();
     donation= NGODonation();
