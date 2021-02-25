@@ -17,7 +17,7 @@ class _SpashScreenState extends State<SpashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 3), ()=>Navigator.push(
+    Timer(Duration(seconds: 5), ()=>Navigator.push(
         context, MaterialPageRoute(builder: (context)=>LoginScreen())));
   }
 
@@ -81,6 +81,7 @@ class _SpashScreenState extends State<SpashScreen> {
                     ),
 
                     FittedBox(
+                      fit: BoxFit.contain,
                       child: RichText
                       (
                         text: TextSpan

@@ -55,12 +55,17 @@ class Body extends StatelessWidget {
                           [
                             FlatButton
                             (
-                              child: Text(
-                                "Sign In",
-                                style: TextStyle
+                              child: FittedBox
+                              (
+                                fit: BoxFit.contain,
+                                child: Text
                                 (
-                                  color: Colors.white,
-                                  fontSize: 20.0
+                                  "Sign In",
+                                  style: TextStyle
+                                  (
+                                    color: Colors.white,
+                                    fontSize: 20.0
+                                  ),
                                 ),
                               ),
                               shape: RoundedRectangleBorder
@@ -85,13 +90,17 @@ class Body extends StatelessWidget {
                         ),
 
                         FlatButton(
-                          child: Text
+                          child: FittedBox
                           (
-                            "Sign Up",
-                            style: TextStyle
+                            fit: BoxFit.contain,
+                            child: Text
                             (
-                              color: Colors.black,
-                              fontSize: 20.0
+                              "Sign Up",
+                              style: TextStyle
+                              (
+                                color: Colors.black,
+                                fontSize: 20.0
+                              ),
                             ),
                           ),
                           onPressed: ()
@@ -132,13 +141,17 @@ class Body extends StatelessWidget {
 
                       child: RaisedButton
                       (
-                        child: Text
+                        child: FittedBox
                         (
-                          "Skip",
-                          style: TextStyle
+                          fit: BoxFit.contain,
+                          child: Text
                           (
-                            color: Colors.white,
-                            fontSize: 20.0
+                            "Skip",
+                            style: TextStyle
+                            (
+                              color: Colors.white,
+                              fontSize: 20.0
+                            ),
                           ),
                         ),
                         onPressed: () 
@@ -175,14 +188,18 @@ class Body extends StatelessWidget {
                         left: constraints.maxHeight * 0.025
                       ),
                       alignment: Alignment.bottomLeft,
-                      child: Text
+                      child: FittedBox
                       (
-                        "Let's get started,",
-                        style: TextStyle
+                        fit: BoxFit.contain,
+                        child: Text
                         (
-                          color: Color.fromRGBO(245, 197, 41, 1),
-                          fontSize: 45.0,
-                          fontWeight: FontWeight.bold
+                          "Let's get started,",
+                          style: TextStyle
+                          (
+                            color: Color.fromRGBO(245, 197, 41, 1),
+                            fontSize: 45.0,
+                            fontWeight: FontWeight.bold
+                          ),
                         ),
                       ),
                     ),
@@ -195,13 +212,17 @@ class Body extends StatelessWidget {
                         bottom: constraints.maxHeight * 0.02,
                       ),
                       alignment: Alignment.bottomLeft,
-                      child: Text
+                      child: FittedBox
                       (
-                        "Choose your organisation type",
-                        style: TextStyle
+                        fit: BoxFit.contain,
+                        child: Text
                         (
-                          color: Colors.white,
-                          fontSize: 22.0
+                          "Choose your organisation type",
+                          style: TextStyle
+                          (
+                            color: Colors.white,
+                            fontSize: 22.0
+                          ),
                         ),
                       ),
                     ),

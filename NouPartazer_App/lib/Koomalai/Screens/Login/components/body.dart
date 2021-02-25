@@ -73,12 +73,17 @@ class Body extends StatelessWidget {
                           [
                             FlatButton
                             (
-                              child: Text(
-                                "Sign In",
-                                style: TextStyle
+                              child: FittedBox
+                              (
+                                fit: BoxFit.contain,
+                                child: Text
                                 (
-                                  color: Colors.black,
-                                  fontSize: 20.0
+                                  "Sign In",
+                                  style: TextStyle
+                                  (
+                                    color: Colors.black,
+                                    fontSize: 20.0
+                                  ),
                                 ),
                               ),
                               shape: RoundedRectangleBorder
@@ -103,13 +108,17 @@ class Body extends StatelessWidget {
                         ),
 
                         FlatButton(
-                          child: Text
+                          child: FittedBox
                           (
-                            "Sign Up",
-                            style: TextStyle
+                            fit: BoxFit.contain,
+                            child: Text
                             (
-                              color: Colors.white,
-                              fontSize: 20.0
+                              "Sign Up",
+                              style: TextStyle
+                              (
+                                color: Colors.white,
+                                fontSize: 20.0
+                              ),
                             ),
                           ),
                           onPressed: ()
@@ -150,13 +159,17 @@ class Body extends StatelessWidget {
 
                       child: RaisedButton
                       (
-                        child: Text
+                        child: FittedBox
                         (
-                          "Skip",
-                          style: TextStyle
+                          fit: BoxFit.contain,
+                          child: Text
                           (
-                            color: Colors.white,
-                            fontSize: 20.0
+                            "Skip",
+                            style: TextStyle
+                            (
+                              color: Colors.white,
+                              fontSize: 20.0
+                            ),
                           ),
                         ),
                         onPressed: () 
@@ -193,14 +206,18 @@ class Body extends StatelessWidget {
                         left: constraints.maxHeight * 0.025
                       ),
                       alignment: Alignment.bottomLeft,
-                      child: Text
+                      child: FittedBox
                       (
-                        "Welcome,",
-                        style: TextStyle
+                        fit: BoxFit.contain,
+                        child: Text
                         (
-                          color: Color.fromRGBO(245, 197, 41, 1),
-                          fontSize: 45.0,
-                          fontWeight: FontWeight.bold
+                          "Welcome,",
+                          style: TextStyle
+                          (
+                            color: Color.fromRGBO(245, 197, 41, 1),
+                            fontSize: 45.0,
+                            fontWeight: FontWeight.bold
+                          ),
                         ),
                       ),
                     ),
@@ -213,13 +230,17 @@ class Body extends StatelessWidget {
                         bottom: constraints.maxHeight * 0.01,
                       ),
                       alignment: Alignment.bottomLeft,
-                      child: Text
+                      child: FittedBox
                       (
-                        "Sign in to continue",
-                        style: TextStyle
+                        fit: BoxFit.contain,
+                        child: Text
                         (
-                          color: Colors.white,
-                          fontSize: 22.0
+                          "Sign in to continue",
+                          style: TextStyle
+                          (
+                            color: Colors.white,
+                            fontSize: 22.0
+                          ),
                         ),
                       ),
                     ),
@@ -254,15 +275,19 @@ class Body extends StatelessWidget {
 
                     MaterialButton
                     (
-                      child: Text
+                      child: FittedBox
                       (
-                        "Forgot Password?",
-                        style: TextStyle
+                        fit: BoxFit.contain,
+                        child: Text
                         (
-                          color: Colors.white,
-                          fontSize: 22.0,
-                          decoration: TextDecoration.underline,
-                          fontWeight: FontWeight.bold
+                          "Forgot Password?",
+                          style: TextStyle
+                          (
+                            color: Colors.white,
+                            fontSize: 22.0,
+                            decoration: TextDecoration.underline,
+                            fontWeight: FontWeight.bold
+                          ),
                         ),
                       ),
                     )
