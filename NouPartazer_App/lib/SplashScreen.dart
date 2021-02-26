@@ -54,12 +54,9 @@ class _SpashScreenState extends State<SpashScreen> {
 
               Container
               (
-                margin: EdgeInsets.fromLTRB
+                margin: EdgeInsets.only
                 (
-                  0,
-                  constraints.maxHeight * 0.2,
-                  0,
-                  0
+                  top: constraints.maxHeight * 0.2,
                 ),
                 width: double.infinity,
                 child: Column
@@ -116,12 +113,9 @@ class _SpashScreenState extends State<SpashScreen> {
 
                     Container
                     (
-                      margin: EdgeInsets.fromLTRB
+                      margin: EdgeInsets.only
                       (
-                        0,
-                        constraints.maxHeight * 0.1,
-                        0,
-                        0
+                        top: constraints.maxHeight * 0.1,
                       ),
                       height: constraints.maxHeight * 0.2,
                       width: constraints.maxWidth * 0.6,
@@ -170,12 +164,9 @@ class _SpashScreenState extends State<SpashScreen> {
 
                     Container
                     (
-                      margin: EdgeInsets.fromLTRB
+                      margin: EdgeInsets.only
                       (
-                        0,
-                        constraints.maxHeight * 0.05,
-                        0,
-                        0
+                        top: constraints.maxHeight * 0.05,
                       ),
                       child:
                         CircularProgressIndicator(),

@@ -43,7 +43,13 @@ class Body extends StatelessWidget {
 
                     child: Container
                     (
-                      height: constraints.maxHeight * 0.06,
+                      height: constraints.maxHeight * 0.08,
+                      // constraints to prevent resizing buttons when keyboard is up
+                      constraints: BoxConstraints
+                      (
+                        minHeight: 60,
+                        maxHeight: 60,
+                      ),
                       child: Row
                       (
                         crossAxisAlignment: CrossAxisAlignment.stretch,
