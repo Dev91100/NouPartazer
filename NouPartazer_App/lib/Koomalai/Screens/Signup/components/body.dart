@@ -258,10 +258,8 @@ class Body extends StatelessWidget {
 
                             constraints: BoxConstraints
                             (
-                              minWidth: 30,
-                              maxWidth: constraints.maxWidth * 0.8,
-                              minHeight: 130,
-                              maxHeight: constraints.maxHeight * 0.15,
+                              minWidth: 300,
+                              minHeight: 110
                             ),
 
                             child: FlatButton
@@ -327,10 +325,8 @@ class Body extends StatelessWidget {
 
                             constraints: BoxConstraints
                             (
-                              minWidth: 30,
-                              maxWidth: constraints.maxWidth * 0.8,
-                              minHeight: 130,
-                              maxHeight: constraints.maxHeight * 0.15,
+                              minWidth: 300,
+                              minHeight: 110
                             ),
                             child: FlatButton
                             (
