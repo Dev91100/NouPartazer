@@ -315,7 +315,7 @@ class Body extends StatelessWidget {
 
                           SizedBox
                           (
-                            height: constraints.maxHeight * 0.02,
+                            height: constraints.maxHeight * 0.025,
                           ),
 
                           Container
@@ -378,50 +378,11 @@ class Body extends StatelessWidget {
                               minWidth: size.width * 0.5,
                             ),
                           ),
-                          
-                          // SocalIcon
-                          // (
-                          //   iconSrc: "assets/SVG/NGO Button.svg",
 
-                          //   press: ()
-                          //   {
-                          //     Navigator.push
-                          //     (
-                          //       context,
-                          //       MaterialPageRoute
-                          //       (
-                          //         builder: (context)
-                          //         {
-                          //           return NGO();
-                          //         },
-                          //       ),
-                          //     );
-                          //   },
-                          // ),
-                          
-                          // SizedBox
-                          // (
-                          //   height: constraints.maxHeight * 0.01,
-                          // ),
-
-                          // SocalIcon
-                          // (
-                          //   iconSrc: "assets/SVG/Business Button.svg",
-                          //   press: ()
-                          //   {
-                          //     Navigator.push
-                          //     (
-                          //       context,
-                          //       MaterialPageRoute
-                          //       (
-                          //         builder: (context)
-                          //         {
-                          //           return Business();
-                          //         },
-                          //       ),
-                          //     );
-                          //   },
-                          // ),
+                          SizedBox
+                          (
+                            height: constraints.maxHeight * 0.025,
+                          ),
                         ],
                       )
                     ],
