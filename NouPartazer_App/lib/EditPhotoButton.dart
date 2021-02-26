@@ -13,12 +13,12 @@ class EditPhotoButton extends StatelessWidget {
           return Container
           (
             margin: EdgeInsets.all(constraints.maxHeight * 0.05),
-            height: 60,
-            width: 60,
+            height: 55,
+            width: 55,
             constraints: BoxConstraints
             (
-              minWidth: 60,
-              minHeight: 60,
+              minWidth: 55,
+              minHeight: 55,
             ),
             decoration: BoxDecoration
             (
@@ -53,9 +53,9 @@ class EditPhotoButton extends StatelessWidget {
               },
               child: Icon
               (
-                Icons.camera_alt,
+                Icons.create,
                 color: Color.fromRGBO(102, 102, 102, 1),
-                size: 28.0,
+                size: 26,
               ),
             ),
           );
