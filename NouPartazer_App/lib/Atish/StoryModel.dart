@@ -69,6 +69,9 @@ class StoryModel extends StatelessWidget {
             
             ListView
             (
+              // Prevents vertical scrolling
+              physics: NeverScrollableScrollPhysics(),
+              
               children:
               [
                 Container(

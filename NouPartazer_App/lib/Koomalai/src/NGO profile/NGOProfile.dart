@@ -5,6 +5,8 @@ import 'package:NouPartazer_App/Koomalai/src/widget/foodCategoryStories.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'package:NouPartazer_App/EditPhotoButton.dart';
+
 class NGOProfile extends StatelessWidget
 {
 
@@ -29,10 +31,11 @@ class NGOProfile extends StatelessWidget
               Container
               (
                 width: screen.width,
+                height: screen.height * 0.3,
                 constraints: BoxConstraints
                 (
-                  minHeight: 300,
-                  maxHeight: 300,
+                  // minHeight: 150,
+                  // maxHeight: 300,
                 ),
                 decoration: BoxDecoration
                 (
@@ -47,106 +50,40 @@ class NGOProfile extends StatelessWidget
                 (
                   alignment: Alignment.bottomRight,
                   
-                  child: InkWell(
-                    child: Icon
-                    (
-                      Icons.camera_alt,
-                      color: Colors.white,
-                      size: 28.0,
-                    ),
-                    onTap: ()
-                    {
-                      showModalBottomSheet
-                      (
-                        context: context,
-                        builder: ((builder) => BottomSheetWidget())
-                      );
-                    },
-                  ),
+                  child: EditPhotoButton(BottomSheetWidget()),
                 ),
               ),
+
+              Center(
+                child: Container
+                (
+                  margin: EdgeInsets.only(top: constraints.maxHeight * 0.175),
+                  width: 150,
+                  height: 150,
+
+                  decoration: BoxDecoration
+                  (
+                    image: DecorationImage
+                    (
+                      image: AssetImage("assets/JPEG/Rectangle 12.jpg"),
+                      fit: BoxFit.cover,
+                    ),
+
+                    borderRadius: BorderRadius.circular(150),
+                    boxShadow:
+                    [
+                      BoxShadow
+                      (
+                        blurRadius: 10.0,
+                        color: Colors.black45,
+                        offset: Offset(3.0, 4.0),
+                      ),
+                    ],
+                  ),
+                ),
+              )
             ],
-          ),
           
-      //     Column
-      //     (
-      //       children:
-      //       [
-      //         Column
-      //         (
-      //         children:
-      //         [
-      //           Positioned
-      //           (
-      //             bottom: 20.0,
-      //             right: 20.0,
-      //             child: InkWell
-      //             (
-      //               child: Icon
-      //               (
-      //                 Icons.camera_alt,
-      //                 color: Colors.white,
-      //                 size: 28.0,
-      //               ),
-      //               onTap: () 
-      //               {
-      //                 showModalBottomSheet
-      //                 (
-      //                   context: context,
-      //                   builder: ((builder) => BottomSheetWidget())
-      //                 );
-      //               },
-      //             ),
-      //           ),
-
-      //           Column
-      //           (
-      //             children:
-      //             [
-      //               Stack
-      //               (
-      //                 children:
-      //                 [
-      //                   Container
-      //                   (
-      //                     margin: EdgeInsets.only
-      //                     (
-      //                       bottom: 0.0,
-      //                       top: 20.0
-      //                     ),
-      //                     width: 360.0,
-      //                     height: 200.0,
-      //                     decoration: BoxDecoration
-      //                     (
-      //                       image: DecorationImage
-      //                       (
-      //                         image: AssetImage("assets/JPEG/Rectangle 13.jpg"),
-      //                         fit: BoxFit.cover,
-      //                       ),
-      //                       borderRadius: BorderRadius.circular(0.0),
-      //                     ),
-      //                   ),
-
-      //                   Positioned(
-      //                     bottom: 20.0,
-      //                     right: 20.0,
-      //                     child: InkWell(
-      //                       child: Icon(
-      //                         Icons.camera_alt,
-      //                         color: Colors.white,
-      //                         size: 28.0,
-      //                       ),
-      //                       onTap: () {
-      //                         showModalBottomSheet(
-      //                             context: context,
-      //                             builder: ((builder) => BottomSheetWidget()));
-      //                       },
-      //                     ),
-      //                   ),
-      //                 ],
-      //               ),
-      //             ],
-      //           ),
 
 
       //           Positioned(
@@ -733,6 +670,7 @@ class NGOProfile extends StatelessWidget
       //     ),
       // ]
       // )
+        )
         )
       );
       }
