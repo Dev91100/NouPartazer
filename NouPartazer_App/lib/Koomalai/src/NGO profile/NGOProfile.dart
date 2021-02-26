@@ -80,6 +80,16 @@ class NGOProfile extends StatelessWidget
                       ),
                     ],
                   ),
+
+                  child: Align
+                  (
+                    alignment: Alignment.bottomRight,
+                    
+                    child: EditPhotoButton
+                    (
+                      BottomSheetWidget()
+                    )
+                  ),
                 ),
               )
             ],
