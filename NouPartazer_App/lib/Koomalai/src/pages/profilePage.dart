@@ -100,7 +100,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   onTap: () {
                     showModalBottomSheet(
                         context: context,
-                        builder: ((builder) => BottomShhetWidget()));
+                        builder: ((builder) => BottomSheetWidget()));
                   },
                 ),
               ),
@@ -141,7 +141,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       onTap: () {
                         showModalBottomSheet(
                             context: context,
-                            builder: ((builder) => BottomShhetWidget()));
+                            builder: ((builder) => BottomSheetWidget()));
                       },
                     ),
                   ),
@@ -198,7 +198,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       onTap: () {
                         showModalBottomSheet(
                             context: context,
-                            builder: ((builder) => BottomShhetWidget()));
+                            builder: ((builder) => BottomSheetWidget()));
                       },
                     ),
                   ),

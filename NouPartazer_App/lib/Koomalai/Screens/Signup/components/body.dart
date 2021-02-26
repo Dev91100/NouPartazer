@@ -247,52 +247,185 @@ class Body extends StatelessWidget {
                       
                       Column
                       (
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children:
-                        [  
-                          SocalIcon
+                        [
+                          Container
                           (
-                            iconSrc: "assets/SVG/NGO Button.svg",
+                            height: constraints.maxHeight * 0.15,
+                            width: constraints.maxWidth * 0.8,
 
-                            press: ()
-                            {
-                              Navigator.push
+                            constraints: BoxConstraints
+                            (
+                              minWidth: 30,
+                              maxWidth: constraints.maxWidth * 0.8,
+                              minHeight: 130,
+                              maxHeight: constraints.maxHeight * 0.15,
+                            ),
+
+                            child: FlatButton
+                            (
+                              shape: RoundedRectangleBorder
                               (
-                                context,
-                                MaterialPageRoute
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              child: FittedBox
+                              (
+                                fit: BoxFit.contain,
+                                child: Column
                                 (
-                                  builder: (context)
-                                  {
-                                    return NGO();
-                                  },
+                                  children: 
+                                  [
+                                    Icon
+                                    (
+                                      Icons.favorite,
+                                      color: Color.fromRGBO(0, 50, 193, 1),
+                                      size: 55
+                                    ),
+                                    Text
+                                    (
+                                      "NGO",
+                                      style: TextStyle
+                                      (
+                                        color: Color.fromRGBO(0, 50, 193, 1),
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 30
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              );
-                            },
+                              ),
+                              onPressed: ()
+                              {
+                                Navigator.push
+                                (
+                                  context,
+                                  MaterialPageRoute
+                                  (
+                                    builder: (context)
+                                    {
+                                      return NGO();
+                                    },
+                                  ),
+                                );
+                              },
+                              color: Colors.white,
+                              minWidth: size.width * 0.5,
+                            ),
                           ),
-                          
+
                           SizedBox
                           (
-                            height: 10,
+                            height: constraints.maxHeight * 0.02,
                           ),
 
-                          SocalIcon
+                          Container
                           (
-                            iconSrc: "assets/SVG/Business Button.svg",
-                            press: ()
-                            {
-                              Navigator.push
+                            height: constraints.maxHeight * 0.15,
+                            width: constraints.maxWidth * 0.8,
+
+                            constraints: BoxConstraints
+                            (
+                              minWidth: 30,
+                              maxWidth: constraints.maxWidth * 0.8,
+                              minHeight: 130,
+                              maxHeight: constraints.maxHeight * 0.15,
+                            ),
+                            child: FlatButton
+                            (
+                              shape: RoundedRectangleBorder
                               (
-                                context,
-                                MaterialPageRoute
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              child: FittedBox
+                              (
+                                fit: BoxFit.contain,
+                                child: Column
                                 (
-                                  builder: (context)
-                                  {
-                                    return Business();
-                                  },
+                                  children:
+                                  [
+                                    Icon
+                                    (
+                                      Icons.business,
+                                      color: Color.fromRGBO(0, 50, 193, 1),
+                                      size: 55
+                                    ),
+                                    Text
+                                    (
+                                      "BUSINESS",
+                                      style: TextStyle
+                                      (
+                                        color: Color.fromRGBO(0, 50, 193, 1),
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 30
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              );
-                            },
+                              ),
+                              onPressed: ()
+                              {
+                                Navigator.push
+                                (
+                                  context,
+                                  MaterialPageRoute
+                                  (
+                                    builder: (context)
+                                    {
+                                      return Business();
+                                    },
+                                  ),
+                                );
+                              },
+                              color: Colors.white,
+                              minWidth: size.width * 0.5,
+                            ),
                           ),
+                          
+                          // SocalIcon
+                          // (
+                          //   iconSrc: "assets/SVG/NGO Button.svg",
+
+                          //   press: ()
+                          //   {
+                          //     Navigator.push
+                          //     (
+                          //       context,
+                          //       MaterialPageRoute
+                          //       (
+                          //         builder: (context)
+                          //         {
+                          //           return NGO();
+                          //         },
+                          //       ),
+                          //     );
+                          //   },
+                          // ),
+                          
+                          // SizedBox
+                          // (
+                          //   height: constraints.maxHeight * 0.01,
+                          // ),
+
+                          // SocalIcon
+                          // (
+                          //   iconSrc: "assets/SVG/Business Button.svg",
+                          //   press: ()
+                          //   {
+                          //     Navigator.push
+                          //     (
+                          //       context,
+                          //       MaterialPageRoute
+                          //       (
+                          //         builder: (context)
+                          //         {
+                          //           return Business();
+                          //         },
+                          //       ),
+                          //     );
+                          //   },
+                          // ),
                         ],
                       )
                     ],

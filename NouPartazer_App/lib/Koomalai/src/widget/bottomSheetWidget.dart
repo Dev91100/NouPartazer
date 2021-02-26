@@ -5,12 +5,12 @@ import 'package:image_picker/image_picker.dart';
 
 File imageFile;
  
-class BottomShhetWidget extends StatefulWidget {
+class BottomSheetWidget extends StatefulWidget {
   @override
-  _BottomShhetWidgetState createState() => _BottomShhetWidgetState();
+  _BottomSheetWidgetState createState() => _BottomSheetWidgetState();
 }
 
-class _BottomShhetWidgetState extends State<BottomShhetWidget> {
+class _BottomSheetWidgetState extends State<BottomSheetWidget> {
   void takePhotoByCamera() async {
     File image = await ImagePicker.pickImage(source: ImageSource.camera);
 

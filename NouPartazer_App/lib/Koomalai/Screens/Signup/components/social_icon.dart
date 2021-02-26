@@ -15,11 +15,10 @@ class SocalIcon extends StatelessWidget {
     return GestureDetector(
       onTap: press,
       child: Container(
-        margin: EdgeInsets.symmetric(horizontal: 1),
+        height: 125,
+        width: 120,
         child: SvgPicture.asset(
           iconSrc,
-          height: 125,
-          width: 120,
         ),
       ),
     );

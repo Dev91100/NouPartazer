@@ -63,7 +63,7 @@ import 'package:url_launcher/url_launcher.dart';
                         onTap: () {
                           showModalBottomSheet(
                               context: context,
-                              builder: ((builder) => BottomShhetWidget()));
+                              builder: ((builder) => BottomSheetWidget()));
                         },
                       ),
                     ),
@@ -104,7 +104,7 @@ import 'package:url_launcher/url_launcher.dart';
                                 onTap: () {
                                   showModalBottomSheet(
                                       context: context,
-                                      builder: ((builder) => BottomShhetWidget()));
+                                      builder: ((builder) => BottomSheetWidget()));
                                 },
                               ),
                             ),
@@ -161,7 +161,7 @@ import 'package:url_launcher/url_launcher.dart';
                                   onTap: () {
                                     showModalBottomSheet(
                                         context: context,
-                                        builder: ((builder) => BottomShhetWidget()));
+                                        builder: ((builder) => BottomSheetWidget()));
                                   },
                                 ),
                               ),
