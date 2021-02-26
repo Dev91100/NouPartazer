@@ -13,12 +13,12 @@ class EditPhotoButton extends StatelessWidget {
           return Container
           (
             margin: EdgeInsets.all(constraints.maxHeight * 0.05),
-            height: 55,
-            width: 55,
+            height: 40,
+            width: 40,
             constraints: BoxConstraints
             (
-              minWidth: 55,
-              minHeight: 55,
+              minWidth: 40,
+              minHeight: 40,
             ),
             decoration: BoxDecoration
             (
@@ -28,16 +28,17 @@ class EditPhotoButton extends StatelessWidget {
               [
                 BoxShadow
                 (
-                  color: Colors.black.withOpacity(0.5),
+                  color: Colors.black.withOpacity(0.2),
                   spreadRadius: 2,
-                  blurRadius: 4,
-                  offset: Offset(0, 3), // changes position of shadow
+                  blurRadius: 2,
+                  offset: Offset(0, 2), // changes position of shadow
                 ),
               ],
             ),
 
             child: RaisedButton
             (
+              padding: EdgeInsets.all(0),
               color: Colors.white,
               shape: RoundedRectangleBorder
               (
@@ -53,7 +54,7 @@ class EditPhotoButton extends StatelessWidget {
               },
               child: Icon
               (
-                Icons.create,
+                Icons.create_outlined,
                 color: Color.fromRGBO(102, 102, 102, 1),
                 size: 26,
               ),
