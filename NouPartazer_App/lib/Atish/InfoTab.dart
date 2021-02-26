@@ -35,7 +35,7 @@ class InfoTab extends StatelessWidget
             color: new Color.fromRGBO(245, 197, 41, 1),
           ),
           Container(
-            margin: EdgeInsets.fromLTRB(5,5,0,0),
+            margin: EdgeInsets.fromLTRB(5,0,0,0),
             child: Text
             (
               date,

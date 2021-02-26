@@ -22,47 +22,137 @@ class Body extends StatelessWidget {
         (
           child: SingleChildScrollView
           (
-            child: Stack
-            (
-              children:
-              [
-                Container
-                (
-                  height: constraints.maxHeight * 0.47,
-                  decoration: BoxDecoration
-                  (
-                    image: DecorationImage
-                    (
-                      image: AssetImage('assets/JPEG/image.jpg'),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                  child: Align
-                  (
-                    alignment: Alignment.bottomCenter,
+            child: Column(
 
-                    child: Container
+              children: [
+                Stack
+                (  
+                  children:
+                  [
+                    Container
                     (
-                      height: constraints.maxHeight * 0.08,
-                      // constraints to prevent resizing buttons when keyboard is up
-                      constraints: BoxConstraints
+                      height: constraints.maxHeight * 0.495,
+                      decoration: BoxDecoration
                       (
-                        minHeight: 60,
-                        maxHeight: 60,
+                        image: DecorationImage
+                        (
+                          image: AssetImage('assets/JPEG/image.jpg'),
+                          fit: BoxFit.cover,
+                        ),
                       ),
-                      child: Row
+
+                      child: Align
                       (
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children:
-                        [
-                          FlatButton
+                        alignment: Alignment.bottomCenter,
+
+                        child: Container
+                        (
+                          height: constraints.maxHeight * 0.08,
+                          // constraints to prevent resizing buttons when keyboard is up
+                          constraints: BoxConstraints
+                          (
+                            minHeight: 60,
+                            maxHeight: 60,
+                          ),
+                          child: Row
+                          (
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children:
+                            [
+                              FlatButton
+                              (
+                                child: FittedBox
+                                (
+                                  fit: BoxFit.contain,
+                                  child: Text
+                                  (
+                                    "Sign In",
+                                    style: TextStyle
+                                    (
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20.0
+                                    ),
+                                  ),
+                                ),
+                                shape: RoundedRectangleBorder
+                                (
+                                  borderRadius: BorderRadius.circular(0.0),
+                                ),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) {
+                                        return LoginScreen();
+                                      },
+                                    ),
+                                  );
+                                },
+                                color: Colors.black54,
+                                minWidth: size.width * 0.5,
+                              ),
+
+                              FlatButton
+                              (
+                                child: FittedBox
+                                (
+                                  fit: BoxFit.contain,
+                                  child: Text
+                                  (
+                                    "Sign Up",
+                                    style: TextStyle
+                                    (
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20.0
+                                    ),
+                                  ),
+                                ),
+                                onPressed: ()
+                                {
+                                  Navigator.push
+                                  (
+                                    context,
+                                    MaterialPageRoute
+                                    (
+                                      builder: (context)
+                                      {
+                                        return SignUpScreen();
+                                      },
+                                    ),
+                                  );
+                                },
+                                color: Colors.white,
+                                minWidth: size.width * 0.5,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    
+                    Column
+                    (
+                      children:
+                      [
+                        Container
+                        (
+                          margin: EdgeInsets.only
+                          (
+                            top: constraints.maxHeight * 0.06,
+                            right: constraints.maxHeight * 0.03,
+                          ),
+                          alignment: Alignment.topRight,
+
+                          child: RaisedButton
                           (
                             child: FittedBox
                             (
                               fit: BoxFit.contain,
                               child: Text
                               (
-                                "Sign In",
+                                "Skip",
                                 style: TextStyle
                                 (
                                   color: Colors.white,
@@ -70,39 +160,7 @@ class Body extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            shape: RoundedRectangleBorder
-                            (
-                              borderRadius: BorderRadius.circular(0.0),
-                            ),
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) {
-                                    return LoginScreen();
-                                  },
-                                ),
-                              );
-                            },
-                            color: Colors.black54,
-                            minWidth: size.width * 0.5,
-                          ),
-
-                          FlatButton(
-                            child: FittedBox
-                            (
-                              fit: BoxFit.contain,
-                              child: Text
-                              (
-                                "Sign Up",
-                                style: TextStyle
-                                (
-                                  color: Colors.black,
-                                  fontSize: 20.0
-                                ),
-                              ),
-                            ),
-                            onPressed: ()
+                            onPressed: () 
                             {
                               Navigator.push
                               (
@@ -111,169 +169,136 @@ class Body extends StatelessWidget {
                                 (
                                   builder: (context)
                                   {
-                                    return SignUpScreen();
+                                    return SecondMainScreen();
                                   },
                                 ),
                               );
                             },
-                            color: Colors.white,
-                            minWidth: size.width * 0.5,
+                            color:Colors.black54,
+                            shape: RoundedRectangleBorder
+                            (
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
-                  ),
+                  ],
                 ),
 
-                Column
+                Container
                 (
-                  children:
-                  [
-                    Container
-                    (
-                      margin: EdgeInsets.only
+                  margin: EdgeInsets.only
+                  (
+                    top: constraints.maxHeight * 0.025,
+                    left: constraints.maxHeight * 0.025,
+                    right: constraints.maxHeight * 0.025,
+                  ),
+                  child: Column
+                  (
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children:
+                    [
+                      Container
                       (
-                        top: constraints.maxHeight * 0.06,
-                        right: constraints.maxHeight * 0.03,
-                      ),
-                      alignment: Alignment.topRight,
-
-                      child: RaisedButton
-                      (
+                        alignment: Alignment.bottomLeft,
                         child: FittedBox
                         (
                           fit: BoxFit.contain,
                           child: Text
                           (
-                            "Skip",
+                            "Let's get started,",
+                            style: TextStyle
+                            (
+                              color: Color.fromRGBO(245, 197, 41, 1),
+                              fontSize: 45.0,
+                              fontWeight: FontWeight.bold
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      Container
+                      (
+                        margin: EdgeInsets.only
+                        (
+                          bottom: constraints.maxHeight * 0.01,
+                        ),
+                        alignment: Alignment.bottomLeft,
+                        child: FittedBox
+                        (
+                          fit: BoxFit.contain,
+                          child: Text
+                          (
+                            "Choose your organisation type",
                             style: TextStyle
                             (
                               color: Colors.white,
-                              fontSize: 20.0
+                              fontSize: 22.0
                             ),
                           ),
                         ),
-                        onPressed: () 
-                        {
-                          Navigator.push
+                      ),
+
+                      SizedBox
+                      (
+                        height: 10,
+                      ),
+                      
+                      Column
+                      (
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children:
+                        [  
+                          SocalIcon
                           (
-                            context,
-                            MaterialPageRoute
-                            (
-                              builder: (context)
-                              {
-                                return SecondMainScreen();
-                              },
-                            ),
-                          );
-                        },
-                        color:Colors.black54,
-                        shape: RoundedRectangleBorder
-                        (
-                          borderRadius: BorderRadius.circular(10.0),
-                        ),
-                      ),
-                    ),
+                            iconSrc: "assets/SVG/NGO Button.svg",
 
-                    SizedBox
-                    (
-                      height: constraints.maxHeight * 0.38
-                    ),
-
-                    Container
-                    (
-                      margin: EdgeInsets.only
-                      (
-                        left: constraints.maxHeight * 0.025
-                      ),
-                      alignment: Alignment.bottomLeft,
-                      child: FittedBox
-                      (
-                        fit: BoxFit.contain,
-                        child: Text
-                        (
-                          "Let's get started,",
-                          style: TextStyle
-                          (
-                            color: Color.fromRGBO(245, 197, 41, 1),
-                            fontSize: 45.0,
-                            fontWeight: FontWeight.bold
-                          ),
-                        ),
-                      ),
-                    ),
-
-                    Container
-                    (
-                      margin: EdgeInsets.only
-                      (
-                        left: constraints.maxHeight * 0.025,
-                        bottom: constraints.maxHeight * 0.02,
-                      ),
-                      alignment: Alignment.bottomLeft,
-                      child: FittedBox
-                      (
-                        fit: BoxFit.contain,
-                        child: Text
-                        (
-                          "Choose your organisation type",
-                          style: TextStyle
-                          (
-                            color: Colors.white,
-                            fontSize: 22.0
-                          ),
-                        ),
-                      ),
-                    ),
-
-                    Column
-                    (
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children:
-                      [  
-                        SocalIcon
-                        (
-                          iconSrc: "assets/SVG/NGO Button.svg",
-
-                          press: ()
-                          {
-                            Navigator.push
-                            (
-                              context,
-                              MaterialPageRoute
+                            press: ()
+                            {
+                              Navigator.push
                               (
-                                builder: (context)
-                                {
-                                  return NGO();
-                                },
-                              ),
-                            );
-                          },
-                        ),
+                                context,
+                                MaterialPageRoute
+                                (
+                                  builder: (context)
+                                  {
+                                    return NGO();
+                                  },
+                                ),
+                              );
+                            },
+                          ),
+                          
+                          SizedBox
+                          (
+                            height: 10,
+                          ),
 
-                        SocalIcon
-                        (
-                          iconSrc: "assets/SVG/Business Button.svg",
-                          press: ()
-                          {
-                            Navigator.push
-                            (
-                              context,
-                              MaterialPageRoute
+                          SocalIcon
+                          (
+                            iconSrc: "assets/SVG/Business Button.svg",
+                            press: ()
+                            {
+                              Navigator.push
                               (
-                                builder: (context)
-                                {
-                                  return Business();
-                                },
-                              ),
-                            );
-                          },
-                        ),
-                      ],
-                    )
-                  ]
+                                context,
+                                MaterialPageRoute
+                                (
+                                  builder: (context)
+                                  {
+                                    return Business();
+                                  },
+                                ),
+                              );
+                            },
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
                 ),
-              ]
+              ],
             ),
           ),
         );

@@ -13,8 +13,8 @@ class StoryModel extends StatelessWidget {
     Story
     (
       image: './assets/JPEG/batelage.jpeg',
-      locationName: 'Four Seasons Resort',
-      locationAddress: 'La Place Belgath',
+      locationName: 'Four Seasons ResortFour Seasons Resort',
+      locationAddress: 'La Place BelgathLa Place BelgathLa Place Belgath',
       date: '19/03/21',
       time: '19:00-00:30',
       tag: 'PARTY',
@@ -24,7 +24,7 @@ class StoryModel extends StatelessWidget {
     (
       image: './assets/JPEG/cofee.jpeg',
       locationName: 'Winners Supermarket',
-      locationAddress: 'La Place Belgath',
+      locationAddress: 'La Place BelgathLa Place Belgath',
       date: '19/03/21',
       time: '19:00-00:30',
       tag: 'PARTY',
@@ -72,12 +72,10 @@ class StoryModel extends StatelessWidget {
               children:
               [
                 Container(
-                  margin: EdgeInsets.fromLTRB
+                  margin: EdgeInsets.only
                   (
-                    0,
-                    constraints.maxHeight * 0.02,
-                    0,
-                    constraints.maxHeight * 0.01
+                    top: constraints.maxHeight * 0.02,
+                    bottom: constraints.maxHeight * 0.01
                   ),
                   child: Text
                   (
@@ -101,77 +99,104 @@ class StoryModel extends StatelessWidget {
                   (
                     height: constraints.maxHeight,
                     initialPage: 0,
-                    viewportFraction: 0.9,
+                    viewportFraction: 0.92,
                     enableInfiniteScroll: false,
                   ),
-                  items: 
-                    stories.map((st)
-                    {
-                      return Card
+
+                  items: stories.map((st)
+                  {
+                    return Card
+                    (
+                      margin: EdgeInsets.only
                       (
-                        margin: EdgeInsets.fromLTRB
+                        left: constraints.maxHeight * 0.01,
+                        right: constraints.maxHeight * 0.01,
+                        bottom: constraints.maxHeight * 0.12
+                      ),
+                      child: Container
+                      (
+                        // height: 700,
+                        decoration: BoxDecoration
                         (
-                          constraints.maxHeight * 0.01,
-                          0,
-                          constraints.maxHeight * 0.01,
-                          constraints.maxHeight * 0.12
+                          image: DecorationImage
+                          (
+                            image: AssetImage(st.image),
+                            fit: BoxFit.cover,
+                          ),
                         ),
-                        child: Container
-                        (
-                          height: 700,
+                        child: Container(
                           decoration: BoxDecoration
                           (
-                            image: DecorationImage
+                            gradient: LinearGradient
                             (
-                              image: AssetImage(st.image),
-                              fit: BoxFit.cover,
-                            ),
+                              colors: 
+                              [
+                                new Color.fromRGBO(0, 0, 0, 1), // Black
+                                new Color.fromRGBO(0, 0, 0, 0), // Transparent
+                              ],
+                              begin: FractionalOffset(0.0, 1.0),
+                              end: FractionalOffset(1.0, 0.0),
+                              stops: [0.0,0.5],
+                              tileMode: TileMode.clamp,
+                            )
                           ),
-                          child: Container(
-                            decoration: BoxDecoration
+                          child: Padding(
+                            padding: const EdgeInsets.fromLTRB(15,0,15,15),
+                            child: Column
                             (
-                              gradient: LinearGradient
-                              (
-                                colors: 
-                                [
-                                  new Color.fromRGBO(0, 0, 0, 1),
-                                  new Color.fromRGBO(0, 0, 0, 0),
-                                ],
-                                begin: FractionalOffset(0.0, 1.0),
-                                end: FractionalOffset(1.0, 0.0),
-                                stops: [0.0,0.4],
-                                tileMode: TileMode.clamp,
-                              )
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.fromLTRB(20,5,10,20),
-                              child: Column
-                              (
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                crossAxisAlignment: CrossAxisAlignment.stretch,
-                                children: 
-                                [
-                                  Text
-                                  ( 
-                                    st.locationName,
-                                    style: TextStyle
-                                    (
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 25,
-                                      color: new Color.fromRGBO(245, 197, 41, 1),
-                                    ),
-                                  ),
-                                  Text
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
+                              children: 
+                              [
+                                SingleChildScrollView(
+                                  scrollDirection: Axis.horizontal,
+                                  child: FittedBox
                                   (
-                                    st.locationAddress,
-                                    style: TextStyle
+                                    fit: BoxFit.contain,
+                                    child: Text
+                                    ( 
+                                      st.locationName,
+                                      style: TextStyle
                                       (
                                         fontWeight: FontWeight.bold,
                                         fontSize: 30,
-                                        color: Colors.white,
+                                        color: new Color.fromRGBO(245, 197, 41, 1),
                                       ),
+                                    ),
                                   ),
-                                  Row
+                                ),
+                                
+                                SizedBox
+                                (
+                                  height: constraints.maxHeight * 0.005,
+                                ),
+
+                                SingleChildScrollView(
+                                  scrollDirection: Axis.horizontal,
+                                  child: FittedBox
+                                    (
+                                    fit: BoxFit.contain,
+                                    child: Text
+                                    (
+                                      st.locationAddress,
+                                      style: TextStyle
+                                        (
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 25,
+                                          color: Colors.white,
+                                        ),
+                                    ),
+                                  ),
+                                ),
+                                
+                                SizedBox
+                                (
+                                  height: constraints.maxHeight * 0.01,
+                                ),
+
+                                FittedBox(
+                                  fit: BoxFit.contain,
+                                  child: Row
                                   (
                                     children: 
                                     [
@@ -188,13 +213,18 @@ class StoryModel extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                  SingleChildScrollView
-                                  (
-                                    scrollDirection: Axis.horizontal,
-                                    child: Container(
-                                      width: 680,
+                                ),
+
+                                SingleChildScrollView
+                                (
+                                  scrollDirection: Axis.horizontal,
+                                  child: Container(
+                                    width: constraints.maxHeight * 0.7,
+                                    child: FittedBox
+                                    (
+                                      fit: BoxFit.contain,
                                       child: Row(
-                                        children: [
+                                          children: [
                                           TagsTab(data: st.tag),
                                           TagsTab(data: st.foodType),
                                           TagsTab(data: st.foodType),
@@ -202,13 +232,14 @@ class StoryModel extends StatelessWidget {
                                       ),
                                     ),
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
-                          )
-                        ),
-                      );
-                    }).toList(),
+                          ),
+                        )
+                      ),
+                    );
+                  }).toList(),
                 )
               ],
             ),

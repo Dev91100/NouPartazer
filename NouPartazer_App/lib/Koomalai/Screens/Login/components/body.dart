@@ -39,81 +39,135 @@ class Body extends StatelessWidget {
         (
           child: SingleChildScrollView
           (
-            child: Stack
-            (  
-              children:
-              [
-                Container
-                (
-                  height: constraints.maxHeight * 0.47,
-                  decoration: BoxDecoration
-                  (
-                    image: DecorationImage
-                    (
-                      image: AssetImage('assets/JPEG/image.jpg'),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
+            child: Column(
 
-                  child: Align
-                  (
-                    alignment: Alignment.bottomCenter,
-
-                    child: Container
+              children: [
+                Stack
+                (  
+                  children:
+                  [
+                    Container
                     (
-                      height: constraints.maxHeight * 0.08,
-                      // constraints to prevent resizing buttons when keyboard is up
-                      constraints: BoxConstraints
+                      height: constraints.maxHeight * 0.495,
+                      decoration: BoxDecoration
                       (
-                        minHeight: 60,
-                        maxHeight: 60,
+                        image: DecorationImage
+                        (
+                          image: AssetImage('assets/JPEG/image.jpg'),
+                          fit: BoxFit.cover,
+                        ),
                       ),
-                      child: Row
-                      (
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children:
-                        [
-                          FlatButton
-                          (
-                            child: FittedBox
-                            (
-                              fit: BoxFit.contain,
-                              child: Text
-                              (
-                                "Sign In",
-                                style: TextStyle
-                                (
-                                  color: Colors.black,
-                                  fontSize: 20.0
-                                ),
-                              ),
-                            ),
-                            shape: RoundedRectangleBorder
-                            (
-                              borderRadius: BorderRadius.circular(0.0),
-                            ),
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) {
-                                    return LoginScreen();
-                                  },
-                                ),
-                              );
-                            },
-                            color: Colors.white,
-                            minWidth: size.width * 0.5,
-                          ),
 
-                          FlatButton
+                      child: Align
+                      (
+                        alignment: Alignment.bottomCenter,
+
+                        child: Container
+                        (
+                          height: constraints.maxHeight * 0.08,
+                          // constraints to prevent resizing buttons when keyboard is up
+                          constraints: BoxConstraints
+                          (
+                            minHeight: 60,
+                            maxHeight: 60,
+                          ),
+                          child: Row
+                          (
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children:
+                            [
+                              FlatButton
+                              (
+                                child: FittedBox
+                                (
+                                  fit: BoxFit.contain,
+                                  child: Text
+                                  (
+                                    "Sign In",
+                                    style: TextStyle
+                                    (
+                                      color: Colors.black,
+                                      fontSize: 20.0
+                                    ),
+                                  ),
+                                ),
+                                shape: RoundedRectangleBorder
+                                (
+                                  borderRadius: BorderRadius.circular(0.0),
+                                ),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) {
+                                        return LoginScreen();
+                                      },
+                                    ),
+                                  );
+                                },
+                                color: Colors.white,
+                                minWidth: size.width * 0.5,
+                              ),
+
+                              FlatButton
+                              (
+                                child: FittedBox
+                                (
+                                  fit: BoxFit.contain,
+                                  child: Text
+                                  (
+                                    "Sign Up",
+                                    style: TextStyle
+                                    (
+                                      color: Colors.white,
+                                      fontSize: 20.0
+                                    ),
+                                  ),
+                                ),
+                                onPressed: ()
+                                {
+                                  Navigator.push
+                                  (
+                                    context,
+                                    MaterialPageRoute
+                                    (
+                                      builder: (context)
+                                      {
+                                        return SignUpScreen();
+                                      },
+                                    ),
+                                  );
+                                },
+                                color: Colors.black54,
+                                minWidth: size.width * 0.5,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    
+                    Column
+                    (
+                      children:
+                      [
+                        Container
+                        (
+                          margin: EdgeInsets.only
+                          (
+                            top: constraints.maxHeight * 0.06,
+                            right: constraints.maxHeight * 0.03,
+                          ),
+                          alignment: Alignment.topRight,
+
+                          child: RaisedButton
                           (
                             child: FittedBox
                             (
                               fit: BoxFit.contain,
                               child: Text
                               (
-                                "Sign Up",
+                                "Skip",
                                 style: TextStyle
                                 (
                                   color: Colors.white,
@@ -121,7 +175,7 @@ class Body extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            onPressed: ()
+                            onPressed: () 
                             {
                               Navigator.push
                               (
@@ -130,168 +184,127 @@ class Body extends StatelessWidget {
                                 (
                                   builder: (context)
                                   {
-                                    return SignUpScreen();
+                                    return SecondMainScreen();
                                   },
                                 ),
                               );
                             },
-                            color: Colors.black54,
-                            minWidth: size.width * 0.5,
+                            color:Colors.black54,
+                            shape: RoundedRectangleBorder
+                            (
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
-                  ),
+                  ],
                 ),
-                
-                Column
-                (
-                  children:
-                  [
-                    Container
-                    (
-                      margin: EdgeInsets.only
-                      (
-                        top: constraints.maxHeight * 0.06,
-                        right: constraints.maxHeight * 0.03,
-                      ),
-                      alignment: Alignment.topRight,
 
-                      child: RaisedButton
+                Container
+                (
+                  margin: EdgeInsets.only
+                  (
+                    top: constraints.maxHeight * 0.025,
+                    left: constraints.maxHeight * 0.025,
+                    right: constraints.maxHeight * 0.025,
+                    bottom: constraints.maxHeight * 0.025,
+                  ),
+                  child: Column
+                  (
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children:
+                    [
+                      Container
+                      (
+                        alignment: Alignment.bottomLeft,
+                        child: FittedBox
+                        (
+                          fit: BoxFit.contain,
+                          child: Text
+                          (
+                            "Welcome,",
+                            style: TextStyle
+                            (
+                              color: Color.fromRGBO(245, 197, 41, 1),
+                              fontSize: 45.0,
+                              fontWeight: FontWeight.bold
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      Container
+                      (
+                        alignment: Alignment.bottomLeft,
+                        child: FittedBox
+                        (
+                          fit: BoxFit.contain,
+                          child: Text
+                          (
+                            "Sign in to continue",
+                            style: TextStyle
+                            (
+                              color: Colors.white,
+                              fontSize: 22.0
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      SizedBox
+                      (
+                        height: 10,
+                      ),
+
+                      RoundedInputField
+                      (
+                        hintText: "Email",
+                        onChanged: (value) {},
+                      ),
+
+                      RoundedPasswordField(
+                        onChanged: (value) {},
+                      ),
+
+                      RoundedButton
+                      (
+                        text: "Log In",
+                        color: Color.fromRGBO(245, 197, 41, 1),
+                        textColor: Colors.white,
+
+                        press: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return MainScreen();
+                              },
+                            ),
+                          );
+                        }
+                      ),
+
+                      MaterialButton
                       (
                         child: FittedBox
                         (
                           fit: BoxFit.contain,
                           child: Text
                           (
-                            "Skip",
+                            "Forgot Password?",
                             style: TextStyle
                             (
                               color: Colors.white,
-                              fontSize: 20.0
+                              fontSize: 22.0,
+                              decoration: TextDecoration.underline,
+                              fontWeight: FontWeight.bold
                             ),
                           ),
                         ),
-                        onPressed: () 
-                        {
-                          Navigator.push
-                          (
-                            context,
-                            MaterialPageRoute
-                            (
-                              builder: (context)
-                              {
-                                return SecondMainScreen();
-                              },
-                            ),
-                          );
-                        },
-                        color:Colors.black54,
-                        shape: RoundedRectangleBorder
-                        (
-                          borderRadius: BorderRadius.circular(10.0),
-                        ),
-                      ),
-                    ),
-
-                    SizedBox
-                    (
-                      height: constraints.maxHeight * 0.38
-                    ),
-
-                    Container
-                    (
-                      margin: EdgeInsets.only
-                      (
-                        left: constraints.maxHeight * 0.025
-                      ),
-                      alignment: Alignment.bottomLeft,
-                      child: FittedBox
-                      (
-                        fit: BoxFit.contain,
-                        child: Text
-                        (
-                          "Welcome,",
-                          style: TextStyle
-                          (
-                            color: Color.fromRGBO(245, 197, 41, 1),
-                            fontSize: 45.0,
-                            fontWeight: FontWeight.bold
-                          ),
-                        ),
-                      ),
-                    ),
-
-                    Container
-                    (
-                      margin: EdgeInsets.only
-                      (
-                        left: constraints.maxHeight * 0.025,
-                        bottom: constraints.maxHeight * 0.01,
-                      ),
-                      alignment: Alignment.bottomLeft,
-                      child: FittedBox
-                      (
-                        fit: BoxFit.contain,
-                        child: Text
-                        (
-                          "Sign in to continue",
-                          style: TextStyle
-                          (
-                            color: Colors.white,
-                            fontSize: 22.0
-                          ),
-                        ),
-                      ),
-                    ),
-
-                    RoundedInputField
-                    (
-                      hintText: "Email",
-                      onChanged: (value) {},
-                    ),
-
-                    RoundedPasswordField(
-                      onChanged: (value) {},
-                    ),
-
-                    RoundedButton
-                    (
-                      text: "Log In",
-                      color: Color.fromRGBO(245, 197, 41, 1),
-                      textColor: Colors.white,
-
-                      press: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) {
-                              return MainScreen();
-                            },
-                          ),
-                        );
-                      }
-                    ),
-
-                    MaterialButton
-                    (
-                      child: FittedBox
-                      (
-                        fit: BoxFit.contain,
-                        child: Text
-                        (
-                          "Forgot Password?",
-                          style: TextStyle
-                          (
-                            color: Colors.white,
-                            fontSize: 22.0,
-                            decoration: TextDecoration.underline,
-                            fontWeight: FontWeight.bold
-                          ),
-                        ),
-                      ),
-                    )
-                  ],
+                      )
+                    ],
+                  ),
                 ),
               ],
             ),
