@@ -5,7 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'NGO task tab bar.dart';
-import 'package:NouPartazer_App/Atish/StoryModel.dart';
+import 'package:NouPartazer_App/Atish/Pages/Story/StoryModel.dart';
 
 class MainScreen extends StatefulWidget
 {

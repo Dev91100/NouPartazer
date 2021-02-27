@@ -179,7 +179,7 @@ class NGOProfile extends StatelessWidget
       //                   height: 10.0,
       //                 ),
 
-      //                 FoodCategoryStories(),
+                      // FoodCategoryStories(),
 
       //                 SizedBox
       //                 (

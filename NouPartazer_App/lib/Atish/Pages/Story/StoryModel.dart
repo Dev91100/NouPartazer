@@ -54,6 +54,7 @@ class StoryModel extends StatelessWidget {
         (
           children:
           [
+            // Background Image
             Container
             (
               height: constraints.maxHeight,
@@ -74,6 +75,7 @@ class StoryModel extends StatelessWidget {
               
               children:
               [
+                // STORIES TITLE ON TOP
                 Container(
                   margin: EdgeInsets.only
                   (
@@ -96,6 +98,7 @@ class StoryModel extends StatelessWidget {
                   ),
                 ),
 
+                // STORIES SLIDER
                 CarouselSlider
                 (
                   options: CarouselOptions
@@ -110,12 +113,17 @@ class StoryModel extends StatelessWidget {
                   {
                     return Card
                     (
+                      shape: RoundedRectangleBorder
+                      (
+                        borderRadius: BorderRadius.all(Radius.circular(20))
+                      ),
                       margin: EdgeInsets.only
                       (
                         left: constraints.maxHeight * 0.01,
                         right: constraints.maxHeight * 0.01,
                         bottom: constraints.maxHeight * 0.12
                       ),
+                      // STORY BACKGROUND
                       child: Container
                       (
                         // height: 700,
@@ -126,8 +134,11 @@ class StoryModel extends StatelessWidget {
                             image: AssetImage(st.image),
                             fit: BoxFit.cover,
                           ),
+                          borderRadius: BorderRadius.all(Radius.circular(20))
                         ),
-                        child: Container(
+                        // Black gradient behind text at the bottom of the story
+                        child: Container
+                        (
                           decoration: BoxDecoration
                           (
                             gradient: LinearGradient
@@ -141,8 +152,10 @@ class StoryModel extends StatelessWidget {
                               end: FractionalOffset(1.0, 0.0),
                               stops: [0.0,0.5],
                               tileMode: TileMode.clamp,
-                            )
+                            ),
+                            borderRadius: BorderRadius.all(Radius.circular(20))
                           ),
+                          // Location Name
                           child: Padding(
                             padding: const EdgeInsets.fromLTRB(15,0,15,15),
                             child: Column
@@ -169,11 +182,13 @@ class StoryModel extends StatelessWidget {
                                   ),
                                 ),
                                 
+                                // Separation Between Text
                                 SizedBox
                                 (
                                   height: constraints.maxHeight * 0.005,
                                 ),
 
+                                // Location Address
                                 SingleChildScrollView(
                                   scrollDirection: Axis.horizontal,
                                   child: FittedBox
@@ -192,11 +207,13 @@ class StoryModel extends StatelessWidget {
                                   ),
                                 ),
                                 
+                                // Separation Between Text
                                 SizedBox
                                 (
                                   height: constraints.maxHeight * 0.01,
                                 ),
 
+                                // Date & Time
                                 FittedBox(
                                   fit: BoxFit.contain,
                                   child: Row
@@ -218,6 +235,7 @@ class StoryModel extends StatelessWidget {
                                   ),
                                 ),
 
+                                // Tags
                                 SingleChildScrollView
                                 (
                                   scrollDirection: Axis.horizontal,

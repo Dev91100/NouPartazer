@@ -1,5 +1,5 @@
 //import 'package:NouPartazer_App/Koomalai/src/NGO%20Donation/NGO%20donation.dart';
-import 'package:NouPartazer_App/Atish/StoryModel.dart';
+import 'package:NouPartazer_App/Atish/Pages/Story/StoryModel.dart';
 import 'package:NouPartazer_App/Koomalai/src/NGO%20donation/NGO%20donation.dart';
 import 'package:NouPartazer_App/Koomalai/src/NGO%20profile/NGOProfile.dart';
 import 'package:NouPartazer_App/Koomalai/src/pages/homePage.dart';
