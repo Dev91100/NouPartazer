@@ -5,43 +5,11 @@ import 'package:google_fonts/google_fonts.dart';
 import './Story.dart';
 import './InfoTab.dart';
 import './TagsTab.dart';
+import './StoryList.dart';
 
 
 class StoryModel extends StatelessWidget {
-  final List<Story> stories =
-  [
-    Story
-    (
-      image: './assets/JPEG/batelage.jpeg',
-      locationName: 'Four Seasons ResortFour Seasons Resort',
-      locationAddress: 'La Place BelgathLa Place BelgathLa Place Belgath',
-      date: '19/03/21',
-      time: '19:00-00:30',
-      tag: 'PARTY',
-      foodType: 'PERISHABLE FOOD'
-    ),
-    Story
-    (
-      image: './assets/JPEG/cofee.jpeg',
-      locationName: 'Winners Supermarket',
-      locationAddress: 'La Place BelgathLa Place Belgath',
-      date: '19/03/21',
-      time: '19:00-00:30',
-      tag: 'PARTY',
-      foodType: 'PERISHABLE FOOD'
-    ),
-    
-    Story
-    (
-      image: './assets/JPEG/burger.jpeg',
-      locationName: 'Winners Supermarket',
-      locationAddress: 'La Place Belgath',
-      date: '19/03/21',
-      time: '19:00-00:30',
-      tag: 'PARTY',
-      foodType: 'NON-PERISHABLE FOOD'
-    ),
-  ];
+  final List<Story> stories = storyList;
 
   @override
   Widget build(BuildContext context)
@@ -107,6 +75,7 @@ class StoryModel extends StatelessWidget {
                     initialPage: 0,
                     viewportFraction: 0.92,
                     enableInfiniteScroll: false,
+                    enlargeCenterPage: false,
                   ),
 
                   items: stories.map((st)

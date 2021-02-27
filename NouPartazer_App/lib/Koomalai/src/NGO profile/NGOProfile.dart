@@ -7,6 +7,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import 'package:NouPartazer_App/Atish/Pages/NGOProfile/EditIconButton.dart';
 import 'package:NouPartazer_App/Atish/Pages/NGOProfile/EditPhotoButton.dart';
+import 'package:NouPartazer_App/Atish/Pages/Story/StoryModelProfile.dart';
 
 class NGOProfile extends StatelessWidget
 {
@@ -45,6 +46,16 @@ class NGOProfile extends StatelessWidget
                           image: AssetImage('assets/JPEG/ManzerPartazerGroup.jpg'),
                           fit: BoxFit.cover,
                         ),
+                        boxShadow:
+                        [
+                          BoxShadow
+                          (
+                            color: Colors.black.withOpacity(0.2),
+                            spreadRadius: 4,
+                            blurRadius: 4,
+                            offset: Offset(0, 2), // changes position of shadow
+                          ),
+                        ],
                       ),
 
                       child: Align
@@ -79,9 +90,10 @@ class NGOProfile extends StatelessWidget
                           [
                             BoxShadow
                             (
-                              blurRadius: 10.0,
-                              color: Colors.black45,
-                              offset: Offset(3.0, 4.0),
+                              color: Colors.black.withOpacity(0.2),
+                              spreadRadius: 4,
+                              blurRadius: 4,
+                              offset: Offset(0, 2), // changes position of shadow
                             ),
                           ],
                         ),
@@ -139,47 +151,11 @@ class NGOProfile extends StatelessWidget
                   ),
                 ),
 
-
+                StoryModelProfile(),
 
               ],
             ),
                 
-
-              
-
-      //                 SizedBox
-      //                 (
-      //                   height: 18.0,
-      //                 ),
-
-      //                 Row
-      //                 (
-      //                   mainAxisAlignment: MainAxisAlignment.start,
-      //                   children:
-      //                   [
-      //                     SizedBox
-      //                     (
-      //                       width: 25.0,
-      //                     ),
-
-      //                     Text
-      //                     (
-      //                       "MY STORIES",
-      //                       style: TextStyle
-      //                       (
-      //                         fontSize: 22.0,
-      //                         fontWeight: FontWeight.bold,
-      //                       ),
-      //                     ),
-      //                   ],
-      //                 ),
-
-      //                 SizedBox
-      //                 (
-      //                   height: 10.0,
-      //                 ),
-
-                      // FoodCategoryStories(),
 
       //                 SizedBox
       //                 (

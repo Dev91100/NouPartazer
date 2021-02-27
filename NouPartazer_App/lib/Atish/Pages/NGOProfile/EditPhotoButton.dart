@@ -28,9 +28,9 @@ class EditPhotoButton extends StatelessWidget {
               [
                 BoxShadow
                 (
-                  color: Colors.black.withOpacity(0.2),
-                  spreadRadius: 2,
-                  blurRadius: 2,
+                  color: Colors.black.withOpacity(0.15),
+                  spreadRadius: 3,
+                  blurRadius: 3,
                   offset: Offset(0, 2), // changes position of shadow
                 ),
               ],
