@@ -5,8 +5,8 @@ import 'package:NouPartazer_App/Koomalai/src/widget/foodCategoryStories.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:NouPartazer_App/EditIconButton.dart';
-import 'package:NouPartazer_App/EditPhotoButton.dart';
+import 'package:NouPartazer_App/Atish/Pages/NGOProfile/EditIconButton.dart';
+import 'package:NouPartazer_App/Atish/Pages/NGOProfile/EditPhotoButton.dart';
 
 class NGOProfile extends StatelessWidget
 {
@@ -138,6 +138,9 @@ class NGOProfile extends StatelessWidget
                     ),
                   ),
                 ),
+
+
+
               ],
             ),
                 

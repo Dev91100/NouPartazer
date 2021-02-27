@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:async';
 
-import 'Koomalai/Screens/Login/login_screen.dart';
+import '../../../Koomalai/Screens/Login/login_screen.dart';
 
 class SpashScreen extends StatefulWidget {
   SpashScreen({Key key, this.title}) : super(key: key);

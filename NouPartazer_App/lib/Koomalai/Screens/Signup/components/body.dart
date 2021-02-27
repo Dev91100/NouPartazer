@@ -6,7 +6,7 @@ import 'package:NouPartazer_App/Koomalai/src/screens/secondMainScreen.dart';
 import 'package:flutter/material.dart';
 
 import '../signup_screen.dart';
-/*import 'NGO/Business.dart';*/
+import 'package:NouPartazer_App/Atish/Pages/SignUp/OrgButtons.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -262,54 +262,11 @@ class Body extends StatelessWidget {
                               minHeight: 110
                             ),
 
-                            child: FlatButton
+                            child: OrgButtons
                             (
-                              shape: RoundedRectangleBorder
-                              (
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                              child: FittedBox
-                              (
-                                fit: BoxFit.contain,
-                                child: Column
-                                (
-                                  children: 
-                                  [
-                                    Icon
-                                    (
-                                      Icons.favorite,
-                                      color: Color.fromRGBO(0, 50, 193, 1),
-                                      size: 55
-                                    ),
-                                    Text
-                                    (
-                                      "NGO",
-                                      style: TextStyle
-                                      (
-                                        color: Color.fromRGBO(0, 50, 193, 1),
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 30
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              onPressed: ()
-                              {
-                                Navigator.push
-                                (
-                                  context,
-                                  MaterialPageRoute
-                                  (
-                                    builder: (context)
-                                    {
-                                      return NGO();
-                                    },
-                                  ),
-                                );
-                              },
-                              color: Colors.white,
-                              minWidth: size.width * 0.5,
+                              icon: Icons.favorite,
+                              title: 'NGO',
+                              openPage: NGO(),
                             ),
                           ),
 
@@ -328,55 +285,12 @@ class Body extends StatelessWidget {
                               minWidth: 300,
                               minHeight: 110
                             ),
-                            child: FlatButton
+                            child: OrgButtons
                             (
-                              shape: RoundedRectangleBorder
-                              (
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                              child: FittedBox
-                              (
-                                fit: BoxFit.contain,
-                                child: Column
-                                (
-                                  children:
-                                  [
-                                    Icon
-                                    (
-                                      Icons.business,
-                                      color: Color.fromRGBO(0, 50, 193, 1),
-                                      size: 55
-                                    ),
-                                    Text
-                                    (
-                                      "BUSINESS",
-                                      style: TextStyle
-                                      (
-                                        color: Color.fromRGBO(0, 50, 193, 1),
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 30
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              onPressed: ()
-                              {
-                                Navigator.push
-                                (
-                                  context,
-                                  MaterialPageRoute
-                                  (
-                                    builder: (context)
-                                    {
-                                      return Business();
-                                    },
-                                  ),
-                                );
-                              },
-                              color: Colors.white,
-                              minWidth: size.width * 0.5,
-                            ),
+                              icon: Icons.business,
+                              title: 'BUSINESS',
+                              openPage: Business(),
+                            ),                             
                           ),
 
                           SizedBox
