@@ -12,7 +12,13 @@ class EditPhotoButton extends StatelessWidget {
         {
           return Container
           (
-            margin: EdgeInsets.all(constraints.maxHeight * 0.05),
+            margin: EdgeInsets.fromLTRB
+            (
+              constraints.maxHeight * 0.05,
+              constraints.maxHeight * 0.05,
+              constraints.maxHeight * 0.07,
+              constraints.maxHeight * 0.05,
+            ),
             height: 40,
             width: 40,
             constraints: BoxConstraints

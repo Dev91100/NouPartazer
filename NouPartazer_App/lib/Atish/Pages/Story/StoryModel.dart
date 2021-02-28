@@ -30,7 +30,7 @@ class StoryModel extends StatelessWidget {
               (
                 image: DecorationImage
                 (
-                  image: AssetImage('assets/JPEG/Blur.jpg'),
+                  image: AssetImage('assets/JPEG/StoryBG_Blur.jpg'),
                   fit: BoxFit.fill,
                 )
               )
@@ -82,6 +82,8 @@ class StoryModel extends StatelessWidget {
                   {
                     return Card
                     (
+                      elevation: 0,
+                      color: Colors.transparent,
                       shape: RoundedRectangleBorder
                       (
                         borderRadius: BorderRadius.all(Radius.circular(20))
@@ -209,7 +211,11 @@ class StoryModel extends StatelessWidget {
                                 (
                                   scrollDirection: Axis.horizontal,
                                   child: Container(
-                                    width: constraints.maxHeight * 0.7,
+                                    // width: constraints.maxHeight * 0.7,
+                                    constraints: BoxConstraints
+                                    (
+                                      minWidth: 500,
+                                    ),
                                     child: FittedBox
                                     (
                                       fit: BoxFit.contain,

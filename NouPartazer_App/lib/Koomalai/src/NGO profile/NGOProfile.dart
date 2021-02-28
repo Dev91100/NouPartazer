@@ -1,13 +1,15 @@
 
 import 'package:NouPartazer_App/Koomalai/src/Settings/Setting.dart';
 import 'package:NouPartazer_App/Koomalai/src/widget/bottomSheetWidget.dart';
-import 'package:NouPartazer_App/Koomalai/src/widget/foodCategoryStories.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'package:NouPartazer_App/Atish/Pages/NGOProfile/EditIconButton.dart';
 import 'package:NouPartazer_App/Atish/Pages/NGOProfile/EditPhotoButton.dart';
 import 'package:NouPartazer_App/Atish/Pages/Story/StoryModelProfile.dart';
+import 'package:NouPartazer_App/Atish/Pages/NGOProfile/SectionTitle.dart';
+import 'package:NouPartazer_App/Atish/components/CustomDivider.dart';
+import 'package:NouPartazer_App/Atish/components/LongText.dart';
 
 class NGOProfile extends StatelessWidget
 {
@@ -28,7 +30,6 @@ class NGOProfile extends StatelessWidget
           (
             child: Column
             (
-
               children:
               [
                 Stack
@@ -120,124 +121,92 @@ class NGOProfile extends StatelessWidget
                         openPage: Settings(),
                         isModalPage: false,
                         icon: Icons.settings_outlined,
-                        height: 55,
-                        width: 55,
+                        height: 50,
+                        width: 50,
                         left: 10,
                         top: 10,
-                        right: 15,
+                        right: 20,
                         bottom: 10,
-                        size: 40,
+                        size: 35,
                       ),
                     ),
                   ],
                 ),
 
-                Align
+                Column
                 (
-                  alignment: Alignment.centerLeft,
-                  child: Container
-                  (
-                    margin: EdgeInsets.only(left: 15),
-                    child: 
-                    Text
+                  children:
+                  [
+                    SectionTitle
                     (
-                      'MY STORIES',
-                      style: TextStyle
-                      (
-                        fontWeight: FontWeight.w900,
-                        fontSize: 23
-                      ),
+                      title: 'MY STORIES',
                     ),
-                  ),
-                ),
 
-                StoryModelProfile(),
+                    StoryModelProfile(),
+                  ],
+                ),
+                
+                CustomDivider(),
+
+                Column
+                (
+                  children:
+                  [
+                    Row
+                    (
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children:
+                      [
+                        Expanded(
+                          child: SectionTitle
+                          (
+                            title: 'Manzer Partazer Manzer Partazer Manzer Partazer Manzer Partazer',
+                            top: 15,
+                            fontSize: 25,
+                            R: 0, G: 50, B: 193, O: 1,
+                          ),
+                        ),
+                        
+                        EditIconButton
+                        (
+                          openPage: Settings(),
+                          isModalPage: false,
+                          icon: Icons.create_outlined,
+                          height: 40,
+                          width: 40,
+                          left: 10,
+                          top: 15,
+                          right: 20,
+                          bottom: 10,
+                          size: 26,
+                        ),
+                      ],
+                    ),
+
+                    SectionTitle
+                    (
+                      title: 'Food Sharing Project of Mauritius Mauritius Mauritius',
+                      fontSize: 22, 
+                      top: 15,
+                      R: 51, G: 51, B: 51, O: 1,
+                    ),
+
+                    LongText
+                    (
+                      title: "MANZER PARTAZER is the the first food sharing project of Mauritius. Our aim is to reduce the wastage of high quality ready to eat food by simply sharing it!"
+                            "We ‘save’ food which would otherwise go to waste, such as buffet leftovers in hotels or restaurants, donating it to people in need through a very simple and no-cost food sharing system.",
+                      fontSize: 18,
+                      
+                    ),
+
+                    
+                  ],
+                ),
 
               ],
             ),
-                
 
-      //                 SizedBox
-      //                 (
-      //                   height: 0.0,
-      //                 ),
-
-      //                 Row
-      //                 (
-      //                   mainAxisAlignment: MainAxisAlignment.start,
-      //                   children:
-      //                   [
-      //                     SizedBox
-      //                     (
-      //                       width: 25.0,
-      //                     ),
-
-      //                     Text
-      //                     (
-      //                       "Manzer Partazer ",
-
-      //                       style: TextStyle
-      //                       (
-      //                         fontSize: 25.0,
-      //                         fontWeight: FontWeight.bold,
-      //                         color: Color.fromRGBO(41, 90, 245, 1),
-      //                       ),
-      //                     ),
-
-      //                     SizedBox
-      //                     (
-      //                       width: 100.0,
-      //                     ),
-
-      //                     InkWell
-      //                     (
-      //                       child: Icon
-      //                       (
-      //                         Icons.create_outlined,
-      //                         size: 25.0,
-      //                         color: Colors.black,
-      //                       ),
-      //                       onTap: () {},
-      //                     ),
-      //                   ],
-      //                 ),
-
-      //                 SizedBox
-      //                 (
-      //                   height: 10.0,
-      //                 ),
-
-      //                 Row
-      //                 (
-      //                   mainAxisAlignment: MainAxisAlignment.start,
-      //                   children:
-      //                   [
-      //                     SizedBox
-      //                     (
-      //                       width: 25.0,
-      //                     ),
-      //                     Text
-      //                     (
-      //                       "Food sharing project of Mauritius",
-      //                       style: TextStyle
-      //                       (
-      //                         fontSize: 20.0,
-      //                         fontWeight: FontWeight.bold,
-      //                         color: Colors.black54,
-      //                       ),
-      //                     ),
-      //                   ],
-      //                 ),
-
-      //                 SizedBox
-      //                 (
-      //                   height: 10.0,
-      //                 ),
-
-      //                 SizedBox
-      //                 (
-      //                   width: 10.0,
-      //                 ),
       //                 Container
       //                 (
       //                   margin: EdgeInsets.only(left:25.0,right:30.0),

@@ -18,7 +18,7 @@ class StoryModelProfile extends StatelessWidget {
         return ListView
         (
           shrinkWrap: true,
-          padding: const EdgeInsets.only(top: 10),
+          padding: const EdgeInsets.only(top: 10, bottom: 15),
           // Prevents vertical scrolling
           physics: NeverScrollableScrollPhysics(),
           
