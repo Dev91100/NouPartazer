@@ -39,7 +39,7 @@ class LongText extends StatelessWidget {
             (
               top: top,
               left: 20,
-              right: 20
+              right: 20,
             ),
             child: 
             Text

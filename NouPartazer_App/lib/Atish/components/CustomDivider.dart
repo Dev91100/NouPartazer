@@ -5,9 +5,9 @@ class CustomDivider extends StatelessWidget {
   Widget build(BuildContext context) {
     return Divider
     (
-      color: Colors.black,
-      height: 20,
-      thickness: 1.2,
+      color: Color.fromRGBO(102, 102, 102, 1),
+      height: 60,
+      thickness: 1,
       indent: 20,
       endIndent: 20,
     );

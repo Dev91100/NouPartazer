@@ -29,24 +29,28 @@ class SectionTitle extends StatelessWidget {
       child: Align
       (
         alignment: Alignment.centerLeft,
-        child: Container
+        child: SingleChildScrollView
         (
-          margin: EdgeInsets.only
+          scrollDirection: Axis.horizontal,
+          child: Container
           (
-            top: top,
-            left: 20,
-            right: 20
-          ),
-          child: 
-          Text
-          (
-            title,
-            overflow: TextOverflow.ellipsis,
-            style: TextStyle
+            margin: EdgeInsets.only
             (
-              color: Color.fromRGBO(R, G, B, O),
-              fontWeight: FontWeight.w900,
-              fontSize: fontSize,
+              top: top,
+              left: 20,
+              right: 20
+            ),
+            child: 
+            Text
+            (
+              title,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle
+              (
+                color: Color.fromRGBO(R, G, B, O),
+                fontWeight: FontWeight.w900,
+                fontSize: fontSize,
+              ),
             ),
           ),
         ),

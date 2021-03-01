@@ -8,7 +8,8 @@ import './TagsTab.dart';
 import './StoryList.dart';
 
 
-class StoryModel extends StatelessWidget {
+class StoryModel extends StatelessWidget 
+{
   final List<Story> stories = storyList;
 
   @override
@@ -210,16 +211,12 @@ class StoryModel extends StatelessWidget {
                                 SingleChildScrollView
                                 (
                                   scrollDirection: Axis.horizontal,
-                                  child: Container(
-                                    // width: constraints.maxHeight * 0.7,
-                                    constraints: BoxConstraints
+                                  child: Expanded
+                                  (
+                                    child: Container
                                     (
-                                      minWidth: 500,
-                                    ),
-                                    child: FittedBox
-                                    (
-                                      fit: BoxFit.contain,
-                                      child: Row(
+                                      child: Row
+                                      (
                                           children: [
                                           TagsTab(data: st.tag),
                                           TagsTab(data: st.foodType),

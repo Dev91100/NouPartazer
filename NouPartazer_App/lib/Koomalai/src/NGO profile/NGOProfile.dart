@@ -4,12 +4,15 @@ import 'package:NouPartazer_App/Koomalai/src/widget/bottomSheetWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:NouPartazer_App/Atish/Pages/NGOProfile/EditIconButton.dart';
-import 'package:NouPartazer_App/Atish/Pages/NGOProfile/EditPhotoButton.dart';
+import 'package:NouPartazer_App/Atish/components/EditIconButton.dart';
+import 'package:NouPartazer_App/Atish/components/EditPhotoButton.dart';
 import 'package:NouPartazer_App/Atish/Pages/Story/StoryModelProfile.dart';
-import 'package:NouPartazer_App/Atish/Pages/NGOProfile/SectionTitle.dart';
+import 'package:NouPartazer_App/Atish/components/SectionTitle.dart';
 import 'package:NouPartazer_App/Atish/components/CustomDivider.dart';
 import 'package:NouPartazer_App/Atish/components/LongText.dart';
+import 'package:NouPartazer_App/Atish/components/SectionWithEditButton.dart';
+import 'package:NouPartazer_App/Atish/components/ContactInfo.dart';
+import 'package:NouPartazer_App/Atish/Pages/NGOProfile/MemberModel.dart';
 
 class NGOProfile extends StatelessWidget
 {
@@ -126,7 +129,7 @@ class NGOProfile extends StatelessWidget
                         left: 10,
                         top: 10,
                         right: 20,
-                        bottom: 10,
+                        bottom: 0,
                         size: 35,
                       ),
                     ),
@@ -152,260 +155,99 @@ class NGOProfile extends StatelessWidget
                 (
                   children:
                   [
-                    Row
+                    SectionWithEditButton
                     (
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children:
-                      [
-                        Expanded(
-                          child: SectionTitle
-                          (
-                            title: 'Manzer Partazer Manzer Partazer Manzer Partazer Manzer Partazer',
-                            top: 15,
-                            fontSize: 25,
-                            R: 0, G: 50, B: 193, O: 1,
-                          ),
-                        ),
-                        
-                        EditIconButton
-                        (
-                          openPage: Settings(),
-                          isModalPage: false,
-                          icon: Icons.create_outlined,
-                          height: 40,
-                          width: 40,
-                          left: 10,
-                          top: 15,
-                          right: 20,
-                          bottom: 10,
-                          size: 26,
-                        ),
-                      ],
+                      title: 'Manzer Partazer Test Test Test Test',
+                      fontSize: 25,
+                      R: 0, G: 50, B: 193, O: 1,
+                      openPage: Settings(),
                     ),
-
-                    SectionTitle
-                    (
-                      title: 'Food Sharing Project of Mauritius Mauritius Mauritius',
-                      fontSize: 22, 
-                      top: 15,
-                      R: 51, G: 51, B: 51, O: 1,
-                    ),
-
-                    LongText
-                    (
-                      title: "MANZER PARTAZER is the the first food sharing project of Mauritius. Our aim is to reduce the wastage of high quality ready to eat food by simply sharing it!"
-                            "We ‘save’ food which would otherwise go to waste, such as buffet leftovers in hotels or restaurants, donating it to people in need through a very simple and no-cost food sharing system.",
-                      fontSize: 18,
-                      
-                    ),
-
                     
+                    Align
+                    (
+                      alignment: Alignment.centerLeft,
+                      child: Container
+                      (
+                        width: screen.width * 0.9,
+                        child: SectionTitle
+                        (
+                          title: 'Food Sharing Project of Mauritius Mauritius Mauritius',
+                          fontSize: 22, 
+                          top: 15,
+                          R: 51, G: 51, B: 51, O: 1,
+                        ),
+                      ),
+                    ),
+
+                    Container
+                    (
+                      height: constraints.maxHeight * 0.3,
+                      child: LongText
+                      (
+                        title: "MANZER PARTAZER is the the first food sharing project of Mauritius. Our aim is to reduce the wastage of high quality ready to eat food by simply sharing it!"
+                              "We ‘save’ food which would otherwise go to waste, such as buffet leftovers in hotels or restaurants, donating it to people in need through a very simple and no-cost food sharing system.or restaurants, donating it to people in need through a very simple and no-cost food sharing system.or restaurants, donating it to people in need through a very simple and no-cost food sharing system.or restaurants, donating it to people in need through a very simple and no-cost food sharing system.",
+                        fontSize: 18,
+                        top: screen.height * 0.015,
+                      ),
+                    ),
                   ],
                 ),
 
+                CustomDivider(),
+
+                Column
+                (
+                  children:
+                  [
+                    SectionWithEditButton
+                    (
+                      title: 'CONTACT INFO',
+                      fontSize: 23,
+                      openPage: Settings(),
+                    ),
+
+                    ContactInfo
+                    (
+                      title: 'manzerpartazer.org',
+                      icon: Icons.language_outlined,
+                    ),
+                    
+                    ContactInfo
+                    (
+                      title: 'info@manzerpartazer.org',
+                      top: 10,
+                      icon: Icons.email_outlined,
+                    ),
+
+                    ContactInfo
+                    (
+                      title: '+230 5820 7691',
+                      top: 10,
+                      icon: Icons.call_outlined,
+                    )
+                  ],
+                ),
+
+                CustomDivider(),
+
+                Column
+                (
+                  children: 
+                  [
+                    SectionWithEditButton
+                    (
+                      title: 'MEMBERS',
+                      fontSize: 23,
+                      icon: Icons.add,
+                      openPage: Settings(),
+                    ),
+                  ]
+                ),
+
+                MemberModel(),
+
               ],
             ),
-
-      //                 Container
-      //                 (
-      //                   margin: EdgeInsets.only(left:25.0,right:30.0),
-
-      //                   child: Text
-      //                   (
-      //                     "MANZER PARTAZER is the the first food sharing project of Mauritius. Our aim is to reduce the wastage of high quality ready to eat food by simply sharing it!"
-      //                         "We ‘save’ food which would otherwise go to waste, such as buffet leftovers in hotels or restaurants, donating it to people in need through a very simple and no-cost food sharing system.",
-      //                     style: TextStyle(
-      //                       fontSize: 16.0,
-
-      //                       color: Colors.black54,
-      //                     ),
-      //                     textAlign: TextAlign.justify,
-      //                   ),
-
-      //                 ),
-      //                 //added end
-      //                 SizedBox
-      //                 (
-      //                   width: 25.0,
-      //                   height:40.0,
-      //                 ),
-
-      //                 Row
-      //                 (
-      //                   mainAxisAlignment: MainAxisAlignment.start,
-      //                   children:
-      //                   [
-      //                     SizedBox
-      //                     (
-      //                       width: 25.0,
-      //                     ),
-
-      //                     Text
-      //                     (
-      //                       "CONTACT INFO ",
-
-      //                       style: TextStyle
-      //                       (
-      //                         fontSize: 20.0,
-      //                         fontWeight: FontWeight.bold,
-      //                         color: Colors.black,
-      //                       ),
-      //                     ),
-
-      //                     SizedBox
-      //                     (
-      //                       width: 150.0,
-      //                     ),
-
-      //                     InkWell
-      //                     (
-      //                       child: Icon
-      //                       (
-      //                         Icons.create_outlined,
-      //                         size: 25.0,
-      //                         color: Colors.black,
-      //                       ),
-      //                       onTap: () {},
-      //                     ),
-      //                   ],
-      //                 ),
-
-      //                 SizedBox
-      //                 (
-      //                   width: 25.0,
-      //                   height:20,
-      //                 ),
-
-      //                 Row
-      //                 (
-      //                     mainAxisAlignment: MainAxisAlignment.start,
-      //                     children:
-      //                     [
-      //                       SizedBox
-      //                       (
-      //                         width: 25.0,
-      //                       ),
-
-      //                       Icon
-      //                       (
-      //                         Icons.language_outlined
-      //                       ),
-
-      //                       SizedBox
-      //                       (
-      //                         width: 10.0,
-      //                       ),
-
-      //                       InkWell
-      //                       (
-      //                         child: Text
-      //                         (
-      //                           "manzerpartazer.org",
-
-      //                           style: TextStyle
-      //                           (
-      //                             fontSize: 16.0,
-      //                             color: Color.fromRGBO(41, 90, 245, 1),
-                                  
-      //                             decoration: TextDecoration.underline,
-      //                           ),
-
-      //                         ),
-      //                         onTap: () {openurl();},
-      //                       ),
-      //                     ]
-      //                 ),
-
-      //                 SizedBox
-      //                 (
-      //                   width: 25.0,
-      //                   height:20,
-      //                 ),
-
-      //                 Row
-      //                 (
-      //                     mainAxisAlignment: MainAxisAlignment.start,
-      //                     children:
-      //                     [
-
-      //                       SizedBox
-      //                       (
-      //                         width: 25.0,
-      //                       ),
-
-      //                       Icon
-      //                       (
-      //                         Icons.mail_outline,
-      //                       ),
-
-      //                       SizedBox
-      //                       (
-      //                         width: 10.0,
-      //                       ),
-
-
-      //                       InkWell
-      //                       (
-      //                         child: Text
-      //                         (
-      //                           "info@manzerpartazer.org",
-      //                           style: TextStyle
-      //                           (
-      //                             fontSize: 16.0,
-      //                             color: Color.fromRGBO(41, 90, 245, 1),         
-      //                             decoration: TextDecoration.underline,
-      //                           ),
-      //                         ),
-      //                         onTap: () {},
-      //                       ),
-      //                     ]
-      //                 ),
-
-      //                 SizedBox
-      //                 (
-      //                   width: 25.0,
-      //                   height:20,
-      //                 ),
-      //                 Row
-      //                 (
-      //                     mainAxisAlignment: MainAxisAlignment.start,
-      //                     children:
-      //                     [
-      //                       SizedBox
-      //                       (
-      //                         width: 25.0,
-      //                       ),
-
-      //                       Icon
-      //                       (
-      //                         Icons.phone,
-      //                       ),
-
-      //                       SizedBox
-      //                       (
-      //                         width: 10.0,
-      //                       ),
-
-
-      //                       InkWell
-      //                       (
-      //                         child: Text(
-      //                           "+230 5820 7691",
-      //                           style: TextStyle(
-      //                             fontSize: 16.0,
-      //                             color: Color.fromRGBO(41, 90, 245, 1),
-      //                             decoration: TextDecoration.underline,
-      //                           ),
-      //                         ),
-      //                       ),
-      //                     ]
-      //                 ),
-
-      //                 SizedBox
-      //                 (
-      //                   height: 30.0,
-      //                 ),
 
       //                 Row
       //                 (
