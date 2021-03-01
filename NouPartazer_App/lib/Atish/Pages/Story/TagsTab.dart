@@ -12,8 +12,8 @@ class TagsTab extends StatelessWidget
   {
     return Container
     (
-      margin: EdgeInsets.fromLTRB(0,5,10,5),
-      padding: EdgeInsets.fromLTRB(5,5,5,5),
+      margin: EdgeInsets.fromLTRB(0, 5, 10, 5),
+      padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
       decoration: BoxDecoration
       (
         color: new Color.fromRGBO(255, 248, 97, 0.2),
@@ -29,7 +29,7 @@ class TagsTab extends StatelessWidget
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            margin: EdgeInsets.fromLTRB(5,5,5,5),
+            margin: EdgeInsets.fromLTRB(5, 5, 5, 5),
             child: Text
             (
               data,

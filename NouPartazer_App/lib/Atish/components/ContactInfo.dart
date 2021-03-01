@@ -24,7 +24,7 @@ class ContactInfo extends StatelessWidget
       this.G = 50,
       this.B = 193,
       this.O = 1,
-      this.top = 0,
+      this.top = 20,
       this.icon,
     }
   );
@@ -39,45 +39,39 @@ class ContactInfo extends StatelessWidget
         left: 20,
         right: 20
       ),
-      child: Column
+      child: Row
       (
+        crossAxisAlignment: CrossAxisAlignment.center,
         children:
         [
-          Row
+          Container
           (
-            children:
-            [
-              Container
-              (
-                margin: EdgeInsets.only
-                (
-                  top: top,
-                  right: 10
-                ),
-                child: Icon
-                (
-                  icon,
-                  size: 30,
-                  color: Color.fromRGBO(102, 102, 102, 1)
-                ),
-              ),
-
-              Container
-              (
-                child: Text
-                (
-                  title,
-                  style: TextStyle
-                  (
-                    fontSize: fontSize,
-                    color: Color.fromRGBO(R, G, B, O),
-                    decoration: TextDecoration.underline,
-                  ),
-                ),
-              ),
-            ]
+            margin: EdgeInsets.only
+            (
+              right: 10
+            ),
+            child: Icon
+            (
+              icon,
+              size: 30,
+              color: Color.fromRGBO(102, 102, 102, 1)
+            ),
           ),
-        ],
+
+          Container
+          (
+            child: Text
+            (
+              title,
+              style: TextStyle
+              (
+                fontSize: fontSize,
+                color: Color.fromRGBO(R, G, B, O),
+                decoration: TextDecoration.underline,
+              ),
+            ),
+          ),
+        ]
       ),
     );
   }

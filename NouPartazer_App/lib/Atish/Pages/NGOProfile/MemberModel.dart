@@ -16,43 +16,61 @@ class MemberModel extends StatelessWidget {
           height: 300,
           child: ListView
           (
+            shrinkWrap: true,
+            padding: const EdgeInsets.only
+            (
+              top: 0
+            ),
+
             children: 
               members.map((mem)
               {
-                return Card
+                return Container
                 (
-                  elevation: 2,
-                  color: Colors.blue,
-                  shape: RoundedRectangleBorder
+                  margin: EdgeInsets.only
                   (
-                    borderRadius: BorderRadius.all(Radius.circular(20))
+                    // top: top,
+                    left: 20,
+                    right: 20
                   ),
-
-                  child: Row
+                  child: Card
                   (
-                    children:
-                    [
-                      Container
+                    elevation: 3,
+                    shape: RoundedRectangleBorder
+                    (
+                      borderRadius: BorderRadius.all(Radius.circular(10))
+                    ),
+
+                    child: Padding(
+                      padding: const EdgeInsets.all(10),
+                      
+                      child: Row
                       (
-                        margin: EdgeInsets.only
-                        (
-                          bottom: 0.0,
-                          top: 5.0,
-                          left:8.0
-                        ),
-                        width: 70.0,
-                        height: 70.0,
-                        decoration: BoxDecoration
-                        (
-                          image: DecorationImage
+                        children:
+                        [
+                          Container
                           (
-                            image: AssetImage("assets/JPEG/Photo.jpg"),
-                            fit: BoxFit.cover,
+                            // margin: EdgeInsets.only
+                            // (
+                            //   bottom: 0.0,
+                            //   top: 5.0,
+                            //   left:8.0
+                            // ),
+                            width: 70.0,
+                            height: 70.0,
+                            decoration: BoxDecoration
+                            (
+                              image: DecorationImage
+                              (
+                                image: AssetImage("assets/JPEG/Woman.jpg"),
+                                fit: BoxFit.cover,
+                              ),
+                              borderRadius: BorderRadius.circular(80.0),
+                            ),
                           ),
-                          borderRadius: BorderRadius.circular(80.0),
-                        ),
+                        ],
                       ),
-                    ],
+                    ),
                   ),
                 );
               }).toList(),

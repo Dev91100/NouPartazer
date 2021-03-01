@@ -98,7 +98,6 @@ class StoryModel extends StatelessWidget
                       // STORY BACKGROUND
                       child: Container
                       (
-                        // height: 700,
                         decoration: BoxDecoration
                         (
                           image: DecorationImage
@@ -211,18 +210,16 @@ class StoryModel extends StatelessWidget
                                 SingleChildScrollView
                                 (
                                   scrollDirection: Axis.horizontal,
-                                  child: Expanded
+                                  child: Container
                                   (
-                                    child: Container
+                                    child: Row
                                     (
-                                      child: Row
-                                      (
-                                          children: [
-                                          TagsTab(data: st.tag),
-                                          TagsTab(data: st.foodType),
-                                          TagsTab(data: st.foodType),
-                                        ],
-                                      ),
+                                      children: 
+                                      [
+                                        TagsTab(data: st.tag),
+                                        TagsTab(data: st.foodType),
+                                        TagsTab(data: st.foodType),
+                                      ],
                                     ),
                                   ),
                                 ),
