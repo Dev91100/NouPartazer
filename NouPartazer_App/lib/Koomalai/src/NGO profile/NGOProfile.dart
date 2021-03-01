@@ -78,8 +78,8 @@ class NGOProfile extends StatelessWidget
                         (
                           top: constraints.maxHeight * 0.19
                         ),
-                        width: 150,
-                        height: 150,
+                        width: constraints.maxWidth * 0.4,
+                        height: constraints.maxWidth * 0.4,
 
                         decoration: BoxDecoration
                         (

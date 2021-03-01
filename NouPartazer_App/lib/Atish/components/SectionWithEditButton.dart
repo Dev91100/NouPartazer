@@ -50,38 +50,43 @@ class SectionWithEditButton extends StatelessWidget
   @override
   Widget build(BuildContext context) 
   {
-    final screen = MediaQuery.of(context).size;
-
-    return Row
+    return LayoutBuilder
     (
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children:
-      [
-        Container(
-          width: screen.width * 0.8,
-          child: SectionTitle
-          (
-            title: title,
-            fontSize: fontSize,
-            R: R, G: G, B: B, O: O,
-          ),
-        ),
-        
-        EditIconButton
+      builder: (ctx, constraints)
+      {
+        return Row
         (
-          openPage: openPage,
-          isModalPage: false,
-          icon: icon,
-          height: 40,
-          width: 40,
-          left: 10,
-          top: 0,
-          right: 20,
-          bottom: 10,
-          size: 26,
-        ),
-      ],
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children:
+          [
+            Container
+            (
+              width: constraints.maxWidth * 0.8,
+              child: SectionTitle
+              (
+                title: title,
+                fontSize: fontSize,
+                R: R, G: G, B: B, O: O,
+              ),
+            ),
+            
+            EditIconButton
+            (
+              openPage: openPage,
+              isModalPage: false,
+              icon: icon,
+              height: 40,
+              width: 40,
+              left: 10,
+              top: 0,
+              right: 20,
+              bottom: 10,
+              size: 26,
+            ),
+          ],
+        );
+      }   
     );
   }
 }
