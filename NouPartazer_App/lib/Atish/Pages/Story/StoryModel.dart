@@ -6,7 +6,7 @@ import './Story.dart';
 import './InfoTab.dart';
 import './TagsTab.dart';
 import './StoryList.dart';
-
+import '../../components/PageTitle.dart';
 
 class StoryModel extends StatelessWidget 
 {
@@ -32,7 +32,7 @@ class StoryModel extends StatelessWidget
                 image: DecorationImage
                 (
                   image: AssetImage('assets/JPEG/StoryBG_Blur.jpg'),
-                  fit: BoxFit.fill,
+                  fit: BoxFit.cover,
                 )
               )
             ),
@@ -45,26 +45,11 @@ class StoryModel extends StatelessWidget
               children:
               [
                 // STORIES TITLE ON TOP
-                Container(
-                  margin: EdgeInsets.only
-                  (
-                    top: constraints.maxHeight * 0.02,
-                    bottom: constraints.maxHeight * 0.01
-                  ),
-                  child: Text
-                  (
-                    'STORIES',
-                    style: GoogleFonts.comfortaa
-                    (
-                      textStyle: TextStyle
-                      (
-                        fontWeight: FontWeight.normal,
-                        fontSize: 18,
-                        color: new Color.fromRGBO(255, 255, 255, 1),
-                      ),
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
+                PageTitle
+                (
+                  title: 'STORIES',
+                  R: 255, G: 255, B: 255, O: 1,
+                  top: 0.02,
                 ),
 
                 // STORIES SLIDER
