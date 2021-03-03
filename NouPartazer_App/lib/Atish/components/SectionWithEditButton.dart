@@ -62,7 +62,7 @@ class SectionWithEditButton extends StatelessWidget
           [
             Container
             (
-              width: constraints.maxWidth * 0.8,
+              width: constraints.maxWidth * 0.7,
               child: SectionTitle
               (
                 title: title,
