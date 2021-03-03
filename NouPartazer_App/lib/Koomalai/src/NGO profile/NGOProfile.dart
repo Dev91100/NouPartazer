@@ -129,7 +129,7 @@ class NGOProfile extends StatelessWidget
                         left: 10,
                         top: 10,
                         right: 20,
-                        bottom: 0,
+                        bottom: constraints.maxHeight * 0.015,
                         size: 35,
                       ),
                     ),
@@ -231,7 +231,7 @@ class NGOProfile extends StatelessWidget
 
                 Column
                 (
-                  children: 
+                  children:
                   [
                     SectionWithEditButton
                     (
@@ -244,6 +244,7 @@ class NGOProfile extends StatelessWidget
                 ),
 
                 MemberModel(),
+
 
               ],
             ),

@@ -19,12 +19,12 @@ class ContactInfo extends StatelessWidget
   (
     {
       this.title,
-      this.fontSize = 21,
+      this.fontSize = 20,
       this.R = 0,
       this.G = 50,
       this.B = 193,
       this.O = 1,
-      this.top = 20,
+      this.top = 15,
       this.icon,
     }
   );

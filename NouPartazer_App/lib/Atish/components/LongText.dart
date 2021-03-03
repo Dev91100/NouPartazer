@@ -16,9 +16,9 @@ class LongText extends StatelessWidget {
       this.title,
       this.fontSize = 23,
       this.top = 0,
-      this.R = 0,
-      this.G = 0,
-      this.B = 0,
+      this.R = 102,
+      this.G = 102,
+      this.B = 102,
       this.O = 1,
     }
   );

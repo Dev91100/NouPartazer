@@ -42,7 +42,7 @@ class EditPhotoButton extends StatelessWidget {
               ],
             ),
 
-            child: RaisedButton
+            child: FlatButton
             (
               padding: EdgeInsets.all(0),
               color: Colors.white,

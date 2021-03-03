@@ -14,7 +14,7 @@ class SectionTitle extends StatelessWidget {
   (
     {
       this.title,
-      this.fontSize = 23,
+      this.fontSize = 22,
       this.top = 0,
       this.R = 0,
       this.G = 0,
@@ -44,7 +44,6 @@ class SectionTitle extends StatelessWidget {
             Text
             (
               title,
-              overflow: TextOverflow.ellipsis,
               style: TextStyle
               (
                 color: Color.fromRGBO(R, G, B, O),
