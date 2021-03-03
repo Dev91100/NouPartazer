@@ -17,14 +17,14 @@ class PageTitle extends StatelessWidget
       this.G = 0,
       this.B = 0,
       this.O = 1,
-      this.top = 0.055,
+      this.top = 0.02,
     }
   );
 
   @override
   Widget build(BuildContext context)
   {
-    final screen = MediaQuery.of(context).size;
+    final screen = MediaQuery.of(context);
 
     return LayoutBuilder
     (
@@ -35,8 +35,8 @@ class PageTitle extends StatelessWidget
           (
             margin: EdgeInsets.only
             (
-              top: screen.height * top,
-              bottom: screen.height * 0.02
+              top: screen.size.height * top + screen.padding.top,
+              bottom: screen.size.height * 0.02
             ),
             child: Text
             (
