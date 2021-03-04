@@ -35,8 +35,9 @@ class PageTitle extends StatelessWidget
           (
             margin: EdgeInsets.only
             (
-              top: screen.size.height * top + screen.padding.top,
-              bottom: screen.size.height * 0.02
+              // Takes into account height of status bar also
+              top: (screen.size.height * 0.02) + screen.padding.top,
+              bottom: screen.size.height * 0.015
             ),
             child: Text
             (

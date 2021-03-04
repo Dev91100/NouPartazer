@@ -115,7 +115,8 @@ class MemberModel extends StatelessWidget
                                       ),
                                     ),
                                     
-                                    Container(
+                                    Container
+                                    (
                                       child: SingleChildScrollView
                                       (
                                         scrollDirection: Axis.horizontal,

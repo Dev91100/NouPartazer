@@ -9,7 +9,7 @@ final List<Story> storyList =
     locationAddress: 'La Place BelgathLa Place BelgathLa Place Belgath',
     date: '19/03/21',
     time: '19:00-00:30',
-    tag: 'PARTY',
+    tag: 'PARTY TEST TEST TEST TEST TEST',
     foodType: 'PERISHABLE FOOD'
   ),
   Story
@@ -33,4 +33,127 @@ final List<Story> storyList =
     tag: 'PARTY',
     foodType: 'NON-PERISHABLE FOOD'
   ),
+
+  Story
+  (
+    image: './assets/JPEG/bolRenverser.jpg',
+    locationName: 'Winners Supermarket',
+    locationAddress: 'La Place Belgath',
+    date: '19/03/21',
+    time: '19:00-00:30',
+    tag: 'PARTY',
+    foodType: 'NON-PERISHABLE FOOD'
+  ),
+
+  Story
+  (
+    image: './assets/JPEG/blur image.jpg',
+    locationName: 'Winners Supermarket',
+    locationAddress: 'La Place Belgath',
+    date: '19/03/21',
+    time: '19:00-00:30',
+    tag: 'PARTY',
+    foodType: 'NON-PERISHABLE FOOD'
+  ),
+
+  Story
+  (
+    image: './assets/JPEG/chamarel restaurant.jpg',
+    locationName: 'Winners Supermarket',
+    locationAddress: 'La Place Belgath',
+    date: '19/03/21',
+    time: '19:00-00:30',
+    tag: 'PARTY',
+    foodType: 'NON-PERISHABLE FOOD'
+  ),
+
+  Story
+  (
+    image: './assets/JPEG/food.jpeg',
+    locationName: 'Winners Supermarket',
+    locationAddress: 'La Place Belgath',
+    date: '19/03/21',
+    time: '19:00-00:30',
+    tag: 'PARTY',
+    foodType: 'NON-PERISHABLE FOOD'
+  ),
+
+  Story
+  (
+    image: './assets/JPEG/cofee.jpeg',
+    locationName: 'Winners Supermarket',
+    locationAddress: 'La Place Belgath',
+    date: '19/03/21',
+    time: '19:00-00:30',
+    tag: 'PARTY',
+    foodType: 'NON-PERISHABLE FOOD'
+  ),
+
+  Story
+  (
+    image: './assets/JPEG/crevette.jpg',
+    locationName: 'Winners Supermarket',
+    locationAddress: 'La Place Belgath',
+    date: '19/03/21',
+    time: '19:00-00:30',
+    tag: 'PARTY',
+    foodType: 'NON-PERISHABLE FOOD'
+  ),
+
+  Story
+  (
+    image: './assets/JPEG/junk.jpeg',
+    locationName: 'Winners Supermarket',
+    locationAddress: 'La Place Belgath',
+    date: '19/03/21',
+    time: '19:00-00:30',
+    tag: 'PARTY',
+    foodType: 'NON-PERISHABLE FOOD'
+  ),
+
+  Story
+  (
+    image: './assets/JPEG/pizza.jpeg',
+    locationName: 'Winners Supermarket',
+    locationAddress: 'La Place Belgath',
+    date: '19/03/21',
+    time: '19:00-00:30',
+    tag: 'PARTY',
+    foodType: 'NON-PERISHABLE FOOD'
+  ),
+
+  Story
+  (
+    image: './assets/JPEG/rice and curry.jpg',
+    locationName: 'Winners Supermarket',
+    locationAddress: 'La Place Belgath',
+    date: '19/03/21',
+    time: '19:00-00:30',
+    tag: 'PARTY',
+    foodType: 'NON-PERISHABLE FOOD'
+  ),
+
+  Story
+  (
+    image: './assets/JPEG/roti and veg curries.jpg',
+    locationName: 'Winners Supermarket',
+    locationAddress: 'La Place Belgath',
+    date: '19/03/21',
+    time: '19:00-00:30',
+    tag: 'PARTY',
+    foodType: 'NON-PERISHABLE FOOD'
+  ),
+
+  Story
+  (
+    image: './assets/JPEG/verCofee.jpeg',
+    locationName: 'Winners Supermarket',
+    locationAddress: 'La Place Belgath',
+    date: '19/03/21',
+    time: '19:00-00:30',
+    tag: 'PARTY',
+    foodType: 'NON-PERISHABLE FOOD'
+  ),
+
+  
 ];

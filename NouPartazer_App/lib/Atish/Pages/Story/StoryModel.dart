@@ -49,7 +49,6 @@ class StoryModel extends StatelessWidget
                 (
                   title: 'STORIES',
                   R: 255, G: 255, B: 255, O: 1,
-                  top: 0.02,
                 ),
 
                 // STORIES SLIDER
