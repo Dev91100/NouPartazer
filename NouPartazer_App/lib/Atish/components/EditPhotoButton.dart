@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
 
 class EditPhotoButton extends StatelessWidget {
-  final Widget nextPage;
+  final double elevation;
+  final Widget openPage;
 
-  EditPhotoButton(this.nextPage);
+  EditPhotoButton
+  (
+    {
+      this.openPage,
+      this.elevation = 2,
+    }
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -42,8 +49,9 @@ class EditPhotoButton extends StatelessWidget {
               ],
             ),
 
-            child: FlatButton
+            child: RaisedButton
             (
+              elevation: elevation,
               padding: EdgeInsets.all(0),
               color: Colors.white,
               shape: RoundedRectangleBorder
@@ -55,7 +63,7 @@ class EditPhotoButton extends StatelessWidget {
                 showModalBottomSheet
                 (
                   context: context,
-                  builder: ((builder) => nextPage)
+                  builder: ((builder) => openPage)
                 );  
               },
               child: Icon

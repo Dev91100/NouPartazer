@@ -66,7 +66,10 @@ class NGOProfile extends StatelessWidget
                       (
                         alignment: Alignment.bottomRight,
                         
-                        child: EditPhotoButton(BottomSheetWidget()),
+                        child: EditPhotoButton
+                          (
+                            openPage: BottomSheetWidget()
+                          )
                       ),
                     ),
 
@@ -106,7 +109,10 @@ class NGOProfile extends StatelessWidget
                         (
                           alignment: Alignment.bottomRight,
                           
-                          child: EditPhotoButton(BottomSheetWidget())
+                          child: EditPhotoButton
+                          (
+                            openPage: BottomSheetWidget()
+                          )
                         ),
                       ),
                     ),

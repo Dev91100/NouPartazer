@@ -19,7 +19,7 @@ final List<Story> storyList =
     locationAddress: 'La Place BelgathLa Place Belgath',
     date: '19/03/21',
     time: '19:00-00:30',
-    tag: 'PARTY',
+    tag: 'GROCERY DONATION',
     foodType: 'PERISHABLE FOOD'
   ),
   
@@ -30,7 +30,7 @@ final List<Story> storyList =
     locationAddress: 'La Place Belgath',
     date: '19/03/21',
     time: '19:00-00:30',
-    tag: 'PARTY',
+    tag: 'GRILL PARTY',
     foodType: 'NON-PERISHABLE FOOD'
   ),
 
@@ -41,7 +41,7 @@ final List<Story> storyList =
     locationAddress: 'La Place Belgath',
     date: '19/03/21',
     time: '19:00-00:30',
-    tag: 'PARTY',
+    tag: 'EOY PARTY',
     foodType: 'NON-PERISHABLE FOOD'
   ),
 
@@ -52,7 +52,7 @@ final List<Story> storyList =
     locationAddress: 'La Place Belgath',
     date: '19/03/21',
     time: '19:00-00:30',
-    tag: 'PARTY',
+    tag: 'DINNER PARTY',
     foodType: 'NON-PERISHABLE FOOD'
   ),
 
@@ -63,7 +63,7 @@ final List<Story> storyList =
     locationAddress: 'La Place Belgath',
     date: '19/03/21',
     time: '19:00-00:30',
-    tag: 'PARTY',
+    tag: 'CHARITY EVENT',
     foodType: 'NON-PERISHABLE FOOD'
   ),
 
@@ -74,7 +74,7 @@ final List<Story> storyList =
     locationAddress: 'La Place Belgath',
     date: '19/03/21',
     time: '19:00-00:30',
-    tag: 'PARTY',
+    tag: 'GROCERY DONATION',
     foodType: 'NON-PERISHABLE FOOD'
   ),
 

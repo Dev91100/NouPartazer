@@ -46,7 +46,7 @@ class PageTitle extends StatelessWidget
               (
                 textStyle: TextStyle
                 (
-                  fontWeight: FontWeight.normal,
+                  fontWeight: FontWeight.bold,
                   fontSize: 18,
                   color: new Color.fromRGBO(R, G, B, O),
                 ),

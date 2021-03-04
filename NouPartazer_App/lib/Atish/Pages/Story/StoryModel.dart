@@ -23,18 +23,19 @@ class StoryModel extends StatelessWidget
         (
           children:
           [
-            // Background Image
+
             Container
             (
-              height: constraints.maxHeight,
-              decoration: BoxDecoration
-              (
-                image: DecorationImage
-                (
-                  image: AssetImage('assets/JPEG/StoryBG_Blur.jpg'),
-                  fit: BoxFit.cover,
-                )
-              )
+              color: Color.fromRGBO(242, 242, 242, 1),
+              // height: constraints.maxHeight,
+              // decoration: BoxDecoration
+              // (
+              //   image: DecorationImage
+              //   (
+              //     image: AssetImage('assets/JPEG/StoryBG_Blur.jpg'),
+              //     fit: BoxFit.cover,
+              //   )
+              // )
             ),
             
             ListView
@@ -48,7 +49,7 @@ class StoryModel extends StatelessWidget
                 PageTitle
                 (
                   title: 'STORIES',
-                  R: 255, G: 255, B: 255, O: 1,
+                  R: 0, G: 0, B: 0, O: 1,
                 ),
 
                 // STORIES SLIDER
@@ -67,7 +68,7 @@ class StoryModel extends StatelessWidget
                   {
                     return Card
                     (
-                      elevation: 0,
+                      elevation: 2,
                       color: Colors.transparent,
                       shape: RoundedRectangleBorder
                       (
@@ -103,7 +104,7 @@ class StoryModel extends StatelessWidget
                                 new Color.fromRGBO(0, 0, 0, 1), // Black
                                 new Color.fromRGBO(0, 0, 0, 0), // Transparent
                               ],
-                              begin: FractionalOffset(0.0, 1.0),
+                              begin: FractionalOffset(1.0, 1.1),
                               end: FractionalOffset(1.0, 0.0),
                               stops: [0.0,0.5],
                               tileMode: TileMode.clamp,

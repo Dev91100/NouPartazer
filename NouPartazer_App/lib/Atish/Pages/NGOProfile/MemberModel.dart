@@ -48,7 +48,6 @@ class MemberModel extends StatelessWidget
                     child: RaisedButton
                     (
                       color: Colors.white,
-                      elevation: 2,
                       shape: RoundedRectangleBorder
                       (
                         borderRadius: BorderRadius.all(Radius.circular(10))
@@ -148,7 +147,7 @@ class MemberModel extends StatelessWidget
                               right: 0,
                               bottom: 0,
                               size: 26,
-                              hasShadow: false,
+                              elevation: 0,
                               R: 212, G: 0, B: 0, O: 1
                             ),
                           ],
