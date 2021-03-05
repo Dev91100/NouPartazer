@@ -164,7 +164,7 @@ class NGOProfile extends StatelessWidget
                     SectionWithEditButton
                     (
                       title: 'Manzer Partazer Test Test Test Test',
-                      fontSize: 25,
+                      fontSize: 22,
                       R: 0, G: 50, B: 193, O: 1,
                       openPage: Settings(),
                     ),
@@ -178,7 +178,7 @@ class NGOProfile extends StatelessWidget
                         child: SectionTitle
                         (
                           title: 'Food Sharing Project of Mauritius Mauritius Mauritius',
-                          fontSize: 22, 
+                          fontSize: 20, 
                           top: 15,
                           R: 51, G: 51, B: 51, O: 1,
                         ),
@@ -208,7 +208,6 @@ class NGOProfile extends StatelessWidget
                     SectionWithEditButton
                     (
                       title: 'CONTACT INFO',
-                      fontSize: 23,
                       openPage: Settings(),
                     ),
 
@@ -242,7 +241,6 @@ class NGOProfile extends StatelessWidget
                     SectionWithEditButton
                     (
                       title: 'MEMBERS',
-                      fontSize: 23,
                       icon: Icons.add,
                       openPage: Settings(),
                     ),

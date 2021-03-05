@@ -27,15 +27,6 @@ class StoryModel extends StatelessWidget
             Container
             (
               color: Color.fromRGBO(242, 242, 242, 1),
-              // height: constraints.maxHeight,
-              // decoration: BoxDecoration
-              // (
-              //   image: DecorationImage
-              //   (
-              //     image: AssetImage('assets/JPEG/StoryBG_Blur.jpg'),
-              //     fit: BoxFit.cover,
-              //   )
-              // )
             ),
             
             ListView
@@ -112,7 +103,8 @@ class StoryModel extends StatelessWidget
                             borderRadius: BorderRadius.all(Radius.circular(20))
                           ),
                           // Location Name
-                          child: Padding(
+                          child: Padding
+                          (
                             padding: const EdgeInsets.fromLTRB(15,0,15,15),
                             child: Column
                             (
@@ -141,7 +133,7 @@ class StoryModel extends StatelessWidget
                                 // Separation Between Text
                                 SizedBox
                                 (
-                                  height: constraints.maxHeight * 0.005,
+                                  height: 10,
                                 ),
 
                                 // Location Address
@@ -156,7 +148,7 @@ class StoryModel extends StatelessWidget
                                       style: TextStyle
                                         (
                                           fontWeight: FontWeight.bold,
-                                          fontSize: 25,
+                                          fontSize: 20,
                                           color: Colors.white,
                                         ),
                                     ),
@@ -166,11 +158,12 @@ class StoryModel extends StatelessWidget
                                 // Separation Between Text
                                 SizedBox
                                 (
-                                  height: constraints.maxHeight * 0.01,
+                                  height: 10,
                                 ),
 
                                 // Date & Time
-                                FittedBox(
+                                FittedBox
+                                (
                                   fit: BoxFit.contain,
                                   child: Row
                                   (

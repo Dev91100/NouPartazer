@@ -42,7 +42,7 @@ class IconText extends StatelessWidget
           (
             color: Color.fromRGBO(R, G, B, O),
             fontWeight: fontWeight,
-            fontSize: 18,
+            fontSize: fontSize,
           ),
         ),
       ],

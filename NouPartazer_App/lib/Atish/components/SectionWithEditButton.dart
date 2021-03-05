@@ -21,7 +21,7 @@ class SectionWithEditButton extends StatelessWidget
     (
       {
         this.title,
-        this.fontSize,
+        this.fontSize = 22,
         this.openPage,
         this.icon = Icons.create_outlined,
         this.R = 0,

@@ -69,8 +69,8 @@ class DonationModel extends StatelessWidget
                   (
                     right: 10
                   ),
-                  width: 70.0,
-                  height: 70.0,
+                  width: 60,
+                  height: 60,
                   decoration: BoxDecoration
                   (
                     image: DecorationImage
@@ -109,7 +109,7 @@ class DonationModel extends StatelessWidget
                                     tag,
                                     style: TextStyle
                                     (
-                                      fontSize: 20,
+                                      fontSize: 18,
                                       fontWeight: FontWeight.w400,
                                     ),
                                   ),
@@ -134,20 +134,17 @@ class DonationModel extends StatelessWidget
                                     child: Icon
                                     (
                                       Icons.fastfood,
-                                      color: Color.fromRGBO(255,84,62,1),
+                                      color: Color.fromRGBO(255, 84, 62, 1),
+                                      size: 18
                                     ),
                                   ),
                                   Container
-                                  (
-                                    // margin: EdgeInsets.only
-                                    // (
-                                    //   left: 5,
-                                    //   right: 10
-                                    // ),
+                                  (  
                                     child: Icon
                                     (
                                       Icons.no_food,
-                                      color: Color.fromRGBO(0,163,68,1),
+                                      color: Color.fromRGBO(0, 163, 68, 1),
+                                      size: 18
                                     ),
                                   ),
                                 ],
@@ -157,7 +154,18 @@ class DonationModel extends StatelessWidget
                         ),
                         Container
                         (
-                          margin: EdgeInsets.only(),
+                          decoration: BoxDecoration
+                          (
+                            border: Border
+                            (
+                              bottom: BorderSide
+                              (
+                                color: Color.fromRGBO(102, 102, 102, 0.3),
+                                width: 1,
+                              ),
+                            ),
+                          ),
+                          padding: EdgeInsets.only(bottom: 10),
                           child: SingleChildScrollView
                           (
                             scrollDirection: Axis.horizontal,
@@ -169,6 +177,7 @@ class DonationModel extends StatelessWidget
                                 (
                                   text: date,
                                   icon: Icons.event,
+                                  fontSize: 15,
                                   R: 0,
                                   G: 50,
                                   B: 193,
@@ -179,6 +188,7 @@ class DonationModel extends StatelessWidget
                                 (
                                   text: locationName,
                                   icon: Icons.location_on_outlined,
+                                  fontSize: 15,
                                   R: 0,
                                   G: 0,
                                   B: 0,
