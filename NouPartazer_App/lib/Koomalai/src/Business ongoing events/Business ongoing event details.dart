@@ -11,9 +11,15 @@ import 'package:url_launcher/url_launcher.dart';
   Widget build(BuildContext context)
   {
 
-    return Scaffold
+    return LayoutBuilder
     (
-      
+      builder: (ctx, constraints)
+      {
+        return Scaffold
+        (
+          body: 
+        );
+      } 
     );
 
     // return Scaffold

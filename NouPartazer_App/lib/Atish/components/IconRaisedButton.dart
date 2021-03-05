@@ -29,40 +29,35 @@ class IconRaisedButton extends StatelessWidget
       color: Colors.white,
       shape: RoundedRectangleBorder
       (
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(5),
       ),
       child: Row
       (
+        mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: 
         [
-          Expanded
+          Container
           (
-            child: Container
+            padding: EdgeInsets.all(0),
+            
+            child: Icon
             (
-              padding: EdgeInsets.all(0),
-              
-              child: Icon
-              (
-                icon,
-                color: Color.fromRGBO(R, G, B, 1),
-                size: 26,
-              ),
+              icon,
+              color: Color.fromRGBO(R, G, B, 1),
+              size: 26,
             ),
           ),
-          Expanded
+          Text
           (
-            child: Text
+            text,
+            textAlign: TextAlign.center,
+            style: TextStyle
             (
-              text,
-              textAlign: TextAlign.center,
-              style: TextStyle
-              (
-                color: Color.fromRGBO(R, G, B, 1),
-                fontSize: fontSize
-              )
-            ),
+              color: Color.fromRGBO(R, G, B, 1),
+              fontSize: fontSize
+            )
           ),
         ],
       ),

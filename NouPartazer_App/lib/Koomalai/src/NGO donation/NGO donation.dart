@@ -20,39 +20,41 @@ class NGODonation extends StatelessWidget
       {
         return Scaffold
         (
-          body: Column
-          (
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children:
-            [
-              PageTitle
-              (
-                title: 'DONATIONS',
-              ),
-
-              Container
-              (
-                height: constraints.maxHeight * 0.06,
-                width: constraints.maxWidth * 0.2,
-                margin: EdgeInsets.only
+          body: Container(
+            child: Column
+            (
+              // Makes column fit the size of its children
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children:
+              [
+                PageTitle
                 (
-                  right: 20,
-                  bottom: 20,
+                  title: 'DONATIONS',
                 ),
-                child: IconRaisedButton
-                (
-                  text: stories.length.toString(),
-                  icon: Icons.format_list_bulleted,
-                )
-              ),
 
-              Container
-              (
-                height: constraints.maxHeight * 0.8,
-                child: DonationModel(),
-              ),
-            ],
+                Container
+                (
+                  margin: EdgeInsets.only
+                  (
+                    right: 20,
+                    bottom: 20,
+                  ),
+                  child: IconRaisedButton
+                  (
+                    text: stories.length.toString(),
+                    icon: Icons.format_list_bulleted,
+                  )
+                ),
+
+                Container
+                (
+                  height: constraints.maxHeight * 0.8,
+                  child: DonationModel(),
+                ),
+              ],
+            ),
           )
         );
       }
