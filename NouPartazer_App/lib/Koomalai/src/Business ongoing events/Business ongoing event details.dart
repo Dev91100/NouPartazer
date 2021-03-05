@@ -17,7 +17,13 @@ import 'package:url_launcher/url_launcher.dart';
       {
         return Scaffold
         (
-          body: 
+          body: Expanded
+          (
+            child: ListView
+            (
+              
+            )
+          )
         );
       } 
     );

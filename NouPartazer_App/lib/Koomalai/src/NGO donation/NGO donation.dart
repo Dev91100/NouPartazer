@@ -48,10 +48,22 @@ class NGODonation extends StatelessWidget
                   )
                 ),
 
-                Container
+                Expanded
                 (
-                  height: constraints.maxHeight * 0.8,
-                  child: DonationModel(),
+                  child: ListView
+                  (
+                    padding: EdgeInsets.all(0),
+                    children:
+                    stories.map((st){
+                      return DonationModel
+                      (
+                        image: st.image,
+                        tag: st.tag,
+                        date: st.date,
+                        locationName: st.locationName,
+                      );
+                    }).toList(),
+                  ),
                 ),
               ],
             ),
