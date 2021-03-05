@@ -43,7 +43,7 @@ class NGODonation extends StatelessWidget
                 child: IconRaisedButton
                 (
                   text: stories.length.toString(),
-                  icon: Icons.visibility_outlined,
+                  icon: Icons.format_list_bulleted,
                 )
               ),
 
@@ -52,7 +52,6 @@ class NGODonation extends StatelessWidget
                 height: constraints.maxHeight * 0.8,
                 child: DonationModel(),
               ),
-              
             ],
           )
         );

@@ -33,7 +33,7 @@ class OrgButtons extends StatelessWidget
             color: Colors.black.withOpacity(0.3),
             spreadRadius: 3,
             blurRadius: 5,
-            offset: Offset(0, 2), // changes position of shadow
+            offset: Offset(0, 1), // changes position of shadow
           ),
         ],
         borderRadius: BorderRadius.all(Radius.circular(20))

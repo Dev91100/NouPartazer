@@ -2,154 +2,223 @@ import 'package:flutter/material.dart';
 
 import 'package:NouPartazer_App/Atish/Pages/Story/Story.dart';
 import 'package:NouPartazer_App/Atish/Pages/Story/StoryList.dart';
-import 'package:NouPartazer_App/Atish/Components/IconText.dart';
+import 'package:NouPartazer_App/Atish/components/IconText.dart';
 import 'package:NouPartazer_App/Koomalai/src/Business%20Event%20Details/Business%20event%20details.dart';
 
-class DonationModel extends StatelessWidget 
+
+class DonationModel extends StatelessWidget
 {
   final List<Story> stories = storyList;
 
   @override
   Widget build(BuildContext context)
   {
-    return ListView
+    return LayoutBuilder
     (
-      shrinkWrap: true,
-      padding: const EdgeInsets.only
-      (
-        top: 0
-      ),
-
-      children:
-      stories.map((st)
+      builder: (ctx, constraints)
       {
-        return Card
+        return ListView
         (
-          margin: EdgeInsets.fromLTRB(0, 0, 0, 15),
-          elevation: 0,
-          child: ListTile
+          shrinkWrap: true,
+          padding: const EdgeInsets.only
           (
-            leading: Container
-            (
-              margin: EdgeInsets.only
+            top: 0
+          ),
+
+          children: 
+            stories.map((st)
+            {
+              return Container
               (
-                right: 10
-              ),
-              width: 60.0,
-              height: 60.0,
-              decoration: BoxDecoration
-              (
-                image: DecorationImage
+                margin: EdgeInsets.only
                 (
-                  image: AssetImage(st.image),
-                  fit: BoxFit.cover,
+                  // top: top,
+                  left: 10,
+                  right: 10,
                 ),
-                borderRadius: BorderRadius.circular(100.0),
-              ),
-            ),
-            title: Row
-            (
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children:
-              [
-                Expanded
+                child: Container
                 (
-                  child: Container
+                  margin: EdgeInsets.only
                   (
-                    child: SingleChildScrollView
+                    // top: 10,
+                    bottom: 5
+                  ),
+                  child: RaisedButton
+                  (
+                    elevation: 0,
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder
                     (
-                      scrollDirection: Axis.horizontal,
-                      child: Text
+                      borderRadius: BorderRadius.all(Radius.circular(10))
+                    ),
+
+                    child: Padding
+                    (
+                      padding: const EdgeInsets.only
                       (
-                        st.tag,
-                        style: TextStyle
-                        (
-                          fontSize: 20,
-                          fontWeight: FontWeight.w700,
-                        ),
+                        left: 0,
+                        right: 0,
+                        top: 10,
+                        bottom: 10,
+                      ),
+                      
+                      child: Row
+                      (
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children:
+                        [
+                          Container
+                          (
+                            margin: EdgeInsets.only
+                            (
+                              right: 10
+                            ),
+                            width: 70.0,
+                            height: 70.0,
+                            decoration: BoxDecoration
+                            (
+                              image: DecorationImage
+                              (
+                                image: AssetImage(st.image),
+                                fit: BoxFit.cover,
+                              ),
+                              borderRadius: BorderRadius.circular(80.0),
+                            ),
+                          ),
+
+                          Expanded
+                          (
+                            child: Container
+                            (
+                              child: Column
+                              (
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: 
+                                [
+                                  Row
+                                  (
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children:
+                                    [
+                                      Expanded
+                                      (
+                                        child: Container
+                                        (
+                                          padding: EdgeInsets.only(bottom: 5),
+                                          child: SingleChildScrollView
+                                          (
+                                            scrollDirection: Axis.horizontal,
+                                            child: Text
+                                            (
+                                              st.tag,
+                                              style: TextStyle
+                                              (
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.w400,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+
+                                      Container
+                                      (
+                                        padding: EdgeInsets.only(bottom: 10),
+                                        child: Row
+                                        (
+                                          children:
+                                          [
+                                            Container
+                                            (
+                                              margin: EdgeInsets.only
+                                              (
+                                                left: 20,
+                                                right: 10
+                                              ),
+                                              child: Icon
+                                              (
+                                                Icons.fastfood,
+                                                color: Color.fromRGBO(255,84,62,1),
+                                              ),
+                                            ),
+                                            Container
+                                            (
+                                              // margin: EdgeInsets.only
+                                              // (
+                                              //   left: 5,
+                                              //   right: 10
+                                              // ),
+                                              child: Icon
+                                              (
+                                                Icons.no_food,
+                                                color: Color.fromRGBO(0,163,68,1),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Container
+                                  (
+                                    margin: EdgeInsets.only(),
+                                    child: SingleChildScrollView
+                                    (
+                                      scrollDirection: Axis.horizontal,
+                                      child: Row
+                                      (
+                                        children:
+                                        [
+                                          IconText
+                                          (
+                                            text: st.date,
+                                            icon: Icons.event,
+                                            R: 0,
+                                            G: 50,
+                                            B: 193,
+                                            O: 1,
+                                          ),
+                                          
+                                          IconText
+                                          (
+                                            text: st.locationName,
+                                            icon: Icons.location_on_outlined,
+                                            R: 0,
+                                            G: 0,
+                                            B: 0,
+                                            O: 1,
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
+                    onPressed: () 
+                    {
+                      Navigator.push
+                      (
+                        context,
+                        MaterialPageRoute
+                        (
+                          builder: (context)
+                          {
+                            return BusinessEvent();
+                          },
+                        ),
+                      );
+                    },
                   ),
                 ),
-                Row
-                (
-                  children:
-                  [
-                    Container
-                    (
-                      margin: EdgeInsets.only
-                      (
-                        left: 20,
-                        right: 10
-                      ),
-                      child: Icon
-                      (
-                        Icons.fastfood,
-                        color: Color.fromRGBO(255,84,62,1),
-                      ),
-                    ),
-                    Container
-                    (
-                      child: Icon
-                      (
-                        Icons.no_food,
-                        color: Color.fromRGBO(0,163,68,1),
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-            subtitle: Container
-            (
-              margin: EdgeInsets.only(),
-              child: SingleChildScrollView
-              (
-                scrollDirection: Axis.horizontal,
-                child: Row
-                (
-                  children:
-                  [
-                    IconText
-                    (
-                      text: st.date,
-                      icon: Icons.event,
-                      R: 0,
-                      G: 50,
-                      B: 193,
-                      O: 1,
-                    ),
-                    
-                    IconText
-                    (
-                      text: st.locationName,
-                      icon: Icons.location_on_outlined,
-                      R: 102,
-                      G: 102,
-                      B: 102,
-                      O: 1,
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            onTap: ()
-            {
-              Navigator.push
-              (
-                context,
-                MaterialPageRoute
-                (
-                  builder: (context)
-                  {
-                      return BusinessEvent();
-                  },
-                ),
               );
-            }
-          ),
+            }).toList(),
         );
-      }).toList(),
+      }  
     );
   }
 }
