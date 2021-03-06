@@ -154,6 +154,7 @@ class DonationModel extends StatelessWidget
                         ),
                         Container
                         (
+                          width: double.infinity,
                           decoration: BoxDecoration
                           (
                             border: Border

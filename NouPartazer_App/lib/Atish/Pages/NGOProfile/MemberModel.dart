@@ -8,17 +8,18 @@ import 'package:NouPartazer_App/Atish/components/EditIconButton.dart';
 class MemberModel extends StatelessWidget 
 {
   final List<Member> members = memberList;
-
+  
   @override
   Widget build(BuildContext context)
   {
+    final screen = MediaQuery.of(context).size;
     return LayoutBuilder
     (
       builder: (ctx, constraints)
       {
         return Container
         (
-          height: 300,
+          height: screen.height * 0.5,
           child: ListView
           (
             shrinkWrap: true,

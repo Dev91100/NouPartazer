@@ -49,7 +49,7 @@ class LongText extends StatelessWidget {
               style: TextStyle
               (
                 color: Color.fromRGBO(R, G, B, O),
-                fontWeight: FontWeight.w600,
+                fontWeight: FontWeight.w400,
                 fontSize: fontSize,
               ),
             ),

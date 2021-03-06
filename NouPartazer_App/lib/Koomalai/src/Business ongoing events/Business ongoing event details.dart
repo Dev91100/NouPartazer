@@ -5,27 +5,127 @@ import 'package:NouPartazer_App/Koomalai/src/Business%20Event%20Ongoing/Business
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'package:carousel_slider/carousel_slider.dart';
+
+import 'package:NouPartazer_App/Atish/Pages/Story/Story.dart';
+import 'package:NouPartazer_App/Atish/Pages/Story/InfoTab.dart';
+import 'package:NouPartazer_App/Atish/Pages/Story/TagsTab.dart';
+import 'package:NouPartazer_App/Atish/Pages/Story/StoryList.dart';
+import 'package:NouPartazer_App/Atish/components/PageTitle.dart';
+
     class BusinessOngoingEvent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context)
   {
-
     return LayoutBuilder
     (
       builder: (ctx, constraints)
       {
         return Scaffold
         (
-          body: Expanded
-          (
-            child: ListView
-            (
-              
-            )
-          )
+          body: ListView
+          ( 
+            children:
+            [
+              Card
+              (
+                child: Column
+                (
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children:
+                  [
+                    Row
+                    (
+                      mainAxisSize: MainAxisSize.max,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+
+                      children:
+                      [
+                        Container
+                        (
+                          width: 80,
+                          height: 80,
+                          color: Colors.amber,
+                        ),
+
+                        Card
+                        (
+                          child: Column
+                          (
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children:
+                            [
+                              Row
+                              (
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children:
+                                [
+                                  Text
+                                  (
+                                    '19/01/2021',
+                                    style: TextStyle
+                                    (
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold
+                                    ),
+                                  ),
+                                  Text
+                                  (
+                                    '19:00 - 00:30',
+                                    style: TextStyle
+                                    (
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Container
+                              (
+                                width: constraints.maxWidth * 0.7,
+                                padding: EdgeInsets.only
+                                (
+                                  bottom: 5
+                                ),
+                                child: SingleChildScrollView
+                                (
+                                  scrollDirection: Axis.horizontal,
+                                  child: Text
+                                  (
+                                    'Jumbo SupermarketJumbo SupermarketJumbo SupermarketJumbo Supermarket',
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle
+                                    (
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w400,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    Text
+                    (
+                      'Grocery Donation',
+                      style: TextStyle
+                      (
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold
+                      ),
+                    ),
+                    Text('Description'),
+                  ],
+                ),
+              ),
+            ],
+          ),
         );
-      } 
+      }
     );
 
     // return Scaffold
