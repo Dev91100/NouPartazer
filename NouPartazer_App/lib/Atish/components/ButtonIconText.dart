@@ -5,16 +5,13 @@ import 'package:flutter/rendering.dart';
 
 class ButtonIconText extends StatelessWidget
 {
+  final Widget openPage;
   final String text;
   final int TextR, TextG, TextB;
   final double TextO;
   final double fontSize;
   final IconData icon;
   final FontWeight fontWeight;
-  final double left;
-  final double top;
-  final double right;
-  final double bottom;
   final int ButtonR, ButtonG, ButtonB;
   final double ButtonO;
   final double iconRight;
@@ -22,14 +19,11 @@ class ButtonIconText extends StatelessWidget
   ButtonIconText
   (
     {
+      this.openPage,
       this.text = 'Test',
       this.icon = Icons.not_listed_location,
       this.fontSize = 18,
       this.fontWeight = FontWeight.w600,
-      this.left = 0,
-      this.top = 0,
-      this.right = 0,
-      this.bottom = 0,
       this.TextR = 255,
       this.TextG = 255,
       this.TextB = 255,
@@ -48,10 +42,6 @@ class ButtonIconText extends StatelessWidget
       icon: icon,
       fontSize: fontSize,
       fontWeight: fontWeight,
-      boxLeft: left,
-      boxTop: top,
-      boxRight: right,
-      boxBottom: bottom,
       R: TextR,
       G: TextG,
       B: TextB,
@@ -77,17 +67,26 @@ class ButtonIconText extends StatelessWidget
         icon: icon,
         fontSize: fontSize,
         fontWeight: fontWeight,
-        boxLeft: left,
-        boxTop: top,
-        boxRight: right,
-        boxBottom: bottom,
         R: TextR,
         G: TextG,
         B: TextB,
         O: TextO,
         iconRight: iconRight,
       ),
-      onPressed: () {},
+      onPressed: ()
+      {
+        Navigator.push
+        (
+          context,
+          MaterialPageRoute
+          (
+            builder: (context)
+            {
+              return openPage;
+            },
+          ),
+        );
+      },
     );
   }
 }

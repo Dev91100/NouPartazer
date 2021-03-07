@@ -1,8 +1,8 @@
-import 'package:NouPartazer_App/Atish/Pages/Story/Story.dart';
+import 'package:NouPartazer_App/Atish/Pages/Story/BusinessStory/BusinessStory.dart';
 
-final List<Story> storyList =
+final List<BusinessStory> businessStoryList =
 [
-  Story
+  BusinessStory
   (
     image: './assets/JPEG/batelage.jpeg',
     locationName: 'Four Seasons ResortFour Seasons Resort',
@@ -12,7 +12,7 @@ final List<Story> storyList =
     tag: 'PARTY TEST TEST TEST TEST TEST',
     foodType: 'PERISHABLE FOOD'
   ),
-  Story
+  BusinessStory
   (
     image: './assets/JPEG/cofee.jpeg',
     locationName: 'Winners Supermarket',
@@ -23,7 +23,7 @@ final List<Story> storyList =
     foodType: 'PERISHABLE FOOD'
   ),
   
-  Story
+  BusinessStory
   (
     image: './assets/JPEG/burger.jpeg',
     locationName: 'Winners Supermarket',
@@ -34,7 +34,7 @@ final List<Story> storyList =
     foodType: 'NON-PERISHABLE FOOD'
   ),
 
-  Story
+  BusinessStory
   (
     image: './assets/JPEG/bolRenverser.jpg',
     locationName: 'Winners Supermarket',
@@ -45,7 +45,7 @@ final List<Story> storyList =
     foodType: 'NON-PERISHABLE FOOD'
   ),
 
-  Story
+  BusinessStory
   (
     image: './assets/JPEG/blur image.jpg',
     locationName: 'Winners Supermarket',
@@ -56,7 +56,7 @@ final List<Story> storyList =
     foodType: 'NON-PERISHABLE FOOD'
   ),
 
-  Story
+  BusinessStory
   (
     image: './assets/JPEG/chamarel restaurant.jpg',
     locationName: 'Winners Supermarket',
@@ -67,7 +67,7 @@ final List<Story> storyList =
     foodType: 'NON-PERISHABLE FOOD'
   ),
 
-  Story
+  BusinessStory
   (
     image: './assets/JPEG/food.jpeg',
     locationName: 'Winners Supermarket',
@@ -78,7 +78,7 @@ final List<Story> storyList =
     foodType: 'NON-PERISHABLE FOOD'
   ),
 
-  Story
+  BusinessStory
   (
     image: './assets/JPEG/cofee.jpeg',
     locationName: 'Winners Supermarket',
@@ -89,7 +89,7 @@ final List<Story> storyList =
     foodType: 'NON-PERISHABLE FOOD'
   ),
 
-  Story
+  BusinessStory
   (
     image: './assets/JPEG/crevette.jpg',
     locationName: 'Winners Supermarket',
@@ -100,7 +100,7 @@ final List<Story> storyList =
     foodType: 'NON-PERISHABLE FOOD'
   ),
 
-  Story
+  BusinessStory
   (
     image: './assets/JPEG/junk.jpeg',
     locationName: 'Winners Supermarket',
@@ -111,7 +111,7 @@ final List<Story> storyList =
     foodType: 'NON-PERISHABLE FOOD'
   ),
 
-  Story
+  BusinessStory
   (
     image: './assets/JPEG/pizza.jpeg',
     locationName: 'Winners Supermarket',
@@ -122,7 +122,7 @@ final List<Story> storyList =
     foodType: 'NON-PERISHABLE FOOD'
   ),
 
-  Story
+  BusinessStory
   (
     image: './assets/JPEG/rice and curry.jpg',
     locationName: 'Winners Supermarket',
@@ -133,7 +133,7 @@ final List<Story> storyList =
     foodType: 'NON-PERISHABLE FOOD'
   ),
 
-  Story
+  BusinessStory
   (
     image: './assets/JPEG/roti and veg curries.jpg',
     locationName: 'Winners Supermarket',
@@ -144,7 +144,7 @@ final List<Story> storyList =
     foodType: 'NON-PERISHABLE FOOD'
   ),
 
-  Story
+  BusinessStory
   (
     image: './assets/JPEG/verCofee.jpeg',
     locationName: 'Winners Supermarket',

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
-import './Story.dart';
-import './StoryList.dart';
+import 'BusinessStory.dart';
+import './BusinessStoryList.dart';
 
-class StoryModelProfile extends StatelessWidget {
-
-  final List<Story> stories = storyList;
+class BusinessStoryModelProfile extends StatelessWidget
+{
+  final List<BusinessStory> businessStory = businessStoryList;
 
   @override
   Widget build(BuildContext context)
@@ -40,7 +40,7 @@ class StoryModelProfile extends StatelessWidget {
                 enlargeCenterPage: true,
               ),
 
-              items: stories.map((st)
+              items: businessStory.map((st)
               {
                 return Card
                 (

@@ -18,6 +18,7 @@ class ContainerIconText extends StatelessWidget
 
   final String text;
   final IconData icon;
+  final double iconSize;
   final double fontSize;
 
   ContainerIconText
@@ -25,6 +26,7 @@ class ContainerIconText extends StatelessWidget
     {
       this.text = 'Test',
       this.icon = Icons.not_listed_location,
+      this.iconSize = 25,
       this.fontSize = 18, 
       this.mLeft    = 0, 
       this.mTop     = 0, 
@@ -55,6 +57,7 @@ class ContainerIconText extends StatelessWidget
     (
       text: text,
       icon: icon,
+      iconSize: iconSize,
       fontSize: fontSize,
       R: TextR,
       G: TextG,
@@ -97,6 +100,7 @@ class ContainerIconText extends StatelessWidget
       (
         text: text,
         icon: icon,
+        iconSize: iconSize,
         fontSize: fontSize,
         R: TextR,
         G: TextG,

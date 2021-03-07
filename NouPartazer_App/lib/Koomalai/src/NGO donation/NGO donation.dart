@@ -2,14 +2,14 @@
 import 'package:flutter/material.dart';
 
 import 'package:NouPartazer_App/Atish/components/PageTitle.dart';
-import 'package:NouPartazer_App/Atish/Pages/Story/Story.dart';
-import 'package:NouPartazer_App/Atish/Pages/Story/StoryList.dart';
+import 'package:NouPartazer_App/Atish/Pages/Story/BusinessStory/BusinessStory.dart';
+import 'package:NouPartazer_App/Atish/Pages/Story/BusinessStory/BusinessStoryList.dart';
 import 'package:NouPartazer_App/Atish/components/IconRaisedButton.dart';
 import 'package:NouPartazer_App/Atish/Pages/Donation/DonationModel.dart';
 
 class NGODonation extends StatelessWidget
 {
-  final List<Story> stories = storyList;
+  final List<BusinessStory> stories = businessStoryList;
 
   @override
   Widget build(BuildContext context)

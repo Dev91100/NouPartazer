@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import 'package:NouPartazer_App/Atish/Pages/Story/Story.dart';
-import 'package:NouPartazer_App/Atish/Pages/Story/StoryList.dart';
+import 'package:NouPartazer_App/Atish/Pages/Story/BusinessStory/BusinessStory.dart';
+import 'package:NouPartazer_App/Atish/Pages/Story/BusinessStory/BusinessStoryList.dart';
 import 'package:NouPartazer_App/Atish/Components/IconText.dart';
 import 'package:NouPartazer_App/Koomalai/src/Business%20Event%20Details/Business%20event%20details.dart';
 
 class ListTileModel extends StatelessWidget 
 {
-  final List<Story> stories = storyList;
+  final List<BusinessStory> stories = businessStoryList;
 
   @override
   Widget build(BuildContext context)

@@ -1,8 +1,7 @@
 //import 'package:NouPartazer_App/Koomalai/src/NGO%20Donation/NGO%20donation.dart';
-import 'package:NouPartazer_App/Atish/Pages/Story/StoryModel.dart';
+import 'package:NouPartazer_App/Atish/Pages/Story/BusinessStory/BusinessStoryModel.dart';
 import 'package:NouPartazer_App/Koomalai/src/NGO%20donation/NGO%20donation.dart';
 import 'package:NouPartazer_App/Koomalai/src/NGO%20profile/NGOProfile.dart';
-import 'package:NouPartazer_App/Koomalai/src/pages/homePage.dart';
 import 'package:NouPartazer_App/Koomalai/src/pages/orderPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +26,7 @@ class _TaskMainScreenState extends State<TaskMainScreen> {
   int currentIndex =4;
   List<Widget> pages;
   Widget currentPage;
-  StoryModel homePage;
+  BusinessStoryModel homePage;
   NGOProfile profilePage;
   OrderPage orderPage;
   NGODonation donation;
@@ -36,7 +35,7 @@ class _TaskMainScreenState extends State<TaskMainScreen> {
   @override
   void initState() {
     super.initState();
-    homePage=StoryModel();
+    homePage=BusinessStoryModel();
     profilePage=NGOProfile();
     orderPage=OrderPage();
     donation= NGODonation();

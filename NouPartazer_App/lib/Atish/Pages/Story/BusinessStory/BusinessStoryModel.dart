@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
-import './Story.dart';
+import 'BusinessStory.dart';
 import './InfoTab.dart';
 import './TagsTab.dart';
-import './StoryList.dart';
-import '../../components/PageTitle.dart';
+import './BusinessStoryList.dart';
+import 'package:NouPartazer_App/Atish/components/PageTitle.dart';
 
-class StoryModel extends StatelessWidget 
+class BusinessStoryModel extends StatelessWidget 
 {
-  final List<Story> stories = storyList;
+  final List<BusinessStory> businessStory = businessStoryList;
 
   @override
   Widget build(BuildContext context)
@@ -54,7 +54,7 @@ class StoryModel extends StatelessWidget
                     enlargeCenterPage: false,
                   ),
 
-                  items: stories.map((st)
+                  items: businessStory.map((st)
                   {
                     return Card
                     (

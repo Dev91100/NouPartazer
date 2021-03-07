@@ -6,7 +6,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import 'package:NouPartazer_App/Atish/components/EditIconButton.dart';
 import 'package:NouPartazer_App/Atish/components/EditPhotoButton.dart';
-import 'package:NouPartazer_App/Atish/Pages/Story/StoryModelProfile.dart';
+import 'package:NouPartazer_App/Atish/Pages/Story/BusinessStory/BusinessStoryModelProfile.dart';
 import 'package:NouPartazer_App/Atish/components/SectionTitle.dart';
 import 'package:NouPartazer_App/Atish/components/CustomDivider.dart';
 import 'package:NouPartazer_App/Atish/components/LongText.dart';
@@ -151,7 +151,7 @@ class NGOProfile extends StatelessWidget
                       title: 'MY STORIES',
                     ),
 
-                    StoryModelProfile(),
+                    BusinessStoryModelProfile(),
                   ],
                 ),
                 
