@@ -4,16 +4,16 @@ import 'dart:async';
 
 import '../../../Koomalai/Screens/Login/login_screen.dart';
 
-class SpashScreen extends StatefulWidget {
-  SpashScreen({Key key, this.title}) : super(key: key);
+class SplashScreen extends StatefulWidget {
+  SplashScreen({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _SpashScreenState createState() => _SpashScreenState();
+  _SplashScreenState createState() => _SplashScreenState();
 }
 
-class _SpashScreenState extends State<SpashScreen> {
+class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();

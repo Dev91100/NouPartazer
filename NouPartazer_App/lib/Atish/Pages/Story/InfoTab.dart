@@ -24,7 +24,7 @@ class InfoTab extends StatelessWidget
           color: new Color.fromRGBO(245, 197, 41, 1),
           width: 1.5
         ),
-        borderRadius: BorderRadius.all(Radius.circular(10)),
+        borderRadius: BorderRadius.all(Radius.circular(5)),
       ),
       child:
       Row

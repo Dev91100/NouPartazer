@@ -3,18 +3,17 @@ import 'package:NouPartazer_App/Koomalai/src/Business%20Confirmed%20events/Busin
 import 'package:NouPartazer_App/Koomalai/src/Business%20Detailed%20profile/BusinessDetailedProfile.dart';
 import 'package:NouPartazer_App/Koomalai/src/Business%20Event%20Ongoing/Business%20event%20ongoing.dart';
 import 'package:flutter/material.dart';
+
 import 'package:url_launcher/url_launcher.dart';
+import 'package:NouPartazer_App/Atish/components/IconText.dart';
+import 'package:NouPartazer_App/Atish/components/SectionTitle.dart';
+import 'package:NouPartazer_App/Atish/components/LongText.dart';
+import 'package:NouPartazer_App/Atish/components/ContainerIconText.dart';
+import 'package:NouPartazer_App/Atish/components/ContainerText.dart';
+import 'package:NouPartazer_App/Atish/components/ButtonIconText.dart';
 
-import 'package:carousel_slider/carousel_slider.dart';
-
-import 'package:NouPartazer_App/Atish/Pages/Story/Story.dart';
-import 'package:NouPartazer_App/Atish/Pages/Story/InfoTab.dart';
-import 'package:NouPartazer_App/Atish/Pages/Story/TagsTab.dart';
-import 'package:NouPartazer_App/Atish/Pages/Story/StoryList.dart';
-import 'package:NouPartazer_App/Atish/components/PageTitle.dart';
-
-    class BusinessOngoingEvent extends StatelessWidget {
-
+class BusinessOngoingEvent extends StatelessWidget
+{
   @override
   Widget build(BuildContext context)
   {
@@ -25,101 +24,210 @@ import 'package:NouPartazer_App/Atish/components/PageTitle.dart';
         return Scaffold
         (
           body: ListView
-          ( 
+          (
             children:
             [
               Card
               (
-                child: Column
+                elevation: 2,
+                margin: EdgeInsets.all(20),
+                child: Container
                 (
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children:
-                  [
-                    Row
-                    (
-                      mainAxisSize: MainAxisSize.max,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-
-                      children:
-                      [
-                        Container
-                        (
-                          width: 80,
-                          height: 80,
-                          color: Colors.amber,
-                        ),
-
-                        Card
-                        (
-                          child: Column
-                          (
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children:
-                            [
-                              Row
-                              (
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children:
-                                [
-                                  Text
-                                  (
-                                    '19/01/2021',
-                                    style: TextStyle
-                                    (
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold
-                                    ),
-                                  ),
-                                  Text
-                                  (
-                                    '19:00 - 00:30',
-                                    style: TextStyle
-                                    (
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Container
-                              (
-                                width: constraints.maxWidth * 0.7,
-                                padding: EdgeInsets.only
-                                (
-                                  bottom: 5
-                                ),
-                                child: SingleChildScrollView
-                                (
-                                  scrollDirection: Axis.horizontal,
-                                  child: Text
-                                  (
-                                    'Jumbo SupermarketJumbo SupermarketJumbo SupermarketJumbo Supermarket',
-                                    overflow: TextOverflow.ellipsis,
-                                    style: TextStyle
-                                    (
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w400,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                    Text
-                    (
-                      'Grocery Donation',
-                      style: TextStyle
+                  padding: EdgeInsets.all(10),
+                  child: Column
+                  (
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children:
+                    [
+                      Container
                       (
-                        fontSize: 22,
-                        fontWeight: FontWeight.bold
+                        constraints: BoxConstraints
+                        (
+                          minHeight: 80,
+                        ),
+                        child: Row
+                        (
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+
+                          children:
+                          [
+                            Container
+                            (
+                              width: 65,
+                              height: 65,
+                              color: Colors.amber,
+                            ),
+
+                            Card
+                            (
+                              elevation: 2,
+                              child: Padding
+                              (
+                                padding: const EdgeInsets.all(10),
+                                child: Container
+                                (
+                                  child: Column
+                                  (
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children:
+                                    [
+                                      Row
+                                      (
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        crossAxisAlignment: CrossAxisAlignment.center,
+                                        children:
+                                        [
+                                          IconText
+                                          (
+                                            text: '19/01/2021',
+                                            icon: Icons.insert_invitation_outlined,
+                                            fontSize: 15,
+                                            // boxRight: 10,
+                                            R: 0,
+                                            G: 0,
+                                            B: 0,
+                                            O: 1,
+                                          ),
+
+                                          IconText
+                                          (
+                                            text: '19:00 - 00:30',
+                                            icon: Icons.query_builder_outlined,
+                                            fontSize: 15,
+                                            R: 0,
+                                            G: 0,
+                                            B: 0,
+                                            O: 1,
+                                          ),
+                                        ],
+                                      ),
+
+                                      Container
+                                      (
+                                        // width: constraints.maxWidth * 0.2,
+                                        padding: EdgeInsets.only
+                                        (
+                                          top: 5,
+                                        ),
+                                        child: IconText
+                                        (
+                                          text: 'Jumbo Supermarket',
+                                          icon: Icons.location_on_outlined,
+                                          fontSize: 15,
+                                          R: 0,
+                                          G: 0,
+                                          B: 0,
+                                          O: 1,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                    Text('Description'),
-                  ],
+                      Container
+                      (
+                        margin: EdgeInsets.only(top: 10),
+                        child: SectionTitle
+                        (
+                          title: 'Grocery Donation',
+                          left: 0,
+                          right: 0,
+                        ),
+                      ),
+                      
+                      Container
+                      (
+                        margin: EdgeInsets.only(top: 10),
+                        constraints: BoxConstraints
+                        (
+                          maxHeight: constraints.maxHeight * 0.25,
+                        ),
+                        child: LongText
+                        (
+                          title: "MANZER PARTAZER is the the first food sharing project of Mauritius. Our aim is to reduce the wastage of high quality ready to eat food by simply sharing it!"
+                                "We ‘save’ food which would otherwise go to waste, such as buffet leftovers in hotels or restaurants, donating it to people in need through a very simple and no-cost food sharing system.or restaurants, donating it to people in need through a very simple and no-cost food sharing system.or restaurants, donating it to people in need through a very simple and no-cost food sharing system.or restaurants, donating it to people in need through a very simple and no-cost food sharing system.",
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          left: 0,
+                          right: 0
+                        ),
+                      ),
+                      Container
+                      (
+                        margin: EdgeInsets.only(top: 30),
+                        child: Row
+                        (
+                          children:
+                          [
+                            ContainerIconText
+                            (
+                              text: 'Status',
+                              icon: Icons.online_prediction_outlined,
+                              fontSize: 18,
+                              mRight: 15,
+                            ),
+                            ContainerText
+                            (
+                              text: 'Pending',
+                              borderWidth: 1.5,
+                              TextR: 245,
+                              TextG: 197,
+                              TextB: 41,
+                              BorderR: 245,
+                              BorderG: 197,
+                              BorderB: 41,
+                              BorderO: 1,
+                              BoxR: 255,
+                              BoxG: 248,
+                              BoxB: 97,
+                              BoxO: 0.2,
+                              pLeft: 40,
+                              pRight: 40,
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container
+                      (
+                        margin: EdgeInsets.only(top: 20),
+                        child: Row
+                        (
+                          mainAxisSize: MainAxisSize.max,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children:
+                          [
+                            ButtonIconText
+                            (
+                              text: 'View Details',
+                              icon: Icons.visibility_outlined,
+                              iconRight: 5,
+                            ),
+
+                            Container
+                            (
+                              margin: EdgeInsets.only(left: 15),
+                              child: ButtonIconText
+                              (
+                                text: 'Call',
+                                icon: Icons.phone_forwarded,
+                                iconRight: 5,
+
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],

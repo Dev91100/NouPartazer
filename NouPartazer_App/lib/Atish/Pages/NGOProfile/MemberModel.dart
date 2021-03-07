@@ -19,7 +19,7 @@ class MemberModel extends StatelessWidget
       {
         return Container
         (
-          height: screen.height * 0.5,
+          height: screen.height * 0.6,
           child: ListView
           (
             shrinkWrap: true,

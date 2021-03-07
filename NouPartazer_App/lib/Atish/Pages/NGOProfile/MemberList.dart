@@ -36,5 +36,19 @@ final List<Member> memberList =
     name: 'John DaSilva',
     position: 'Co-founder and Director'
   ),
+
+  Member
+  (
+    image: './assets/JPEG/Man.jpg',
+    name: 'John DaSilva',
+    position: 'Co-founder and Director'
+  ),
+  
+  Member
+  (
+    image: './assets/JPEG/Man.jpg',
+    name: 'John DaSilva',
+    position: 'Co-founder and Director'
+  ),
   
 ];

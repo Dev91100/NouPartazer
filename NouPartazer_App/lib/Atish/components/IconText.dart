@@ -8,6 +8,11 @@ class IconText extends StatelessWidget
   final double fontSize;
   final IconData icon;
   final FontWeight fontWeight;
+  final double boxLeft;
+  final double boxTop;
+  final double boxRight;
+  final double boxBottom;
+  final double iconRight;
 
   IconText
   (
@@ -16,6 +21,11 @@ class IconText extends StatelessWidget
       this.icon,
       this.fontSize = 18,
       this.fontWeight = FontWeight.w600,
+      this.boxLeft = 0,
+      this.boxTop = 0,
+      this.boxRight = 0,
+      this.boxBottom = 0,
+      this.iconRight = 0,
       this.R = 0,
       this.G = 0,
       this.B = 0,
@@ -26,26 +36,40 @@ class IconText extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Row
+    return Container
     (
-      children:
-      [
-        Icon
-        (
-          icon,
-          color: Color.fromRGBO(R, G, B, O),
-        ),
-        Text
-        (
-          text,
-          style: TextStyle
+      margin: EdgeInsets.fromLTRB
+      (
+        boxLeft,
+        boxTop,
+        boxRight,
+        boxBottom
+      ),
+      child: Row
+      (
+        children:
+        [
+          Container
           (
-            color: Color.fromRGBO(R, G, B, O),
-            fontWeight: fontWeight,
-            fontSize: fontSize,
+            margin: EdgeInsets.only(right: iconRight),
+            child: Icon
+            (
+              icon,
+              color: Color.fromRGBO(R, G, B, O),
+            ),
           ),
-        ),
-      ],
+          Text
+          (
+            text,
+            style: TextStyle
+            (
+              color: Color.fromRGBO(R, G, B, O),
+              fontWeight: fontWeight,
+              fontSize: fontSize,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
