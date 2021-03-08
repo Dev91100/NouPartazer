@@ -53,101 +53,122 @@ class TaskModel extends StatelessWidget
               (
                 minHeight: 80,
               ),
-              child: Row
+              child: Padding
               (
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.center,
-
-                children:
-                [
-                  Container
-                  (
-                    width: 65,
-                    height: 65,
-                    decoration: BoxDecoration
+                padding: const EdgeInsets.only
+                (
+                  left: 0,
+                  right: 0,
+                  top: 10,
+                  bottom: 10,
+                ),
+                
+                child: Row
+                (
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children:
+                  [
+                    Container
                     (
-                      image: DecorationImage
+                      margin: EdgeInsets.only
                       (
-                        image: AssetImage(image),
-                        fit: BoxFit.cover,
-                      )
+                        right: 10
+                      ),
+                      width: 60,
+                      height: 60,
+                      decoration: BoxDecoration
+                      (
+                        image: DecorationImage
+                        (
+                          image: AssetImage(image),
+                          fit: BoxFit.cover,
+                        ),
+                        borderRadius: BorderRadius.circular(80.0),
+                      ),
                     ),
-                  ),
 
-                  Card
-                  (
-                    elevation: 2,
-                    child: Padding
+                    Expanded
                     (
-                      padding: const EdgeInsets.all(10),
                       child: Container
                       (
                         child: Column
                         (
-                          mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children:
+                          children: 
                           [
-                            Row
-                            (
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children:
-                              [
-                                Container
-                                (
-                                  margin: EdgeInsets.only(right: 10),
-                                  child: IconText
-                                  (
-                                    text: date,
-                                    icon: Icons.insert_invitation_outlined,
-                                    fontSize: 15,
-                                    // boxRight: 10,
-                                    R: 51,
-                                    G: 51,
-                                    B: 51,
-                                    O: 1,
-                                  ),
-                                ),
-
-                                IconText
-                                (
-                                  text: time,
-                                  icon: Icons.query_builder_outlined,
-                                  fontSize: 15,
-                                  R: 51,
-                                  G: 51,
-                                  B: 51,
-                                  O: 1,
-                                ),
-                              ],
-                            ),
-
                             Container
                             (
-                              // width: constraints.maxWidth * 0.2,
-                              padding: EdgeInsets.only
+                              padding: EdgeInsets.only(bottom: 10),
+                              child: SingleChildScrollView
                               (
-                                top: 5,
+                                scrollDirection: Axis.horizontal,
+                                child: Row
+                                (
+                                  children:
+                                  [
+                                    Container
+                                    (
+                                      margin: EdgeInsets.only(right: 10),
+                                      child: IconText
+                                      (
+                                        text: date,
+                                        icon: Icons.insert_invitation_outlined,
+                                        fontSize: 15,
+                                        R: 0,
+                                        G: 0,
+                                        B: 0,
+                                        O: 1,
+                                      ),
+                                    ),
+                                    
+                                    IconText
+                                    (
+                                      text: time,
+                                      icon: Icons.query_builder_outlined,
+                                      fontSize: 15,
+                                      R: 0,
+                                      G: 0,
+                                      B: 0,
+                                      O: 1,
+                                    ),
+                                  ],
+                                ),
                               ),
-                              child: IconText
-                              (
-                                text: locationName,
-                                icon: Icons.location_on_outlined,
-                                fontSize: 15,
-                                R: 51,
-                                G: 51,
-                                B: 51,
-                                O: 1,
-                              ),
+                            ),
+                            Row
+                            (
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children:
+                              [
+                                Expanded
+                                (
+                                  child: Container
+                                  (
+                                    padding: EdgeInsets.only(bottom: 5),
+                                    child: SingleChildScrollView
+                                    (
+                                      scrollDirection: Axis.horizontal,
+                                      child: IconText
+                                      (
+                                        text: locationName,
+                                        icon: Icons.location_on_outlined,
+                                        fontSize: 15,
+                                        R: 0,
+                                        G: 0,
+                                        B: 0,
+                                        O: 1,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
                           ],
                         ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
             Container
