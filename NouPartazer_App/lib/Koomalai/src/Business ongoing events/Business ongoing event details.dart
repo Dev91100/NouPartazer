@@ -37,6 +37,7 @@ class BusinessOngoingEvent extends StatelessWidget
                       [
                         TaskModel
                         (
+                          constraints: constraints,
                           image: tk.image,
                           description: tk.description,
                           locationName: tk.locationName,
