@@ -66,15 +66,17 @@ class _EditInfoState extends State<EditInfo>
   builder: (context) => SingleChildScrollView
   (
     child: Column
+
     (
-    mainAxisSize: MainAxisSize.min,
-    children:
+      crossAxisAlignment: CrossAxisAlignment.end ,
+      mainAxisSize: MainAxisSize.min,
+      children:
     [
       IconButton
       (
         icon: Icon(Icons.close),
         //alignment: Alignment.topRight,
-        padding: EdgeInsets.only(left: 350),
+        //padding: EdgeInsets.only(left: 200),
         onPressed: ()
         {
           //Put your code here which you want to execute on close button click.
@@ -150,14 +152,16 @@ class _EditInfoState extends State<EditInfo>
     
       Container
       (
+        margin: EdgeInsets.only(top: 20, bottom: 15),
         child: Row
         (
+         mainAxisAlignment: MainAxisAlignment.center,
           children:
           [
-            Padding
-            (
-              padding: EdgeInsets.all(50.0),
-            ),
+            // Padding
+            // (
+            //   padding: EdgeInsets.all(50.0),
+            // ),
             TextButton
             (
               child: Text

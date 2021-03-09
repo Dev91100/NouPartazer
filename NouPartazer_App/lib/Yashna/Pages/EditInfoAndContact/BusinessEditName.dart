@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:NouPartazer_App/Yashna/components/EditInfo.dart';
 
-class BusinessEditContact extends StatelessWidget
+class BusinessEditName extends StatelessWidget
 {
   @override
   Widget build(BuildContext context)
@@ -10,12 +10,12 @@ class BusinessEditContact extends StatelessWidget
     return EditInfo
     (
       title: 'TEST',
-      icon1: Icons.language,
-      icon2: Icons.email_outlined,
-      icon3: Icons.phone_outlined,
-      text1: 'WEBSITE',
-      text2: 'EMAIL',
-      text3: 'PHONE',
+      icon1: Icons.perm_identity,
+      icon2: Icons.title,
+      icon3: Icons.notes,
+      text1: 'BUSINESS NAME',
+      text2: 'SUBTITLE',
+      text3: 'DESCRIPTION',
     );
   }
 }

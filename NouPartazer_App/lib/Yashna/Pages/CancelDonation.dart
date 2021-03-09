@@ -20,12 +20,13 @@ class _CancelDonationState extends State {
           data: ButtonBarThemeData
           (
             alignment: MainAxisAlignment.center,
-            buttonPadding: EdgeInsets.all(20),
+            //buttonPadding: EdgeInsets.all(20),
             mainAxisSize: MainAxisSize.min,
             
           ),
         
         child: AlertDialog(
+          contentPadding: EdgeInsets.all(0),
           shape: RoundedRectangleBorder
             ( 
               borderRadius: BorderRadius.circular(10),
@@ -34,12 +35,13 @@ class _CancelDonationState extends State {
             ),
 
         title: Row(
+          crossAxisAlignment: CrossAxisAlignment.end,
+           mainAxisAlignment: MainAxisAlignment.end,
           children:<Widget>
           [ 
             IconButton(
             icon: Icon(Icons.close),
-            alignment: Alignment.topRight,
-            padding: EdgeInsets.only(left: 240),
+           
             onPressed: () {
               //Put your code here which you want to execute on close button click.
               Navigator.of(context).pop();
@@ -50,7 +52,7 @@ class _CancelDonationState extends State {
             ]
            ),
 
-         contentPadding: EdgeInsets.only(left: 22, right: 30),
+         //contentPadding: EdgeInsets.only(left: 22, right: 30),
          content: ListTile(
           title:Text('Please tick the checkbox to confirm.',
               textAlign: TextAlign.justify,
@@ -64,7 +66,7 @@ class _CancelDonationState extends State {
          
         subtitle: CheckboxListTile(
         title: Text("I agree to terminate this request for the donation.",
-            textAlign: TextAlign.justify,
+            textAlign: TextAlign.left,
             style: TextStyle
               (
               fontWeight: FontWeight.bold,
