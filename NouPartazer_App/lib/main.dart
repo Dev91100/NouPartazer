@@ -4,7 +4,7 @@ import 'package:NouPartazer_App/Yashna/Pages/EditInfoAndContact/BusinessEditName
 import 'package:NouPartazer_App/Yashna/Pages/EditInfoAndContact/NGOEditName.dart';
 import 'package:NouPartazer_App/Koomalai/constants.dart';
 import 'package:NouPartazer_App/Atish/Pages/SplashScreen/SplashScreen.dart';
-import 'package:NouPartazer_App/Yashna/Pages/CancelDonation.dart';
+import 'package:NouPartazer_App/Yashna/components/Confirmation.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget
         primaryColor: kPrimaryColor,
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: CancelDonation(),
+      home: Confirmation(),
     );
   }
 }
