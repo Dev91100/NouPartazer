@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'package:NouPartazer_App/Koomalai/constants.dart';
+import 'Atish/Pages/SplashScreen/SplashScreen.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget
@@ -7,9 +10,19 @@ class MyApp extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return MaterialApp(
+    return MaterialApp
+    (
+      debugShowCheckedModeBanner: false,
       title: 'NouPartazer',
-      home: , // <-- Insert page class here
+      theme: ThemeData
+      (
+        primaryColor: kPrimaryColor,
+        scaffoldBackgroundColor: Colors.white,
+      ),
+      home: SplashScreen(),
     );
   }
 }
+
+
+
