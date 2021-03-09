@@ -4,17 +4,18 @@ class Confirmation extends StatefulWidget {
 
 final String text;
 
-const Confirmation(
+const Confirmation
+(
   {
     @required this.text,
-}  
+  }  
 );
 
   _ConfirmationState createState() => _ConfirmationState();
  
 }
 bool _isSelected = false;
-class _ConfirmationState extends State {
+class _ConfirmationState extends State<Confirmation> {
  
   showAlert(BuildContext context) {
     showDialog(
@@ -72,28 +73,30 @@ class _ConfirmationState extends State {
               )
             ),
          
-        subtitle: CheckboxListTile(
-        title: Text(
-           text,
+        subtitle: CheckboxListTile
+        (
+          title: Text
+          (
+            widget.text,
             textAlign: TextAlign.left,
             style: TextStyle
-              (
-              fontWeight: FontWeight.bold,
-               fontSize: 15.0,
-               color: Color.fromRGBO(41, 90, 245, 1),
-              )
-              ),
+            (
+            fontWeight: FontWeight.bold,
+              fontSize: 15.0,
+              color: Color.fromRGBO(41, 90, 245, 1),
+            )
+          ),
 
-              controlAffinity: ListTileControlAffinity.leading,
-              value: _isSelected,
-              onChanged: (bool value){
-              setState(() {
-                             _isSelected = value;
+            controlAffinity: ListTileControlAffinity.leading,
+            value: _isSelected,
+            onChanged: (bool value){
+            setState(() {
+                            _isSelected = value;
 
-                            });
+                          });
 
-           },
-           )
+          },
+        )
 
         ),
       
