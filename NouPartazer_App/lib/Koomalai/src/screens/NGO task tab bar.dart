@@ -1,11 +1,11 @@
 import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'package:NouPartazer_App/Koomalai/src/Business%20Cancelled%20events/Business%20cancelled%20event%20details.dart';
 import 'package:NouPartazer_App/Koomalai/src/Business%20completedEvent%20Details/Business%20completed%20event%20details.dart';
 import 'package:NouPartazer_App/Koomalai/src/Business%20ongoing%20events/Business%20ongoing%20event%20details.dart';
-import 'package:NouPartazer_App/Atish/components/PageTitle.dart';
 
 class NGOTaskTab extends StatefulWidget
 {
@@ -50,25 +50,23 @@ class _NGOTaskTabState extends State<NGOTaskTab>
 
         appBar: AppBar
         (
-          backgroundColor: Colors.white,
-
-          title: Container
+          automaticallyImplyLeading: false,
+          centerTitle: true,
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          title: Text
           (
-            margin: EdgeInsets.only
+            'TASKS', // Text Parameter
+            style: GoogleFonts.comfortaa
             (
-              right: 50.0
-            ),
-            alignment: Alignment.center,
-            child:  Text
-            (
-              "TASKS",
-              style: TextStyle
+              textStyle: TextStyle
               (
-                color: Colors.black
+                fontWeight: FontWeight.bold,
+                fontSize: 18,
+                color: new Color.fromRGBO(0, 0, 0, 1),
               ),
             ),
           ),
-
           bottom: TabBar
           (
             indicatorColor: Colors.black,
@@ -86,20 +84,29 @@ class _NGOTaskTabState extends State<NGOTaskTab>
             
             tabs:
             [
-              Tab
+              FittedBox
               (
-              text: "ONGOING",
+                child: Tab
+                (
+                  text: 'ONGOING',
+                ),
               ),
-              Tab
+              FittedBox
               (
-                text:"COMPLETED",
+                child: Tab
+                (
+                  text: 'COMPLETED',
+                ),
               ),
-              Tab
+              FittedBox
               (
-                text:"CANCELLED",
+                child: Tab
+                (
+                  text: 'CANCELLED',
+                ),
               ),
             ],
-          ),
+          ), 
         ),
       ),
     );

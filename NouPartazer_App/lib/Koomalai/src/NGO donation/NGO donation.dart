@@ -20,7 +20,9 @@ class NGODonation extends StatelessWidget
       {
         return Scaffold
         (
-          body: Container(
+          appBar: PageTitle(text: 'DONATIONS'),
+          body: Container
+          (
             child: Column
             (
               // Makes column fit the size of its children
@@ -29,11 +31,6 @@ class NGODonation extends StatelessWidget
               crossAxisAlignment: CrossAxisAlignment.end,
               children:
               [
-                PageTitle
-                (
-                  title: 'DONATIONS',
-                ),
-
                 Container
                 (
                   margin: EdgeInsets.only
