@@ -1,29 +1,12 @@
 import 'package:flutter/material.dart';
  
-void main() => runApp(MyApp());
+class CancelDonation extends StatefulWidget {
  
-class MyApp extends StatelessWidget {
- 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Scaffold(
-            body: Center(
-              child: AlertWithIcon(
-              )
-              )
-            )
-          );
-  }
-}
- 
-class AlertWithIcon extends StatefulWidget {
- 
-  AlertWithIconWidget createState() => AlertWithIconWidget();
+  _CancelDonationState createState() => _CancelDonationState();
  
 }
 bool _isSelected = false;
-class AlertWithIconWidget extends State {
+class _CancelDonationState extends State {
  
   showAlert(BuildContext context) {
     showDialog(

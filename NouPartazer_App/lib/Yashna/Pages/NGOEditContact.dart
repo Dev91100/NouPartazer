@@ -1,31 +1,17 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  final String title = 'Bottom Dialog';
-
-  @override
-  Widget build(BuildContext context) => MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: title,
-        theme: ThemeData(primarySwatch: Colors.blue),
-        home: MainPage(title: title),
-      );
-}
-
-class MainPage extends StatefulWidget {
+class NGOEditContact extends StatefulWidget {
   final String title;
 
-  const MainPage({
+  const NGOEditContact({
     @required this.title,
   });
 
   @override
-  _MainPageState createState() => _MainPageState();
+  _NGOEditContactState createState() => _NGOEditContactState();
 }
 
-class _MainPageState extends State<MainPage> {
+class _NGOEditContactState extends State<NGOEditContact> {
   get actions => null;
 
 
@@ -190,9 +176,14 @@ class _MainPageState extends State<MainPage> {
               
                ),
             ],
-          )          
+          )
+         
+           
            
            ),
+
+        
+
         ]
         ),
       ));

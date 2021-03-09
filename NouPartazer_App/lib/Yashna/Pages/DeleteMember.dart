@@ -1,29 +1,12 @@
 import 'package:flutter/material.dart';
  
-void main() => runApp(MyApp());
+class DeleteMember extends StatefulWidget {
  
-class MyApp extends StatelessWidget {
- 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Scaffold(
-            body: Center(
-              child: AlertWithIcon(
-              )
-              )
-            )
-          );
-  }
-}
- 
-class AlertWithIcon extends StatefulWidget {
- 
-  AlertWithIconWidget createState() => AlertWithIconWidget();
+  DeleteMemberState createState() => DeleteMemberState();
  
 }
  
-class AlertWithIconWidget extends State {
+class DeleteMemberState extends State {
  
   showAlert(BuildContext context) {
     showDialog(

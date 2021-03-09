@@ -1,31 +1,17 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  final String title = 'Bottom Dialog';
-
-  @override
-  Widget build(BuildContext context) => MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: title,
-        theme: ThemeData(primarySwatch: Colors.blue),
-        home: MainPage(title: title),
-      );
-}
-
-class MainPage extends StatefulWidget {
+class BusinessEditContact extends StatefulWidget {
   final String title;
 
-  const MainPage({
+  const BusinessEditContact({
     @required this.title,
   });
 
   @override
-  _MainPageState createState() => _MainPageState();
+  _BusinessEditContactState createState() => _BusinessEditContactState();
 }
 
-class _MainPageState extends State<MainPage> {
+class _BusinessEditContactState extends State<BusinessEditContact> {
   get actions => null;
 
 
@@ -81,8 +67,8 @@ class _MainPageState extends State<MainPage> {
               ),
                   
         ListTile(
-            leading: Icon(Icons.perm_identity),
-            title: Text("NGO NAME",
+            leading: Icon(Icons.language),
+            title: Text("WEBSITE",
             style: TextStyle
                     (
                       color: Color.fromRGBO(102, 102, 102, 1),
@@ -101,8 +87,8 @@ class _MainPageState extends State<MainPage> {
         ),
           
          ListTile(
-            leading: Icon(Icons.title),
-            title: Text("SUBTITLE",
+            leading: Icon(Icons.email_outlined),
+            title: Text("EMAIL",
             style: TextStyle
                     (
                       color: Color.fromRGBO(102, 102, 102, 1),
@@ -121,8 +107,8 @@ class _MainPageState extends State<MainPage> {
          ),
            
            ListTile(
-            leading: Icon(Icons.notes),
-            title: Text("DESCRIPTION",
+            leading: Icon(Icons.phone_outlined),
+            title: Text("PHONE",
             style: TextStyle
                     (
                       color: Color.fromRGBO(102, 102, 102, 1),
@@ -190,14 +176,9 @@ class _MainPageState extends State<MainPage> {
               
                ),
             ],
-          )
-         
-           
+          )          
            
            ),
-
-        
-
         ]
         ),
       ));

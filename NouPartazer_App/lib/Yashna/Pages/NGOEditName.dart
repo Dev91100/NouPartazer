@@ -1,34 +1,18 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  final String title = 'Bottom Dialog';
-
-  @override
-  Widget build(BuildContext context) => MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: title,
-        theme: ThemeData(primarySwatch: Colors.blue),
-        home: MainPage(title: title),
-      );
-}
-
-class MainPage extends StatefulWidget {
+class NGOEditName extends StatefulWidget {
   final String title;
 
-  const MainPage({
+  const NGOEditName({
     @required this.title,
   });
 
   @override
-  _MainPageState createState() => _MainPageState();
+  _NGOEditNameState createState() => _NGOEditNameState();
 }
 
-class _MainPageState extends State<MainPage> {
+class _NGOEditNameState extends State<NGOEditName> {
   get actions => null;
-
-
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -82,7 +66,7 @@ class _MainPageState extends State<MainPage> {
                   
         ListTile(
             leading: Icon(Icons.perm_identity),
-            title: Text("BUSINESS NAME",
+            title: Text("NGO NAME",
             style: TextStyle
                     (
                       color: Color.fromRGBO(102, 102, 102, 1),
