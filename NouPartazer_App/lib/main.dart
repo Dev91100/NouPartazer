@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:NouPartazer_App/Koomalai/constants.dart';
-import 'Atish/Pages/SplashScreen/SplashScreen.dart';
+import 'package:NouPartazer_App/Atish/Pages/SplashScreen/SplashScreen.dart';
 
 void main() => runApp(MyApp());
 
