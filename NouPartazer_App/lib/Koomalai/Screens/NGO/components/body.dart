@@ -30,7 +30,8 @@ class Body extends StatelessWidget {
   TextEditingController regNumber,name,expertise,memberSize,address,phone,website,email,password;
 
 
-   Future register(String RegistrationNumber,String RegisteredName,String NGOExpertise,String MemberSize,String Address,String Website,String PhoneNumber) async {
+   //Future register(String RegistrationNumber,String RegisteredName,String NGOExpertise,String MemberSize,String Address,String Website,String PhoneNumber) async {
+   Future register() async {
 
     var url = "https://foodsharingapp.000webhostapp.com/register.php";
 
@@ -83,14 +84,25 @@ class Body extends StatelessWidget {
       "Password":password.text,
     };*/
 
+    // var res = await http.post(url,body: /*body: */{
+    // "RegistrationNumber":regNumber,
+    // "RegisteredName":name,
+    // "NGOExpertise":expertise,
+    // "MemberSize":memberSize,
+    // "Address":address,
+    // "Website":website,
+    // "PhoneNumber":phone,
+    // /*:data*/
+    // });
+
     var res = await http.post(url,body: /*body: */{
-    "RegistrationNumber":regNumber,
-    "RegisteredName":name,
-    "NGOExpertise":expertise,
-    "MemberSize":memberSize,
-    "Address":address,
-    "Website":website,
-    "PhoneNumber":phone,
+      "RegistrationNumber":"1234",
+      "RegisteredName":"Testing",
+      "NGOExpertise":"Test",
+      "MemberSize":"100",
+      "Address":"Test Address",
+      "Website":"Test@test.com",
+      "PhoneNumber":"54874511",
     /*:data*/
     });
 
@@ -508,8 +520,8 @@ class Body extends StatelessWidget {
                 ),
                 /*press: () {}*/
                 press:() {
-                  register(regNumber.text,name.text,expertise.text,memberSize.text,address.text,
-                  website.text, phone.text);
+                  //register(regNumber.text,name.text,expertise.text,memberSize.text,address.text,
+                  register();
 
                 },
 

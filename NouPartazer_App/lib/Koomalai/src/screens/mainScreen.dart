@@ -5,7 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'NGO task tab bar.dart';
-import 'package:NouPartazer_App/Atish/Pages/Story/StoryModel.dart';
+import 'package:NouPartazer_App/Atish/Pages/Story/BusinessStory/BusinessStoryModel.dart';
 
 class MainScreen extends StatefulWidget
 {
@@ -25,7 +25,7 @@ class _MainScreenState extends State<MainScreen>
   int currentIndex =0;
   List<Widget> pages;
   Widget currentPage;
-  StoryModel homePage;
+  BusinessStoryModel homePage;
   NGOProfile profilePage;
   OrderPage orderPage;
   NGODonation donation;
@@ -35,7 +35,7 @@ class _MainScreenState extends State<MainScreen>
   void initState()
   {
     super.initState();
-    homePage=StoryModel();
+    homePage=BusinessStoryModel();
     profilePage=NGOProfile();
     orderPage=OrderPage();
     donation= NGODonation();

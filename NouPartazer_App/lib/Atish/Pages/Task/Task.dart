@@ -1,13 +1,13 @@
 import 'package:flutter/foundation.dart';
 
-class Story
+class Task
 {
   @required
   final String image;
 
-  final String description, locationName, locationAddress, date, time, tag, foodType;
+  final String description, locationName, locationAddress, date, time, tag, foodType, status;
 
-  Story
+ Task
   ({
     this.image,
     this.description,
@@ -15,7 +15,8 @@ class Story
     this.locationAddress,
     this.date, this.time,
     this.tag,
-    this.foodType
+    this.foodType,
+    this.status,
   });
 
 }
