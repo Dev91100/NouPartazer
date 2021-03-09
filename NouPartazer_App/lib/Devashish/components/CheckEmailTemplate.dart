@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_practice/components/TheOutlinedButtons.dart';
-import 'package:flutter_practice/components/YellowTitlePara.dart';
+import 'package:NouPartazer_App/Devashish/components/TheOutlinedButtons.dart';
+import 'package:NouPartazer_App/Devashish/components/YellowTitlePara.dart';
 // import 'package:google_fonts/google_fonts.dart';
-import 'package:flutter_practice/components/TheBackButton.dart';
-import 'package:flutter_practice/components/YellowTitles.dart';
+import 'package:NouPartazer_App/Devashish/components/TheBackButton.dart';
+import 'package:NouPartazer_App/Devashish/components/YellowTitles.dart';
 
 class CheckEmailTemplate extends StatelessWidget 
 {

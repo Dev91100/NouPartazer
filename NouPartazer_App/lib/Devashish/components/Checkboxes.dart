@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_practice/components/FieldTitle.dart';
+import 'package:NouPartazer_App/Devashish/components/FieldTitle.dart';
 
 class Checkboxes extends StatefulWidget {
 

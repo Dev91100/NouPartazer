@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_practice/components/TheOutlinedButtons.dart';
-import 'package:flutter_practice/components/TheBackButton.dart';
-import 'package:flutter_practice/components/YellowTitles.dart';
-import 'package:flutter_practice/components/YellowTitlePara.dart';
+import 'package:NouPartazer_App/Devashish/components/TheOutlinedButtons.dart';
+import 'package:NouPartazer_App/Devashish/components/TheBackButton.dart';
+import 'package:NouPartazer_App/Devashish/components/YellowTitles.dart';
+import 'package:NouPartazer_App/Devashish/components/YellowTitlePara.dart';
 
 class ForgotPassword extends StatelessWidget {
   final formKey = GlobalKey<FormState>();

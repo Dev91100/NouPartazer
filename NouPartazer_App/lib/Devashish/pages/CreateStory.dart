@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_practice/Atish/components/PageTitle.dart';
-import 'package:flutter_practice/components/FieldTitle.dart';
-import 'package:flutter_practice/components/SubTitle.dart';
-import 'package:flutter_practice/components/TextFields.dart';
-import 'package:flutter_practice/components/TheOutlinedButtons.dart';
-import 'package:flutter_practice/components/UploadImage.dart';
+import 'package:NouPartazer_App/Atish/components/PageTitle.dart';
+import 'package:NouPartazer_App/Devashish/components/FieldTitle.dart';
+import 'package:NouPartazer_App/Devashish/components/SubTitle.dart';
+import 'package:NouPartazer_App/Devashish/components/TextFields.dart';
+import 'package:NouPartazer_App/Devashish/components/TheOutlinedButtons.dart';
+import 'package:NouPartazer_App/Devashish/components/UploadImage.dart';
 // import 'package:google_fonts/google_fonts.dart';
 
 class CreateStory extends StatelessWidget {
@@ -21,6 +21,7 @@ class CreateStory extends StatelessWidget {
       {
         return Scaffold
         (
+          appBar: PageTitle(text: 'CREATE STORY',),
           body: SingleChildScrollView
           (
             key: formKey, 
@@ -29,10 +30,7 @@ class CreateStory extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children:
               [
-              Container
-              (
-                child: PageTitle(title: 'CREATE STORY',)
-              ),
+
 
               Container
               (
