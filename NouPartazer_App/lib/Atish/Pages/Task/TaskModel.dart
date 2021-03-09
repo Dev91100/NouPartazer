@@ -211,6 +211,10 @@ class TaskModel extends StatelessWidget
                     icon: Icons.online_prediction_outlined,
                     fontSize: 18,
                     mRight: 15,
+                    IconR: 255,
+                    IconG: 255,
+                    IconB: 255,
+                    IconO: 1,
                   ),
                   ContainerText
                   (

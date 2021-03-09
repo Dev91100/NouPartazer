@@ -4,13 +4,15 @@ class IconText extends StatelessWidget
 {
   final String text;
   final int R, G, B;
+  final int IconR, IconG, IconB;
   final double O;
+  final double IconO;
   final double fontSize;
   final IconData icon;
   final double iconSize;
   final FontWeight fontWeight;
   final double iconRight;
-
+  
   IconText
   (
     {
@@ -24,6 +26,10 @@ class IconText extends StatelessWidget
       this.G = 0,
       this.B = 0,
       this.O = 1,
+      this.IconR = 0,
+      this.IconG = 0,
+      this.IconB = 0,
+      this.IconO = 1,
     }
   );
 
@@ -45,7 +51,7 @@ class IconText extends StatelessWidget
             (
               icon,
               size: iconSize,
-              color: Color.fromRGBO(R, G, B, O),
+              color: Color.fromRGBO(IconR, IconG, IconB, IconO),
             ),
           ),
         ),

@@ -12,11 +12,14 @@ class ContainerIconText extends StatelessWidget
   final double BoxO;
   final int TextR, TextG, TextB;
   final double TextO;
+  final int IconR, IconG, IconB;
+  final double IconO;
 
   final double borderWidth;
   final double borderRadius;
 
   final String text;
+  final FontWeight fontWeight;
   final IconData icon;
   final double iconSize;
   final double fontSize;
@@ -25,6 +28,7 @@ class ContainerIconText extends StatelessWidget
   (
     {
       this.text = 'Test',
+      this.fontWeight = FontWeight.normal,
       this.icon = Icons.not_listed_location,
       this.iconSize = 25,
       this.fontSize = 18, 
@@ -48,6 +52,11 @@ class ContainerIconText extends StatelessWidget
       this.TextG    = 255,
       this.TextB    = 255,
       this.TextO    = 1,
+      this.IconR    = 255,
+      this.IconG    = 255,
+      this.IconB    = 255,
+      this.IconO    = 1,
+      
       this.borderRadius = 5,
       this.borderWidth  = 0
     }
@@ -59,10 +68,15 @@ class ContainerIconText extends StatelessWidget
       icon: icon,
       iconSize: iconSize,
       fontSize: fontSize,
+      fontWeight: fontWeight,
       R: TextR,
       G: TextG,
       B: TextB,
-      O: TextO
+      O: TextO,
+      IconR: IconR,
+      IconG: IconG,
+      IconB: IconB,
+      IconO: IconO,
     );
   }
 
@@ -102,10 +116,15 @@ class ContainerIconText extends StatelessWidget
         icon: icon,
         iconSize: iconSize,
         fontSize: fontSize,
+        fontWeight: fontWeight,
         R: TextR,
         G: TextG,
         B: TextB,
         O: TextO,
+        IconR: IconR,
+        IconG: IconG,
+        IconB: IconB,
+        IconO: IconO,
       ),
     );
   }

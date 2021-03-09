@@ -9,6 +9,8 @@ class ButtonIconText extends StatelessWidget
   final String text;
   final int TextR, TextG, TextB;
   final double TextO;
+  final int IconR, IconG, IconB;
+  final double IconO;
   final double fontSize;
   final IconData icon;
   final FontWeight fontWeight;
@@ -28,6 +30,10 @@ class ButtonIconText extends StatelessWidget
       this.TextG = 255,
       this.TextB = 255,
       this.TextO = 1,
+      this.IconR  = 255,
+      this.IconG  = 255,
+      this.IconB  = 255,
+      this.IconO  = 1,
       this.ButtonR = 0,
       this.ButtonG = 50,
       this.ButtonB = 193,
@@ -46,6 +52,10 @@ class ButtonIconText extends StatelessWidget
       G: TextG,
       B: TextB,
       O: TextO,
+      IconR: IconR,
+      IconG: IconG,
+      IconB: IconB,
+      IconO: IconO,
       iconRight: iconRight,
     );
   }
@@ -71,6 +81,10 @@ class ButtonIconText extends StatelessWidget
         G: TextG,
         B: TextB,
         O: TextO,
+        IconR: IconR,
+        IconG: IconG,
+        IconB: IconB,
+        IconO: IconO,
         iconRight: iconRight,
       ),
       onPressed: ()

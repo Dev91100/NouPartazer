@@ -25,10 +25,13 @@ class TagsTab extends StatelessWidget
         borderRadius: BorderRadius.all(Radius.circular(40)),
       ),
       child:
-      Row(
+      Row
+      (
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Container(
+        children:
+        [
+          Container
+          (
             margin: EdgeInsets.fromLTRB(5, 5, 5, 5),
             child: Text
             (

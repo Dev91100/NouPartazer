@@ -183,6 +183,10 @@ class DonationModel extends StatelessWidget
                                   G: 50,
                                   B: 193,
                                   O: 1,
+                                  IconR: 0,
+                                  IconG: 50,
+                                  IconB: 193,
+                                  IconO: 1,
                                 ),
                                 
                                 IconText
