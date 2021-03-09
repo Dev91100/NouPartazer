@@ -12,6 +12,10 @@ class EditIconButton extends StatelessWidget {
   @required
   final double left, top, right, bottom;
   final double size;
+  final double elevation;
+
+  final int R, G, B;
+  final double O;
 
   EditIconButton
   (
@@ -26,12 +30,19 @@ class EditIconButton extends StatelessWidget {
       this.right,
       this.bottom,
       this.size,
+      this.elevation = 2,
+      this.R = 102,
+      this.G = 102,
+      this.B = 102,
+      this.O = 1,
     }
   );
 
   @override
-  Widget build(BuildContext context) {
-    return LayoutBuilder(
+  Widget build(BuildContext context)
+  {
+    return LayoutBuilder
+    (
         builder: (ctx, constraints)
         {
           return Container
@@ -54,20 +65,11 @@ class EditIconButton extends StatelessWidget {
             (
               color: Colors.white,
               shape: BoxShape.circle,
-              boxShadow:
-              [
-                BoxShadow
-                (
-                  color: Colors.black.withOpacity(0.2),
-                  spreadRadius: 2,
-                  blurRadius: 2,
-                  offset: Offset(0, 2), // changes position of shadow
-                ),
-              ],
             ),
 
             child: RaisedButton
             (
+              elevation: elevation,
               padding: EdgeInsets.all(0),
               color: Colors.white,
               shape: RoundedRectangleBorder
@@ -99,7 +101,7 @@ class EditIconButton extends StatelessWidget {
               child: Icon
               (
                 icon,
-                color: Color.fromRGBO(102, 102, 102, 1),
+                color: Color.fromRGBO(R, G, B, O),
                 size: size,
               ),
             ),

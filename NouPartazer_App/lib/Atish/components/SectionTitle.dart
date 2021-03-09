@@ -6,7 +6,7 @@ class SectionTitle extends StatelessWidget {
   final String title;
 
   final double fontSize;
-  final double top;
+  final double top, left, right;
   final int R, G, B;
   final double O;
 
@@ -14,8 +14,10 @@ class SectionTitle extends StatelessWidget {
   (
     {
       this.title,
-      this.fontSize = 23,
+      this.fontSize = 22,
       this.top = 0,
+      this.left = 20,
+      this.right = 20,
       this.R = 0,
       this.G = 0,
       this.B = 0,
@@ -37,14 +39,13 @@ class SectionTitle extends StatelessWidget {
             margin: EdgeInsets.only
             (
               top: top,
-              left: 20,
-              right: 20
+              left: left,
+              right: right
             ),
             child: 
             Text
             (
               title,
-              overflow: TextOverflow.ellipsis,
               style: TextStyle
               (
                 color: Color.fromRGBO(R, G, B, O),
