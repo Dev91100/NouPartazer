@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import 'BusinessStory.dart';
 import './BusinessStoryList.dart';
@@ -8,13 +7,20 @@ import 'package:NouPartazer_App/Atish/components/PageTitle.dart';
 import 'package:NouPartazer_App/Atish/components/ContainerIconText.dart';
 import 'package:NouPartazer_App/Atish/components/ContainerText.dart';
 
-class BusinessStoryModel extends StatelessWidget 
+class BusinessStoryModel extends StatefulWidget 
 {
+  @override
+  _BusinessStoryModelState createState() => _BusinessStoryModelState();
+}
+
+class _BusinessStoryModelState extends State<BusinessStoryModel> {
   final List<BusinessStory> businessStory = businessStoryList;
 
   @override
   Widget build(BuildContext context)
   {
+    final screen = MediaQuery.of(context).size;
+
     return LayoutBuilder
     (
       builder: (ctx, constraints)
@@ -35,7 +41,7 @@ class BusinessStoryModel extends StatelessWidget
               (
                 options: CarouselOptions
                 (
-                  height: constraints.maxHeight,
+                  height: screen.height * 0.77,
                   initialPage: 0,
                   viewportFraction: 0.92,
                   enableInfiniteScroll: false,
@@ -56,7 +62,6 @@ class BusinessStoryModel extends StatelessWidget
                     (
                       left: constraints.maxHeight * 0.01,
                       right: constraints.maxHeight * 0.01,
-                      bottom: constraints.maxHeight * 0.12
                     ),
                     // STORY BACKGROUND
                     child: Container

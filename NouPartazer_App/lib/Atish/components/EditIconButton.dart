@@ -17,6 +17,10 @@ class EditIconButton extends StatelessWidget {
   final int R, G, B;
   final double O;
 
+  @required
+  final bool testPage;
+  final Function addStory;
+
   EditIconButton
   (
     {
@@ -35,6 +39,8 @@ class EditIconButton extends StatelessWidget {
       this.G = 102,
       this.B = 102,
       this.O = 1,
+      this.testPage,
+      this.addStory
     }
   );
 
@@ -80,6 +86,8 @@ class EditIconButton extends StatelessWidget {
               // the second function is executed
               onPressed: () 
               {
+                (testPage) ?
+                addStory(image: './assets/JPEG/blue.jpeg', title: 'Test', description: 'Test', tag: 'Test') :
                 (isModalPage) ?
                 showModalBottomSheet
                 (
