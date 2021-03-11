@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 
+import 'package:NouPartazer_App/Atish/Pages/Story/BusinessStory/BusinessStory.dart';
+import 'package:NouPartazer_App/Atish/Pages/Story/BusinessStory/BusinessStoryList.dart';
 import 'package:NouPartazer_App/Atish/components/IconText.dart';
 import 'package:NouPartazer_App/Koomalai/src/Business%20Event%20Details/Business%20event%20details.dart';
 
 
-class DonationModel extends StatelessWidget
+class NGOList extends StatelessWidget
 {
+  final List<BusinessStory> businessStory = businessStoryList;
   final String image, tag, date, locationName;
 
-  DonationModel
+  NGOList
   (
     {
       this.image,

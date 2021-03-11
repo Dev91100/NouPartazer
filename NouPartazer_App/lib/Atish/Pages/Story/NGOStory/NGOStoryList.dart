@@ -4,14 +4,14 @@ final List<NGOStory> ngoStoryList =
 [
   NGOStory
   (
-    image: './assets/JPEG/batelage.jpeg',
+    image: './assets/JPEG/Child.jpg',
     title: 'test',
-    description: 'This is a test',
+    description: 'This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test ',
     tag: 'This is a tag test',
   ),
   NGOStory
   (
-    image: './assets/JPEG/cofee.jpeg',
+    image: './assets/JPEG/StoriesBG.jpg',
     title: 'test',
     description: 'This is a test',
     tag: 'This is a tag test',

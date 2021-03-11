@@ -2,9 +2,11 @@
 import 'package:NouPartazer_App/Koomalai/src/Business%20NGO%20profile/BusinessNGOProfile.dart';
 import 'package:flutter/material.dart';
 
-class BusinessNGOList extends StatelessWidget {
+class BusinessNGOList extends StatelessWidget
+{
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context)
+  {
     return Scaffold(
       body: Stack(
         fit: StackFit.expand,

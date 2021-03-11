@@ -7,13 +7,13 @@ import 'package:NouPartazer_App/Atish/components/PageTitle.dart';
 import 'package:NouPartazer_App/Atish/components/LongText.dart';
 import 'package:NouPartazer_App/Atish/components/ContainerText.dart';
 
-class BusinessHomePage extends StatefulWidget 
+class NGOStoryModel extends StatefulWidget 
 {
   @override
-  _BusinessHomePageState createState() => _BusinessHomePageState();
+  _NGOStoryModelState createState() => _NGOStoryModelState();
 }
 
-class _BusinessHomePageState extends State<BusinessHomePage> {
+class _NGOStoryModelState extends State<NGOStoryModel> {
   final List<NGOStory> ngoStory = ngoStoryList;
 
   @override
