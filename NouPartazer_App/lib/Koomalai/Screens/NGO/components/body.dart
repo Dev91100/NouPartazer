@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:NouPartazer_App/Devashish/pages/CheckEmailValidation.dart';
 import 'package:NouPartazer_App/Koomalai/Screens/Signup/signup_screen.dart';
 import 'package:NouPartazer_App/Koomalai/components/rounded_button.dart';
 import 'package:NouPartazer_App/Koomalai/components/rounded_input.dart';
@@ -522,6 +523,15 @@ class Body extends StatelessWidget {
                 press:() {
                   //register(regNumber.text,name.text,expertise.text,memberSize.text,address.text,
                   register();
+
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return CheckEmailValidation();
+                      },
+                    ),
+                  );
 
                 },
 

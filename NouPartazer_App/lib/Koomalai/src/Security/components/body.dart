@@ -70,7 +70,7 @@ class Body extends StatelessWidget {
 
           RoundedButton(
             text: "Done",
-            color:Color.fromRGBO(245, 197, 41, 1),
+            color:Color.fromRGBO(245, 197, 41, 0.2),
             textColor: Color.fromRGBO(245, 197, 41, 1),
 
             shape: RoundedRectangleBorder(
@@ -397,7 +397,7 @@ class Body extends StatelessWidget {
             /* SizedBox(height: size.height * 0.03),*/
             RoundedButton(
               text: "Change Password",
-              color:Color.fromRGBO(245, 197, 41, 1),
+              color:Color.fromRGBO(245, 197, 41, 0.2),
               textColor: Color.fromRGBO(245, 197, 41, 1),
 
               shape: RoundedRectangleBorder(
@@ -405,10 +405,9 @@ class Body extends StatelessWidget {
                 side: BorderSide(color:Color.fromRGBO(245, 197, 41, 1)),
               ),
 
-              press: (){
+              press: () {
                 CreateAlertDialog(context);
-              },
-
+              }
             ),
 
             SizedBox(
@@ -431,6 +430,7 @@ class Body extends StatelessWidget {
 
               onTap: () {
                 AccountAlertDialog(context);
+
               },
             ),
           /*Container(
