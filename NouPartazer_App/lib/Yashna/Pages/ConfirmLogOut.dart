@@ -1,69 +1,12 @@
-// import 'package:flutter/material.dart';
-
-// class LanguageConfirmation extends StatefulWidget {
-//   LanguageConfirmation({Key key, this.title}) : super(key: key);
-
-//   final String title;
-
-//   @override
-//   _LanguageConfirmationState createState() => _LanguageConfirmationState();
-// }
-
-// class _LanguageConfirmationState extends State<LanguageConfirmation> {
-
-// String valueChoose;
-// List listItem = [
-// "English"
-// ];
-
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Text(widget.title),
-//       ),
-//       body: Center(
-//         child: DropdownButton(
-//           value: valueChoose,
-//           onChanged: (newValue){
-//           setState((){
-//           valueChoose = newValue;
-//           });
-//           },
-//           items: listItem.map((valueItem) {
-//            return DropdownMenuItem(
-//             value: valueItem,
-//             child: Text(valueItem),
-          
-          
-         
-//           ).tolist(),
-//          ),
-//         ),
-//        )
-//       }
-
-
-
-//       floatingActionButton: FloatingActionButton(
-//         onPressed: _incrementCounter,
-//         tooltip: 'Increment',
-//         child: Icon(Icons.add),
-//       ), // This trailing comma makes auto-formatting nicer for build methods.
-//     );
-//   }
-// }
-
 import 'package:flutter/material.dart';
  
-class LanguageConfirmation extends StatefulWidget {
+class ConfirmLogOut extends StatefulWidget {
  
-  LanguageConfirmationState createState() => LanguageConfirmationState();
+  ConfirmLogOutState createState() => ConfirmLogOutState();
  
 }
  
-class LanguageConfirmationState extends State {
+class ConfirmLogOutState extends State {
  
   showAlert(BuildContext context) {
     showDialog(
@@ -107,7 +50,7 @@ class LanguageConfirmationState extends State {
             ]
            ),
 
-         content: Text('Choose your language.',
+         content: Text('Please confirm logout!',
               textAlign: TextAlign.center,
               style: TextStyle
               (
@@ -141,17 +84,17 @@ class LanguageConfirmationState extends State {
           ),
  
            OutlinedButton(
-            child: Text("Save",
+            child: Text("Logout",
              style: TextStyle
                   (
-                    color: Color.fromRGBO(245, 197, 41, 1),
+                    color: Color.fromRGBO(212, 0, 0, 1),
                     fontSize: 20.0,
                                      
                   ),
             ),
              style: OutlinedButton.styleFrom(
                     backgroundColor: Colors.red[50],
-                    side: BorderSide(color: Color.fromRGBO(245, 197, 41, 1), width: 1.5),
+                    side: BorderSide(color: Color.fromRGBO(212, 0, 0, 1), width: 1.5),
                     primary: Color.fromRGBO(212, 0, 0, 1),
                     shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(7))),
                   

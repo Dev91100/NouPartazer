@@ -9,7 +9,8 @@ import 'package:NouPartazer_App/Yashna/Pages/ConfirmationDialog/CancelDonation.d
 import 'package:NouPartazer_App/Yashna/Pages/ConfirmationDialog/AcceptDonation.dart';
 import 'package:NouPartazer_App/Yashna/Pages/ConfirmationDialog/CancelEvent.dart';
 import 'package:NouPartazer_App/Yashna/Pages/NGOEditMembers.dart';
-
+import 'package:NouPartazer_App/Yashna/Pages/ConfirmLogOut.dart';
+import 'package:NouPartazer_App/Yashna/Pages/LanguageConfirmation.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget
         primaryColor: kPrimaryColor,
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: SplashScreen(),
+      home: AcceptDonation(),
     );
   }
 }
