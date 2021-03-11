@@ -30,7 +30,7 @@ class _BusinessProfileMainScreenState extends State<BusinessProfileMainScreen> {
   OrderPage orderPage;
   BusinessTask taskTab;
 
-  BusinessNGOList NGOList;
+  NGOCentresList NGOList;
   @override
   void initState() {
     super.initState();
@@ -39,7 +39,7 @@ class _BusinessProfileMainScreenState extends State<BusinessProfileMainScreen> {
     orderPage=OrderPage();
     taskTab=BusinessTask();
 
-    NGOList=BusinessNGOList();
+    NGOList=NGOCentresList();
 
     pages=[homePage,profilePage,orderPage, taskTab,NGOList];
     currentPage=profilePage;

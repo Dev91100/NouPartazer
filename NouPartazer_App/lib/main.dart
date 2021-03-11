@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget
         primaryColor: kPrimaryColor,
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: NGOEditMembers(),
+      home: SplashScreen(),
     );
   }
 }

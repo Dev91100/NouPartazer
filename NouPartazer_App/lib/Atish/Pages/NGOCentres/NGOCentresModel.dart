@@ -1,23 +1,32 @@
 import 'package:flutter/material.dart';
 
-import 'package:NouPartazer_App/Atish/Pages/Story/BusinessStory/BusinessStory.dart';
-import 'package:NouPartazer_App/Atish/Pages/Story/BusinessStory/BusinessStoryList.dart';
-import 'package:NouPartazer_App/Atish/components/IconText.dart';
 import 'package:NouPartazer_App/Koomalai/src/Business%20Event%20Details/Business%20event%20details.dart';
 
 
-class NGOCentresList extends StatelessWidget
+class NGOCentresModel extends StatelessWidget
 {
-  final List<BusinessStory> businessStory = businessStoryList;
-  final String image, tag, date, locationName;
+  final String profilePhoto;
+  final String bannerPhoto;
+  final String name;
+  final String expertise;
+  final int size;
+  final String address;
+  final String phone;
+  final String website;
+  final String description;
 
-  NGOCentresList
+  NGOCentresModel
   (
     {
-      this.image,
-      this.tag,
-      this.date,
-      this.locationName
+      this.profilePhoto,
+      this.bannerPhoto,
+      this.name,
+      this.expertise,
+      this.size,
+      this.address,
+      this.phone,
+      this.website,
+      this.description,
     }
   );
 
@@ -73,7 +82,7 @@ class NGOCentresList extends StatelessWidget
                   (
                     image: DecorationImage
                     (
-                      image: AssetImage(image),
+                      image: AssetImage(profilePhoto),
                       fit: BoxFit.cover,
                     ),
                     borderRadius: BorderRadius.circular(80.0),
@@ -104,7 +113,7 @@ class NGOCentresList extends StatelessWidget
                                   scrollDirection: Axis.horizontal,
                                   child: Text
                                   (
-                                    tag,
+                                    name,
                                     style: TextStyle
                                     (
                                       fontSize: 18,
@@ -114,42 +123,9 @@ class NGOCentresList extends StatelessWidget
                                 ),
                               ),
                             ),
-
-                            Container
-                            (
-                              padding: EdgeInsets.only(bottom: 10),
-                              child: Row
-                              (
-                                children:
-                                [
-                                  Container
-                                  (
-                                    margin: EdgeInsets.only
-                                    (
-                                      left: 20,
-                                      right: 10
-                                    ),
-                                    child: Icon
-                                    (
-                                      Icons.fastfood,
-                                      color: Color.fromRGBO(255, 84, 62, 1),
-                                      size: 18
-                                    ),
-                                  ),
-                                  Container
-                                  (  
-                                    child: Icon
-                                    (
-                                      Icons.no_food,
-                                      color: Color.fromRGBO(0, 163, 68, 1),
-                                      size: 18
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
                           ],
                         ),
+
                         Container
                         (
                           width: double.infinity,
@@ -168,37 +144,7 @@ class NGOCentresList extends StatelessWidget
                           child: SingleChildScrollView
                           (
                             scrollDirection: Axis.horizontal,
-                            child: Row
-                            (
-                              children:
-                              [
-                                IconText
-                                (
-                                  text: date,
-                                  icon: Icons.event,
-                                  fontSize: 15,
-                                  R: 0,
-                                  G: 50,
-                                  B: 193,
-                                  O: 1,
-                                  IconR: 0,
-                                  IconG: 50,
-                                  IconB: 193,
-                                  IconO: 1,
-                                ),
-                                
-                                IconText
-                                (
-                                  text: locationName,
-                                  icon: Icons.location_on_outlined,
-                                  fontSize: 15,
-                                  R: 0,
-                                  G: 0,
-                                  B: 0,
-                                  O: 1,
-                                ),
-                              ],
-                            ),
+                            child: Text(description),
                           ),
                         ),
                       ],

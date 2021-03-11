@@ -29,7 +29,7 @@ class _NGOTaskMainScreenState extends State<NGOTaskMainScreen> {
   BusinessProfile profilePage;
   OrderPage orderPage;
   BusinessTask taskTab;
-  BusinessNGOList NGOList;
+  NGOCentresList NGOList;
 
   @override
   void initState() {
@@ -38,7 +38,7 @@ class _NGOTaskMainScreenState extends State<NGOTaskMainScreen> {
     profilePage=BusinessProfile();
     orderPage=OrderPage();
     taskTab=BusinessTask();
-    NGOList=BusinessNGOList();
+    NGOList=NGOCentresList();
 
     pages=[homePage,profilePage,orderPage,taskTab,NGOList];
     currentPage=taskTab;
