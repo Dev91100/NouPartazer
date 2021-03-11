@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
 File imageFile;
- 
+
 class BottomSheetWidget extends StatefulWidget {
   @override
   _BottomSheetWidgetState createState() => _BottomSheetWidgetState();

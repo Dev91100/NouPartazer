@@ -1,13 +1,63 @@
 import 'package:flutter/material.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:image_picker/image_picker.dart';
+import 'dart:io';
+import 'dart:convert';
+// import 'package:http/http.dart' as http;
 
 class UploadImage extends StatefulWidget {
   @override
   _UploadImageState createState() => _UploadImageState();
 }
 
-class _UploadImageState extends State<UploadImage> {
+
+class _UploadImageState extends State<UploadImage> 
+{
+
+  Future<File> file;
+  // String status = '';
+  // String base64Image;
+  // File tmpFile;
+  // String errMessage = 'Error Uploading Image';
+
+
+
+  chooseImage() {
+    setState(() {
+      file = ImagePicker.pickImage(source: ImageSource.gallery);
+    });
+    // setStatus('');
+  }
+
+  Widget showImage() {
+    return FutureBuilder<File>(
+      future: file,
+      builder: (BuildContext context, AsyncSnapshot<File> snapshot) {
+        if (snapshot.connectionState == ConnectionState.done &&
+            null != snapshot.data) {
+          // tmpFile = snapshot.data;
+          // base64Image = base64Encode(snapshot.data.readAsBytesSync());
+          return Flexible(
+            child: Image.file(
+              snapshot.data,
+              fit: BoxFit.fill,
+            ),
+          );
+        } else if (null != snapshot.error) {
+          return const Text(
+            'Error Picking Image',
+            textAlign: TextAlign.center,
+          );
+        } else {
+          return const Text(
+            'No Image Selected',
+            textAlign: TextAlign.center,
+          );
+        }
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) 
   {
@@ -17,8 +67,10 @@ class _UploadImageState extends State<UploadImage> {
     (
       builder: (ctx, constraints)
       {
+        
         return Container
         (
+          
           height: screen.size.height * 0.24,
           margin: EdgeInsets.only
           (
@@ -26,6 +78,7 @@ class _UploadImageState extends State<UploadImage> {
             left: constraints.maxWidth *0.062,
             bottom: screen.size.height * 0.02,
           ),
+          
           child: DottedBorder(
             strokeWidth: 2,
             dashPattern: [6, 3],
@@ -38,7 +91,7 @@ class _UploadImageState extends State<UploadImage> {
                   width: constraints.maxWidth * 0.42,
                   child: OutlinedButton(
                     
-                    onPressed: () {},
+                    onPressed: chooseImage,
                     style: OutlinedButton.styleFrom
                     (
                       primary: Colors.black,
