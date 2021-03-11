@@ -5,16 +5,13 @@ final List<NGOCentres> ngoStoryList =
   NGOCentres
   (
     profilePhoto: './assets/JPEG/Child.jpg',
-    bannerPhoto: ,
-    name: ,
-    expertise: ,
-    size: ,
-    address: ,
-    phone: ,
-    website: ,
-    description:
+    bannerPhoto: '',
+    name: '',
+    expertise: '',
+    size: 5,
+    address: '',
+    phone: '',
+    website: '',
+    description: ''
   ),
-  
-
-  
 ];

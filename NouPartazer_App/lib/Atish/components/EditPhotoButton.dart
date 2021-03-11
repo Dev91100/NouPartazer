@@ -16,7 +16,7 @@ class EditPhotoButton extends StatelessWidget
       this.L = 0.05,
       this.T = 0.05,
       this.R = 0.07,
-      this.B = 0.05
+      this.B = 0.05,
       this.height = 40,
       this.width = 40,
     }
