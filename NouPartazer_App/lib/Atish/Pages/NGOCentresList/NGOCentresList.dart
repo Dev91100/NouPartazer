@@ -6,12 +6,12 @@ import 'package:NouPartazer_App/Atish/components/IconText.dart';
 import 'package:NouPartazer_App/Koomalai/src/Business%20Event%20Details/Business%20event%20details.dart';
 
 
-class NGOList extends StatelessWidget
+class NGOCentresList extends StatelessWidget
 {
   final List<BusinessStory> businessStory = businessStoryList;
   final String image, tag, date, locationName;
 
-  NGOList
+  NGOCentresList
   (
     {
       this.image,
@@ -28,7 +28,6 @@ class NGOList extends StatelessWidget
     (
       margin: EdgeInsets.only
       (
-        // top: top,
         left: 10,
         right: 10,
       ),
@@ -36,7 +35,6 @@ class NGOList extends StatelessWidget
       (
         margin: EdgeInsets.only
         (
-          // top: 10,
           bottom: 5
         ),
         child: RaisedButton
