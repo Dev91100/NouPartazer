@@ -6,14 +6,17 @@ final double rightConstr;
 final double bottomConstr;
 final double leftConstr;
 final String message;
+final Function press;
+
 
 TheOutlinedButtons
 (
   {   
-  this.rightConstr = 0.062,
-  this.bottomConstr = 0.03,
-  this.leftConstr = 0.062,
-  this.message,
+    this.rightConstr = 0.062,
+    this.bottomConstr = 0.03,
+    this.leftConstr = 0.062,
+    this.message,
+    this.press,
   }
 );
 
@@ -36,7 +39,7 @@ TheOutlinedButtons
           ),
           // padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
           child: OutlinedButton(
-            onPressed: () {},
+            onPressed: press,
             style: OutlinedButton.styleFrom
             (
               primary: Colors.amber[100],

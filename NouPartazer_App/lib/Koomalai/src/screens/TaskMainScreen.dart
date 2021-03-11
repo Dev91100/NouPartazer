@@ -1,5 +1,6 @@
 //import 'package:NouPartazer_App/Koomalai/src/NGO%20Donation/NGO%20donation.dart';
 import 'package:NouPartazer_App/Atish/Pages/Story/BusinessStory/BusinessStoryModel.dart';
+import 'package:NouPartazer_App/Devashish/pages/CreateStory.dart';
 import 'package:NouPartazer_App/Koomalai/src/NGO%20donation/NGO%20donation.dart';
 import 'package:NouPartazer_App/Koomalai/src/NGO%20profile/NGOProfile.dart';
 import 'package:NouPartazer_App/Koomalai/src/pages/orderPage.dart';
@@ -28,7 +29,7 @@ class _TaskMainScreenState extends State<TaskMainScreen> {
   Widget currentPage;
   BusinessStoryModel homePage;
   NGOProfile profilePage;
-  OrderPage orderPage;
+  CreateStory story;
   NGODonation donation;
 
   NGOTaskTab task;
@@ -37,11 +38,11 @@ class _TaskMainScreenState extends State<TaskMainScreen> {
     super.initState();
     homePage=BusinessStoryModel();
     profilePage=NGOProfile();
-    orderPage=OrderPage();
+    story= CreateStory();
     donation= NGODonation();
 
     task=NGOTaskTab();
-    pages=[homePage,profilePage,orderPage,donation,task];
+    pages=[homePage,profilePage,story,donation,task];
     currentPage= task;
 
   }

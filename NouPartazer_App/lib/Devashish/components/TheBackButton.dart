@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 
 class TheBackButton extends StatelessWidget {
+  final Function press;
 
-  TheBackButton();
+  TheBackButton({
+    Key key,
+
+    this.press,
+
+  }) : super(key: key);
+  /*TheBackButton();*/
   @override
   Widget build(BuildContext context) {
     final screen = MediaQuery.of(context);
@@ -21,8 +28,8 @@ class TheBackButton extends StatelessWidget {
             child: IconButton
             (
               icon: Icon(Icons.keyboard_arrow_left),  
-              iconSize: 70,  
-              onPressed: () {}, 
+              iconSize: 70,
+              onPressed: press,
             ), 
           ),          
         );

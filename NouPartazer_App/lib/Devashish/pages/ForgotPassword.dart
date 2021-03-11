@@ -1,3 +1,4 @@
+import 'package:NouPartazer_App/Koomalai/Screens/Login/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:NouPartazer_App/Devashish/components/TheOutlinedButtons.dart';
@@ -5,9 +6,14 @@ import 'package:NouPartazer_App/Devashish/components/TheBackButton.dart';
 import 'package:NouPartazer_App/Devashish/components/YellowTitles.dart';
 import 'package:NouPartazer_App/Devashish/components/YellowTitlePara.dart';
 
+import 'CheckResetPW.dart';
+
 class ForgotPassword extends StatelessWidget {
+
   final formKey = GlobalKey<FormState>();
   final _emailController = TextEditingController();
+
+
   @override
   Widget build(BuildContext context) 
   {
@@ -21,7 +27,20 @@ class ForgotPassword extends StatelessWidget {
         [
           Container
           (
-            child: TheBackButton()
+            child: TheBackButton(
+                press: () {
+
+                  Colors.white;
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return LoginScreen();
+                      },
+                    ),
+                  );
+                }
+            )
           ),
 
           Container
@@ -70,7 +89,22 @@ class ForgotPassword extends StatelessWidget {
 
           Container
           (
-            child: TheOutlinedButtons(message: 'Send Email',)
+            child: TheOutlinedButtons(
+              message: 'Send Email',
+                press: () {
+
+                  Colors.white;
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return CheckResetPW();
+                      },
+                    ),
+                  );
+                }
+
+            )
           )
         ]
       )

@@ -1,3 +1,4 @@
+import 'package:NouPartazer_App/Koomalai/Screens/Login/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:NouPartazer_App/Devashish/components/TheOutlinedButtons.dart';
 import 'package:NouPartazer_App/Devashish/components/YellowTitlePara.dart';
@@ -36,7 +37,20 @@ class CheckEmailTemplate extends StatelessWidget
               (
                 children: 
                 [
-                  TheBackButton(),
+                  TheBackButton(
+                      press: () {
+
+                        Colors.white;
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return LoginScreen();
+                            },
+                          ),
+                        );
+                      }
+                  ),
 
                   Icon
                   (
@@ -66,7 +80,22 @@ class CheckEmailTemplate extends StatelessWidget
 
                   SizedBox(height: constraints.maxHeight * 0.04,),
 
-                  TheOutlinedButtons(message: theButtonName,),
+                  TheOutlinedButtons(
+                    message: theButtonName,
+                      press: () {
+
+                        Colors.white;
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return LoginScreen();
+                            },
+                          ),
+                        );
+                      }
+
+                  ),
                 ],
               ),
             ),

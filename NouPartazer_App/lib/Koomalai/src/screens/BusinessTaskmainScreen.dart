@@ -1,3 +1,4 @@
+import 'package:NouPartazer_App/Devashish/pages/CreateEvent.dart';
 import 'package:NouPartazer_App/Koomalai/src/Business%20NGO%20list/BusinessNGO%20list.dart';
 import 'package:NouPartazer_App/Koomalai/src/Business%20profile/BusinessProfile.dart';
 import 'package:NouPartazer_App/Koomalai/src/pages/businessHomePage.dart';
@@ -27,7 +28,7 @@ class _BusinessTaskMainScreenState extends State<BusinessTaskMainScreen> {
   Widget currentPage;
   BusinessHomePage homePage;
   BusinessProfile profilePage;
-  OrderPage orderPage;
+  CreateEvent event;
   BusinessTask taskTab;
   BusinessNGOList NGOList;
 
@@ -36,11 +37,11 @@ class _BusinessTaskMainScreenState extends State<BusinessTaskMainScreen> {
     super.initState();
     homePage=BusinessHomePage();
     profilePage=BusinessProfile();
-    orderPage=OrderPage();
+    event=CreateEvent();
     taskTab=BusinessTask();
     NGOList=BusinessNGOList();
 
-    pages=[homePage,profilePage,orderPage,taskTab,NGOList];
+    pages=[homePage,profilePage,event,taskTab,NGOList];
     currentPage=taskTab;
 
   }
