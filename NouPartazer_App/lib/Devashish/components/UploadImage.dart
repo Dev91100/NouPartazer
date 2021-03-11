@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:dotted_border/dotted_border.dart';
+import 'package:flutter/rendering.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 import 'dart:convert';
@@ -20,8 +21,6 @@ class _UploadImageState extends State<UploadImage>
   // File tmpFile;
   // String errMessage = 'Error Uploading Image';
 
-
-
   chooseImage() {
     setState(() {
       file = ImagePicker.pickImage(source: ImageSource.gallery);
@@ -30,6 +29,7 @@ class _UploadImageState extends State<UploadImage>
   }
 
   Widget showImage() {
+    final screen = MediaQuery.of(context);
     return FutureBuilder<File>(
       future: file,
       builder: (BuildContext context, AsyncSnapshot<File> snapshot) {
@@ -37,10 +37,12 @@ class _UploadImageState extends State<UploadImage>
             null != snapshot.data) {
           // tmpFile = snapshot.data;
           // base64Image = base64Encode(snapshot.data.readAsBytesSync());
-          return Flexible(
+          return Container(
+                height: screen.size.height * 0.24,
+                width: screen.size.width * 0.876,
             child: Image.file(
               snapshot.data,
-              fit: BoxFit.fill,
+              fit: BoxFit.contain,
             ),
           );
         } else if (null != snapshot.error) {
@@ -67,30 +69,52 @@ class _UploadImageState extends State<UploadImage>
     (
       builder: (ctx, constraints)
       {
-        
-        return Container
-        (
-          
-          height: screen.size.height * 0.24,
-          margin: EdgeInsets.only
+        return Center(
+          child: Stack
           (
-            right: constraints.maxWidth * 0.062,
-            left: constraints.maxWidth *0.062,
-            bottom: screen.size.height * 0.02,
-          ),
-          
-          child: DottedBorder(
-            strokeWidth: 2,
-            dashPattern: [6, 3],
-            radius: Radius.circular(4),
-            borderType: BorderType.RRect,
-            child: ClipRRect(
-            borderRadius: BorderRadius.all(Radius.circular(12)),
-              child: Center(
-                child: Container(
+            alignment: AlignmentDirectional.center,
+            children: 
+            [
+              Container
+              (
+                height: screen.size.height * 0.24,
+                width: screen.size.width * 0.876, //(1 - (0.062 + 0.062))
+                margin: EdgeInsets.only
+                (
+                  right: constraints.maxWidth * 0.062,
+                  left: constraints.maxWidth *0.062,
+                  bottom: screen.size.height * 0.02,
+                ),
+
+                child: DottedBorder
+                (
+                  strokeWidth: 2,
+                  dashPattern: [6, 3],
+                  radius: Radius.circular(4),
+                  borderType: BorderType.RRect,
+                  child: ClipRRect(borderRadius: BorderRadius.all(Radius.circular(12)),),
+                ),
+              ),
+
+              Container
+              (
+
+                padding: EdgeInsets.only
+                (
+                  right: constraints.maxWidth * 0.01,
+                  left: constraints.maxWidth *0.01,
+                  bottom: screen.size.height * 0.01,
+                  // top: screen.size.height * 0.01,
+                ),
+                child: showImage()
+                
+              ),
+
+                Container
+                (
                   width: constraints.maxWidth * 0.42,
-                  child: OutlinedButton(
-                    
+                  child: OutlinedButton
+                  (                   
                     onPressed: chooseImage,
                     style: OutlinedButton.styleFrom
                     (
@@ -121,10 +145,70 @@ class _UploadImageState extends State<UploadImage>
                     ),
                   ),
                 ),
-              )
-            )
+
+            ],
           ),
         );
+        // return Container
+        // (
+          
+          // height: screen.size.height * 0.24,
+          // margin: EdgeInsets.only
+          // (
+          //   right: constraints.maxWidth * 0.062,
+          //   left: constraints.maxWidth *0.062,
+          //   bottom: screen.size.height * 0.02,
+        //   ),
+          
+        //   child: DottedBorder(
+            // strokeWidth: 2,
+            // dashPattern: [6, 3],
+            // radius: Radius.circular(4),
+            // borderType: BorderType.RRect,
+        //     child: ClipRRect
+        //     (
+        //     borderRadius: BorderRadius.all(Radius.circular(12)),
+        //       child: Center
+        //       (
+                // child: Container
+                // (
+                //   width: constraints.maxWidth * 0.42,
+                //   child: OutlinedButton
+                //   (                   
+                //     onPressed: chooseImage,
+                //     style: OutlinedButton.styleFrom
+                //     (
+                //       primary: Colors.black,
+                //       backgroundColor: Colors.grey[300],
+                //       shape: const RoundedRectangleBorder
+                //       (
+                //           borderRadius: BorderRadius.all(Radius.circular(5))
+                //       ),
+                //       side: BorderSide
+                //       (
+                //         color: Colors.black, 
+                //         width: 1.5
+                //       ),
+                //     ),
+                //     // color: Colors.amber,
+                //     child: Padding(
+                //       padding: EdgeInsets.symmetric(vertical: screen.size.height * 0.005,),
+                //       child: Text(                      
+                //         'Upload Image',
+                //         textAlign: TextAlign.center,
+                //         style: TextStyle
+                //         (
+                //           fontSize: 20,
+                //           color: Colors.black,
+                //         ),
+                //       ),
+                //     ),
+                //   ),
+                // ),
+        //       )
+        //     )
+        //   ),
+        // );
       }
     );
   }

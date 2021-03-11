@@ -1,3 +1,4 @@
+import 'package:NouPartazer_App/Devashish/pages/CreateEvent.dart';
 import 'package:flutter/material.dart';
 import 'package:NouPartazer_App/Koomalai/constants.dart';
 import 'package:NouPartazer_App/Atish/Pages/SplashScreen/SplashScreen.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget
         primaryColor: kPrimaryColor,
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: SplashScreen(),
+      home: CreateEvent(),
     );
   }
 }
