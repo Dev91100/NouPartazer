@@ -1,37 +1,49 @@
 import 'package:flutter/material.dart';
 
-class EditPhotoButton extends StatelessWidget {
+class EditPhotoButton extends StatelessWidget
+{
   final double elevation;
   final Widget openPage;
+  final double L, T, R, B;
+  final double height;
+  final double width;
 
   EditPhotoButton
   (
     {
       this.openPage,
       this.elevation = 2,
+      this.L = 0.05,
+      this.T = 0.05,
+      this.R = 0.07,
+      this.B = 0.05,
+      this.height = 40,
+      this.width = 40,
     }
   );
 
   @override
-  Widget build(BuildContext context) {
-    return LayoutBuilder(
+  Widget build(BuildContext context)
+  {
+    return LayoutBuilder
+    (
         builder: (ctx, constraints)
         {
           return Container
           (
             margin: EdgeInsets.fromLTRB
             (
-              constraints.maxHeight * 0.05,
-              constraints.maxHeight * 0.05,
-              constraints.maxHeight * 0.07,
-              constraints.maxHeight * 0.05,
+              constraints.maxHeight * L,
+              constraints.maxHeight * T,
+              constraints.maxHeight * R,
+              constraints.maxHeight * B,
             ),
-            height: 40,
-            width: 40,
+            height: height,
+            width: width,
             constraints: BoxConstraints
             (
-              minWidth: 40,
-              minHeight: 40,
+              minWidth: width,
+              minHeight: height,
             ),
             decoration: BoxDecoration
             (
