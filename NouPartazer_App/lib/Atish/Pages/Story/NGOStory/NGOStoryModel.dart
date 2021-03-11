@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
-import 'BusinessStory.dart';
-import './BusinessStoryList.dart';
+import 'package:NouPartazer_App/Atish/Pages/Story/NGOStory/NGOStory.dart';
+import 'package:NouPartazer_App/Atish/Pages/Story/NGOStory/NGOStoryList.dart';
 import 'package:NouPartazer_App/Atish/components/PageTitle.dart';
-import 'package:NouPartazer_App/Atish/components/ContainerIconText.dart';
+import 'package:NouPartazer_App/Atish/components/LongText.dart';
 import 'package:NouPartazer_App/Atish/components/ContainerText.dart';
 
-class BusinessStoryModel extends StatefulWidget 
+class NGOStoryModel extends StatefulWidget 
 {
   @override
-  _BusinessStoryModelState createState() => _BusinessStoryModelState();
+  _NGOStoryModelState createState() => _NGOStoryModelState();
 }
 
-class _BusinessStoryModelState extends State<BusinessStoryModel> {
-  final List<BusinessStory> businessStory = businessStoryList;
+class _NGOStoryModelState extends State<NGOStoryModel> {
+  final List<NGOStory> ngoStory = ngoStoryList;
 
   @override
   Widget build(BuildContext context)
@@ -48,7 +48,7 @@ class _BusinessStoryModelState extends State<BusinessStoryModel> {
                   enlargeCenterPage: false,
                 ),
 
-                items: businessStory.map((st)
+                items: ngoStory.map((st)
                 {
                   return Card
                   (
@@ -112,7 +112,7 @@ class _BusinessStoryModelState extends State<BusinessStoryModel> {
                                   fit: BoxFit.contain,
                                   child: Text
                                   ( 
-                                    st.locationName,
+                                    st.title,
                                     style: TextStyle
                                     (
                                       fontWeight: FontWeight.bold,
@@ -123,73 +123,23 @@ class _BusinessStoryModelState extends State<BusinessStoryModel> {
                                 ),
                               ),
                             
-                              // Location Address
-                              SingleChildScrollView
+                              // Description
+                              Container
                               (
-                                scrollDirection: Axis.horizontal,
-                                child: Container
+                                constraints: BoxConstraints
                                 (
-                                  margin: EdgeInsets.only(top: 10),
-                                  child: FittedBox
-                                  (
-                                    fit: BoxFit.contain,
-                                    child: Text
-                                    (
-                                      st.locationAddress,
-                                      style: TextStyle
-                                      (
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 20,
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                  ),
+                                  maxHeight: constraints.maxHeight * 0.12,
+                                ),
+                                child: LongText
+                                (
+                                  title: st.description,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w500,
+                                  // textAlign: TextAlign.left,
+                                  R: 255, G: 255, B: 255, O: 1,
                                 ),
                               ),
-                      
-                              // Date & Time
-                              FittedBox
-                              (
-                                fit: BoxFit.contain,
-                                child: Container
-                                (
-                                  margin: EdgeInsets.only(top: 10),
-                                  child: Row
-                                  (
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    children: 
-                                    [
-                                      ContainerIconText
-                                      (
-                                        text: st.date,
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.bold,
-                                        icon: Icons.calendar_today_outlined,
-                                        iconSize: 20,
-                                        IconR: 245, IconG: 197, IconB: 41, IconO: 1,
-                                        BorderR: 245, BorderG: 197, BorderB: 41, BorderO: 1,
-                                        borderWidth: 1.5,
-                                        BoxR: 255, BoxG: 248, BoxB: 97, BoxO: 0.2,
-                                        mRight: 15,
-                                      ),
-
-                                      ContainerIconText
-                                      (
-                                        text: st.time,
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.bold,
-                                        icon: Icons.query_builder_outlined,
-                                        iconSize: 20,
-                                        IconR: 245, IconG: 197, IconB: 41, IconO: 1,
-                                        BorderR: 245, BorderG: 197, BorderB: 41, BorderO: 1,
-                                        borderWidth: 1.5,
-                                        BoxR: 255, BoxG: 248, BoxB: 97, BoxO: 0.2,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-
+                              
                               // Tags
                               SingleChildScrollView
                               (
@@ -212,31 +162,6 @@ class _BusinessStoryModelState extends State<BusinessStoryModel> {
                                         BoxR: 255, BoxG: 248, BoxB: 97, BoxO: 0.2,
                                         pLeft: 15, pTop:10, pRight: 15, pBottom: 10,
                                         mRight: 10,
-                                      ),
-
-                                      ContainerText
-                                      (
-                                        text: st.foodType,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold,
-                                        BorderR: 245, BorderG: 197, BorderB: 41, BorderO: 1,
-                                        borderWidth: 1.5,
-                                        borderRadius: 40,
-                                        BoxR: 255, BoxG: 248, BoxB: 97, BoxO: 0.2,
-                                        pLeft: 15, pTop:10, pRight: 15, pBottom: 10,
-                                        mRight: 10,
-                                      ),
-                                      
-                                      ContainerText
-                                      (
-                                        text: st.foodType,
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold,
-                                        BorderR: 245, BorderG: 197, BorderB: 41, BorderO: 1,
-                                        borderWidth: 1.5,
-                                        borderRadius: 40,
-                                        BoxR: 255, BoxG: 248, BoxB: 97, BoxO: 0.2,
-                                        pLeft: 15, pTop:10, pRight: 15, pBottom: 10,
                                       ),
                                     ],
                                   ),

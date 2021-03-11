@@ -1,14 +1,13 @@
-
 import 'package:flutter/material.dart';
 
-import 'package:NouPartazer_App/Atish/Pages/Task/TaskModel.dart';
-import 'package:NouPartazer_App/Atish/Pages/Task/Task.dart';
-import 'package:NouPartazer_App/Atish/Pages/Task/OngoingTaskList.dart';
+import 'package:NouPartazer_App/Atish/Pages/Task/BusinessTask/BusinessTaskModel.dart';
+import 'package:NouPartazer_App/Atish/Pages/Task/BusinessTask/BusinessTask.dart';
+import 'package:NouPartazer_App/Atish/Pages/Task/BusinessTask/UnassignedTaskList.dart';
 import 'package:NouPartazer_App/Atish/components/CustomDivider.dart';
 
-class BusinessOngoingEvent extends StatelessWidget
+class BusinessUnassignedTask extends StatelessWidget
 {
-  final List<Task> tasks = ongoingTaskList;
+  final List<BusinessTask> businessTasks = unassignedTaskList;
 
   @override
   Widget build(BuildContext context)
@@ -29,22 +28,24 @@ class BusinessOngoingEvent extends StatelessWidget
                 (
                   padding: EdgeInsets.all(0),
                   children:
-                  tasks.map((tk)
+                  businessTasks.map((tk)
                   {
                     return Column
                     (
                       children:
                       [
-                        TaskModel
+                        BusinessTaskModel
                         (
                           constraints: constraints,
                           image: tk.image,
+                          ngoName: tk.ngoName,
                           description: tk.description,
                           locationName: tk.locationName,
                           date: tk.date,
                           time: tk.time,
                           tag: tk.tag,
                           status: tk.status,
+                          canCall: false,
                         ),
                         CustomDivider
                         (

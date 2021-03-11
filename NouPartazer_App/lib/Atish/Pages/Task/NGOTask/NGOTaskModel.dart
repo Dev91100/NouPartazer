@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:NouPartazer_App/Atish/Pages/Task/Task.dart';
-import 'package:NouPartazer_App/Atish/Pages/Task/OngoingTaskList.dart';
 import 'package:NouPartazer_App/Atish/components/IconText.dart';
 import 'package:NouPartazer_App/Atish/components/SectionTitle.dart';
 import 'package:NouPartazer_App/Atish/components/LongText.dart';
@@ -10,14 +8,13 @@ import 'package:NouPartazer_App/Atish/components/ContainerText.dart';
 import 'package:NouPartazer_App/Atish/components/ButtonIconText.dart';
 import 'package:NouPartazer_App/Koomalai/src/Business%20Event%20Ongoing/Business%20event%20ongoing.dart';
 
-class TaskModel extends StatelessWidget
+class NGOTaskModel extends StatelessWidget
 {
-  final List<Task> ongoingTask = ongoingTaskList;
   final String image;
   final String description, locationName, date, time, tag, status;
   final BoxConstraints constraints;
 
-  TaskModel
+  NGOTaskModel
   (
     {
       this.image,

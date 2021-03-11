@@ -1,26 +1,27 @@
-
-import 'package:NouPartazer_App/Koomalai/src/Settings/Setting.dart';
-import 'package:NouPartazer_App/Koomalai/src/widget/bottomSheetWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'package:NouPartazer_App/Atish/components/EditIconButton.dart';
 import 'package:NouPartazer_App/Atish/components/EditPhotoButton.dart';
-import 'package:NouPartazer_App/Atish/Pages/Story/BusinessStory/BusinessStoryModelProfile.dart';
 import 'package:NouPartazer_App/Atish/components/SectionTitle.dart';
 import 'package:NouPartazer_App/Atish/components/CustomDivider.dart';
 import 'package:NouPartazer_App/Atish/components/LongText.dart';
 import 'package:NouPartazer_App/Atish/components/SectionWithEditButton.dart';
 import 'package:NouPartazer_App/Atish/components/ContactInfo.dart';
 import 'package:NouPartazer_App/Atish/Pages/NGOProfile/MemberModel.dart';
+import 'package:NouPartazer_App/Atish/Pages/Story/NGOStory/NGOStory.dart';
+import 'package:NouPartazer_App/Atish/Pages/Story/NGOStory/NGOStoryList.dart';
+import 'package:NouPartazer_App/Atish/Pages/Story/NGOStory/NGOStoryModelProfile.dart';
+import 'package:NouPartazer_App/Koomalai/src/Settings/Setting.dart';
+import 'package:NouPartazer_App/Koomalai/src/widget/bottomSheetWidget.dart';
 
 class NGOProfile extends StatelessWidget
 {
+  final List<NGOStory> ngoStory = ngoStoryList;
 
   @override
   Widget build(BuildContext context)
   {
-
     final screen = MediaQuery.of(context).size;
 
     return LayoutBuilder
@@ -151,7 +152,7 @@ class NGOProfile extends StatelessWidget
                       title: 'MY STORIES',
                     ),
 
-                    BusinessStoryModelProfile(),
+                    NGOStoryModelProfile(),
                   ],
                 ),
                 
@@ -187,6 +188,12 @@ class NGOProfile extends StatelessWidget
 
                     Container
                     (
+                      margin: EdgeInsets.only
+                      (
+                        top: 10,
+                        left: 20,
+                        right: 20
+                      ),
                       constraints: BoxConstraints
                       (
                         maxHeight: constraints.maxHeight * 0.25,

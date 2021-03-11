@@ -4,7 +4,8 @@ import 'dart:async';
 
 import '../../../Koomalai/Screens/Login/login_screen.dart';
 
-class SplashScreen extends StatefulWidget {
+class SplashScreen extends StatefulWidget
+{
   SplashScreen({Key key, this.title}) : super(key: key);
 
   final String title;
@@ -13,9 +14,11 @@ class SplashScreen extends StatefulWidget {
   _SplashScreenState createState() => _SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class _SplashScreenState extends State<SplashScreen>
+{
   @override
-  void initState() {
+  void initState()
+  {
     super.initState();
     Timer(Duration(seconds: 5), ()=>Navigator.push(
         context, MaterialPageRoute(builder: (context)=>LoginScreen())));
@@ -168,8 +171,7 @@ class _SplashScreenState extends State<SplashScreen> {
                       (
                         top: constraints.maxHeight * 0.05,
                       ),
-                      child:
-                        CircularProgressIndicator(),
+                      child: CircularProgressIndicator(),
                     )
                   ]
                 ),
