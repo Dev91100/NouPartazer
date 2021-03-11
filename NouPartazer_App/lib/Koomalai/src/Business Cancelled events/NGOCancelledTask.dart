@@ -1,14 +1,14 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:NouPartazer_App/Atish/Pages/Task/TaskModel.dart';
-import 'package:NouPartazer_App/Atish/Pages/Task/Task.dart';
-import 'package:NouPartazer_App/Atish/Pages/Task/CompletedTaskList.dart';
+import 'package:NouPartazer_App/Atish/Pages/Task/NGOTask/NGOTaskModel.dart';
+import 'package:NouPartazer_App/Atish/Pages/Task/NGOTask/NGOTask.dart';
+import 'package:NouPartazer_App/Atish/Pages/Task/NGOTask/CancelledTaskList.dart';
 import 'package:NouPartazer_App/Atish/components/CustomDivider.dart';
 
-class BusinessCompletedEvent extends StatelessWidget
+class NGOCancelledTask extends StatelessWidget
 {
-  final List<Task> tasks = completedTaskList;
+  final List<NGOTask> tasks = cancelledTaskList;
 
   @override
   Widget build(BuildContext context)
@@ -35,7 +35,7 @@ class BusinessCompletedEvent extends StatelessWidget
                     (
                       children:
                       [
-                        TaskModel
+                        NGOTaskModel
                         (
                           constraints: constraints,
                           image: tk.image,

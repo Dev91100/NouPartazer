@@ -10,6 +10,7 @@ class LongText extends StatelessWidget {
   final double top, left, right;
   final int R, G, B;
   final double O;
+  final TextAlign textAlign;
 
   LongText
   (
@@ -20,6 +21,7 @@ class LongText extends StatelessWidget {
       this.left = 20,
       this.right = 20,
       this.fontWeight = FontWeight.w400,
+      this.textAlign = TextAlign.justify,
       this.R = 102,
       this.G = 102,
       this.B = 102,
@@ -28,38 +30,21 @@ class LongText extends StatelessWidget {
   );
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context)
+  {
     return SingleChildScrollView
     (
       scrollDirection: Axis.vertical,
-      child: Container
+      child: Text
       (
-        child: Align
+        title,
+        textAlign: textAlign,
+        overflow: TextOverflow.visible,
+        style: TextStyle
         (
-          alignment: Alignment.centerLeft,
-          child: Container
-          (
-            margin: EdgeInsets.only
-            (
-              top: top,
-              left: left,
-              right: right,
-            ),
-            child: 
-            Text
-            (
-              
-              title,
-              textAlign: TextAlign.justify,
-              overflow: TextOverflow.visible,
-              style: TextStyle
-              (
-                color: Color.fromRGBO(R, G, B, O),
-                fontWeight: fontWeight,
-                fontSize: fontSize,
-              ),
-            ),
-          ),
+          color: Color.fromRGBO(R, G, B, O),
+          fontWeight: fontWeight,
+          fontSize: fontSize,
         ),
       ),
     );

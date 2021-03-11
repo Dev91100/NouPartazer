@@ -1,8 +1,8 @@
-import 'package:NouPartazer_App/Atish/Pages/Task/Task.dart';
+import 'package:NouPartazer_App/Atish/Pages/Task/NGOTask/NGOTask.dart';
 
-final List<Task> completedTaskList =
+final List<NGOTask> completedTaskList =
 [
-  Task
+  NGOTask
   (
     image: './assets/JPEG/Jumbo.png',
     date: '19/03/21',
@@ -15,7 +15,7 @@ final List<Task> completedTaskList =
     status: 'Completed',
   ),
 
-  Task
+  NGOTask
   (
     image: './assets/JPEG/Jumbo.png',
     date: '19/03/21',
@@ -28,7 +28,7 @@ final List<Task> completedTaskList =
     status: 'Completed',
   ),
 
-  Task
+  NGOTask
   (
     image: './assets/JPEG/Jumbo.png',
     date: '19/03/21',
