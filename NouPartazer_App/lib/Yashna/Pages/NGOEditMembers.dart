@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 
 class NGOEditMembers extends StatefulWidget {
-  final String title;
-
-  const NGOEditMembers({
-    @required this.title,
-  });
+ 
 
   @override
   _NGOEditMembersState createState() => _NGOEditMembersState();
@@ -21,7 +17,7 @@ class _NGOEditMembersState extends State<NGOEditMembers> {
      //resizeToAvoidBottomInset: false,
      backgroundColor: Colors.white,
         appBar: AppBar(
-          title: Text(widget.title),
+          title: Text("Bottom Dialog"),
           
           
           actions: [
@@ -47,24 +43,73 @@ class _NGOEditMembersState extends State<NGOEditMembers> {
       )
     ),
 
-      context: context,
-      
-      builder: (context) => SingleChildScrollView(
-        child: Column(
-        mainAxisSize: MainAxisSize.min,
+    context: context,
+  
+  builder: (context) => SingleChildScrollView
+  (
+    child: Column
+
+    (
+      crossAxisAlignment: CrossAxisAlignment.end ,
+      mainAxisSize: MainAxisSize.min,
+      children:
+    [
+      IconButton
+      (
+        icon: Icon(Icons.close),
+        //alignment: Alignment.topRight,
+        //padding: EdgeInsets.only(left: 200),
+        onPressed: ()
+        {
+          //Put your code here which you want to execute on close button click.
+          Navigator.of(context).pop();
+        },
+      ),
+
+      Center(
+       
+          child: Stack(children: <Widget> [
+          CircleAvatar(
+           radius: 60.0, 
+            backgroundImage: AssetImage(""),
+          ),
+      Positioned(
+      bottom: 20.0, 
+      right: 20.0 , 
+      child: Icon(
+      Icons.edit_outlined
+      ),
+      ),
+     
           
-        children: <Widget> [
-           
-           IconButton(
-              icon: Icon(Icons.close),
-              //alignment: Alignment.topRight,
-              padding: EdgeInsets.only(left: 350),
-              onPressed: () {
-                //Put your code here which you want to execute on close button click.
-                Navigator.of(context).pop();
-              },
-           
-              ),
+          ]
+          ),
+
+
+
+
+
+
+
+
+
+        ),
+      
+
+     
+   
+
+
+
+
+
+
+        
+
+
+
+
+
                   
         ListTile(
             leading: Icon(Icons.perm_identity),
@@ -107,62 +152,74 @@ class _NGOEditMembersState extends State<NGOEditMembers> {
          ),
            
         
-         Container(
-          child : Row(
-            children: <Widget> [
-              Padding(padding: 
-              EdgeInsets.all(50.0), ),
-             TextButton(
-              child: Text("Cancel",
-              style: TextStyle
-                    (
-                      decoration:TextDecoration.underline,
-                      color: Color.fromRGBO(102, 102, 102, 1),
-                      fontSize: 20.0,
-                         
-                    )
-                    ),
+    Container
+      (
+        margin: EdgeInsets.only(top: 20, bottom: 15),
+        child: Row
+        (
+         mainAxisAlignment: MainAxisAlignment.center,
+          children:
+          [
+            // Padding
+            // (
+            //   padding: EdgeInsets.all(50.0),
+            // ),
+            TextButton
+            (
+              child: Text
+              (
+                "Cancel",
+                style: TextStyle
+                (
+                  decoration:TextDecoration.underline,
+                  color: Color.fromRGBO(102, 102, 102, 1),
+                  fontSize: 20.0,     
+                )
+              ),
               
-              onPressed: () {
+              onPressed: ()
+              {
                 //Put your code here which you want to execute on Yes button click.
                 Navigator.of(context).pop();
               },
-              ),
-                
-              Padding(padding: 
-              EdgeInsets.all(10.0), ),
+            ),
               
-              OutlinedButton(
-              child: Text("Save",
-               style: TextStyle
-                    (
-                      color: Color.fromRGBO(245, 197, 41, 1),
-                      fontSize: 20.0,
-                      
-                    ),
+            Padding
+            (
+              padding: EdgeInsets.all(10.0),
+            ),
+            
+            OutlinedButton
+            (
+              child: Text
+              (
+                "Save",
+                style: TextStyle
+                (
+                  color: Color.fromRGBO(245, 197, 41, 1),
+                  fontSize: 20.0,
+                  
+                ),
               ),
-               style: OutlinedButton.styleFrom(
-                      backgroundColor: Colors.yellow[50],
-                      side: BorderSide(color: Color.fromRGBO(245, 197, 41, 1), width: 1.5),
-                      primary: Color.fromRGBO(212, 0, 0, 1),
-                      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(7))),
-                     
-                    ),
-                    
-                      onPressed: () {
-                //Put your code here which you want to execute on Cancel button click.
-                Navigator.of(context).pop();
-                
-              },
-              
-               ),
-            ],
-          )
-         
-           
-           
-           ),
 
+              style: OutlinedButton.styleFrom
+              (
+                backgroundColor: Colors.yellow[50],
+                side: BorderSide(color: Color.fromRGBO(245, 197, 41, 1), width: 1.5),
+                primary: Color.fromRGBO(212, 0, 0, 1),
+                shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(7))),
+                
+              ),
+                  
+              onPressed: ()
+              {
+              //Put your code here which you want to execute on Cancel button click.
+              Navigator.of(context).pop();
+              },
+            ),
+          ],
+        )          
+        ),
         
 
         ]
