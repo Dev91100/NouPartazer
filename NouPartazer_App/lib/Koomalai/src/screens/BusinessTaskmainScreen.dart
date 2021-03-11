@@ -21,7 +21,8 @@ class BusinessTaskMainScreen extends StatefulWidget
   _BusinessTaskMainScreenState createState() => _BusinessTaskMainScreenState();
 }
 
-class _BusinessTaskMainScreenState extends State<BusinessTaskMainScreen> {
+class _BusinessTaskMainScreenState extends State<BusinessTaskMainScreen>
+{
   int currentIndex =3;
   List<Widget> pages;
   Widget currentPage;
@@ -32,7 +33,8 @@ class _BusinessTaskMainScreenState extends State<BusinessTaskMainScreen> {
   BusinessNGOList NGOList;
 
   @override
-  void initState() {
+  void initState()
+  {
     super.initState();
     homePage=BusinessHomePage();
     profilePage=BusinessProfile();
