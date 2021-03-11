@@ -405,10 +405,9 @@ class Body extends StatelessWidget {
                 side: BorderSide(color:Color.fromRGBO(245, 197, 41, 1)),
               ),
 
-              press: (){
+              press: () {
                 CreateAlertDialog(context);
-              },
-
+              }
             ),
 
             SizedBox(
@@ -431,6 +430,7 @@ class Body extends StatelessWidget {
 
               onTap: () {
                 AccountAlertDialog(context);
+
               },
             ),
           /*Container(
