@@ -2,6 +2,8 @@
 
 import 'package:NouPartazer_App/Koomalai/src/Business%20Confirmed%20Event%20Details/Business%20confirmed%20event%20details.dart';
 import 'package:NouPartazer_App/Koomalai/src/screens/DonationMainScreen.dart';
+import 'package:NouPartazer_App/Yashna/Pages/ConfirmationDialog/AcceptDonation.dart';
+import 'package:NouPartazer_App/Yashna/components/Confirmation.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -14,155 +16,133 @@ import 'package:url_launcher/url_launcher.dart';
       void _onMapCreated(GoogleMapController controller) {
         mapController = controller;
       }*/
-
+      bool _isSelected = false;
       CreateAlertDialog(BuildContext context){
         return showDialog(context: context,builder: (context){
-          return AlertDialog(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.0),
+          return ButtonBarTheme
+            (
+              data: ButtonBarThemeData
+                (
+                alignment: MainAxisAlignment.center,
+                //buttonPadding: EdgeInsets.all(20),
+                mainAxisSize: MainAxisSize.min,
+
+              ),
+
+           child: AlertDialog(
+            contentPadding: EdgeInsets.all(0),
+            shape: RoundedRectangleBorder
+              (
+              borderRadius: BorderRadius.circular(10),
+
+
             ),
 
-            actions: [
-              SizedBox(
-                height: 20.0,
-                width: 50.0,
-              ),
-              Container(
-                alignment: Alignment.topRight,
+            title: Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.end,
+                children:<Widget>
+                [
+                  IconButton(
+                    icon: Icon(Icons.close),
 
-                child: Icon(
-                  Icons.close,
-                  size: 25.0,
-
-                ),
-              ),
-
-              SizedBox(
-                height: 10.0,
-              ),
-
-              Align(
-                alignment: Alignment.center,
-                child: Text(
-                  "Please tick the checkbox to confirm" ,
-                  style: TextStyle(
-                    fontSize: 25.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-
-                ),
-              ),
-
-              SizedBox(
-                height: 10.0,
-              ),
-              Column(
-                  children: <Widget>[
-
-                  Container(
-                    /*alignment: Alignment.center,*/
-
-                    child: Icon(
-                  Icons.check_box_outlined,
-                  color: Color.fromRGBO(41, 90, 245, 1),
-                  size: 25.0,
-
-                ),
+                    onPressed: () {
+                      //Put your code here which you want to execute on close button click.
+                      Navigator.of(context).pop();
+                    },
 
                   ),
 
+                ]
+            ),
 
-
-                  Container(
-
-                      margin: EdgeInsets.only(left:0.0,right:0.0),
-                      child: Column(
-                          /*mainAxisAlignment: MainAxisAlignment.start,*/
-                      children: <Widget>[
-                       Text(
-                      "I have read and understood all information pertaining to this event and agrre to undertake this donation.",
-                  style: TextStyle(
-                    
-                    fontSize: 18.0,
-                    color: Color.fromRGBO(41, 90, 245, 1),
-                    /*fontWeight: FontWeight.bold,*/
-                  ),
-                        textAlign: TextAlign.justify,
-                ),
-
-                      ]
+            //contentPadding: EdgeInsets.only(left: 22, right: 30),
+            content: ListTile(
+                title:Text('Please tick the checkbox to confirm.',
+                    textAlign: TextAlign.justify,
+                    style: TextStyle
+                      (
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18.0,
+                      //color: Color.fromRGBO(0, 0, 0, 1),
                     )
+                ),
+
+                subtitle: CheckboxListTile
+                  (
+                  title: Text
+                    (
+                      "I have read and understood all information pertaining to this event and agree to undertake this donation.",
+                      textAlign: TextAlign.left,
+                      style: TextStyle
+                        (
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15.0,
+                        color: Color.fromRGBO(41, 90, 245, 1),
+                      )
+                  ),
+
+                  controlAffinity: ListTileControlAffinity.leading,
+                  value: _isSelected,
+                  onChanged: (bool value){
+                    /*setState(() {
+                      _isSelected = value;
+
+                    });*/
+
+                  },
+                )
+
+            ),
+
+
+            actions: <Widget>[
+
+              TextButton(
+                child: Text("Cancel",
+                    style: TextStyle
+                      (
+                      decoration:TextDecoration.underline,
+                      color: Color.fromRGBO(102, 102, 102, 1),
+                      fontSize: 20.0,
+
+                    )
+                ),
+
+                onPressed: () {
+                  //Put your code here which you want to execute on Yes button click.
+                  Navigator.of(context).pop();
+                },
+
               ),
 
-              ]
-               ),
+              OutlinedButton(
+                child: Text("Confirm",
+                  style: TextStyle
+                    (
+                    color: Color.fromRGBO(245, 197, 41, 1),
+                    fontSize: 20.0,
 
-              Row(
-                  children: <Widget>[
+                  ),
+                ),
+                style: OutlinedButton.styleFrom(
+                  backgroundColor: Colors.yellow[50],
+                  side: BorderSide(color: Color.fromRGBO(245, 197, 41, 1), width: 1.5),
+                  primary: Color.fromRGBO(212, 0, 0, 1),
+                  shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(7))),
 
-                    SizedBox(
-                      width: 50.0,
-                    ),
+                ),
 
+                onPressed: () {
+                  //Put your code here which you want to execute on Cancel button click.
+                  Navigator.of(context).pop();
 
-                    MaterialButton(
-                      child:Text("Cancel",
-                        style: TextStyle(decoration: TextDecoration.underline,fontSize: 15.0,color: Colors.black26
-                        ),
-                      ),
+                },
 
-                      onPressed: (){
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) {
-
-                              return BusinessEvent();
-
-                            },
-                          ),
-                        );
-                      },
-
-
-                    ),
-
-                    SizedBox(
-                      width: 25.0,
-                    ),
-
-                    MaterialButton(
-                      child:Text("Confirm",
-                        style: TextStyle(decoration: TextDecoration.underline,fontSize: 15.0,color: Color.fromRGBO(245, 197, 41, 1)
-                        ),
-                      ),
-
-                      onPressed: (){
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) {
-
-                              return BusinessConfirmedEvent();
-
-                            },
-                          ),
-                        );
-                      },
-
-
-                    ),
-
-                  ]
-              ),
-
-              SizedBox(
-                height: 20.0,
               ),
 
             ],
-
-
+          )
           );
 
         }
@@ -470,6 +450,7 @@ import 'package:url_launcher/url_launcher.dart';
                           builder: (context) {*/
 
                              CreateAlertDialog(context);
+                            /*return AcceptDonation();*/
 
                           /*},
                         ),

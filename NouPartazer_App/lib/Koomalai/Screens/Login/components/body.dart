@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:NouPartazer_App/Devashish/pages/ForgotPassword.dart';
 import 'package:NouPartazer_App/Koomalai/Screens/Signup/signup_screen.dart';
 import 'package:NouPartazer_App/Koomalai/components/rounded_button.dart';
 import 'package:NouPartazer_App/Koomalai/components/rounded_input_field.dart';
@@ -302,6 +303,16 @@ class Body extends StatelessWidget {
                             ),
                           ),
                         ),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return ForgotPassword ();
+                              },
+                            ),
+                          );
+                        },
                       )
                     ],
                   ),
