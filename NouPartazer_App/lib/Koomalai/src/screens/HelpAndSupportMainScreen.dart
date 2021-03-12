@@ -15,14 +15,14 @@ class _HelpAndSupportMainScreenState extends State<HelpAndSupportMainScreen> {
   List<Widget> pages;
   Widget currentPage;
   IndividualHomePage individualHomePage;
-  NGOList NGOLists;
+  IndividualNGOCentresList NGOLists;
   IndividualSettings individualSettings;
 
   @override
   void initState() {
     super.initState();
     individualHomePage=IndividualHomePage();
-    NGOLists=NGOList();
+    NGOLists = IndividualNGOCentresList();
     individualSettings= IndividualSettings();
 
     pages=[individualHomePage,NGOLists,individualSettings];

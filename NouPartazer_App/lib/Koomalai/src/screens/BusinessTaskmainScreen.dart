@@ -30,7 +30,7 @@ class _BusinessTaskMainScreenState extends State<BusinessTaskMainScreen>
   BusinessProfile profilePage;
   CreateEvent event;
   BusinessTask taskTab;
-  NGOCentresList NGOList;
+  BusinessNGOCentresList ngoList;
 
   @override
   void initState()
@@ -40,9 +40,9 @@ class _BusinessTaskMainScreenState extends State<BusinessTaskMainScreen>
     profilePage = BusinessProfile();
     event       = CreateEvent();
     taskTab     = BusinessTask();
-    NGOList     = NGOCentresList();
+    ngoList     = BusinessNGOCentresList();
 
-    pages       = [homePage, profilePage, event, taskTab, NGOList];
+    pages       = [homePage, profilePage, event, taskTab, ngoList];
     currentPage = taskTab;
   }
 

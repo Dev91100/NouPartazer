@@ -16,7 +16,7 @@ class _SecondMainScreenState extends State<SecondMainScreen>
   List<Widget> pages;
   Widget currentPage;
   IndividualHomePage individualHomePage;
-  NGOList ngoLists;
+  IndividualNGOCentresList ngoLists;
   IndividualSettings individualSettings;
 
   @override
@@ -24,7 +24,7 @@ class _SecondMainScreenState extends State<SecondMainScreen>
   {
     super.initState();
     individualHomePage  = IndividualHomePage();
-    ngoLists            = NGOList();
+    ngoLists            = IndividualNGOCentresList();
     individualSettings  = IndividualSettings();
 
     pages       = [individualHomePage, ngoLists, individualSettings];

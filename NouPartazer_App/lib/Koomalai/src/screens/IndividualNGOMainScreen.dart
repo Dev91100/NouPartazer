@@ -15,18 +15,18 @@ class _IndividualNGOMainScreenState extends State<IndividualNGOMainScreen> {
   List<Widget> pages;
   Widget currentPage;
   IndividualHomePage individualHomePage;
-  NGOList NGOLists;
+  IndividualNGOCentresList NGOLists;
   IndividualSettings individualSettings;
 
   @override
   void initState() {
     super.initState();
     individualHomePage=IndividualHomePage();
-    NGOLists=NGOList();
+    NGOLists=IndividualNGOCentresList();
     individualSettings= IndividualSettings();
 
     pages=[individualHomePage,NGOLists,individualSettings];
-    currentPage=NGOList();
+    currentPage=IndividualNGOCentresList();
 
   }
 

@@ -26,7 +26,7 @@ class _BusinessMainScreenState extends State<BusinessMainScreen>
   BusinessProfile profilePage;
   CreateEvent event;
   BusinessTask taskTab;
-  NGOCentresList NGOList;
+  BusinessNGOCentresList NGOList;
 
   @override
   void initState()
@@ -36,7 +36,7 @@ class _BusinessMainScreenState extends State<BusinessMainScreen>
     profilePage = BusinessProfile();
     event       = CreateEvent();
     taskTab     = BusinessTask();
-    NGOList     = NGOCentresList();
+    NGOList     = BusinessNGOCentresList();
 
     pages       = [homePage, profilePage, event, taskTab, NGOList];
     currentPage = homePage;
