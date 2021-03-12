@@ -29,7 +29,6 @@ class _SecondMainScreenState extends State<SecondMainScreen>
 
     pages       = [individualHomePage, ngoLists, individualSettings];
     currentPage = individualHomePage;
-
   }
 
   @override

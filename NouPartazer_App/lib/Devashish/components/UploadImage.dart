@@ -1,59 +1,87 @@
 import 'package:flutter/material.dart';
-import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/rendering.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 import 'dart:convert';
+import 'package:NouPartazer_App/Devashish/components/DottedBoxWithUploadButton.dart';
 // import 'package:http/http.dart' as http;
 
-class UploadImage extends StatefulWidget {
+class UploadImage extends StatefulWidget
+{
   @override
   _UploadImageState createState() => _UploadImageState();
 }
 
-
-class _UploadImageState extends State<UploadImage> 
+class _UploadImageState extends State<UploadImage>
 {
-
   Future<File> file;
   // String status = '';
   // String base64Image;
   // File tmpFile;
   // String errMessage = 'Error Uploading Image';
 
-  chooseImage() {
-    setState(() {
+  chooseImage()
+  {
+    setState(()
+    {
       file = ImagePicker.pickImage(source: ImageSource.gallery);
     });
     // setStatus('');
   }
 
-  Widget showImage() {
-    final screen = MediaQuery.of(context);
-    return FutureBuilder<File>(
+  Widget showImage()
+  {
+    return FutureBuilder<File>
+    (
       future: file,
-      builder: (BuildContext context, AsyncSnapshot<File> snapshot) {
-        if (snapshot.connectionState == ConnectionState.done &&
-            null != snapshot.data) {
+      builder: (BuildContext context, AsyncSnapshot<File> snapshot)
+      {
+        if (snapshot.connectionState == ConnectionState.done && null != snapshot.data)
+          {
           // tmpFile = snapshot.data;
           // base64Image = base64Encode(snapshot.data.readAsBytesSync());
-          return Container(
-                height: screen.size.height * 0.24,
-                width: screen.size.width * 0.876,
-            child: Image.file(
-              snapshot.data,
-              fit: BoxFit.cover,
-            ),
+          return LayoutBuilder
+          (
+            builder: (ctx, constraints)
+            {
+              return DottedBoxWithUploadButton
+              (
+                fileImage: FileImage(snapshot.data),
+                constraints: constraints,
+                onPress: chooseImage
+              );
+            }
           );
-        } else if (null != snapshot.error) {
-          return const Text(
-            'Error Picking Image',
-            textAlign: TextAlign.center,
+          
+        } else if (null != snapshot.error)
+        {
+          return LayoutBuilder
+          (
+            builder: (ctx, constraints)
+            {
+              return DottedBoxWithUploadButton
+              (
+                text: 'Error selecting image',
+                fileImage: null,
+                constraints: constraints,
+                onPress: chooseImage,
+              );
+            }
           );
-        } else {
-          return const Text(
-            'No Image Selected',
-            textAlign: TextAlign.center,
+        }
+        else
+        {
+          return LayoutBuilder
+          (
+            builder: (ctx, constraints)
+            {
+              return DottedBoxWithUploadButton
+              (
+                fileImage: null,
+                constraints: constraints,
+                onPress: chooseImage,
+              );
+            }
           );
         }
       },
@@ -63,153 +91,6 @@ class _UploadImageState extends State<UploadImage>
   @override
   Widget build(BuildContext context) 
   {
-    final screen = MediaQuery.of(context);
-
-    return LayoutBuilder
-    (
-      builder: (ctx, constraints)
-      {
-        return Center(
-          child: Stack
-          (
-            alignment: AlignmentDirectional.center,
-            children: 
-            [
-              Container
-              (
-                height: screen.size.height * 0.24,
-                width: screen.size.width * 0.876, //(1 - (0.062 + 0.062))
-                margin: EdgeInsets.only
-                (
-                  right: constraints.maxWidth * 0.062,
-                  left: constraints.maxWidth *0.062,
-                  bottom: screen.size.height * 0.02,
-                ),
-
-                child: DottedBorder
-                (
-                  strokeWidth: 2,
-                  dashPattern: [6, 3],
-                  radius: Radius.circular(4),
-                  borderType: BorderType.RRect,
-                  child: ClipRRect(borderRadius: BorderRadius.all(Radius.circular(12)),),
-                ),
-              ),
-
-              Container
-              (
-
-                padding: EdgeInsets.only
-                (
-                  right: constraints.maxWidth * 0.01,
-                  left: constraints.maxWidth *0.01,
-                  bottom: screen.size.height * 0.01,
-                  // top: screen.size.height * 0.01,
-                ),
-                child: showImage()
-                
-              ),
-
-                Container
-                (
-                  width: constraints.maxWidth * 0.42,
-                  child: OutlinedButton
-                  (                   
-                    onPressed: chooseImage,
-                    style: OutlinedButton.styleFrom
-                    (
-                      primary: Colors.black,
-                      backgroundColor: Colors.grey[300],
-                      shape: const RoundedRectangleBorder
-                      (
-                          borderRadius: BorderRadius.all(Radius.circular(5))
-                      ),
-                      side: BorderSide
-                      (
-                        color: Colors.black, 
-                        width: 1.5
-                      ),
-                    ),
-                    // color: Colors.amber,
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(vertical: screen.size.height * 0.005,),
-                      child: Text(                      
-                        'Upload Image',
-                        textAlign: TextAlign.center,
-                        style: TextStyle
-                        (
-                          fontSize: 20,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-
-            ],
-          ),
-        );
-        // return Container
-        // (
-          
-          // height: screen.size.height * 0.24,
-          // margin: EdgeInsets.only
-          // (
-          //   right: constraints.maxWidth * 0.062,
-          //   left: constraints.maxWidth *0.062,
-          //   bottom: screen.size.height * 0.02,
-        //   ),
-          
-        //   child: DottedBorder(
-            // strokeWidth: 2,
-            // dashPattern: [6, 3],
-            // radius: Radius.circular(4),
-            // borderType: BorderType.RRect,
-        //     child: ClipRRect
-        //     (
-        //     borderRadius: BorderRadius.all(Radius.circular(12)),
-        //       child: Center
-        //       (
-                // child: Container
-                // (
-                //   width: constraints.maxWidth * 0.42,
-                //   child: OutlinedButton
-                //   (                   
-                //     onPressed: chooseImage,
-                //     style: OutlinedButton.styleFrom
-                //     (
-                //       primary: Colors.black,
-                //       backgroundColor: Colors.grey[300],
-                //       shape: const RoundedRectangleBorder
-                //       (
-                //           borderRadius: BorderRadius.all(Radius.circular(5))
-                //       ),
-                //       side: BorderSide
-                //       (
-                //         color: Colors.black, 
-                //         width: 1.5
-                //       ),
-                //     ),
-                //     // color: Colors.amber,
-                //     child: Padding(
-                //       padding: EdgeInsets.symmetric(vertical: screen.size.height * 0.005,),
-                //       child: Text(                      
-                //         'Upload Image',
-                //         textAlign: TextAlign.center,
-                //         style: TextStyle
-                //         (
-                //           fontSize: 20,
-                //           color: Colors.black,
-                //         ),
-                //       ),
-                //     ),
-                //   ),
-                // ),
-        //       )
-        //     )
-        //   ),
-        // );
-      }
-    );
+    return showImage();
   }
 }
