@@ -8,11 +8,13 @@ class MemberModel extends StatelessWidget
 {
   final List<Member> members = memberList;
   final Function onPress;
+  final Function openPage;
 
   MemberModel
   (
     {
       this.onPress,
+      this.openPage,
     }
   );
 
@@ -145,7 +147,7 @@ class MemberModel extends StatelessWidget
 
                           EditIconButton
                           (
-                            onPress: ,
+                            onPress: onPress,
                             icon: Icons.delete_outlined,
                             height: 40,
                             width: 40,
@@ -162,7 +164,7 @@ class MemberModel extends StatelessWidget
                     ),
                     onPressed: () 
                     {
-                      return onPress;
+                      return openPage;
                     },
                   ),
                 ),

@@ -258,8 +258,10 @@ class NGOProfile extends StatelessWidget
                   ]
                 ),
 
-                MemberModel(),
-
+                MemberModel
+                (
+                  onPress:
+                ),
               ],
             ),   
           )
