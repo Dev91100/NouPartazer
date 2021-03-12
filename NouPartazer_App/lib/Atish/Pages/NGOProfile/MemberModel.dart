@@ -8,7 +8,15 @@ import 'package:NouPartazer_App/Atish/components/EditIconButton.dart';
 class MemberModel extends StatelessWidget 
 {
   final List<Member> members = memberList;
-  
+  final Function onPress;
+
+  MemberModel
+  (
+    {
+      this.onPress,
+    }
+  );
+
   @override
   Widget build(BuildContext context)
   {
@@ -28,150 +36,140 @@ class MemberModel extends StatelessWidget
               top: 0
             ),
 
-            children: 
-              members.map((mem)
-              {
-                return Container
+            children:
+            members.map((mem)
+            {
+              return Container
+              (
+                margin: EdgeInsets.only
+                (
+                  // top: top,
+                  left: 20,
+                  right: 20,
+                ),
+                child: Container
                 (
                   margin: EdgeInsets.only
                   (
-                    // top: top,
-                    left: 20,
-                    right: 20,
+                    top: 10,
+                    bottom: 5
                   ),
-                  child: Container
+                  child: RaisedButton
                   (
-                    margin: EdgeInsets.only
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder
                     (
-                      top: 10,
-                      bottom: 5
+                      borderRadius: BorderRadius.all(Radius.circular(10))
                     ),
-                    child: RaisedButton
+
+                    child: Padding
                     (
-                      color: Colors.white,
-                      shape: RoundedRectangleBorder
+                      padding: const EdgeInsets.only
                       (
-                        borderRadius: BorderRadius.all(Radius.circular(10))
+                        left: 0,
+                        right: 0,
+                        top: 10,
+                        bottom: 10,
                       ),
-
-                      child: Padding
+                      
+                      child: Row
                       (
-                        padding: const EdgeInsets.only
-                        (
-                          left: 0,
-                          right: 0,
-                          top: 10,
-                          bottom: 10,
-                        ),
-                        
-                        child: Row
-                        (
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children:
-                          [
-                            Container
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children:
+                        [
+                          Container
+                          (
+                            margin: EdgeInsets.only
                             (
-                              margin: EdgeInsets.only
-                              (
-                                right: 10
-                              ),
-                              width: 70.0,
-                              height: 70.0,
-                              decoration: BoxDecoration
-                              (
-                                image: DecorationImage
-                                (
-                                  image: AssetImage(mem.image),
-                                  fit: BoxFit.cover,
-                                ),
-                                borderRadius: BorderRadius.circular(80.0),
-                              ),
+                              right: 10
                             ),
-
-                            Expanded
+                            width: 70.0,
+                            height: 70.0,
+                            decoration: BoxDecoration
                             (
-                              child: Container
+                              image: DecorationImage
                               (
-                                child: Column
-                                (
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: 
-                                  [
-                                    SingleChildScrollView
+                                image: AssetImage(mem.image),
+                                fit: BoxFit.cover,
+                              ),
+                              borderRadius: BorderRadius.circular(80.0),
+                            ),
+                          ),
+
+                          Expanded
+                          (
+                            child: Container
+                            (
+                              child: Column
+                              (
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: 
+                                [
+                                  SingleChildScrollView
+                                  (
+                                    scrollDirection: Axis.horizontal,
+                                    child: Container
                                     (
-                                      scrollDirection: Axis.horizontal,
-                                      child: Container
+                                      child: Text
                                       (
-                                        child: Text
+                                        mem.name,
+                                        style: TextStyle
                                         (
-                                          mem.name,
-                                          style: TextStyle
-                                          (
-                                            fontSize: 18,
-                                            fontWeight: FontWeight.w700,
-                                            color: Color.fromRGBO(0, 50, 193, 1),
-                                          ),
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.w700,
+                                          color: Color.fromRGBO(0, 50, 193, 1),
                                         ),
                                       ),
                                     ),
-                                    
-                                    Container
+                                  ),
+                                  
+                                  Container
+                                  (
+                                    child: SingleChildScrollView
                                     (
-                                      child: SingleChildScrollView
+                                      scrollDirection: Axis.horizontal,
+                                      child: Text
                                       (
-                                        scrollDirection: Axis.horizontal,
-                                        child: Text
+                                        mem.position,
+                                        style: TextStyle
                                         (
-                                          mem.position,
-                                          style: TextStyle
-                                          (
-                                            fontSize: 18,
-                                            color: Color.fromRGBO(102, 102, 102, 1),
-                                          ),
+                                          fontSize: 18,
+                                          color: Color.fromRGBO(102, 102, 102, 1),
                                         ),
                                       ),
-                                    )
-                                  ],
-                                ),
+                                    ),
+                                  )
+                                ],
                               ),
                             ),
-
-                            EditIconButton
-                            (
-                              openPage: Settings(),
-                              isModalPage: false,
-                              icon: Icons.delete_outlined,
-                              height: 40,
-                              width: 40,
-                              left: 0,
-                              top: 0,
-                              right: 0,
-                              bottom: 0,
-                              size: 26,
-                              elevation: 0,
-                              R: 212, G: 0, B: 0, O: 1
-                            ),
-                          ],
-                        ),
-                      ),
-                      onPressed: () 
-                      {
-                        Navigator.push
-                        (
-                          context,
-                          MaterialPageRoute
-                          (
-                            builder: (context)
-                            {
-                              return Settings();
-                            },
                           ),
-                        );
-                      },
+
+                          EditIconButton
+                          (
+                            openPage: Settings(),
+                            isModalPage: false,
+                            icon: Icons.delete_outlined,
+                            height: 40,
+                            width: 40,
+                            left: 0,
+                            top: 0,
+                            right: 0,
+                            bottom: 0,
+                            size: 26,
+                            elevation: 0,
+                            R: 212, G: 0, B: 0, O: 1
+                          ),
+                        ],
+                      ),
                     ),
+                    onPressed: () 
+                    {
+                      return onPress;
+                    },
                   ),
-                );
-              }).toList(),
+                ),
+              );
+            }).toList(),
           ),
         );
       }  

@@ -6,6 +6,8 @@ class EditIconButton extends StatelessWidget {
   @required
   final bool isModalPage;
   @required
+  final bool isPopUpPage;
+  @required
   final IconData icon;
   @required
   final double height, width;
@@ -22,6 +24,7 @@ class EditIconButton extends StatelessWidget {
     {
       this.openPage,
       this.isModalPage,
+      this.isPopUpPage,
       this.icon,
       this.height,
       this.width,
@@ -80,23 +83,32 @@ class EditIconButton extends StatelessWidget {
               // the second function is executed
               onPressed: () 
               {
-                (isModalPage) ?
-                showModalBottomSheet
-                (
-                  context: context,
-                  builder: ((builder) => openPage)
-                ) : 
-                Navigator.push
-                (
-                  context,
-                  MaterialPageRoute
+                if(isPopUpPage)
+                {
+                  return openPage;
+                }
+                else if (isModalPage)
+                {
+                  showModalBottomSheet
                   (
-                    builder: (context)
-                    {
-                      return openPage;
-                    },
-                  ),
-                );
+                    context: context,
+                    builder: ((builder) => openPage)
+                  );
+                }
+                else
+                {
+                  Navigator.push
+                  (
+                    context,
+                    MaterialPageRoute
+                    (
+                      builder: (context)
+                      {
+                        return openPage;
+                      },
+                    ),
+                  );
+                }
               },
               child: Icon
               (
