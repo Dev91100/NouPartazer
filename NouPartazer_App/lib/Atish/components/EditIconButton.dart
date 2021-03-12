@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
-class EditIconButton extends StatelessWidget {
+class EditIconButton extends StatelessWidget
+{
+  @required
+  final Function onPress;
   @required
   final Widget openPage;
   @required
@@ -23,8 +26,9 @@ class EditIconButton extends StatelessWidget {
   (
     {
       this.openPage,
-      this.isModalPage,
-      this.isPopUpPage,
+      this.onPress,
+      this.isModalPage = false,
+      this.isPopUpPage = true,
       this.icon,
       this.height,
       this.width,
@@ -46,78 +50,78 @@ class EditIconButton extends StatelessWidget {
   {
     return LayoutBuilder
     (
-        builder: (ctx, constraints)
-        {
-          return Container
+      builder: (ctx, constraints)
+      {
+        return Container
+        (
+          margin: EdgeInsets.only
           (
-            margin: EdgeInsets.only
-            (
-              left: left,
-              top: top,
-              right: right,
-              bottom: bottom
-            ),
-            height: height,
-            width: width,
-            constraints: BoxConstraints
-            (
-              minWidth: height,
-              minHeight: width,
-            ),
-            decoration: BoxDecoration
-            (
-              color: Colors.white,
-              shape: BoxShape.circle,
-            ),
+            left: left,
+            top: top,
+            right: right,
+            bottom: bottom
+          ),
+          height: height,
+          width: width,
+          constraints: BoxConstraints
+          (
+            minWidth: height,
+            minHeight: width,
+          ),
+          decoration: BoxDecoration
+          (
+            color: Colors.white,
+            shape: BoxShape.circle,
+          ),
 
-            child: RaisedButton
+          child: RaisedButton
+          (
+            elevation: elevation,
+            padding: EdgeInsets.all(0),
+            color: Colors.white,
+            shape: RoundedRectangleBorder
             (
-              elevation: elevation,
-              padding: EdgeInsets.all(0),
-              color: Colors.white,
-              shape: RoundedRectangleBorder
-              (
-                borderRadius: BorderRadius.circular(50),
-              ),
-              // If isModal is true then the page is a popup and the first function is executed else
-              // the second function is executed
-              onPressed: () 
-              {
-                if(isPopUpPage)
-                {
-                  return openPage;
-                }
-                else if (isModalPage)
-                {
-                  showModalBottomSheet
-                  (
-                    context: context,
-                    builder: ((builder) => openPage)
-                  );
-                }
-                else
-                {
-                  Navigator.push
-                  (
-                    context,
-                    MaterialPageRoute
-                    (
-                      builder: (context)
-                      {
-                        return openPage;
-                      },
-                    ),
-                  );
-                }
-              },
-              child: Icon
-              (
-                icon,
-                color: Color.fromRGBO(R, G, B, O),
-                size: size,
-              ),
+              borderRadius: BorderRadius.circular(50),
             ),
-          );
+            // If isModal is true then the page is a popup and the first function is executed else
+            // the second function is executed
+            onPressed: () 
+            {
+              if(isPopUpPage)
+              {
+                return onPress;
+              }
+              else if (isModalPage)
+              {
+                showModalBottomSheet
+                (
+                  context: context,
+                  builder: ((builder) => openPage)
+                );
+              }
+              else
+              {
+                Navigator.push
+                (
+                  context,
+                  MaterialPageRoute
+                  (
+                    builder: (context)
+                    {
+                      return openPage;
+                    },
+                  ),
+                );
+              }
+            },
+            child: Icon
+            (
+              icon,
+              color: Color.fromRGBO(R, G, B, O),
+              size: size,
+            ),
+          ),
+        );
       }
     );
   }

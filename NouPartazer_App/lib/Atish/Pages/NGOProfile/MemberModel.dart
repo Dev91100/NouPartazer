@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import './Member.dart';
 import './MemberList.dart';
-import 'package:NouPartazer_App/Koomalai/src/Settings/Setting.dart';
 import 'package:NouPartazer_App/Atish/components/EditIconButton.dart';
 
 class MemberModel extends StatelessWidget 
@@ -146,8 +145,7 @@ class MemberModel extends StatelessWidget
 
                           EditIconButton
                           (
-                            openPage: Settings(),
-                            isModalPage: false,
+                            onPress: ,
                             icon: Icons.delete_outlined,
                             height: 40,
                             width: 40,
