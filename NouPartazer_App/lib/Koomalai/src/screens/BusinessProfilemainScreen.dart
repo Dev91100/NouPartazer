@@ -2,7 +2,6 @@ import 'package:NouPartazer_App/Devashish/pages/CreateEvent.dart';
 import 'package:NouPartazer_App/Koomalai/src/Business%20NGO%20list/BusinessNGO%20list.dart';
 import 'package:NouPartazer_App/Koomalai/src/Business%20profile/BusinessProfile.dart';
 import 'package:NouPartazer_App/Koomalai/src/pages/businessHomePage.dart';
-import 'package:NouPartazer_App/Koomalai/src/pages/orderPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -10,20 +9,17 @@ import 'Business task tab bar.dart';
 
 class BusinessProfileMainScreen extends StatefulWidget
 {
-  final Widget child;
   const BusinessProfileMainScreen({
-
     Key key,
-    @required this.child,
   }) : super(key: key);
-
 
   @override
   _BusinessProfileMainScreenState createState() => _BusinessProfileMainScreenState();
 }
 
-class _BusinessProfileMainScreenState extends State<BusinessProfileMainScreen> {
-  int currentIndex =1;
+class _BusinessProfileMainScreenState extends State<BusinessProfileMainScreen>
+{
+  int currentIndex = 1;
   List<Widget> pages;
   Widget currentPage;
   BusinessHomePage homePage;
@@ -33,74 +29,74 @@ class _BusinessProfileMainScreenState extends State<BusinessProfileMainScreen> {
 
   NGOCentresList NGOList;
   @override
-  void initState() {
+  void initState()
+  {
     super.initState();
-    homePage=BusinessHomePage();
-    profilePage=BusinessProfile();
-    event=CreateEvent();
-    taskTab=BusinessTask();
+    homePage    = BusinessHomePage();
+    profilePage = BusinessProfile();
+    event       = CreateEvent();
+    taskTab     = BusinessTask();
 
-    NGOList=NGOCentresList();
+    NGOList     = NGOCentresList();
 
-    pages=[homePage,profilePage,event, taskTab,NGOList];
-    currentPage=profilePage;
+    pages       = [homePage, profilePage, event, taskTab, NGOList];
+    currentPage = profilePage;
 
   }
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
+  Widget build(BuildContext context)
+  {
+    return Scaffold
+    (
+      bottomNavigationBar: BottomNavigationBar
+      (
         onTap: (int index)
         {
           setState(() {
-            currentIndex=index;
-            currentPage=pages[index];
+            currentIndex = index;
+            currentPage = pages[index];
           });
         },
         currentIndex: currentIndex,
         type: BottomNavigationBarType.fixed,
 
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
+        items:
+        [
+          BottomNavigationBarItem
+          (
             icon:Icon(Icons.home),
             // ignore: deprecated_member_use
             title: Text("home"),
-            ),
-
-
-            BottomNavigationBarItem(
+          ),
+          BottomNavigationBarItem
+          (
             icon:Icon(Icons.person),
             // ignore: deprecated_member_use
             title: Text("Profile"),
-
-
-            ),
-            BottomNavigationBarItem(
+          ),
+          BottomNavigationBarItem
+          (
             icon:Icon(Icons.add_circle_rounded,color: Color.fromRGBO(245, 197, 41, 1),size: 50.0,),
             // ignore: deprecated_member_use
             title: Text("Add stories"),
-            ),
-
-            BottomNavigationBarItem(
+          ),
+          BottomNavigationBarItem
+          (
             icon:Icon(Icons.event),
             // ignore: deprecated_member_use
             title: Text("Tasks"),
-            ),
-
-          BottomNavigationBarItem(
+          ),
+          BottomNavigationBarItem
+          (
             icon:Icon(Icons.favorite),
             // ignore: deprecated_member_use
             title: Text("NGO Lists"),
           ),
-
-
         ],
         selectedItemColor: Color.fromRGBO(41, 90, 245, 1),
-
       ),
       body: currentPage,
-
     );
   }
 }

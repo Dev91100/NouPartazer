@@ -9,10 +9,8 @@ import 'package:NouPartazer_App/Atish/Pages/Task/BusinessTask/BusinessCancelledT
 
 class BusinessTask extends StatefulWidget
 {
-  final Widget child;
   const BusinessTask({
     Key key,
-    @required this.child,
   }) : super(key: key);
 
   @override
@@ -64,7 +62,6 @@ class _BusinessTaskState extends State<BusinessTask>
               Tab
               (
                 text: "UNASSIGNED",
-                
               ),
               Tab
               (

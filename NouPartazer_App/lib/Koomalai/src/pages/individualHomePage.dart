@@ -5,12 +5,14 @@ import 'package:flutter/material.dart';
 import '../data/foodData.dart';
 import '../models/foodModel.dart';
 
-class IndividualHomePage extends StatefulWidget {
+class IndividualHomePage extends StatefulWidget
+{
   @override
   _IndividualHomePageState createState() => _IndividualHomePageState();
 }
 
-class _IndividualHomePageState extends State<IndividualHomePage> {
+class _IndividualHomePageState extends State<IndividualHomePage>
+{
   final List<FoodData> _foods = foods;
   @override
   Widget build(BuildContext context) {

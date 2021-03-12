@@ -10,69 +10,69 @@ class SecondMainScreen extends StatefulWidget
   _SecondMainScreenState createState() => _SecondMainScreenState();
 }
 
-class _SecondMainScreenState extends State<SecondMainScreen> {
-  int currentIndex =0;
+class _SecondMainScreenState extends State<SecondMainScreen>
+{
+  int currentIndex = 0;
   List<Widget> pages;
   Widget currentPage;
   IndividualHomePage individualHomePage;
-  NGOList NGOLists;
+  NGOList ngoLists;
   IndividualSettings individualSettings;
 
   @override
-  void initState() {
+  void initState()
+  {
     super.initState();
-    individualHomePage=IndividualHomePage();
-    NGOLists=NGOList();
-    individualSettings= IndividualSettings();
+    individualHomePage  = IndividualHomePage();
+    ngoLists            = NGOList();
+    individualSettings  = IndividualSettings();
 
-    pages=[individualHomePage,NGOLists,individualSettings];
-    currentPage=individualHomePage;
+    pages       = [individualHomePage, ngoLists, individualSettings];
+    currentPage = individualHomePage;
 
   }
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
+  Widget build(BuildContext context)
+  {
+    return Scaffold
+    (
+      bottomNavigationBar: BottomNavigationBar
+      (
         onTap: (int index)
         {
           setState(() {
-            currentIndex=index;
-            currentPage=pages[index];
+            currentIndex = index;
+            currentPage = pages[index];
           });
         },
         currentIndex: currentIndex,
         type: BottomNavigationBarType.fixed,
 
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon:Icon(Icons.home),
+        items:
+        [
+          BottomNavigationBarItem
+          (
+            icon: Icon(Icons.home),
             // ignore: deprecated_member_use
             title: Text("home"),
-            ),
-
-
-            BottomNavigationBarItem(
-            icon:Icon(Icons.favorite),
+          ),
+          BottomNavigationBarItem
+          (
+            icon: Icon(Icons.favorite),
             // ignore: deprecated_member_use
             title: Text("NGO List"),
-
-
-            ),
-
-            BottomNavigationBarItem(
+          ),
+          BottomNavigationBarItem
+          (
             icon:Icon(Icons.settings),
             // ignore: deprecated_member_use
             title: Text("Settings"),
-            ),
-
-
+          ),
         ],
         selectedItemColor: Color.fromRGBO(41, 90, 245, 1),
-
       ),
       body: currentPage,
-
     );
   }
 }

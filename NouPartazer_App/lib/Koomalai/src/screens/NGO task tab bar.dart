@@ -9,11 +9,9 @@ import 'package:NouPartazer_App/Koomalai/src/Business%20ongoing%20events/NGOOngo
 
 class NGOTaskTab extends StatefulWidget
 {
-  final Widget child;
   const NGOTaskTab
   ({
     Key key,
-    @required this.child,
   }) : super(key: key);
 
   @override

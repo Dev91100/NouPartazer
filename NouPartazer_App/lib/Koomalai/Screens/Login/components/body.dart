@@ -40,9 +40,10 @@ class Body extends StatelessWidget {
         (
           child: SingleChildScrollView
           (
-            child: Column(
-
-              children: [
+            child: Column
+            (
+              children:
+              [
                 Stack
                 (  
                   children:
@@ -96,11 +97,15 @@ class Body extends StatelessWidget {
                                 (
                                   borderRadius: BorderRadius.circular(0.0),
                                 ),
-                                onPressed: () {
-                                  Navigator.push(
+                                onPressed: ()
+                                {
+                                  Navigator.push
+                                  (
                                     context,
-                                    MaterialPageRoute(
-                                      builder: (context) {
+                                    MaterialPageRoute
+                                    (
+                                      builder: (context)
+                                      {
                                         return LoginScreen();
                                       },
                                     ),

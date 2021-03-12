@@ -22,8 +22,9 @@ class BusinessNGOMainScreen extends StatefulWidget
   _BusinessNGOMainScreenState createState() => _BusinessNGOMainScreenState();
 }
 
-class _BusinessNGOMainScreenState extends State<BusinessNGOMainScreen> {
-  int currentIndex =4;
+class _BusinessNGOMainScreenState extends State<BusinessNGOMainScreen>
+{
+  int currentIndex = 4;
   List<Widget> pages;
   Widget currentPage;
   BusinessHomePage homePage;
@@ -33,73 +34,72 @@ class _BusinessNGOMainScreenState extends State<BusinessNGOMainScreen> {
   NGOCentresList NGOList;
 
   @override
-  void initState() {
+  void initState()
+  {
     super.initState();
-    homePage=BusinessHomePage();
-    profilePage=BusinessProfile();
-  event=CreateEvent();
-    taskTab=BusinessTask();
-    NGOList=NGOCentresList();
+    homePage    = BusinessHomePage();
+    profilePage = BusinessProfile();
+    event       = CreateEvent();
+    taskTab     = BusinessTask();
+    NGOList     = NGOCentresList();
 
-    pages=[homePage,profilePage,event,taskTab,NGOList];
-    currentPage=NGOList;
-
+    pages       = [homePage, profilePage, event, taskTab, NGOList];
+    currentPage = NGOList;
   }
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
+  Widget build(BuildContext context)
+  {
+    return Scaffold
+    (
+      bottomNavigationBar: BottomNavigationBar
+      (
         onTap: (int index)
         {
           setState(() {
-            currentIndex=index;
-            currentPage=pages[index];
+            currentIndex  = index;
+            currentPage   = pages[index];
           });
         },
         currentIndex: currentIndex,
         type: BottomNavigationBarType.fixed,
 
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
+        items:
+        [
+          BottomNavigationBarItem
+          (
             icon:Icon(Icons.home),
             // ignore: deprecated_member_use
             title: Text("home"),
-            ),
-
-
-            BottomNavigationBarItem(
+          ),
+          BottomNavigationBarItem
+          (
             icon:Icon(Icons.person),
             // ignore: deprecated_member_use
             title: Text("Profile"),
-
-
-            ),
-            BottomNavigationBarItem(
+          ),
+          BottomNavigationBarItem
+          (
             icon:Icon(Icons.add_circle_rounded,color: Color.fromRGBO(245, 197, 41, 1),size: 50.0,),
             // ignore: deprecated_member_use
             title: Text("Add stories"),
-            ),
-
-            BottomNavigationBarItem(
+          ),
+          BottomNavigationBarItem
+          (
             icon:Icon(Icons.event),
             // ignore: deprecated_member_use
             title: Text("Tasks"),
-            ),
-
-          BottomNavigationBarItem(
+          ),
+          BottomNavigationBarItem
+          (
             icon:Icon(Icons.favorite),
             // ignore: deprecated_member_use
             title: Text("NGO Lists"),
           ),
-
-
         ],
         selectedItemColor: Color.fromRGBO(41, 90, 245, 1),
-
       ),
       body: currentPage,
-
     );
   }
 }
