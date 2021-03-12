@@ -224,20 +224,20 @@ class NGOProfile extends StatelessWidget
 
                     ContactInfo
                     (
-                      title: 'manzerpartazer.org',
+                    website: 'www.facebook.com',
                       top: 0,
                       icon: Icons.language_outlined,
                     ),
                     
                     ContactInfo
                     (
-                      title: 'info@manzerpartazer.org',
+                      email: 'info@manzerpartazer.org',
                       icon: Icons.email_outlined,
                     ),
 
                     ContactInfo
                     (
-                      title: '+230 5820 7691',
+                      phoneNumber: '+230 5820 7691',
                       icon: Icons.call_outlined,
                     )
                   ],

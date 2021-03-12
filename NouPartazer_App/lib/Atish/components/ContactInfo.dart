@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ContactInfo extends StatelessWidget
 {
-  @required
-  final String title;
+  
+  final String website;
+  final String email;
+  final String phoneNumber;
   @required
   final double fontSize;
   @required
@@ -15,10 +18,32 @@ class ContactInfo extends StatelessWidget
   @required
   final double O;
 
+  Future<void> _launched;
+
+  Future<void> _launchInBrowser(String url) async 
+  {
+    if (await canLaunch(url)) {
+      print("can print");
+      await launch
+      (
+        url,
+        forceSafariVC: false,
+        forceWebView: false,
+        headers: <String, String>{'header_key': 'header_value'},
+      );
+    } 
+    else {
+      print("Cannot Print");
+      throw 'Could not launch $url';
+    }
+  }
+
   ContactInfo
   (
     {
-      this.title,
+      this.website,
+      this.email,
+      this.phoneNumber,
       this.fontSize = 20,
       this.R = 0,
       this.G = 50,
@@ -28,6 +53,112 @@ class ContactInfo extends StatelessWidget
       this.icon,
     }
   );
+
+  Widget theWebsite()
+  {
+    return Container
+    (
+      // child: Text
+      // (
+      //   website,
+      //   style: TextStyle
+      //   (
+          // fontSize: fontSize,
+          // color: Color.fromRGBO(R, G, B, O),
+          // decoration: TextDecoration.underline,
+      //   ),
+      // ),
+
+      // child: TextButton
+      // (
+      //   onPressed: ()
+      //   {
+      //     _launchInBrowser(website);
+      //   },
+      //   child: Text
+      //   (
+      //     website, 
+          // style: TextStyle
+          // (
+          //   fontSize: fontSize,
+          //   color: Color.fromRGBO(R, G, B, O),
+          //   decoration: TextDecoration.underline,
+          // ),
+      //   ),
+        
+      // ),
+
+      child: new GestureDetector(
+        onTap: () {
+          _launchInBrowser("http://$website");
+        },
+        onLongPress: (){},
+        child: new Text
+        (
+          website,
+          style: TextStyle
+          (
+            fontSize: fontSize,
+            color: Color.fromRGBO(R, G, B, O),
+            decoration: TextDecoration.underline,
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget theEmail()
+  {
+    return Container
+    (
+      child: Text
+      (
+        email,
+        style: TextStyle
+        (
+          fontSize: fontSize,
+          color: Color.fromRGBO(R, G, B, O),
+          decoration: TextDecoration.underline,
+        ),
+      ),
+    );
+  }
+
+  Widget thePhoneNumber()
+  {
+    return Container
+    (
+      child: Text
+      (
+        phoneNumber,
+        style: TextStyle
+        (
+          fontSize: fontSize,
+          color: Color.fromRGBO(R, G, B, O),
+          decoration: TextDecoration.underline,
+        ),
+        
+      ),
+    );
+  }
+
+CheckTextType() 
+{
+  if (website != null)
+  {      
+    return theWebsite();
+  }
+
+  if (email != null)
+  {      
+    return theEmail();
+  }
+
+  if (phoneNumber != null)
+  {      
+    return thePhoneNumber();
+  }
+}
 
   @override
   Widget build(BuildContext context)
@@ -57,20 +188,8 @@ class ContactInfo extends StatelessWidget
               color: Color.fromRGBO(102, 102, 102, 1)
             ),
           ),
-
-          Container
-          (
-            child: Text
-            (
-              title,
-              style: TextStyle
-              (
-                fontSize: fontSize,
-                color: Color.fromRGBO(R, G, B, O),
-                decoration: TextDecoration.underline,
-              ),
-            ),
-          ),
+          
+          CheckTextType()
         ]
       ),
     );

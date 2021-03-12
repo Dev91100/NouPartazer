@@ -42,7 +42,7 @@ class _UploadImageState extends State<UploadImage>
                 width: screen.size.width * 0.876,
             child: Image.file(
               snapshot.data,
-              fit: BoxFit.contain,
+              fit: BoxFit.cover,
             ),
           );
         } else if (null != snapshot.error) {
