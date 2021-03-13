@@ -1,5 +1,5 @@
 
-import 'package:NouPartazer_App/Koomalai/src/Settings/Setting.dart';
+import 'package:NouPartazer_App/Koomalai/src/Settings/NGOSettings.dart';
 import 'package:flutter/material.dart';
 
 class HelpAndSupport extends StatelessWidget {
@@ -61,7 +61,7 @@ class HelpAndSupport extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                             builder: (context) {
-                                return Settings();
+                                return NGOSettings();
                             },
                             ),
                             );

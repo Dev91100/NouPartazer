@@ -4,11 +4,14 @@ import 'package:google_fonts/google_fonts.dart';
 class PageTitle extends StatefulWidget implements PreferredSizeWidget
 {
   final String text;
+  final bool hasBackButton;
+
   PageTitle
   (
     {
       Key key,
       this.text,
+      this.hasBackButton = false,
     }
   ) : preferredSize = Size.fromHeight(kToolbarHeight), super(key: key);
 

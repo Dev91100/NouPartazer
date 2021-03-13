@@ -12,7 +12,7 @@ import 'package:NouPartazer_App/Atish/components/ContactInfo.dart';
 import 'package:NouPartazer_App/Atish/Pages/Story/NGOStory/NGOStory.dart';
 import 'package:NouPartazer_App/Atish/Pages/Story/NGOStory/NGOStoryList.dart';
 import 'package:NouPartazer_App/Atish/Pages/Story/BusinessStory/BusinessStoryModelProfile.dart';
-import 'package:NouPartazer_App/Koomalai/src/Settings/Setting.dart';
+import 'package:NouPartazer_App/Koomalai/src/Settings/NGOSettings.dart';
 import 'package:NouPartazer_App/Koomalai/src/widget/bottomSheetWidget.dart';
 import 'package:NouPartazer_App/Yashna/Pages/EditInfoAndContact/BusinessEditName.dart';
 
@@ -132,7 +132,7 @@ class BusinessProfile extends StatelessWidget
                       ),
                       child: EditIconButton
                       (
-                        onPress: Settings(),
+                        onPress: NGOSettings(),
                         isPage: true,
                         icon: Icons.settings_outlined,
                         height: 50,
