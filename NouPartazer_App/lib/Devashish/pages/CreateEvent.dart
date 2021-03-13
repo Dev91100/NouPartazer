@@ -26,7 +26,7 @@ class CreateEvent extends StatelessWidget {
       {
         return Scaffold
         (
-          appBar: PageTitle(text: 'CREATE STORY',),
+          appBar: PageTitle(text: 'CREATE EVENT',),
           body: SingleChildScrollView
           (
             key: formKey, 
