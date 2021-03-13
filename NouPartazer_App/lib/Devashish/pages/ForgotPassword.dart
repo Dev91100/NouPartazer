@@ -20,28 +20,47 @@ class ForgotPassword extends StatelessWidget {
     //test commit 2
     return Scaffold
     (
+      appBar: AppBar
+      (
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: TheBackButton
+        (
+          press: ()
+          {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return LoginScreen();
+                },
+              ),
+            );            
+          },
+        ),
+      ),
       body: ListView
       (
         key: formKey, 
         children: <Widget>
         [
-          Container
-          (
-            child: TheBackButton(
-                press: () {
+          // Container
+          // (
+          //   child: TheBackButton(
+          //       press: () {
 
-                  Colors.white;
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return LoginScreen();
-                      },
-                    ),
-                  );
-                }
-            )
-          ),
+          //         Colors.white;
+          //         Navigator.push(
+          //           context,
+          //           MaterialPageRoute(
+          //             builder: (context) {
+          //               return LoginScreen();
+          //             },
+          //           ),
+          //         );
+          //       }
+          //   )
+          // ),
 
           Container
           (
