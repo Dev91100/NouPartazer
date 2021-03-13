@@ -17,6 +17,7 @@ class ButtonIconText extends StatelessWidget
   final int ButtonR, ButtonG, ButtonB;
   final double ButtonO;
   final double iconRight;
+  final double elevation;
 
   ButtonIconText
   (
@@ -39,6 +40,7 @@ class ButtonIconText extends StatelessWidget
       this.ButtonB = 193,
       this.ButtonO = 1,
       this.iconRight = 5,
+      this.elevation = 2,
     }
   )
   {
@@ -66,6 +68,7 @@ class ButtonIconText extends StatelessWidget
     return RaisedButton
     (
       padding: EdgeInsets.fromLTRB(15, 10, 15, 10),
+      elevation: elevation,
       shape: RoundedRectangleBorder
       (
         borderRadius: BorderRadius.all(Radius.circular(5))

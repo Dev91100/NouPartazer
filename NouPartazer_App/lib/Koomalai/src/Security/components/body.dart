@@ -85,7 +85,7 @@ class Body extends StatelessWidget {
                 MaterialPageRoute(
                   builder: (context) {
 
-                    return Security();
+                    return NGOSecurity();
 
                   },
                 ),
@@ -127,7 +127,7 @@ class Body extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return Security();
+                      return NGOSecurity();
                     },
                   ),
                 );
@@ -181,7 +181,7 @@ class Body extends StatelessWidget {
                     MaterialPageRoute(
                       builder: (context) {
 
-                        return Security();
+                        return NGOSecurity();
 
                       },
                     ),

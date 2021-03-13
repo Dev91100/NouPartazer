@@ -99,7 +99,7 @@ class SettingsModel extends StatelessWidget
 
           ListTileModel
           (
-            leadingIcon: Icons.logout,
+            leadingIcon: logIcon,
             leadingR: 0, leadingG: 50, leadingB: 193, leadingO: 1, 
             titleText: logText,
             textR: 0, textG: 50, textB: 193, textO: 1, 
