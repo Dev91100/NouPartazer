@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import 'package:NouPartazer_App/Atish/components/EditIconButton.dart';
 import 'package:NouPartazer_App/Atish/components/EditPhotoButton.dart';
@@ -14,116 +13,17 @@ import 'package:NouPartazer_App/Atish/Pages/Story/NGOStory/NGOStoryList.dart';
 import 'package:NouPartazer_App/Atish/Pages/Story/NGOStory/NGOStoryModelProfile.dart';
 import 'package:NouPartazer_App/Koomalai/src/Settings/Setting.dart';
 import 'package:NouPartazer_App/Koomalai/src/widget/bottomSheetWidget.dart';
+import 'package:NouPartazer_App/Yashna/Pages/ConfirmationDialog/AcceptDonation.dart';
 
 class NGOProfile extends StatelessWidget
 {
   final List<NGOStory> ngoStory = ngoStoryList;
-  CreateAlertDialog(BuildContext context){
-    return showDialog(context: context,builder: (context){
-      return ButtonBarTheme
-        (
-          data: ButtonBarThemeData
-            (
-            alignment: MainAxisAlignment.center,
-            buttonPadding: EdgeInsets.all(15),
-            mainAxisSize: MainAxisSize.min,
-
-          ),
-
-          child: AlertDialog(
-            shape: RoundedRectangleBorder
-              (
-              borderRadius: BorderRadius.circular(10),
-            ),
-
-
-            title: Row(
-                children:<Widget>
-                [
-                  IconButton(
-                    icon: Icon(Icons.close),
-                    alignment: Alignment.topRight,
-                    padding: EdgeInsets.only(left: 240),
-                    onPressed: () {
-                      //Put your code here which you want to execute on close button click.
-                      Navigator.of(context).pop();
-                    },
-
-                  ),
-
-                ]
-            ),
-
-            contentPadding: EdgeInsets.only(left: 22, right: 30),
-            content: Text('Are you sure you want to delete this member?',
-                textAlign: TextAlign.center,
-                style: TextStyle
-                  (
-                  //wordSpacing: 5,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20.0,
-                  //color: Color.fromRGBO(0, 0, 0, 1),
-                )
-
-            ),
-
-
-            actions: <Widget>[
-
-              TextButton(
-                child: Text("Cancel",
-                    style: TextStyle
-                      (
-                      decoration:TextDecoration.underline,
-                      color: Color.fromRGBO(102, 102, 102, 1),
-                      fontSize: 20.0,
-
-                    )
-                ),
-
-                onPressed: () {
-                  //Put your code here which you want to execute on Yes button click.
-                  Navigator.of(context).pop();
-                },
-
-              ),
-
-              OutlinedButton(
-                child: Text("Delete",
-                  style: TextStyle
-                    (
-                    color: Color.fromRGBO(212, 0, 0, 1),
-                    fontSize: 20.0,
-
-                  ),
-                ),
-                style: OutlinedButton.styleFrom(
-                  backgroundColor: Colors.red[50],
-                  side: BorderSide(color: Color.fromRGBO(212, 0, 0, 1), width: 1.5),
-                  primary: Color.fromRGBO(212, 0, 0, 1),
-                  shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(7))),
-
-                ),
-
-                onPressed: () {
-                  //Put your code here which you want to execute on Cancel button click.
-                  Navigator.of(context).pop();
-
-                },
-
-              ),
-
-            ],
-
-          )
-      );
-    }
-    );
-  }
+  
   @override
   Widget build(BuildContext context)
   {
     final screen = MediaQuery.of(context).size;
+    var alertDialog = new AcceptDonation().displayDialog(context);
 
     return LayoutBuilder
     (
@@ -229,8 +129,8 @@ class NGOProfile extends StatelessWidget
                       ),
                       child: EditIconButton
                       (
-                        openPage: Settings(),
-                        isModalPage: false,
+                        onPress: Settings(),
+                        isPage: true,
                         icon: Icons.settings_outlined,
                         height: 50,
                         width: 50,
@@ -268,7 +168,8 @@ class NGOProfile extends StatelessWidget
                       title: 'Manzer Partazer Test Test Test Test',
                       fontSize: 22,
                       R: 0, G: 50, B: 193, O: 1,
-                      openPage: Settings(),
+                      onPress: Settings(),
+                      isPopUpPage: true,
                     ),
                     
                     Align
@@ -320,12 +221,13 @@ class NGOProfile extends StatelessWidget
                     SectionWithEditButton
                     (
                       title: 'CONTACT INFO',
-                      openPage: Settings(),
+                      onPress: Settings(),
+                      isPopUpPage: true,
                     ),
 
                     ContactInfo
                     (
-                    website: 'www.facebook.com',
+                      website: 'www.facebook.com',
                       top: 0,
                       icon: Icons.language_outlined,
                     ),
@@ -354,14 +256,15 @@ class NGOProfile extends StatelessWidget
                     (
                       title: 'MEMBERS',
                       icon: Icons.add,
-                      openPage: Settings(),
+                      onPress: Settings(),
+                      isPopUpPage: true,
                     ),
                   ]
                 ),
 
                 MemberModel
                 (
-                  onPress:CreateAlertDialog(context)
+                  onPress: alertDialog
                 ),
               ],
             ),   
@@ -369,11 +272,5 @@ class NGOProfile extends StatelessWidget
         );
       }
     );
-  }
-
-  openurl()
-  {
-    String url1="https://manzerpartazer.org/";
-    launch(url1);
   }
 }

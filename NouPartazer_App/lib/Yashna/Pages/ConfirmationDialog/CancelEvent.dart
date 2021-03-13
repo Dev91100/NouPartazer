@@ -1,12 +1,13 @@
-import 'package:flutter/material.dart';
-import 'package:NouPartazer_App/Yashna/components/Confirmation.dart';
+import 'package:NouPartazer_App/Yashna/components/ConfirmationDialog.dart';
 
-class CancelEvent extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Confirmation(
-    text: "I agree to terminate this event.",
-
-    );
-  }
+class CancelEvent extends ConfirmationDialog
+{
+  final String text;
+  
+  CancelEvent
+  (
+    {
+      this.text = 'I agree to terminate this event.'
+    }
+  ) : super(text: text);
 }

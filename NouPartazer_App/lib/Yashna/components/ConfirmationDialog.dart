@@ -1,25 +1,30 @@
 import 'package:flutter/material.dart';
- 
-class ConfirmLogOut extends StatefulWidget
+
+class ConfirmationDialog
 {
-  ConfirmLogOutState createState() => ConfirmLogOutState();
-}
- 
-class ConfirmLogOutState extends State
-{
-  showAlert(BuildContext context)
+  @required
+  String text;
+  bool _isSelected = false;
+
+  ConfirmationDialog
+  (
+    {
+      this.text = 'This is a test!'
+    }
+  );
+
+  StatefulBuilder displayDialog(BuildContext context)
   {
-    showDialog
+    var alertDialog = StatefulBuilder
     (
-      context: context,
-      barrierDismissible: false,
-      builder: (BuildContext context)
+      builder: (context, setState)
       {
         return ButtonBarTheme
         (
           data: ButtonBarThemeData
           (
             alignment: MainAxisAlignment.center,
+            //buttonPadding: EdgeInsets.all(20),
             mainAxisSize: MainAxisSize.min,
           ),
         
@@ -28,7 +33,7 @@ class ConfirmLogOutState extends State
             contentPadding: EdgeInsets.all(0),
             shape: RoundedRectangleBorder
             ( 
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(10), 
             ),
 
             title: Row
@@ -40,8 +45,6 @@ class ConfirmLogOutState extends State
                 IconButton
                 (
                   icon: Icon(Icons.close),
-                  alignment: Alignment.topRight,
-                  padding: EdgeInsets.only(left: 240),
                   onPressed: ()
                   {
                     //Put your code here which you want to execute on close button click.
@@ -51,19 +54,46 @@ class ConfirmLogOutState extends State
               ]
             ),
 
-            content: Text
+            //contentPadding: EdgeInsets.only(left: 22, right: 30),
+            content: ListTile
             (
-              'Please confirm logout!',
-              textAlign: TextAlign.center,
-              style: TextStyle
+              title:Text
               (
-                //wordSpacing: 5,
-                fontWeight: FontWeight.bold,
-                fontSize: 20.0,
-                //color: Color.fromRGBO(0, 0, 0, 1),
+                'Please tick the checkbox to confirm.',
+                textAlign: TextAlign.justify,
+                style: TextStyle
+                (
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18.0,
+                  //color: Color.fromRGBO(0, 0, 0, 1),
+                )
+              ),
+              
+              subtitle: CheckboxListTile
+              (
+                title: Text
+                (
+                  text,
+                  textAlign: TextAlign.left,
+                  style: TextStyle
+                  (
+                  fontWeight: FontWeight.bold,
+                    fontSize: 15.0,
+                    color: Color.fromRGBO(41, 90, 245, 1),
+                  )
+                ),
+
+                controlAffinity: ListTileControlAffinity.leading,
+                value: _isSelected,
+                onChanged: (bool value)
+                {
+                  setState(() {
+                    _isSelected = value;
+                  });
+                },
               )
             ),
-
+          
             actions:
             [
               TextButton
@@ -76,8 +106,10 @@ class ConfirmLogOutState extends State
                     decoration:TextDecoration.underline,
                     color: Color.fromRGBO(102, 102, 102, 1),
                     fontSize: 20.0,
+                      
                   )
                 ),
+                
                 onPressed: ()
                 {
                   //Put your code here which you want to execute on Yes button click.
@@ -89,28 +121,20 @@ class ConfirmLogOutState extends State
               (
                 child: Text
                 (
-                  "Logout",
+                  "Confirm",
                   style: TextStyle
                   (
-                    color: Color.fromRGBO(212, 0, 0, 1),
-                    fontSize: 20.0,
-                                      
+                    color: Color.fromRGBO(245, 197, 41, 1),
+                    fontSize: 20.0,                  
                   ),
                 ),
 
                 style: OutlinedButton.styleFrom
                 (
-                  backgroundColor: Colors.red[50],
-                  side: BorderSide
-                  (
-                    color: Color.fromRGBO(212, 0, 0, 1),
-                    width: 1.5
-                  ),
+                  backgroundColor: Colors.yellow[50],
+                  side: BorderSide(color: Color.fromRGBO(245, 197, 41, 1), width: 1.5),
                   primary: Color.fromRGBO(212, 0, 0, 1),
-                  shape: const RoundedRectangleBorder
-                  (
-                    borderRadius: BorderRadius.all(Radius.circular(7))
-                  ),
+                  shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(7))),
                 ),
                       
                 onPressed: ()
@@ -122,27 +146,9 @@ class ConfirmLogOutState extends State
             ],
           )
         );
-      },
+      }
     );
-  }
- 
-  @override
-  Widget build(BuildContext context)
-  {
-    return Scaffold
-    (
-      body: Center
-      (
-        child:
-            RaisedButton
-            (
-              onPressed: () => showAlert(context),
-              child: Text('Click Here To Show Alert Dialog Box'),
-              textColor: Colors.white,
-              color: Colors.blueAccent,
-              padding: EdgeInsets.fromLTRB(12, 12, 12, 12),
-            ),
-      ),
-    );
+
+    return alertDialog;
   }
 }

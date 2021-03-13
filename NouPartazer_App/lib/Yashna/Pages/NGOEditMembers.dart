@@ -80,8 +80,8 @@ class _NGOEditMembersState extends State<NGOEditMembers>
 
                 EditIconButton
                 (
-                  openPage: Settings(),
-                  isModalPage: false,
+                  onPress: Settings(),
+                  isPage: true,
                   icon: Icons.edit_outlined,
                   height: 40,
                   width: 40,
@@ -91,15 +91,6 @@ class _NGOEditMembersState extends State<NGOEditMembers>
                   bottom: 0,
                   size: 30,
                 ),
-                // Positioned
-                // (
-                //   bottom: 20.0, 
-                //   right: 20.0 , 
-                //   child: Icon
-                //   (
-                //     Icons.edit_outlined
-                //   ),
-                // ),
               ]
             ),
           ),

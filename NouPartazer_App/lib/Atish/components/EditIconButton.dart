@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 class EditIconButton extends StatelessWidget
 {
   @required
-  final Function onPress;
-  @required
-  final Widget openPage;
+  final onPress;
   @required
   final bool isModalPage;
   @required
   final bool isPopUpPage;
+  @required
+  final bool isPage;
   @required
   final IconData icon;
   @required
@@ -25,10 +25,10 @@ class EditIconButton extends StatelessWidget
   EditIconButton
   (
     {
-      this.openPage,
       this.onPress,
-      this.isModalPage = false,
-      this.isPopUpPage = true,
+      this.isModalPage,
+      this.isPopUpPage,
+      this.isPage,
       this.icon,
       this.height,
       this.width,
@@ -48,81 +48,90 @@ class EditIconButton extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return LayoutBuilder
+    return Container
     (
-      builder: (ctx, constraints)
-      {
-        return Container
-        (
-          margin: EdgeInsets.only
-          (
-            left: left,
-            top: top,
-            right: right,
-            bottom: bottom
-          ),
-          height: height,
-          width: width,
-          constraints: BoxConstraints
-          (
-            minWidth: height,
-            minHeight: width,
-          ),
-          decoration: BoxDecoration
-          (
-            color: Colors.white,
-            shape: BoxShape.circle,
-          ),
+      margin: EdgeInsets.only
+      (
+        left: left,
+        top: top,
+        right: right,
+        bottom: bottom
+      ),
+      height: height,
+      width: width,
+      constraints: BoxConstraints
+      (
+        minWidth: height,
+        minHeight: width,
+      ),
+      decoration: BoxDecoration
+      (
+        color: Colors.white,
+        shape: BoxShape.circle,
+      ),
 
-          child: RaisedButton
-          (
-            elevation: elevation,
-            padding: EdgeInsets.all(0),
-            color: Colors.white,
-            shape: RoundedRectangleBorder
+      child: RaisedButton
+      (
+        elevation: elevation,
+        padding: EdgeInsets.all(0),
+        color: Colors.white,
+        shape: RoundedRectangleBorder
+        (
+          borderRadius: BorderRadius.circular(50),
+        ),
+        // If isModal is true then the page is a popup and the first function is executed else
+        // the second function is executed
+        onPressed: () 
+        {
+          if(isPopUpPage)
+          {
+            showDialog
             (
-              borderRadius: BorderRadius.circular(50),
-            ),
-            // If isModal is true then the page is a popup and the first function is executed else
-            // the second function is executed
-            onPressed: () 
-            {
-              if(isPopUpPage)
+              context: context,
+              builder: (BuildContext context)
               {
                 return onPress;
               }
-              else if (isModalPage)
-              {
-                showModalBottomSheet
-                (
-                  context: context,
-                  builder: ((builder) => openPage)
-                );
-              }
-              else
-              {
-                Navigator.push
-                (
-                  context,
-                  MaterialPageRoute
-                  (
-                    builder: (context)
-                    {
-                      return openPage;
-                    },
-                  ),
-                );
-              }
-            },
-            child: Icon
+            );
+          }
+          else if (isModalPage)
+          {
+            showModalBottomSheet
             (
-              icon,
-              color: Color.fromRGBO(R, G, B, O),
-              size: size,
-            ),
-          ),
-        );
-      }
+              shape: RoundedRectangleBorder
+              (
+                borderRadius: BorderRadius.only
+                (
+                  topLeft: Radius.circular(20),
+                  topRight: Radius.circular(20),
+                )
+              ),
+              context: context,
+              builder: ((builder) => onPress)
+            );
+          }
+          else if(isPage)
+          {
+            Navigator.push
+            (
+              context,
+              MaterialPageRoute
+              (
+                builder: (context)
+                {
+                  return onPress;
+                },
+              ),
+            );
+          }
+        },
+        child: Icon
+        (
+          icon,
+          color: Color.fromRGBO(R, G, B, O),
+          size: size,
+        ),
+      ),
     );
   }
 }

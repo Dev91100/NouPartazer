@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import './SectionTitle.dart';
 import './EditIconButton.dart';
-import 'package:NouPartazer_App/Koomalai/src/Settings/Setting.dart';
 
 class SectionWithEditButton extends StatelessWidget 
 {
@@ -10,7 +9,10 @@ class SectionWithEditButton extends StatelessWidget
     final String title;
     
     @required
-    final Widget openPage;
+    final Widget onPress;
+    final bool isPopUpPage;
+    final bool isModalPage;
+    final bool isPage;
 
     final double fontSize;
     final int R, G, B;
@@ -22,7 +24,10 @@ class SectionWithEditButton extends StatelessWidget
       {
         this.title,
         this.fontSize = 22,
-        this.openPage,
+        this.onPress,
+        this.isPopUpPage = false,
+        this.isModalPage = false,
+        this.isPage = false,
         this.icon = Icons.create_outlined,
         this.R = 0,
         this.G = 0,
@@ -43,7 +48,10 @@ class SectionWithEditButton extends StatelessWidget
       
       EditIconButton
       (
-        openPage: openPage,
+        onPress: onPress,
+        isPopUpPage: isPopUpPage,
+        isModalPage: isModalPage,
+        isPage: isPage,
       );
     }
 
@@ -73,8 +81,10 @@ class SectionWithEditButton extends StatelessWidget
             
             EditIconButton
             (
-              openPage: openPage,
-              isModalPage: false,
+              onPress: onPress,
+              isPopUpPage: isPopUpPage,
+              isModalPage: isModalPage,
+              isPage: isPage,
               icon: icon,
               height: 40,
               width: 40,

@@ -1,21 +1,31 @@
 import 'package:flutter/material.dart';
-
 import 'package:NouPartazer_App/Yashna/components/EditInfo.dart';
 
-class NGOEditName extends StatelessWidget
+class NGOEditName extends EditInfo
 {
-  @override
-  Widget build(BuildContext context)
-  {
-    return EditInfo
-    (
-      title: 'TEST',
-      icon1: Icons.perm_identity,
-      icon2: Icons.title,
-      icon3: Icons.notes,
-      text1: 'NGO NAME',
-      text2: 'SUBTITLE',
-      text3: 'DESCRIPTION',
-    );
-  }
+  String title;
+  String text1, text2, text3;
+  IconData icon1, icon2, icon3;
+
+  NGOEditName
+  (
+    {
+      this.title = 'TEST',
+      this.icon1 = Icons.perm_identity,
+      this.icon2 = Icons.title,
+      this.icon3 = Icons.notes,
+      this.text1 = 'NGO NAME',
+      this.text2 = 'SUBTITLE',
+      this.text3 = 'DESCRIPTION',
+    }
+  ) : super
+  (
+    title: title,
+    icon1: icon1,
+    icon2: icon2,
+    icon3: icon3,
+    text1: text1,
+    text2: text2,
+    text3: text3,
+  );
 }

@@ -7,14 +7,12 @@ import 'package:NouPartazer_App/Atish/components/EditIconButton.dart';
 class MemberModel extends StatelessWidget 
 {
   final List<Member> members = memberList;
-  final Function onPress;
-  final Function openPage;
+  final onPress;
 
   MemberModel
   (
     {
       this.onPress,
-      this.openPage,
     }
   );
 
@@ -148,6 +146,7 @@ class MemberModel extends StatelessWidget
                           EditIconButton
                           (
                             onPress: onPress,
+                            isPopUpPage: true,
                             icon: Icons.delete_outlined,
                             height: 40,
                             width: 40,
@@ -164,7 +163,7 @@ class MemberModel extends StatelessWidget
                     ),
                     onPressed: () 
                     {
-                      return openPage;
+                      return onPress;
                     },
                   ),
                 ),
