@@ -7,12 +7,20 @@ import 'package:NouPartazer_App/Atish/components/EditIconButton.dart';
 class MemberModel extends StatelessWidget 
 {
   final List<Member> members = memberList;
-  final onPress;
+  final onPressDelete;
+  final onPressEdit;
+  final bool isPopUpPage;
+  final bool isModalPage;
+  final bool isPage;
 
   MemberModel
   (
     {
-      this.onPress,
+      this.onPressDelete,
+      this.onPressEdit,
+      this.isPopUpPage = false,
+      this.isModalPage = false,
+      this.isPage = false,
     }
   );
 
@@ -145,8 +153,10 @@ class MemberModel extends StatelessWidget
 
                           EditIconButton
                           (
-                            onPress: onPress,
-                            isPopUpPage: true,
+                            onPress: onPressDelete,
+                            isPopUpPage: isPopUpPage,
+                            isModalPage: isModalPage,
+                            isPage: isPage,
                             icon: Icons.delete_outlined,
                             height: 40,
                             width: 40,
@@ -163,7 +173,19 @@ class MemberModel extends StatelessWidget
                     ),
                     onPressed: () 
                     {
-                      return onPress;
+                      showModalBottomSheet
+                      (
+                        shape: RoundedRectangleBorder
+                        (
+                          borderRadius: BorderRadius.only
+                          (
+                            topLeft: Radius.circular(20),
+                            topRight: Radius.circular(20),
+                          )
+                        ),
+                        context: context,
+                        builder: ((builder) => onPressEdit)
+                      );
                     },
                   ),
                 ),

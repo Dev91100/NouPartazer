@@ -1,4 +1,5 @@
 
+import 'package:NouPartazer_App/Yashna/Pages/EditInfoAndContact/EditContact.dart';
 import 'package:flutter/material.dart';
 
 import 'package:NouPartazer_App/Atish/components/EditIconButton.dart';
@@ -24,7 +25,8 @@ class BusinessProfile extends StatelessWidget
   Widget build(BuildContext context)
   {
     final screen = MediaQuery.of(context).size;
-    var bottomSheet = new BusinessEditName().displayBottomSheet(context);
+    var businessEditNameBottomSheet = new BusinessEditName().displayBottomSheet(context);
+    var editContactBottomSheet = new EditContact().displayBottomSheet(context);
 
     return LayoutBuilder
     (
@@ -169,7 +171,7 @@ class BusinessProfile extends StatelessWidget
                       title: 'Manzer Partazer Test Test Test Test',
                       fontSize: 22,
                       R: 0, G: 50, B: 193, O: 1,
-                      onPress: bottomSheet,
+                      onPress: businessEditNameBottomSheet,
                       isModalPage: true,
                     ),
                     
@@ -225,8 +227,8 @@ class BusinessProfile extends StatelessWidget
                       SectionWithEditButton
                       (
                         title: 'CONTACT INFO',
-                        onPress: Settings(),
-                        isPopUpPage: true,
+                        onPress: editContactBottomSheet,
+                        isModalPage: true,
                       ),
 
                       ContactInfo

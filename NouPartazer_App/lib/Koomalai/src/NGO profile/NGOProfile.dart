@@ -1,3 +1,4 @@
+import 'package:NouPartazer_App/Yashna/Pages/DeleteMember.dart';
 import 'package:flutter/material.dart';
 
 import 'package:NouPartazer_App/Atish/components/EditIconButton.dart';
@@ -13,7 +14,10 @@ import 'package:NouPartazer_App/Atish/Pages/Story/NGOStory/NGOStoryList.dart';
 import 'package:NouPartazer_App/Atish/Pages/Story/NGOStory/NGOStoryModelProfile.dart';
 import 'package:NouPartazer_App/Koomalai/src/Settings/Setting.dart';
 import 'package:NouPartazer_App/Koomalai/src/widget/bottomSheetWidget.dart';
-import 'package:NouPartazer_App/Yashna/Pages/ConfirmationDialog/AcceptDonation.dart';
+import 'package:NouPartazer_App/Yashna/Pages/EditInfoAndContact/NGOEditName.dart';
+import 'package:NouPartazer_App/Yashna/Pages/EditInfoAndContact/EditContact.dart';
+import 'package:NouPartazer_App/Yashna/Pages/NGOEditMembers.dart';
+
 
 class NGOProfile extends StatelessWidget
 {
@@ -23,7 +27,10 @@ class NGOProfile extends StatelessWidget
   Widget build(BuildContext context)
   {
     final screen = MediaQuery.of(context).size;
-    var alertDialog = new AcceptDonation().displayDialog(context);
+    var ngoEditNameBottomSheet = new NGOEditName().displayBottomSheet(context);
+    var editContactBottomSheet = new EditContact().displayBottomSheet(context);
+    var ngoEditMembersBottomSheet = new NGOEditMembers().displayBottomSheet(context);
+    var deleteMemberDialog = new DeleteMember().displayDialog(context);
 
     return LayoutBuilder
     (
@@ -168,8 +175,8 @@ class NGOProfile extends StatelessWidget
                       title: 'Manzer Partazer Test Test Test Test',
                       fontSize: 22,
                       R: 0, G: 50, B: 193, O: 1,
-                      onPress: Settings(),
-                      isPopUpPage: true,
+                      onPress: ngoEditNameBottomSheet,
+                      isModalPage: true,
                     ),
                     
                     Align
@@ -221,8 +228,8 @@ class NGOProfile extends StatelessWidget
                     SectionWithEditButton
                     (
                       title: 'CONTACT INFO',
-                      onPress: Settings(),
-                      isPopUpPage: true,
+                      onPress: editContactBottomSheet,
+                      isModalPage: true,
                     ),
 
                     ContactInfo
@@ -256,15 +263,17 @@ class NGOProfile extends StatelessWidget
                     (
                       title: 'MEMBERS',
                       icon: Icons.add,
-                      onPress: Settings(),
-                      isPopUpPage: true,
+                      onPress: ngoEditMembersBottomSheet,
+                      isModalPage: true,
                     ),
                   ]
                 ),
 
                 MemberModel
                 (
-                  onPress: alertDialog
+                  onPressDelete: deleteMemberDialog,
+                  isPopUpPage: true,
+                  onPressEdit: ngoEditMembersBottomSheet,
                 ),
               ],
             ),   

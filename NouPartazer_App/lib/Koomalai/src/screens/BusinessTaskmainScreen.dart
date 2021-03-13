@@ -9,11 +9,9 @@ import 'Business task tab bar.dart';
 
 class BusinessTaskMainScreen extends StatefulWidget
 {
-  final Widget child;
-  const BusinessTaskMainScreen({
-
+  const BusinessTaskMainScreen
+  ({
     Key key,
-    @required this.child,
   }) : super(key: key);
 
 
@@ -56,8 +54,8 @@ class _BusinessTaskMainScreenState extends State<BusinessTaskMainScreen>
         onTap: (int index)
         {
           setState(() {
-            currentIndex  = index;
-            currentPage   = pages[index];
+            currentIndex = index;
+            currentPage  = pages[index];
           });
         },
         currentIndex: currentIndex,
@@ -70,27 +68,25 @@ class _BusinessTaskMainScreenState extends State<BusinessTaskMainScreen>
             icon:Icon(Icons.home),
             // ignore: deprecated_member_use
             title: Text("home"),
-            ),
-
-            BottomNavigationBarItem
-            (
+          ),
+          BottomNavigationBarItem
+          (
             icon:Icon(Icons.person),
             // ignore: deprecated_member_use
             title: Text("Profile"),
-            ),
-            BottomNavigationBarItem
-            (
+          ),
+          BottomNavigationBarItem
+          (
             icon:Icon(Icons.add_circle_rounded,color: Color.fromRGBO(245, 197, 41, 1),size: 50.0,),
             // ignore: deprecated_member_use
             title: Text("Add stories"),
-            ),
-            BottomNavigationBarItem
-            (
+          ),
+          BottomNavigationBarItem
+          (
             icon:Icon(Icons.event),
             // ignore: deprecated_member_use
             title: Text("Tasks"),
-            ),
-
+          ),
           BottomNavigationBarItem
           (
             icon:Icon(Icons.favorite),

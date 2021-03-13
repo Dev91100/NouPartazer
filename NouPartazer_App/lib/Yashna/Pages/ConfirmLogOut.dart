@@ -1,19 +1,12 @@
 import 'package:flutter/material.dart';
- 
-class ConfirmLogOut extends StatefulWidget
+
+class ConfirmLogOut
 {
-  ConfirmLogOutState createState() => ConfirmLogOutState();
-}
- 
-class ConfirmLogOutState extends State
-{
-  showAlert(BuildContext context)
+  StatefulBuilder displayDialog(BuildContext context)
   {
-    showDialog
+    var alertDialog = StatefulBuilder
     (
-      context: context,
-      barrierDismissible: false,
-      builder: (BuildContext context)
+      builder: (context, setState)
       {
         return ButtonBarTheme
         (
@@ -122,27 +115,9 @@ class ConfirmLogOutState extends State
             ],
           )
         );
-      },
+      }
     );
-  }
- 
-  @override
-  Widget build(BuildContext context)
-  {
-    return Scaffold
-    (
-      body: Center
-      (
-        child:
-            RaisedButton
-            (
-              onPressed: () => showAlert(context),
-              child: Text('Click Here To Show Alert Dialog Box'),
-              textColor: Colors.white,
-              color: Colors.blueAccent,
-              padding: EdgeInsets.fromLTRB(12, 12, 12, 12),
-            ),
-      ),
-    );
+    
+    return alertDialog;
   }
 }

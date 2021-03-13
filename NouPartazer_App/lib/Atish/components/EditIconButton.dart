@@ -26,9 +26,9 @@ class EditIconButton extends StatelessWidget
   (
     {
       this.onPress,
-      this.isModalPage,
-      this.isPopUpPage,
-      this.isPage,
+      this.isModalPage = false,
+      this.isPopUpPage = false,
+      this.isPage = false,
       this.icon,
       this.height,
       this.width,

@@ -188,22 +188,3 @@ class EditInfo
     return bottomSheet;
   }
 }
-  // @override
-  // Widget build(BuildContext context) => Scaffold
-  // (
-        
-  // void showBottomSheet() => showModalBottomSheet
-  // (
-  //   shape: RoundedRectangleBorder
-  //   (
-  //     borderRadius: BorderRadius.only
-  //     (
-  //       topLeft: Radius.circular(8),
-  //       topRight: Radius.circular(8),
-  //     )
-  //   ),
-
-  //   context: context,
-    
-  //   builder: (context) => 
-  // );

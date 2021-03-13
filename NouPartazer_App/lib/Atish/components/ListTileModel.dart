@@ -1,155 +1,66 @@
 import 'package:flutter/material.dart';
 
-import 'package:NouPartazer_App/Atish/Pages/Story/BusinessStory/BusinessStory.dart';
-import 'package:NouPartazer_App/Atish/Pages/Story/BusinessStory/BusinessStoryList.dart';
-import 'package:NouPartazer_App/Atish/Components/IconText.dart';
-import 'package:NouPartazer_App/Koomalai/src/Business%20Event%20Details/Business%20event%20details.dart';
-
 class ListTileModel extends StatelessWidget 
 {
-  final List<BusinessStory> stories = businessStoryList;
+  final IconData leadingIcon;
+  final String titleText;
+  final String subtitleText;
+  final IconData trailingIcon;
+  final onTap;
+
+  ListTileModel
+  (
+    {
+      this.leadingIcon,
+      this.titleText,
+      this.subtitleText,
+      this.trailingIcon,
+      this.onTap,
+    }
+  );
 
   @override
   Widget build(BuildContext context)
   {
-    return ListView
+    return ListTile
     (
-      shrinkWrap: true,
-      padding: const EdgeInsets.only
+      leading: Icon
       (
-        top: 0
+        leadingIcon,
+        color: Colors.black,
+        size: 30.0,
       ),
 
-      children:
-      stories.map((st)
-      {
-        return Card
+      title: Text
+      (
+        titleText,
+        style: TextStyle
         (
-          margin: EdgeInsets.fromLTRB(0, 0, 0, 15),
-          elevation: 0,
-          child: ListTile
-          (
-            leading: Container
-            (
-              margin: EdgeInsets.only
-              (
-                right: 10
-              ),
-              width: 60.0,
-              height: 60.0,
-              decoration: BoxDecoration
-              (
-                image: DecorationImage
-                (
-                  image: AssetImage(st.image),
-                  fit: BoxFit.cover,
-                ),
-                borderRadius: BorderRadius.circular(100.0),
-              ),
-            ),
-            title: Row
-            (
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children:
-              [
-                Expanded
-                (
-                  child: Container
-                  (
-                    child: SingleChildScrollView
-                    (
-                      scrollDirection: Axis.horizontal,
-                      child: Text
-                      (
-                        st.tag,
-                        style: TextStyle
-                        (
-                          fontSize: 20,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                Row
-                (
-                  children:
-                  [
-                    Container
-                    (
-                      margin: EdgeInsets.only
-                      (
-                        left: 20,
-                        right: 10
-                      ),
-                      child: Icon
-                      (
-                        Icons.fastfood,
-                        color: Color.fromRGBO(255,84,62,1),
-                      ),
-                    ),
-                    Container
-                    (
-                      child: Icon
-                      (
-                        Icons.no_food,
-                        color: Color.fromRGBO(0,163,68,1),
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-            subtitle: Container
-            (
-              margin: EdgeInsets.only(),
-              child: SingleChildScrollView
-              (
-                scrollDirection: Axis.horizontal,
-                child: Row
-                (
-                  children:
-                  [
-                    IconText
-                    (
-                      text: st.date,
-                      icon: Icons.event,
-                      R: 0,
-                      G: 50,
-                      B: 193,
-                      O: 1,
-                    ),
-                    
-                    IconText
-                    (
-                      text: st.locationName,
-                      icon: Icons.location_on_outlined,
-                      R: 102,
-                      G: 102,
-                      B: 102,
-                      O: 1,
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            onTap: ()
-            {
-              Navigator.push
-              (
-                context,
-                MaterialPageRoute
-                (
-                  builder: (context)
-                  {
-                      return BusinessEvent();
-                  },
-                ),
-              );
-            }
-          ),
-        );
-      }).toList(),
+          fontSize: 18.0,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+
+      subtitle: Text
+      (
+        subtitleText,
+        style: TextStyle
+        (
+          fontSize: 13.0,
+        ),
+      ),
+
+      trailing: Icon
+      (
+        trailingIcon,
+        color: Color.fromRGBO(41, 90, 245, 1),
+        size: 50.0,
+      ),
+      
+      onTap: ()
+      {
+        //open change password
+      },
     );
   }
 }
