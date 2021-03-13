@@ -12,7 +12,11 @@ class ListTileModel extends StatelessWidget
   final IconData trailingIcon;
   final int trailingR, trailingG, trailingB;
   final double trailingO;
-  final onTap;
+  
+  final bool isModalPage;
+  final bool isPopUpPage;
+  final bool isPage;
+  final onPress;
 
   ListTileModel
   (
@@ -24,7 +28,11 @@ class ListTileModel extends StatelessWidget
       this.trailingR = 0, this.trailingG = 0, this.trailingB = 0, this.trailingO = 1,
       this.leadingR = 0, this.leadingG = 0, this.leadingB = 0, this.leadingO = 1,
       this.textR = 0, this.textG = 0, this.textB = 0, this.textO = 1,
-      this.onTap,
+
+      this.isModalPage = false,
+      this.isPopUpPage = false,
+      this.isPage = false,
+      this.onPress,
     }
   );
 
@@ -82,7 +90,47 @@ class ListTileModel extends StatelessWidget
       
       onTap: ()
       {
-        //open change password
+        if(isPopUpPage)
+          {
+            showDialog
+            (
+              context: context,
+              builder: (BuildContext context)
+              {
+                return onPress;
+              }
+            );
+          }
+          else if (isModalPage)
+          {
+            showModalBottomSheet
+            (
+              shape: RoundedRectangleBorder
+              (
+                borderRadius: BorderRadius.only
+                (
+                  topLeft: Radius.circular(20),
+                  topRight: Radius.circular(20),
+                )
+              ),
+              context: context,
+              builder: ((builder) => onPress)
+            );
+          }
+          else if(isPage)
+          {
+            Navigator.push
+            (
+              context,
+              MaterialPageRoute
+              (
+                builder: (context)
+                {
+                  return onPress;
+                },
+              ),
+            );
+          }
       },
     );
   }

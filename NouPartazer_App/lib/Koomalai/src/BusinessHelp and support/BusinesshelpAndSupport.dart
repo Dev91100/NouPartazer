@@ -1,5 +1,5 @@
 
-import 'package:NouPartazer_App/Koomalai/src/BusinessSettings/Setting.dart';
+import 'package:NouPartazer_App/Koomalai/src/BusinessSettings/BusinessSettings.dart';
 import 'package:flutter/material.dart';
 
 class BusinessHelpAndSupport extends StatelessWidget {
