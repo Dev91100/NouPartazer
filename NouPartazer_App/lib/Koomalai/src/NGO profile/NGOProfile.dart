@@ -12,7 +12,7 @@ import 'package:NouPartazer_App/Atish/Pages/NGOProfile/MemberModel.dart';
 import 'package:NouPartazer_App/Atish/Pages/Story/NGOStory/NGOStory.dart';
 import 'package:NouPartazer_App/Atish/Pages/Story/NGOStory/NGOStoryList.dart';
 import 'package:NouPartazer_App/Atish/Pages/Story/NGOStory/NGOStoryModelProfile.dart';
-import 'package:NouPartazer_App/Koomalai/src/Settings/Setting.dart';
+import 'package:NouPartazer_App/Koomalai/src/Settings/NGOSettings.dart';
 import 'package:NouPartazer_App/Koomalai/src/widget/bottomSheetWidget.dart';
 import 'package:NouPartazer_App/Yashna/Pages/EditInfoAndContact/NGOEditName.dart';
 import 'package:NouPartazer_App/Yashna/Pages/EditInfoAndContact/EditContact.dart';
@@ -136,7 +136,7 @@ class NGOProfile extends StatelessWidget
                       ),
                       child: EditIconButton
                       (
-                        onPress: Settings(),
+                        onPress: NGOSettings(),
                         isPage: true,
                         icon: Icons.settings_outlined,
                         height: 50,

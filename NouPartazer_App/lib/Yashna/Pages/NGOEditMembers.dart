@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:NouPartazer_App/Atish/components/EditIconButton.dart';
-import 'package:NouPartazer_App/Koomalai/src/Settings/Setting.dart';
+import 'package:NouPartazer_App/Koomalai/src/Settings/NGOSettings.dart';
 
 class NGOEditMembers
 {
@@ -45,7 +45,7 @@ class NGOEditMembers
 
                     EditIconButton
                     (
-                      onPress: Settings(),
+                      onPress: NGOSettings(),
                       isPage: true,
                       icon: Icons.edit_outlined,
                       height: 40,

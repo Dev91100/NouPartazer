@@ -61,7 +61,7 @@ class AlertBox extends StatelessWidget {
               MaterialPageRoute(
                 builder: (context) {
 
-                  return Security();
+                  return NGOSecurity();
 
                 },
               ),

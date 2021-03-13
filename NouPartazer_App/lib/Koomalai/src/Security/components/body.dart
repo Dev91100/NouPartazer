@@ -5,7 +5,7 @@ import 'package:NouPartazer_App/Koomalai/components/ChangePassword.dart';
 import 'package:NouPartazer_App/Koomalai/components/CreateNewPassword.dart';
 import 'package:NouPartazer_App/Koomalai/components/rounded_button.dart';
 import 'package:NouPartazer_App/Koomalai/components/rounded_input.dart';
-import 'package:NouPartazer_App/Koomalai/src/Settings/Setting.dart';
+import 'package:NouPartazer_App/Koomalai/src/Settings/NGOSettings.dart';
 import 'package:flutter/material.dart';
 
 import '../Security.dart';
@@ -85,7 +85,7 @@ class Body extends StatelessWidget {
                 MaterialPageRoute(
                   builder: (context) {
 
-                    return Security();
+                    return NGOSecurity();
 
                   },
                 ),
@@ -127,7 +127,7 @@ class Body extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return Security();
+                      return NGOSecurity();
                     },
                   ),
                 );
@@ -181,7 +181,7 @@ class Body extends StatelessWidget {
                     MaterialPageRoute(
                       builder: (context) {
 
-                        return Security();
+                        return NGOSecurity();
 
                       },
                     ),
@@ -302,7 +302,7 @@ class Body extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) {
-                              return Settings();
+                              return NGOSettings();
                             },
                           ),
                         );

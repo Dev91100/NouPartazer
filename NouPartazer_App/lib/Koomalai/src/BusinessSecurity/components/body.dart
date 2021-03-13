@@ -5,7 +5,7 @@ import 'package:NouPartazer_App/Koomalai/components/ChangePassword.dart';
 import 'package:NouPartazer_App/Koomalai/components/CreateNewPassword.dart';
 import 'package:NouPartazer_App/Koomalai/components/rounded_button.dart';
 import 'package:NouPartazer_App/Koomalai/components/rounded_input.dart';
-import 'package:NouPartazer_App/Koomalai/src/BusinessSettings/Setting.dart';
+import 'package:NouPartazer_App/Koomalai/src/BusinessSettings/BusinessSettings.dart';
 import 'package:flutter/material.dart';
 
 import '../Security.dart';
