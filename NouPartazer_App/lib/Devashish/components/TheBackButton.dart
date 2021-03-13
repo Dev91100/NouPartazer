@@ -18,20 +18,13 @@ class TheBackButton extends StatelessWidget {
     (
       builder: (ctx, constraints)
       {
-        return Container
+        return IconButton
         (
-          padding: EdgeInsets.fromLTRB(0, 0, 0, screen.size.height * 0.01),
-          child: Align
-          ( 
-            alignment: Alignment.topLeft,  
-            // alignment: Alignment.bottomLeft,
-            child: IconButton
-            (
-              icon: Icon(Icons.keyboard_arrow_left),  
-              iconSize: 70,
-              onPressed: press,
-            ), 
-          ),          
+          color: Colors.black,
+          padding: EdgeInsets.all(0),
+          icon: Icon(Icons.keyboard_arrow_left),  
+          iconSize: 60,
+          onPressed: press,
         );
       }
     );

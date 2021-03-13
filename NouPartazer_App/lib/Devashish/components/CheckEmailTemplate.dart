@@ -29,6 +29,25 @@ class CheckEmailTemplate extends StatelessWidget
       {
         return Scaffold
         (
+          appBar: AppBar
+          (
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+            leading: TheBackButton
+            (
+              press: ()
+              {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return LoginScreen();
+                    },
+                  ),
+                );            
+              },
+            ),
+          ),
           body: SingleChildScrollView
           (
             child: Container(
@@ -37,20 +56,20 @@ class CheckEmailTemplate extends StatelessWidget
               (
                 children: 
                 [
-                  TheBackButton(
-                      press: () {
+                  // TheBackButton(
+                  //     press: () {
 
-                        Colors.white;
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) {
-                              return LoginScreen();
-                            },
-                          ),
-                        );
-                      }
-                  ),
+                  //       Colors.white;
+                  //       Navigator.push(
+                  //         context,
+                  //         MaterialPageRoute(
+                  //           builder: (context) {
+                  //             return LoginScreen();
+                  //           },
+                  //         ),
+                  //       );
+                  //     }
+                  // ),
 
                   Icon
                   (
