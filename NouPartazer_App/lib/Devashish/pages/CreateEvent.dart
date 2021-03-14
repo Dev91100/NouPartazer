@@ -1,3 +1,4 @@
+import 'package:NouPartazer_App/Devashish/components/DottedBoxWithUploadButton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:NouPartazer_App/Atish/components/PageTitle.dart';
@@ -7,6 +8,10 @@ import 'package:NouPartazer_App/Devashish/components/TextFields.dart';
 import 'package:NouPartazer_App/Devashish/components/TheOutlinedButtons.dart';
 import 'package:NouPartazer_App/Devashish/components/UploadImage.dart';
 import 'package:NouPartazer_App/Devashish/components/CheckBoxes.dart';
+
+import 'package:NouPartazer_App/Devashish/components/RetrieveImage.dart';
+import 'package:NouPartazer_App/Devashish/components/GetFile.dart';
+import 'package:NouPartazer_App/Devashish/components/DottedBoxWithUploadButton.dart';
 
 class CreateEvent extends StatelessWidget {
   final formKey = GlobalKey<FormState>();
@@ -130,7 +135,28 @@ class CreateEvent extends StatelessWidget {
 
               SizedBox(height: constraints.maxHeight * 0.03,),
 
-              UploadImage(),
+              GetFile
+              (
+                widget1: DottedBoxWithUploadButton
+                (
+                  fileImage: RetrieveImage().file,
+                  constraints: constraints,
+                  onPress: RetrieveImage().getCallback(),
+                ),
+                widget2: DottedBoxWithUploadButton
+                (
+                  text: 'Error selecting image',
+                  fileImage: null,
+                  constraints: constraints,
+                  onPress: RetrieveImage().getCallback(),
+                ),
+                widget3: DottedBoxWithUploadButton
+                (
+                  fileImage: null,
+                  constraints: constraints,
+                  onPress: RetrieveImage().getCallback(),
+                ),
+              ),
 
               TheOutlinedButtons(message: 'Create Event',)
             ],
