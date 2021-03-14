@@ -1,3 +1,4 @@
+import 'package:NouPartazer_App/Koomalai/src/NGO%20profile/NGOProfile.dart';
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget
         )
       
       ),
-      home: SplashScreen(),
+      home: NGOProfile(),
     );
   }
 }

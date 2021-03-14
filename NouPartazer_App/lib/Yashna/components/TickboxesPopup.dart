@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class ConfirmationDialog
+class TickboxesPopups
 {
   @required
   String text;
   bool _isSelected = false;
 
-  ConfirmationDialog
+  TickboxesPopups
   (
     {
       this.text = 'This is a test!'
