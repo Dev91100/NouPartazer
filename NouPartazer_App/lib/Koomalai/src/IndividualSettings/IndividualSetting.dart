@@ -25,7 +25,6 @@ class IndividualSettings extends StatelessWidget
       (
         notifications: true,
         language: true,
-        security: true,
         helpAndSupport: true,
         helpAndSupportPage: IndividualHelpAndSupport(),
         logOut: false,
