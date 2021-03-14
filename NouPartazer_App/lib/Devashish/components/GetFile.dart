@@ -8,7 +8,7 @@ import 'package:NouPartazer_App/Devashish/components/RetrieveImage.dart';
 
 class GetFile extends StatefulWidget
 {
-  
+  Future<File> file;
   final Widget widget1;
   final Widget widget2;
   final Widget widget3;
@@ -17,6 +17,7 @@ class GetFile extends StatefulWidget
   GetFile
   (
     {
+      this.file,
       this.widget1,
       this.widget2,
       this.widget3,
@@ -29,7 +30,7 @@ class GetFile extends StatefulWidget
 
 class _GetFileState extends State<GetFile>
 {
-  Future<File> file;
+  
   // String status = '';
   // String base64Image;
   // File tmpFile;
@@ -39,7 +40,7 @@ class _GetFileState extends State<GetFile>
   {
     setState(()
     {
-      file = ImagePicker.pickImage(source: ImageSource.gallery);
+      widget.file = ImagePicker.pickImage(source: ImageSource.gallery);
     });
     // setStatus('');
   }
@@ -48,7 +49,7 @@ class _GetFileState extends State<GetFile>
   {
     var retrieveImage = RetrieveImage
     (
-      file: file,
+      file: widget.file,
       widget1: widget.widget1,
       widget2: widget.widget2,
       widget3: widget.widget3,
