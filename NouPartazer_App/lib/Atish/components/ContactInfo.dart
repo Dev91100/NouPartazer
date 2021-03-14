@@ -18,9 +18,9 @@ class ContactInfo extends StatelessWidget
   @required
   final double O;
 
-  Future<void> _launched;
+  // Future<void> _launched;
 
-  Future<void> _launchInBrowser(String url) async 
+  Future<void> _launchInBrowser(String url) async       //Allows user to open a link in a separate browser
   {
     if (await canLaunch(url)) {
       print("can print");
@@ -38,12 +38,28 @@ class ContactInfo extends StatelessWidget
     }
   }
 
+  Future<void> _makePhoneCall(String url) async {       //Allows user to open a a phone number in the default caller app
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
+  Future<void> _sendEmail(String url) async {       //Allows user to send an email through default email app
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   ContactInfo
   (
     {
-      this.website,
-      this.email,
-      this.phoneNumber,
+      this.website = '',
+      this.email = '',
+      this.phoneNumber = '',
       this.fontSize = 20,
       this.R = 0,
       this.G = 50,
@@ -58,36 +74,6 @@ class ContactInfo extends StatelessWidget
   {
     return Container
     (
-      // child: Text
-      // (
-      //   website,
-      //   style: TextStyle
-      //   (
-          // fontSize: fontSize,
-          // color: Color.fromRGBO(R, G, B, O),
-          // decoration: TextDecoration.underline,
-      //   ),
-      // ),
-
-      // child: TextButton
-      // (
-      //   onPressed: ()
-      //   {
-      //     _launchInBrowser(website);
-      //   },
-      //   child: Text
-      //   (
-      //     website, 
-          // style: TextStyle
-          // (
-          //   fontSize: fontSize,
-          //   color: Color.fromRGBO(R, G, B, O),
-          //   decoration: TextDecoration.underline,
-          // ),
-      //   ),
-        
-      // ),
-
       child: new GestureDetector(
         onTap: () {
           _launchInBrowser("http://$website");
@@ -111,14 +97,20 @@ class ContactInfo extends StatelessWidget
   {
     return Container
     (
-      child: Text
-      (
-        email,
-        style: TextStyle
+      child: new GestureDetector(
+        onTap: () {
+          _sendEmail("mailto:$email");
+        },
+        onLongPress: (){},
+        child: new Text
         (
-          fontSize: fontSize,
-          color: Color.fromRGBO(R, G, B, O),
-          decoration: TextDecoration.underline,
+          email,
+          style: TextStyle
+          (
+            fontSize: fontSize,
+            color: Color.fromRGBO(R, G, B, O),
+            decoration: TextDecoration.underline,
+          ),
         ),
       ),
     );
@@ -128,36 +120,45 @@ class ContactInfo extends StatelessWidget
   {
     return Container
     (
-      child: Text
-      (
-        phoneNumber,
-        style: TextStyle
+      child: new GestureDetector(
+        onTap: () {
+          _makePhoneCall("tel:$phoneNumber");
+        },
+        onLongPress: (){},
+        child: new Text
         (
-          fontSize: fontSize,
-          color: Color.fromRGBO(R, G, B, O),
-          decoration: TextDecoration.underline,
+          phoneNumber,
+          style: TextStyle
+          (
+            fontSize: fontSize,
+            color: Color.fromRGBO(R, G, B, O),
+            decoration: TextDecoration.underline,
+          ),
         ),
-        
       ),
     );
   }
 
-CheckTextType() 
+checkTextType() 
 {
-  if (website != null)
+  Widget result;
+
+  if (website != '')
   {      
-    return theWebsite();
+    result = theWebsite();
   }
 
-  if (email != null)
+  else if (email != '')
   {      
-    return theEmail();
+    result = theEmail();
   }
 
-  if (phoneNumber != null)
+  else if (phoneNumber != '')
   {      
-    return thePhoneNumber();
+    result = thePhoneNumber();
   }
+
+  return result;
 }
 
   @override
@@ -189,7 +190,7 @@ CheckTextType()
             ),
           ),
           
-          CheckTextType()
+          checkTextType()
         ]
       ),
     );

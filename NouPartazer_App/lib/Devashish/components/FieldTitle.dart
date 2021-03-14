@@ -53,7 +53,6 @@ class FieldTitle extends StatelessWidget
                 color: new Color.fromRGBO(R, G, B, O),
               ),
             ),
-            // textAlign: TextAlign.center,
           ),
         );
       } 
