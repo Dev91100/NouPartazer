@@ -12,7 +12,6 @@ class SettingsModel extends StatelessWidget
   final bool logOut;
 
   final IconData logIcon;
-  final String logText;
   final notificationsPage;
   final languagePage;
   final helpAndSupportPage;
@@ -28,7 +27,6 @@ class SettingsModel extends StatelessWidget
       this.helpAndSupport = false,
       this.logOut = true,
       this.logIcon = Icons.logout,
-      this.logText = 'Log out',
 
       this.notificationsPage,
       this.languagePage,
@@ -100,8 +98,8 @@ class SettingsModel extends StatelessWidget
           ListTileModel
           (
             leadingIcon: logIcon,
-            leadingR: 0, leadingG: 50, leadingB: 193, leadingO: 1, 
-            titleText: logText,
+            leadingR: 0, leadingG: 50, leadingB: 193, leadingO: 1,
+            titleText: (logOut) ? 'Log out' : 'Log in',
             textR: 0, textG: 50, textB: 193, textO: 1, 
             trailingIcon: Icons.keyboard_arrow_right,
             trailingR: 0, trailingG: 50, trailingB: 193, trailingO: 1,
