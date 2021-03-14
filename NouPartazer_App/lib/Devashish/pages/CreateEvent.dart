@@ -141,20 +141,20 @@ class CreateEvent extends StatelessWidget {
                 (
                   fileImage: RetrieveImage().file,
                   constraints: constraints,
-                  onPress: RetrieveImage().getCallback(),
+                  onPress: () => GetFile().onButtonPress(),
                 ),
                 widget2: DottedBoxWithUploadButton
                 (
                   text: 'Error selecting image',
                   fileImage: null,
                   constraints: constraints,
-                  onPress: RetrieveImage().getCallback(),
+                  onPress: () => GetFile().onButtonPress(),
                 ),
                 widget3: DottedBoxWithUploadButton
                 (
                   fileImage: null,
                   constraints: constraints,
-                  onPress: RetrieveImage().getCallback(),
+                  onPress: () => GetFile().onButtonPress(),
                 ),
               ),
 
