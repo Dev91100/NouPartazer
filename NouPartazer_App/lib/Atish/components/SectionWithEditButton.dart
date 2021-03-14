@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './SectionTitle.dart';
-import 'RoundIconButton.dart';
+import './EditIconButton.dart';
 
 class SectionWithEditButton extends StatelessWidget 
 {

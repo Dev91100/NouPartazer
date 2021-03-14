@@ -1,8 +1,8 @@
 import 'package:NouPartazer_App/Yashna/Pages/DeleteMember.dart';
 import 'package:flutter/material.dart';
 
-import 'package:NouPartazer_App/Atish/components/RoundIconButton.dart';
-import 'package:NouPartazer_App/Atish/components/RoundPhotoButton.dart';
+import 'package:NouPartazer_App/Atish/components/EditIconButton.dart';
+import 'package:NouPartazer_App/Atish/components/EditPhotoButton.dart';
 import 'package:NouPartazer_App/Atish/components/SectionTitle.dart';
 import 'package:NouPartazer_App/Atish/components/CustomDivider.dart';
 import 'package:NouPartazer_App/Atish/components/LongText.dart';

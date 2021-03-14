@@ -7,7 +7,6 @@ import 'package:NouPartazer_App/Devashish/components/TextFields.dart';
 import 'package:NouPartazer_App/Devashish/components/TheOutlinedButtons.dart';
 import 'package:NouPartazer_App/Devashish/components/UploadImage.dart';
 import 'package:NouPartazer_App/Devashish/components/CheckBoxes.dart';
-// import 'package:google_fonts/google_fonts.dart';
 
 class CreateEvent extends StatelessWidget {
   final formKey = GlobalKey<FormState>();
