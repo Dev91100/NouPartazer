@@ -1,6 +1,6 @@
-import 'package:NouPartazer_App/Yashna/components/TickboxesPopup.dart';
+import 'package:NouPartazer_App/Yashna/components/TickboxPopup.dart';
 
-class CancelEvent extends TickboxesPopups
+class CancelEvent extends TickboxPopup
 {
   final String text;
   

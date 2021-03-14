@@ -1,6 +1,6 @@
-import 'package:NouPartazer_App/Yashna/components/TickboxesPopup.dart';
+import 'package:NouPartazer_App/Yashna/components/TickboxPopup.dart';
 
-class AcceptDonation extends TickboxesPopups
+class AcceptDonation extends TickboxPopup
 {
   String text;
 

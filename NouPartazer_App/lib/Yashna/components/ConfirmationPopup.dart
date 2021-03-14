@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 
-class TickboxesPopups
+class ConfirmationPopup
 {
-  @required
-  String text;
-  bool _isSelected = false;
+  String confirmationText;
+  String leftButton;
+  String rightButton;
 
-  TickboxesPopups
+  ConfirmationPopup
   (
     {
-      this.text = 'This is a test!'
+      this.confirmationText,
+      this.leftButton,
+      this.rightButton,
     }
   );
 
@@ -24,27 +26,29 @@ class TickboxesPopups
           data: ButtonBarThemeData
           (
             alignment: MainAxisAlignment.center,
-            //buttonPadding: EdgeInsets.all(20),
+            buttonPadding: EdgeInsets.all(15),
             mainAxisSize: MainAxisSize.min,
+            
           ),
-        
+          
           child: AlertDialog
           (
-            contentPadding: EdgeInsets.all(0),
+            
             shape: RoundedRectangleBorder
-            ( 
-              borderRadius: BorderRadius.circular(10), 
+            (
+              borderRadius: BorderRadius.circular(10),
             ),
-
+            titlePadding: EdgeInsets.only(top: 0),
             title: Row
             (
-              crossAxisAlignment: CrossAxisAlignment.end,
               mainAxisAlignment: MainAxisAlignment.end,
               children:
               [ 
                 IconButton
                 (
                   icon: Icon(Icons.close),
+                  // alignment: Alignment.topRight,
+                  // padding: EdgeInsets.only(left: 240),
                   onPressed: ()
                   {
                     //Put your code here which you want to execute on close button click.
@@ -54,59 +58,38 @@ class TickboxesPopups
               ]
             ),
 
-            //contentPadding: EdgeInsets.only(left: 22, right: 30),
-            content: ListTile
+            contentPadding: EdgeInsets.symmetric
             (
-              title:Text
-              (
-                'Please tick the checkbox to confirm.',
-                textAlign: TextAlign.justify,
-                style: TextStyle
-                (
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18.0,
-                  //color: Color.fromRGBO(0, 0, 0, 1),
-                )
-              ),
-              
-              subtitle: CheckboxListTile
-              (
-                title: Text
-                (
-                  text,
-                  textAlign: TextAlign.left,
-                  style: TextStyle
-                  (
-                  fontWeight: FontWeight.bold,
-                    fontSize: 15.0,
-                    color: Color.fromRGBO(41, 90, 245, 1),
-                  )
-                ),
+              // left: 22,
+              // right: 30,
+              horizontal: 30,
+            ),
 
-                controlAffinity: ListTileControlAffinity.leading,
-                value: _isSelected,
-                onChanged: (bool value)
-                {
-                  setState(() {
-                    _isSelected = value;
-                  });
-                },
+            content: Text
+            (
+              confirmationText,
+              textAlign: TextAlign.center,
+              style: TextStyle
+              (
+                //wordSpacing: 5,
+                fontWeight: FontWeight.bold,
+                fontSize: 20.0,
+                //color: Color.fromRGBO(0, 0, 0, 1),
               )
             ),
-          
+      
             actions:
             [
               TextButton
               (
                 child: Text
                 (
-                  "Cancel",
+                  leftButton,
                   style: TextStyle
                   (
                     decoration:TextDecoration.underline,
                     color: Color.fromRGBO(102, 102, 102, 1),
                     fontSize: 20.0,
-                      
                   )
                 ),
                 
@@ -116,27 +99,34 @@ class TickboxesPopups
                   Navigator.of(context).pop();
                 },
               ),
-
+    
               OutlinedButton
               (
                 child: Text
                 (
-                  "Confirm",
+                  rightButton,
                   style: TextStyle
                   (
-                    color: Color.fromRGBO(245, 197, 41, 1),
-                    fontSize: 20.0,                  
+                    color: Color.fromRGBO(212, 0, 0, 1),
+                    fontSize: 20.0,               
                   ),
                 ),
 
                 style: OutlinedButton.styleFrom
                 (
-                  backgroundColor: Colors.yellow[50],
-                  side: BorderSide(color: Color.fromRGBO(245, 197, 41, 1), width: 1.5),
+                  backgroundColor: Colors.red[50],
+                  side: BorderSide
+                  (
+                    color: Color.fromRGBO(212, 0, 0, 1),
+                    width: 1.5
+                  ),
                   primary: Color.fromRGBO(212, 0, 0, 1),
-                  shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(7))),
+                  shape: const RoundedRectangleBorder
+                  (
+                    borderRadius: BorderRadius.all(Radius.circular(7))
+                  ),
                 ),
-                      
+                    
                 onPressed: ()
                 {
                   //Put your code here which you want to execute on Cancel button click.
@@ -148,7 +138,7 @@ class TickboxesPopups
         );
       }
     );
-
+    
     return alertDialog;
   }
 }
