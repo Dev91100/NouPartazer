@@ -19,20 +19,22 @@ class DeleteMember
           
           child: AlertDialog
           (
+            
             shape: RoundedRectangleBorder
             (
               borderRadius: BorderRadius.circular(10),
             ),
-
+            titlePadding: EdgeInsets.only(top: 0),
             title: Row
             (
+              mainAxisAlignment: MainAxisAlignment.end,
               children:
               [ 
                 IconButton
                 (
                   icon: Icon(Icons.close),
-                  alignment: Alignment.topRight,
-                  padding: EdgeInsets.only(left: 240),
+                  // alignment: Alignment.topRight,
+                  // padding: EdgeInsets.only(left: 240),
                   onPressed: ()
                   {
                     //Put your code here which you want to execute on close button click.
@@ -45,7 +47,7 @@ class DeleteMember
             contentPadding: EdgeInsets.only
             (
               left: 22,
-              right: 30
+              right: 30,
             ),
 
             content: Text

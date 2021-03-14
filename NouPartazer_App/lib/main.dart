@@ -1,5 +1,6 @@
 import 'package:NouPartazer_App/Atish/Pages/Splashscreen/SplashScreen.dart';
 import 'package:NouPartazer_App/Devashish/pages/CreateEvent.dart';
+import 'package:NouPartazer_App/Koomalai/src/NGO%20profile/NGOProfile.dart';
 import 'package:NouPartazer_App/Yashna/Pages/EditInfoAndContact/EditContact.dart';
 import 'package:flutter/material.dart';
 import 'package:NouPartazer_App/Yashna/Pages/EditInfoAndContact/BusinessEditName.dart';
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget
         primaryColor: kPrimaryColor,
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: NGOSecurity(),
+      home: NGOProfile(),
     );
   }
 }
