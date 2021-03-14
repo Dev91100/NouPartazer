@@ -1,14 +1,7 @@
-import 'package:NouPartazer_App/Atish/Pages/Splashscreen/SplashScreen.dart';
-import 'package:NouPartazer_App/Yashna/Pages/EditInfoAndContact/EditContact.dart';
 import 'package:flutter/material.dart';
-import 'package:NouPartazer_App/Yashna/Pages/EditInfoAndContact/BusinessEditName.dart';
-import 'package:NouPartazer_App/Yashna/Pages/EditInfoAndContact/NGOEditName.dart';
-import 'package:NouPartazer_App/Koomalai/constants.dart';
+
+import 'package:google_fonts/google_fonts.dart';
 import 'package:NouPartazer_App/Atish/Pages/Splashscreen/SplashScreen.dart';
-import 'package:NouPartazer_App/Yashna/Pages/ConfirmationDialog/CancelDonation.dart';
-import 'package:NouPartazer_App/Yashna/Pages/ConfirmationDialog/AcceptDonation.dart';
-import 'package:NouPartazer_App/Yashna/Pages/ConfirmationDialog/CancelEvent.dart';
-import 'package:NouPartazer_App/Yashna/Pages/NGOEditMembers.dart';
 
 void main() => runApp(MyApp());
 
@@ -24,8 +17,25 @@ class MyApp extends StatelessWidget
       title: 'NouPartazer',
       theme: ThemeData
       (
-        primaryColor: kPrimaryColor,
+        brightness: Brightness.light,
+        primaryColor: Color.fromRGBO(0, 50, 193, 1),
+        accentColor: Color.fromRGBO(245, 197, 41, 1),
         scaffoldBackgroundColor: Colors.white,
+
+        textTheme: TextTheme
+        (
+          headline1: GoogleFonts.comfortaa
+          (
+            textStyle: TextStyle
+            (
+              fontWeight: FontWeight.bold,
+              fontSize: 18,
+              color: new Color.fromRGBO(0, 0, 0, 1),
+            ),
+          ),
+          
+        )
+      
       ),
       home: SplashScreen(),
     );
