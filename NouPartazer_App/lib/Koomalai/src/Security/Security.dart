@@ -6,11 +6,13 @@ import 'package:NouPartazer_App/Atish/components/SectionTitle.dart';
 
 import 'package:NouPartazer_App/Devashish/components/FieldTitle.dart';
 import 'package:NouPartazer_App/Devashish/components/TextFields.dart';
+import 'package:NouPartazer_App/Devashish/components/TheOutlinedButtons.dart';
 import 'package:NouPartazer_App/Atish/components/ButtonIconText.dart';
 
 class NGOSecurity extends StatelessWidget
 {
-  final _storyTitleController = TextEditingController();
+  final _oldPWController = TextEditingController();
+  final _newPWController = TextEditingController();
 
   @override
   Widget build(BuildContext context)
@@ -42,6 +44,7 @@ class NGOSecurity extends StatelessWidget
               [
                 Column
                 (
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children:
                   [
                     SectionTitle
@@ -49,16 +52,42 @@ class NGOSecurity extends StatelessWidget
                       title: 'CHANGE PASSWORD',
                       top: 15,
                     ),
+                    SizedBox(height: constraints.maxHeight * 0.03,),
 
                     Container
                     (
-                      child: FieldTitle(fieldTitle: 'Title'),
+                      child: FieldTitle(fieldTitle: 'ENTER OLD PASSWORD', ),
                     ),
 
                     Container
                     (
-                      child: TextFields(textFieldControllerName: _storyTitleController, ),
+                      child: TextFields(textFieldControllerName: _oldPWController, theprefixIcon: Icons.https_outlined, isPassword: true,),
                     ),
+
+                    Container
+                    (
+                      child: FieldTitle(fieldTitle: 'CREATE NEW PASSWORD', ),
+                    ),
+
+                    Container
+                    (
+                      child: TextFields
+                      (
+                        textFieldControllerName: _newPWController, 
+                        theprefixIcon: Icons.https_outlined, 
+                        isPassword: true,
+                      ),
+                    ),
+
+                    Container
+                    (
+                      child: TheOutlinedButtons
+                      (
+                        // press: ,
+                        message: 'Change Password',
+                      ),
+                    )
+
                   ],
                 ),
                 

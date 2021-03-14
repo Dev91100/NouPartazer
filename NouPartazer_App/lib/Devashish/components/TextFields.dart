@@ -9,9 +9,13 @@ class TextFields extends StatelessWidget {
   final double bottomConstr;
   final double leftConstr;
   final IconData thesuffixIcon;
+  final IconData theprefixIcon;
   final TextEditingController textFieldControllerName;
   final int maxLines;
   final TextInputType inputType;
+  double prefixIconMaxH, prefixIconMaxW, suffixIconMaxH, suffixIconMaxW;
+  bool hasPrefixIcon, hasSuffixIcon, isPassword;
+  // final InputDecoration iconPlacement;
 
   TextFields
   (
@@ -21,15 +25,44 @@ class TextFields extends StatelessWidget {
       this.bottomConstr = 0.01,
       this.leftConstr = 0.062,
       this.thesuffixIcon,
+      this.theprefixIcon,
       this.textFieldControllerName,
       this.maxLines = 1,
       this.inputType,
+      this.prefixIconMaxH = 0,
+      this.prefixIconMaxW = 6,
+      this.suffixIconMaxH = 0,
+      this.suffixIconMaxW = 6,
+      this.hasPrefixIcon = false,
+      this.hasSuffixIcon = false,
+      this.isPassword =false,
+      // this.iconPlacement,
     }
   );
+
+  
+
+  checkIconPlacement()
+  {
+    if (theprefixIcon != null)
+    {
+      hasPrefixIcon = true;
+      prefixIconMaxH = 28;
+      prefixIconMaxW = 28;
+
+    }
+    if (thesuffixIcon !=null)
+    {
+      hasSuffixIcon = true;
+      suffixIconMaxH = 28;
+      suffixIconMaxW = 28;
+    }
+  }
 
   @override
   Widget build(BuildContext context) 
   {
+    checkIconPlacement();
     final screen = MediaQuery.of(context);
     
     return LayoutBuilder
@@ -48,6 +81,7 @@ class TextFields extends StatelessWidget {
           ),
           child: TextFormField
           (
+            obscureText: isPassword,
             style: TextStyle
             (
               fontSize: 20,
@@ -55,18 +89,18 @@ class TextFields extends StatelessWidget {
             // onEditingComplete: (),
             controller: textFieldControllerName,
             keyboardType: inputType,
-            maxLines: maxLines,  
+            maxLines: maxLines,
+            // decoration: iconPlacement,
             decoration: InputDecoration
             (           
-              contentPadding: EdgeInsets.all(10),
+              contentPadding: EdgeInsets.all(7),
               border: const OutlineInputBorder(),
-              // hintText: "Title",
-              // prefixText: 'Hello world',
-              // labelText: 'Hello',
-              // errorText: "Invalid Email, Try Again",
-              suffixIcon: Icon(thesuffixIcon),
-              
+              suffixIcon: Icon(thesuffixIcon),  
+              prefixIcon: Icon(theprefixIcon),   
+              prefixIconConstraints: BoxConstraints(maxHeight: prefixIconMaxH, maxWidth: prefixIconMaxW),
+              suffixIconConstraints: BoxConstraints(maxHeight: suffixIconMaxH, maxWidth: suffixIconMaxW),
             ),
+            // decoration: checkIconPlacement(),
             validator: (value) 
             {
               if (value.isEmpty) 

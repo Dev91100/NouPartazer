@@ -1,4 +1,5 @@
 import 'package:NouPartazer_App/Atish/Pages/Splashscreen/SplashScreen.dart';
+import 'package:NouPartazer_App/Devashish/pages/CreateEvent.dart';
 import 'package:NouPartazer_App/Yashna/Pages/EditInfoAndContact/EditContact.dart';
 import 'package:flutter/material.dart';
 import 'package:NouPartazer_App/Yashna/Pages/EditInfoAndContact/BusinessEditName.dart';
@@ -9,13 +10,15 @@ import 'package:NouPartazer_App/Yashna/Pages/ConfirmationDialog/CancelDonation.d
 import 'package:NouPartazer_App/Yashna/Pages/ConfirmationDialog/AcceptDonation.dart';
 import 'package:NouPartazer_App/Yashna/Pages/ConfirmationDialog/CancelEvent.dart';
 import 'package:NouPartazer_App/Yashna/Pages/NGOEditMembers.dart';
+import 'package:NouPartazer_App/Koomalai/src/Security/Security.dart';
+import 'package:NouPartazer_App/Devashish/Pages/CreateEvent.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget
 {
   @override
-  
+
   Widget build(BuildContext context)
   {
     return MaterialApp
@@ -27,7 +30,7 @@ class MyApp extends StatelessWidget
         primaryColor: kPrimaryColor,
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: SplashScreen(),
+      home: NGOSecurity(),
     );
   }
 }
