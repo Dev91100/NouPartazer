@@ -77,7 +77,8 @@ class NGOProfile extends StatelessWidget
                         
                         child: EditPhotoButton
                           (
-                            openPage: BottomSheetWidget()
+                            isModalPage: true,
+                            onPress: BottomSheetWidget()
                           )
                       ),
                     ),
@@ -120,7 +121,8 @@ class NGOProfile extends StatelessWidget
                           
                           child: EditPhotoButton
                           (
-                            openPage: BottomSheetWidget()
+                            isModalPage: true,
+                            onPress: BottomSheetWidget()
                           )
                         ),
                       ),

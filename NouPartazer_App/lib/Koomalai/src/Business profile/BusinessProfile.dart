@@ -73,7 +73,8 @@ class BusinessProfile extends StatelessWidget
                         
                         child: EditPhotoButton
                           (
-                            openPage: BottomSheetWidget()
+                            isModalPage: true,
+                            onPress: BottomSheetWidget(),
                           )
                       ),
                     ),
@@ -116,7 +117,8 @@ class BusinessProfile extends StatelessWidget
                           
                           child: EditPhotoButton
                           (
-                            openPage: BottomSheetWidget()
+                            isModalPage: true,
+                            onPress: BottomSheetWidget()
                           )
                         ),
                       ),

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:NouPartazer_App/Atish/components/PageTitle.dart';
 import 'package:NouPartazer_App/Atish/Pages/Story/BusinessStory/BusinessStory.dart';
 import 'package:NouPartazer_App/Atish/Pages/Story/BusinessStory/BusinessStoryList.dart';
-import 'package:NouPartazer_App/Atish/components/ButtonIcon.dart';
+import 'package:NouPartazer_App/Atish/components/CustomIconButton.dart';
 import 'package:NouPartazer_App/Atish/Pages/Donation/DonationModel.dart';
 
 class NGODonation extends StatelessWidget
@@ -37,7 +37,7 @@ class NGODonation extends StatelessWidget
                     right: 20,
                     bottom: 20,
                   ),
-                  child: ButtonIcon
+                  child: CustomIconButton
                   (
                     text: stories.length.toString(),
                     icon: Icons.format_list_bulleted,

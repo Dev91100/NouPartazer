@@ -8,11 +8,9 @@ class PageTitle extends StatefulWidget implements PreferredSizeWidget
   final String text;
   final bool hasBackButton;
   final onPress;
-  final int R, G, B;
-  final double O;
+  final Color textColor;
   final bool customBarColor;
-  final int BarR, BarG, BarB;
-  final double BarO; 
+  final Color barColor;
 
   PageTitle
   (
@@ -21,15 +19,9 @@ class PageTitle extends StatefulWidget implements PreferredSizeWidget
       this.text,
       this.hasBackButton = false,
       this.onPress,
-      this.R = 0,
-      this.G = 0,
-      this.B = 0,
-      this.O = 1,
+      this.textColor = const Color.fromRGBO(0, 0, 0, 1),
       this.customBarColor = false,
-      this.BarR = 0,
-      this.BarG = 0,
-      this.BarB = 0,
-      this.BarO = 1,
+      this.barColor = const Color.fromRGBO(0, 0, 0, 1),
     }
   ) : preferredSize = Size.fromHeight(kToolbarHeight), super(key: key);
 
@@ -50,7 +42,7 @@ class _PageTitleState extends State<PageTitle>
         automaticallyImplyLeading: false,
         centerTitle: true,
         backgroundColor: (!widget.customBarColor) ?
-        Colors.transparent : Color.fromRGBO(widget.BarR, widget.BarG, widget.BarB, widget.BarO),
+        Colors.transparent : widget.barColor,
         elevation: 0,
         leading: (widget.hasBackButton) ?
         TheBackButton
@@ -80,7 +72,7 @@ class _PageTitleState extends State<PageTitle>
             (
               fontWeight: FontWeight.bold,
               fontSize: 18,
-              color: new Color.fromRGBO(widget.R, widget.G, widget.B, widget.O),
+              color: widget.textColor,
             ),
           ),
         ),

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:NouPartazer_App/Atish/components/PageTitle.dart';
 import 'package:NouPartazer_App/Atish/Pages/NGOCentres/NGOCentresList.dart';
-import 'package:NouPartazer_App/Atish/components/ButtonIcon.dart';
+import 'package:NouPartazer_App/Atish/components/CustomIconButton.dart';
 import 'package:NouPartazer_App/Atish/Pages/NGOCentres/NGOCentresModel.dart';
 
 class NGOCentresListWithCounter extends StatelessWidget
@@ -37,7 +37,7 @@ class NGOCentresListWithCounter extends StatelessWidget
                     right: 20,
                     bottom: 20,
                   ),
-                  child: ButtonIcon
+                  child: CustomIconButton
                   (
                     text: ngoCentres.length.toString(),
                     icon: Icons.format_list_bulleted,

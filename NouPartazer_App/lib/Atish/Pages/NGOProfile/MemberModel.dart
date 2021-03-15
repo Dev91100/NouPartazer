@@ -166,7 +166,7 @@ class MemberModel extends StatelessWidget
                             bottom: 0,
                             size: 26,
                             elevation: 0,
-                            R: 212, G: 0, B: 0, O: 1
+                            iconColor: Color.fromRGBO(212, 0, 0, 1),
                           ),
                         ],
                       ),

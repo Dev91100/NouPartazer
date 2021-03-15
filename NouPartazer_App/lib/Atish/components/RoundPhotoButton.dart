@@ -3,15 +3,20 @@ import 'package:flutter/material.dart';
 class EditPhotoButton extends StatelessWidget
 {
   final double elevation;
-  final Widget openPage;
+  final Widget onPress;
   final double L, T, R, B;
   final double height;
   final double width;
+  final Color iconColor;
+  final IconData icon;
+  final bool isPopUpPage;
+  final bool isModalPage;
+  final bool isPage;
 
   EditPhotoButton
   (
     {
-      this.openPage,
+      this.onPress,
       this.elevation = 2,
       this.L = 0.05,
       this.T = 0.05,
@@ -19,6 +24,11 @@ class EditPhotoButton extends StatelessWidget
       this.B = 0.05,
       this.height = 40,
       this.width = 40,
+      this.icon = Icons.create_outlined,
+      this.iconColor = const Color.fromRGBO(102, 102, 102, 1),
+      this.isPopUpPage = false,
+      this.isModalPage = false,
+      this.isPage = false,
     }
   );
 
@@ -72,16 +82,52 @@ class EditPhotoButton extends StatelessWidget
               ),
               onPressed: () 
               {
-                showModalBottomSheet
-                (
-                  context: context,
-                  builder: ((builder) => openPage)
-                );  
+                if(isPopUpPage)
+                {
+                  showDialog
+                  (
+                    context: context,
+                    builder: (BuildContext context)
+                    {
+                      return onPress;
+                    }
+                  );
+                }
+                else if (isModalPage)
+                {
+                  showModalBottomSheet
+                  (
+                    shape: RoundedRectangleBorder
+                    (
+                      borderRadius: BorderRadius.only
+                      (
+                        topLeft: Radius.circular(20),
+                        topRight: Radius.circular(20),
+                      )
+                    ),
+                    context: context,
+                    builder: ((builder) => onPress)
+                  );
+                }
+                else if(isPage)
+                {
+                  Navigator.push
+                  (
+                    context,
+                    MaterialPageRoute
+                    (
+                      builder: (context)
+                      {
+                        return onPress;
+                      },
+                    ),
+                  );
+                }
               },
               child: Icon
               (
-                Icons.create_outlined,
-                color: Color.fromRGBO(102, 102, 102, 1),
+                icon,
+                color: iconColor,
                 size: 26,
               ),
             ),

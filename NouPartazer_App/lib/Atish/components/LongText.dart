@@ -9,7 +9,7 @@ class LongText extends StatelessWidget
   final double fontSize;
   final FontWeight fontWeight;
   final double top, left, right;
-  final Color color;
+  final Color textColor;
   final TextAlign textAlign;
 
   LongText
@@ -22,7 +22,7 @@ class LongText extends StatelessWidget
       this.right = 20,
       this.fontWeight = FontWeight.w400,
       this.textAlign = TextAlign.justify,
-      this.color = const Color.fromRGBO(0, 0, 0, 1),
+      this.textColor = const Color.fromRGBO(0, 0, 0, 1),
     }
   );
 
@@ -39,7 +39,7 @@ class LongText extends StatelessWidget
         overflow: TextOverflow.visible,
         style: TextStyle
         (
-          color: color,
+          color: textColor,
           fontWeight: fontWeight,
           fontSize: fontSize,
         ),

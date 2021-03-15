@@ -1,23 +1,19 @@
 import 'package:flutter/material.dart';
 
-class ButtonIcon extends StatelessWidget
+class CustomIconButton extends StatelessWidget
 {
   final String text;
   final IconData icon;
   final double fontSize;
-  final int R, G, B;
-  final double O;
+  final Color color;
 
-  ButtonIcon
+  CustomIconButton
   (
     {
       this.text,
       this.icon,
       this.fontSize = 18,
-      this.R = 51,
-      this.G = 51,
-      this.B = 51,
-      this.O = 1,
+      this.color = const Color.fromRGBO(51, 51, 51, 1),
     }
   );
 
@@ -45,7 +41,7 @@ class ButtonIcon extends StatelessWidget
             child: Icon
             (
               icon,
-              color: Color.fromRGBO(R, G, B, 1),
+              color: color,
               size: 26,
             ),
           ),
@@ -55,7 +51,7 @@ class ButtonIcon extends StatelessWidget
             textAlign: TextAlign.center,
             style: TextStyle
             (
-              color: Color.fromRGBO(R, G, B, 1),
+              color: color,
               fontSize: fontSize
             )
           ),

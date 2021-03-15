@@ -2,25 +2,16 @@ import 'package:flutter/material.dart';
 
 class EditIconButton extends StatelessWidget
 {
-  @required
   final onPress;
-  @required
   final bool isModalPage;
-  @required
   final bool isPopUpPage;
-  @required
   final bool isPage;
-  @required
   final IconData icon;
-  @required
   final double height, width;
-  @required
   final double left, top, right, bottom;
   final double size;
   final double elevation;
-
-  final int R, G, B;
-  final double O;
+  final Color iconColor;
 
   EditIconButton
   (
@@ -28,7 +19,7 @@ class EditIconButton extends StatelessWidget
       this.onPress,
       this.isModalPage = false,
       this.isPopUpPage = false,
-      this.isPage = false,
+      this.isPage      = false,
       this.icon,
       this.height,
       this.width,
@@ -38,10 +29,7 @@ class EditIconButton extends StatelessWidget
       this.bottom,
       this.size,
       this.elevation = 2,
-      this.R = 102,
-      this.G = 102,
-      this.B = 102,
-      this.O = 1,
+      this.iconColor = const Color.fromRGBO(102, 102, 102, 1),
     }
   );
 
@@ -128,7 +116,7 @@ class EditIconButton extends StatelessWidget
         child: Icon
         (
           icon,
-          color: Color.fromRGBO(R, G, B, O),
+          color: iconColor,
           size: size,
         ),
       ),
