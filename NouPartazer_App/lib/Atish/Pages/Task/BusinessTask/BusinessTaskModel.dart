@@ -249,7 +249,7 @@ class BusinessTaskModel extends StatelessWidget
                     text: 'View Details',
                     icon: Icons.visibility_outlined,
                     iconRight: 5,
-                    openPage: BusinessEventOngoing(),
+                    onPress: BusinessEventOngoing(),
                   ),
 
                   (canCall) ?

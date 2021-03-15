@@ -266,7 +266,7 @@ class Body extends StatelessWidget {
                             (
                               icon: Icons.favorite,
                               title: 'NGO',
-                              openPage: NGO(),
+                              onPress: NGO(),
                             ),
                           ),
 
@@ -289,7 +289,7 @@ class Body extends StatelessWidget {
                             (
                               icon: Icons.business,
                               title: 'BUSINESS',
-                              openPage: Business(),
+                              onPress: Business(),
                             ),                             
                           ),
 

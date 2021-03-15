@@ -51,61 +51,58 @@ class CardListTileText extends StatelessWidget
       (
         color: cardColor,
         elevation: 2,
-        child: Expanded
+        child: Container
         (
-          child: Container
+          margin: padding,
+          child: Column
           (
-            margin: padding,
-            child: Column
-            (
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children:
-              [
-                Container
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children:
+            [
+              Container
+              (
+                padding: EdgeInsets.all(0),
+                margin: EdgeInsets.only(bottom: 15),
+                child: Icon
                 (
-                  padding: EdgeInsets.all(0),
-                  margin: EdgeInsets.only(bottom: 15),
-                  child: Icon
-                  (
-                    icon,
-                    size: iconSize,
-                    color: iconColor,
-                  ),
+                  icon,
+                  size: iconSize,
+                  color: iconColor,
                 ),
+              ),
 
-                ListTile
+              ListTile
+              (
+                visualDensity: VisualDensity
                 (
-                  visualDensity: VisualDensity
-                  (
-                    vertical: -1
-                  ),
-                  dense: true,
-                  isThreeLine: false,
-                  contentPadding: EdgeInsets.only(top: textTop),
-                  title: Text
-                  (
-                    title,
-                    style: TextStyle
-                    (
-                      fontSize: titleFontSize,
-                      fontWeight:titleFontWeight,
-                      color: textColor,
-                    )
-                  ),
-                  subtitle: (subtitle != null) ? Text
-                  (
-                    subtitle,
-                    style: TextStyle
-                    (
-                      fontSize: subtitleFontSize,
-                      fontWeight: subtitleFontWeight,
-                      color: textColor,
-                    )
-                  ) : Container(),
+                  vertical: -1
                 ),
-              ],
-            ),
+                dense: true,
+                isThreeLine: false,
+                contentPadding: EdgeInsets.only(top: textTop),
+                title: Text
+                (
+                  title,
+                  style: TextStyle
+                  (
+                    fontSize: titleFontSize,
+                    fontWeight:titleFontWeight,
+                    color: textColor,
+                  )
+                ),
+                subtitle: (subtitle != null) ? Text
+                (
+                  subtitle,
+                  style: TextStyle
+                  (
+                    fontSize: subtitleFontSize,
+                    fontWeight: subtitleFontWeight,
+                    color: textColor,
+                  )
+                ) : Container(),
+              ),
+            ],
           ),
         ),
       ),

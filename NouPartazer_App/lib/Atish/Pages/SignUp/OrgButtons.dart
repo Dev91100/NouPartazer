@@ -7,14 +7,14 @@ class OrgButtons extends StatelessWidget
   @required
   final String title;
   @required
-  final Widget openPage;
+  final Widget onPress;
 
   OrgButtons
   (
     {
       this.icon,
       this.title,
-      this.openPage
+      this.onPress
     }
   );
 
@@ -82,7 +82,7 @@ class OrgButtons extends StatelessWidget
             (
               builder: (context)
               {
-                return openPage;
+                return onPress;
               },
             ),
           );

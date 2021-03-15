@@ -6,6 +6,7 @@ class IconText extends StatelessWidget
   final Color textColor;
   final Color iconColor;
   final double fontSize;
+  final bool hasIcon;
   final IconData icon;
   final double iconSize;
   final FontWeight fontWeight;
@@ -15,6 +16,7 @@ class IconText extends StatelessWidget
   (
     {
       this.text,
+      this.hasIcon = true,
       this.icon,
       this.iconSize = 25,
       this.fontSize = 18,
@@ -36,31 +38,23 @@ class IconText extends StatelessWidget
         Container
         (
           margin: EdgeInsets.only(right: iconRight),
-          child: FittedBox
+          child: (hasIcon) ? Icon
           (
-            fit: BoxFit.contain,
-            child: Icon
-            (
-              icon,
-              size: iconSize,
-              color: iconColor,
-            ),
-          ),
+            icon,
+            size: iconSize,
+            color: iconColor,
+          ) : Container(height: 0, width: 0,),
         ),
         Container
         (
-          child: FittedBox
+          child: Text
           (
-            fit: BoxFit.contain,
-            child: Text
+            text,
+            style: TextStyle
             (
-              text,
-              style: TextStyle
-              (
-                color: textColor,
-                fontWeight: fontWeight,
-                fontSize: fontSize,
-              ),
+              color: textColor,
+              fontWeight: fontWeight,
+              fontSize: fontSize,
             ),
           ),
         ),

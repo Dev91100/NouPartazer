@@ -46,37 +46,34 @@ class CardIconText extends StatelessWidget
       (
         color: cardColor,
         elevation: 2,
-        child: Expanded
+        child: Container
         (
-          child: Container
+          margin: padding,
+          child: Column
           (
-            margin: padding,
-            child: Column
-            (
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children:
-              [
-                Container
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children:
+            [
+              Container
+              (
+                margin: EdgeInsets.only(bottom: 15),
+                child: Icon
                 (
-                  margin: EdgeInsets.only(bottom: 15),
-                  child: Icon
-                  (
-                    icon,
-                    size: iconSize,
-                    color: iconColor,
-                  ),
+                  icon,
+                  size: iconSize,
+                  color: iconColor,
                 ),
-                SectionTitle
-                (
-                  title: text,
-                  color: textColor,
-                  fontSize: fontSize,
-                  left: 0,
-                  top: textTop,
-                ),
-              ],
-            ),
+              ),
+              SectionTitle
+              (
+                title: text,
+                color: textColor,
+                fontSize: fontSize,
+                left: 0,
+                top: textTop,
+              ),
+            ],
           ),
         ),
       ),

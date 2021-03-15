@@ -5,22 +5,32 @@ import 'package:flutter/rendering.dart';
 
 class ButtonIconText extends StatelessWidget
 {
-  final Widget openPage;
+  final onPress;
   final String text;
   final Color textColor;
   final Color iconColor;
   final double fontSize;
+  final bool hasIcon;
   final IconData icon;
   final FontWeight fontWeight;
   final Color buttonColor;
   final double iconRight;
   final double elevation;
+  final bool isPopUpPage;
+  final bool isModalPage;
+  final bool isPage;
+  final bool isClose;
 
   ButtonIconText
   (
     {
-      this.openPage,
+      this.onPress,
+      this.isPopUpPage = false,
+      this.isModalPage = false,
+      this.isPage = false,
+      this.isClose = false,
       this.text = 'Test',
+      this.hasIcon = true,
       this.icon = Icons.not_listed_location,
       this.fontSize = 18,
       this.fontWeight = FontWeight.w600,
@@ -59,6 +69,7 @@ class ButtonIconText extends StatelessWidget
       child: IconText
       (
         text: text,
+        hasIcon: hasIcon,
         icon: icon,
         fontSize: fontSize,
         fontWeight: fontWeight,
@@ -68,17 +79,51 @@ class ButtonIconText extends StatelessWidget
       ),
       onPressed: ()
       {
-        Navigator.push
-        (
-          context,
-          MaterialPageRoute
+        if(isPopUpPage)
+        {
+          showDialog
           (
-            builder: (context)
+            context: context,
+            builder: (BuildContext context)
             {
-              return openPage;
-            },
-          ),
-        );
+              return onPress;
+            }
+          );
+        }
+        else if (isModalPage)
+        {
+          showModalBottomSheet
+          (
+            shape: RoundedRectangleBorder
+            (
+              borderRadius: BorderRadius.only
+              (
+                topLeft: Radius.circular(20),
+                topRight: Radius.circular(20),
+              )
+            ),
+            context: context,
+            builder: ((builder) => onPress)
+          );
+        }
+        else if(isPage)
+        {
+          Navigator.push
+          (
+            context,
+            MaterialPageRoute
+            (
+              builder: (context)
+              {
+                return onPress;
+              },
+            ),
+          );
+        }
+        else if(isClose)
+        {
+          Navigator.of(context).pop();
+        }
       },
     );
   }

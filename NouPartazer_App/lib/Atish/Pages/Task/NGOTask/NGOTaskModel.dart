@@ -229,7 +229,8 @@ class NGOTaskModel extends StatelessWidget
                     text: 'View Details',
                     icon: Icons.visibility_outlined,
                     iconRight: 5,
-                    openPage: BusinessEventOngoing(),
+                    isPage: true,
+                    onPress: BusinessEventOngoing(),
                   ),
 
                   Container
