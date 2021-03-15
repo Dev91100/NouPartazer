@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class IconRaisedButton extends StatelessWidget
+class ButtonIcon extends StatelessWidget
 {
   final String text;
   final IconData icon;
@@ -8,7 +8,7 @@ class IconRaisedButton extends StatelessWidget
   final int R, G, B;
   final double O;
 
-  IconRaisedButton
+  ButtonIcon
   (
     {
       this.text,

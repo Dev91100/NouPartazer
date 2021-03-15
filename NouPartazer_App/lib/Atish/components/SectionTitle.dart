@@ -9,6 +9,7 @@ class SectionTitle extends StatelessWidget {
   final double top, left, right;
   final int R, G, B;
   final double O;
+  final Alignment align;
 
   SectionTitle
   (
@@ -22,15 +23,18 @@ class SectionTitle extends StatelessWidget {
       this.G = 0,
       this.B = 0,
       this.O = 1,
+      this.align = Alignment.centerLeft,
     }
   );
 
   @override
-  Widget build(BuildContext context) {
-    return Container(
+  Widget build(BuildContext context)
+  {
+    return Container
+    (
       child: Align
       (
-        alignment: Alignment.centerLeft,
+        alignment: align,
         child: SingleChildScrollView
         (
           scrollDirection: Axis.horizontal,

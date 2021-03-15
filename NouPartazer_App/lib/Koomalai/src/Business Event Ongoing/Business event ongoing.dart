@@ -1,13 +1,277 @@
 import 'package:flutter/material.dart';
 
+import 'package:NouPartazer_App/Atish/components/PageTitle.dart';
+import 'package:NouPartazer_App/Atish/components/SectionTitle.dart';
+import 'package:NouPartazer_App/Atish/components/ContainerIconText.dart';
+import 'package:NouPartazer_App/Atish/components/ContainerText.dart';
+import 'package:NouPartazer_App/Atish/components/ButtonIconText.dart';
+
 class BusinessEventOngoing extends StatelessWidget
 {
   @override
   Widget build(BuildContext context)
   {
-    return Scaffold
+    var screen = MediaQuery.of(context).size;
+
+    return LayoutBuilder
     (
-      
+      builder: (ctx, constraints)
+      {
+        return Scaffold
+        (
+          appBar: PageTitle
+          (
+            hasBackButton: true,
+            text: 'EVENT DETAILS',
+            customBarColor: true,
+            BarR: 248, BarG: 248, BarB: 248, BarO: 1, 
+          ),
+
+          body: Column
+          (
+            children:
+            [
+              Container
+              (
+                padding: EdgeInsets.only
+                (
+                  bottom: 30
+                ),
+                width: screen.width,
+                decoration: BoxDecoration
+                (
+                  color: Color.fromRGBO(248, 248, 248, 1),
+                  boxShadow:
+                  [
+                    BoxShadow
+                    (
+                      color: Colors.black.withOpacity(0.2),
+                      spreadRadius: 4,
+                      blurRadius: 4,
+                      offset: Offset(0, 2), // changes position of shadow
+                    ),
+                  ],
+                ),
+
+                child: Column
+                (
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children:
+                  [
+                    Container
+                    (
+                      width: constraints.maxWidth * 0.2,
+                      height: constraints.maxWidth * 0.2,
+
+                      decoration: BoxDecoration
+                      (
+                        image: DecorationImage
+                        (
+                          image: AssetImage("assets/JPEG/Rectangle 12.jpg"),
+                          fit: BoxFit.cover,
+                        ),
+
+                        borderRadius: BorderRadius.circular(150),
+                        boxShadow:
+                        [
+                          BoxShadow
+                          (
+                            color: Colors.black.withOpacity(0.2),
+                            spreadRadius: 2,
+                            blurRadius: 2,
+                            offset: Offset(0, 2), // changes position of shadow
+                          ),
+                        ],
+                      ),
+                    ),
+
+                    Container
+                    (
+                      margin: EdgeInsets.only(top: 25),
+                      child: SectionTitle
+                      (
+                        title: 'GROCERY DONATION',
+                        align: Alignment.center,
+                      ),
+                    ),
+
+                    Container
+                    (
+                      margin: EdgeInsets.only(top: 25),
+                      child: Row
+                      (
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children:
+                        [
+                          ContainerIconText
+                          (
+                            text: 'Status',
+                            icon: Icons.online_prediction_outlined,
+                            fontSize: 18,
+                            mRight: 15,
+                            IconR: 255,
+                            IconG: 255,
+                            IconB: 255,
+                            IconO: 1,
+                          ),
+                          ContainerText
+                          (
+                            text: 'Unassigned',
+                            borderWidth: 1.5,
+                            TextR: 245,
+                            TextG: 197,
+                            TextB: 41,
+                            BorderR: 245,
+                            BorderG: 197,
+                            BorderB: 41,
+                            BorderO: 1,
+                            BoxR: 255,
+                            BoxG: 248,
+                            BoxB: 97,
+                            BoxO: 0.2,
+                            pLeft: 40,
+                            pRight: 40,
+                          ),
+                        ],
+                      ),
+                    ),
+
+                    Container
+                    (
+                      margin: EdgeInsets.only(top: 25),
+                      child:ButtonIconText
+                      (
+                        text: 'Accept Donation',
+                        icon: Icons.download_done_outlined,
+                        ButtonR: 245, ButtonG: 197, ButtonB: 41, ButtonO: 1,
+                        elevation: 2,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
+              SingleChildScrollView
+              (
+                child: Container
+                (
+                  margin: EdgeInsets.only
+                  (
+                    left: 20,
+                    right: 20
+                  ),
+                  child: Column
+                  (
+                    children:
+                    [
+                      Container
+                      (
+                        margin: EdgeInsets.only(top: 25),
+                        child: SectionTitle
+                        (
+                          left: 0,
+                          title: 'DATE & TIME',
+                        ),
+                      ),
+
+                      Container
+                      (
+                        margin: EdgeInsets.only
+                        (
+                          top: 20
+                        ),
+                        child: Row
+                        (
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children:
+                          [
+                            Container
+                            (
+                              height: 140,
+                              width: constraints.maxWidth * 0.43,
+                              child: Card
+                              (
+                                color: Color.fromRGBO(248, 248, 248, 1),
+                                elevation: 2,
+                                child: Container
+                                (
+                                  margin: EdgeInsets.all(20),
+                                  child: Column
+                                  (
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children:
+                                    [
+                                      Container
+                                      (
+                                        margin: EdgeInsets.only(bottom: 15),
+                                        child: Icon
+                                        (
+                                          Icons.event_outlined,
+                                          size: 40,
+                                        ),
+                                      ),
+                                      SectionTitle
+                                      (
+                                        title: '19/01/2021',
+                                        left: 0,
+                                        fontSize: 20,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+
+                            Container
+                            (
+                              height: 140,
+                              width: constraints.maxWidth * 0.43,
+                              child: Card
+                              (
+                                color: Color.fromRGBO(248, 248, 248, 1),
+                                elevation: 2,
+                                child: Container
+                                (
+                                  margin: EdgeInsets.all(20),
+                                  child: Column
+                                  (
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children:
+                                    [
+                                      Container
+                                      (
+                                        margin: EdgeInsets.only(bottom: 15),
+                                        child: Icon
+                                        (
+                                          Icons.query_builder,
+                                          size: 40,
+                                        ),
+                                      ),
+                                      SectionTitle
+                                      (
+                                        title: '19.00-22.00',
+                                        left: 0,
+                                        fontSize: 20,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ]
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          )
+        );
+      }
     );
   }
 }
