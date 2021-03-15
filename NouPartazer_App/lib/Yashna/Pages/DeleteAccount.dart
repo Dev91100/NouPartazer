@@ -1,17 +1,12 @@
 import 'package:NouPartazer_App/Yashna/components/ConfirmationPopup.dart';
-// import 'package:flutter/cupertino.dart';
 
-// Widget DeleteMembers()
-// {
-//   DeleteMember()
-// }
-class DeleteMember extends ConfirmationPopup
+class DeleteAccount extends ConfirmationPopup
 {
   String confirmationText = '';
   String leftButton = '';
   String rightButton = '';
 
-  DeleteMember
+  DeleteAccount
   (  
     {
       this.confirmationText = 'Are you sure you want to delete this member?',

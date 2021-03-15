@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:NouPartazer_App/Devashish/components/TextFields.dart';
 
 class ConfirmationPopup
 {
   String confirmationText;
   String leftButton;
   String rightButton;
+  double contentHorizontalPadding;
+  double contentTopPadding;
 
   ConfirmationPopup
   (
@@ -12,11 +15,14 @@ class ConfirmationPopup
       this.confirmationText,
       this.leftButton,
       this.rightButton,
+      this.contentHorizontalPadding = 0.1,
+      this.contentTopPadding = 0.0,
     }
   );
 
   StatefulBuilder displayDialog(BuildContext context)
   {
+    final screen = MediaQuery.of(context).size;
     var alertDialog = StatefulBuilder
     (
       builder: (context, setState)
@@ -58,26 +64,65 @@ class ConfirmationPopup
               ]
             ),
 
-            contentPadding: EdgeInsets.symmetric
+            contentPadding: EdgeInsets.only
             (
               // left: 22,
               // right: 30,
-              horizontal: 30,
+              top: screen.height * contentTopPadding,
+              left: screen.width * contentHorizontalPadding,
+              right: screen.width * contentHorizontalPadding,
             ),
 
-            content: Text
+            content: Container
             (
-              confirmationText,
-              textAlign: TextAlign.center,
-              style: TextStyle
-              (
-                //wordSpacing: 5,
-                fontWeight: FontWeight.bold,
-                fontSize: 20.0,
-                //color: Color.fromRGBO(0, 0, 0, 1),
-              )
+              child: 
+              
+                Flexible(
+                  flex: 1,
+                  fit: FlexFit.loose,
+                  child: Text
+                  (
+                    confirmationText,
+                    textAlign: TextAlign.center,
+                    style: TextStyle
+                    (
+                      //wordSpacing: 5,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20.0,
+                      //color: Color.fromRGBO(0, 0, 0, 1),
+                    )
+                  ),
+                  // child: TextFields
+                  // (
+                  //   isPassword: true,
+                  //   inputType: TextInputType.visiblePassword,
+                  // ),
+                ),
+
+                // Flexible(
+                //   flex: 1,
+                  // child: TextFields
+                  // (
+                  //   isPassword: true,
+                  //   inputType: TextInputType.visiblePassword,
+                  // ),
+                // )
+              
             ),
-      
+            // Text
+            // (
+            //   confirmationText,
+            //   textAlign: TextAlign.center,
+            //   style: TextStyle
+            //   (
+            //     //wordSpacing: 5,
+            //     fontWeight: FontWeight.bold,
+            //     fontSize: 20.0,
+            //     //color: Color.fromRGBO(0, 0, 0, 1),
+            //   )
+            // ),
+
+            
             actions:
             [
               TextButton

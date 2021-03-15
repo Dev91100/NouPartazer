@@ -1,3 +1,4 @@
+import 'package:NouPartazer_App/Yashna/Pages/DeleteAccount.dart';
 import 'package:flutter/material.dart';
 
 import 'package:NouPartazer_App/Atish/components/PageTitle.dart';
@@ -107,6 +108,7 @@ class NGOSecurity extends StatelessWidget
                     TextR: 212, TextG: 0, TextB: 0, TextO: 1,
                     ButtonO: 0,
                     elevation: 0,
+                    // openPage: ,
                   ),
                 ),
               ],
