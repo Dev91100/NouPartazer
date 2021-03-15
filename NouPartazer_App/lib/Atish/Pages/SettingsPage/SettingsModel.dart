@@ -57,7 +57,7 @@ class SettingsModel extends StatelessWidget
             titleText: 'Notifications',
             subtitleText: 'Receive notifications from the app',
             trailingIcon: Icons.toggle_on,
-            trailingR: 0, trailingG: 50, trailingB: 193, trailingO: 1,
+            trailingColor: Color.fromRGBO(0, 50, 193, 1),
             isPage: true,
             onPress: notificationsPage,
           ) : Container(),
@@ -98,11 +98,11 @@ class SettingsModel extends StatelessWidget
           ListTileModel
           (
             leadingIcon: logIcon,
-            leadingR: 0, leadingG: 50, leadingB: 193, leadingO: 1,
+            leadingColor: Color.fromRGBO(0, 50, 193, 1),
             titleText: (logOut) ? 'Log out' : 'Log in',
-            textR: 0, textG: 50, textB: 193, textO: 1, 
+            textColor: Color.fromRGBO(0, 50, 193, 1), 
             trailingIcon: Icons.keyboard_arrow_right,
-            trailingR: 0, trailingG: 50, trailingB: 193, trailingO: 1,
+            trailingColor: Color.fromRGBO(0, 50, 193, 1),
             isPopUpPage: (logOut) ? true : false, //If the button is logout then an alert dialog should popup
             isPage: (!logOut) ? true: false, // If the button is login then it should redirect to a page
             onPress: logPage,

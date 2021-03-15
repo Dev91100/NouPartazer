@@ -6,12 +6,9 @@ class ContainerText extends StatelessWidget
 {
   final double mLeft, mTop, mRight, mBottom;
   final double pLeft, pTop, pRight, pBottom;
-  final int BorderR, BorderG, BorderB;
-  final double BorderO;
-  final int BoxR, BoxG, BoxB;
-  final double BoxO;
-  final int TextR, TextG, TextB;
-  final double TextO;
+  final Color borderColor;
+  final Color boxColor;
+  final Color textColor;
 
   final double borderWidth;
   final double borderRadius;
@@ -34,18 +31,9 @@ class ContainerText extends StatelessWidget
       this.pTop     = 5, 
       this.pRight   = 5, 
       this.pBottom  = 5,
-      this.BorderR  = 0,
-      this.BorderG  = 0,
-      this.BorderB  = 0,
-      this.BorderO  = 0,
-      this.BoxR     = 0,
-      this.BoxG     = 0,
-      this.BoxB     = 0,
-      this.BoxO     = 1,
-      this.TextR    = 255,
-      this.TextG    = 255,
-      this.TextB    = 255,
-      this.TextO    = 1,
+      this.borderColor = const Color.fromRGBO(0, 0, 0, 0),
+      this.boxColor = const Color.fromRGBO(0, 0, 0, 1),
+      this.textColor = const Color.fromRGBO(255, 255, 255, 1),
       this.borderRadius = 5,
       this.borderWidth  = 0
     }
@@ -73,10 +61,10 @@ class ContainerText extends StatelessWidget
       
       decoration: BoxDecoration
       (
-        color: Color.fromRGBO(BoxR, BoxG, BoxB, BoxO),
+        color: boxColor,
         border: Border.all
         (
-          color: new Color.fromRGBO(BorderR, BorderG, BorderB, BorderO),
+          color: borderColor,
           width: borderWidth,
         ),
         borderRadius: BorderRadius.all(Radius.circular(borderRadius)),
@@ -88,7 +76,7 @@ class ContainerText extends StatelessWidget
         (
           fontSize: fontSize,
           fontWeight: fontWeight,
-          color: Color.fromRGBO(TextR, TextG, TextB, TextO)
+          color: textColor
         ),
       ),
     );

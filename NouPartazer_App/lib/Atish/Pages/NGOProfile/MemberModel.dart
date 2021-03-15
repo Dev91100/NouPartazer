@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import './Member.dart';
 import './MemberList.dart';
-import 'package:NouPartazer_App/Atish/components/EditIconButton.dart';
+import 'package:NouPartazer_App/Atish/components/RoundIconButton.dart';
 
 class MemberModel extends StatelessWidget 
 {
@@ -166,7 +166,7 @@ class MemberModel extends StatelessWidget
                             bottom: 0,
                             size: 26,
                             elevation: 0,
-                            R: 212, G: 0, B: 0, O: 1
+                            iconColor: Color.fromRGBO(212, 0, 0, 1),
                           ),
                         ],
                       ),

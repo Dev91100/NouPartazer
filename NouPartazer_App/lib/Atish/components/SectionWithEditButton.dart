@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './SectionTitle.dart';
-import './EditIconButton.dart';
+import 'RoundIconButton.dart';
 
 class SectionWithEditButton extends StatelessWidget 
 {
@@ -15,8 +15,7 @@ class SectionWithEditButton extends StatelessWidget
     final bool isPage;
 
     final double fontSize;
-    final int R, G, B;
-    final double O;
+    final Color color;
     final IconData icon;
 
     SectionWithEditButton
@@ -29,10 +28,7 @@ class SectionWithEditButton extends StatelessWidget
         this.isModalPage = false,
         this.isPage = false,
         this.icon = Icons.create_outlined,
-        this.R = 0,
-        this.G = 0,
-        this.B = 0,
-        this.O = 1,
+        this.color = const Color.fromRGBO(0, 0, 0, 1),
       }
     )
     {
@@ -40,10 +36,7 @@ class SectionWithEditButton extends StatelessWidget
       (
         title: title,
         fontSize: fontSize,
-        R: R,
-        G: G,
-        B: B,
-        O: O,
+        color: color,
       );
       
       EditIconButton
@@ -75,7 +68,7 @@ class SectionWithEditButton extends StatelessWidget
               (
                 title: title,
                 fontSize: fontSize,
-                R: R, G: G, B: B, O: O,
+                color: color,
               ),
             ),
             

@@ -5,40 +5,38 @@ import 'package:flutter/rendering.dart';
 
 class ButtonIconText extends StatelessWidget
 {
-  final Widget openPage;
+  final onPress;
   final String text;
-  final int TextR, TextG, TextB;
-  final double TextO;
-  final int IconR, IconG, IconB;
-  final double IconO;
+  final Color textColor;
+  final Color iconColor;
   final double fontSize;
+  final bool hasIcon;
   final IconData icon;
   final FontWeight fontWeight;
-  final int ButtonR, ButtonG, ButtonB;
-  final double ButtonO;
+  final Color buttonColor;
   final double iconRight;
   final double elevation;
+  final bool isPopUpPage;
+  final bool isModalPage;
+  final bool isPage;
+  final bool isClose;
 
   ButtonIconText
   (
     {
-      this.openPage,
+      this.onPress,
+      this.isPopUpPage = false,
+      this.isModalPage = false,
+      this.isPage = false,
+      this.isClose = false,
       this.text = 'Test',
+      this.hasIcon = true,
       this.icon = Icons.not_listed_location,
       this.fontSize = 18,
       this.fontWeight = FontWeight.w600,
-      this.TextR = 255,
-      this.TextG = 255,
-      this.TextB = 255,
-      this.TextO = 1,
-      this.IconR  = 255,
-      this.IconG  = 255,
-      this.IconB  = 255,
-      this.IconO  = 1,
-      this.ButtonR = 0,
-      this.ButtonG = 50,
-      this.ButtonB = 193,
-      this.ButtonO = 1,
+      this.textColor = const Color.fromRGBO(255, 255, 255, 1),
+      this.iconColor = const Color.fromRGBO(255, 255, 255, 1),
+      this.buttonColor = const Color.fromRGBO(0, 50, 193, 1),
       this.iconRight = 5,
       this.elevation = 2,
     }
@@ -50,14 +48,8 @@ class ButtonIconText extends StatelessWidget
       icon: icon,
       fontSize: fontSize,
       fontWeight: fontWeight,
-      R: TextR,
-      G: TextG,
-      B: TextB,
-      O: TextO,
-      IconR: IconR,
-      IconG: IconG,
-      IconB: IconB,
-      IconO: IconO,
+      textColor: textColor,
+      iconColor: iconColor,
       iconRight: iconRight,
     );
   }
@@ -73,36 +65,65 @@ class ButtonIconText extends StatelessWidget
       (
         borderRadius: BorderRadius.all(Radius.circular(5))
       ),
-      color: Color.fromRGBO(ButtonR, ButtonG, ButtonB, ButtonO),
+      color: buttonColor,
       child: IconText
       (
         text: text,
+        hasIcon: hasIcon,
         icon: icon,
         fontSize: fontSize,
         fontWeight: fontWeight,
-        R: TextR,
-        G: TextG,
-        B: TextB,
-        O: TextO,
-        IconR: IconR,
-        IconG: IconG,
-        IconB: IconB,
-        IconO: IconO,
+        textColor: textColor,
+        iconColor: iconColor,
         iconRight: iconRight,
       ),
       onPressed: ()
       {
-        Navigator.push
-        (
-          context,
-          MaterialPageRoute
+        if(isPopUpPage)
+        {
+          showDialog
           (
-            builder: (context)
+            context: context,
+            builder: (BuildContext context)
             {
-              return openPage;
-            },
-          ),
-        );
+              return onPress;
+            }
+          );
+        }
+        else if (isModalPage)
+        {
+          showModalBottomSheet
+          (
+            shape: RoundedRectangleBorder
+            (
+              borderRadius: BorderRadius.only
+              (
+                topLeft: Radius.circular(20),
+                topRight: Radius.circular(20),
+              )
+            ),
+            context: context,
+            builder: ((builder) => onPress)
+          );
+        }
+        else if(isPage)
+        {
+          Navigator.push
+          (
+            context,
+            MaterialPageRoute
+            (
+              builder: (context)
+              {
+                return onPress;
+              },
+            ),
+          );
+        }
+        else if(isClose)
+        {
+          Navigator.of(context).pop();
+        }
       },
     );
   }
