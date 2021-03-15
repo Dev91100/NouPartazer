@@ -5,6 +5,9 @@ import 'package:NouPartazer_App/Atish/components/SectionTitle.dart';
 import 'package:NouPartazer_App/Atish/components/ContainerIconText.dart';
 import 'package:NouPartazer_App/Atish/components/ContainerText.dart';
 import 'package:NouPartazer_App/Atish/components/ButtonIconText.dart';
+import 'package:NouPartazer_App/Atish/components/CardIconText.dart';
+import 'package:NouPartazer_App/Atish/components/LongText.dart';
+import 'package:NouPartazer_App/Atish/components/CardListTileText.dart';
 
 class BusinessEventOngoing extends StatelessWidget
 {
@@ -152,120 +155,174 @@ class BusinessEventOngoing extends StatelessWidget
                 ),
               ),
 
-              SingleChildScrollView
+              Expanded
               (
-                child: Container
+                child: ListView
                 (
-                  margin: EdgeInsets.only
-                  (
-                    left: 20,
-                    right: 20
-                  ),
-                  child: Column
-                  (
-                    children:
-                    [
-                      Container
+                  children:
+                  [
+                    Container
+                    (
+                      margin: EdgeInsets.only
                       (
-                        margin: EdgeInsets.only(top: 25),
-                        child: SectionTitle
-                        (
-                          left: 0,
-                          title: 'DATE & TIME',
-                        ),
+                        left: 20,
+                        right: 20
                       ),
-
-                      Container
+                      child: Column
                       (
-                        margin: EdgeInsets.only
-                        (
-                          top: 20
-                        ),
-                        child: Row
-                        (
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children:
-                          [
-                            Container
+                        children:
+                        [
+                          Container
+                          (
+                            margin: EdgeInsets.only(top: 25),
+                            child: SectionTitle
                             (
-                              height: 140,
-                              width: constraints.maxWidth * 0.43,
-                              child: Card
-                              (
-                                color: Color.fromRGBO(248, 248, 248, 1),
-                                elevation: 2,
-                                child: Container
+                              left: 0,
+                              title: 'DATE & TIME',
+                            ),
+                          ),
+
+                          Container
+                          (
+                            margin: EdgeInsets.only(top: 15),
+                            child: Row
+                            (
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children:
+                              [
+                                CardIconText
                                 (
-                                  margin: EdgeInsets.all(20),
-                                  child: Column
-                                  (
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children:
-                                    [
-                                      Container
-                                      (
-                                        margin: EdgeInsets.only(bottom: 15),
-                                        child: Icon
-                                        (
-                                          Icons.event_outlined,
-                                          size: 40,
-                                        ),
-                                      ),
-                                      SectionTitle
-                                      (
-                                        title: '19/01/2021',
-                                        left: 0,
-                                        fontSize: 20,
-                                      ),
-                                    ],
-                                  ),
+                                  constraints: constraints,
+                                  text: '19/01/2021',
+                                  icon: Icons.event_outlined,
+                                ),
+
+                                CardIconText
+                                (
+                                  constraints: constraints,
+                                  text: '19.00-22.00',
+                                  icon: Icons.query_builder,
+                                ),
+                              ]
+                            ),
+                          ),
+
+                          Container
+                          (
+                            margin: EdgeInsets.only(top: 25),
+                            child: SectionTitle
+                            (
+                              left: 0,
+                              title: 'FOOD TYPE',
+                            ),
+                          ),
+                          
+                          Container
+                          (
+                            margin: EdgeInsets.only(top: 15),
+                            child: Row
+                            (
+                              mainAxisSize: MainAxisSize.max,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children:
+                              [
+                                CardIconText
+                                (
+                                  constraints: constraints,
+                                  text: 'Perishable Food',
+                                  textColor: Color.fromRGBO(255, 255, 255, 1),
+                                  icon: Icons.event_outlined,
+                                  iconColor: Color.fromRGBO(255, 255, 255, 1),
+                                  cardColor: Color.fromRGBO(255, 84, 62, 1),
+                                ),
+
+                                CardIconText
+                                (
+                                  constraints: constraints,
+                                  text: 'Non-Perishable Food',
+                                  textColor: Color.fromRGBO(255, 255, 255, 1),
+                                  icon: Icons.query_builder,
+                                  iconColor: Color.fromRGBO(255, 255, 255, 1),
+                                  cardColor: Color.fromRGBO(27, 215, 65, 1),
+                                ),
+                              ]
+                            ),
+                          ),
+
+                          Container
+                          (
+                            margin: EdgeInsets.only(top: 25),
+                            child: SectionTitle
+                            (
+                              left: 0,
+                              title: 'DESCRIPTION',
+                            ),
+                          ),
+
+                          Container
+                          (
+                            margin: EdgeInsets.only(top: 15),
+                            constraints: BoxConstraints
+                            (
+                              maxHeight: constraints.maxHeight * 0.25,
+                            ),
+                            child: Card
+                            (
+                              color: Color.fromRGBO(248, 248, 248, 1),
+                              // margin: const EdgeInsets.all(20),
+                              child: Container
+                              (
+                                margin: const EdgeInsets.all(10),
+                                child: LongText
+                                (
+                                  title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius lectus et ante sollicitudin mattis. Morbi maximus maximus mi, non porttitor quam cursus sit amet. Vivamus in nunc id massa pretium elementum sed eu risus. Cras in ante ac nunc pretium imperdiet at a nisi. Cras placerat quis turpis a porttitor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius lectus et ante sollicitudin mattis. Morbi maximus maximus mi, non porttitor quam cursus sit amet. Vivamus in nunc id massa pretium elementum sed eu risus. Cras in ante ac nunc pretium imperdiet at a nisi. Cras placerat quis turpis a porttitor.',
+                                  fontSize: 16,
                                 ),
                               ),
                             ),
+                          ),
 
-                            Container
+                          Container
+                          (
+                            margin: EdgeInsets.only(top: 25),
+                            child: SectionTitle
                             (
-                              height: 140,
-                              width: constraints.maxWidth * 0.43,
-                              child: Card
+                              left: 0,
+                              title: 'LOCATION',
+                            ),
+                          ),
+
+                          Row
+                          (
+                            children:
+                            [
+                              Expanded
                               (
-                                color: Color.fromRGBO(248, 248, 248, 1),
-                                elevation: 2,
                                 child: Container
                                 (
-                                  margin: EdgeInsets.all(20),
-                                  child: Column
+                                  margin: EdgeInsets.only(top: 15),
+                                  child: CardListTileText
                                   (
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children:
-                                    [
-                                      Container
-                                      (
-                                        margin: EdgeInsets.only(bottom: 15),
-                                        child: Icon
-                                        (
-                                          Icons.query_builder,
-                                          size: 40,
-                                        ),
-                                      ),
-                                      SectionTitle
-                                      (
-                                        title: '19.00-22.00',
-                                        left: 0,
-                                        fontSize: 20,
-                                      ),
-                                    ],
+                                    constraints: constraints,
+                                    title: 'Jumbo Phoenix',
+                                    subtitle: 'Hypermarket',
+                                    icon: Icons.location_on_outlined,
+                                    cardColor: Color.fromRGBO(245, 197, 41, 1),
                                   ),
                                 ),
                               ),
-                            ),
-                          ]
-                        ),
+                            ],
+                          ),
+
+                          SizedBox
+                          (
+                            height: 25,
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
+                    ),
+                  ]
                 ),
               ),
             ],

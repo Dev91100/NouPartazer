@@ -130,7 +130,7 @@ class NGOStoryModel extends StatelessWidget
                             fontSize: 20,
                             fontWeight: FontWeight.w500,
                             // textAlign: TextAlign.left,
-                            R: 255, G: 255, B: 255, O: 1,
+                            color: Color.fromRGBO(255, 255, 255, 1),
                           ),
                         ),
                         

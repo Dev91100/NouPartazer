@@ -174,7 +174,7 @@ class NGOProfile extends StatelessWidget
                     (
                       title: 'Manzer Partazer Test Test Test Test',
                       fontSize: 22,
-                      R: 0, G: 50, B: 193, O: 1,
+                      color: Color.fromRGBO(0, 50, 193, 1),
                       onPress: ngoEditNameBottomSheet,
                       isModalPage: true,
                     ),
@@ -190,7 +190,7 @@ class NGOProfile extends StatelessWidget
                           title: 'Food Sharing Project of Mauritius Mauritius Mauritius',
                           fontSize: 20, 
                           top: 15,
-                          R: 51, G: 51, B: 51, O: 1,
+                          color: Color.fromRGBO(51, 51, 51, 1),
                         ),
                       ),
                     ),
