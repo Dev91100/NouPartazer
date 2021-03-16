@@ -1,6 +1,6 @@
-import 'package:noupartazer_app/Yashna/components/TickboxPopup.dart';
+import 'package:noupartazer_app/Yashna/components/ConfirmationDialog.dart';
 
-class AcceptDonation extends TickboxPopup
+class AcceptDonation extends ConfirmationDialog
 {
   String text;
 

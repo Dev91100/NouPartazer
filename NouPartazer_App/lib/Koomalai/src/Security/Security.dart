@@ -1,4 +1,3 @@
-import 'package:noupartazer_app/Yashna/Pages/DeleteAccount.dart';
 import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
