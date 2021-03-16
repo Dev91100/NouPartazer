@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class IconText extends StatelessWidget
 {
   final String text;
+  final TextDecoration textDecoration;
   final Color textColor;
   final Color iconColor;
   final double fontSize;
@@ -16,6 +17,7 @@ class IconText extends StatelessWidget
   (
     {
       this.text,
+      this.textDecoration = TextDecoration.none,
       this.hasIcon = true,
       this.icon,
       this.iconSize = 25,
@@ -55,6 +57,7 @@ class IconText extends StatelessWidget
               color: textColor,
               fontWeight: fontWeight,
               fontSize: fontSize,
+              decoration: textDecoration,
             ),
           ),
         ),

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
+import 'package:noupartazer_app/Atish/components/CustomButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
-import 'package:noupartazer_app/Atish/components/ButtonIconText.dart';
 
-class Statement
+class StatementModel
 {
   String text;
 
-  Statement
+  StatementModel
   (
     {
       this.text = 'This is a test!'
@@ -82,24 +82,14 @@ class Statement
                     ),
                   ),
                 ),
-
+        
                 Container
                 (
                   width: constraints.maxWidth,
                   margin: EdgeInsets.only(top: 15),
-                  child: ButtonIconText
+                  child: CustomButtonIconText
                   (
                     text: 'Done',
-                    textColor: Color.fromRGBO(245, 197, 41, 1),
-                    fontWeight: FontWeight.w700,
-                    fontSize: 18,
-                    buttonColor: Color.fromRGBO(255, 248, 97, 0.2),
-                    hasBorder: true,
-                    borderColor: Color.fromRGBO(245, 197, 41, 1),
-                    borderWidth: 2,
-                    elevation: 0,
-                    hasIcon: false,
-                    isClose: true,
                   ),
                 ),
               ],

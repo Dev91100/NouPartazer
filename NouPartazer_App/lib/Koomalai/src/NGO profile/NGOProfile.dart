@@ -15,7 +15,7 @@ import 'package:noupartazer_app/Atish/Pages/Story/NGOStory/NGOStoryModelProfile.
 import 'package:noupartazer_app/Koomalai/src/Settings/NGOSettings.dart';
 import 'package:noupartazer_app/Koomalai/src/widget/bottomSheetWidget.dart';
 import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContact/NGOEditName.dart';
-import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContact/EditContact.dart';
+import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContact/EditContactModel.dart';
 import 'package:noupartazer_app/Yashna/Pages/NGOEditMembers.dart';
 
 
@@ -28,7 +28,7 @@ class NGOProfile extends StatelessWidget
   {
     final screen = MediaQuery.of(context).size;
     var ngoEditNameBottomSheet = new NGOEditName().displayBottomSheet(context);
-    var editContactBottomSheet = new EditContact().displayBottomSheet(context);
+    var editContactBottomSheet = new EditContactModel().displayBottomSheet(context);
     var ngoEditMembersBottomSheet = new NGOEditMembers().displayBottomSheet(context);
     var deleteMemberDialog = new DeleteMember().displayDialog(context);
 

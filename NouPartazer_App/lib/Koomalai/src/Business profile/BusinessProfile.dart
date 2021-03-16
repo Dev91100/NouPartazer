@@ -1,6 +1,6 @@
 
 import 'package:noupartazer_app/Koomalai/src/BusinessSettings/BusinessSettings.dart';
-import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContact/EditContact.dart';
+import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContact/EditContactModel.dart';
 import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/RoundIconButton.dart';
@@ -26,7 +26,7 @@ class BusinessProfile extends StatelessWidget
   {
     final screen = MediaQuery.of(context).size;
     var businessEditNameBottomSheet = new BusinessEditName().displayBottomSheet(context);
-    var editContactBottomSheet = new EditContact().displayBottomSheet(context);
+    var editContactBottomSheet = new EditContactModel().displayBottomSheet(context);
 
     return LayoutBuilder
     (

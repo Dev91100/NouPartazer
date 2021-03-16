@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:noupartazer_app/Yashna/components/EditInfo.dart';
+import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContact/EditInfo.dart';
 
-class EditContact extends EditInfo
+class EditContactModel extends EditInfo
 {
   String title;
   String text1, text2, text3;
   IconData icon1, icon2, icon3;
 
-  EditContact
+  EditContactModel
   (
     {
       this.title = 'TEST',
@@ -27,5 +27,6 @@ class EditContact extends EditInfo
     text1: text1,
     text2: text2,
     text3: text3,
+    hasMultiline: false,
   );
 }

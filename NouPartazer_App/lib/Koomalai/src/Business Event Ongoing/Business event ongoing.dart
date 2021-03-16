@@ -8,7 +8,7 @@ import 'package:noupartazer_app/Atish/components/ButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/CardIconText.dart';
 import 'package:noupartazer_app/Atish/components/LongText.dart';
 import 'package:noupartazer_app/Atish/components/CardListTileText.dart';
-import 'package:noupartazer_app/Yashna/Pages/StatementDialog/EventCreated.dart';
+import 'package:noupartazer_app/Yashna/Pages/ConfirmationDialog/AcceptDonation.dart';
 
 class BusinessEventOngoing extends StatelessWidget
 {
@@ -16,7 +16,7 @@ class BusinessEventOngoing extends StatelessWidget
   Widget build(BuildContext context)
   {
     var screen = MediaQuery.of(context).size;
-    var statement = EventCreated().displayDialog(context);
+    var statement = AcceptDonation().displayDialog(context);
 
     return LayoutBuilder
     (

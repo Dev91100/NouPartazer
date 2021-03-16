@@ -1,6 +1,6 @@
-import 'package:noupartazer_app/Yashna/components/ConfirmationDialog.dart';
+import 'package:noupartazer_app/Yashna/Pages/ConfirmationDialog/ConfirmationDialogModel.dart';
 
-class AcceptDonation extends ConfirmationDialog
+class AcceptDonation extends ConfirmationDialogModel
 {
   String text;
 

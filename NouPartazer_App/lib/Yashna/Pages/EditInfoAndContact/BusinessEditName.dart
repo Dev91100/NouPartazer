@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:noupartazer_app/Yashna/components/EditInfo.dart';
+import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContact/EditInfo.dart';
 
 class BusinessEditName extends EditInfo
 {
