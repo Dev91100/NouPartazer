@@ -1,4 +1,4 @@
-import 'package:NouPartazer_App/Koomalai/components/text_field_change_password.dart';
+import 'package:noupartazer_app/Koomalai/components/text_field_change_password.dart';
 import 'package:flutter/material.dart';
 
 class CreateNewPasswordField extends StatelessWidget {

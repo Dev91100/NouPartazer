@@ -2,10 +2,10 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'package:NouPartazer_App/Koomalai/src/Completed%20ngo%20task/BusinessCompletedTask.dart';
-import 'package:NouPartazer_App/Koomalai/src/Ongoing%20ngo%20task/BusinessOngoingTask.dart';
-import 'package:NouPartazer_App/Koomalai/src/unassigned%20ngo%20task/BusinessUnassignedTask.dart';
-import 'package:NouPartazer_App/Atish/Pages/Task/BusinessTask/BusinessCancelledTask.dart';
+import 'package:noupartazer_app/Koomalai/src/Completed%20ngo%20task/BusinessCompletedTask.dart';
+import 'package:noupartazer_app/Koomalai/src/Ongoing%20ngo%20task/BusinessOngoingTask.dart';
+import 'package:noupartazer_app/Koomalai/src/unassigned%20ngo%20task/BusinessUnassignedTask.dart';
+import 'package:noupartazer_app/Atish/Pages/Task/BusinessTask/BusinessCancelledTask.dart';
 
 class BusinessTask extends StatefulWidget
 {

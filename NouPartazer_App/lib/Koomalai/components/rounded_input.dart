@@ -1,5 +1,5 @@
-import 'package:NouPartazer_App/Koomalai/components/text_field.dart';
-import 'package:NouPartazer_App/Koomalai/constants.dart';
+import 'package:noupartazer_app/Koomalai/components/text_field.dart';
+import 'package:noupartazer_app/Koomalai/constants.dart';
 import 'package:flutter/material.dart';
 
 class RoundedInput extends StatelessWidget {

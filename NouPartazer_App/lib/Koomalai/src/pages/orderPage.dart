@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:NouPartazer_App/Koomalai/src/pages/signInPage.dart';
-import 'package:NouPartazer_App/Koomalai/src/widget/orderCard.dart';
+import 'package:noupartazer_app/Koomalai/src/pages/signInPage.dart';
+import 'package:noupartazer_app/Koomalai/src/widget/orderCard.dart';
 
 class OrderPage extends StatefulWidget {
   @override

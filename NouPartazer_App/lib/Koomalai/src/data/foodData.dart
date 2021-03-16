@@ -1,5 +1,5 @@
 
-import 'package:NouPartazer_App/Koomalai/src/models/foodModel.dart';
+import 'package:noupartazer_app/Koomalai/src/models/foodModel.dart';
 
 final foods =[
   FoodData(

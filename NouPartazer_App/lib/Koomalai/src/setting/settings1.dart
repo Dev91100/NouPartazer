@@ -4,7 +4,7 @@
   */
 
 /*import 'package:flutter/material.dart';
-import 'package:NouPartazer_App/Koomalai/core/presentation/res/assets.dart';
+import 'package:noupartazer_app/Koomalai/core/presentation/res/assets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SettingsOnePage extends StatefulWidget {

@@ -1,7 +1,7 @@
-import 'package:NouPartazer_App/Koomalai/src/Settings/NGOSettings.dart';
+import 'package:noupartazer_app/Koomalai/src/Settings/NGOSettings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:NouPartazer_App/Koomalai/src/widget/bottomSheetWidget.dart';
+import 'package:noupartazer_app/Koomalai/src/widget/bottomSheetWidget.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 

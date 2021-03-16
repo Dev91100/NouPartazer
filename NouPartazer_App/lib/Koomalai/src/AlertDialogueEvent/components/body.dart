@@ -1,5 +1,5 @@
 
-import 'package:NouPartazer_App/Koomalai/Screens/Signup/signup_screen.dart';
+import 'package:noupartazer_app/Koomalai/Screens/Signup/signup_screen.dart';
 /*import 'dart:js';*/
 
 import 'package:flutter/material.dart';

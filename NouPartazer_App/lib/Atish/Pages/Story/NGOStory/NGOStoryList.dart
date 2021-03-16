@@ -1,4 +1,4 @@
-import 'package:NouPartazer_App/Atish/Pages/Story/NGOStory/NGOStory.dart';
+import 'package:noupartazer_app/Atish/Pages/Story/NGOStory/NGOStory.dart';
 
 final List<NGOStory> ngoStoryList =
 [

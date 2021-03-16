@@ -1,4 +1,4 @@
-import 'package:NouPartazer_App/Koomalai/constants.dart';
+import 'package:noupartazer_app/Koomalai/constants.dart';
 import 'package:flutter/material.dart';
 
 class OrDivider extends StatelessWidget {

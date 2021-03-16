@@ -1,4 +1,4 @@
-import 'package:NouPartazer_App/Yashna/components/TickboxPopup.dart';
+import 'package:noupartazer_app/Yashna/components/TickboxPopup.dart';
 
 class AcceptDonation extends TickboxPopup
 {

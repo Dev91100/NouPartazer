@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:NouPartazer_App/Atish/components/IconText.dart';
+import 'package:noupartazer_app/Atish/components/IconText.dart';
 import 'package:flutter/rendering.dart';
 
 class ButtonIconText extends StatelessWidget
@@ -9,6 +9,11 @@ class ButtonIconText extends StatelessWidget
   final String text;
   final Color textColor;
   final Color iconColor;
+  final bool hasBorder;
+  final Color borderColor;
+  final double borderWidth;
+  final BorderRadius borderRadius;
+  final EdgeInsets padding;
   final double fontSize;
   final bool hasIcon;
   final IconData icon;
@@ -36,9 +41,14 @@ class ButtonIconText extends StatelessWidget
       this.fontWeight = FontWeight.w600,
       this.textColor = const Color.fromRGBO(255, 255, 255, 1),
       this.iconColor = const Color.fromRGBO(255, 255, 255, 1),
+      this.hasBorder = false,
+      this.borderWidth = 0,
       this.buttonColor = const Color.fromRGBO(0, 50, 193, 1),
+      this.borderColor = const Color.fromRGBO(0, 0, 0, 0),
       this.iconRight = 5,
       this.elevation = 2,
+      this.padding = const EdgeInsets.fromLTRB(15, 10, 15, 10),
+      this.borderRadius = const BorderRadius.all(Radius.circular(5)),
     }
   )
   {
@@ -57,15 +67,24 @@ class ButtonIconText extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return RaisedButton
+    return ElevatedButton
     (
-      padding: EdgeInsets.fromLTRB(15, 10, 15, 10),
-      elevation: elevation,
-      shape: RoundedRectangleBorder
+      style: OutlinedButton.styleFrom
       (
-        borderRadius: BorderRadius.all(Radius.circular(5))
+        backgroundColor: buttonColor,
+        padding: padding,
+        elevation: elevation,
+        shape: RoundedRectangleBorder
+        (
+          borderRadius: borderRadius,
+        ),
+        side: (hasBorder) ? BorderSide
+        (
+          color: borderColor,
+          width: borderWidth
+        ) : null,
       ),
-      color: buttonColor,
+      
       child: IconText
       (
         text: text,

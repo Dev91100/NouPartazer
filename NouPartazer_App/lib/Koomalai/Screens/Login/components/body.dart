@@ -1,12 +1,12 @@
 import 'dart:convert';
 
-import 'package:NouPartazer_App/Devashish/pages/ForgotPassword.dart';
-import 'package:NouPartazer_App/Koomalai/Screens/Signup/signup_screen.dart';
-import 'package:NouPartazer_App/Koomalai/components/rounded_button.dart';
-import 'package:NouPartazer_App/Koomalai/components/rounded_input_field.dart';
-import 'package:NouPartazer_App/Koomalai/components/rounded_password_field.dart';
-import 'package:NouPartazer_App/Koomalai/src/screens/mainScreen.dart';
-import 'package:NouPartazer_App/Koomalai/src/screens/secondMainScreen.dart';
+import 'package:noupartazer_app/Devashish/pages/ForgotPassword.dart';
+import 'package:noupartazer_app/Koomalai/Screens/Signup/signup_screen.dart';
+import 'package:noupartazer_app/Koomalai/components/rounded_button.dart';
+import 'package:noupartazer_app/Koomalai/components/rounded_input_field.dart';
+import 'package:noupartazer_app/Koomalai/components/rounded_password_field.dart';
+import 'package:noupartazer_app/Koomalai/src/screens/mainScreen.dart';
+import 'package:noupartazer_app/Koomalai/src/screens/secondMainScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -308,11 +308,15 @@ class Body extends StatelessWidget {
                             ),
                           ),
                         ),
-                        onPressed: () {
-                          Navigator.push(
+                        onPressed: ()
+                        {
+                          Navigator.push
+                          (
                             context,
-                            MaterialPageRoute(
-                              builder: (context) {
+                            MaterialPageRoute
+                            (
+                              builder: (context)
+                              {
                                 return ForgotPassword ();
                               },
                             ),

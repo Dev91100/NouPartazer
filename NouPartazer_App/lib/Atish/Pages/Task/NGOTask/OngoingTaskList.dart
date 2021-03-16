@@ -1,4 +1,4 @@
-import 'package:NouPartazer_App/Atish/Pages/Task/NGOTask/NGOTask.dart';
+import 'package:noupartazer_app/Atish/Pages/Task/NGOTask/NGOTask.dart';
 
 final List<NGOTask> ongoingTaskList =
 [

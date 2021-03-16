@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:NouPartazer_App/Atish/components/PageTitle.dart';
-import 'package:NouPartazer_App/Atish/Pages/HelpAndSupport/HelpAndSupportModel.dart';
-import 'package:NouPartazer_App/Koomalai/src/IndividualSettings/IndividualSetting.dart';
+import 'package:noupartazer_app/Atish/components/PageTitle.dart';
+import 'package:noupartazer_app/Atish/Pages/SettingsPage/HelpAndSupport/HelpAndSupportModel.dart';
+import 'package:noupartazer_app/Koomalai/src/IndividualSettings/IndividualSetting.dart';
 
 class IndividualHelpAndSupport extends StatelessWidget
 {

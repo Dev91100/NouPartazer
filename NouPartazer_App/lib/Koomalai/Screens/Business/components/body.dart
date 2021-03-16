@@ -1,7 +1,7 @@
-import 'package:NouPartazer_App/Koomalai/Screens/Signup/signup_screen.dart';
-import 'package:NouPartazer_App/Koomalai/components/rounded_button.dart';
-import 'package:NouPartazer_App/Koomalai/components/rounded_input.dart';
-import 'package:NouPartazer_App/Koomalai/src/screens/BusinessNGOmainScreen.dart';
+import 'package:noupartazer_app/Koomalai/Screens/Signup/signup_screen.dart';
+import 'package:noupartazer_app/Koomalai/components/rounded_button.dart';
+import 'package:noupartazer_app/Koomalai/components/rounded_input.dart';
+import 'package:noupartazer_app/Koomalai/src/screens/BusinessNGOmainScreen.dart';
 import 'package:flutter/material.dart';
 
 import 'background.dart';

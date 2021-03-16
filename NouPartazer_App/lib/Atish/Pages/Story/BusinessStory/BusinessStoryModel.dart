@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
-import 'package:NouPartazer_App/Atish/Pages/Story/BusinessStory/BusinessStory.dart';
-import 'package:NouPartazer_App/Atish/components/ContainerIconText.dart';
-import 'package:NouPartazer_App/Atish/components/ContainerText.dart';
+import 'package:noupartazer_app/Atish/Pages/Story/BusinessStory/BusinessStory.dart';
+import 'package:noupartazer_app/Atish/components/ContainerIconText.dart';
+import 'package:noupartazer_app/Atish/components/ContainerText.dart';
 
 class BusinessStoryModel extends StatelessWidget
 {

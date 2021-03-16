@@ -1,4 +1,4 @@
-import 'package:NouPartazer_App/Yashna/components/ConfirmationPopup.dart';
+import 'package:noupartazer_app/Yashna/components/ConfirmationPopup.dart';
 
 class DeleteAccount extends ConfirmationPopup
 {

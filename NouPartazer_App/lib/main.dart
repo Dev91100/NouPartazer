@@ -1,8 +1,7 @@
-import 'package:NouPartazer_App/Koomalai/src/NGO%20profile/NGOProfile.dart';
 import 'package:flutter/material.dart';
-
 import 'package:google_fonts/google_fonts.dart';
-import 'package:NouPartazer_App/Atish/Pages/Splashscreen/SplashScreen.dart';
+
+import 'package:noupartazer_app/Atish/Pages/Splashscreen/SplashScreen.dart';
 
 void main() => runApp(MyApp());
 
@@ -43,11 +42,9 @@ class MyApp extends StatelessWidget
               color: new Color.fromRGBO(0, 0, 0, 1),
             ),
           ),
-          
         )
-      
       ),
-      home: NGOProfile(),
+      home: SplashScreen(),
     );
   }
 }

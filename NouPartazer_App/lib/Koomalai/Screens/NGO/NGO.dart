@@ -1,5 +1,5 @@
 
-import 'package:NouPartazer_App/Koomalai/Screens/NGO/components/body.dart';
+import 'package:noupartazer_app/Koomalai/Screens/NGO/components/body.dart';
 import 'package:flutter/material.dart';
 
 class NGO extends StatelessWidget {

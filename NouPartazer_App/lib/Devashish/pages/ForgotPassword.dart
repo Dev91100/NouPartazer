@@ -1,10 +1,10 @@
-import 'package:NouPartazer_App/Koomalai/Screens/Login/login_screen.dart';
+import 'package:noupartazer_app/Koomalai/Screens/Login/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:NouPartazer_App/Devashish/components/TheOutlinedButtons.dart';
-import 'package:NouPartazer_App/Devashish/components/TheBackButton.dart';
-import 'package:NouPartazer_App/Devashish/components/YellowTitles.dart';
-import 'package:NouPartazer_App/Devashish/components/YellowTitlePara.dart';
+import 'package:noupartazer_app/Devashish/components/TheOutlinedButtons.dart';
+import 'package:noupartazer_app/Devashish/components/TheBackButton.dart';
+import 'package:noupartazer_app/Devashish/components/YellowTitles.dart';
+import 'package:noupartazer_app/Devashish/components/YellowTitlePara.dart';
 
 import 'CheckResetPW.dart';
 
@@ -24,20 +24,7 @@ class ForgotPassword extends StatelessWidget {
       (
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: TheBackButton
-        (
-          press: ()
-          {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) {
-                  return LoginScreen();
-                },
-              ),
-            );            
-          },
-        ),
+        leading: TheBackButton(),
       ),
       body: ListView
       (

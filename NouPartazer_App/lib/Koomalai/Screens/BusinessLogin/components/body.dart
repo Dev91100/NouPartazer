@@ -1,10 +1,10 @@
-import 'package:NouPartazer_App/Koomalai/Screens/BusinessLogin/components/background.dart';
-import 'package:NouPartazer_App/Koomalai/Screens/Signin/signin_screen.dart';
-import 'package:NouPartazer_App/Koomalai/Screens/Signup/signup_screen.dart';
-import 'package:NouPartazer_App/Koomalai/components/rounded_button.dart';
-import 'package:NouPartazer_App/Koomalai/components/rounded_input_field.dart';
-import 'package:NouPartazer_App/Koomalai/components/rounded_password_field.dart';
-import 'package:NouPartazer_App/Koomalai/src/screens/BusinessNGOmainScreen.dart';
+import 'package:noupartazer_app/Koomalai/Screens/BusinessLogin/components/background.dart';
+import 'package:noupartazer_app/Koomalai/Screens/Signin/signin_screen.dart';
+import 'package:noupartazer_app/Koomalai/Screens/Signup/signup_screen.dart';
+import 'package:noupartazer_app/Koomalai/components/rounded_button.dart';
+import 'package:noupartazer_app/Koomalai/components/rounded_input_field.dart';
+import 'package:noupartazer_app/Koomalai/components/rounded_password_field.dart';
+import 'package:noupartazer_app/Koomalai/src/screens/BusinessNGOmainScreen.dart';
 import 'package:flutter/material.dart';
 
 class Body extends StatelessWidget {

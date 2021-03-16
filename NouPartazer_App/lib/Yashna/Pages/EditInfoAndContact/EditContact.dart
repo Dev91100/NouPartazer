@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:NouPartazer_App/Yashna/components/EditInfo.dart';
+import 'package:noupartazer_app/Yashna/components/EditInfo.dart';
 
 class EditContact extends EditInfo
 {

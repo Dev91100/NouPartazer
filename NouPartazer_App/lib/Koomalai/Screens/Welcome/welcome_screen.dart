@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:NouPartazer_App/Koomalai/Screens/Login/login_screen.dart';
+import 'package:noupartazer_app/Koomalai/Screens/Login/login_screen.dart';
 import 'package:flutter/material.dart';
 
 

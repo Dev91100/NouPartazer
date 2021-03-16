@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:NouPartazer_App/Koomalai/src/Business%20Event%20Details/Business%20event%20details.dart';
+import 'package:noupartazer_app/Koomalai/src/Business%20Event%20Details/Business%20event%20details.dart';
 
 
 class NGOCentresModel extends StatelessWidget

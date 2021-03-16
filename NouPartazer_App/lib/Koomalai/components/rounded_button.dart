@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:NouPartazer_App/Koomalai/constants.dart';
+import 'package:noupartazer_app/Koomalai/constants.dart';
 
 class RoundedButton extends StatelessWidget {
   final String text;

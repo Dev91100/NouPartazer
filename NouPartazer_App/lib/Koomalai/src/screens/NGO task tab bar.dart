@@ -3,9 +3,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'package:NouPartazer_App/Koomalai/src/Business%20Cancelled%20events/NGOCancelledTask.dart';
-import 'package:NouPartazer_App/Koomalai/src/Business%20completedEvent%20Details/NGOCompletedTask.dart';
-import 'package:NouPartazer_App/Koomalai/src/Business%20ongoing%20events/NGOOngoingTask.dart';
+import 'package:noupartazer_app/Koomalai/src/Business%20Cancelled%20events/NGOCancelledTask.dart';
+import 'package:noupartazer_app/Koomalai/src/Business%20completedEvent%20Details/NGOCompletedTask.dart';
+import 'package:noupartazer_app/Koomalai/src/Business%20ongoing%20events/NGOOngoingTask.dart';
 
 class NGOTaskTab extends StatefulWidget
 {

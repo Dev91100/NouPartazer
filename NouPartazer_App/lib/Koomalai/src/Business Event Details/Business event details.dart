@@ -1,9 +1,9 @@
 
 
-import 'package:NouPartazer_App/Koomalai/src/Business%20Confirmed%20Event%20Details/Business%20confirmed%20event%20details.dart';
-import 'package:NouPartazer_App/Koomalai/src/screens/DonationMainScreen.dart';
-import 'package:NouPartazer_App/Yashna/Pages/ConfirmationDialog/AcceptDonation.dart';
-import 'package:NouPartazer_App/Yashna/components/TickboxPopup.dart';
+import 'package:noupartazer_app/Koomalai/src/Business%20Confirmed%20Event%20Details/Business%20confirmed%20event%20details.dart';
+import 'package:noupartazer_app/Koomalai/src/screens/DonationMainScreen.dart';
+import 'package:noupartazer_app/Yashna/Pages/ConfirmationDialog/AcceptDonation.dart';
+import 'package:noupartazer_app/Yashna/components/TickboxPopup.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 

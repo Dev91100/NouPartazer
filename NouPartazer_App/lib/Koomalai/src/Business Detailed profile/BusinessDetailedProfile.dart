@@ -1,6 +1,6 @@
 
-import 'package:NouPartazer_App/Koomalai/src/screens/TaskMainScreen.dart';
-import 'package:NouPartazer_App/Koomalai/src/widget/foodCategoryStories.dart';
+import 'package:noupartazer_app/Koomalai/src/screens/TaskMainScreen.dart';
+import 'package:noupartazer_app/Koomalai/src/widget/foodCategoryStories.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 

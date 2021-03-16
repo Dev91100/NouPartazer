@@ -1,7 +1,7 @@
 
-import 'package:NouPartazer_App/Koomalai/Screens/Signin/components/social_icon.dart';
-import 'package:NouPartazer_App/Koomalai/components/rounded_button.dart';
-import 'package:NouPartazer_App/Koomalai/src/Security/Security.dart';
+import 'package:noupartazer_app/Koomalai/Screens/Signin/components/social_icon.dart';
+import 'package:noupartazer_app/Koomalai/components/rounded_button.dart';
+import 'package:noupartazer_app/Koomalai/src/Security/Security.dart';
 import 'package:flutter/material.dart';
 
 class AlertBoxEvent extends StatelessWidget {

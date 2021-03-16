@@ -1,9 +1,9 @@
-import 'package:NouPartazer_App/Koomalai/Screens/BusinessLogin/login_screen.dart';
-import 'package:NouPartazer_App/Koomalai/Screens/Login/login_screen.dart';
-import 'package:NouPartazer_App/Koomalai/Screens/Signin/components/background.dart';
-import 'package:NouPartazer_App/Koomalai/Screens/Signin/components/social_icon.dart';
-import 'package:NouPartazer_App/Koomalai/Screens/Signin/signin_screen.dart';
-import 'package:NouPartazer_App/Koomalai/Screens/Signup/signup_screen.dart';
+import 'package:noupartazer_app/Koomalai/Screens/BusinessLogin/login_screen.dart';
+import 'package:noupartazer_app/Koomalai/Screens/Login/login_screen.dart';
+import 'package:noupartazer_app/Koomalai/Screens/Signin/components/background.dart';
+import 'package:noupartazer_app/Koomalai/Screens/Signin/components/social_icon.dart';
+import 'package:noupartazer_app/Koomalai/Screens/Signin/signin_screen.dart';
+import 'package:noupartazer_app/Koomalai/Screens/Signup/signup_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../signin_screen.dart';

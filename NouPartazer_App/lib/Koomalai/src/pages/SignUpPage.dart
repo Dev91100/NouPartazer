@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:NouPartazer_App/Koomalai/src/pages/signInPage.dart';
+import 'package:noupartazer_app/Koomalai/src/pages/signInPage.dart';
 
 
 class SignUpPage extends StatefulWidget {

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-import 'package:NouPartazer_App/Atish/components/PageTitle.dart';
-import 'package:NouPartazer_App/Atish/Pages/SettingsPage/SettingsModel.dart';
-import 'package:NouPartazer_App/Koomalai/src/NGO%20profile/NGOProfile.dart';
-import 'package:NouPartazer_App/Yashna/Pages/ConfirmLogOut.dart';
-import 'package:NouPartazer_App/Koomalai/src/Help%20and%20support/NGOHelpAndSupport.dart';
-import 'package:NouPartazer_App/Koomalai/src/Security/Security.dart';
-import 'package:NouPartazer_App/Yashna/Pages/LanguageConfirmation.dart';
+import 'package:noupartazer_app/Atish/components/PageTitle.dart';
+import 'package:noupartazer_app/Atish/Pages/SettingsPage/SettingsModel.dart';
+import 'package:noupartazer_app/Koomalai/src/NGO%20profile/NGOProfile.dart';
+import 'package:noupartazer_app/Yashna/Pages/ConfirmLogOut.dart';
+import 'package:noupartazer_app/Koomalai/src/Help%20and%20support/NGOHelpAndSupport.dart';
+import 'package:noupartazer_app/Koomalai/src/Security/Security.dart';
+import 'package:noupartazer_app/Yashna/Pages/LanguageConfirmation.dart';
 
 class NGOSettings extends StatelessWidget
 {

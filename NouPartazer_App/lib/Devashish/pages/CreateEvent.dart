@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:NouPartazer_App/Atish/components/PageTitle.dart';
-import 'package:NouPartazer_App/Devashish/components/FieldTitle.dart';
-import 'package:NouPartazer_App/Devashish/components/SubTitle.dart';
-import 'package:NouPartazer_App/Devashish/components/TextFields.dart';
-import 'package:NouPartazer_App/Devashish/components/TheOutlinedButtons.dart';
-import 'package:NouPartazer_App/Devashish/components/UploadImage.dart';
-import 'package:NouPartazer_App/Devashish/components/CheckBoxes.dart';
+import 'package:noupartazer_app/Atish/components/PageTitle.dart';
+import 'package:noupartazer_app/Devashish/components/FieldTitle.dart';
+import 'package:noupartazer_app/Devashish/components/SubTitle.dart';
+import 'package:noupartazer_app/Devashish/components/TextFields.dart';
+import 'package:noupartazer_app/Devashish/components/TheOutlinedButtons.dart';
+import 'package:noupartazer_app/Devashish/components/UploadImage.dart';
+import 'package:noupartazer_app/Devashish/components/CheckBoxes.dart';
 
 class CreateEvent extends StatelessWidget {
   final formKey = GlobalKey<FormState>();

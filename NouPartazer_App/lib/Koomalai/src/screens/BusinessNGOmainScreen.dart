@@ -1,7 +1,7 @@
-import 'package:NouPartazer_App/Devashish/pages/CreateEvent.dart';
-import 'package:NouPartazer_App/Koomalai/src/Business%20NGO%20list/BusinessNGO%20list.dart';
-import 'package:NouPartazer_App/Koomalai/src/Business%20profile/BusinessProfile.dart';
-import 'package:NouPartazer_App/Koomalai/src/pages/businessHomePage.dart';
+import 'package:noupartazer_app/Devashish/pages/CreateEvent.dart';
+import 'package:noupartazer_app/Koomalai/src/Business%20NGO%20list/BusinessNGO%20list.dart';
+import 'package:noupartazer_app/Koomalai/src/Business%20profile/BusinessProfile.dart';
+import 'package:noupartazer_app/Koomalai/src/pages/businessHomePage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

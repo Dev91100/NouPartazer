@@ -1,10 +1,10 @@
-import 'package:NouPartazer_App/Atish/Pages/NGOCentres/NGOCentres.dart';
+import 'package:noupartazer_app/Atish/Pages/NGOCentres/NGOCentres.dart';
 import 'package:flutter/material.dart';
 
-import 'package:NouPartazer_App/Atish/components/PageTitle.dart';
-import 'package:NouPartazer_App/Atish/Pages/NGOCentres/NGOCentresList.dart';
-import 'package:NouPartazer_App/Atish/components/CustomIconButton.dart';
-import 'package:NouPartazer_App/Atish/Pages/NGOCentres/NGOCentresModel.dart';
+import 'package:noupartazer_app/Atish/components/PageTitle.dart';
+import 'package:noupartazer_app/Atish/Pages/NGOCentres/NGOCentresList.dart';
+import 'package:noupartazer_app/Atish/components/CustomIconButton.dart';
+import 'package:noupartazer_app/Atish/Pages/NGOCentres/NGOCentresModel.dart';
 
 class NGOCentresListWithCounter extends StatelessWidget
 {

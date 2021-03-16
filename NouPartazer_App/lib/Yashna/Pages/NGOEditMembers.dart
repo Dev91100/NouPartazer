@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:NouPartazer_App/Atish/components/RoundIconButton.dart';
-import 'package:NouPartazer_App/Koomalai/src/Settings/NGOSettings.dart';
+import 'package:noupartazer_app/Atish/components/RoundIconButton.dart';
+import 'package:noupartazer_app/Koomalai/src/Settings/NGOSettings.dart';
 
 class NGOEditMembers
 {

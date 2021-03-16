@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import './Member.dart';
 import './MemberList.dart';
-import 'package:NouPartazer_App/Atish/components/RoundIconButton.dart';
+import 'package:noupartazer_app/Atish/components/RoundIconButton.dart';
 
 class MemberModel extends StatelessWidget 
 {

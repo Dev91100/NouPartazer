@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:NouPartazer_App/Atish/components/ListTileModel.dart';
+import 'package:noupartazer_app/Atish/components/ListTileModel.dart';
 
 
 class SettingsModel extends StatelessWidget

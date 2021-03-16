@@ -1,5 +1,5 @@
 
-import 'package:NouPartazer_App/Koomalai/src/screens/NGOTaskmainScreen.dart';
+import 'package:noupartazer_app/Koomalai/src/screens/NGOTaskmainScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 

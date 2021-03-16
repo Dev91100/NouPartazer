@@ -1,4 +1,4 @@
-import 'package:NouPartazer_App/Atish/Pages/Task/BusinessTask/BusinessTask.dart';
+import 'package:noupartazer_app/Atish/Pages/Task/BusinessTask/BusinessTask.dart';
 
 final List<BusinessTask> ongoingTaskList =
 [

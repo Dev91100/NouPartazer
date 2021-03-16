@@ -1,14 +1,14 @@
-import 'package:NouPartazer_App/Yashna/components/Statement.dart';
 import 'package:flutter/material.dart';
 
-import 'package:NouPartazer_App/Atish/components/PageTitle.dart';
-import 'package:NouPartazer_App/Atish/components/SectionTitle.dart';
-import 'package:NouPartazer_App/Atish/components/ContainerIconText.dart';
-import 'package:NouPartazer_App/Atish/components/ContainerText.dart';
-import 'package:NouPartazer_App/Atish/components/ButtonIconText.dart';
-import 'package:NouPartazer_App/Atish/components/CardIconText.dart';
-import 'package:NouPartazer_App/Atish/components/LongText.dart';
-import 'package:NouPartazer_App/Atish/components/CardListTileText.dart';
+import 'package:noupartazer_app/Atish/components/PageTitle.dart';
+import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
+import 'package:noupartazer_app/Atish/components/ContainerIconText.dart';
+import 'package:noupartazer_app/Atish/components/ContainerText.dart';
+import 'package:noupartazer_app/Atish/components/ButtonIconText.dart';
+import 'package:noupartazer_app/Atish/components/CardIconText.dart';
+import 'package:noupartazer_app/Atish/components/LongText.dart';
+import 'package:noupartazer_app/Atish/components/CardListTileText.dart';
+import 'package:noupartazer_app/Yashna/Pages/StatementDialog/EventCreated.dart';
 
 class BusinessEventOngoing extends StatelessWidget
 {
@@ -16,7 +16,7 @@ class BusinessEventOngoing extends StatelessWidget
   Widget build(BuildContext context)
   {
     var screen = MediaQuery.of(context).size;
-    var statement = Statement().displayDialog(context);
+    var statement = EventCreated().displayDialog(context);
 
     return LayoutBuilder
     (
@@ -140,6 +140,7 @@ class BusinessEventOngoing extends StatelessWidget
                         icon: Icons.download_done_outlined,
                         buttonColor: Color.fromRGBO(245, 197, 41, 1),
                         elevation: 2,
+                        hasBorder: false,
                         isPopUpPage: true,
                         onPress: statement,
                       ),

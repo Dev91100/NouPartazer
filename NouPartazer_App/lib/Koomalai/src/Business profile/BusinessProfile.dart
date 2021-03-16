@@ -1,20 +1,20 @@
 
-import 'package:NouPartazer_App/Koomalai/src/BusinessSettings/BusinessSettings.dart';
-import 'package:NouPartazer_App/Yashna/Pages/EditInfoAndContact/EditContact.dart';
+import 'package:noupartazer_app/Koomalai/src/BusinessSettings/BusinessSettings.dart';
+import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContact/EditContact.dart';
 import 'package:flutter/material.dart';
 
-import 'package:NouPartazer_App/Atish/components/RoundIconButton.dart';
-import 'package:NouPartazer_App/Atish/components/RoundPhotoButton.dart';
-import 'package:NouPartazer_App/Atish/components/SectionTitle.dart';
-import 'package:NouPartazer_App/Atish/components/CustomDivider.dart';
-import 'package:NouPartazer_App/Atish/components/LongText.dart';
-import 'package:NouPartazer_App/Atish/components/SectionWithEditButton.dart';
-import 'package:NouPartazer_App/Atish/components/ContactInfo.dart';
-import 'package:NouPartazer_App/Atish/Pages/Story/NGOStory/NGOStory.dart';
-import 'package:NouPartazer_App/Atish/Pages/Story/NGOStory/NGOStoryList.dart';
-import 'package:NouPartazer_App/Atish/Pages/Story/BusinessStory/BusinessStoryModelProfile.dart';
-import 'package:NouPartazer_App/Koomalai/src/widget/bottomSheetWidget.dart';
-import 'package:NouPartazer_App/Yashna/Pages/EditInfoAndContact/BusinessEditName.dart';
+import 'package:noupartazer_app/Atish/components/RoundIconButton.dart';
+import 'package:noupartazer_app/Atish/components/RoundPhotoButton.dart';
+import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
+import 'package:noupartazer_app/Atish/components/CustomDivider.dart';
+import 'package:noupartazer_app/Atish/components/LongText.dart';
+import 'package:noupartazer_app/Atish/components/SectionWithEditButton.dart';
+import 'package:noupartazer_app/Atish/components/ContactInfo.dart';
+import 'package:noupartazer_app/Atish/Pages/Story/NGOStory/NGOStory.dart';
+import 'package:noupartazer_app/Atish/Pages/Story/NGOStory/NGOStoryList.dart';
+import 'package:noupartazer_app/Atish/Pages/Story/BusinessStory/BusinessStoryModelProfile.dart';
+import 'package:noupartazer_app/Koomalai/src/widget/bottomSheetWidget.dart';
+import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContact/BusinessEditName.dart';
 
 
 class BusinessProfile extends StatelessWidget

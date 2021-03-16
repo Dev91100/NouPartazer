@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:NouPartazer_App/Atish/components/PageTitle.dart';
-import 'package:NouPartazer_App/Atish/Pages/Story/NGOStory/NGOStoryList.dart';
-import 'package:NouPartazer_App/Atish/Pages/Story/NGOStory/NGOStoryModel.dart';
+import 'package:noupartazer_app/Atish/components/PageTitle.dart';
+import 'package:noupartazer_app/Atish/Pages/Story/NGOStory/NGOStoryList.dart';
+import 'package:noupartazer_app/Atish/Pages/Story/NGOStory/NGOStoryModel.dart';
 
 class IndividualHomePage extends StatelessWidget
 {

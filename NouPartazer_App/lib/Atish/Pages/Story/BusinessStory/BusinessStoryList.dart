@@ -1,4 +1,4 @@
-import 'package:NouPartazer_App/Atish/Pages/Story/BusinessStory/BusinessStory.dart';
+import 'package:noupartazer_app/Atish/Pages/Story/BusinessStory/BusinessStory.dart';
 
 final List<BusinessStory> businessStoryList =
 [

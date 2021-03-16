@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:NouPartazer_App/Devashish/components/CheckEmailTemplate.dart';
+import 'package:noupartazer_app/Devashish/components/CheckEmailTemplate.dart';
 
 class CheckResetPW extends StatelessWidget {
   @override

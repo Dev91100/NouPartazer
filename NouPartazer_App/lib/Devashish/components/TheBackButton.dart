@@ -2,14 +2,6 @@ import 'package:flutter/material.dart';
 
 class TheBackButton extends StatelessWidget
 {
-  final Function press;
-
-  TheBackButton
-  ({
-    Key key,
-    this.press,
-  }) : super(key: key);
-  
   @override
   Widget build(BuildContext context)
   {
@@ -23,7 +15,10 @@ class TheBackButton extends StatelessWidget
           padding: EdgeInsets.all(0),
           icon: Icon(Icons.keyboard_arrow_left),  
           iconSize: 50,
-          onPressed: press,
+          onPressed: ()
+          {
+            Navigator.of(context).pop();
+          },
         );
       }
     );

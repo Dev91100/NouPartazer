@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:NouPartazer_App/Atish/components/IconText.dart';
+import 'package:noupartazer_app/Atish/components/IconText.dart';
 
 class ContainerIconText extends StatelessWidget
 {

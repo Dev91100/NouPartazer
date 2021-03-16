@@ -1,14 +1,14 @@
-import 'package:NouPartazer_App/Yashna/Pages/DeleteAccount.dart';
+import 'package:noupartazer_app/Yashna/Pages/DeleteAccount.dart';
 import 'package:flutter/material.dart';
 
-import 'package:NouPartazer_App/Atish/components/PageTitle.dart';
-import 'package:NouPartazer_App/Koomalai/src/Settings/NGOSettings.dart';
-import 'package:NouPartazer_App/Atish/components/SectionTitle.dart';
+import 'package:noupartazer_app/Atish/components/PageTitle.dart';
+import 'package:noupartazer_app/Koomalai/src/Settings/NGOSettings.dart';
+import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 
-import 'package:NouPartazer_App/Devashish/components/FieldTitle.dart';
-import 'package:NouPartazer_App/Devashish/components/TextFields.dart';
-import 'package:NouPartazer_App/Devashish/components/TheOutlinedButtons.dart';
-import 'package:NouPartazer_App/Atish/components/ButtonIconText.dart';
+import 'package:noupartazer_app/Devashish/components/FieldTitle.dart';
+import 'package:noupartazer_app/Devashish/components/TextFields.dart';
+import 'package:noupartazer_app/Devashish/components/TheOutlinedButtons.dart';
+import 'package:noupartazer_app/Atish/components/ButtonIconText.dart';
 
 class NGOSecurity extends StatelessWidget
 {

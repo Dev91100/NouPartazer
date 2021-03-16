@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:NouPartazer_App/Atish/components/SectionTitle.dart';
+import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 
 
 class CardIconText extends StatelessWidget

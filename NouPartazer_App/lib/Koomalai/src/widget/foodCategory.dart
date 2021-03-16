@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:NouPartazer_App/Koomalai/src/widget/foodCard.dart';
+import 'package:noupartazer_app/Koomalai/src/widget/foodCard.dart';
 
 import '../data/categoryData.dart';
 import '../models/categoryModel.dart';

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:NouPartazer_App/Atish/Pages/Task/BusinessTask/BusinessTaskModel.dart';
-import 'package:NouPartazer_App/Atish/Pages/Task/BusinessTask/BusinessTask.dart';
-import 'package:NouPartazer_App/Atish/Pages/Task/BusinessTask/CancelledTaskList.dart';
-import 'package:NouPartazer_App/Atish/components/CustomDivider.dart';
+import 'package:noupartazer_app/Atish/Pages/Task/BusinessTask/BusinessTaskModel.dart';
+import 'package:noupartazer_app/Atish/Pages/Task/BusinessTask/BusinessTask.dart';
+import 'package:noupartazer_app/Atish/Pages/Task/BusinessTask/CancelledTaskList.dart';
+import 'package:noupartazer_app/Atish/components/CustomDivider.dart';
 
 class BusinessCancelledTask extends StatelessWidget
 {

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:NouPartazer_App/Devashish/components/TextFields.dart';
 
 class ConfirmationPopup
 {
@@ -34,7 +33,6 @@ class ConfirmationPopup
             alignment: MainAxisAlignment.center,
             buttonPadding: EdgeInsets.all(15),
             mainAxisSize: MainAxisSize.min,
-            
           ),
           
           child: AlertDialog

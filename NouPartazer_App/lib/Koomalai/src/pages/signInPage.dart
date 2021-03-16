@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:NouPartazer_App/Koomalai/src/pages/SignUpPage.dart';
+import 'package:noupartazer_app/Koomalai/src/pages/SignUpPage.dart';
 
 class SignInPage extends StatefulWidget {
   @override

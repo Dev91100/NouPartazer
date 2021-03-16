@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'package:NouPartazer_App/Devashish/components/TheBackButton.dart';
+import 'package:noupartazer_app/Devashish/components/TheBackButton.dart';
 
 class PageTitle extends StatefulWidget implements PreferredSizeWidget
 {
@@ -45,21 +45,7 @@ class _PageTitleState extends State<PageTitle>
         Colors.transparent : widget.barColor,
         elevation: 0,
         leading: (widget.hasBackButton) ?
-        TheBackButton
-        (
-          press: ()
-          {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context)
-                {
-                  return widget.onPress;
-                },
-              ),
-            );            
-          },
-        ) : null,
+        TheBackButton() : null,
 
         leadingWidth: (widget.hasBackButton) ? 80 : null,
 

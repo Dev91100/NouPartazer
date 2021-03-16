@@ -1,10 +1,10 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:NouPartazer_App/Atish/Pages/Task/NGOTask/NGOTaskModel.dart';
-import 'package:NouPartazer_App/Atish/Pages/Task/NGOTask/NGOTask.dart';
-import 'package:NouPartazer_App/Atish/Pages/Task/NGOTask/OngoingTaskList.dart';
-import 'package:NouPartazer_App/Atish/components/CustomDivider.dart';
+import 'package:noupartazer_app/Atish/Pages/Task/NGOTask/NGOTaskModel.dart';
+import 'package:noupartazer_app/Atish/Pages/Task/NGOTask/NGOTask.dart';
+import 'package:noupartazer_app/Atish/Pages/Task/NGOTask/OngoingTaskList.dart';
+import 'package:noupartazer_app/Atish/components/CustomDivider.dart';
 
 class NGOOngoingTask extends StatelessWidget
 {

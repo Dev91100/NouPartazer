@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:NouPartazer_App/Atish/components/SectionTitle.dart';
-import 'package:NouPartazer_App/Atish/components/ButtonIconText.dart';
+import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
+import 'package:noupartazer_app/Atish/components/ButtonIconText.dart';
 
 class Statement
 {
@@ -14,11 +14,11 @@ class Statement
     }
   );
 
-  StatefulBuilder displayDialog(BuildContext context)
+  LayoutBuilder displayDialog(BuildContext context)
   {
-    var alertDialog = StatefulBuilder
+    var alertDialog = LayoutBuilder
     (
-      builder: (context, setState)
+      builder: (context, constraints)
       {
         return ButtonBarTheme
         (
@@ -30,59 +30,80 @@ class Statement
         
           child: AlertDialog
           (
-            actions:
-            [
-              Column
-              (
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children:
-                [
-                  Icon
-                  (
-                    Icons.check_circle_outlined,
-                    size: 120,
-                    color: Color.fromRGBO(0, 163, 68, 1)
-                  ),
+            shape: RoundedRectangleBorder
+            (
+              borderRadius: BorderRadius.all(Radius.circular(20)),
+            ),
 
-                  Container
+            contentPadding: EdgeInsets.only
+            (
+              top: 20,
+              bottom: 20,
+              left: 40,
+              right: 40
+            ),
+
+            content: Column
+            (
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children:
+              [
+                Icon
+                (
+                  Icons.check_circle_outlined,
+                  size: 120,
+                  color: Color.fromRGBO(0, 163, 68, 1)
+                ),
+
+                Container
+                (
+                  margin: EdgeInsets.only(top: 10),
+                  child: SectionTitle
                   (
-                    margin: EdgeInsets.only(top: 10),
-                    child: SectionTitle
+                    title: 'Success',
+                    fontSize: 25,
+                    align: Alignment.center,
+                    left: 0,
+                  ),
+                ),
+
+                Container
+                (
+                  margin: EdgeInsets.only(top: 10),
+                  child: Text
+                  (
+                    text,
+                    style: TextStyle
                     (
-                      title: 'Success',
-                      fontSize: 25,
-                      align: Alignment.center,
-                      left: 0,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 18,
                     ),
                   ),
+                ),
 
-                  Container
-                  (
-                    margin: EdgeInsets.only(top: 10),
-                    child: Text
-                    (
-                      'Changes Updated!',
-                      style: TextStyle
-                      (
-                        fontWeight: FontWeight.w600,
-                        fontSize: 18,
-                      ),
-                    ),
-                  ),
-
-                  ButtonIconText
+                Container
+                (
+                  width: constraints.maxWidth,
+                  margin: EdgeInsets.only(top: 15),
+                  child: ButtonIconText
                   (
                     text: 'Done',
+                    textColor: Color.fromRGBO(245, 197, 41, 1),
                     fontWeight: FontWeight.w700,
                     fontSize: 18,
-                    elevation: 2,
+                    buttonColor: Color.fromRGBO(255, 248, 97, 0.2),
+                    hasBorder: true,
+                    borderColor: Color.fromRGBO(245, 197, 41, 1),
+                    borderWidth: 2,
+                    elevation: 0,
                     hasIcon: false,
                     isClose: true,
                   ),
-                ],
-              ),
-            ],
+                ),
+              ],
+            ),
           ),
         );
       }

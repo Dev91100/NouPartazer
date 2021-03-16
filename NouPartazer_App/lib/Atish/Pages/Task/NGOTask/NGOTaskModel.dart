@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-import 'package:NouPartazer_App/Atish/components/IconText.dart';
-import 'package:NouPartazer_App/Atish/components/SectionTitle.dart';
-import 'package:NouPartazer_App/Atish/components/LongText.dart';
-import 'package:NouPartazer_App/Atish/components/ContainerIconText.dart';
-import 'package:NouPartazer_App/Atish/components/ContainerText.dart';
-import 'package:NouPartazer_App/Atish/components/ButtonIconText.dart';
-import 'package:NouPartazer_App/Koomalai/src/Business%20Event%20Ongoing/Business%20event%20ongoing.dart';
+import 'package:noupartazer_app/Atish/components/IconText.dart';
+import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
+import 'package:noupartazer_app/Atish/components/LongText.dart';
+import 'package:noupartazer_app/Atish/components/ContainerIconText.dart';
+import 'package:noupartazer_app/Atish/components/ContainerText.dart';
+import 'package:noupartazer_app/Atish/components/ButtonIconText.dart';
+import 'package:noupartazer_app/Koomalai/src/Business%20Event%20Ongoing/Business%20event%20ongoing.dart';
 
 class NGOTaskModel extends StatelessWidget
 {

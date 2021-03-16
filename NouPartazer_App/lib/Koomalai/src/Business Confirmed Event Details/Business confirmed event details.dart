@@ -1,7 +1,7 @@
 
 import 'dart:async';
 
-import 'package:NouPartazer_App/Koomalai/src/Business%20Event%20Details/Business%20event%20details.dart';
+import 'package:noupartazer_app/Koomalai/src/Business%20Event%20Details/Business%20event%20details.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
