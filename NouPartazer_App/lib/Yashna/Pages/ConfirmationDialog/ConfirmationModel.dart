@@ -1,16 +1,27 @@
 import 'package:flutter/material.dart';
 
-import 'package:noupartazer_app/Atish/components/CustomButtonIconText.dart';
-import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
+import 'package:noupartazer_app/Yashna/components/TwoButtons.dart';
 
-class StatementModel
+class ConfirmationModel
 {
   String text;
+  String buttonText1;
+  String buttonText2;
+  Color textColor;
+  Color buttonColor;
+  Color borderColor;
+  bool hasTextField;
 
-  StatementModel
+  ConfirmationModel
   (
     {
-      this.text = 'This is a test!'
+      this.text = 'This is a test',
+      this.buttonText1 = 'Cancel',
+      this.buttonText2 = 'Logout',
+      this.textColor = const Color.fromRGBO(212, 0, 0, 1),
+      this.buttonColor = const Color.fromRGBO(212, 0, 0, 0.2),
+      this.borderColor = const Color.fromRGBO(212, 0, 0, 1),
+      this.hasTextField = false,
     }
   );
 
@@ -50,25 +61,6 @@ class StatementModel
               crossAxisAlignment: CrossAxisAlignment.center,
               children:
               [
-                Icon
-                (
-                  Icons.check_circle_outlined,
-                  size: 120,
-                  color: Color.fromRGBO(0, 163, 68, 1)
-                ),
-
-                Container
-                (
-                  margin: EdgeInsets.only(top: 10),
-                  child: SectionTitle
-                  (
-                    title: 'Success',
-                    fontSize: 25,
-                    align: Alignment.center,
-                    left: 0,
-                  ),
-                ),
-
                 Container
                 (
                   margin: EdgeInsets.only(top: 10),
@@ -84,14 +76,31 @@ class StatementModel
                   ),
                 ),
         
+                (hasTextField) ?
                 Container
                 (
-                  width: constraints.maxWidth,
-                  margin: EdgeInsets.only(top: 15),
-                  child: CustomButtonIconText
+                  margin: EdgeInsets.only(top: 20),
+                  child: TextFormField
                   (
-                    text: 'Done',
+                    keyboardType: TextInputType.visiblePassword,
+                    decoration: InputDecoration
+                    (
+                      contentPadding: EdgeInsets.all(10),
+                      border: const OutlineInputBorder(),
+                    ),
                   ),
+                ) : Container(),
+
+                Container
+                (
+                  margin: EdgeInsets.only(top: 20),
+                  child: TwoButtons
+                  (
+                    buttonText2: buttonText2,
+                    textColor: textColor,
+                    buttonColor: buttonColor,
+                    borderColor: borderColor,
+                  )
                 ),
               ],
             ),

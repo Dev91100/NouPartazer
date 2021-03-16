@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:noupartazer_app/Atish/components/ButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/CustomButtonIconText.dart';
 
-class ConfirmationDialogModel
+class DonationEventModel
 {
   @required
   String text;
   bool _isSelected = false;
 
-  ConfirmationDialogModel
+  DonationEventModel
   (
     {
       this.text = 'This is a test!'

@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:noupartazer_app/Atish/components/ButtonIconText.dart';
-import 'package:noupartazer_app/Atish/components/CustomButtonIconText.dart';
 import 'package:noupartazer_app/Yashna/components/IconTextField.dart';
+import 'package:noupartazer_app/Yashna/components/TwoButtons.dart';
 
-class EditInfo
+class EditInfoModel
 {
   final String title;
   final String text1;
@@ -15,7 +14,7 @@ class EditInfo
   final IconData icon3;
   final bool hasMultiline;
 
-  const EditInfo
+  const EditInfoModel
   ({
     @required this.title,
     @required this.text1,
@@ -75,30 +74,7 @@ class EditInfo
                   bottom: 15
                 ),
                 
-                child: Row
-                (
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children:
-                  [
-                    ButtonIconText
-                    (
-                      text: 'Cancel',
-                      textDecoration: TextDecoration.underline,
-                      textColor: Color.fromRGBO(102, 102, 102, 1),
-                      fontWeight: FontWeight.w700,
-                      fontSize: 18,
-                      buttonColor: Colors.transparent,
-                      elevation: 0,
-                      hasIcon: false,
-                      isClose: true,
-                    ),
-
-                    CustomButtonIconText
-                    (
-                      text: 'Confirm',
-                    ),
-                  ]
-                ),
+                child: TwoButtons()
               ),
             ]
           ),

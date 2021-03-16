@@ -8,7 +8,7 @@ import 'package:noupartazer_app/Atish/components/ButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/CardIconText.dart';
 import 'package:noupartazer_app/Atish/components/LongText.dart';
 import 'package:noupartazer_app/Atish/components/CardListTileText.dart';
-import 'package:noupartazer_app/Yashna/Pages/ConfirmationDialog/AcceptDonation.dart';
+import 'package:noupartazer_app/Yashna/Pages/DonationEventDialog/AcceptDonation.dart';
 
 class BusinessEventOngoing extends StatelessWidget
 {

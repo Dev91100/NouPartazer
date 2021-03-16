@@ -1,4 +1,4 @@
-import 'package:noupartazer_app/Yashna/Pages/DeleteMember.dart';
+import 'package:noupartazer_app/Yashna/Pages/ConfirmationDialog/DeleteMember.dart';
 import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/RoundIconButton.dart';

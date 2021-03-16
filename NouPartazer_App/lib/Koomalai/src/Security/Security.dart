@@ -8,6 +8,7 @@ import 'package:noupartazer_app/Devashish/components/FieldTitle.dart';
 import 'package:noupartazer_app/Devashish/components/TextFields.dart';
 import 'package:noupartazer_app/Devashish/components/TheOutlinedButtons.dart';
 import 'package:noupartazer_app/Atish/components/ButtonIconText.dart';
+import 'package:noupartazer_app/Yashna/Pages/ConfirmationDialog/DeactivateAccount.dart';
 
 class NGOSecurity extends StatelessWidget
 {
@@ -17,6 +18,8 @@ class NGOSecurity extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
+    var deactivateDialog = DeactivateAccount().displayDialog(context);
+
     return Scaffold
     (
       appBar: PageTitle
@@ -73,7 +76,7 @@ class NGOSecurity extends StatelessWidget
                     (
                       child: TextFields
                       (
-                        textFieldControllerName: _newPWController, 
+                        textFieldControllerName: _newPWController,
                         theprefixIcon: Icons.https_outlined, 
                         isPassword: true,
                       ),
@@ -107,6 +110,8 @@ class NGOSecurity extends StatelessWidget
                     textColor: Color.fromRGBO(212, 0, 0, 1),
                     buttonColor: Color.fromRGBO(255, 255, 255, 0),
                     elevation: 0,
+                    isPopUpPage: true,
+                    onPress: deactivateDialog,
                     // openPage: ,
                   ),
                 ),
