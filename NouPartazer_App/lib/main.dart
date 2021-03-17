@@ -1,8 +1,12 @@
-import 'package:flutter/material.dart';
+
+import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:splashscreen/splashscreen.dart';
-import 'package:noupartazer_app/Atish/Pages/Splashscreen/SplashScreen.dart';
-import 'Koomalai/Pages/SignIn/SignIn.dart';
+import 'package:noupartazer_app/Atish/Pages/Splashscreen/Splashscreen.dart';
+
+
+import 'package:animated_splash_screen/animated_splash_screen.dart';
+import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 
 void main() => runApp(MyApp());
 
@@ -45,21 +49,20 @@ class MyApp extends StatelessWidget
           ),
         )
       ),
-      home: 
-      new SplashScreen
+      home: AnimatedSplashScreen
       (
-        seconds: 1,
-        navigateAfterSeconds: new TheSplashScreen(),
-        title: new Text('Welcome In SplashScreen'),
-        image: Image.asset('assets/JPEG/SplashScreen.jpg'),
-        backgroundColor: Colors.transparent,
-        styleTextUnderTheLoader: new TextStyle(),
-        photoSize: 100.0,
-        loaderColor: Colors.red
+
+        splash: 'assets/PNG/icon.png', 
+        animationDuration: Duration(seconds: 3),
+        nextScreen: Splashscreen(),
+        centered: true,
+        // duration: 2,
+        pageTransitionType: PageTransitionType.bottomToTop,        
       ),
     );
   }
 }
+
 
 
 

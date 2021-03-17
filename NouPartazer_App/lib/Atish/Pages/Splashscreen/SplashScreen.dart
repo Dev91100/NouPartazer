@@ -2,19 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:async';
 
+
 import '../../../Koomalai/Pages/SignIn/SignIn.dart';
 
-class TheSplashScreen extends StatefulWidget
+class Splashscreen extends StatefulWidget
 {
-  TheSplashScreen({Key key, this.title}) : super(key: key);
+  Splashscreen({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _TheSplashScreenState createState() => _TheSplashScreenState();
+  _SplashscreenState createState() => _SplashscreenState();
 }
 
-class _TheSplashScreenState extends State<TheSplashScreen>
+class _SplashscreenState extends State<Splashscreen>
 {
 
   @override
@@ -25,17 +26,10 @@ class _TheSplashScreenState extends State<TheSplashScreen>
         () => Navigator.of(context).pushReplacement(MaterialPageRoute(
             builder: (BuildContext context) => SignIn())));
   }
-  // @override
-  // void initState()
-  // {
-  //   super.initState();
-  //   Timer(Duration(seconds: 5), ()=>Navigator.push(
-  //       context, MaterialPageRoute(builder: (context)=>SignIn())));
-  // }
 
   @override
   Widget build(BuildContext context) {
-
+    
     return LayoutBuilder
     (
       builder: (ctx, constraints)
@@ -79,7 +73,7 @@ class _TheSplashScreenState extends State<TheSplashScreen>
                   [
                     Image.asset
                     (
-                      'assets/PNG/NouPartazer LogoOnly_Large.png',
+                      'assets/PNG/icon.png',
                       height: constraints.maxHeight * 0.2,
                       fit: BoxFit.cover,
                     ),
