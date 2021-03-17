@@ -19,18 +19,6 @@ class NGOEditMembers
             mainAxisSize: MainAxisSize.min,
             children:
             [
-              IconButton
-              (
-                icon: Icon(Icons.close),
-                //alignment: Alignment.topRight,
-                //padding: EdgeInsets.only(left: 200),
-                onPressed: ()
-                {
-                  //Put your code here which you want to execute on close button click.
-                  Navigator.of(context).pop();
-                },
-              ),
-
               Center
               (
                 child: Stack
@@ -39,8 +27,8 @@ class NGOEditMembers
                   [
                     CircleAvatar
                     (
-                      radius: 60.0, 
-                      backgroundImage: AssetImage(""),
+                      radius: 60.0,
+                      backgroundImage: AssetImage('./assets/JPEG/blue.jpg'),
                     ),
 
                     EditIconButton
@@ -71,12 +59,12 @@ class NGOEditMembers
                     color: Color.fromRGBO(102, 102, 102, 1),
                   ),
                 ),
+                
                 subtitle: TextField
                 (
                   style: TextStyle
                   (
                     color: Color.fromRGBO(0, 0, 0, 1),
-                  
                   )
                 ),
                 onTap: () => {}, 
@@ -101,6 +89,7 @@ class NGOEditMembers
                     color: Color.fromRGBO(0, 0, 0, 1),
                   )
                 ),
+
                 onTap: () => {},
               ),
                 
@@ -112,10 +101,6 @@ class NGOEditMembers
                   mainAxisAlignment: MainAxisAlignment.center,
                   children:
                   [
-                    // Padding
-                    // (
-                    //   padding: EdgeInsets.all(50.0),
-                    // ),
                     TextButton
                     (
                       child: Text
@@ -163,7 +148,6 @@ class NGOEditMembers
                           
                       onPressed: ()
                       {
-                        //Put your code here which you want to execute on Cancel button click.
                         Navigator.of(context).pop();
                       },
                     ),

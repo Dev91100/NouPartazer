@@ -19,7 +19,7 @@ class ConfirmationModel
       this.buttonText1 = 'Cancel',
       this.buttonText2 = 'Logout',
       this.textColor = const Color.fromRGBO(212, 0, 0, 1),
-      this.buttonColor = const Color.fromRGBO(212, 0, 0, 0.2),
+      this.buttonColor = const Color.fromRGBO(212, 0, 0, 0.1),
       this.borderColor = const Color.fromRGBO(212, 0, 0, 1),
       this.hasTextField = false,
     }
