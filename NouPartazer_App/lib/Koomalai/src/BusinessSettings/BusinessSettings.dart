@@ -13,7 +13,7 @@ class BusinessSettings extends StatelessWidget
   Widget build(BuildContext context)
   {
     var confirmLogOutDialog = ConfirmLogOut().displayDialog(context);
-    var languageConfirmationDialog = new LanguageConfirmation().displayDialog(context);
+    var languageConfirmationDialog = new LanguageConfirmation().displayBottomSheet(context);
 
     return Scaffold
     (

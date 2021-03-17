@@ -14,7 +14,7 @@ class NGOSettings extends StatelessWidget
   Widget build(BuildContext context)
   {
     var confirmLogoutDialog = ConfirmLogOut().displayDialog(context);
-    var languageConfirmationDialog = new LanguageConfirmation().displayDialog(context);
+    var languageConfirmationDialog = new LanguageConfirmation().displayBottomSheet(context);
 
     return Scaffold
     (
