@@ -58,15 +58,20 @@ class EditIconButton extends StatelessWidget
         shape: BoxShape.circle,
       ),
 
-      child: RaisedButton
+      child: ElevatedButton
       (
-        elevation: elevation,
-        padding: EdgeInsets.all(0),
-        color: Colors.white,
-        shape: RoundedRectangleBorder
+        style: ElevatedButton.styleFrom
         (
-          borderRadius: BorderRadius.circular(50),
+          elevation: elevation,
+          padding: EdgeInsets.all(0),
+          primary: Colors.white,
+          onPrimary: Colors.black,
+          shape: RoundedRectangleBorder
+          (
+            borderRadius: BorderRadius.circular(50),
+          ),
         ),
+        
         // If isModal is true then the page is a popup and the first function is executed else
         // the second function is executed
         onPressed: () 

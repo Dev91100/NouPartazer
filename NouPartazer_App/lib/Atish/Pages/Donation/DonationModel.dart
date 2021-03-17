@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/IconText.dart';
-import 'package:noupartazer_app/Koomalai/src/Business%20Event%20Details/Business%20event%20details.dart';
 
 
 class DonationModel extends StatelessWidget
@@ -36,13 +35,17 @@ class DonationModel extends StatelessWidget
           // top: 10,
           bottom: 5
         ),
-        child: RaisedButton
+        child: ElevatedButton
         (
-          elevation: 0,
-          color: Colors.white,
-          shape: RoundedRectangleBorder
+          style: ElevatedButton.styleFrom
           (
-            borderRadius: BorderRadius.all(Radius.circular(10))
+            elevation: 0,
+            primary: Colors.white,
+            onPrimary: Colors.black,
+            shape: RoundedRectangleBorder
+            (
+              borderRadius: BorderRadius.all(Radius.circular(10))
+            ),
           ),
 
           child: Padding
@@ -107,6 +110,7 @@ class DonationModel extends StatelessWidget
                                     style: TextStyle
                                     (
                                       fontSize: 18,
+                                      color: Colors.black,
                                       fontWeight: FontWeight.w400,
                                     ),
                                   ),
@@ -207,7 +211,7 @@ class DonationModel extends StatelessWidget
               (
                 builder: (context)
                 {
-                  return BusinessEvent();
+                  return ;
                 },
               ),
             );

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:noupartazer_app/Koomalai/src/Business%20Event%20Details/Business%20event%20details.dart';
-
 
 class NGOCentresModel extends StatelessWidget
 {
@@ -46,13 +44,17 @@ class NGOCentresModel extends StatelessWidget
         (
           bottom: 5
         ),
-        child: RaisedButton
+        child: ElevatedButton
         (
-          elevation: 0,
-          color: Colors.white,
-          shape: RoundedRectangleBorder
+          style: ElevatedButton.styleFrom
           (
-            borderRadius: BorderRadius.all(Radius.circular(10))
+            elevation: 0,
+            primary: Colors.white,
+            onPrimary: Colors.black,
+            shape: RoundedRectangleBorder
+            (
+              borderRadius: BorderRadius.all(Radius.circular(10))
+            ),
           ),
 
           child: Padding
@@ -163,7 +165,7 @@ class NGOCentresModel extends StatelessWidget
               (
                 builder: (context)
                 {
-                  return BusinessEvent();
+                  return ;
                 },
               ),
             );

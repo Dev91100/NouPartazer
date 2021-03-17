@@ -1,6 +1,6 @@
-import 'package:noupartazer_app/Yashna/components/Statement.dart';
+import 'package:noupartazer_app/Yashna/Pages/StatementDialog/StatementModel.dart';
 
-class EventCreated extends Statement
+class EventCreated extends StatementModel
 {
   String text;
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:noupartazer_app/Yashna/components/EditInfo.dart';
+import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContact/EditInfoModel.dart';
 
-class BusinessEditName extends EditInfo
+class BusinessEditName extends EditInfoModel
 {
   String title;
   String text1, text2, text3;
@@ -27,5 +27,6 @@ class BusinessEditName extends EditInfo
     text1: text1,
     text2: text2,
     text3: text3,
+    hasMultiline: true,
   );
 }

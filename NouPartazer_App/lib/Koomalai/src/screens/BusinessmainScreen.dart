@@ -1,18 +1,17 @@
 import 'package:noupartazer_app/Devashish/pages/CreateEvent.dart';
-import 'package:noupartazer_app/Koomalai/src/Business%20NGO%20list/BusinessNGO%20list.dart';
-import 'package:noupartazer_app/Koomalai/src/Business%20profile/BusinessProfile.dart';
-import 'package:noupartazer_app/Koomalai/src/pages/businessHomePage.dart';
-import 'package:noupartazer_app/Koomalai/src/pages/orderPage.dart';
+import 'package:noupartazer_app/Koomalai/Pages/DonationAndNGOCentresList/BusinessNGOCentresList.dart';
+import 'package:noupartazer_app/Koomalai/Pages/ProfilePage/BusinessProfile.dart';
+import 'package:noupartazer_app/Koomalai/Pages/HomePage/BusinessHomePage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'Business task tab bar.dart';
+import 'BusinessTaskBar.dart';
 
 class BusinessNGOMainScreen extends StatefulWidget
 {
   final Widget child;
-  const BusinessNGOMainScreen({
-
+  const BusinessNGOMainScreen
+  ({
     Key key,
     @required this.child,
   }) : super(key: key);
@@ -31,7 +30,7 @@ class _BusinessNGOMainScreenState extends State<BusinessNGOMainScreen>
   BusinessProfile profilePage;
   CreateEvent event;
   BusinessTask taskTab;
-  BusinessNGOCentresList NGOList;
+  BusinessNGOCentresList ngoList;
 
   @override
   void initState()
@@ -41,10 +40,10 @@ class _BusinessNGOMainScreenState extends State<BusinessNGOMainScreen>
     profilePage = BusinessProfile();
     event       = CreateEvent();
     taskTab     = BusinessTask();
-    NGOList     = BusinessNGOCentresList();
+    ngoList     = BusinessNGOCentresList();
 
-    pages       = [homePage, profilePage, event, taskTab, NGOList];
-    currentPage = NGOList;
+    pages       = [homePage, profilePage, event, taskTab, ngoList];
+    currentPage = ngoList;
   }
 
   @override

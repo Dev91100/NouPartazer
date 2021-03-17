@@ -7,6 +7,7 @@ class ButtonIconText extends StatelessWidget
 {
   final onPress;
   final String text;
+  final TextDecoration textDecoration;
   final Color textColor;
   final Color iconColor;
   final bool hasBorder;
@@ -35,6 +36,7 @@ class ButtonIconText extends StatelessWidget
       this.isPage = false,
       this.isClose = false,
       this.text = 'Test',
+      this.textDecoration = TextDecoration.none,
       this.hasIcon = true,
       this.icon = Icons.not_listed_location,
       this.fontSize = 18,
@@ -88,6 +90,7 @@ class ButtonIconText extends StatelessWidget
       child: IconText
       (
         text: text,
+        textDecoration: textDecoration,
         hasIcon: hasIcon,
         icon: icon,
         fontSize: fontSize,

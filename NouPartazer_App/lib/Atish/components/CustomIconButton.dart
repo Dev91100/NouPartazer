@@ -20,13 +20,18 @@ class CustomIconButton extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return RaisedButton
+    return ElevatedButton
     (
-      color: Colors.white,
-      shape: RoundedRectangleBorder
+      style: ElevatedButton.styleFrom
       (
-        borderRadius: BorderRadius.circular(5),
+        primary: Colors.white,
+        onPrimary: Colors.black,
+        shape: RoundedRectangleBorder
+        (
+          borderRadius: BorderRadius.circular(5),
+        ),
       ),
+      
       child: Row
       (
         mainAxisSize: MainAxisSize.min,

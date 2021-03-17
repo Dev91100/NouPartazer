@@ -1,4 +1,4 @@
-import 'package:noupartazer_app/Koomalai/Screens/Login/login_screen.dart';
+import 'package:noupartazer_app/Koomalai/Pages/SignIn/SignIn.dart';
 import 'package:flutter/material.dart';
 import 'package:noupartazer_app/Devashish/components/TheOutlinedButtons.dart';
 import 'package:noupartazer_app/Devashish/components/YellowTitlePara.dart';
@@ -89,13 +89,11 @@ class CheckEmailTemplate extends StatelessWidget
                   TheOutlinedButtons(
                     message: theButtonName,
                       press: () {
-
-                        Colors.white;
                         Navigator.push(
                           context,
                           MaterialPageRoute(
                             builder: (context) {
-                              return LoginScreen();
+                              return SignIn();
                             },
                           ),
                         );

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:noupartazer_app/Atish/components/IconText.dart';
-
 class ContainerText extends StatelessWidget
 {
   final double mLeft, mTop, mRight, mBottom;

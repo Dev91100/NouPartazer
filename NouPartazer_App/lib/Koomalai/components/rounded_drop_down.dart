@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:noupartazer_app/Koomalai/components/text_field_container.dart';
-import 'package:noupartazer_app/Koomalai/constants.dart';
 
 class RoundedDropDown extends StatelessWidget {
   final String hintText;
@@ -19,7 +18,7 @@ class RoundedDropDown extends StatelessWidget {
     return TextFieldContainer(
       child: TextField(
         onChanged: onChanged,
-        cursorColor: kPrimaryColor,
+        cursorColor: Colors.black,
         decoration: InputDecoration(
           suffixIcon: Icon(
             icon,
