@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 import 'dart:convert';
+
+import 'package:image_picker/image_picker.dart';
+import 'package:http/http.dart' as http;
+
 import 'package:noupartazer_app/Devashish/components/DottedBoxWithUploadButton.dart';
-// import 'package:http/http.dart' as http;
 
 class UploadImage extends StatefulWidget
 {

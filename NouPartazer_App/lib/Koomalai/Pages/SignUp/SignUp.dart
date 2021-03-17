@@ -4,7 +4,6 @@ import 'package:noupartazer_app/Koomalai/Pages/RegistrationPage/BusinessRegistra
 import 'package:noupartazer_app/Koomalai/Pages/SignIn/SignIn.dart';
 import 'package:noupartazer_app/Koomalai/Pages/RegistrationPage/NGORegistration.dart';
 import 'package:noupartazer_app/Koomalai/src/screens/secondMainScreen.dart';
-
 import 'package:noupartazer_app/Atish/Pages/SignUp/OrgButtons.dart';
 
 class SignUp extends StatelessWidget

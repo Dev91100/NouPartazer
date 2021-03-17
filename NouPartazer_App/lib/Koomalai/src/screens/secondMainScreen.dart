@@ -1,8 +1,9 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
 import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/IndividualSettings.dart';
 import 'package:noupartazer_app/Koomalai/Pages/DonationAndNGOCentresList/IndividualNGOCentresList.dart';
 import 'package:noupartazer_app/Koomalai/Pages/HomePage/IndividualHomePage.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 
 class SecondMainScreen extends StatefulWidget
 {

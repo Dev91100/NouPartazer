@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 import 'package:noupartazer_app/Atish/components/IconText.dart';
-import 'package:flutter/rendering.dart';
 
 class ButtonIconText extends StatelessWidget
 {

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContact/EditInfoModel.dart';
 
 class EditContactModel extends EditInfoModel

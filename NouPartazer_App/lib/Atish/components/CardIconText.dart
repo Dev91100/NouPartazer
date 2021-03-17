@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 
-
 class CardIconText extends StatelessWidget
 {
   final String text;

@@ -1,4 +1,7 @@
+import 'package:flutter/material.dart';
 import 'dart:convert';
+
+import 'package:http/http.dart' as http;
 
 import 'package:noupartazer_app/Devashish/pages/ForgotPassword.dart';
 import 'package:noupartazer_app/Koomalai/Pages/SignUp/SignUp.dart';
@@ -7,8 +10,6 @@ import 'package:noupartazer_app/Koomalai/components/rounded_input_field.dart';
 import 'package:noupartazer_app/Koomalai/components/rounded_password_field.dart';
 import 'package:noupartazer_app/Koomalai/src/screens/mainScreen.dart';
 import 'package:noupartazer_app/Koomalai/src/screens/secondMainScreen.dart';
-import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 
 class SignIn extends StatelessWidget
 {
