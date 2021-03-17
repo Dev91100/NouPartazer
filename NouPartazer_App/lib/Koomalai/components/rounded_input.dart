@@ -1,6 +1,7 @@
-import 'package:noupartazer_app/Koomalai/components/text_field.dart';
-import 'package:noupartazer_app/Koomalai/constants.dart';
 import 'package:flutter/material.dart';
+
+import 'package:noupartazer_app/Koomalai/components/text_field.dart';
+
 
 class RoundedInput extends StatelessWidget {
   final String hintText;
@@ -25,7 +26,7 @@ class RoundedInput extends StatelessWidget {
       child: TextField(
         onChanged: onChanged,
         controller: controller,
-        cursorColor: kPrimaryColor,
+        cursorColor: Colors.black,
 
         decoration: InputDecoration(
          /* suffixIcon: Icon(

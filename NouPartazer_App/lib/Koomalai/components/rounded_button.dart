@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:noupartazer_app/Koomalai/constants.dart';
 
 class RoundedButton extends StatelessWidget {
   final String text;
@@ -10,7 +9,7 @@ class RoundedButton extends StatelessWidget {
     Key key,
     this.text,
     this.press,
-    this.color = kPrimaryColor,
+    this.color = Colors.black,
     this.textColor = Colors.white,
     this.shape,
   }) : super(key: key);

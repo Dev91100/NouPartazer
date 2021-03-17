@@ -1,6 +1,6 @@
-import 'package:noupartazer_app/Koomalai/src/IndividualSettings/IndividualSetting.dart';
-import 'package:noupartazer_app/Koomalai/src/NGO%20list/IndividualNGOCentresList.dart';
-import 'package:noupartazer_app/Koomalai/src/pages/individualHomePage.dart';
+import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/IndividualSetting.dart';
+import 'package:noupartazer_app/Koomalai/Pages/DonationAndNGOCentresList/IndividualNGOCentresList.dart';
+import 'package:noupartazer_app/Koomalai/Pages/HomePage/IndividualHomePage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -15,17 +15,17 @@ class _IndividualNGOMainScreenState extends State<IndividualNGOMainScreen> {
   List<Widget> pages;
   Widget currentPage;
   IndividualHomePage individualHomePage;
-  IndividualNGOCentresList NGOLists;
+  IndividualNGOCentresList ngoList;
   IndividualSettings individualSettings;
 
   @override
   void initState() {
     super.initState();
     individualHomePage=IndividualHomePage();
-    NGOLists=IndividualNGOCentresList();
+    ngoList=IndividualNGOCentresList();
     individualSettings= IndividualSettings();
 
-    pages=[individualHomePage,NGOLists,individualSettings];
+    pages=[individualHomePage,ngoList,individualSettings];
     currentPage=IndividualNGOCentresList();
 
   }

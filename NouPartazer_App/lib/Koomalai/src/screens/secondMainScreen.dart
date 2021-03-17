@@ -1,6 +1,6 @@
-import 'package:noupartazer_app/Koomalai/src/IndividualSettings/IndividualSetting.dart';
-import 'package:noupartazer_app/Koomalai/src/NGO%20list/IndividualNGOCentresList.dart';
-import 'package:noupartazer_app/Koomalai/src/pages/individualHomePage.dart';
+import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/IndividualSetting.dart';
+import 'package:noupartazer_app/Koomalai/Pages/DonationAndNGOCentresList/IndividualNGOCentresList.dart';
+import 'package:noupartazer_app/Koomalai/Pages/HomePage/IndividualHomePage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

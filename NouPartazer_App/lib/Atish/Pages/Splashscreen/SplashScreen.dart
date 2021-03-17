@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:async';
 
-import '../../../Koomalai/Screens/Login/login_screen.dart';
+import '../../../Koomalai/Pages/SignIn/SignIn.dart';
 
 class SplashScreen extends StatefulWidget
 {
@@ -21,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen>
   {
     super.initState();
     Timer(Duration(seconds: 5), ()=>Navigator.push(
-        context, MaterialPageRoute(builder: (context)=>LoginScreen())));
+        context, MaterialPageRoute(builder: (context)=>SignIn())));
   }
 
   @override

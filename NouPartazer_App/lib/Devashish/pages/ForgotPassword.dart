@@ -1,4 +1,4 @@
-import 'package:noupartazer_app/Koomalai/Screens/Login/login_screen.dart';
+import 'package:noupartazer_app/Koomalai/Pages/SignIn/SignIn.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:noupartazer_app/Devashish/components/TheOutlinedButtons.dart';
