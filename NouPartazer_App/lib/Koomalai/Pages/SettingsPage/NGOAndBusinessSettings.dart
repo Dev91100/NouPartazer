@@ -6,7 +6,7 @@ import 'package:noupartazer_app/Yashna/Pages/ConfirmationDialog/ConfirmLogOut.da
 import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/components/HelpAndSupport.dart';
 import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/components/Security.dart';
 import 'package:noupartazer_app/Yashna/Pages/LanguageDialog/ConfirmLanguage.dart';
-import 'package:noupartazer_app/Yashna/Pages/QRcode/QrCode.dart';
+import 'package:noupartazer_app/Yashna/Pages/QRcodeDialog/QrCode.dart';
 
 class NGOAndBusinessSettings extends StatelessWidget
 {

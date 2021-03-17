@@ -11,7 +11,6 @@ class SettingsModel extends StatelessWidget
   final bool helpAndSupport;
   final bool logOut;
 
-  final IconData logIcon;
   final notificationsPage;
   final languagePage;
   final helpAndSupportPage;
@@ -26,7 +25,6 @@ class SettingsModel extends StatelessWidget
       this.security = false,
       this.helpAndSupport = false,
       this.logOut = true,
-      this.logIcon = Icons.logout,
 
       this.notificationsPage,
       this.languagePage,
@@ -97,7 +95,7 @@ class SettingsModel extends StatelessWidget
 
           ListTileModel
           (
-            leadingIcon: logIcon,
+            leadingIcon: (logOut) ? Icons.logout : Icons.settings_power,
             leadingColor: Color.fromRGBO(0, 50, 193, 1),
             titleText: (logOut) ? 'Log out' : 'Log in',
             textColor: Color.fromRGBO(0, 50, 193, 1), 
