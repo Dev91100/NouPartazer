@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/Pages/SettingsPage/HelpAndSupport/HelpAndSupportModel.dart';
 
-class IndividualHelpAndSupport extends StatelessWidget
+class HelpAndSupport extends StatelessWidget
 {
   @override
   Widget build(BuildContext context)

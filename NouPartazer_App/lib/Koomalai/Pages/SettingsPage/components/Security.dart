@@ -9,7 +9,7 @@ import 'package:noupartazer_app/Devashish/components/TheOutlinedButtons.dart';
 import 'package:noupartazer_app/Atish/components/ButtonIconText.dart';
 import 'package:noupartazer_app/Yashna/Pages/ConfirmationDialog/DeactivateAccount.dart';
 
-class NGOSecurity extends StatelessWidget
+class Security extends StatelessWidget
 {
   final _oldPWController = TextEditingController();
   final _newPWController = TextEditingController();

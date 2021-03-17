@@ -1,4 +1,3 @@
-import 'package:noupartazer_app/Yashna/Pages/ConfirmationDialog/DeleteMember.dart';
 import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/RoundIconButton.dart';
@@ -12,12 +11,12 @@ import 'package:noupartazer_app/Atish/Pages/NGOProfile/MemberModel.dart';
 import 'package:noupartazer_app/Atish/Pages/Story/NGOStory/NGOStory.dart';
 import 'package:noupartazer_app/Atish/Pages/Story/NGOStory/NGOStoryList.dart';
 import 'package:noupartazer_app/Atish/Pages/Story/NGOStory/NGOStoryModelProfile.dart';
-import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/NGOSettings.dart';
+import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/NGOAndBusinessSettings.dart';
 import 'package:noupartazer_app/Koomalai/components/bottomSheetWidget.dart';
 import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContact/NGOEditName.dart';
 import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContact/EditContactModel.dart';
 import 'package:noupartazer_app/Yashna/Pages/NGOEditMembers.dart';
-
+import 'package:noupartazer_app/Yashna/Pages/ConfirmationDialog/DeleteMember.dart';
 
 class NGOProfile extends StatelessWidget
 {
@@ -138,7 +137,7 @@ class NGOProfile extends StatelessWidget
                       ),
                       child: EditIconButton
                       (
-                        onPress: NGOSettings(),
+                        onPress: NGOAndBusinessSettings(),
                         isPage: true,
                         icon: Icons.settings_outlined,
                         height: 50,

@@ -1,22 +1,13 @@
-// // import 'package:code/components/QrPopup.dart';
-// // // import 'package:flutter/cupertino.dart';
+import 'package:noupartazer_app/Yashna/Pages/QRCode/QRCodeModel.dart';
 
-// // // Widget DeleteMembers()
-// // // {
-// // //   DeleteMember()
-// // // }
-// // class QrCode extends QrPopup
-// // {
-// //   String firstText = '';
-// //   String secondText = '';
+class QRCode extends QRCodeModel
+{
+  String text;
 
-
-// //   QrCode
-// //   (  
-// //     {
-// //       this.firstText = 'QR Code',
-// //       this.secondText = 'This must be scanned by the NGO in order to complete the process',
-      
-// //     } 
-// //   ): super(firstText: firstText, secondText: secondText,);
-// }
+  QRCode
+  (
+    {
+      this.text = 'This must be scanned by the NGO in order to complete the process.',
+    }
+  ) : super(text: text);
+}

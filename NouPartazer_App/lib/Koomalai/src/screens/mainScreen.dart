@@ -37,9 +37,10 @@ class _MainScreenState extends State<MainScreen>
     profilePage = NGOProfile();
     story       = CreateStory();
     donation    = NGODonation();
+    task        = NGOTaskTab();
 
-    task  = NGOTaskTab();
     pages = [homePage, profilePage, story, donation, task];
+    
     currentPage = homePage;
   }
 

@@ -58,7 +58,7 @@ class SettingsModel extends StatelessWidget
             subtitleText: 'Receive notifications from the app',
             trailingIcon: Icons.toggle_on,
             trailingColor: Color.fromRGBO(0, 50, 193, 1),
-            isPage: true,
+            isPopUpPage: true,
             onPress: notificationsPage,
           ) : Container(),
 

@@ -1,6 +1,3 @@
-
-import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/BusinessSettings.dart';
-import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContact/EditContactModel.dart';
 import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/RoundIconButton.dart';
@@ -15,7 +12,8 @@ import 'package:noupartazer_app/Atish/Pages/Story/NGOStory/NGOStoryList.dart';
 import 'package:noupartazer_app/Atish/Pages/Story/BusinessStory/BusinessStoryModelProfile.dart';
 import 'package:noupartazer_app/Koomalai/components/bottomSheetWidget.dart';
 import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContact/BusinessEditName.dart';
-
+import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/NGOAndBusinessSettings.dart';
+import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContact/EditContactModel.dart';
 
 class BusinessProfile extends StatelessWidget
 {
@@ -134,7 +132,7 @@ class BusinessProfile extends StatelessWidget
                       ),
                       child: EditIconButton
                       (
-                        onPress: BusinessSettings(),
+                        onPress: NGOAndBusinessSettings(),
                         isPage: true,
                         icon: Icons.settings_outlined,
                         height: 50,

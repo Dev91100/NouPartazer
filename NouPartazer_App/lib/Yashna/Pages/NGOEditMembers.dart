@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/RoundIconButton.dart';
-import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/NGOSettings.dart';
+import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/NGOAndBusinessSettings.dart';
 
 class NGOEditMembers
 {
@@ -45,7 +45,7 @@ class NGOEditMembers
 
                     EditIconButton
                     (
-                      onPress: NGOSettings(),
+                      onPress: NGOAndBusinessSettings(),
                       isPage: true,
                       icon: Icons.edit_outlined,
                       height: 40,
