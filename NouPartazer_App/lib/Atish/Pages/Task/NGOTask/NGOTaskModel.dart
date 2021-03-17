@@ -6,7 +6,7 @@ import 'package:noupartazer_app/Atish/components/LongText.dart';
 import 'package:noupartazer_app/Atish/components/ContainerIconText.dart';
 import 'package:noupartazer_app/Atish/components/ContainerText.dart';
 import 'package:noupartazer_app/Atish/components/ButtonIconText.dart';
-import 'package:noupartazer_app/Koomalai/src/Business%20Event%20Ongoing/Business%20event%20ongoing.dart';
+import 'package:noupartazer_app/Koomalai/src/Business%20Event%20Ongoing/BusinessEventOngoing.dart';
 
 class NGOTaskModel extends StatelessWidget
 {

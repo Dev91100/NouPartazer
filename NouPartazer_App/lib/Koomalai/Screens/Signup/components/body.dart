@@ -1,7 +1,6 @@
 import 'package:noupartazer_app/Koomalai/Screens/Business/Business.dart';
 import 'package:noupartazer_app/Koomalai/Screens/Login/login_screen.dart';
 import 'package:noupartazer_app/Koomalai/Screens/NGO/NGO.dart';
-import 'package:noupartazer_app/Koomalai/Screens/Signup/components/social_icon.dart';
 import 'package:noupartazer_app/Koomalai/src/screens/secondMainScreen.dart';
 import 'package:flutter/material.dart';
 
