@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
-import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/NGOSettings.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 
 import 'package:noupartazer_app/Devashish/components/FieldTitle.dart';
@@ -10,7 +9,7 @@ import 'package:noupartazer_app/Devashish/components/TheOutlinedButtons.dart';
 import 'package:noupartazer_app/Atish/components/ButtonIconText.dart';
 import 'package:noupartazer_app/Yashna/Pages/ConfirmationDialog/DeactivateAccount.dart';
 
-class NGOSecurity extends StatelessWidget
+class Security extends StatelessWidget
 {
   final _oldPWController = TextEditingController();
   final _newPWController = TextEditingController();
@@ -26,7 +25,6 @@ class NGOSecurity extends StatelessWidget
       (
         text: 'SECURITY',
         hasBackButton: true,
-        onPress: NGOSettings(),
       ),
       body: LayoutBuilder
       (

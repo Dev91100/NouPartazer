@@ -1,27 +1,17 @@
 import 'package:flutter/material.dart';
 
-import 'package:noupartazer_app/Yashna/components/TwoButtons.dart';
+import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 
-class ConfirmationModel
+class QRCodeModel
 {
   String text;
-  String buttonText1;
-  String buttonText2;
   Color textColor;
-  Color buttonColor;
-  Color borderColor;
-  bool hasTextField;
 
-  ConfirmationModel
+  QRCodeModel
   (
     {
       this.text = 'This is a test',
-      this.buttonText1 = 'Cancel',
-      this.buttonText2 = 'Logout',
       this.textColor = const Color.fromRGBO(212, 0, 0, 1),
-      this.buttonColor = const Color.fromRGBO(212, 0, 0, 0.1),
-      this.borderColor = const Color.fromRGBO(212, 0, 0, 1),
-      this.hasTextField = false,
     }
   );
 
@@ -61,9 +51,15 @@ class ConfirmationModel
               crossAxisAlignment: CrossAxisAlignment.center,
               children:
               [
+                SectionTitle
+                (
+                  title: 'QR CODE',
+                  align: Alignment.center,
+                ),
+
                 Container
                 (
-                  margin: EdgeInsets.only(top: 10),
+                  margin: EdgeInsets.only(top: 15),
                   child: Text
                   (
                     text,
@@ -71,36 +67,9 @@ class ConfirmationModel
                     style: TextStyle
                     (
                       fontWeight: FontWeight.w600,
-                      fontSize: 18,
+                      fontSize: 15,
                     ),
                   ),
-                ),
-        
-                (hasTextField) ?
-                Container
-                (
-                  margin: EdgeInsets.only(top: 20),
-                  child: TextFormField
-                  (
-                    keyboardType: TextInputType.visiblePassword,
-                    decoration: InputDecoration
-                    (
-                      contentPadding: EdgeInsets.all(10),
-                      border: const OutlineInputBorder(),
-                    ),
-                  ),
-                ) : Container(),
-
-                Container
-                (
-                  margin: EdgeInsets.only(top: 20),
-                  child: TwoButtons
-                  (
-                    buttonText2: buttonText2,
-                    textColor: textColor,
-                    buttonColor: buttonColor,
-                    borderColor: borderColor,
-                  )
                 ),
               ],
             ),

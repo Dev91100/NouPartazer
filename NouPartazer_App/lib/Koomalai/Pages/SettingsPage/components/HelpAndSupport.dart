@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
-import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/NGOSettings.dart';
 import 'package:noupartazer_app/Atish/Pages/SettingsPage/HelpAndSupport/HelpAndSupportModel.dart';
 
-class NGOHelpAndSupport extends StatelessWidget
+class HelpAndSupport extends StatelessWidget
 {
   @override
   Widget build(BuildContext context)
@@ -15,7 +14,6 @@ class NGOHelpAndSupport extends StatelessWidget
       (
         text: 'HELP & SUPPORT',
         hasBackButton: true,
-        onPress: NGOSettings(),
       ),
 
       body: HelpAndSupportModel

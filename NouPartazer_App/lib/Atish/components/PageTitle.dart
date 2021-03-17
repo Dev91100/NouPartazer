@@ -7,7 +7,6 @@ class PageTitle extends StatefulWidget implements PreferredSizeWidget
 {
   final String text;
   final bool hasBackButton;
-  final onPress;
   final Color textColor;
   final bool customBarColor;
   final Color barColor;
@@ -18,7 +17,6 @@ class PageTitle extends StatefulWidget implements PreferredSizeWidget
       Key key,
       this.text,
       this.hasBackButton = false,
-      this.onPress,
       this.textColor = const Color.fromRGBO(0, 0, 0, 1),
       this.customBarColor = false,
       this.barColor = const Color.fromRGBO(0, 0, 0, 1),

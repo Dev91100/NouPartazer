@@ -2,19 +2,20 @@ import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/Pages/SettingsPage/SettingsModel.dart';
-import 'package:noupartazer_app/Koomalai/Pages/ProfilePage/NGOProfile.dart';
 import 'package:noupartazer_app/Yashna/Pages/ConfirmationDialog/ConfirmLogOut.dart';
-import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/components/NGOHelpAndSupport.dart';
+import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/components/HelpAndSupport.dart';
 import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/components/Security.dart';
-import 'package:noupartazer_app/Yashna/Pages/LanguageConfirmation.dart';
+import 'package:noupartazer_app/Yashna/Pages/LanguageDialog/ConfirmLanguage.dart';
+import 'package:noupartazer_app/Yashna/Pages/QRcode/QrCode.dart';
 
-class NGOSettings extends StatelessWidget
+class NGOAndBusinessSettings extends StatelessWidget
 {
   @override
   Widget build(BuildContext context)
   {
     var confirmLogoutDialog = ConfirmLogOut().displayDialog(context);
-    var languageConfirmationDialog = new LanguageConfirmation().displayDialog(context);
+    var confirmLanguageDialog = new ConfirmLanguage().displayBottomSheet(context);
+    var qrcodeDialog = QRCode().displayDialog(context);
 
     return Scaffold
     (
@@ -22,18 +23,18 @@ class NGOSettings extends StatelessWidget
       (
         text: 'ALL SETTINGS',
         hasBackButton: true,
-        onPress: NGOProfile(),
       ),
 
       body: SettingsModel
       (
         notifications: true,
+        notificationsPage: qrcodeDialog,
         language: true,
-        languagePage: languageConfirmationDialog,
+        languagePage: confirmLanguageDialog,
         security: true,
-        securityPage: NGOSecurity(),
+        securityPage: Security(),
         helpAndSupport: true,
-        helpAndSupportPage: NGOHelpAndSupport(),
+        helpAndSupportPage: HelpAndSupport(),
         logOut: true,
         logPage: confirmLogoutDialog,
       ),
