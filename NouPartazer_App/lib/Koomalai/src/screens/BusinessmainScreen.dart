@@ -10,8 +10,8 @@ import 'BusinessTaskBar.dart';
 class BusinessNGOMainScreen extends StatefulWidget
 {
   final Widget child;
-  const BusinessNGOMainScreen({
-
+  const BusinessNGOMainScreen
+  ({
     Key key,
     @required this.child,
   }) : super(key: key);

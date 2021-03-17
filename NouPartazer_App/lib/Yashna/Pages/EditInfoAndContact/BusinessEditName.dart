@@ -27,5 +27,6 @@ class BusinessEditName extends EditInfoModel
     text1: text1,
     text2: text2,
     text3: text3,
+    hasMultiline: true,
   );
 }

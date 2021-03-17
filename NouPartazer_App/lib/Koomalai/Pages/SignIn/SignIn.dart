@@ -135,7 +135,11 @@ class SignIn extends StatelessWidget
                                   (
                                     style: TextButton.styleFrom
                                     (
-                                      backgroundColor: Color.fromRGBO(0, 0, 0, 0.6),                     
+                                      backgroundColor: Color.fromRGBO(0, 0, 0, 0.6),
+                                      shape: RoundedRectangleBorder
+                                      (
+                                        borderRadius: BorderRadius.circular(0.0),
+                                      ),                   
                                     ),
                                     child: FittedBox
                                     (
