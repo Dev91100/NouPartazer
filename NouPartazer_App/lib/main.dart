@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:splashscreen/splashscreen.dart';
 import 'package:noupartazer_app/Atish/Pages/Splashscreen/SplashScreen.dart';
+import 'Koomalai/Pages/SignIn/SignIn.dart';
 
 void main() => runApp(MyApp());
 
@@ -44,7 +45,18 @@ class MyApp extends StatelessWidget
           ),
         )
       ),
-      home: SplashScreen(),
+      home: 
+      new SplashScreen
+      (
+        seconds: 1,
+        navigateAfterSeconds: new TheSplashScreen(),
+        title: new Text('Welcome In SplashScreen'),
+        image: Image.asset('assets/JPEG/SplashScreen.jpg'),
+        backgroundColor: Colors.transparent,
+        styleTextUnderTheLoader: new TextStyle(),
+        photoSize: 100.0,
+        loaderColor: Colors.red
+      ),
     );
   }
 }

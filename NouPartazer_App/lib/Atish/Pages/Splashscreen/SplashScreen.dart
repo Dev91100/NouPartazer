@@ -4,24 +4,24 @@ import 'dart:async';
 
 import '../../../Koomalai/Pages/SignIn/SignIn.dart';
 
-class SplashScreen extends StatefulWidget
+class TheSplashScreen extends StatefulWidget
 {
-  SplashScreen({Key key, this.title}) : super(key: key);
+  TheSplashScreen({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _SplashScreenState createState() => _SplashScreenState();
+  _TheSplashScreenState createState() => _TheSplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen>
+class _TheSplashScreenState extends State<TheSplashScreen>
 {
 
   @override
   void initState() {
     super.initState();
     Timer(
-        Duration(seconds: 3),
+        Duration(seconds: 5),
         () => Navigator.of(context).pushReplacement(MaterialPageRoute(
             builder: (BuildContext context) => SignIn())));
   }
