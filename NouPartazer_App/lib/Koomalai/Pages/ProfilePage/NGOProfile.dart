@@ -15,7 +15,7 @@ import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/NGOAndBusinessSettin
 import 'package:noupartazer_app/Koomalai/components/bottomSheetWidget.dart';
 import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContact/NGOEditName.dart';
 import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContact/EditContactModel.dart';
-import 'package:noupartazer_app/Yashna/Pages/NGOEditMembers.dart';
+import 'package:noupartazer_app/Yashna/Pages/EditMembersDialog/EditMembersModel.dart';
 import 'package:noupartazer_app/Yashna/Pages/ConfirmationDialog/DeleteMember.dart';
 
 class NGOProfile extends StatelessWidget
@@ -28,7 +28,7 @@ class NGOProfile extends StatelessWidget
     final screen = MediaQuery.of(context).size;
     var ngoEditNameBottomSheet = new NGOEditName().displayBottomSheet(context);
     var editContactBottomSheet = new EditContactModel().displayBottomSheet(context);
-    var ngoEditMembersBottomSheet = new NGOEditMembers().displayBottomSheet(context);
+    var ngoEditMembersBottomSheet = new EditMembersModel().displayBottomSheet(context);
     var deleteMemberDialog = new DeleteMember().displayDialog(context);
 
     return LayoutBuilder

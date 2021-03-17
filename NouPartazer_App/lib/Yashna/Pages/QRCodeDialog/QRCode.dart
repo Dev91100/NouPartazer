@@ -1,4 +1,4 @@
-import 'package:noupartazer_app/Yashna/Pages/QRCode/QRCodeModel.dart';
+import 'package:noupartazer_app/Yashna/Pages/QRCodeDialog/QRCodeModel.dart';
 
 class QRCode extends QRCodeModel
 {

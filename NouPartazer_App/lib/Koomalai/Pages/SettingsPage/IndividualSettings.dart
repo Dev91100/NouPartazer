@@ -26,7 +26,6 @@ class IndividualSettings extends StatelessWidget
         helpAndSupport: true,
         helpAndSupportPage: HelpAndSupport(),
         logOut: false,
-        logIcon: Icons.settings_power,
         logPage: SignIn(),
       ),
     );
