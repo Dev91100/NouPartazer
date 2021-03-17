@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/Pages/SettingsPage/SettingsModel.dart';
-import 'package:noupartazer_app/Koomalai/Pages/ProfilePage/NGOProfile.dart';
 import 'package:noupartazer_app/Koomalai/Pages/SignIn/SignIn.dart';
 import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/components/IndividualHelpAndSupport.dart';
 
@@ -18,7 +17,6 @@ class IndividualSettings extends StatelessWidget
       (
         text: 'ALL SETTINGS',
         hasBackButton: true,
-        onPress: NGOProfile(),
       ),
 
       body: SettingsModel

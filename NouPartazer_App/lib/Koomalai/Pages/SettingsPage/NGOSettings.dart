@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/Pages/SettingsPage/SettingsModel.dart';
-import 'package:noupartazer_app/Koomalai/Pages/ProfilePage/NGOProfile.dart';
 import 'package:noupartazer_app/Yashna/Pages/ConfirmationDialog/ConfirmLogOut.dart';
 import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/components/NGOHelpAndSupport.dart';
 import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/components/Security.dart';
-import 'package:noupartazer_app/Yashna/Pages/LanguageConfirmation.dart';
+import 'package:noupartazer_app/Yashna/Pages/LanguageDialog/ConfirmLanguage.dart';
 
 class NGOSettings extends StatelessWidget
 {
@@ -14,7 +13,7 @@ class NGOSettings extends StatelessWidget
   Widget build(BuildContext context)
   {
     var confirmLogoutDialog = ConfirmLogOut().displayDialog(context);
-    var languageConfirmationDialog = new LanguageConfirmation().displayBottomSheet(context);
+    var confirmLanguageDialog = new ConfirmLanguage().displayBottomSheet(context);
 
     return Scaffold
     (
@@ -22,14 +21,13 @@ class NGOSettings extends StatelessWidget
       (
         text: 'ALL SETTINGS',
         hasBackButton: true,
-        onPress: NGOProfile(),
       ),
 
       body: SettingsModel
       (
         notifications: true,
         language: true,
-        languagePage: languageConfirmationDialog,
+        languagePage: confirmLanguageDialog,
         security: true,
         securityPage: NGOSecurity(),
         helpAndSupport: true,

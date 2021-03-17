@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/Pages/SettingsPage/SettingsModel.dart';
-import 'package:noupartazer_app/Koomalai/Pages/ProfilePage/NGOProfile.dart';
 import 'package:noupartazer_app/Yashna/Pages/ConfirmationDialog/ConfirmLogOut.dart';
 import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/components/IndividualHelpAndSupport.dart';
-import 'package:noupartazer_app/Yashna/Pages/LanguageConfirmation.dart';
+import 'package:noupartazer_app/Yashna/Pages/LanguageDialog/ConfirmLanguage.dart';
 
 class BusinessSettings extends StatelessWidget
 {
@@ -13,7 +12,7 @@ class BusinessSettings extends StatelessWidget
   Widget build(BuildContext context)
   {
     var confirmLogOutDialog = ConfirmLogOut().displayDialog(context);
-    var languageConfirmationDialog = new LanguageConfirmation().displayBottomSheet(context);
+    var confirmLanguageDialog = new ConfirmLanguage().displayBottomSheet(context);
 
     return Scaffold
     (
@@ -21,14 +20,13 @@ class BusinessSettings extends StatelessWidget
       (
         text: 'ALL SETTINGS',
         hasBackButton: true,
-        onPress: NGOProfile(),
       ),
 
       body: SettingsModel
       (
         notifications: true,
         language: true,
-        languagePage: languageConfirmationDialog,
+        languagePage: confirmLanguageDialog,
         security: true,
         helpAndSupport: true,
         helpAndSupportPage: IndividualHelpAndSupport(),

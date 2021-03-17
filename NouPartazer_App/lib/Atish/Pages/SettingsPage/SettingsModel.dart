@@ -69,7 +69,7 @@ class SettingsModel extends StatelessWidget
             titleText: 'Language',
             subtitleText: 'English',
             trailingIcon: Icons.keyboard_arrow_right,
-            isPopUpPage: true,
+            isModalPage: true,
             onPress: languagePage,
           ) : Container(),
 
