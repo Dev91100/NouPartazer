@@ -21,9 +21,8 @@ class OrgButtons extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    final screen = MediaQuery.of(context).size;
-
-    return Container(
+    return Container
+    (
       decoration: BoxDecoration
       (
         boxShadow:
@@ -39,14 +38,17 @@ class OrgButtons extends StatelessWidget
         borderRadius: BorderRadius.all(Radius.circular(20))
       ),
       
-      child: FlatButton
+      child: TextButton
       (
-        color: Colors.white,
-        minWidth: screen.width * 0.5,
-        shape: RoundedRectangleBorder
+        style: TextButton.styleFrom
         (
-          borderRadius: BorderRadius.circular(20),
+          backgroundColor: Colors.white,
+          shape: RoundedRectangleBorder
+          (
+            borderRadius: BorderRadius.circular(20),
+          ),
         ),
+        
         child: FittedBox
         (
           fit: BoxFit.contain,

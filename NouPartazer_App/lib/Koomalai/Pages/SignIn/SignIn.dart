@@ -83,74 +83,88 @@ class SignIn extends StatelessWidget
                               crossAxisAlignment: CrossAxisAlignment.stretch,
                               children:
                               [
-                                FlatButton
+                                Container
                                 (
-                                  child: FittedBox
+                                  width: screen.width * 0.5,
+                                  child: TextButton
                                   (
-                                    fit: BoxFit.contain,
-                                    child: Text
+                                    style: TextButton.styleFrom
                                     (
-                                      "Sign In",
-                                      style: TextStyle
+                                      backgroundColor: Colors.white,
+                                      shape: RoundedRectangleBorder
                                       (
-                                        color: Colors.black,
-                                        fontSize: 20.0
+                                        borderRadius: BorderRadius.circular(0.0),
                                       ),
                                     ),
-                                  ),
-                                  shape: RoundedRectangleBorder
-                                  (
-                                    borderRadius: BorderRadius.circular(0.0),
-                                  ),
-                                  onPressed: ()
-                                  {
-                                    Navigator.push
+                                    child: FittedBox
                                     (
-                                      context,
-                                      MaterialPageRoute
+                                      fit: BoxFit.contain,
+                                      child: Text
                                       (
-                                        builder: (context)
-                                        {
-                                          return SignIn();
-                                        },
+                                        "Sign In",
+                                        style: TextStyle
+                                        (
+                                          color: Colors.black,
+                                          fontSize: 20.0
+                                        ),
                                       ),
-                                    );
-                                  },
-                                  color: Colors.white,
-                                  minWidth: screen.width * 0.5,
+                                    ),
+                                    
+                                    onPressed: ()
+                                    {
+                                      Navigator.push
+                                      (
+                                        context,
+                                        MaterialPageRoute
+                                        (
+                                          builder: (context)
+                                          {
+                                            return SignIn();
+                                          },
+                                        ),
+                                      );
+                                    },
+                                  ),
                                 ),
 
-                                FlatButton
+                                Container
                                 (
-                                  child: FittedBox
+                                  width: screen.width * 0.5,
+
+                                  child: TextButton
                                   (
-                                    fit: BoxFit.contain,
-                                    child: Text
+                                    style: TextButton.styleFrom
                                     (
-                                      "Sign Up",
-                                      style: TextStyle
+                                      backgroundColor: Color.fromRGBO(0, 0, 0, 0.6),                     
+                                    ),
+                                    child: FittedBox
+                                    (
+                                      fit: BoxFit.contain,
+                                      child: Text
                                       (
-                                        color: Colors.white,
-                                        fontSize: 20.0
+                                        "Sign Up",
+                                        style: TextStyle
+                                        (
+                                          color: Colors.white,
+                                          fontSize: 20.0
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                  onPressed: ()
-                                  {
-                                    Navigator.push
-                                    (
-                                      context,
-                                      MaterialPageRoute
+                                    onPressed: ()
+                                    {
+                                      Navigator.push
                                       (
-                                        builder: (context)
-                                        {
-                                          return SignUp();
-                                        },
-                                      ),
-                                    );
-                                  },
-                                  color: Colors.black54,
-                                  minWidth: screen.width * 0.5,
+                                        context,
+                                        MaterialPageRoute
+                                        (
+                                          builder: (context)
+                                          {
+                                            return SignUp();
+                                          },
+                                        ),
+                                      );
+                                    },
+                                  ),
                                 ),
                               ],
                             ),
@@ -171,8 +185,16 @@ class SignIn extends StatelessWidget
                             ),
                             alignment: Alignment.topRight,
 
-                            child: RaisedButton
+                            child: ElevatedButton
                             (
+                              style: ElevatedButton.styleFrom
+                              (
+                                primary: Color.fromRGBO(0, 0, 0, 0.6),
+                                shape: RoundedRectangleBorder
+                                (
+                                  borderRadius: BorderRadius.circular(10.0),
+                                ),
+                              ),
                               child: FittedBox
                               (
                                 fit: BoxFit.contain,
@@ -200,11 +222,6 @@ class SignIn extends StatelessWidget
                                   ),
                                 );
                               },
-                              color:Colors.black54,
-                              shape: RoundedRectangleBorder
-                              (
-                                borderRadius: BorderRadius.circular(10.0),
-                              ),
                             ),
                           ),
                         ],
