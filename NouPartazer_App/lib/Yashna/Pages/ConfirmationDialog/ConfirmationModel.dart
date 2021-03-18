@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:noupartazer_app/Koomalai/Pages/SignIn/SignIn.dart';
 
 import 'package:noupartazer_app/Yashna/components/TwoButtons.dart';
 
@@ -96,6 +97,8 @@ class ConfirmationModel
                   margin: EdgeInsets.only(top: 20),
                   child: TwoButtons
                   (
+                    onPress: SignIn(),
+                    isPage: true,
                     buttonText2: buttonText2,
                     textColor: textColor,
                     buttonColor: buttonColor,

@@ -10,10 +10,18 @@ class TwoButtons extends StatelessWidget
   final Color textColor;
   final Color buttonColor;
   final Color borderColor;
+  final onPress;
+  final bool isPopUpPage;
+  final bool isModalPage;
+  final bool isPage;
 
   TwoButtons
   (
     {
+      this.onPress,
+      this.isPopUpPage = false,
+      this.isModalPage = false,
+      this.isPage = false,
       this.buttonText1 = 'Cancel',
       this.buttonText2 = 'Confirm',
       this.textColor = const Color.fromRGBO(245, 197, 41, 1),
@@ -46,6 +54,10 @@ class TwoButtons extends StatelessWidget
 
         SmallCustomButtonIconText
         (
+          onPress: onPress,
+          isPopUpPage: isPopUpPage,
+          isModalPage: isModalPage,
+          isPage: isPage,
           text: buttonText2,
           textColor: textColor,
           buttonColor: buttonColor,
