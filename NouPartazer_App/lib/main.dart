@@ -6,7 +6,7 @@ import 'package:noupartazer_app/Atish/Pages/Splashscreen/Splashscreen.dart';
 
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:page_transition/page_transition.dart';
+import 'package:noupartazer_app/Koomalai/Pages/SignIn/SignIn.dart';
 
 void main() => runApp(MyApp());
 
@@ -49,15 +49,16 @@ class MyApp extends StatelessWidget
           ),
         )
       ),
+
       home: AnimatedSplashScreen
       (
-
-        splash: 'assets/PNG/icon.png', 
-        animationDuration: Duration(seconds: 3),
-        nextScreen: Splashscreen(),
+        splash: Splashscreen(),
+        nextScreen: SignIn(),
         centered: true,
-        // duration: 2,
-        pageTransitionType: PageTransitionType.bottomToTop,        
+        duration: 2,
+        splashIconSize: 3000,
+        splashTransition: SplashTransition.fadeTransition,
+        disableNavigation: true,
       ),
     );
   }

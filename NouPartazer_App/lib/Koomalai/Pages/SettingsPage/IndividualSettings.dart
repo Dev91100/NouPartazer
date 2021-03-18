@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/Pages/SettingsPage/SettingsModel.dart';
 import 'package:noupartazer_app/Koomalai/Pages/SignIn/SignIn.dart';
-import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/components/HelpAndSupport.dart';
+import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/HelpAndSupport.dart';
 
 class IndividualSettings extends StatelessWidget
 {

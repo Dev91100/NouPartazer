@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:noupartazer_app/Atish/components/IconText.dart';
 import 'package:flutter/rendering.dart';
 
-class ButtonIconText extends StatelessWidget
+class SmallCustomButtonIconText extends StatelessWidget
 {
   final onPress;
   final String text;
@@ -27,7 +27,7 @@ class ButtonIconText extends StatelessWidget
   final bool isPage;
   final bool isClose;
 
-  ButtonIconText
+  SmallCustomButtonIconText
   (
     {
       this.onPress,
@@ -37,18 +37,18 @@ class ButtonIconText extends StatelessWidget
       this.isClose = false,
       this.text = 'Test',
       this.textDecoration = TextDecoration.none,
-      this.hasIcon = true,
+      this.hasIcon = false,
       this.icon = Icons.not_listed_location,
       this.fontSize = 18,
-      this.fontWeight = FontWeight.w600,
-      this.textColor = const Color.fromRGBO(255, 255, 255, 1),
+      this.fontWeight = FontWeight.w700,
+      this.textColor = const Color.fromRGBO(245, 197, 41, 1),
       this.iconColor = const Color.fromRGBO(255, 255, 255, 1),
-      this.hasBorder = false,
-      this.borderWidth = 0,
-      this.buttonColor = const Color.fromRGBO(0, 50, 193, 1),
-      this.borderColor = const Color.fromRGBO(0, 0, 0, 0),
+      this.hasBorder = true,
+      this.borderWidth = 2,
+      this.buttonColor = const Color.fromRGBO(255, 248, 97, 0.1),
+      this.borderColor = const Color.fromRGBO(245, 197, 41, 1),
       this.iconRight = 5,
-      this.elevation = 2,
+      this.elevation = 0,
       this.padding = const EdgeInsets.fromLTRB(15, 10, 15, 10),
       this.borderRadius = const BorderRadius.all(Radius.circular(10)),
     }

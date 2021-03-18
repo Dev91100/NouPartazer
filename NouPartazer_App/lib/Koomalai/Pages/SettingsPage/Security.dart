@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:noupartazer_app/Atish/components/LargeCustomButtonIconText.dart';
+import 'package:noupartazer_app/Atish/components/SmallCustomButtonIconText.dart';
 
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 
-import 'package:noupartazer_app/Devashish/components/FieldTitle.dart';
-import 'package:noupartazer_app/Devashish/components/TextFields.dart';
-import 'package:noupartazer_app/Devashish/components/TheOutlinedButtons.dart';
 import 'package:noupartazer_app/Atish/components/ButtonIconText.dart';
 import 'package:noupartazer_app/Yashna/Pages/ConfirmationDialog/DeactivateAccount.dart';
+import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
 
 class Security extends StatelessWidget
 {
@@ -21,6 +21,7 @@ class Security extends StatelessWidget
 
     return Scaffold
     (
+      resizeToAvoidBottomInset: false, // Prevents Delete my account from pulling up when activating the keyboard
       appBar: PageTitle
       (
         text: 'SECURITY',
@@ -32,7 +33,7 @@ class Security extends StatelessWidget
         {
           return Container
           (
-            margin: EdgeInsets.only
+            padding: EdgeInsets.only
             (
               right: 20,
               left: 20,
@@ -45,49 +46,43 @@ class Security extends StatelessWidget
               [
                 Column
                 (
+                  mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children:
                   [
                     SectionTitle
                     (
                       title: 'CHANGE PASSWORD',
+                      left: 0,
                       top: 15,
                     ),
-                    SizedBox(height: constraints.maxHeight * 0.03,),
 
-                    Container
+                    CustomTextField
                     (
-                      child: FieldTitle(fieldTitle: 'ENTER OLD PASSWORD', ),
+                      labelText: 'OLD PASSWORD',
+                      suffixIcon: Icons.https_outlined,
                     ),
 
-                    Container
+                    CustomTextField
                     (
-                      child: TextFields(textFieldControllerName: _oldPWController, theprefixIcon: Icons.https_outlined, isPassword: true,),
+                      labelText: 'NEW PASSWORD',
+                      suffixIcon: Icons.https_outlined,
                     ),
-
+                    
                     Container
                     (
-                      child: FieldTitle(fieldTitle: 'CREATE NEW PASSWORD', ),
-                    ),
-
-                    Container
-                    (
-                      child: TextFields
+                      padding: EdgeInsets.only
                       (
-                        textFieldControllerName: _newPWController,
-                        theprefixIcon: Icons.https_outlined, 
-                        isPassword: true,
+                        right: 15,
+                        left: 15
                       ),
-                    ),
-
-                    Container
-                    (
-                      child: TheOutlinedButtons
+                      margin: EdgeInsets.only(top: 20),
+                      width: constraints.maxWidth,
+                      child: LargeCustomButtonIconText
                       (
-                        // press: ,
-                        message: 'Change Password',
-                      ),
-                    )
+                        text: 'Change Password',
+                      )
+                    ),
 
                   ],
                 ),
@@ -120,4 +115,7 @@ class Security extends StatelessWidget
       ),
     );
   }
+}
+
+class CustomIconText {
 }

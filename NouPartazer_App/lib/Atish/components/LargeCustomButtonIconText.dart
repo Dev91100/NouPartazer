@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:noupartazer_app/Atish/components/IconText.dart';
 import 'package:flutter/rendering.dart';
 
-class CustomButtonIconText extends StatelessWidget
+class LargeCustomButtonIconText extends StatelessWidget
 {
   final onPress;
   final String text;
@@ -27,7 +27,7 @@ class CustomButtonIconText extends StatelessWidget
   final bool isPage;
   final bool isClose;
 
-  CustomButtonIconText
+  LargeCustomButtonIconText
   (
     {
       this.onPress,
@@ -39,18 +39,18 @@ class CustomButtonIconText extends StatelessWidget
       this.textDecoration = TextDecoration.none,
       this.hasIcon = false,
       this.icon = Icons.not_listed_location,
-      this.fontSize = 18,
+      this.fontSize = 20,
       this.fontWeight = FontWeight.w700,
       this.textColor = const Color.fromRGBO(245, 197, 41, 1),
       this.iconColor = const Color.fromRGBO(255, 255, 255, 1),
       this.hasBorder = true,
       this.borderWidth = 2,
-      this.buttonColor = const Color.fromRGBO(255, 248, 97, 0.2),
+      this.buttonColor = const Color.fromRGBO(255, 248, 97, 0.1),
       this.borderColor = const Color.fromRGBO(245, 197, 41, 1),
       this.iconRight = 5,
       this.elevation = 0,
-      this.padding = const EdgeInsets.fromLTRB(15, 10, 15, 10),
-      this.borderRadius = const BorderRadius.all(Radius.circular(5)),
+      this.padding = const EdgeInsets.fromLTRB(15, 15, 15, 15),
+      this.borderRadius = const BorderRadius.all(Radius.circular(10)),
     }
   )
   {

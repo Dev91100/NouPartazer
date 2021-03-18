@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/ButtonIconText.dart';
-import 'package:noupartazer_app/Atish/components/CustomButtonIconText.dart';
+import 'package:noupartazer_app/Atish/components/SmallCustomButtonIconText.dart';
 
 class DonationEventModel
 {
@@ -112,7 +112,7 @@ class DonationEventModel
                         isClose: true,
                       ),
 
-                      CustomButtonIconText
+                      SmallCustomButtonIconText
                       (
                         text: 'Confirm',
                         textColor: Color.fromRGBO(245, 197, 41, 1),

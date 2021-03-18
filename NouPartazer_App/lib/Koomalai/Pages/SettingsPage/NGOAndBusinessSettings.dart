@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/Pages/SettingsPage/SettingsModel.dart';
 import 'package:noupartazer_app/Yashna/Pages/ConfirmationDialog/ConfirmLogOut.dart';
-import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/components/HelpAndSupport.dart';
-import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/components/Security.dart';
+import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/HelpAndSupport.dart';
+import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/Security.dart';
 import 'package:noupartazer_app/Yashna/Pages/LanguageDialog/ConfirmLanguage.dart';
 import 'package:noupartazer_app/Yashna/Pages/QRcodeDialog/QrCode.dart';
 

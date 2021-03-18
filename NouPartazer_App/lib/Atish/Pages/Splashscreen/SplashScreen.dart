@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'dart:async';
 
 
-import '../../../Koomalai/Pages/SignIn/SignIn.dart';
+import 'package:noupartazer_app/Koomalai/Pages/SignIn/SignIn.dart';
 
 class Splashscreen extends StatefulWidget
 {
@@ -19,17 +18,25 @@ class _SplashscreenState extends State<Splashscreen>
 {
 
   @override
-  void initState() {
+  void initState()
+  {
     super.initState();
-    Timer(
-        Duration(seconds: 5),
-        () => Navigator.of(context).pushReplacement(MaterialPageRoute(
-            builder: (BuildContext context) => SignIn())));
+    Timer
+    (
+      Duration(seconds: 5),
+      () => Navigator.of(context).pushReplacement
+      (
+        MaterialPageRoute
+        (
+          builder: (BuildContext context) => SignIn()
+        )
+      )
+    );
   }
 
   @override
-  Widget build(BuildContext context) {
-    
+  Widget build(BuildContext context)
+  {
     return LayoutBuilder
     (
       builder: (ctx, constraints)
@@ -83,20 +90,19 @@ class _SplashscreenState extends State<Splashscreen>
                       height: constraints.maxHeight * 0.04,
                     ),
 
-                    FittedBox(
+                    FittedBox
+                    (
                       fit: BoxFit.contain,
                       child: RichText
                       (
                         text: TextSpan
                         (
-                          style: GoogleFonts.comfortaa
+                          style: TextStyle
                           (
-                            textStyle: TextStyle
-                            (
-                              fontWeight: FontWeight.bold,
-                              fontSize: 45,
-                              color: Colors.white,
-                            ),
+                            fontFamily: 'Comfortaa',
+                            fontWeight: FontWeight.bold,
+                            fontSize: 45,
+                            color:Colors.white,
                           ),
                           children:
                           [
@@ -133,15 +139,15 @@ class _SplashscreenState extends State<Splashscreen>
                           (
                           text: TextSpan
                           (
-                            style: GoogleFonts.comfortaa
+                            style: TextStyle
                             (
-                              textStyle: TextStyle
-                              (
-                                height: 1.2,
-                                fontSize: 29,
-                                color: Colors.white,
-                              ),
-                              ),
+                              fontFamily: 'Comfortaa',
+                              fontWeight: FontWeight.normal,
+                              height: 1.2,
+                              fontSize: 29,
+                              color: Colors.white,
+                            ),
+                            
                             children:
                             [
                               TextSpan

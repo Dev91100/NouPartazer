@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/ButtonIconText.dart';
-import 'package:noupartazer_app/Atish/components/CustomButtonIconText.dart';
+import 'package:noupartazer_app/Atish/components/SmallCustomButtonIconText.dart';
 
 class TwoButtons extends StatelessWidget
 {
@@ -17,7 +17,7 @@ class TwoButtons extends StatelessWidget
       this.buttonText1 = 'Cancel',
       this.buttonText2 = 'Confirm',
       this.textColor = const Color.fromRGBO(245, 197, 41, 1),
-      this.buttonColor = const Color.fromRGBO(255, 248, 97, 0.2),
+      this.buttonColor = const Color.fromRGBO(255, 248, 97, 0.1),
       this.borderColor = const Color.fromRGBO(245, 197, 41, 1),
     }
   );
@@ -44,7 +44,7 @@ class TwoButtons extends StatelessWidget
           padding: EdgeInsets.only(right: 30),
         ),
 
-        CustomButtonIconText
+        SmallCustomButtonIconText
         (
           text: buttonText2,
           textColor: textColor,

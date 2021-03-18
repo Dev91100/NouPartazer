@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:noupartazer_app/Atish/components/CustomButtonIconText.dart';
+import 'package:noupartazer_app/Atish/components/SmallCustomButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 
 class StatementModel
@@ -88,7 +88,7 @@ class StatementModel
                 (
                   width: constraints.maxWidth,
                   margin: EdgeInsets.only(top: 15),
-                  child: CustomButtonIconText
+                  child: SmallCustomButtonIconText
                   (
                     text: 'Done',
                   ),
