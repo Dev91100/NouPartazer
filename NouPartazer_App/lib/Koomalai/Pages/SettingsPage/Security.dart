@@ -14,10 +14,8 @@ class Security extends StatefulWidget
   _SecurityState createState() => _SecurityState();
 }
 
-class _SecurityState extends State<Security> {
-  final _oldPWController = TextEditingController();
-  final _newPWController = TextEditingController();
-
+class _SecurityState extends State<Security>
+{
   final _formKey = GlobalKey<FormState>();
 
   @override

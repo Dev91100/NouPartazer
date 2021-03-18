@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:noupartazer_app/Atish/Pages/UserAccess/UserAcessModel.dart';
 import 'dart:async';
 
 import 'package:noupartazer_app/Koomalai/Pages/SignIn/SignIn.dart';
@@ -27,7 +28,7 @@ class _CustomSplashscreenState extends State<CustomSplashscreen>
       (
         MaterialPageRoute
         (
-          builder: (BuildContext context) => SignIn()
+          builder: (BuildContext context) => UserAccessModel()
         )
       )
     );

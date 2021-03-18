@@ -13,13 +13,13 @@ class MyApp extends StatelessWidget
   {
     // Primary Colors
     Color primary1 = Color.fromRGBO(0, 50, 193, 1);
-    Color primary2 = Color.fromRGBO(41, 90, 242, 1);
-    Color primary3 = Color.fromRGBO(116, 135, 255, 1);
+    // Color primary2 = Color.fromRGBO(41, 90, 242, 1);
+    // Color primary3 = Color.fromRGBO(116, 135, 255, 1);
 
     // Secondary Colors
     Color secondary1 = Color.fromRGBO(245, 197, 41, 1);
-    Color secondary2 = Color.fromRGBO(255, 248, 97, 1);
-    Color secondary3 = Color.fromRGBO(255, 248, 97, 0.2);
+    // Color secondary2 = Color.fromRGBO(255, 248, 97, 1);
+    // Color secondary3 = Color.fromRGBO(255, 248, 97, 0.2);
 
     return MaterialApp
     (

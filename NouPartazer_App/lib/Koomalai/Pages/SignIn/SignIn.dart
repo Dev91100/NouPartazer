@@ -140,7 +140,7 @@ class SignIn extends StatelessWidget
                                       shape: RoundedRectangleBorder
                                       (
                                         borderRadius: BorderRadius.circular(0.0),
-                                      ),                   
+                                      ),
                                     ),
                                     child: FittedBox
                                     (
