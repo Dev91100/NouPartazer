@@ -4,7 +4,7 @@ import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 import 'package:noupartazer_app/Atish/components/ContainerIconText.dart';
 import 'package:noupartazer_app/Atish/components/ContainerText.dart';
-import 'package:noupartazer_app/Atish/components/ButtonIconText.dart';
+import 'package:noupartazer_app/Atish/components/SmallButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/CardIconText.dart';
 import 'package:noupartazer_app/Atish/components/LongText.dart';
 import 'package:noupartazer_app/Atish/components/CardListTileText.dart';
@@ -134,7 +134,7 @@ class EventDetails extends StatelessWidget
                     Container
                     (
                       margin: EdgeInsets.only(top: 25),
-                      child:ButtonIconText
+                      child:SmallButtonIconText
                       (
                         text: 'Accept Donation',
                         icon: Icons.download_done_outlined,

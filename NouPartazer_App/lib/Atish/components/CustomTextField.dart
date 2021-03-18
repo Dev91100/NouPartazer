@@ -7,6 +7,7 @@ class CustomTextField extends StatelessWidget
   final String errorText;
   final double borderWidth;
   final Color borderColor;
+  final bool hasSuffixIcon;
   final IconData suffixIcon;
   final EdgeInsets margin;
 
@@ -16,6 +17,7 @@ class CustomTextField extends StatelessWidget
       this.labelText = 'This is a test',
       this.fontWeight = FontWeight.w500,
       this.errorText,
+      this.hasSuffixIcon = true,
       this.suffixIcon = Icons.help_outline,
       this.borderWidth = 1.5,
       this.borderColor = Colors.black,
@@ -66,10 +68,7 @@ class CustomTextField extends StatelessWidget
               color: borderColor,
             ),
           ),
-          suffixIcon: Icon
-          (
-            suffixIcon,
-          ),
+          suffixIcon: (hasSuffixIcon) ? Icon(suffixIcon,) : null,
         ),
       ),
     );

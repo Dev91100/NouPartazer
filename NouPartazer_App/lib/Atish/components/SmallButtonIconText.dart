@@ -3,7 +3,7 @@ import 'package:flutter/rendering.dart';
 
 import 'package:noupartazer_app/Atish/components/IconText.dart';
 
-class ButtonIconText extends StatelessWidget
+class SmallButtonIconText extends StatelessWidget
 {
   final onPress;
   final String text;
@@ -27,7 +27,7 @@ class ButtonIconText extends StatelessWidget
   final bool isPage;
   final bool isClose;
 
-  ButtonIconText
+  SmallButtonIconText
   (
     {
       this.onPress,

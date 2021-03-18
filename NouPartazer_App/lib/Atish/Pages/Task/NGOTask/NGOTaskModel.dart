@@ -5,7 +5,7 @@ import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 import 'package:noupartazer_app/Atish/components/LongText.dart';
 import 'package:noupartazer_app/Atish/components/ContainerIconText.dart';
 import 'package:noupartazer_app/Atish/components/ContainerText.dart';
-import 'package:noupartazer_app/Atish/components/ButtonIconText.dart';
+import 'package:noupartazer_app/Atish/components/SmallButtonIconText.dart';
 import 'package:noupartazer_app/Koomalai/Pages/EventDetailsPage/EventDetails.dart';
 
 class NGOTaskModel extends StatelessWidget
@@ -224,7 +224,7 @@ class NGOTaskModel extends StatelessWidget
                 mainAxisAlignment: MainAxisAlignment.start,
                 children:
                 [
-                  ButtonIconText
+                  SmallButtonIconText
                   (
                     text: 'View Details',
                     icon: Icons.visibility_outlined,
@@ -236,7 +236,7 @@ class NGOTaskModel extends StatelessWidget
                   Container
                   (
                     margin: EdgeInsets.only(left: 15),
-                    child: ButtonIconText
+                    child: SmallButtonIconText
                     (
                       text: 'Call',
                       icon: Icons.phone_forwarded,

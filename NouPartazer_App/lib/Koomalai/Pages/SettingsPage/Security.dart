@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:noupartazer_app/Atish/components/LargeCustomButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
-import 'package:noupartazer_app/Atish/components/ButtonIconText.dart';
+import 'package:noupartazer_app/Atish/components/SmallButtonIconText.dart';
 import 'package:noupartazer_app/Yashna/Pages/ConfirmationDialog/DeactivateAccount.dart';
 import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
 
@@ -57,13 +57,13 @@ class Security extends StatelessWidget
 
                     CustomTextField
                     (
-                      labelText: 'OLD PASSWORD',
+                      labelText: 'Old password',
                       suffixIcon: Icons.https_outlined,
                     ),
 
                     CustomTextField
                     (
-                      labelText: 'NEW PASSWORD',
+                      labelText: 'New password',
                       suffixIcon: Icons.https_outlined,
                     ),
                     
@@ -91,7 +91,7 @@ class Security extends StatelessWidget
                   (
                     bottom: 20,
                   ),
-                  child: ButtonIconText
+                  child: SmallButtonIconText
                   (
                     text: 'Delete my account',
                     icon: Icons.delete_outlined,

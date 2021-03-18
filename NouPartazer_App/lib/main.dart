@@ -3,7 +3,6 @@ import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:noupartazer_app/Atish/Pages/Splashscreen/Splashscreen.dart';
 
-
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:noupartazer_app/Koomalai/Pages/SignIn/SignIn.dart';

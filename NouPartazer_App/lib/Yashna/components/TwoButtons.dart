@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:noupartazer_app/Atish/components/ButtonIconText.dart';
+import 'package:noupartazer_app/Atish/components/SmallButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/SmallCustomButtonIconText.dart';
 
 class TwoButtons extends StatelessWidget
@@ -38,7 +38,7 @@ class TwoButtons extends StatelessWidget
       mainAxisAlignment: MainAxisAlignment.center,
       children:
       [
-        ButtonIconText
+        SmallButtonIconText
         (
           text: buttonText1,
           textDecoration: TextDecoration.underline,

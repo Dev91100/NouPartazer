@@ -13,7 +13,7 @@ class SectionTitle extends StatelessWidget {
   SectionTitle
   (
     {
-      this.title,
+      this.title = 'This is a test',
       this.fontSize = 22,
       this.top = 0,
       this.left = 20,

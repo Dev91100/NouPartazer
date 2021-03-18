@@ -3,17 +3,24 @@ import 'dart:convert';
 
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
+import 'package:noupartazer_app/Atish/components/CustomDivider.dart';
 
-import 'package:noupartazer_app/Devashish/pages/CheckEmailValidation.dart';
-import 'package:noupartazer_app/Koomalai/Pages/SignUp/SignUp.dart';
-import 'package:noupartazer_app/Koomalai/components/rounded_button.dart';
-import 'package:noupartazer_app/Koomalai/components/rounded_input.dart';
+import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
+import 'package:noupartazer_app/Atish/components/LargeCustomButtonIconText.dart';
+import 'package:noupartazer_app/Atish/components/PageTitle.dart';
+import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 
 
 
-class NGORegistration extends StatelessWidget
+class NGORegistration extends StatefulWidget
 {
-  TextEditingController regNumber,name,expertise,memberSize,address,phone,website,email,password;
+  @override
+  _NGORegistrationState createState() => _NGORegistrationState();
+}
+
+class _NGORegistrationState extends State<NGORegistration>
+{
+  final _formKey = GlobalKey<FormState>();
 
   Future register() async
   {
@@ -54,339 +61,184 @@ class NGORegistration extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    var screen = MediaQuery.of(context).size;
-
     return Scaffold
     (
-      backgroundColor: Colors.white,
-      body: SingleChildScrollView
+      appBar: PageTitle
       (
-        child: Column
-        (
-          mainAxisAlignment: MainAxisAlignment.center,
-          children:
-          [
-            Container
+        hasBackButton: true,
+      ),
+      body: LayoutBuilder
+      (
+        builder: (ctx, constraints)
+        {
+          return Container
+          (
+            margin: EdgeInsets.only
             (
-              margin: EdgeInsets.only(top:35.0),
-              alignment: Alignment.centerLeft,
-              child: IconButton
+              left: 20,
+              right: 20,
+            ),
+            child: SingleChildScrollView
+            (
+              child: Form
               (
-                icon: Icon(Icons.arrow_back_ios_outlined),          
-                iconSize: 30.0,
-                onPressed: ()
-                {
-                  Navigator.push
-                  (
-                    context,
-                    MaterialPageRoute
+                key: _formKey,
+
+                child: Column
+                (
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children:
+                  [
+                    Container
                     (
-                      builder: (context)
-                      {
-                        return SignUp();
-                      },
+                      child: SectionTitle
+                      (
+                        title: 'Let\'s continue',
+                        left: 0,
+                        fontSize: 45,
+                        color: Color.fromRGBO(245, 197, 41, 1),
+                      ),
                     ),
-                  );
-                },
-              ),
-            ),
 
-            SizedBox(height: screen.height * 0.01),
+                    Container
+                    (
+                      margin: EdgeInsets.only(top: 15),
+                      child: Text
+                      (
+                        "Fill in the following information",
+                        style: TextStyle
+                        (
+                          color: Colors.black,
+                          fontSize: 22.0
+                        ),
+                      ),
+                    ),
 
-            Container
-            (
-              margin: EdgeInsets.only(left: 25.0),
-              alignment: Alignment.bottomLeft,
-              child: Text
-              (
-                "Let's continue,",
-                style: TextStyle
-                (
-                  color: Color.fromRGBO(245, 197, 41, 1),
-                  fontSize: 45.0,
-                  fontWeight: FontWeight.bold
+                    Container
+                    (
+                      margin: EdgeInsets.only(top: 15),
+                      child: SectionTitle
+                      (
+                        title: 'NGO INFORMATION',
+                        fontSize: 18,
+                        left: 0,
+                      ),
+                    ),
+
+                    CustomTextField
+                    (
+                      labelText: 'Registration Number',
+                      hasSuffixIcon: false,
+                    ),
+
+                    CustomTextField
+                    (
+                      labelText: 'Registred Number',
+                      hasSuffixIcon: false,
+                    ),
+
+                    CustomTextField
+                    (
+                      labelText: 'NGO Expertise',
+                      hasSuffixIcon: false,
+                    ),
+
+                    CustomTextField
+                    (
+                      labelText: 'Member Size',
+                      hasSuffixIcon: false,
+                    ),
+
+                    CustomTextField
+                    (
+                      labelText: 'Address',
+                      hasSuffixIcon: false,
+                    ),
+
+                    CustomTextField
+                    (
+                      labelText: 'Website',
+                      hasSuffixIcon: false,
+                    ),
+
+                    CustomDivider(),
+
+                    Container
+                    (
+                      child: SectionTitle
+                      (
+                        title: 'ACCOUNT HOLDER INFORMATION',
+                        fontSize: 18,
+                        left: 0,
+                      ),
+                    ),
+
+                    CustomTextField
+                    (
+                      labelText: 'Title',
+                      hasSuffixIcon: false,
+                    ),
+
+                    CustomTextField
+                    (
+                      labelText: 'Name',
+                      hasSuffixIcon: false,
+                    ),
+
+                    CustomTextField
+                    (
+                      labelText: 'Surname',
+                      hasSuffixIcon: false,
+                    ),
+
+                    CustomTextField
+                    (
+                      labelText: 'Position',
+                      hasSuffixIcon: false,
+                    ),
+
+                    CustomTextField
+                    (
+                      labelText: 'Phone Number',
+                      hasSuffixIcon: false,
+                    ),
+
+                    CustomTextField
+                    (
+                      labelText: 'Email',
+                      hasSuffixIcon: false,
+                    ),
+
+                    CustomTextField
+                    (
+                      labelText: 'Password',
+                      hasSuffixIcon: false,
+                    ),
+
+                    Container
+                    (
+                      padding: EdgeInsets.only
+                      (
+                        right: 15,
+                        left: 15,
+                        bottom: 40
+                      ),
+                      
+                      margin: EdgeInsets.only(top: 20),
+                      width: constraints.maxWidth,
+                      child: LargeCustomButtonIconText
+                      (
+                        text: 'Register',
+                        hasIcon: false,
+                      )
+                    ),
+                  ],
                 ),
               ),
             ),
-
-            SizedBox(height: screen.height * 0.01),
-
-            Container
-            (
-              margin: EdgeInsets.only(left: 25.0),
-              alignment: Alignment.bottomLeft,
-              child: Text
-              (
-                "Fill in the following information",
-                style: TextStyle
-                (
-                  color: Colors.black,
-                  fontSize: 22.0
-                ),
-              ),
-            ),
-
-            SizedBox(height: screen.height * 0.01),
-
-            Container
-            (
-              margin: EdgeInsets.only(left: 25.0),
-              alignment: Alignment.bottomLeft,
-              child: Text
-              (
-                "NGO Information",
-                style: TextStyle
-                (
-                  color: Colors.black,
-                  fontSize: 25.0,
-                  fontWeight: FontWeight.bold
-                ),
-              ),
-            ),
-
-            SizedBox(height: screen.height * 0.01),
-            
-            Container
-            (
-              margin: EdgeInsets.only(left: 25.0),
-              alignment: Alignment.bottomLeft,
-              child: Text
-              (
-                "Registration Number",
-                style: TextStyle
-                (
-                  color: Colors.black,
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold
-                ),
-              ),
-            ),
-
-            RoundedInput
-            (
-              controller:regNumber,
-              hintText: "RegistrationNumber",
-              onChanged: (value) {},
-            ),
-
-            Container
-            (
-              margin: EdgeInsets.only(left: 25.0),
-              alignment: Alignment.bottomLeft,
-              child: Text
-              (
-                "Registered Name",
-                style: TextStyle
-                (
-                  color: Colors.black,
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold
-                ),
-              ),
-            ),
-
-            RoundedInput
-            (
-              hintText: "RegisteredName",
-              controller:name,
-              onChanged: (value) {},
-            ),
-
-            Container
-            (
-              margin: EdgeInsets.only(left: 25.0),
-              alignment: Alignment.bottomLeft,
-              child: Text
-              (
-                "NGOExpertise",
-                style: TextStyle
-                (
-                  color: Colors.black,
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold
-                ),
-              ),
-            ),
-
-            RoundedInput
-            (
-              hintText: "NGO Expertise",
-              controller:expertise,
-              onChanged: (value) {},
-            ),
-
-            Container
-            (
-              margin: EdgeInsets.only(left: 25.0),
-              alignment: Alignment.bottomLeft,
-              child: Text
-              (
-                "Member Size",
-                style: TextStyle
-                (
-                  color: Colors.black,
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold
-                ),
-              ),
-            ),
-            
-            RoundedInput
-            (
-              hintText: "MemberSize",
-              controller:memberSize,
-              onChanged: (value) {},
-            ),
-
-            Container
-            (
-              margin: EdgeInsets.only(left: 25.0),
-              alignment: Alignment.bottomLeft,
-              child: Text
-              (
-                "Address",
-                style: TextStyle
-                (
-                  color: Colors.black,
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold
-                ),
-              ),
-            ),
-
-            RoundedInput
-            (
-              hintText: "Address",
-              controller:address,
-              onChanged: (value) {},
-            ),
-
-            Container
-            (
-              margin: EdgeInsets.only(left: 25.0),
-              alignment: Alignment.bottomLeft,
-              child: Text
-              (
-                "Website",
-                style: TextStyle
-                (
-                  color: Colors.black,
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold
-                ),
-              ),
-            ),
-
-            RoundedInput
-            (
-              hintText: "Website",
-              controller:website,
-              onChanged: (value) {},
-            ),
-
-            Container
-            (
-              margin: EdgeInsets.only(left: 25.0),
-              alignment: Alignment.bottomLeft,
-              child: Text
-              (
-                "Phone Number",
-                style: TextStyle
-                (
-                  color: Colors.black,
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold
-                ),
-              ),
-            ),
-
-            RoundedInput
-            (
-              hintText: "PhoneNumber",
-              controller:phone,
-              onChanged: (value) {},
-            ),
-
-            Container
-            (
-              margin: EdgeInsets.only(left: 25.0),
-              alignment: Alignment.bottomLeft,
-              child: Text
-              (
-                "Email",
-                style: TextStyle
-                (
-                  color: Colors.black,
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold
-                ),
-              ),
-            ),
-
-            RoundedInput
-            (
-              hintText: "Email",
-              controller:email,
-              onChanged: (value) {},
-            ),
-
-            Container
-            (
-              margin: EdgeInsets.only(left: 25.0),
-              alignment: Alignment.bottomLeft,
-              child: Text
-              (
-                "Password",
-                style: TextStyle
-                (
-                  color: Colors.black,
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold
-                ),
-              ),
-            ),
-
-            RoundedInput
-            (
-              hintText: "Password",
-              controller:password,
-              onChanged: (value) {},
-            ),
-
-            RoundedButton
-            (
-              text: "Register",
-              color:Color.fromRGBO(245, 197, 41, 1),
-              textColor: Color.fromRGBO(255,255 , 255, 1),
-
-              shape: RoundedRectangleBorder
-              (
-                borderRadius: BorderRadius.circular(10.0),
-                side: BorderSide
-                (
-                  color:Color.fromRGBO(245, 197, 41, 1)
-                ),
-              ),
-
-              press:()
-              {
-                register();
-
-                Navigator.push
-                (
-                  context,
-                  MaterialPageRoute
-                  (
-                    builder: (context)
-                    {
-                      return CheckEmailValidation();
-                    },
-                  ),
-                );
-              },
-            ),
-          ],
-        ),
+          );
+        }
       ),
     );
   }
