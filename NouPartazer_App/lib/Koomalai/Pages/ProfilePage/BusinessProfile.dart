@@ -7,13 +7,13 @@ import 'package:noupartazer_app/Atish/components/CustomDivider.dart';
 import 'package:noupartazer_app/Atish/components/LongText.dart';
 import 'package:noupartazer_app/Atish/components/SectionWithEditButton.dart';
 import 'package:noupartazer_app/Atish/components/ContactInfo.dart';
+import 'package:noupartazer_app/Koomalai/components/bottomSheetWidget.dart';
 import 'package:noupartazer_app/Atish/Pages/Story/NGOStory/NGOStory.dart';
 import 'package:noupartazer_app/Atish/Pages/Story/NGOStory/NGOStoryList.dart';
 import 'package:noupartazer_app/Atish/Pages/Story/BusinessStory/BusinessStoryModelProfile.dart';
-import 'package:noupartazer_app/Koomalai/components/bottomSheetWidget.dart';
-import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContact/BusinessEditName.dart';
 import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/NGOAndBusinessSettings.dart';
 import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContact/EditContactModel.dart';
+import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContact/BusinessEditName.dart';
 
 class BusinessProfile extends StatelessWidget
 {

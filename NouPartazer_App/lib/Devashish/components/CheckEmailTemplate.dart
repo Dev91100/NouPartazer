@@ -1,10 +1,11 @@
-import 'package:noupartazer_app/Koomalai/Pages/SignIn/SignIn.dart';
 import 'package:flutter/material.dart';
+
 import 'package:noupartazer_app/Devashish/components/TheOutlinedButtons.dart';
 import 'package:noupartazer_app/Devashish/components/YellowTitlePara.dart';
-// import 'package:google_fonts/google_fonts.dart';
 import 'package:noupartazer_app/Devashish/components/TheBackButton.dart';
 import 'package:noupartazer_app/Devashish/components/YellowTitles.dart';
+
+import 'package:noupartazer_app/Koomalai/Pages/SignIn/SignIn.dart';
 
 class CheckEmailTemplate extends StatelessWidget 
 {

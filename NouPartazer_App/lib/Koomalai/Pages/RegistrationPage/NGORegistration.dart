@@ -1,21 +1,22 @@
-
+import 'package:flutter/material.dart';
 import 'dart:convert';
+
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:http/http.dart' as http;
 
 import 'package:noupartazer_app/Devashish/pages/CheckEmailValidation.dart';
 import 'package:noupartazer_app/Koomalai/Pages/SignUp/SignUp.dart';
 import 'package:noupartazer_app/Koomalai/components/rounded_button.dart';
 import 'package:noupartazer_app/Koomalai/components/rounded_input.dart';
 
-import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
-import 'package:http/http.dart' as http;
+
 
 class NGORegistration extends StatelessWidget
 {
   TextEditingController regNumber,name,expertise,memberSize,address,phone,website,email,password;
 
-   Future register() async
-   {
+  Future register() async
+  {
 
     var url = "https://foodsharingapp.000webhostapp.com/register.php";
 
