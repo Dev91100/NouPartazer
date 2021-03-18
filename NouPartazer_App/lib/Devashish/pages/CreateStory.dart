@@ -1,95 +1,112 @@
 import 'package:flutter/material.dart';
 
+import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
+import 'package:noupartazer_app/Atish/components/LargeCustomButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
-import 'package:noupartazer_app/Devashish/components/FieldTitle.dart';
-import 'package:noupartazer_app/Devashish/components/SubTitle.dart';
-import 'package:noupartazer_app/Devashish/components/TextFields.dart';
-import 'package:noupartazer_app/Devashish/components/TheOutlinedButtons.dart';
+import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 import 'package:noupartazer_app/Devashish/components/UploadImage.dart';
-// import 'package:google_fonts/google_fonts.dart';
 
-class CreateStory extends StatelessWidget {
-  final formKey = GlobalKey<FormState>();
-  final _storyTitleController = TextEditingController();
-  final _storyDescriptionController = TextEditingController();
-  final _storyTagsController = TextEditingController();
+class CreateStory extends StatefulWidget
+{
+  @override
+  _CreateStoryState createState() => _CreateStoryState();
+}
+
+class _CreateStoryState extends State<CreateStory>
+{
+  final _formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) 
   {
-    // final screen = MediaQuery.of(context);
-    return LayoutBuilder(
-      builder: (ctx, constraints)
-      {
-        return Scaffold
-        (
-          appBar: PageTitle(text: 'CREATE STORY',),
-          body: SingleChildScrollView
+    return Scaffold
+    (
+      appBar: PageTitle
+      (
+        hasBackButton: true,
+      ),
+      body: LayoutBuilder
+      (
+        builder: (ctx, constraints)
+        {
+          return Container
           (
-            key: formKey, 
-            child: Column
+            margin: EdgeInsets.only
             (
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children:
-              [
-
-
-              Container
+              left: 20,
+              right: 20,
+            ),
+            child: SingleChildScrollView
+            (
+              child: Form
               (
-                margin: EdgeInsets.only
+                key: _formKey,
+
+                child: Column
                 (
-                  right: constraints.maxWidth * 0.062,
-                  left: constraints.maxWidth * 0.062,
-                  // bottom: constraints.maxHeight * 0.02,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children:
+                  [
+                    Container
+                    (
+                      child: SectionTitle
+                      (
+                        title: 'STORY INFORMATION',
+                        left: 0,
+                      ),
+                    ),
+
+                    CustomTextField
+                    (
+                      labelText: 'Title',
+                      hasSuffixIcon: false,
+                    ),
+
+                    CustomTextField
+                    (
+                      labelText: 'Description',
+                      hasSuffixIcon: false,
+                      hasMultiline: true,
+                      maxLines: 5,
+                    ),
+
+                    CustomTextField
+                    (
+                      labelText: 'Tags',
+                      hasSuffixIcon: false,
+                    ),
+
+                    Container
+                    (
+                      margin: EdgeInsets.only(top: 25),
+                      child: UploadImage()
+                    ),
+
+                    Container
+                    (
+                      padding: EdgeInsets.only
+                      (
+                        right: 15,
+                        left: 15,
+                        bottom: 40
+                      ),
+                      
+                      margin: EdgeInsets.only(top: 30),
+                      width: constraints.maxWidth,
+                      child: LargeCustomButtonIconText
+                      (
+                        text: 'Create Story',
+                        hasIcon: false,
+                      )
+                    ),
+                  ],
                 ),
-                child: SubTitle(subTitle: 'STORY INFORMATION', )
               ),
-
-              Container
-              (
-                child: FieldTitle(fieldTitle: 'Title'),
-              ),
-
-              Container
-              (
-                child: TextFields(textFieldControllerName: _storyTitleController, ),
-              ),
-              
-          
-              Container
-              (
-                child: FieldTitle(fieldTitle: 'Description',),
-              ),
-
-              Container
-              (
-                child: TextFields
-                (
-                  textFieldControllerName: _storyDescriptionController, 
-                  fieldHeight: 0.11,
-                  maxLines: 4, 
-                )
-              ),
-
-              Container
-              (
-                child: FieldTitle(fieldTitle: 'Tags',),
-              ),
-              
-              Container
-              (
-                child: TextFields(textFieldControllerName: _storyTagsController,),
-              ),
-
-              SizedBox(height: constraints.maxHeight * 0.03,),
-
-              UploadImage(),
-
-              TheOutlinedButtons(message: 'Create Story',)
-            ],
-            ),   
-          ),
-        );
-      }
+            ),
+          );
+        }
+      ),
     );
   }
 }

@@ -51,7 +51,7 @@ class SignIn extends StatelessWidget
                 children:
                 [
                   Stack
-                  (  
+                  (
                     children:
                     [
                       Container
@@ -65,7 +65,7 @@ class SignIn extends StatelessWidget
                             fit: BoxFit.cover,
                           ),
                         ),
-
+                        
                         child: Align
                         (
                           alignment: Alignment.bottomCenter,
@@ -155,6 +155,7 @@ class SignIn extends StatelessWidget
                                         ),
                                       ),
                                     ),
+
                                     onPressed: ()
                                     {
                                       Navigator.push
@@ -243,6 +244,7 @@ class SignIn extends StatelessWidget
                       right: constraints.maxHeight * 0.025,
                       bottom: constraints.maxHeight * 0.025,
                     ),
+
                     child: Column
                     (
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -335,6 +337,7 @@ class SignIn extends StatelessWidget
                               ),
                             ),
                           ),
+                          
                           onPressed: ()
                           {
                             Navigator.push

@@ -10,6 +10,8 @@ class CustomTextField extends StatelessWidget
   final bool hasSuffixIcon;
   final IconData suffixIcon;
   final EdgeInsets margin;
+  final bool hasMultiline;
+  final int maxLines;
 
   CustomTextField
   (
@@ -22,6 +24,8 @@ class CustomTextField extends StatelessWidget
       this.borderWidth = 1.5,
       this.borderColor = Colors.black,
       this.margin = const EdgeInsets.only(top: 23),
+      this.hasMultiline = false,
+      this.maxLines = 1,
     }
   );
 
@@ -33,8 +37,11 @@ class CustomTextField extends StatelessWidget
       margin: margin,
       child: TextFormField
       (
+        keyboardType: (hasMultiline) ? TextInputType.multiline : null,
+        maxLines: (hasMultiline) ? maxLines : maxLines,
         decoration: InputDecoration
         (
+          alignLabelWithHint: true, // Align label to the top in the case of multiline
           labelText: labelText,
           errorText: (errorText != null) ? errorText : null,
           labelStyle: TextStyle

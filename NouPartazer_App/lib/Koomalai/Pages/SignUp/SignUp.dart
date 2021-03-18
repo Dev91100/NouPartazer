@@ -4,7 +4,7 @@ import 'package:noupartazer_app/Koomalai/Pages/RegistrationPage/BusinessRegistra
 import 'package:noupartazer_app/Koomalai/Pages/SignIn/SignIn.dart';
 import 'package:noupartazer_app/Koomalai/Pages/RegistrationPage/NGORegistration.dart';
 import 'package:noupartazer_app/Koomalai/src/screens/secondMainScreen.dart';
-import 'package:noupartazer_app/Atish/Pages/SignUp/OrgButtons.dart';
+import 'package:noupartazer_app/Atish/Pages/SignInAndSignUp/OrgButtons.dart';
 
 class SignUp extends StatelessWidget
 {
@@ -26,10 +26,10 @@ class SignUp extends StatelessWidget
             (
               child: Column
               (
-
-                children: [
+                children:
+                [
                   Stack
-                  (  
+                  (
                     children:
                     [
                       Container
@@ -100,7 +100,6 @@ class SignUp extends StatelessWidget
                                         ),
                                       );
                                     },
-                                   
                                   ),
                                 ),
 
@@ -131,6 +130,7 @@ class SignUp extends StatelessWidget
                                         ),
                                       ),
                                     ),
+
                                     onPressed: ()
                                     {
                                       Navigator.push
@@ -190,6 +190,7 @@ class SignUp extends StatelessWidget
                                   ),
                                 ),
                               ),
+
                               onPressed: () 
                               {
                                 Navigator.push

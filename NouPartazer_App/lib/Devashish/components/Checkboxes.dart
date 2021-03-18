@@ -3,7 +3,8 @@ import 'package:flutter/widgets.dart';
 
 import 'package:noupartazer_app/Devashish/components/FieldTitle.dart';
 
-class Checkboxes extends StatefulWidget {
+class Checkboxes extends StatefulWidget
+{
 
   final String option;
   Checkboxes
@@ -17,55 +18,35 @@ class Checkboxes extends StatefulWidget {
   _CheckboxesState createState() => _CheckboxesState();
 }
 
-class _CheckboxesState extends State<Checkboxes> {
-  bool checkboxValueB = false;
-  
-  // final String option;
-  // _CheckboxesState
-  // (
-  //   this.option,
-  // );
+class _CheckboxesState extends State<Checkboxes>
+{
+  bool checkedValue = false;
 
   @override
   Widget build(BuildContext context) 
   {
-
-    // final screen = MediaQuery.of(context);
-
-    return LayoutBuilder
+    return CheckboxListTile
     (
-      builder: (ctx, constraints)
+      dense: true,
+      contentPadding: EdgeInsets.all(0),
+
+      title: Text
+      (
+        widget.option,
+        style: TextStyle
+        (
+          fontSize: 20,
+        ),
+      ),
+      value: checkedValue,
+      onChanged: (newValue)
       {
-        return Container(
-
-          margin: EdgeInsets.only
-          (
-            left: constraints.maxWidth * 0.03,
-          ),
-
-          child: Row
-          (
-            mainAxisSize: MainAxisSize.min,
-            children: 
-            [
-              Checkbox
-              (
-                value: checkboxValueB,
-                onChanged: (value)
-                {
-                  setState(() 
-                  {
-                    checkboxValueB = value;
-                  });
-                },
-              ),
-
-              FieldTitle(fieldTitle: widget.option, left: 0.0),
-              // Text('Perishable Food'),
-            ],
-          ),
-        );
-      }
+        setState(()
+        {
+          checkedValue = newValue;
+        });
+      },
+      controlAffinity: ListTileControlAffinity.leading,  //  <-- leading Checkbox
     );
   }
 }

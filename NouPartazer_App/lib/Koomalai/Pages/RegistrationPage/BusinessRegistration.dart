@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'package:noupartazer_app/Atish/components/LargeButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
 import 'package:noupartazer_app/Atish/components/LargeCustomButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
+import 'package:noupartazer_app/Koomalai/src/screens/BusinessNGOmainScreen.dart';
 
 
 class BusinessRegistration extends StatefulWidget
@@ -69,7 +69,7 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
                         style: TextStyle
                         (
                           color: Colors.black,
-                          fontSize: 22.0
+                          fontSize: 20
                         ),
                       ),
                     ),
@@ -131,6 +131,8 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
                       (
                         text: 'Register',
                         hasIcon: false,
+                        isPage: true,
+                        onPress: BusinessMainScreen(),
                       )
                     ),
                   ],

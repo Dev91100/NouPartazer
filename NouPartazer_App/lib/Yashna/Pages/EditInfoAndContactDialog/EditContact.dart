@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContact/EditInfoModel.dart';
+import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContactDialog/EditInfoModel.dart';
 
-class EditContactModel extends EditInfoModel
+class EditContact extends EditInfoModel
 {
   String title;
   String text1, text2, text3;
   IconData icon1, icon2, icon3;
 
-  EditContactModel
+  EditContact
   (
     {
       this.title = 'TEST',

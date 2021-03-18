@@ -12,8 +12,8 @@ import 'package:noupartazer_app/Atish/Pages/Story/NGOStory/NGOStory.dart';
 import 'package:noupartazer_app/Atish/Pages/Story/NGOStory/NGOStoryList.dart';
 import 'package:noupartazer_app/Atish/Pages/Story/BusinessStory/BusinessStoryModelProfile.dart';
 import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/NGOAndBusinessSettings.dart';
-import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContact/EditContactModel.dart';
-import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContact/BusinessEditName.dart';
+import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContactDialog/EditContact.dart';
+import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContactDialog/BusinessEditName.dart';
 
 class BusinessProfile extends StatelessWidget
 {
@@ -24,7 +24,7 @@ class BusinessProfile extends StatelessWidget
   {
     final screen = MediaQuery.of(context).size;
     var businessEditNameBottomSheet = new BusinessEditName().displayBottomSheet(context);
-    var editContactBottomSheet = new EditContactModel().displayBottomSheet(context);
+    var editContactBottomSheet = new EditContact().displayBottomSheet(context);
 
     return LayoutBuilder
     (

@@ -3,15 +3,22 @@ import 'package:flutter/material.dart';
 import 'package:noupartazer_app/Atish/components/LargeCustomButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
-import 'package:noupartazer_app/Atish/components/ButtonIconText.dart';
+import 'package:noupartazer_app/Atish/components/SmallButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
 
 import 'package:noupartazer_app/Yashna/Pages/ConfirmationDialog/DeactivateAccount.dart';
 
-class Security extends StatelessWidget
+class Security extends StatefulWidget
 {
+  @override
+  _SecurityState createState() => _SecurityState();
+}
+
+class _SecurityState extends State<Security> {
   final _oldPWController = TextEditingController();
   final _newPWController = TextEditingController();
+
+  final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context)
@@ -43,47 +50,52 @@ class Security extends StatelessWidget
               crossAxisAlignment: CrossAxisAlignment.start,
               children:
               [
-                Column
+                Form
                 (
-                  mainAxisSize: MainAxisSize.max,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children:
-                  [
-                    SectionTitle
-                    (
-                      title: 'CHANGE PASSWORD',
-                      left: 0,
-                      top: 15,
-                    ),
-
-                    CustomTextField
-                    (
-                      labelText: 'OLD PASSWORD',
-                      suffixIcon: Icons.https_outlined,
-                    ),
-
-                    CustomTextField
-                    (
-                      labelText: 'NEW PASSWORD',
-                      suffixIcon: Icons.https_outlined,
-                    ),
-                    
-                    Container
-                    (
-                      padding: EdgeInsets.only
+                  key: _formKey,
+                  
+                  child: Column
+                  (
+                    mainAxisSize: MainAxisSize.max,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children:
+                    [
+                      SectionTitle
                       (
-                        right: 15,
-                        left: 15
+                        title: 'CHANGE PASSWORD',
+                        left: 0,
+                        top: 15,
                       ),
-                      margin: EdgeInsets.only(top: 20),
-                      width: constraints.maxWidth,
-                      child: LargeCustomButtonIconText
-                      (
-                        text: 'Change Password',
-                      )
-                    ),
 
-                  ],
+                      CustomTextField
+                      (
+                        labelText: 'Old password',
+                        suffixIcon: Icons.https_outlined,
+                      ),
+
+                      CustomTextField
+                      (
+                        labelText: 'New password',
+                        suffixIcon: Icons.https_outlined,
+                      ),
+                      
+                      Container
+                      (
+                        padding: EdgeInsets.only
+                        (
+                          right: 15,
+                          left: 15
+                        ),
+                        margin: EdgeInsets.only(top: 20),
+                        width: constraints.maxWidth,
+                        child: LargeCustomButtonIconText
+                        (
+                          text: 'Change Password',
+                        )
+                      ),
+
+                    ],
+                  ),
                 ),
                 
                 Container
@@ -92,7 +104,7 @@ class Security extends StatelessWidget
                   (
                     bottom: 20,
                   ),
-                  child: ButtonIconText
+                  child: SmallButtonIconText
                   (
                     text: 'Delete my account',
                     icon: Icons.delete_outlined,

@@ -1,144 +1,134 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
+import 'package:noupartazer_app/Atish/components/LargeCustomButtonIconText.dart';
 
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
-import 'package:noupartazer_app/Devashish/components/FieldTitle.dart';
-import 'package:noupartazer_app/Devashish/components/SubTitle.dart';
-import 'package:noupartazer_app/Devashish/components/TextFields.dart';
-import 'package:noupartazer_app/Devashish/components/TheOutlinedButtons.dart';
+import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
+import 'package:noupartazer_app/Devashish/components/Checkboxes.dart';
 import 'package:noupartazer_app/Devashish/components/UploadImage.dart';
-import 'package:noupartazer_app/Devashish/components/CheckBoxes.dart';
 
-class CreateEvent extends StatelessWidget {
-  final formKey = GlobalKey<FormState>();
-  final _locationNameController = TextEditingController();
-  final _locationAddressController = TextEditingController();
-  final _eventTypeController = TextEditingController();
-  final _eventDescController = TextEditingController();
-  final _dateOfEventsController = TextEditingController();
+class CreateEvent extends StatefulWidget
+{
+  @override
+  _CreateEventState createState() => _CreateEventState();
+}
+
+class _CreateEventState extends State<CreateEvent>
+{
+  final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) 
   {
-    // final screen = MediaQuery.of(context);
-    return LayoutBuilder(
-      builder: (ctx, constraints)
-      {
-        return Scaffold
-        (
-          appBar: PageTitle(text: 'CREATE EVENT',),
-          body: SingleChildScrollView
+    return Scaffold
+    (
+      appBar: PageTitle
+      (
+        hasBackButton: true,
+      ),
+      body: LayoutBuilder
+      (
+        builder: (ctx, constraints)
+        {
+          return Container
           (
-            key: formKey, 
-            child: Column
+            margin: EdgeInsets.only
             (
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children:
-              [
-
-
-              Container
+              left: 20,
+              right: 20,
+            ),
+            child: SingleChildScrollView
+            (
+              child: Form
               (
-                margin: EdgeInsets.only
+                key: _formKey,
+
+                child: Column
                 (
-                  right: constraints.maxWidth * 0.062,
-                  left: constraints.maxWidth * 0.062,
-                  // bottom: constraints.maxHeight * 0.02,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children:
+                  [
+                    Container
+                    (
+                      child: SectionTitle
+                      (
+                        title: 'EVENT INFORMATION',
+                        left: 0,
+                      ),
+                    ),
+
+                    CustomTextField
+                    (
+                      labelText: 'Location Name',
+                      hasSuffixIcon: false,
+                    ),
+
+                    CustomTextField
+                    (
+                      labelText: 'Location Address',
+                      hasSuffixIcon: false,
+                    ),
+
+                    CustomTextField
+                    (
+                      labelText: 'Event Type',
+                      hasSuffixIcon: false,
+                    ),
+
+                    CustomTextField
+                    (
+                      labelText: 'Event Description',
+                      hasSuffixIcon: false,
+                      hasMultiline: true,
+                      maxLines: 5,
+                    ),
+
+                    CustomTextField
+                    (
+                      labelText: 'Date of Event',
+                      suffixIcon: Icons.date_range_outlined,
+                    ),
+
+                    Container
+                    (
+                      margin: EdgeInsets.only(top: 10),
+                      child: Checkboxes(option: 'Perishable Food')
+                    ),
+
+                    Checkboxes(option: 'Non-Perishable Food'),
+
+                    Container
+                    (
+                      margin: EdgeInsets.only(top: 15),
+                      child: UploadImage()
+                    ),
+
+                    Container
+                    (
+                      padding: EdgeInsets.only
+                      (
+                        right: 15,
+                        left: 15,
+                        bottom: 40
+                      ),
+                      
+                      margin: EdgeInsets.only(top: 30),
+                      width: constraints.maxWidth,
+                      child: LargeCustomButtonIconText
+                      (
+                        text: 'Create Event',
+                        hasIcon: false,
+                      )
+                    ),
+                  ],
                 ),
-                child: SubTitle(subTitle: 'EVENT INFORMATION', )
               ),
-
-              Container
-              (
-                child: FieldTitle(fieldTitle: 'Location Name'),
-              ),
-
-              Container
-              (
-                child: TextFields(textFieldControllerName: _locationNameController, ),
-              ),
-              
-              Container
-              (
-                child: FieldTitle(fieldTitle: 'Location Address'),
-              ),
-
-              Container
-              (
-                child: TextFields(textFieldControllerName: _locationAddressController, ),
-              ),
-
-              Container
-              (
-                child: FieldTitle(fieldTitle: 'Event Type'),
-              ),
-
-              Container
-              (
-                child: TextFields(textFieldControllerName: _eventTypeController, ),
-              ),
-
-              Container
-              (
-                child: FieldTitle(fieldTitle: 'Event Description',),
-              ),
-
-              Container
-              (
-                child: TextFields
-                (
-                  textFieldControllerName: _eventDescController, 
-                  fieldHeight: 0.11,
-                  maxLines: 4, 
-                )
-              ),
-
-              Container
-              (
-                child: FieldTitle
-                (
-                  fieldTitle: 'Date Of Events',
-                ),
-              ),
-              
-              Container
-              (
-                child: TextFields
-                (
-                  textFieldControllerName: _dateOfEventsController,
-                  inputType: TextInputType.datetime,
-                  thesuffixIcon: Icons.date_range,
-                ),
-              ),
-
-              Container
-              (
-                child: FieldTitle
-                (
-                  fieldTitle: 'Food Type',
-                ),
-              ), 
-
-              Container
-              (
-                child: Checkboxes(option: 'Perishable Food',),
-              ),
-              
-              Container
-              (
-                child: Checkboxes(option: 'Non-Perishable Food',),
-              ),
-
-              SizedBox(height: constraints.maxHeight * 0.03,),
-
-              UploadImage(),
-
-              TheOutlinedButtons(message: 'Create Event',)
-            ],
-            ),   
-          ),
-        );
-      }
+            ),
+          );
+        }
+      ),
     );
   }
 }

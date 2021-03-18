@@ -41,12 +41,6 @@ class DottedBoxWithUploadButton extends StatelessWidget
       ),
       
       height: screen.height * 0.24,
-      margin: EdgeInsets.only
-      (
-        right: constraints.maxWidth * 0.062,
-        left: constraints.maxWidth *0.062,
-        bottom: screen.height * 0.02,
-      ),
       
       child: DottedBorder
       (
