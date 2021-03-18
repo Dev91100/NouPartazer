@@ -1,21 +1,19 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
-import 'package:google_fonts/google_fonts.dart';
-
 import 'package:noupartazer_app/Koomalai/Pages/SignIn/SignIn.dart';
 
-class Splashscreen extends StatefulWidget
+class CustomSplashscreen extends StatefulWidget
 {
-  Splashscreen({Key key, this.title}) : super(key: key);
+  CustomSplashscreen({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _SplashscreenState createState() => _SplashscreenState();
+  _CustomSplashscreenState createState() => _CustomSplashscreenState();
 }
 
-class _SplashscreenState extends State<Splashscreen>
+class _CustomSplashscreenState extends State<CustomSplashscreen>
 {
 
   @override

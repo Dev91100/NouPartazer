@@ -1,12 +1,8 @@
-
-import 'package:flutter/rendering.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:noupartazer_app/Atish/Pages/Splashscreen/Splashscreen.dart';
-
-
-import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:noupartazer_app/Koomalai/Pages/SignIn/SignIn.dart';
+import 'package:flutter/rendering.dart';
+
+import 'package:google_fonts/google_fonts.dart';
+import 'package:noupartazer_app/Atish/Pages/Splashscreen/CustomSplashscreen.dart';
 
 void main() => runApp(MyApp());
 
@@ -49,17 +45,7 @@ class MyApp extends StatelessWidget
           ),
         )
       ),
-
-      home: AnimatedSplashScreen
-      (
-        splash: Splashscreen(),
-        nextScreen: SignIn(),
-        centered: true,
-        duration: 2,
-        splashIconSize: 3000,
-        splashTransition: SplashTransition.fadeTransition,
-        disableNavigation: true,
-      ),
+      home: CustomSplashscreen()
     );
   }
 }

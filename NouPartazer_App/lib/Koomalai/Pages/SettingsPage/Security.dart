@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:noupartazer_app/Atish/components/LargeCustomButtonIconText.dart';
-import 'package:noupartazer_app/Atish/components/SmallCustomButtonIconText.dart';
 
+import 'package:noupartazer_app/Atish/components/LargeCustomButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
-
 import 'package:noupartazer_app/Atish/components/ButtonIconText.dart';
-import 'package:noupartazer_app/Yashna/Pages/ConfirmationDialog/DeactivateAccount.dart';
 import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
+
+import 'package:noupartazer_app/Yashna/Pages/ConfirmationDialog/DeactivateAccount.dart';
 
 class Security extends StatelessWidget
 {

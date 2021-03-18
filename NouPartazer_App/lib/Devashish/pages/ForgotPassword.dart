@@ -78,9 +78,8 @@ class ForgotPassword extends StatelessWidget {
           (
             child: TheOutlinedButtons(
               message: 'Send Email',
-                press: () {
-
-                  Colors.white;
+                press: () 
+                { 
                   Navigator.push(
                     context,
                     MaterialPageRoute(
