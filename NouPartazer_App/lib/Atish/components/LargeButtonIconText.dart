@@ -26,6 +26,8 @@ class LargeButtonIconText extends StatelessWidget
   final bool isModalPage;
   final bool isPage;
   final bool isClose;
+  final bool hasSuperPress;
+  final VoidCallback onSuperPress;
 
   LargeButtonIconText
   (
@@ -51,6 +53,8 @@ class LargeButtonIconText extends StatelessWidget
       this.elevation = 2,
       this.padding = const EdgeInsets.fromLTRB(15, 15, 15, 15),
       this.borderRadius = const BorderRadius.all(Radius.circular(10)),
+      this.hasSuperPress = false,
+      this.onSuperPress,
     }
   )
   {
@@ -99,7 +103,7 @@ class LargeButtonIconText extends StatelessWidget
         iconColor: iconColor,
         iconRight: iconRight,
       ),
-      onPressed: ()
+      onPressed: (!hasSuperPress) ? ()
       {
         if(isPopUpPage)
         {
@@ -146,7 +150,7 @@ class LargeButtonIconText extends StatelessWidget
         {
           Navigator.of(context).pop();
         }
-      },
+      } : () => onSuperPress(),
     );
   }
 }

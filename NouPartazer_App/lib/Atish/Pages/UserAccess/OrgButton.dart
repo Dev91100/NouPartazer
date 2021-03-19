@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class OrgButton
+class OrgButton extends StatelessWidget
 {
   @required
   final IconData icon;
@@ -18,7 +18,8 @@ class OrgButton
     }
   );
 
-  Container buildWidget(BuildContext context)
+  @override
+  Widget build(BuildContext context)
   {
     return Container
     (

@@ -120,76 +120,34 @@ class _UserAccessModelState extends State<UserAccessModel>
                                 Container
                                 (
                                   width: screen.width * 0.5,
-
-                                  child: TextButton
+                                  child: LargeButtonIconText
                                   (
-                                    style: TextButton.styleFrom
-                                    (
-                                      backgroundColor: (isSignIn) ? selectedButtonColor : unselectedButtonColor,
-                                      shape: RoundedRectangleBorder
-                                      (
-                                        borderRadius: BorderRadius.circular(0.0),
-                                      ),
-                                    ),
-                                    child: FittedBox
-                                    (
-                                      fit: BoxFit.contain,
-                                      child: Text
-                                      (
-                                        "Sign In",
-                                        style: TextStyle
-                                        (
-                                          color: (isSignIn) ? selectedTextColor : unselectedTextColor,
-                                          fontSize: 20.0
-                                        ),
-                                      ),
-                                    ),
-
-                                    onPressed: ()
-                                    {
-                                      if(!isSignIn)
-                                      {
-                                        chooseButton();
-                                      }
-                                    },
+                                    text: 'Sign In',
+                                    fontSize: 20,
+                                    textColor: (isSignIn) ? selectedTextColor : unselectedTextColor,
+                                    hasIcon: false,
+                                    elevation: 0,
+                                    borderRadius: BorderRadius.circular(0.0),
+                                    buttonColor: (isSignIn) ? selectedButtonColor : unselectedButtonColor,
+                                    hasSuperPress: true,
+                                    onSuperPress: (!isSignIn) ? chooseButton : null,
                                   ),
                                 ),
 
                                 Container
                                 (
                                   width: screen.width * 0.5,
-
-                                  child: TextButton
+                                  child: LargeButtonIconText
                                   (
-                                    style: TextButton.styleFrom
-                                    (
-                                      backgroundColor: (isSignUp) ? selectedButtonColor : unselectedButtonColor,
-                                      shape: RoundedRectangleBorder
-                                      (
-                                        borderRadius: BorderRadius.circular(0.0),
-                                      ),
-                                    ),
-                                    child: FittedBox
-                                    (
-                                      fit: BoxFit.contain,
-                                      child: Text
-                                      (
-                                        "Sign Up",
-                                        style: TextStyle
-                                        (
-                                          color: (isSignUp) ? selectedTextColor : unselectedTextColor,
-                                          fontSize: 20.0
-                                        ),
-                                      ),
-                                    ),
-
-                                    onPressed: ()
-                                    {
-                                      if(!isSignUp)
-                                      {
-                                        chooseButton();
-                                      }
-                                    },
+                                    text: 'Sign Up',
+                                    fontSize: 20,
+                                    textColor: (isSignUp) ? selectedTextColor : unselectedTextColor,
+                                    hasIcon: false,
+                                    elevation: 0,
+                                    borderRadius: BorderRadius.circular(0.0),
+                                    buttonColor: (isSignUp) ? selectedButtonColor : unselectedButtonColor,
+                                    hasSuperPress: true,
+                                    onSuperPress: (!isSignUp) ? chooseButton : null,
                                   ),
                                 ),
                               ],
@@ -306,15 +264,15 @@ class SignInWidget
             textColor: Colors.white,
             buttonColor: Color.fromRGBO(245, 197, 41, 1),
             hasIcon: false,
-            isPage: true,
             elevation: 0,
+            isPage: true,
             onPress: MainScreen(),
           ),
         ),
 
         Container
         (
-          margin: EdgeInsets.only(top: constraints.maxHeight * 0.02),
+          margin: EdgeInsets.only(top: constraints.maxHeight * 0.0025),
           child: MaterialButton
           (
             child: FittedBox
@@ -403,7 +361,6 @@ class SignUpWidget
             ),
           ),
         ),
-
         
         Container
         (
@@ -429,7 +386,7 @@ class SignUpWidget
                   title: 'NGO',
                   icon: Icons.favorite,
                   onPress: NGORegistration(),
-                ).buildWidget(context),
+                ),
               ),
 
               Container
@@ -448,7 +405,7 @@ class SignUpWidget
                   title: 'BUSINESS',
                   icon: Icons.business,
                   onPress: BusinessRegistration(),
-                ).buildWidget(context),
+                ),
               ),
             ],
           ),
