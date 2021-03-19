@@ -1,16 +1,20 @@
 import 'package:flutter/cupertino.dart';
 
-class PageTransitions extends PageRouteBuilder
+class UsingScaleTransition extends PageRouteBuilder
 {
   final destinationPage;
+  final int theTransitionDuration;
 
-  PageTransitions
+  UsingScaleTransition
   (
-    this.destinationPage,
+    {
+      this.destinationPage,
+      this.theTransitionDuration = 1,
+    }
   )
   :super
   (
-    transitionDuration: Duration(seconds: 1),
+    transitionDuration: Duration(seconds: theTransitionDuration),
     transitionsBuilder: 
     (
       BuildContext context, 
@@ -22,7 +26,6 @@ class PageTransitions extends PageRouteBuilder
       animation = CurvedAnimation(parent: animation, curve: Curves.ease);
       
       return ScaleTransition
-
       (
         scale: animation,
         child: child,

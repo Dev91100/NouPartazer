@@ -269,6 +269,7 @@ class SignInWidget
             elevation: 0,
             isPageTransition: true,
             onPress: NGOBottomNav(),
+            theTransitionDuration: 5,
           ),
         ),
 
