@@ -23,6 +23,7 @@ class _CustomSplashscreenState extends State<CustomSplashscreen>
     Timer
     (
       Duration(seconds: 5),
+      
       () => Navigator.of(context).pushReplacement
       (
         MaterialPageRoute

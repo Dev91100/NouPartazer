@@ -2,13 +2,11 @@ import 'package:flutter/cupertino.dart';
 
 class PageTransitions extends PageRouteBuilder
 {
-  final Widget destinationPage;
+  final destinationPage;
 
   PageTransitions
   (
-    {
-      this.destinationPage,
-    }
+    this.destinationPage,
   )
   :super
   (
@@ -24,9 +22,8 @@ class PageTransitions extends PageRouteBuilder
       animation = CurvedAnimation(parent: animation, curve: Curves.ease);
       
       return ScaleTransition
-      // return FadeTransition
+
       (
-        // opacity: animation,
         scale: animation,
         child: child,
         alignment: Alignment.bottomCenter,

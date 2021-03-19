@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 import 'package:noupartazer_app/Atish/components/IconText.dart';
+import 'package:noupartazer_app/Devashish/components/PageTransitions.dart';
 
 class LargeButtonIconText extends StatelessWidget
 {
@@ -27,6 +28,7 @@ class LargeButtonIconText extends StatelessWidget
   final bool isPage;
   final bool isClose;
   final bool scrollModalSheet;
+  final bool isPageTransition;
   final bool hasSuperPress;
   final VoidCallback onSuperPress;
 
@@ -55,6 +57,7 @@ class LargeButtonIconText extends StatelessWidget
       this.padding = const EdgeInsets.fromLTRB(15, 15, 15, 15),
       this.borderRadius = const BorderRadius.all(Radius.circular(10)),
       this.scrollModalSheet = true,
+      this.isPageTransition = false,
       this.hasSuperPress = false,
       this.onSuperPress,
     }
@@ -152,6 +155,13 @@ class LargeButtonIconText extends StatelessWidget
         else if(isClose)
         {
           Navigator.of(context).pop();
+        }
+        else if(isPageTransition)
+        {
+          Navigator.of(context).push
+          (
+            PageTransitions(onPress)
+          );
         }
       } : () => onSuperPress(),
     );
