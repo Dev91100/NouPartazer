@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
 
 import 'package:noupartazer_app/Atish/components/LargeButtonIconText.dart';
 import 'package:noupartazer_app/Devashish/pages/ForgotPassword.dart';
 import 'package:noupartazer_app/Koomalai/Pages/RegistrationPage/BusinessRegistration.dart';
 import 'package:noupartazer_app/Koomalai/Pages/RegistrationPage/NGORegistration.dart';
-import 'package:noupartazer_app/Koomalai/components/rounded_button.dart';
-import 'package:noupartazer_app/Koomalai/components/rounded_input_field.dart';
-import 'package:noupartazer_app/Koomalai/components/rounded_password_field.dart';
 import 'package:noupartazer_app/Koomalai/src/screens/mainScreen.dart';
+
+import 'OrgButton.dart';
 
 class UserAccessModel extends StatefulWidget
 {
@@ -208,7 +208,8 @@ class _UserAccessModelState extends State<UserAccessModel>
                       right: constraints.maxHeight * 0.025,
                       bottom: constraints.maxHeight * 0.025,
                     ),
-                    child: (isSignIn) ? SignInWidget() : SignUpWidget(),
+                    child: (isSignIn) ? SignInWidget().buildWidget(context, constraints) : 
+                    SignUpWidget().buildWidget(context, constraints),
                   )
                 ],
               ),
@@ -220,10 +221,9 @@ class _UserAccessModelState extends State<UserAccessModel>
   }  
 }
 
-class SignInWidget extends StatelessWidget
+class SignInWidget
 {
-  @override
-  Widget build(BuildContext context)
+  Widget buildWidget(BuildContext context, BoxConstraints constraints)
   {
     return Column
     (
@@ -267,322 +267,193 @@ class SignInWidget extends StatelessWidget
           ),
         ),
 
-        SizedBox
+        CustomTextField
         (
-          height: 10,
+          labelText: 'Email',
+          labelSize: 20,
+          iconSize: 25,
+          labelColor: Colors.white,
+          suffixIcon: Icons.email_outlined,
+          iconColor: Colors.white,
+          borderColor: Colors.white,
+          borderWidth: 2,
         ),
 
-        RoundedInputField
+        CustomTextField
         (
-          hintText: "Email",
-          onChanged: (value) {},
+          labelText: 'Password',
+          labelSize: 20,
+          iconSize: 25,
+          labelColor: Colors.white,
+          suffixIcon: Icons.https_outlined,
+          iconColor: Colors.white,
+          borderColor: Colors.white,
+          borderWidth: 2,
         ),
 
-        RoundedPasswordField(
-          onChanged: (value) {},
-        ),
-
-        RoundedButton
+        Container
         (
-          text: "Log In",
-          color: Color.fromRGBO(245, 197, 41, 1),
-          textColor: Colors.white,
-
-          press: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) {
-                  return MainScreen();
-                },
-              ),
-            );
-          }
-        ),
-
-        MaterialButton
-        (
-          child: FittedBox
+          margin: EdgeInsets.only(top: constraints.maxHeight * 0.02),
+          padding: EdgeInsets.only
           (
-            fit: BoxFit.contain,
-            child: Text
+            left: 15,
+            right: 15,
+          ),
+          width: constraints.maxWidth,
+          child: LargeButtonIconText
+          (
+            text: "Log In",
+            textColor: Colors.white,
+            buttonColor: Color.fromRGBO(245, 197, 41, 1),
+            hasIcon: false,
+            isPage: true,
+            elevation: 0,
+            onPress: MainScreen(),
+          ),
+        ),
+
+        Container
+        (
+          margin: EdgeInsets.only(top: constraints.maxHeight * 0.02),
+          child: MaterialButton
+          (
+            child: FittedBox
             (
-              "Forgot Password?",
-              style: TextStyle
+              fit: BoxFit.contain,
+              child: Text
               (
-                color: Colors.white,
-                fontSize: 22.0,
-                decoration: TextDecoration.underline,
-                fontWeight: FontWeight.bold
+                "Forgot Password?",
+                style: TextStyle
+                (
+                  color: Colors.white,
+                  fontSize: 22.0,
+                  decoration: TextDecoration.underline,
+                  fontWeight: FontWeight.bold
+                ),
               ),
             ),
-          ),
-          
-          onPressed: ()
-          {
-            Navigator.push
-            (
-              context,
-              MaterialPageRoute
+            
+            onPressed: ()
+            {
+              Navigator.push
               (
-                builder: (context)
-                {
-                  return ForgotPassword ();
-                },
-              ),
-            );
-          },
+                context,
+                MaterialPageRoute
+                (
+                  builder: (context)
+                  {
+                    return ForgotPassword ();
+                  },
+                ),
+              );
+            },
+          ),
         )
       ],
     );
   }
 }
 
-class SignUpWidget extends StatelessWidget
+class SignUpWidget
 {
-  @override
-  Widget build(BuildContext context)
+  Column buildWidget(BuildContext context, BoxConstraints constraints)
   {
-    return LayoutBuilder
+    return Column
     (
-      builder: (ctx, constraints)
-      {
-        return Column
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children:
+      [
+        Container
         (
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children:
-          [
-            Container
+          alignment: Alignment.bottomLeft,
+          child: FittedBox
+          (
+            fit: BoxFit.contain,
+            child: Text
             (
-              alignment: Alignment.bottomLeft,
-              child: FittedBox
+              "Let's get started,",
+              style: TextStyle
               (
-                fit: BoxFit.contain,
-                child: Text
-                (
-                  "Let's get started,",
-                  style: TextStyle
-                  (
-                    color: Color.fromRGBO(245, 197, 41, 1),
-                    fontSize: 45.0,
-                    fontWeight: FontWeight.bold
-                  ),
-                ),
+                color: Color.fromRGBO(245, 197, 41, 1),
+                fontSize: 45.0,
+                fontWeight: FontWeight.bold
               ),
             ),
+          ),
+        ),
 
-            Container
+        Container
+        (
+          margin: EdgeInsets.only
+          (
+            bottom: constraints.maxHeight * 0.01,
+          ),
+          alignment: Alignment.bottomLeft,
+          child: FittedBox
+          (
+            fit: BoxFit.contain,
+            child: Text
             (
-              margin: EdgeInsets.only
+              "Choose your organisation type",
+              style: TextStyle
               (
-                bottom: constraints.maxHeight * 0.01,
-              ),
-              alignment: Alignment.bottomLeft,
-              child: FittedBox
-              (
-                fit: BoxFit.contain,
-                child: Text
-                (
-                  "Choose your organisation type",
-                  style: TextStyle
-                  (
-                    color: Colors.white,
-                    fontSize: 22.0
-                  ),
-                ),
+                color: Colors.white,
+                fontSize: 22.0
               ),
             ),
+          ),
+        ),
 
-            SizedBox
-            (
-              height: 10,
-            ),
-            
-            Column
-            (
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children:
-              [
-                Container
+        
+        Container
+        (
+          margin: EdgeInsets.only(top: constraints.maxHeight * 0.01),
+          child: Column
+          (
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children:
+            [
+              Container
+              (
+                height: constraints.maxHeight * 0.15,
+                width: constraints.maxWidth * 0.8,
+
+                constraints: BoxConstraints
                 (
-                  height: constraints.maxHeight * 0.15,
-                  width: constraints.maxWidth * 0.8,
-
-                  constraints: BoxConstraints
-                  (
-                    minWidth: 300,
-                    minHeight: 110
-                  ),
-
-                  child: Container
-                  (
-                    decoration: BoxDecoration
-                    (
-                      boxShadow:
-                      [
-                        BoxShadow
-                        (
-                          color: Colors.black.withOpacity(0.3),
-                          spreadRadius: 3,
-                          blurRadius: 5,
-                          offset: Offset(0, 1), // changes position of shadow
-                        ),
-                      ],
-                      borderRadius: BorderRadius.all(Radius.circular(20))
-                    ),
-                    
-                    child: TextButton
-                    (
-                      style: TextButton.styleFrom
-                      (
-                        backgroundColor: Colors.white,
-                        shape: RoundedRectangleBorder
-                        (
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                      ),
-                      
-                      child: FittedBox
-                      (
-                        fit: BoxFit.contain,
-                        child: Column
-                        (
-                          children: 
-                          [
-                            Icon
-                            (
-                              Icons.favorite,
-                              color: Color.fromRGBO(0, 50, 193, 1),
-                              size: 55
-                            ),
-                            Text
-                            (
-                              'NGO',
-                              style: TextStyle
-                              (
-                                color: Color.fromRGBO(0, 50, 193, 1),
-                                fontWeight: FontWeight.bold,
-                                fontSize: 30
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      onPressed: ()
-                      {
-                        Navigator.push
-                        (
-                          context,
-                          MaterialPageRoute
-                          (
-                            builder: (context)
-                            {
-                              return NGORegistration();
-                            },
-                          ),
-                        );
-                      },
-                    ),
-                  ),
+                  minWidth: 300,
+                  minHeight: 110
                 ),
-
-                SizedBox
+                child: OrgButton
                 (
-                  height: constraints.maxHeight * 0.025,
-                ),
+                  title: 'NGO',
+                  icon: Icons.favorite,
+                  onPress: NGORegistration(),
+                ).buildWidget(context),
+              ),
 
-                Container
+              Container
+              (
+                margin: EdgeInsets.only(top: constraints.maxHeight * 0.025,),
+                height: constraints.maxHeight * 0.15,
+                width: constraints.maxWidth * 0.8,
+
+                constraints: BoxConstraints
                 (
-                  height: constraints.maxHeight * 0.15,
-                  width: constraints.maxWidth * 0.8,
-
-                  constraints: BoxConstraints
-                  (
-                    minWidth: 300,
-                    minHeight: 110
-                  ),
-                  child: Container
-                  (
-                    decoration: BoxDecoration
-                    (
-                      boxShadow:
-                      [
-                        BoxShadow
-                        (
-                          color: Colors.black.withOpacity(0.3),
-                          spreadRadius: 3,
-                          blurRadius: 5,
-                          offset: Offset(0, 1), // changes position of shadow
-                        ),
-                      ],
-                      borderRadius: BorderRadius.all(Radius.circular(20))
-                    ),
-                    
-                    child: TextButton
-                    (
-                      style: TextButton.styleFrom
-                      (
-                        backgroundColor: Colors.white,
-                        shape: RoundedRectangleBorder
-                        (
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                      ),
-                      
-                      child: FittedBox
-                      (
-                        fit: BoxFit.contain,
-                        child: Column
-                        (
-                          children: 
-                          [
-                            Icon
-                            (
-                              Icons.business,
-                              color: Color.fromRGBO(0, 50, 193, 1),
-                              size: 55
-                            ),
-                            Text
-                            (
-                              'BUSINESS',
-                              style: TextStyle
-                              (
-                                color: Color.fromRGBO(0, 50, 193, 1),
-                                fontWeight: FontWeight.bold,
-                                fontSize: 30
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      onPressed: ()
-                      {
-                        Navigator.push
-                        (
-                          context,
-                          MaterialPageRoute
-                          (
-                            builder: (context)
-                            {
-                              return BusinessRegistration();
-                            },
-                          ),
-                        );
-                      },
-                    ),
-                  )                      
+                  minWidth: 300,
+                  minHeight: 110
                 ),
-
-                SizedBox
+                child: OrgButton
                 (
-                  height: constraints.maxHeight * 0.025,
-                ),
-              ],
-            )
-          ],
-        );
-      }
+                  title: 'BUSINESS',
+                  icon: Icons.business,
+                  onPress: BusinessRegistration(),
+                ).buildWidget(context),
+              ),
+            ],
+          ),
+        )
+      ],
     );
   }
 }

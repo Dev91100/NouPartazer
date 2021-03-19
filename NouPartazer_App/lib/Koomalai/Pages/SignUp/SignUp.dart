@@ -4,7 +4,7 @@ import 'package:noupartazer_app/Koomalai/Pages/RegistrationPage/BusinessRegistra
 import 'package:noupartazer_app/Koomalai/Pages/SignIn/SignIn.dart';
 import 'package:noupartazer_app/Koomalai/Pages/RegistrationPage/NGORegistration.dart';
 import 'package:noupartazer_app/Koomalai/src/screens/secondMainScreen.dart';
-import 'package:noupartazer_app/Atish/Pages/UserAccess/OrgButtons.dart';
+import 'package:noupartazer_app/Atish/Pages/UserAccess/OrgButton.dart';
 
 class SignUp extends StatelessWidget
 {
@@ -288,12 +288,12 @@ class SignUp extends StatelessWidget
                                 minHeight: 110
                               ),
 
-                              child: OrgButtons
-                              (
-                                icon: Icons.favorite,
-                                title: 'NGO',
-                                onPress: NGORegistration(),
-                              ),
+                              // child: OrgButtons
+                              // (
+                              //   icon: Icons.favorite,
+                              //   title: 'NGO',
+                              //   onPress: NGORegistration(),
+                              // ),
                             ),
 
                             SizedBox
@@ -311,12 +311,12 @@ class SignUp extends StatelessWidget
                                 minWidth: 300,
                                 minHeight: 110
                               ),
-                              child: OrgButtons
-                              (
-                                icon: Icons.business,
-                                title: 'BUSINESS',
-                                onPress: BusinessRegistration(),
-                              ),                             
+                              // child: OrgButtons
+                              // (
+                              //   icon: Icons.business,
+                              //   title: 'BUSINESS',
+                              //   onPress: BusinessRegistration(),
+                              // ),                             
                             ),
 
                             SizedBox
