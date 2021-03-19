@@ -4,7 +4,7 @@ final List<BusinessTask> completedTaskList =
 [
   BusinessTask
   (
-    image: './assets/JPEG/Rectangle 12.jpg',
+    image: './assets/JPEG/ManzerPartazerLogo.jpg',
     ngoName: 'Manzer Partazer',
     date: '19/03/21',
     time: '19:00-00:30',
@@ -18,7 +18,7 @@ final List<BusinessTask> completedTaskList =
 
   BusinessTask
   (
-    image: './assets/JPEG/Rectangle 12.jpg',
+    image: './assets/JPEG/ManzerPartazerLogo.jpg',
     ngoName: 'Manzer Partazer',
     date: '19/03/21',
     time: '19:00-00:30',
@@ -32,7 +32,7 @@ final List<BusinessTask> completedTaskList =
 
   BusinessTask
   (
-    image: './assets/JPEG/Rectangle 12.jpg',
+    image: './assets/JPEG/ManzerPartazerLogo.jpg',
     ngoName: 'Manzer Partazer',
     date: '19/03/21',
     time: '19:00-00:30',

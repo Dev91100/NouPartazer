@@ -73,7 +73,7 @@ class _IndividualBottomNavState extends State<IndividualBottomNav>
           type: BottomNavigationBarType.fixed,
           selectedItemColor: selectedColor,
           unselectedItemColor: unselectedColor,
-          iconSize: 35,
+          iconSize: 32,
           showSelectedLabels: false,
           showUnselectedLabels: false,  
           elevation: 0,
