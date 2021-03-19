@@ -25,11 +25,12 @@ class NGOCancelledTask extends StatelessWidget
             [
               Expanded
               (
-                child: ListView
+                child: ListView.builder
                 (
+                  itemCount: cancelledTaskList.length,
+                  shrinkWrap: true,
                   padding: EdgeInsets.all(0),
-                  children:
-                  tasks.map((tk)
+                  itemBuilder: (BuildContext context, int index)
                   {
                     return Column
                     (
@@ -38,13 +39,13 @@ class NGOCancelledTask extends StatelessWidget
                         NGOTaskModel
                         (
                           constraints: constraints,
-                          image: tk.image,
-                          description: tk.description,
-                          locationName: tk.locationName,
-                          date: tk.date,
-                          time: tk.time,
-                          tag: tk.tag,
-                          status: tk.status,
+                          image: cancelledTaskList[index].image,
+                          description: cancelledTaskList[index].description,
+                          locationName: cancelledTaskList[index].locationName,
+                          date: cancelledTaskList[index].date,
+                          time: cancelledTaskList[index].time,
+                          tag: cancelledTaskList[index].tag,
+                          status: cancelledTaskList[index].status,
                         ),
                         CustomDivider
                         (
@@ -52,7 +53,7 @@ class NGOCancelledTask extends StatelessWidget
                         ),
                       ],
                     );
-                  }).toList(),
+                  }
                 ),
               ),
             ],

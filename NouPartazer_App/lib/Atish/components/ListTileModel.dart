@@ -6,7 +6,12 @@ class ListTileModel extends StatelessWidget
   final String titleText;
   final String subtitleText;
   final IconData trailingIcon;
-  
+  final trailingButton;
+
+  final bool hasleadingIcon;
+  final bool hastrailingIcon;
+  final bool hasTrailingButton;
+
   final Color leadingColor;
   final Color textColor;
   final Color trailingColor;
@@ -16,13 +21,20 @@ class ListTileModel extends StatelessWidget
   final bool isPage;
   final onPress;
 
+  final bool hasSuperPress;
+  final VoidCallback onSuperPress;
+
   ListTileModel
   (
     {
-      this.leadingIcon,
+      this.leadingIcon = Icons.help_outline,
       this.titleText,
       this.subtitleText,
-      this.trailingIcon,
+      this.hastrailingIcon = true,
+      this.hasleadingIcon = true,
+      this.trailingIcon = Icons.help_outline,
+      this.hasTrailingButton = false,
+      this.trailingButton,
       this.trailingColor = const Color.fromRGBO(0, 0, 0, 1),
       this.leadingColor = const Color.fromRGBO(0, 0, 0, 1),
       this.textColor = const Color.fromRGBO(0, 0, 0, 1),
@@ -30,6 +42,8 @@ class ListTileModel extends StatelessWidget
       this.isPopUpPage = false,
       this.isPage = false,
       this.onPress,
+      this.hasSuperPress = false,
+      this.onSuperPress,
     }
   );
 
@@ -38,12 +52,12 @@ class ListTileModel extends StatelessWidget
   {
     return ListTile
     (
-      leading: Icon
+      leading: (hasleadingIcon) ? Icon
       (
         leadingIcon,
         color: leadingColor,
         size: 35,
-      ),
+      ) : null,
 
       title: Text
       (
@@ -66,14 +80,14 @@ class ListTileModel extends StatelessWidget
         ),
       ) : null,
 
-      trailing: Icon
+      trailing: (hastrailingIcon) ? Icon
       (
         trailingIcon,
         color: trailingColor,
         size: 35,
-      ),
+      ) : (hasTrailingButton) ? trailingButton : null,
       
-      onTap: ()
+      onTap: (!hasSuperPress) ? ()
       {
         if(isPopUpPage)
           {
@@ -116,7 +130,7 @@ class ListTileModel extends StatelessWidget
               ),
             );
           }
-      },
+      } : () => onSuperPress(),
     );
   }
 }

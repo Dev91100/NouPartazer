@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class OrgButtons extends StatelessWidget
+class OrgButton extends StatelessWidget
 {
   @required
   final IconData icon;
@@ -9,7 +9,7 @@ class OrgButtons extends StatelessWidget
   @required
   final Widget onPress;
 
-  OrgButtons
+  OrgButton
   (
     {
       this.icon,
@@ -75,6 +75,7 @@ class OrgButtons extends StatelessWidget
             ],
           ),
         ),
+
         onPressed: ()
         {
           Navigator.push

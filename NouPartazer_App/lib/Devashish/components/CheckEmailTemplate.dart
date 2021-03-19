@@ -5,7 +5,7 @@ import 'package:noupartazer_app/Devashish/components/YellowTitlePara.dart';
 import 'package:noupartazer_app/Devashish/components/TheBackButton.dart';
 import 'package:noupartazer_app/Devashish/components/YellowTitles.dart';
 
-import 'package:noupartazer_app/Koomalai/Pages/SignIn/SignIn.dart';
+import 'package:noupartazer_app/Atish/Pages/UserAccess/UserAcessPanel.dart';
 
 class CheckEmailTemplate extends StatelessWidget 
 {
@@ -94,7 +94,7 @@ class CheckEmailTemplate extends StatelessWidget
                           context,
                           MaterialPageRoute(
                             builder: (context) {
-                              return SignIn();
+                              return UserAcessPanel();
                             },
                           ),
                         );

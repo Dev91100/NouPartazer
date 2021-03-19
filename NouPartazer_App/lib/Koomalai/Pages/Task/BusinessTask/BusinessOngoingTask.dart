@@ -24,11 +24,12 @@ class BusinessOngoingTask extends StatelessWidget
             [
               Expanded
               (
-                child: ListView
+                child: ListView.builder
                 (
+                  itemCount: ongoingTaskList.length,
+                  shrinkWrap: true,
                   padding: EdgeInsets.all(0),
-                  children:
-                  businessTasks.map((tk)
+                  itemBuilder: (BuildContext context, int index)
                   {
                     return Column
                     (
@@ -37,14 +38,14 @@ class BusinessOngoingTask extends StatelessWidget
                         BusinessTaskModel
                         (
                           constraints: constraints,
-                          image: tk.image,
-                          ngoName: tk.ngoName,
-                          description: tk.description,
-                          locationName: tk.locationName,
-                          date: tk.date,
-                          time: tk.time,
-                          tag: tk.tag,
-                          status: tk.status,
+                          image: ongoingTaskList[index].image,
+                          ngoName: ongoingTaskList[index].ngoName,
+                          description: ongoingTaskList[index].description,
+                          locationName: ongoingTaskList[index].locationName,
+                          date: ongoingTaskList[index].date,
+                          time: ongoingTaskList[index].time,
+                          tag: ongoingTaskList[index].tag,
+                          status: ongoingTaskList[index].status,
                         ),
                         CustomDivider
                         (
@@ -52,7 +53,7 @@ class BusinessOngoingTask extends StatelessWidget
                         ),
                       ],
                     );
-                  }).toList(),
+                  },
                 ),
               ),
             ],

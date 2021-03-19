@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:dotted_border/dotted_border.dart';
 
+import 'package:noupartazer_app/Atish/components/SmallButtonIconText.dart';
+
 class DottedBoxWithUploadButton extends StatelessWidget
 {
   final FileImage fileImage;
@@ -45,7 +47,7 @@ class DottedBoxWithUploadButton extends StatelessWidget
       child: DottedBorder
       (
         strokeWidth: 2,
-        dashPattern: [6, 3],
+        dashPattern: [15, 8],
         radius: Radius.circular(4),
         borderType: BorderType.RRect,
         child: ClipRRect
@@ -55,43 +57,13 @@ class DottedBoxWithUploadButton extends StatelessWidget
           (
             child: Container
             (
-              width: constraints.maxWidth * 0.42,
-              child: OutlinedButton
+              child: SmallButtonIconText
               (
-                
-                onPressed: onPress,
-                style: OutlinedButton.styleFrom
-                (
-                  primary: Colors.black,
-                  backgroundColor: Colors.grey[300],
-                  shape: const RoundedRectangleBorder
-                  (
-                      borderRadius: BorderRadius.all(Radius.circular(5))
-                  ),
-                  side: BorderSide
-                  (
-                    color: Colors.black, 
-                    width: 1.5
-                  ),
-                ),
-                // color: Colors.amber,
-                child: Padding
-                (
-                  padding: EdgeInsets.symmetric
-                  (
-                    vertical: screen.height * 0.005,
-                  ),
-                  child: Text
-                  (                      
-                    text,
-                    textAlign: TextAlign.center,
-                    style: TextStyle
-                    (
-                      fontSize: 20,
-                      color: Colors.black,
-                    ),
-                  ),
-                ),
+                text: text,
+                hasIcon: false,
+                elevation: 0,
+                hasSuperPress: true,
+                onSuperPress: onPress,
               ),
             ),
           )

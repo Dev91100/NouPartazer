@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_switch/flutter_switch.dart';
 
 import 'package:noupartazer_app/Atish/components/ListTileModel.dart';
 
 
-class SettingsModel extends StatelessWidget
+class SettingsModel extends StatefulWidget
 {
   final bool notifications;
   final bool language;
@@ -35,6 +36,54 @@ class SettingsModel extends StatelessWidget
   );
 
   @override
+  _SettingsModelState createState() => _SettingsModelState();
+}
+
+class _SettingsModelState extends State<SettingsModel>
+{
+  bool status = false;
+
+  Widget switchToggle()
+  {
+    return Container
+    (
+      width: 80,
+      child: FlutterSwitch
+      (
+        // activeIcon: Icon
+        // (
+        //   Icons.notifications_active,
+        //   color: Color.fromRGBO(0, 50, 193, 1),
+        //   size: 20,
+        // ),
+        // inactiveIcon: Icon
+        // (
+        //   Icons.notifications_off,
+        //   color: Colors.black,
+        //   size: 20,
+        // ),
+        activeColor: Color.fromRGBO(0, 50, 193, 1),
+        inactiveColor: Color.fromRGBO(102, 102, 102, 1),
+        width: 65,
+        height: 35,
+        valueFontSize: 12,
+        toggleSize: 20,
+        value: status,
+        borderRadius: 30.0,
+        padding: 8.0,
+        showOnOff: true,
+        onToggle: (val)
+        {
+          setState(()
+          {
+            status = val;
+          });
+        },
+      ),
+    );
+  }
+
+  @override
   Widget build(BuildContext context)
   {
     return Container
@@ -48,19 +97,21 @@ class SettingsModel extends StatelessWidget
       (
         children:
         [
-          (notifications) ?
+          (widget.notifications) ?
           ListTileModel
           (
             leadingIcon: Icons.notifications_none_outlined,
             titleText: 'Notifications',
             subtitleText: 'Receive notifications from the app',
-            trailingIcon: Icons.toggle_on,
+            hastrailingIcon: false,
+            hasTrailingButton: true,
+            trailingButton: switchToggle(),
             trailingColor: Color.fromRGBO(0, 50, 193, 1),
             isPopUpPage: true,
-            onPress: notificationsPage,
+            onPress: widget.notificationsPage,
           ) : Container(),
 
-          (language) ?
+          (widget.language) ?
           ListTileModel
           (
             leadingIcon: Icons.g_translate,
@@ -68,10 +119,10 @@ class SettingsModel extends StatelessWidget
             subtitleText: 'English',
             trailingIcon: Icons.keyboard_arrow_right,
             isModalPage: true,
-            onPress: languagePage,
+            onPress: widget.languagePage,
           ) : Container(),
 
-          (security) ?
+          (widget.security) ?
           ListTileModel
           (
             leadingIcon: Icons.security_outlined,
@@ -79,10 +130,10 @@ class SettingsModel extends StatelessWidget
             subtitleText: 'Update password and account settings',
             trailingIcon: Icons.keyboard_arrow_right,
             isPage: true,
-            onPress: securityPage,
+            onPress: widget.securityPage,
           ) : Container(),
 
-          (helpAndSupport) ?
+          (widget.helpAndSupport) ?
           ListTileModel
           (
             leadingIcon: Icons.support_agent_outlined,
@@ -90,20 +141,20 @@ class SettingsModel extends StatelessWidget
             subtitleText: 'For any questions, contact us',
             trailingIcon: Icons.keyboard_arrow_right,
             isPage: true,
-            onPress: helpAndSupportPage,
+            onPress: widget.helpAndSupportPage,
           ) : Container(),
 
           ListTileModel
           (
-            leadingIcon: (logOut) ? Icons.logout : Icons.settings_power,
+            leadingIcon: (widget.logOut) ? Icons.logout : Icons.settings_power,
             leadingColor: Color.fromRGBO(0, 50, 193, 1),
-            titleText: (logOut) ? 'Log out' : 'Log in',
+            titleText: (widget.logOut) ? 'Log out' : 'Log in',
             textColor: Color.fromRGBO(0, 50, 193, 1), 
             trailingIcon: Icons.keyboard_arrow_right,
             trailingColor: Color.fromRGBO(0, 50, 193, 1),
-            isPopUpPage: (logOut) ? true : false, //If the button is logout then an alert dialog should popup
-            isPage: (!logOut) ? true: false, // If the button is login then it should redirect to a page
-            onPress: logPage,
+            isPopUpPage: (widget.logOut) ? true : false, //If the button is logout then an alert dialog should popup
+            isPage: (!widget.logOut) ? true: false, // If the button is login then it should redirect to a page
+            onPress: widget.logPage,
           ),
         ],
       ),

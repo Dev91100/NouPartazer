@@ -7,17 +7,17 @@ import 'package:noupartazer_app/Koomalai/Pages/Task/BusinessTask/BusinessOngoing
 import 'package:noupartazer_app/Koomalai/Pages/Task/BusinessTask/BusinessUnassignedTask.dart';
 import 'package:noupartazer_app/Koomalai/Pages/Task/BusinessTask/BusinessCancelledTask.dart';
 
-class BusinessTask extends StatefulWidget
+class BusinessTaskTab extends StatefulWidget
 {
-  const BusinessTask({
+  const BusinessTaskTab({
     Key key,
   }) : super(key: key);
 
   @override
-  _BusinessTaskState createState() => _BusinessTaskState();
+  _BusinessTaskTabState createState() => _BusinessTaskTabState();
 }
 
-class _BusinessTaskState extends State<BusinessTask>
+class _BusinessTaskTabState extends State<BusinessTaskTab>
 {
   @override
   Widget build(BuildContext context)

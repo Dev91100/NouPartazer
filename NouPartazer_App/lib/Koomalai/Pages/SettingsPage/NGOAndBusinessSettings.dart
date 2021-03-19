@@ -21,7 +21,7 @@ class NGOAndBusinessSettings extends StatelessWidget
     (
       appBar: PageTitle
       (
-        text: 'ALL SETTINGS',
+        text: 'SETTINGS',
         hasBackButton: true,
       ),
 

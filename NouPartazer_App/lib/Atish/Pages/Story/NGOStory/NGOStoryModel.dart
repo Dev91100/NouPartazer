@@ -47,7 +47,7 @@ class NGOStoryModel extends StatelessWidget
           {
             return Card
             (
-              elevation: 2,
+              elevation: 0,
               color: Colors.transparent,
               shape: RoundedRectangleBorder
               (

@@ -40,6 +40,7 @@ class _CreateEventState extends State<CreateEvent>
             ),
             child: SingleChildScrollView
             (
+              clipBehavior: Clip.none,
               child: Form
               (
                 key: _formKey,

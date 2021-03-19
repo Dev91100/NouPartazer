@@ -46,19 +46,20 @@ class NGOCentresListWithCounter extends StatelessWidget
 
                 Expanded
                 (
-                  child: ListView
+                  child: ListView.builder
                   (
+                    itemCount: ngoCentresList.length,
+                    shrinkWrap: true,
                     padding: EdgeInsets.all(0),
-                    children:
-                    ngoCentres.map((st)
+                    itemBuilder: (BuildContext context, int index)
                     {
                       return NGOCentresModel
                       (
-                        profilePhoto: st.profilePhoto,
-                        name: st.name,
-                        description: st.description,
+                        profilePhoto: ngoCentresList[index].profilePhoto,
+                        name: ngoCentresList[index].name,
+                        description: ngoCentresList[index].description,
                       );
-                    }).toList(),
+                    }
                   ),
                 ),
               ],

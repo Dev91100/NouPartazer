@@ -97,7 +97,7 @@ class NGOProfile extends StatelessWidget
                         (
                           image: DecorationImage
                           (
-                            image: AssetImage("assets/JPEG/Rectangle 12.jpg"),
+                            image: AssetImage("assets/JPEG/ManzerPartazerLogo.jpg"),
                             fit: BoxFit.cover,
                           ),
 

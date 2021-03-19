@@ -24,11 +24,12 @@ class BusinessUnassignedTask extends StatelessWidget
             [
               Expanded
               (
-                child: ListView
+                child: ListView.builder
                 (
+                  itemCount: unassignedTaskList.length,
+                  shrinkWrap: true,
                   padding: EdgeInsets.all(0),
-                  children:
-                  businessTasks.map((tk)
+                  itemBuilder: (BuildContext context, int index)
                   {
                     return Column
                     (
@@ -37,14 +38,14 @@ class BusinessUnassignedTask extends StatelessWidget
                         BusinessTaskModel
                         (
                           constraints: constraints,
-                          image: tk.image,
-                          ngoName: tk.ngoName,
-                          description: tk.description,
-                          locationName: tk.locationName,
-                          date: tk.date,
-                          time: tk.time,
-                          tag: tk.tag,
-                          status: tk.status,
+                          image: unassignedTaskList[index].image,
+                          ngoName: unassignedTaskList[index].ngoName,
+                          description: unassignedTaskList[index].description,
+                          locationName: unassignedTaskList[index].locationName,
+                          date: unassignedTaskList[index].date,
+                          time: unassignedTaskList[index].time,
+                          tag: unassignedTaskList[index].tag,
+                          status: unassignedTaskList[index].status,
                           canCall: false,
                         ),
                         CustomDivider
@@ -53,7 +54,7 @@ class BusinessUnassignedTask extends StatelessWidget
                         ),
                       ],
                     );
-                  }).toList(),
+                  },
                 ),
               ),
             ],
