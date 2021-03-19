@@ -25,11 +25,12 @@ class NGOCompletedTask extends StatelessWidget
             [
               Expanded
               (
-                child: ListView
+                child: ListView.builder
                 (
+                  itemCount: completedTaskList.length,
+                  shrinkWrap: true,
                   padding: EdgeInsets.all(0),
-                  children:
-                  tasks.map((tk)
+                  itemBuilder: (BuildContext context, int index)
                   {
                     return Column
                     (
@@ -38,13 +39,13 @@ class NGOCompletedTask extends StatelessWidget
                         NGOTaskModel
                         (
                           constraints: constraints,
-                          image: tk.image,
-                          description: tk.description,
-                          locationName: tk.locationName,
-                          date: tk.date,
-                          time: tk.time,
-                          tag: tk.tag,
-                          status: tk.status,
+                          image: completedTaskList[index].image,
+                          description: completedTaskList[index].description,
+                          locationName: completedTaskList[index].locationName,
+                          date: completedTaskList[index].date,
+                          time: completedTaskList[index].time,
+                          tag: completedTaskList[index].tag,
+                          status: completedTaskList[index].status,
                         ),
                         CustomDivider
                         (
@@ -52,7 +53,7 @@ class NGOCompletedTask extends StatelessWidget
                         ),
                       ],
                     );
-                  }).toList(),
+                  },
                 ),
               ),
             ],

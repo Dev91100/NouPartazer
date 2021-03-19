@@ -34,7 +34,7 @@ class _NGOBottomNavState extends State<NGOBottomNav>
     home    = NGOHomePage();
     profile = NGOProfile();
     event   = CreateStory();
-    list    = NGODonation();
+    list    = Donation();
     task    = NGOTaskTab();
 
     pages       = [home, profile, event, list, task];

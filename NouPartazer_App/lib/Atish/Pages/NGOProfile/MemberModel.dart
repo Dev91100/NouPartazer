@@ -35,16 +35,16 @@ class MemberModel extends StatelessWidget
         return Container
         (
           height: screen.height * 0.6,
-          child: ListView
+          child: ListView.builder
           (
+            itemCount: memberList.length,
             shrinkWrap: true,
             padding: const EdgeInsets.only
             (
               top: 0
             ),
 
-            children:
-            members.map((mem)
+            itemBuilder: (BuildContext context, int index)
             {
               return Container
               (
@@ -100,7 +100,7 @@ class MemberModel extends StatelessWidget
                             (
                               image: DecorationImage
                               (
-                                image: AssetImage(mem.image),
+                                image: AssetImage(memberList[index].image),
                                 fit: BoxFit.cover,
                               ),
                               borderRadius: BorderRadius.circular(80.0),
@@ -123,7 +123,7 @@ class MemberModel extends StatelessWidget
                                     (
                                       child: Text
                                       (
-                                        mem.name,
+                                        memberList[index].name,
                                         style: TextStyle
                                         (
                                           fontSize: 18,
@@ -141,7 +141,7 @@ class MemberModel extends StatelessWidget
                                       scrollDirection: Axis.horizontal,
                                       child: Text
                                       (
-                                        mem.position,
+                                        memberList[index].position,
                                         style: TextStyle
                                         (
                                           fontSize: 18,
@@ -194,7 +194,7 @@ class MemberModel extends StatelessWidget
                   ),
                 ),
               );
-            }).toList(),
+            }
           ),
         );
       }  

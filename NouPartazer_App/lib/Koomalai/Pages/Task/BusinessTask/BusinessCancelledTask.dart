@@ -24,11 +24,12 @@ class BusinessCancelledTask extends StatelessWidget
             [
               Expanded
               (
-                child: ListView
+                child: ListView.builder
                 (
+                  itemCount: cancelledTaskList.length,
+                  shrinkWrap: true,
                   padding: EdgeInsets.all(0),
-                  children:
-                  businessTasks.map((tk)
+                  itemBuilder: (BuildContext context, int index)
                   {
                     return Column
                     (
@@ -37,14 +38,14 @@ class BusinessCancelledTask extends StatelessWidget
                         BusinessTaskModel
                         (
                           constraints: constraints,
-                          image: tk.image,
-                          ngoName: tk.ngoName,
-                          description: tk.description,
-                          locationName: tk.locationName,
-                          date: tk.date,
-                          time: tk.time,
-                          tag: tk.tag,
-                          status: tk.status,
+                          image: cancelledTaskList[index].image,
+                          ngoName: cancelledTaskList[index].ngoName,
+                          description: cancelledTaskList[index].description,
+                          locationName: cancelledTaskList[index].locationName,
+                          date: cancelledTaskList[index].date,
+                          time: cancelledTaskList[index].time,
+                          tag: cancelledTaskList[index].tag,
+                          status: cancelledTaskList[index].status,
                         ),
                         CustomDivider
                         (
@@ -52,7 +53,7 @@ class BusinessCancelledTask extends StatelessWidget
                         ),
                       ],
                     );
-                  }).toList(),
+                  },
                 ),
               ),
             ],

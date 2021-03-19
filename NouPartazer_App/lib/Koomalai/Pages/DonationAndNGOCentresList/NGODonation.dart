@@ -6,7 +6,7 @@ import 'package:noupartazer_app/Atish/Pages/Story/BusinessStory/BusinessStory.da
 import 'package:noupartazer_app/Atish/Pages/Story/BusinessStory/BusinessStoryList.dart';
 import 'package:noupartazer_app/Atish/Pages/Donation/DonationModel.dart';
 
-class NGODonation extends StatelessWidget
+class Donation extends StatelessWidget
 {
   final List<BusinessStory> stories = businessStoryList;
 
@@ -46,19 +46,21 @@ class NGODonation extends StatelessWidget
 
                 Expanded
                 (
-                  child: ListView
+                  child: ListView.builder
                   (
+                    itemCount: businessStoryList.length,
+                    shrinkWrap: true,
                     padding: EdgeInsets.all(0),
-                    children:
-                    stories.map((st){
+                    itemBuilder: (BuildContext context, int index)
+                    {
                       return DonationModel
                       (
-                        image: st.image,
-                        tag: st.tag,
-                        date: st.date,
-                        locationName: st.locationName,
+                        image: businessStoryList[index].image,
+                        tag: businessStoryList[index].tag,
+                        date: businessStoryList[index].date,
+                        locationName: businessStoryList[index].locationName,
                       );
-                    }).toList(),
+                    }
                   ),
                 ),
               ],
