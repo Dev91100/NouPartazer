@@ -26,6 +26,9 @@ class SmallButtonIconText extends StatelessWidget
   final bool isModalPage;
   final bool isPage;
   final bool isClose;
+  final bool scrollModalSheet;
+  final bool hasSuperPress;
+  final VoidCallback onSuperPress;
 
   SmallButtonIconText
   (
@@ -51,6 +54,9 @@ class SmallButtonIconText extends StatelessWidget
       this.elevation = 2,
       this.padding = const EdgeInsets.fromLTRB(15, 10, 15, 10),
       this.borderRadius = const BorderRadius.all(Radius.circular(10)),
+      this.scrollModalSheet = true,
+      this.hasSuperPress = false,
+      this.onSuperPress,
     }
   )
   {
@@ -99,7 +105,7 @@ class SmallButtonIconText extends StatelessWidget
         iconColor: iconColor,
         iconRight: iconRight,
       ),
-      onPressed: ()
+      onPressed: (!hasSuperPress) ? ()
       {
         if(isPopUpPage)
         {
@@ -116,6 +122,7 @@ class SmallButtonIconText extends StatelessWidget
         {
           showModalBottomSheet
           (
+            isScrollControlled: scrollModalSheet,
             shape: RoundedRectangleBorder
             (
               borderRadius: BorderRadius.only
@@ -146,7 +153,7 @@ class SmallButtonIconText extends StatelessWidget
         {
           Navigator.of(context).pop();
         }
-      },
+      } : () => onSuperPress(),
     );
   }
 }

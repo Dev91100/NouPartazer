@@ -7,6 +7,7 @@ class CustomTextField extends StatelessWidget
   final double labelSize;
   final FontWeight fontWeight;
   final String errorText;
+  final bool hasBorder;
   final double borderWidth;
   final Color borderColor;
   final bool hasSuffixIcon;
@@ -16,6 +17,7 @@ class CustomTextField extends StatelessWidget
   final EdgeInsets margin;
   final bool hasMultiline;
   final int maxLines;
+  final int minLines;
 
   CustomTextField
   (
@@ -29,11 +31,13 @@ class CustomTextField extends StatelessWidget
       this.suffixIcon = Icons.help_outline,
       this.iconSize,
       this.iconColor = const Color.fromRGBO(102, 102, 102, 1),
+      this.hasBorder = true,
       this.borderWidth = 1.5,
       this.borderColor = Colors.black,
       this.margin = const EdgeInsets.only(top: 23),
       this.hasMultiline = false,
       this.maxLines = 1,
+      this.minLines = 1,
     }
   );
 
@@ -47,6 +51,7 @@ class CustomTextField extends StatelessWidget
       (
         keyboardType: (hasMultiline) ? TextInputType.multiline : null,
         maxLines: (hasMultiline) ? maxLines : maxLines,
+        minLines: minLines,
         decoration: InputDecoration
         (
           alignLabelWithHint: true, // Align label to the top in the case of multiline
@@ -58,7 +63,7 @@ class CustomTextField extends StatelessWidget
             color: labelColor,
             fontWeight: fontWeight,
           ),
-          border: OutlineInputBorder
+          border: (hasBorder) ? OutlineInputBorder
           (
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide
@@ -66,8 +71,8 @@ class CustomTextField extends StatelessWidget
               width: borderWidth,
               color: borderColor,
             ),
-          ),
-          focusedBorder: OutlineInputBorder
+          ) : null,
+          focusedBorder: (hasBorder) ? OutlineInputBorder
           (
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide
@@ -75,8 +80,8 @@ class CustomTextField extends StatelessWidget
               width: borderWidth,
               color: borderColor,
             ),
-          ),
-          enabledBorder: OutlineInputBorder
+          ) : null,
+          enabledBorder: (hasBorder) ? OutlineInputBorder
           (
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide
@@ -84,7 +89,7 @@ class CustomTextField extends StatelessWidget
               width: borderWidth,
               color: borderColor,
             ),
-          ),
+          ) : null,
           suffixIcon: (hasSuffixIcon) ?
           Icon
           (

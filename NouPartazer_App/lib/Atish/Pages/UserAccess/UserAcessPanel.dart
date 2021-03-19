@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
 
+import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
 import 'package:noupartazer_app/Atish/components/LargeButtonIconText.dart';
 import 'package:noupartazer_app/Devashish/pages/ForgotPassword.dart';
 import 'package:noupartazer_app/Koomalai/Pages/RegistrationPage/BusinessRegistration.dart';
 import 'package:noupartazer_app/Koomalai/Pages/RegistrationPage/NGORegistration.dart';
-import 'package:noupartazer_app/Koomalai/src/screens/mainScreen.dart';
+import 'package:noupartazer_app/Koomalai/Pages/BottomNavigation/NGOBottomNav.dart';
+import 'package:noupartazer_app/Atish/Pages/UserAccess/components/OrgButton.dart';
+import 'package:noupartazer_app/Koomalai/Pages/BottomNavigation/IndividualBottomNav.dart';
 
-import 'OrgButton.dart';
-
-class UserAccessModel extends StatefulWidget
+class UserAcessPanel extends StatefulWidget
 {
   @override
-  _UserAccessModelState createState() => _UserAccessModelState();
+  _UserAcessPanelState createState() => _UserAcessPanelState();
 }
 
-class _UserAccessModelState extends State<UserAccessModel>
+class _UserAcessPanelState extends State<UserAcessPanel>
 {
   Color selectedTextColor = Colors.black;
   Color selectedButtonColor = Colors.white;
@@ -36,8 +36,8 @@ class _UserAccessModelState extends State<UserAccessModel>
       }
       else
       {
-        isSignUp = true;
         isSignIn = false;
+        isSignUp = true;
       }
     });
   }
@@ -69,7 +69,7 @@ class _UserAccessModelState extends State<UserAccessModel>
                     (
                       image: DecorationImage
                       (
-                        image: AssetImage('assets/JPEG/image.jpg'),
+                        image: AssetImage('assets/JPEG/Child.jpg'),
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -83,7 +83,7 @@ class _UserAccessModelState extends State<UserAccessModel>
                         (
                           margin: EdgeInsets.only
                           (
-                            top: constraints.maxHeight * 0.06,
+                            top: MediaQuery.of(context).padding.top + 15,
                             right: constraints.maxHeight * 0.03,
                           ),
                           alignment: Alignment.topRight,
@@ -96,6 +96,8 @@ class _UserAccessModelState extends State<UserAccessModel>
                             hasIcon: false,
                             elevation: 0,
                             borderRadius: BorderRadius.all(Radius.circular(10)),
+                            isPage: true,
+                            onPress: IndividualBottomNav(),
                           ),
                         ),
 
@@ -266,7 +268,7 @@ class SignInWidget
             hasIcon: false,
             elevation: 0,
             isPage: true,
-            onPress: MainScreen(),
+            onPress: NGOBottomNav(),
           ),
         ),
 

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-import 'package:google_fonts/google_fonts.dart';
 import 'package:noupartazer_app/Atish/Pages/Splashscreen/CustomSplashscreen.dart';
 
 void main() => runApp(MyApp());
@@ -34,14 +33,12 @@ class MyApp extends StatelessWidget
 
         textTheme: TextTheme
         (
-          headline1: GoogleFonts.comfortaa
+          headline1: TextStyle
           (
-            textStyle: TextStyle
-            (
-              fontWeight: FontWeight.bold,
-              fontSize: 18,
-              color: new Color.fromRGBO(0, 0, 0, 1),
-            ),
+            fontFamily: 'Comfortaa',
+            fontWeight: FontWeight.bold,
+            fontSize: 18,
+            color: new Color.fromRGBO(0, 0, 0, 1),
           ),
         )
       ),

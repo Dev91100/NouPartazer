@@ -12,6 +12,7 @@ class EditPhotoButton extends StatelessWidget
   final bool isPopUpPage;
   final bool isModalPage;
   final bool isPage;
+  final bool scrollModalSheet;
 
   EditPhotoButton
   (
@@ -29,6 +30,7 @@ class EditPhotoButton extends StatelessWidget
       this.isPopUpPage = false,
       this.isModalPage = false,
       this.isPage = false,
+      this.scrollModalSheet = true,
     }
   );
 
@@ -102,6 +104,7 @@ class EditPhotoButton extends StatelessWidget
                 {
                   showModalBottomSheet
                   (
+                    isScrollControlled: scrollModalSheet,
                     shape: RoundedRectangleBorder
                     (
                       borderRadius: BorderRadius.only

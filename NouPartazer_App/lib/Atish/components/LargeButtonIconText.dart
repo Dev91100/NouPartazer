@@ -26,6 +26,7 @@ class LargeButtonIconText extends StatelessWidget
   final bool isModalPage;
   final bool isPage;
   final bool isClose;
+  final bool scrollModalSheet;
   final bool hasSuperPress;
   final VoidCallback onSuperPress;
 
@@ -53,6 +54,7 @@ class LargeButtonIconText extends StatelessWidget
       this.elevation = 2,
       this.padding = const EdgeInsets.fromLTRB(15, 15, 15, 15),
       this.borderRadius = const BorderRadius.all(Radius.circular(10)),
+      this.scrollModalSheet = true,
       this.hasSuperPress = false,
       this.onSuperPress,
     }
@@ -120,6 +122,7 @@ class LargeButtonIconText extends StatelessWidget
         {
           showModalBottomSheet
           (
+            isScrollControlled: scrollModalSheet,
             shape: RoundedRectangleBorder
             (
               borderRadius: BorderRadius.only

@@ -12,6 +12,9 @@ class EditIconButton extends StatelessWidget
   final double size;
   final double elevation;
   final Color iconColor;
+  final bool scrollModalSheet;
+  final bool hasSuperPress;
+  final VoidCallback onSuperPress;
 
   EditIconButton
   (
@@ -30,6 +33,9 @@ class EditIconButton extends StatelessWidget
       this.size,
       this.elevation = 2,
       this.iconColor = const Color.fromRGBO(102, 102, 102, 1),
+      this.scrollModalSheet = true,
+      this.hasSuperPress = false,
+      this.onSuperPress,
     }
   );
 
@@ -74,7 +80,7 @@ class EditIconButton extends StatelessWidget
         
         // If isModal is true then the page is a popup and the first function is executed else
         // the second function is executed
-        onPressed: () 
+        onPressed: (!hasSuperPress) ? () 
         {
           if(isPopUpPage)
           {
@@ -91,6 +97,7 @@ class EditIconButton extends StatelessWidget
           {
             showModalBottomSheet
             (
+              isScrollControlled: scrollModalSheet,
               shape: RoundedRectangleBorder
               (
                 borderRadius: BorderRadius.only
@@ -117,7 +124,8 @@ class EditIconButton extends StatelessWidget
               ),
             );
           }
-        },
+        } : () => onSuperPress(),
+        
         child: Icon
         (
           icon,

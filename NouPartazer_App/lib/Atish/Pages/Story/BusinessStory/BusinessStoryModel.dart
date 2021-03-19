@@ -34,6 +34,7 @@ class BusinessStoryModel extends StatelessWidget
             height: screen.height * 0.77,
             initialPage: 0,
             viewportFraction: 0.92,
+            pageSnapping: true,
             enableInfiniteScroll: false,
             enlargeCenterPage: false,
           ),
@@ -42,7 +43,7 @@ class BusinessStoryModel extends StatelessWidget
           {
             return Card
             (
-              elevation: 2,
+              elevation: 0,
               color: Colors.transparent,
               shape: RoundedRectangleBorder
               (
