@@ -2,14 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 import 'package:noupartazer_app/Atish/components/IconText.dart';
-import 'package:noupartazer_app/Devashish/components/Transitions/UsingLeftToRightTransition.dart';
-import 'package:noupartazer_app/Devashish/components/Transitions/UsingRightToLeftTransition.dart';
-import 'package:noupartazer_app/Devashish/components/Transitions/UsingScaleTransition.dart';
-import 'package:noupartazer_app/Devashish/components/Transitions/UsingUpToDownTransition.dart';
-import 'package:noupartazer_app/Devashish/components/Transitions/UsingDownToUpTransition.dart';
+import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
 
 class LargeButtonIconText extends StatelessWidget
 {
+  final navigator;
   final onPress;
   final String text;
   final TextDecoration textDecoration;
@@ -34,12 +31,14 @@ class LargeButtonIconText extends StatelessWidget
   final bool scrollModalSheet;
   final bool isPageTransition;
   final int theTransitionDuration;
+  final String transitionType;
   final bool hasSuperPress;
   final VoidCallback onSuperPress;
 
   LargeButtonIconText
   (
     {
+      this.navigator,
       this.onPress,
       this.isPopUpPage = false,
       this.isModalPage = false,
@@ -63,6 +62,7 @@ class LargeButtonIconText extends StatelessWidget
       this.borderRadius = const BorderRadius.all(Radius.circular(10)),
       this.scrollModalSheet = true,
       this.isPageTransition = false,
+      this.transitionType = 'scale',
       this.hasSuperPress = false,
       this.onSuperPress,
       this.theTransitionDuration = 1,
@@ -164,9 +164,11 @@ class LargeButtonIconText extends StatelessWidget
         }
         else if(isPageTransition)
         {
-          Navigator.of(context).push
+          AllTransitions().getTransition
           (
-            UsingRightToLeftTransition(destinationPage: onPress, theTransitionDuration: theTransitionDuration)
+            context: context,
+            transitionType: transitionType,
+            onPress: onPress, 
           );
         }
       } : () => onSuperPress(),

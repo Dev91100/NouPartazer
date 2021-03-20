@@ -272,8 +272,8 @@ class SignInWidget
             hasIcon: false,
             elevation: 0,
             isPageTransition: true,
+            transitionType: 'rightToLeft',
             onPress: NGOBottomNav(),
-            theTransitionDuration: 5,
           ),
         ),
 
