@@ -6,15 +6,15 @@ import 'dart:convert';
 import 'package:image_picker/image_picker.dart';
 import 'package:http/http.dart' as http;
 
-import 'package:noupartazer_app/Devashish/components/DottedBoxWithUploadButton.dart';
+import 'package:noupartazer_app/Devashish/components/GetImage/DottedBox/DottedBoxWithUploadButton.dart';
 
-class UploadImage extends StatefulWidget
+class DottedBoxGetImage extends StatefulWidget
 {
   @override
-  _UploadImageState createState() => _UploadImageState();
+  _DottedBoxGetImageState createState() => _DottedBoxGetImageState();
 }
 
-class _UploadImageState extends State<UploadImage>
+class _DottedBoxGetImageState extends State<DottedBoxGetImage>
 {
   Future<File> file;
   // String status = '';

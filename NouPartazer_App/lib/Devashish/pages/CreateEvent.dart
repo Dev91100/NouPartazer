@@ -6,7 +6,7 @@ import 'package:noupartazer_app/Atish/components/Buttons/LargeCustomButtonIconTe
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 import 'package:noupartazer_app/Devashish/components/Checkboxes.dart';
-import 'package:noupartazer_app/Devashish/components/UploadImage.dart';
+import 'package:noupartazer_app/Devashish/components/GetImage/DottedBox/DottedBoxGetImage.dart';
 
 class CreateEvent extends StatefulWidget
 {
@@ -103,7 +103,7 @@ class _CreateEventState extends State<CreateEvent>
                     Container
                     (
                       margin: EdgeInsets.only(top: 15),
-                      child: UploadImage()
+                      child: DottedBoxGetImage()
                     ),
 
                     Container

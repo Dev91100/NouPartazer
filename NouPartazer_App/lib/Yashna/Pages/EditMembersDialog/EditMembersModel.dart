@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/Buttons/RoundIconButton.dart';
+import 'package:noupartazer_app/Devashish/components/GetImage/EditMembersPhoto/MembersPhotoGetImage.dart';
 import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/NGOAndBusinessSettings.dart';
 import 'package:noupartazer_app/Yashna/components/IconTextField.dart';
 import 'package:noupartazer_app/Yashna/components/TwoButtons.dart';
@@ -31,35 +32,7 @@ class EditMembersModel
               mainAxisSize: MainAxisSize.min,
               children:
               [
-                Container
-                (
-                  margin: EdgeInsets.only(bottom: 30),
-                  child: Stack
-                  (
-                    children:
-                    [
-                      CircleAvatar
-                      (
-                        radius: 60.0,
-                        backgroundImage: AssetImage('./assets/JPEG/blue.jpg'),
-                      ),
-
-                      EditIconButton
-                      (
-                        onPress: NGOAndBusinessSettings(),
-                        isPage: true,
-                        icon: Icons.edit_outlined,
-                        height: 40,
-                        width: 40,
-                        left: 0,
-                        top: 0,
-                        right: 0,
-                        bottom: 0,
-                        size: 30,
-                      ),
-                    ]
-                  ),
-                ),
+                MembersPhotoGetImage(),
                   
                 IconTextField
                 (

@@ -13,6 +13,8 @@ class EditPhotoButton extends StatelessWidget
   final bool isModalPage;
   final bool isPage;
   final bool scrollModalSheet;
+  final bool hasSuperPress;
+  final VoidCallback onSuperPress;
 
   EditPhotoButton
   (
@@ -31,6 +33,8 @@ class EditPhotoButton extends StatelessWidget
       this.isModalPage = false,
       this.isPage = false,
       this.scrollModalSheet = true,
+      this.hasSuperPress = false,
+      this.onSuperPress,
     }
   );
 
@@ -87,7 +91,7 @@ class EditPhotoButton extends StatelessWidget
                 ),
               ),
 
-              onPressed: () 
+              onPressed: (!hasSuperPress) ? () 
               {
                 if(isPopUpPage)
                 {
@@ -131,7 +135,7 @@ class EditPhotoButton extends StatelessWidget
                     ),
                   );
                 }
-              },
+              } : () => onSuperPress(),
               child: Icon
               (
                 icon,
