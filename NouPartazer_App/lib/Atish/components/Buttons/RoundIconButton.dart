@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:noupartazer_app/Devashish/components/PageTransitions.dart';
 
 class EditIconButton extends StatelessWidget
 {
@@ -135,10 +134,10 @@ class EditIconButton extends StatelessWidget
           }
           else if(isPageTransition)
           {
-            Navigator.of(context).push
-            (
-              PageTransitions(onPress)
-            );
+            // Navigator.of(context).push
+            // (
+            //   PageTransitions(onPress)
+            // );
           }
         } : () => onSuperPress(),
         

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 import 'package:noupartazer_app/Atish/components/IconText.dart';
-import 'package:noupartazer_app/Devashish/components/PageTransitions.dart';
 
 class SmallButtonIconText extends StatelessWidget
 {
@@ -158,10 +157,10 @@ class SmallButtonIconText extends StatelessWidget
         }
         else if(isPageTransition)
         {
-          Navigator.of(context).push
-          (
-            PageTransitions(onPress)
-          );
+          // Navigator.of(context).push
+          // (
+          //   PageTransitions(onPress)
+          // );
         }
       } : () => onSuperPress(),
     );

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:noupartazer_app/Devashish/components/Transitions/UsingRightToLeftTransition.dart';
 
 import 'package:noupartazer_app/Devashish/pages/CreateStory.dart';
 import 'package:noupartazer_app/Koomalai/Pages/DonationAndNGOCentresList/NGODonation.dart';
@@ -27,10 +28,13 @@ class _NGOBottomNavState extends State<NGOBottomNav>
   Color selectedColor;
   Color unselectedColor;
 
+  PageController _pageController;
+
   @override
   void initState()
   {
     super.initState();
+    _pageController = PageController();
     home    = NGOHomePage();
     profile = NGOProfile();
     event   = CreateStory();
@@ -42,6 +46,12 @@ class _NGOBottomNavState extends State<NGOBottomNav>
 
     selectedColor   = const Color.fromRGBO(0, 50, 193, 1);
     unselectedColor = Colors.black;
+  }
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
   }
 
   @override
@@ -72,7 +82,8 @@ class _NGOBottomNavState extends State<NGOBottomNav>
             setState(()
             {
               currentIndex = index;
-              currentPage  = pages[index];
+              _pageController.animateToPage(index,
+              duration: Duration(milliseconds: 500), curve: Curves.easeOut);
             });
           },
 
@@ -139,7 +150,20 @@ class _NGOBottomNavState extends State<NGOBottomNav>
         ),
       ),
 
-      body: currentPage,
+      body: 
+SizedBox.expand(
+        child: PageView(
+          controller: _pageController,
+          onPageChanged: (index) {
+            setState(()
+            {
+              currentIndex = index;
+              currentPage  = pages[index];
+            });
+          },
+          children: [home, profile, event, list, task]
+        ),
+      ),
     );
   }
 }
