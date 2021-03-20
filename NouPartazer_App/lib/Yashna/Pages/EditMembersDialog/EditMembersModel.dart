@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:noupartazer_app/Atish/components/RoundIconButton.dart';
+import 'package:noupartazer_app/Atish/components/Buttons/RoundIconButton.dart';
 import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/NGOAndBusinessSettings.dart';
 import 'package:noupartazer_app/Yashna/components/IconTextField.dart';
 import 'package:noupartazer_app/Yashna/components/TwoButtons.dart';

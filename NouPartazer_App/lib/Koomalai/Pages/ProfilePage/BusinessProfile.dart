@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:noupartazer_app/Atish/components/RoundIconButton.dart';
-import 'package:noupartazer_app/Atish/components/RoundPhotoButton.dart';
+import 'package:noupartazer_app/Atish/components/Buttons/RoundIconButton.dart';
+import 'package:noupartazer_app/Atish/components/Buttons/RoundPhotoButton.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 import 'package:noupartazer_app/Atish/components/CustomDivider.dart';
 import 'package:noupartazer_app/Atish/components/LongText.dart';

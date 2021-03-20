@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
-import 'package:noupartazer_app/Atish/components/CustomIconButton.dart';
+import 'package:noupartazer_app/Atish/components/Buttons/CustomIconButton.dart';
 import 'package:noupartazer_app/Atish/Pages/NGOCentres/NGOCentresModel.dart';
 import 'package:noupartazer_app/Atish/Pages/NGOCentres/NGOCentres.dart';
 import 'package:noupartazer_app/Atish/Pages/NGOCentres/NGOCentresList.dart';

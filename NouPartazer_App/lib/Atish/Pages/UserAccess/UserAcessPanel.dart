@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
-import 'package:noupartazer_app/Atish/components/LargeButtonIconText.dart';
+import 'package:noupartazer_app/Atish/components/Buttons/LargeButtonIconText.dart';
 import 'package:noupartazer_app/Devashish/pages/ForgotPassword.dart';
 import 'package:noupartazer_app/Koomalai/Pages/RegistrationPage/BusinessRegistration.dart';
 import 'package:noupartazer_app/Koomalai/Pages/RegistrationPage/NGORegistration.dart';

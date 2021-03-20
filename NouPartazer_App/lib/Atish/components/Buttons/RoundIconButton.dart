@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:noupartazer_app/Devashish/components/PageTransitions.dart';
 
 class EditIconButton extends StatelessWidget
 {
@@ -6,6 +7,7 @@ class EditIconButton extends StatelessWidget
   final bool isModalPage;
   final bool isPopUpPage;
   final bool isPage;
+  final bool isClose;
   final IconData icon;
   final double height, width;
   final double left, top, right, bottom;
@@ -13,6 +15,7 @@ class EditIconButton extends StatelessWidget
   final double elevation;
   final Color iconColor;
   final bool scrollModalSheet;
+  final bool isPageTransition;
   final bool hasSuperPress;
   final VoidCallback onSuperPress;
 
@@ -23,6 +26,7 @@ class EditIconButton extends StatelessWidget
       this.isModalPage = false,
       this.isPopUpPage = false,
       this.isPage      = false,
+      this.isClose     = false,
       this.icon,
       this.height,
       this.width,
@@ -34,6 +38,7 @@ class EditIconButton extends StatelessWidget
       this.elevation = 2,
       this.iconColor = const Color.fromRGBO(102, 102, 102, 1),
       this.scrollModalSheet = true,
+      this.isPageTransition = false,
       this.hasSuperPress = false,
       this.onSuperPress,
     }
@@ -122,6 +127,17 @@ class EditIconButton extends StatelessWidget
                   return onPress;
                 },
               ),
+            );
+          }
+          else if(isClose)
+          {
+            Navigator.of(context).pop();
+          }
+          else if(isPageTransition)
+          {
+            Navigator.of(context).push
+            (
+              PageTransitions(onPress)
             );
           }
         } : () => onSuperPress(),

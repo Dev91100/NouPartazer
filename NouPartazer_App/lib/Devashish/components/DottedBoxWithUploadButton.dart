@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:dotted_border/dotted_border.dart';
 
-import 'package:noupartazer_app/Atish/components/SmallButtonIconText.dart';
+import 'package:noupartazer_app/Atish/components/Buttons/SmallButtonIconText.dart';
 
 class DottedBoxWithUploadButton extends StatelessWidget
 {
