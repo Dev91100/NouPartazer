@@ -34,6 +34,7 @@ class EditMembersModel
                   
                 IconTextField
                 (
+                  keyboardType: TextInputType.name,
                   margin: EdgeInsets.all(0),
                   text: 'FULL NAME',
                   icon: Icons.perm_identity,
@@ -41,6 +42,7 @@ class EditMembersModel
                 
                 IconTextField
                 (
+                  keyboardType: TextInputType.text,
                   text: 'POSITION',
                   icon: Icons.title,
                 ),

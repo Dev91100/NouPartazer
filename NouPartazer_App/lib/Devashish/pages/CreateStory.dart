@@ -16,6 +16,18 @@ class _CreateStoryState extends State<CreateStory>
 {
   final _formKey = GlobalKey<FormState>();
 
+  TextEditingController titleCtrl, descriptionCtrl, tagsCtrl;
+
+  @override
+  void initState()
+  {
+    super.initState();
+    
+    titleCtrl = new TextEditingController();
+    descriptionCtrl = new TextEditingController();
+    tagsCtrl = new TextEditingController();
+  }
+
   @override
   Widget build(BuildContext context) 
   {
@@ -59,12 +71,15 @@ class _CreateStoryState extends State<CreateStory>
 
                     CustomTextField
                     (
+                      controller: titleCtrl,
+                      keyboardType: TextInputType.text,
                       labelText: 'Title',
                       hasSuffixIcon: false,
                     ),
 
                     CustomTextField
                     (
+                      controller: descriptionCtrl,
                       labelText: 'Description',
                       hasSuffixIcon: false,
                       hasMultiline: true,
@@ -73,6 +88,8 @@ class _CreateStoryState extends State<CreateStory>
 
                     CustomTextField
                     (
+                      controller: tagsCtrl,
+                      keyboardType: TextInputType.text,
                       labelText: 'Tags',
                       hasSuffixIcon: false,
                     ),

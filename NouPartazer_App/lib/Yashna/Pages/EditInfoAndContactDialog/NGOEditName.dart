@@ -7,6 +7,8 @@ class NGOEditName extends EditInfoModel
   String title;
   String text1, text2, text3;
   IconData icon1, icon2, icon3;
+  final TextInputType keyboardType1;
+  final TextInputType keyboardType2;
 
   NGOEditName
   (
@@ -18,6 +20,8 @@ class NGOEditName extends EditInfoModel
       this.text1 = 'NGO NAME',
       this.text2 = 'SUBTITLE',
       this.text3 = 'DESCRIPTION',
+      this.keyboardType1 = TextInputType.name,
+      this.keyboardType2 = TextInputType.text,
     }
   ) : super
   (
@@ -28,6 +32,8 @@ class NGOEditName extends EditInfoModel
     text1: text1,
     text2: text2,
     text3: text3,
+    keyboardType1: keyboardType1,
+    keyboardType2: keyboardType2,
     hasMultiline: true,
   );
 }

@@ -148,7 +148,7 @@ class _NGOBottomNavState extends State<NGOBottomNav>
         ),
       ),
 
-      body: 
+      body:
       SizedBox.expand
       (
         child: PageView
