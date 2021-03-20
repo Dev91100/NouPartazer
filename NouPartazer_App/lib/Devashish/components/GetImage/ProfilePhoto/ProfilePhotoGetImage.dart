@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'dart:io';
-import 'dart:convert';
+// import 'dart:convert';
 
 import 'package:image_picker/image_picker.dart';
-import 'package:http/http.dart' as http;
+// import 'package:http/http.dart' as http;
 
-import 'package:noupartazer_app/Devashish/components/GetImage/DottedBox/DottedBoxWithUploadButton.dart';
 import 'package:noupartazer_app/Devashish/components/GetImage/ProfilePhoto/ProfilePhotoWithEditButton.dart';
 
 class ProfilePhotoGetImage extends StatefulWidget
 {
-  BoxConstraints constraints;
+  final BoxConstraints constraints;
 
   ProfilePhotoGetImage
   (
