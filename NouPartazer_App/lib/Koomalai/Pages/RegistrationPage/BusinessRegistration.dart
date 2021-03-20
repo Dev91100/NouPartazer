@@ -16,6 +16,21 @@ class BusinessRegistration extends StatefulWidget
 class _BusinessRegistrationState extends State<BusinessRegistration>
 {
   final _formKey = GlobalKey<FormState>();
+  TextEditingController brnCtrl, companyNameCtrl, businessNameCtrl, websiteCtrl, contactNumberCtrl, emailCtrl, passwordCtrl;
+
+  @override
+  void initState()
+  {
+    super.initState();
+    
+    brnCtrl = new TextEditingController();
+    companyNameCtrl = new TextEditingController();
+    businessNameCtrl = new TextEditingController();
+    websiteCtrl = new TextEditingController();
+    contactNumberCtrl = new TextEditingController();
+    emailCtrl = new TextEditingController();
+    passwordCtrl = new TextEditingController();
+  }
 
   @override
   Widget build(BuildContext context)
@@ -76,42 +91,56 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
 
                     CustomTextField
                     (
+                      controller: brnCtrl,
+                      keyboardType: TextInputType.text,
                       labelText: 'BRN',
                       hasSuffixIcon: false,
                     ),
 
                     CustomTextField
                     (
+                      controller: companyNameCtrl,
+                      keyboardType: TextInputType.text,
                       labelText: 'Company Name',
                       hasSuffixIcon: false,
                     ),
 
                     CustomTextField
                     (
+                      controller: businessNameCtrl,
+                      keyboardType: TextInputType.text,
                       labelText: 'Business Name',
                       hasSuffixIcon: false,
                     ),
 
                     CustomTextField
                     (
+                      controller: websiteCtrl,
+                      keyboardType: TextInputType.url,
                       labelText: 'Website',
                       hasSuffixIcon: false,
                     ),
 
                     CustomTextField
                     (
+                      controller: contactNumberCtrl,
+                      keyboardType: TextInputType.number,
                       labelText: 'Contact Number',
                       hasSuffixIcon: false,
                     ),
 
                     CustomTextField
                     (
+                      controller: emailCtrl,
+                      keyboardType: TextInputType.emailAddress,
                       labelText: 'Email',
                       hasSuffixIcon: false,
                     ),
 
                     CustomTextField
                     (
+                      controller: passwordCtrl,
+                      keyboardType: TextInputType.visiblePassword,
                       labelText: 'Password',
                       hasSuffixIcon: false,
                     ),

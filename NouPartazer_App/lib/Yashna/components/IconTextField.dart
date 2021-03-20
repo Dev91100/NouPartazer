@@ -14,6 +14,8 @@ class IconTextField extends StatelessWidget
   final bool hasMultiline;
   final int maxLines;
   final int minLines;
+  final TextInputType keyboardType;
+  final TextEditingController controller;
 
   IconTextField
   (
@@ -30,6 +32,8 @@ class IconTextField extends StatelessWidget
       this.hasMultiline = false,
       this.maxLines = 5,
       this.minLines = 1,
+      this.keyboardType,
+      this.controller,
     }
   );
 
@@ -88,7 +92,8 @@ class IconTextField extends StatelessWidget
 
                 TextField
                 (
-                  keyboardType: (hasMultiline) ? TextInputType.multiline : null,
+                  controller: controller,
+                  keyboardType: (hasMultiline) ? TextInputType.multiline : keyboardType,
                   maxLines: (hasMultiline) ? maxLines : 1,
                   minLines: minLines,
                   style: TextStyle

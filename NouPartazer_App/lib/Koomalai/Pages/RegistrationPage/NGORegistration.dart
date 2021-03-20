@@ -21,6 +21,27 @@ class NGORegistration extends StatefulWidget
 class _NGORegistrationState extends State<NGORegistration>
 {
   final _formKey = GlobalKey<FormState>();
+  TextEditingController regNumberCtrl, regNameCtrl, ngoExpertiseCtrl, memberSizeCtrl, addressCtrl, websiteCtrl, titleCtrl, nameCtrl, surnameCtrl, positionCtrl, phoneNumberCtrl, emailCtrl, passwordCtrl;
+
+  @override
+  void initState()
+  {
+    super.initState();
+    
+    regNumberCtrl = new TextEditingController();
+    regNameCtrl = new TextEditingController();
+    ngoExpertiseCtrl = new TextEditingController();
+    memberSizeCtrl = new TextEditingController();
+    addressCtrl = new TextEditingController();
+    websiteCtrl = new TextEditingController();
+    titleCtrl = new TextEditingController();
+    nameCtrl = new TextEditingController();
+    surnameCtrl = new TextEditingController();
+    positionCtrl = new TextEditingController();
+    phoneNumberCtrl = new TextEditingController();
+    emailCtrl = new TextEditingController();
+    passwordCtrl = new TextEditingController();
+  }
 
   Future register() async
   {
@@ -57,6 +78,8 @@ class _NGORegistrationState extends State<NGORegistration>
       }
     }
   }
+
+  
 
   @override
   Widget build(BuildContext context)
@@ -128,36 +151,48 @@ class _NGORegistrationState extends State<NGORegistration>
 
                     CustomTextField
                     (
+                      controller: regNumberCtrl,
+                      keyboardType: TextInputType.text,
                       labelText: 'Registration Number',
                       hasSuffixIcon: false,
                     ),
 
                     CustomTextField
                     (
-                      labelText: 'Registred Number',
+                      controller: regNameCtrl,
+                      keyboardType: TextInputType.name,
+                      labelText: 'Registred Name',
                       hasSuffixIcon: false,
                     ),
 
                     CustomTextField
                     (
+                      controller: ngoExpertiseCtrl,
+                      keyboardType: TextInputType.text,
                       labelText: 'NGO Expertise',
                       hasSuffixIcon: false,
                     ),
 
                     CustomTextField
                     (
+                      controller: memberSizeCtrl,
+                      keyboardType: TextInputType.number,
                       labelText: 'Member Size',
                       hasSuffixIcon: false,
                     ),
 
                     CustomTextField
                     (
+                      controller: addressCtrl,
+                      keyboardType: TextInputType.streetAddress,
                       labelText: 'Address',
                       hasSuffixIcon: false,
                     ),
 
                     CustomTextField
                     (
+                      controller: websiteCtrl,
+                      keyboardType: TextInputType.url,
                       labelText: 'Website',
                       hasSuffixIcon: false,
                     ),
@@ -176,42 +211,56 @@ class _NGORegistrationState extends State<NGORegistration>
 
                     CustomTextField
                     (
+                      controller: titleCtrl,
+                      keyboardType: TextInputType.text,
                       labelText: 'Title',
                       hasSuffixIcon: false,
                     ),
 
                     CustomTextField
                     (
+                      controller: nameCtrl,
+                      keyboardType: TextInputType.name,
                       labelText: 'Name',
                       hasSuffixIcon: false,
                     ),
 
                     CustomTextField
                     (
+                      controller: surnameCtrl,
+                      keyboardType: TextInputType.name,
                       labelText: 'Surname',
                       hasSuffixIcon: false,
                     ),
 
                     CustomTextField
                     (
+                      controller: positionCtrl,
+                      keyboardType: TextInputType.text,
                       labelText: 'Position',
                       hasSuffixIcon: false,
                     ),
 
                     CustomTextField
                     (
+                      controller: phoneNumberCtrl,
+                      keyboardType: TextInputType.number,
                       labelText: 'Phone Number',
                       hasSuffixIcon: false,
                     ),
 
                     CustomTextField
                     (
+                      controller: emailCtrl,
+                      keyboardType: TextInputType.emailAddress,
                       labelText: 'Email',
                       hasSuffixIcon: false,
                     ),
 
                     CustomTextField
                     (
+                      controller: passwordCtrl,
+                      keyboardType: TextInputType.visiblePassword,
                       labelText: 'Password',
                       hasSuffixIcon: false,
                     ),

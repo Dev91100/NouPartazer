@@ -20,6 +20,10 @@ class CustomTextField extends StatelessWidget
   final int maxLines;
   final int minLines;
   final bool alignLabel;
+  final TextInputType keyboardType; 
+
+  final TextEditingController controller;
+
 
   CustomTextField
   (
@@ -42,6 +46,8 @@ class CustomTextField extends StatelessWidget
       this.maxLines = 1,
       this.minLines = 1,
       this.alignLabel = false,
+      this.keyboardType,
+      this.controller,
     }
   );
 
@@ -53,8 +59,8 @@ class CustomTextField extends StatelessWidget
       margin: margin,
       child: TextFormField
       (
-
-        keyboardType: (hasMultiline) ? TextInputType.multiline : null,
+        controller: controller,
+        keyboardType: (hasMultiline) ? TextInputType.multiline : keyboardType,
         maxLines: (hasMultiline) ? maxLines : maxLines,
         minLines: minLines,
         decoration: InputDecoration

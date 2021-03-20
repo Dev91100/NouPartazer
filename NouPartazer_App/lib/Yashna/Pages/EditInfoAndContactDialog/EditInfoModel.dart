@@ -13,6 +13,12 @@ class EditInfoModel
   final IconData icon2;
   final IconData icon3;
   final bool hasMultiline;
+  final TextInputType keyboardType1;
+  final TextInputType keyboardType2;
+  final TextInputType keyboardType3;
+  final TextEditingController controller1;
+  final TextEditingController controller2;
+  final TextEditingController controller3;
 
   const EditInfoModel
   ({
@@ -24,6 +30,12 @@ class EditInfoModel
     @required this.icon2,
     @required this.icon3,
     this.hasMultiline = false,
+    this.keyboardType1,
+    this.keyboardType2,
+    this.keyboardType3,
+    this.controller1,
+    this.controller2,
+    this.controller3,
   });
 
   StatefulBuilder displayBottomSheet(BuildContext context)
@@ -58,6 +70,8 @@ class EditInfoModel
                   [
                     IconTextField
                     (
+                      controller: controller1,
+                      keyboardType: keyboardType1,
                       margin: EdgeInsets.all(0),
                       text: text1,
                       icon: icon1,
@@ -65,12 +79,16 @@ class EditInfoModel
                     
                     IconTextField
                     (
+                      controller: controller2,
+                      keyboardType: keyboardType2,
                       text: text2,
                       icon: icon2,
                     ),
 
                     IconTextField
                     (
+                      controller: controller3,
+                      keyboardType: keyboardType3,
                       text: text3,
                       icon: icon3,
                       hasMultiline: hasMultiline,

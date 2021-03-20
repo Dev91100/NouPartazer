@@ -5,7 +5,6 @@ import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/SmallButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
-
 import 'package:noupartazer_app/Yashna/Pages/ConfirmationDialog/DeactivateAccount.dart';
 
 class Security extends StatefulWidget
@@ -17,6 +16,16 @@ class Security extends StatefulWidget
 class _SecurityState extends State<Security>
 {
   final _formKey = GlobalKey<FormState>();
+  TextEditingController oldPasswordCtrl, newPasswordCtrl;
+
+  @override
+  void initState()
+  {
+    super.initState();
+    
+    oldPasswordCtrl = new TextEditingController();
+    newPasswordCtrl = new TextEditingController();
+  }
 
   @override
   Widget build(BuildContext context)
@@ -67,12 +76,16 @@ class _SecurityState extends State<Security>
 
                       CustomTextField
                       (
+                        controller: oldPasswordCtrl,
+                        keyboardType: TextInputType.visiblePassword,
                         labelText: 'Old password',
                         suffixIcon: Icons.https_outlined,
                       ),
 
                       CustomTextField
                       (
+                        controller: newPasswordCtrl,
+                        keyboardType: TextInputType.visiblePassword,
                         labelText: 'New password',
                         suffixIcon: Icons.https_outlined,
                       ),
@@ -114,7 +127,6 @@ class _SecurityState extends State<Security>
                     elevation: 0,
                     isPopUpPage: true,
                     onPress: deactivateDialog,
-                    // openPage: ,
                   ),
                 ),
               ],

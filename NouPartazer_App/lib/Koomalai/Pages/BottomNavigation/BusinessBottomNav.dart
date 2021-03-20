@@ -28,10 +28,13 @@ class _BusinessBottomNavState extends State<BusinessBottomNav>
   Color selectedColor;
   Color unselectedColor;
 
+  PageController _pageController;
+
   @override
   void initState()
   {
     super.initState();
+    _pageController = PageController();
     home    = BusinessHomePage();
     profile = BusinessProfile();
     event   = CreateEvent();
@@ -43,6 +46,12 @@ class _BusinessBottomNavState extends State<BusinessBottomNav>
 
     selectedColor   = const Color.fromRGBO(0, 50, 193, 1);
     unselectedColor = Colors.black;
+  }
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
   }
 
   @override
@@ -73,7 +82,8 @@ class _BusinessBottomNavState extends State<BusinessBottomNav>
             setState(()
             {
               currentIndex = index;
-              currentPage  = pages[index];
+              _pageController.animateToPage(index,
+              duration: Duration(milliseconds: 1000), curve: Curves.easeOutSine);
             });
           },
 
@@ -140,7 +150,23 @@ class _BusinessBottomNavState extends State<BusinessBottomNav>
         ),
       ),
 
-      body: currentPage,
+      body:
+      SizedBox.expand
+      (
+        child: PageView
+        (
+          controller: _pageController,
+          onPageChanged: (index)
+          {
+            setState(()
+            {
+              currentIndex = index;
+              currentPage  = pages[index];
+            });
+          },
+          children: [home, profile, event, task, list]
+        ),
+      ),
     );
   }
 }

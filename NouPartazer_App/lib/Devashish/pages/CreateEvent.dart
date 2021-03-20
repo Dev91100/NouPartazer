@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+
 import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/LargeCustomButtonIconText.dart';
-
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 import 'package:noupartazer_app/Devashish/components/Checkboxes.dart';
@@ -17,9 +17,22 @@ class CreateEvent extends StatefulWidget
 class _CreateEventState extends State<CreateEvent>
 {
   final _formKey = GlobalKey<FormState>();
+  TextEditingController locationNameCtrl, locationAddressCtrl, eventTypeCtrl, eventDescriptionCtrl, dateOfEventCtrl;
 
   @override
-  Widget build(BuildContext context) 
+  void initState()
+  {
+    super.initState();
+    
+    locationNameCtrl = new TextEditingController();
+    locationAddressCtrl = new TextEditingController();
+    eventTypeCtrl = new TextEditingController();
+    eventDescriptionCtrl = new TextEditingController();
+    dateOfEventCtrl = new TextEditingController();
+  }
+
+  @override
+  Widget build(BuildContext context)
   {
     return Scaffold
     (
@@ -62,24 +75,31 @@ class _CreateEventState extends State<CreateEvent>
 
                     CustomTextField
                     (
+                      controller: locationNameCtrl,
+                      keyboardType: TextInputType.name,
                       labelText: 'Location Name',
                       hasSuffixIcon: false,
                     ),
 
                     CustomTextField
                     (
+                      controller: locationAddressCtrl,
+                      keyboardType: TextInputType.streetAddress,
                       labelText: 'Location Address',
                       hasSuffixIcon: false,
                     ),
 
                     CustomTextField
                     (
+                      controller: eventTypeCtrl,
+                      keyboardType: TextInputType.text,
                       labelText: 'Event Type',
                       hasSuffixIcon: false,
                     ),
 
                     CustomTextField
                     (
+                      controller: eventDescriptionCtrl,
                       labelText: 'Event Description',
                       hasSuffixIcon: false,
                       hasMultiline: true,
@@ -88,6 +108,8 @@ class _CreateEventState extends State<CreateEvent>
 
                     CustomTextField
                     (
+                      controller: dateOfEventCtrl,
+                      keyboardType: TextInputType.datetime,
                       labelText: 'Date of Event',
                       suffixIcon: Icons.date_range_outlined,
                     ),
