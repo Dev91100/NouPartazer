@@ -9,12 +9,12 @@ class UsingUpToDownTransition extends PageRouteBuilder
   (
     {
       this.destinationPage,
-      this.theTransitionDuration = 1,
+      this.theTransitionDuration = 1000,
     }
   )
   :super
   (
-    transitionDuration: Duration(seconds: theTransitionDuration),
+    transitionDuration: Duration(milliseconds: theTransitionDuration),
     transitionsBuilder: 
     (
       BuildContext context, 
@@ -23,7 +23,7 @@ class UsingUpToDownTransition extends PageRouteBuilder
       Widget child,
     )
     {
-      animation = CurvedAnimation(parent: animation, curve: Curves.linear);
+      animation = CurvedAnimation(parent: animation, curve: Curves.linearToEaseOut);
       
       return SlideTransition
       // return FadeTransition

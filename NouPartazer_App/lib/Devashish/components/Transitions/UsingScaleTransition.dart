@@ -9,12 +9,12 @@ class UsingScaleTransition extends PageRouteBuilder
   (
     {
       this.destinationPage,
-      this.theTransitionDuration = 1,
+      this.theTransitionDuration = 1000,
     }
   )
   :super
   (
-    transitionDuration: Duration(seconds: theTransitionDuration),
+    transitionDuration: Duration(milliseconds: theTransitionDuration),
     transitionsBuilder: 
     (
       BuildContext context, 

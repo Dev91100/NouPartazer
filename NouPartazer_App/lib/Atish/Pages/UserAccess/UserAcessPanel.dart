@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/LargeButtonIconText.dart';
+import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
+import 'package:noupartazer_app/Devashish/components/YellowTitles.dart';
 import 'package:noupartazer_app/Devashish/pages/ForgotPassword.dart';
 import 'package:noupartazer_app/Koomalai/Pages/RegistrationPage/BusinessRegistration.dart';
 import 'package:noupartazer_app/Koomalai/Pages/RegistrationPage/NGORegistration.dart';
@@ -98,6 +100,8 @@ class _UserAcessPanelState extends State<UserAcessPanel>
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                             isPageTransition: true,
                             onPress: IndividualBottomNav(),
+                            transitionType: 'rightToLeft',
+                            theTransitionDuration: 1100,
                           ),
                         ),
 
@@ -196,16 +200,7 @@ class SignInWidget
           child: FittedBox
           (
             fit: BoxFit.contain,
-            child: Text
-            (
-              "Welcome,",
-              style: TextStyle
-              (
-                color: Color.fromRGBO(245, 197, 41, 1),
-                fontSize: 45.0,
-                fontWeight: FontWeight.bold
-              ),
-            ),
+            child: YellowTitles(textContent: "Welcome,",)
           ),
         ),
 
@@ -272,8 +267,9 @@ class SignInWidget
             hasIcon: false,
             elevation: 0,
             isPageTransition: true,
-            transitionType: 'rightToLeft',
+            transitionType: 'downToUp',
             onPress: NGOBottomNav(),
+            theTransitionDuration: 1100,
           ),
         ),
 
@@ -300,17 +296,15 @@ class SignInWidget
             
             onPressed: ()
             {
-              Navigator.push
-              (
-                context,
-                MaterialPageRoute
+              
+                AllTransitions().getTransition
                 (
-                  builder: (context)
-                  {
-                    return ForgotPassword ();
-                  },
-                ),
-              );
+                  onPress: ForgotPassword(),
+                  transitionType: 'rightToLeft',
+                  theTransitionDuration: 1100,
+                  context: context,
+                );
+              
             },
           ),
         )
@@ -393,6 +387,8 @@ class SignUpWidget
                   title: 'NGO',
                   icon: Icons.favorite,
                   onPress: NGORegistration(),
+                  transitionType: 'rightToLeft',
+                  theTransitionDuration: 1100,
                 ),
               ),
 
@@ -412,6 +408,8 @@ class SignUpWidget
                   title: 'BUSINESS',
                   icon: Icons.business,
                   onPress: BusinessRegistration(),
+                  transitionType: 'rightToLeft',
+                  theTransitionDuration: 1100,                  
                 ),
               ),
             ],
