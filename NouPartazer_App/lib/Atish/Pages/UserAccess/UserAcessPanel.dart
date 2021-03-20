@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
-import 'package:noupartazer_app/Atish/components/LargeButtonIconText.dart';
+import 'package:noupartazer_app/Atish/components/Buttons/LargeButtonIconText.dart';
 import 'package:noupartazer_app/Devashish/pages/ForgotPassword.dart';
 import 'package:noupartazer_app/Koomalai/Pages/RegistrationPage/BusinessRegistration.dart';
 import 'package:noupartazer_app/Koomalai/Pages/RegistrationPage/NGORegistration.dart';
@@ -235,6 +235,8 @@ class SignInWidget
           labelColor: Colors.white,
           suffixIcon: Icons.email_outlined,
           iconColor: Colors.white,
+          hasBorder: true,
+          fillColor: Colors.transparent,
           borderColor: Colors.white,
           borderWidth: 2,
         ),
@@ -247,6 +249,8 @@ class SignInWidget
           labelColor: Colors.white,
           suffixIcon: Icons.https_outlined,
           iconColor: Colors.white,
+          hasBorder: true,
+          fillColor: Colors.transparent,
           borderColor: Colors.white,
           borderWidth: 2,
         ),

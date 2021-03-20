@@ -7,6 +7,7 @@ class CustomTextField extends StatelessWidget
   final double labelSize;
   final FontWeight fontWeight;
   final String errorText;
+  final Color fillColor;
   final bool hasBorder;
   final double borderWidth;
   final Color borderColor;
@@ -18,26 +19,29 @@ class CustomTextField extends StatelessWidget
   final bool hasMultiline;
   final int maxLines;
   final int minLines;
+  final bool alignLabel;
 
   CustomTextField
   (
     {
       this.labelText = 'This is a test',
       this.labelSize = 18,
-      this.labelColor = const Color.fromRGBO(102, 102, 102, 1),
-      this.fontWeight = FontWeight.w500,
+      this.labelColor = const Color.fromRGBO(0, 0, 0, 1),
+      this.fillColor = const Color.fromRGBO(242, 242, 242, 0.6),
+      this.fontWeight = FontWeight.w700,
       this.errorText,
       this.hasSuffixIcon = true,
       this.suffixIcon = Icons.help_outline,
       this.iconSize,
       this.iconColor = const Color.fromRGBO(102, 102, 102, 1),
-      this.hasBorder = true,
+      this.hasBorder = false,
       this.borderWidth = 1.5,
       this.borderColor = Colors.black,
       this.margin = const EdgeInsets.only(top: 23),
       this.hasMultiline = false,
       this.maxLines = 1,
       this.minLines = 1,
+      this.alignLabel = false,
     }
   );
 
@@ -49,12 +53,15 @@ class CustomTextField extends StatelessWidget
       margin: margin,
       child: TextFormField
       (
+
         keyboardType: (hasMultiline) ? TextInputType.multiline : null,
         maxLines: (hasMultiline) ? maxLines : maxLines,
         minLines: minLines,
         decoration: InputDecoration
         (
-          alignLabelWithHint: true, // Align label to the top in the case of multiline
+          filled: true,
+          fillColor: fillColor,
+          alignLabelWithHint: alignLabel, // Align label to the top in the case of multiline
           labelText: labelText,
           errorText: (errorText != null) ? errorText : null,
           labelStyle: TextStyle

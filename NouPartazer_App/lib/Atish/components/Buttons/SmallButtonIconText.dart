@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 import 'package:noupartazer_app/Atish/components/IconText.dart';
+import 'package:noupartazer_app/Devashish/components/PageTransitions.dart';
 
-class SmallCustomButtonIconText extends StatelessWidget
+class SmallButtonIconText extends StatelessWidget
 {
   final onPress;
   final String text;
@@ -27,10 +28,11 @@ class SmallCustomButtonIconText extends StatelessWidget
   final bool isPage;
   final bool isClose;
   final bool scrollModalSheet;
+  final bool isPageTransition;
   final bool hasSuperPress;
   final VoidCallback onSuperPress;
 
-  SmallCustomButtonIconText
+  SmallButtonIconText
   (
     {
       this.onPress,
@@ -40,21 +42,22 @@ class SmallCustomButtonIconText extends StatelessWidget
       this.isClose = false,
       this.text = 'Test',
       this.textDecoration = TextDecoration.none,
-      this.hasIcon = false,
+      this.hasIcon = true,
       this.icon = Icons.not_listed_location,
       this.fontSize = 18,
-      this.fontWeight = FontWeight.w700,
-      this.textColor = const Color.fromRGBO(245, 197, 41, 1),
+      this.fontWeight = FontWeight.w600,
+      this.textColor = const Color.fromRGBO(255, 255, 255, 1),
       this.iconColor = const Color.fromRGBO(255, 255, 255, 1),
-      this.hasBorder = true,
-      this.borderWidth = 2,
-      this.buttonColor = const Color.fromRGBO(255, 248, 97, 0.1),
-      this.borderColor = const Color.fromRGBO(245, 197, 41, 1),
+      this.hasBorder = false,
+      this.borderWidth = 0,
+      this.buttonColor = const Color.fromRGBO(0, 50, 193, 1),
+      this.borderColor = const Color.fromRGBO(0, 0, 0, 0),
       this.iconRight = 5,
-      this.elevation = 0,
+      this.elevation = 2,
       this.padding = const EdgeInsets.fromLTRB(15, 10, 15, 10),
       this.borderRadius = const BorderRadius.all(Radius.circular(10)),
       this.scrollModalSheet = true,
+      this.isPageTransition = false,
       this.hasSuperPress = false,
       this.onSuperPress,
     }
@@ -152,6 +155,13 @@ class SmallCustomButtonIconText extends StatelessWidget
         else if(isClose)
         {
           Navigator.of(context).pop();
+        }
+        else if(isPageTransition)
+        {
+          Navigator.of(context).push
+          (
+            PageTransitions(onPress)
+          );
         }
       } : () => onSuperPress(),
     );

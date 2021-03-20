@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:noupartazer_app/Atish/components/SmallButtonIconText.dart';
-import 'package:noupartazer_app/Atish/components/SmallCustomButtonIconText.dart';
+import 'package:noupartazer_app/Atish/components/Buttons/SmallButtonIconText.dart';
+import 'package:noupartazer_app/Atish/components/Buttons/SmallCustomButtonIconText.dart';
 
 class DonationEventModel
 {

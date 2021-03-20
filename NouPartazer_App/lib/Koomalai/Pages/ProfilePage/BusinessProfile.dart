@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import 'package:noupartazer_app/Atish/components/RoundIconButton.dart';
-import 'package:noupartazer_app/Atish/components/RoundPhotoButton.dart';
+import 'package:noupartazer_app/Atish/components/Buttons/RoundIconButton.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 import 'package:noupartazer_app/Atish/components/CustomDivider.dart';
 import 'package:noupartazer_app/Atish/components/LongText.dart';
 import 'package:noupartazer_app/Atish/components/SectionWithEditButton.dart';
 import 'package:noupartazer_app/Atish/components/ContactInfo.dart';
-import 'package:noupartazer_app/Koomalai/components/bottomSheetWidget.dart';
+import 'package:noupartazer_app/Devashish/components/GetImage/BannerPhoto/BannerPhotoGetImage.dart';
+import 'package:noupartazer_app/Devashish/components/GetImage/ProfilePhoto/ProfilePhotoGetImage.dart';
 import 'package:noupartazer_app/Atish/Pages/Story/NGOStory/NGOStory.dart';
 import 'package:noupartazer_app/Atish/Pages/Story/NGOStory/NGOStoryList.dart';
 import 'package:noupartazer_app/Atish/Pages/Story/BusinessStory/BusinessStoryModelProfile.dart';
@@ -42,85 +42,13 @@ class BusinessProfile extends StatelessWidget
                 (
                   children:
                   [
-                    Container
+                    BannerPhotoGetImage
                     (
-                      width: screen.width,
-                      height: screen.height * 0.3,
-                      decoration: BoxDecoration
-                      (
-                        image: DecorationImage
-                        (
-                          image: AssetImage('assets/JPEG/Winners.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                        boxShadow:
-                        [
-                          BoxShadow
-                          (
-                            color: Colors.black.withOpacity(0.2),
-                            spreadRadius: 4,
-                            blurRadius: 4,
-                            offset: Offset(0, 2), // changes position of shadow
-                          ),
-                        ],
-                      ),
-
-                      child: Align
-                      (
-                        alignment: Alignment.bottomRight,
-                        
-                        child: EditPhotoButton
-                          (
-                            isModalPage: true,
-                            onPress: BottomSheetWidget(),
-                          )
-                      ),
+                      screen: screen,
+                      constraints: constraints,
                     ),
 
-                    Center
-                    (
-                      child: Container
-                      (
-                        margin: EdgeInsets.only
-                        (
-                          top: constraints.maxHeight * 0.19
-                        ),
-                        width: constraints.maxWidth * 0.4,
-                        height: constraints.maxWidth * 0.4,
-
-                        decoration: BoxDecoration
-                        (
-                          image: DecorationImage
-                          (
-                            image: AssetImage('assets/JPEG/Jumbo.png'),
-                            fit: BoxFit.cover,
-                          ),
-
-                          borderRadius: BorderRadius.circular(150),
-                          boxShadow:
-                          [
-                            BoxShadow
-                            (
-                              color: Colors.black.withOpacity(0.2),
-                              spreadRadius: 4,
-                              blurRadius: 4,
-                              offset: Offset(0, 2), // changes position of shadow
-                            ),
-                          ],
-                        ),
-
-                        child: Align
-                        (
-                          alignment: Alignment.bottomRight,
-                          
-                          child: EditPhotoButton
-                          (
-                            isModalPage: true,
-                            onPress: BottomSheetWidget()
-                          )
-                        ),
-                      ),
-                    ),
+                    ProfilePhotoGetImage(constraints: constraints,),
 
                     Container
                     (
