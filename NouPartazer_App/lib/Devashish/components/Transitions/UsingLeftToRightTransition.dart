@@ -32,7 +32,7 @@ class UsingLeftToRightTransition extends PageRouteBuilder
         position: Tween
         (
           begin: Offset(-1.0, 0.0),
-          end: Offset(0.0, 0.0)
+          end: Offset(0.0, 0.0),
         )
         .animate(animation),
         // opacity: animation,
