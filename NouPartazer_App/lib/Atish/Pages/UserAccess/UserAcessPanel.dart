@@ -125,7 +125,8 @@ class _UserAcessPanelState extends State<UserAcessPanel>
                                   child: LargeButtonIconText
                                   (
                                     text: 'Sign In',
-                                    fontSize: 20,
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.w800,
                                     textColor: (isSignIn) ? selectedTextColor : unselectedTextColor,
                                     hasIcon: false,
                                     elevation: 0,
@@ -142,7 +143,8 @@ class _UserAcessPanelState extends State<UserAcessPanel>
                                   child: LargeButtonIconText
                                   (
                                     text: 'Sign Up',
-                                    fontSize: 20,
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.w800,
                                     textColor: (isSignUp) ? selectedTextColor : unselectedTextColor,
                                     hasIcon: false,
                                     elevation: 0,
@@ -221,7 +223,8 @@ class SignInWidget
               style: TextStyle
               (
                 color: Colors.white,
-                fontSize: 22.0
+                fontSize: 22.0,
+                fontWeight: FontWeight.w600,
               ),
             ),
           ),
@@ -273,7 +276,7 @@ class SignInWidget
             elevation: 0,
             isPageTransition: true,
             onPress: NGOBottomNav(),
-            theTransitionDuration: 5,
+            theTransitionDuration: 1,
           ),
         ),
 
