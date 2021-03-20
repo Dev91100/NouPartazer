@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:noupartazer_app/Devashish/components/Transitions/UsingRightToLeftTransition.dart';
 
 import 'package:noupartazer_app/Devashish/pages/CreateStory.dart';
 import 'package:noupartazer_app/Koomalai/Pages/DonationAndNGOCentresList/NGODonation.dart';
@@ -83,7 +81,7 @@ class _NGOBottomNavState extends State<NGOBottomNav>
             {
               currentIndex = index;
               _pageController.animateToPage(index,
-              duration: Duration(milliseconds: 500), curve: Curves.easeOut);
+              duration: Duration(milliseconds: 1000), curve: Curves.easeOutSine);
             });
           },
 

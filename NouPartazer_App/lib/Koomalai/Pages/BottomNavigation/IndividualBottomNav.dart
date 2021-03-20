@@ -22,10 +22,13 @@ class _IndividualBottomNavState extends State<IndividualBottomNav>
   Color selectedColor;
   Color unselectedColor;
 
+  PageController _pageController;
+
   @override
   void initState()
   {
     super.initState();
+    _pageController = PageController();
     home     = IndividualHomePage();
     list     = IndividualNGOCentresList();
     settings = IndividualSettings();
@@ -65,7 +68,8 @@ class _IndividualBottomNavState extends State<IndividualBottomNav>
             setState(()
             {
               currentIndex = index;
-              currentPage  = pages[index];
+              _pageController.animateToPage(index,
+              duration: Duration(milliseconds: 1000), curve: Curves.easeOutSine);
             });
           },
 
@@ -105,7 +109,23 @@ class _IndividualBottomNavState extends State<IndividualBottomNav>
         ),
       ),
 
-      body: currentPage,
+      body:
+      SizedBox.expand
+      (
+        child: PageView
+        (
+          controller: _pageController,
+          onPageChanged: (index)
+          {
+            setState(()
+            {
+              currentIndex = index;
+              currentPage  = pages[index];
+            });
+          },
+          children: [home, list, settings]
+        ),
+      ),
     );
   }
 }
