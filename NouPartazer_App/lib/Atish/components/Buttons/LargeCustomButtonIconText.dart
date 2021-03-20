@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/IconText.dart';
 import 'package:flutter/rendering.dart';
-import 'package:noupartazer_app/Devashish/components/Transitions/UsingRightToLeftTransition.dart';
+import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
 
 class LargeCustomButtonIconText extends StatelessWidget
 {
@@ -29,6 +29,7 @@ class LargeCustomButtonIconText extends StatelessWidget
   final bool isClose;
   final bool scrollModalSheet;
   final bool isPageTransition;
+  final String transitionType;
   final int theTransitionDuration;
   final bool hasSuperPress;
   final VoidCallback onSuperPress;
@@ -59,6 +60,7 @@ class LargeCustomButtonIconText extends StatelessWidget
       this.borderRadius = const BorderRadius.all(Radius.circular(10)),
       this.scrollModalSheet = true,
       this.isPageTransition = false,
+      this.transitionType = 'scale',
       this.hasSuperPress = false,
       this.onSuperPress,
       this.theTransitionDuration = 1,
@@ -160,9 +162,11 @@ class LargeCustomButtonIconText extends StatelessWidget
         }
         else if(isPageTransition)
         {
-          Navigator.of(context).push
+          AllTransitions().getTransition
           (
-            UsingRightToLeftTransition(destinationPage: onPress, theTransitionDuration: theTransitionDuration)
+            context: context,
+            transitionType: transitionType,
+            onPress: onPress, 
           );
         }
       } : () => onSuperPress(),

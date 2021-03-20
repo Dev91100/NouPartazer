@@ -151,10 +151,13 @@ class _NGOBottomNavState extends State<NGOBottomNav>
       ),
 
       body: 
-SizedBox.expand(
-        child: PageView(
+      SizedBox.expand
+      (
+        child: PageView
+        (
           controller: _pageController,
-          onPageChanged: (index) {
+          onPageChanged: (index)
+          {
             setState(()
             {
               currentIndex = index;

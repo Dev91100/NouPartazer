@@ -14,13 +14,15 @@ class UsingRightToLeftTransition extends PageRouteBuilder
   )
   :super
   (
+    pageBuilder: (context, animation, secAnimation)
+    => destinationPage,
     transitionDuration: Duration(seconds: theTransitionDuration),
     transitionsBuilder: 
     (
-      BuildContext context, 
-      Animation<double> animation, 
-      Animation<double> secAnimation, 
-      Widget child,
+      context, 
+      animation, 
+      secAnimation, 
+      child,
     )
     {
       animation = CurvedAnimation(parent: animation, curve: Curves.linearToEaseOut);
@@ -41,9 +43,5 @@ class UsingRightToLeftTransition extends PageRouteBuilder
         // alignment: Alignment.bottomCenter,
       );
     },
-    pageBuilder: (BuildContext context, Animation<double> animation, Animation<double> secAnimation)
-    {
-      return destinationPage;
-    }
   );
 }

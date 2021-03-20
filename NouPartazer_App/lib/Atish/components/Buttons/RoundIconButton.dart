@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
+
 class EditIconButton extends StatelessWidget
 {
   final onPress;
@@ -15,6 +17,7 @@ class EditIconButton extends StatelessWidget
   final Color iconColor;
   final bool scrollModalSheet;
   final bool isPageTransition;
+  final String transitionType;
   final bool hasSuperPress;
   final VoidCallback onSuperPress;
 
@@ -38,6 +41,7 @@ class EditIconButton extends StatelessWidget
       this.iconColor = const Color.fromRGBO(102, 102, 102, 1),
       this.scrollModalSheet = true,
       this.isPageTransition = false,
+      this.transitionType = 'scale',
       this.hasSuperPress = false,
       this.onSuperPress,
     }
@@ -134,10 +138,12 @@ class EditIconButton extends StatelessWidget
           }
           else if(isPageTransition)
           {
-            // Navigator.of(context).push
-            // (
-            //   PageTransitions(onPress)
-            // );
+            AllTransitions().getTransition
+            (
+              context: context,
+              transitionType: transitionType,
+              onPress: onPress, 
+            );
           }
         } : () => onSuperPress(),
         

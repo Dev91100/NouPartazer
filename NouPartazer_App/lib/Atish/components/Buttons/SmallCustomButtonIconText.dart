@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 import 'package:noupartazer_app/Atish/components/IconText.dart';
+import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
 
 class SmallCustomButtonIconText extends StatelessWidget
 {
@@ -28,6 +29,7 @@ class SmallCustomButtonIconText extends StatelessWidget
   final bool isClose;
   final bool scrollModalSheet;
   final bool isPageTransition;
+  final String transitionType;
   final bool hasSuperPress;
   final VoidCallback onSuperPress;
 
@@ -57,6 +59,7 @@ class SmallCustomButtonIconText extends StatelessWidget
       this.borderRadius = const BorderRadius.all(Radius.circular(10)),
       this.scrollModalSheet = true,
       this.isPageTransition = false,
+      this.transitionType = 'scale',
       this.hasSuperPress = false,
       this.onSuperPress,
     }
@@ -157,10 +160,12 @@ class SmallCustomButtonIconText extends StatelessWidget
         }
         else if(isPageTransition)
         {
-          // Navigator.of(context).push
-          // (
-          //   PageTransitions(onPress)
-          // );
+          AllTransitions().getTransition
+          (
+            context: context,
+            transitionType: transitionType,
+            onPress: onPress, 
+          );
         }
       } : () => onSuperPress(),
     );
