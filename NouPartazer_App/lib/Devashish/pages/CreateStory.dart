@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+import 'dart:convert';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:http/http.dart' as http;
+
+
 import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/LargeCustomButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
@@ -18,7 +23,7 @@ class _CreateStoryState extends State<CreateStory>
 {
   final _formKey = GlobalKey<FormState>();
 
-  TextEditingController titleCtrl, descriptionCtrl, tagsCtrl;
+  TextEditingController titleCtrl, descriptionCtrl, tagCtrl;
 
   @override
   void initState()
@@ -27,8 +32,59 @@ class _CreateStoryState extends State<CreateStory>
     
     titleCtrl = new TextEditingController();
     descriptionCtrl = new TextEditingController();
-    tagsCtrl = new TextEditingController();
+    tagCtrl = new TextEditingController();
   }
+
+
+
+Future registerUser() async
+  {
+    var url = "https://foodsharingapp.000webhostapp.com/CreateStory.php";
+    var data = 
+    {
+      "title" : titleCtrl.text,
+      "description" : descriptionCtrl.text,
+      "tag" : tagCtrl.text,
+     
+    };
+
+    var res = await http.post(url, body:data);
+
+    if(jsonDecode(res.body) == "account already exist")
+    {
+      Fluttertoast.showToast
+      (
+        msg: "Account already exist, please login.",
+        toastLength: Toast.LENGTH_SHORT,
+      );
+    }
+    else
+    {
+      if(jsonDecode(res.body) == "true")
+      {
+        Fluttertoast.showToast
+        (
+          msg: "Account created.",
+          toastLength: Toast.LENGTH_SHORT,
+        );
+      }
+      else
+      {
+        Fluttertoast.showToast
+        (
+          msg: "Error.",
+          toastLength: Toast.LENGTH_SHORT,
+        );
+      }
+    }
+  }
+
+
+
+
+
+
+
 
   @override
   Widget build(BuildContext context) 
@@ -91,7 +147,7 @@ class _CreateStoryState extends State<CreateStory>
 
                     CustomTextField
                     (
-                      controller: tagsCtrl,
+                      controller: tagCtrl,
                       keyboardType: TextInputType.text,
                       labelText: 'Tags',
                       hasSuffixIcon: false,
