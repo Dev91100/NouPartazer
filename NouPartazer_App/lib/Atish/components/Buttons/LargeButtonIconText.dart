@@ -30,7 +30,7 @@ class LargeButtonIconText extends StatelessWidget
   final bool isClose;
   final bool scrollModalSheet;
   final bool isPageTransition;
-  final int theTransitionDuration;
+  final int transitionDuration;
   final String transitionType;
   final bool hasSuperPress;
   final VoidCallback onSuperPress;
@@ -63,9 +63,9 @@ class LargeButtonIconText extends StatelessWidget
       this.scrollModalSheet = true,
       this.isPageTransition = false,
       this.transitionType = 'scale',
+      this.transitionDuration = 1100,
       this.hasSuperPress = false,
       this.onSuperPress,
-      this.theTransitionDuration = 1,
     }
   )
   {
@@ -169,7 +169,7 @@ class LargeButtonIconText extends StatelessWidget
             context: context,
             transitionType: transitionType,
             onPress: onPress, 
-            theTransitionDuration: theTransitionDuration,
+            transitionDuration: transitionDuration,
           );
         }
       } : () => onSuperPress(),

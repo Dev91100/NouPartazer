@@ -30,6 +30,7 @@ class SmallCustomButtonIconText extends StatelessWidget
   final bool scrollModalSheet;
   final bool isPageTransition;
   final String transitionType;
+  final int transitionDuration;
   final bool hasSuperPress;
   final VoidCallback onSuperPress;
 
@@ -60,6 +61,7 @@ class SmallCustomButtonIconText extends StatelessWidget
       this.scrollModalSheet = true,
       this.isPageTransition = false,
       this.transitionType = 'scale',
+      this.transitionDuration = 1100,
       this.hasSuperPress = false,
       this.onSuperPress,
     }
@@ -164,6 +166,7 @@ class SmallCustomButtonIconText extends StatelessWidget
           (
             context: context,
             transitionType: transitionType,
+            transitionDuration: transitionDuration,
             onPress: onPress, 
           );
         }

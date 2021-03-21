@@ -18,7 +18,7 @@ class EditIconButton extends StatelessWidget
   final bool scrollModalSheet;
   final bool isPageTransition;
   final String transitionType;
-  final int theTransitionDuration;
+  final int transitionDuration;
   final bool hasSuperPress;
   final VoidCallback onSuperPress;
 
@@ -43,7 +43,7 @@ class EditIconButton extends StatelessWidget
       this.scrollModalSheet = true,
       this.isPageTransition = false,
       this.transitionType = 'scale',
-      this.theTransitionDuration = 1100,
+      this.transitionDuration = 1100,
       this.hasSuperPress = false,
       this.onSuperPress,
     }
@@ -144,7 +144,7 @@ class EditIconButton extends StatelessWidget
             (
               context: context,
               transitionType: transitionType,
-              theTransitionDuration: theTransitionDuration,
+              transitionDuration: transitionDuration,
               onPress: onPress, 
             );
           }

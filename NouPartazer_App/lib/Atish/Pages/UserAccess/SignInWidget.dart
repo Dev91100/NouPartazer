@@ -131,7 +131,7 @@ class _SignInWidgetState extends State<SignInWidget>
               elevation: 0,
               isPageTransition: true,
               transitionType: 'downToUp',
-              theTransitionDuration: 1100,
+              transitionDuration: 1100,
               onPress: NGOBottomNav(),
             ),
           ),
@@ -163,7 +163,7 @@ class _SignInWidgetState extends State<SignInWidget>
                 (
                   context: context,
                   transitionType: 'rightToLeft',
-                  theTransitionDuration: 1100,
+                  transitionDuration: 1100,
                   onPress: ForgotPassword(),
                 );
               },

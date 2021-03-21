@@ -3,18 +3,18 @@ import 'package:flutter/cupertino.dart';
 class UsingLeftToRightTransition extends PageRouteBuilder
 {
   final Widget destinationPage;
-  final int theTransitionDuration;
+  final int customTransitionDuration;
 
   UsingLeftToRightTransition
   (
     {
       this.destinationPage,
-      this.theTransitionDuration = 1000,
+      this.customTransitionDuration = 1000,
     }
   )
   :super
   (
-    transitionDuration: Duration(milliseconds: theTransitionDuration),
+    transitionDuration: Duration(milliseconds: customTransitionDuration),
     transitionsBuilder: 
     (
       BuildContext context, 

@@ -68,7 +68,7 @@ class NGOProfile extends StatelessWidget
                         onPress: NGOAndBusinessSettings(),
                         isPageTransition: true,
                         transitionType: 'rightToLeft',
-                        theTransitionDuration: 1100,
+                        transitionDuration: 1100,
                         icon: Icons.settings_outlined,
                         height: 50,
                         width: 50,

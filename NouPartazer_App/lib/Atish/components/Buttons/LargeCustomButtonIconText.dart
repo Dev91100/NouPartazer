@@ -30,7 +30,7 @@ class LargeCustomButtonIconText extends StatelessWidget
   final bool scrollModalSheet;
   final bool isPageTransition;
   final String transitionType;
-  final int theTransitionDuration;
+  final int transitionDuration;
   final bool hasSuperPress;
   final VoidCallback onSuperPress;
 
@@ -60,10 +60,10 @@ class LargeCustomButtonIconText extends StatelessWidget
       this.borderRadius = const BorderRadius.all(Radius.circular(10)),
       this.scrollModalSheet = true,
       this.isPageTransition = false,
+      this.transitionDuration = 1100,
       this.transitionType = 'scale',
       this.hasSuperPress = false,
       this.onSuperPress,
-      this.theTransitionDuration = 1,
     }
   )
   {

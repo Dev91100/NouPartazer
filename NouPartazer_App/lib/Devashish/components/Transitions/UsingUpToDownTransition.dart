@@ -3,18 +3,18 @@ import 'package:flutter/cupertino.dart';
 class UsingUpToDownTransition extends PageRouteBuilder
 {
   final Widget destinationPage;
-  final int theTransitionDuration;
+  final int customTransitionDuration;
 
   UsingUpToDownTransition
   (
     {
       this.destinationPage,
-      this.theTransitionDuration = 1000,
+      this.customTransitionDuration = 1000,
     }
   )
   :super
   (
-    transitionDuration: Duration(milliseconds: theTransitionDuration),
+    transitionDuration: Duration(milliseconds: customTransitionDuration),
     transitionsBuilder: 
     (
       BuildContext context, 

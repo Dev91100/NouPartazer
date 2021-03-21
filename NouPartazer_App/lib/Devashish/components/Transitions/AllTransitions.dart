@@ -12,7 +12,7 @@ class AllTransitions
   getTransition
   (
     {
-      int theTransitionDuration = 1100,
+      int transitionDuration = 1100,
       BuildContext context,
       String transitionType,
       var onPress,
@@ -24,23 +24,23 @@ class AllTransitions
     switch(transitionType)
     {
       case 'scale':
-        transition = UsingScaleTransition(destinationPage: onPress, theTransitionDuration: theTransitionDuration);
+        transition = UsingScaleTransition(destinationPage: onPress, customTransitionDuration: transitionDuration);
         break;
       case 'downToUp':
-        transition = UsingDownToUpTransition(destinationPage: onPress, theTransitionDuration: theTransitionDuration);
+        transition = UsingDownToUpTransition(destinationPage: onPress, customTransitionDuration: transitionDuration);
         break;
       case 'upToDown':
-        transition = UsingUpToDownTransition(destinationPage: onPress, theTransitionDuration: theTransitionDuration);
+        transition = UsingUpToDownTransition(destinationPage: onPress, customTransitionDuration: transitionDuration);
         break;
       case 'leftToRight':
-        transition = UsingLeftToRightTransition(destinationPage: onPress, theTransitionDuration: theTransitionDuration);
+        transition = UsingLeftToRightTransition(destinationPage: onPress, customTransitionDuration: transitionDuration);
         break;
       case 'rightToLeft':
-        transition = UsingRightToLeftTransition(destinationPage: onPress, theTransitionDuration: theTransitionDuration);
+        transition = UsingRightToLeftTransition(destinationPage: onPress, customTransitionDuration: transitionDuration);
         break;
       default:
       {
-        transition = UsingLeftToRightTransition(destinationPage: onPress, theTransitionDuration: theTransitionDuration);
+        transition = UsingLeftToRightTransition(destinationPage: onPress, customTransitionDuration: transitionDuration);
       }
       break;
     }

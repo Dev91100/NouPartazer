@@ -10,7 +10,7 @@ class OrgButton extends StatelessWidget
   @required
   final Widget onPress;
   final String transitionType;
-  final int theTransitionDuration;
+  final int transitionDuration;
 
   OrgButton
   (
@@ -18,7 +18,7 @@ class OrgButton extends StatelessWidget
       this.icon,
       this.title,
       this.onPress,
-      this.theTransitionDuration = 1100,
+      this.transitionDuration = 1100,
       this.transitionType,
     }
   );
@@ -88,7 +88,7 @@ class OrgButton extends StatelessWidget
             context: context,
             transitionType: transitionType,
             onPress: onPress, 
-            theTransitionDuration: theTransitionDuration,
+            transitionDuration: transitionDuration,
           );
         },
       ),
