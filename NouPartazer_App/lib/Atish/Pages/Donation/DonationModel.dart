@@ -1,19 +1,26 @@
 import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/IconText.dart';
-
+import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
+import 'package:noupartazer_app/Koomalai/Pages/EventDetailsPage/EventDetails.dart';
 
 class DonationModel extends StatelessWidget
 {
   final String image, tag, date, locationName;
+  final String transitionType;
+  final int transitionDuration;
+  final onPress;
 
   DonationModel
   (
     {
+      this.onPress,
       this.image,
       this.tag,
       this.date,
-      this.locationName
+      this.locationName,
+      this.transitionType = 'rightToLeft',
+      this.transitionDuration = 1100,
     }
   );
 
@@ -204,16 +211,12 @@ class DonationModel extends StatelessWidget
           ),
           onPressed: () 
           {
-            Navigator.push
+            AllTransitions().getTransition
             (
-              context,
-              MaterialPageRoute
-              (
-                builder: (context)
-                {
-                  return ;
-                },
-              ),
+              context: context,
+              transitionType: transitionType,
+              transitionDuration: transitionDuration,
+              onPress: EventDetails(), 
             );
           },
         ),

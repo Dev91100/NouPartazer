@@ -60,8 +60,10 @@ class BusinessProfile extends StatelessWidget
                       ),
                       child: EditIconButton
                       (
-                        onPress: NGOAndBusinessSettings(),
-                        isPage: true,
+                        isPageTransition: true,
+                        transitionType: 'rightToLeft',
+                        transitionDuration: 1100,
+                        onPress: NGOAndBusinessSettings(),                       
                         icon: Icons.settings_outlined,
                         height: 50,
                         width: 50,

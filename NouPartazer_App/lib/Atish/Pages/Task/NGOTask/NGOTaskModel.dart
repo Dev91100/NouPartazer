@@ -229,8 +229,10 @@ class NGOTaskModel extends StatelessWidget
                     text: 'View Details',
                     icon: Icons.visibility_outlined,
                     iconRight: 5,
-                    isPage: true,
                     onPress: EventDetails(),
+                    transitionType: 'rightToLeft',
+                    transitionDuration: 1100,
+                    isPageTransition: true,
                   ),
 
                   Container

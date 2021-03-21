@@ -94,6 +94,8 @@ class _UserAcessPanelState extends State<UserAcessPanel>
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                             isPageTransition: true,
                             onPress: IndividualBottomNav(),
+                            transitionType: 'upToDown',
+                            transitionDuration: 1100,
                           ),
                         ),
 

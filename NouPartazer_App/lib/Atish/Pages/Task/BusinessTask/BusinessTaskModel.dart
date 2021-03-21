@@ -250,6 +250,9 @@ class BusinessTaskModel extends StatelessWidget
                     icon: Icons.visibility_outlined,
                     iconRight: 5,
                     onPress: EventDetails(),
+                    isPageTransition: true,
+                    transitionType: 'rightToLeft',
+                    transitionDuration: 1100,
                   ),
 
                   (canCall) ?

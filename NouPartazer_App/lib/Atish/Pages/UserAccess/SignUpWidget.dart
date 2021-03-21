@@ -86,6 +86,8 @@ class SignUpWidget extends StatelessWidget
                   title: 'NGO',
                   icon: Icons.favorite,
                   onPress: NGORegistration(),
+                  transitionType: 'rightToLeft',
+                  transitionDuration: 1100,                  
                 ),
               ),
 
@@ -94,7 +96,6 @@ class SignUpWidget extends StatelessWidget
                 margin: EdgeInsets.only(top: constraints.maxHeight * 0.025,),
                 height: constraints.maxHeight * 0.15,
                 width: constraints.maxWidth * 0.8,
-
                 constraints: BoxConstraints
                 (
                   minWidth: 300,
@@ -105,6 +106,8 @@ class SignUpWidget extends StatelessWidget
                   title: 'BUSINESS',
                   icon: Icons.business,
                   onPress: BusinessRegistration(),
+                  transitionType: 'rightToLeft',
+                  transitionDuration: 1100,
                 ),
               ),
             ],
