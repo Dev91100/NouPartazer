@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'dart:convert';
@@ -37,7 +38,7 @@ class _CreateStoryState extends State<CreateStory>
 
 
 
-Future registerUser() async
+Future createStoryFunction() async
   {
     var url = "https://foodsharingapp.000webhostapp.com/CreateStory.php";
     var data = 
@@ -49,22 +50,11 @@ Future registerUser() async
     };
 
     var res = await http.post(url, body:data);
-
-    if(jsonDecode(res.body) == "account already exist")
-    {
-      Fluttertoast.showToast
-      (
-        msg: "Account already exist, please login.",
-        toastLength: Toast.LENGTH_SHORT,
-      );
-    }
-    else
-    {
-      if(jsonDecode(res.body) == "true")
+ if(jsonDecode(res.body) == "true")
       {
         Fluttertoast.showToast
         (
-          msg: "Account created.",
+          msg: "Story created successfully.",
           toastLength: Toast.LENGTH_SHORT,
         );
       }
@@ -76,7 +66,6 @@ Future registerUser() async
           toastLength: Toast.LENGTH_SHORT,
         );
       }
-    }
   }
 
 
@@ -174,8 +163,8 @@ Future registerUser() async
                       (
                         text: 'Create Story',
                         hasIcon: false,
-                        onPress: storyCreatedDialog,
-                        isPopUpPage: true,
+                        hasSuperPress: true,
+                        onSuperPress: createStoryFunction,
                       )
                     ),
                   ],
