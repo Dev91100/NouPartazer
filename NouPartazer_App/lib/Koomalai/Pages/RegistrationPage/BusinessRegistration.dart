@@ -8,6 +8,7 @@ import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/LargeCustomButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
+import 'package:noupartazer_app/Koomalai/Pages/BottomNavigation/BusinessBottomNav.dart';
 
 class BusinessRegistration extends StatefulWidget
 {
@@ -208,8 +209,10 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
                       (
                         text: 'Register',
                         hasIcon: false,
-                        hasSuperPress: true,
-                        onSuperPress: registerUser,
+                        isPage: true,
+                        onPress: BusinessBottomNav(),
+                        // hasSuperPress: true,
+                        // onSuperPress: registerUser,
                       )
                     ),
                   ],
