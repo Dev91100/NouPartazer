@@ -2,15 +2,22 @@ import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/Buttons/SmallCustomButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
+import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
 
 class StatementModel
 {
   String text;
+  final onPress;
+  final bool isPageTransition;
+  final String transitionType;
 
   StatementModel
   (
     {
-      this.text = 'This is a test!'
+      this.text = 'This is a test!',
+      this.onPress,
+      this.isPageTransition = false,
+      this.transitionType = 'scale',
     }
   );
 
@@ -91,6 +98,7 @@ class StatementModel
                   child: SmallCustomButtonIconText
                   (
                     text: 'Done',
+                    onPress: onPress,
                   ),
                 ),
               ],

@@ -83,15 +83,13 @@ class OrgButton extends StatelessWidget
 
         onPressed: ()
         {
-
-            AllTransitions().getTransition
-            (
-              context: context,
-              transitionType: transitionType,
-              onPress: onPress, 
-              theTransitionDuration: theTransitionDuration,
-            );
-
+          AllTransitions().getTransition
+          (
+            context: context,
+            transitionType: transitionType,
+            onPress: onPress, 
+            theTransitionDuration: theTransitionDuration,
+          );
         },
       ),
     );
