@@ -36,9 +36,7 @@ class _CreateStoryState extends State<CreateStory>
     tagCtrl = new TextEditingController();
   }
 
-
-
-Future createStoryFunction() async
+  Future createStoryFunction() async
   {
     var url = "https://foodsharingapp.000webhostapp.com/CreateStory.php";
     var data = 
@@ -46,39 +44,33 @@ Future createStoryFunction() async
       "title" : titleCtrl.text,
       "description" : descriptionCtrl.text,
       "tag" : tagCtrl.text,
-     
     };
 
     var res = await http.post(url, body:data);
- if(jsonDecode(res.body) == "true")
-      {
-        Fluttertoast.showToast
-        (
-          msg: "Story created successfully.",
-          toastLength: Toast.LENGTH_SHORT,
-        );
-      }
-      else
-      {
-        Fluttertoast.showToast
-        (
-          msg: "Error.",
-          toastLength: Toast.LENGTH_SHORT,
-        );
-      }
+
+    if(jsonDecode(res.body) == "true")
+    {
+      Fluttertoast.showToast
+      (
+        msg: "Story created successfully.",
+        toastLength: Toast.LENGTH_SHORT,
+      );
+    }
+    else
+    {
+      Fluttertoast.showToast
+      (
+        msg: "Error.",
+        toastLength: Toast.LENGTH_SHORT,
+      );
+    }
   }
-
-
-
-
-
-
-
 
   @override
   Widget build(BuildContext context) 
   {
     var storyCreatedDialog = new StoryCreated().displayDialog(context);
+
     return Scaffold
     (
       appBar: PageTitle
