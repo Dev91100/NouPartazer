@@ -5,6 +5,10 @@ import 'package:noupartazer_app/Atish/components/Buttons/LargeCustomButtonIconTe
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 import 'package:noupartazer_app/Devashish/components/GetImage/DottedBox/DottedBoxGetImage.dart';
+import 'package:noupartazer_app/Koomalai/Pages/BottomNavigation/NGOBottomNav.dart';
+import 'package:noupartazer_app/Koomalai/Pages/HomePage/NGOHomePage.dart';
+import 'package:noupartazer_app/Yashna/Pages/StatementDialog/StoryCreated.dart';
+
 
 class CreateStory extends StatefulWidget
 {
@@ -31,6 +35,7 @@ class _CreateStoryState extends State<CreateStory>
   @override
   Widget build(BuildContext context) 
   {
+    var storyCreatedDialog = new StoryCreated().displayDialog(context);
     return Scaffold
     (
       appBar: PageTitle
@@ -115,6 +120,8 @@ class _CreateStoryState extends State<CreateStory>
                       (
                         text: 'Create Story',
                         hasIcon: false,
+                        onPress: storyCreatedDialog,
+                        isPopUpPage: true,
                       )
                     ),
                   ],

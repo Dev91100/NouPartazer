@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/LargeButtonIconText.dart';
+import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
 import 'package:noupartazer_app/Devashish/pages/ForgotPassword.dart';
 import 'package:noupartazer_app/Koomalai/Pages/RegistrationPage/BusinessRegistration.dart';
 import 'package:noupartazer_app/Koomalai/Pages/RegistrationPage/NGORegistration.dart';
@@ -98,6 +99,8 @@ class _UserAcessPanelState extends State<UserAcessPanel>
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                             isPageTransition: true,
                             onPress: IndividualBottomNav(),
+                            transitionType: 'upToDown',
+                            theTransitionDuration: 1100,
                           ),
                         ),
 
@@ -305,7 +308,8 @@ class _SignInWidgetState extends State<SignInWidget>
               hasIcon: false,
               elevation: 0,
               isPageTransition: true,
-              transitionType: 'rightToLeft',
+              transitionType: 'downToUp',
+              theTransitionDuration: 1100,
               onPress: NGOBottomNav(),
             ),
           ),
@@ -333,16 +337,12 @@ class _SignInWidgetState extends State<SignInWidget>
               
               onPressed: ()
               {
-                Navigator.push
+                AllTransitions().getTransition
                 (
-                  context,
-                  MaterialPageRoute
-                  (
-                    builder: (context)
-                    {
-                      return ForgotPassword ();
-                    },
-                  ),
+                  context: context,
+                  onPress: ForgotPassword(),
+                  transitionType: 'rightToLeft',
+                  theTransitionDuration: 1100,
                 );
               },
             ),
@@ -435,6 +435,8 @@ class SignUpWidget extends StatelessWidget
                   title: 'NGO',
                   icon: Icons.favorite,
                   onPress: NGORegistration(),
+                  transitionType: 'rightToLeft',
+                  theTransitionDuration: 1100,
                 ),
               ),
 
@@ -454,6 +456,8 @@ class SignUpWidget extends StatelessWidget
                   title: 'BUSINESS',
                   icon: Icons.business,
                   onPress: BusinessRegistration(),
+                  transitionType: 'rightToLeft',
+                  theTransitionDuration: 1100,
                 ),
               ),
             ],
