@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
+
+
+
 
 class YellowTitles extends StatelessWidget 
 {
@@ -22,9 +26,9 @@ class YellowTitles extends StatelessWidget
             textContent,
             style: TextStyle
             (
-              color: Colors.yellow[700],
+              color: Color.fromRGBO(245, 197, 41, 1),
               fontWeight: FontWeight.w800,
-              fontSize: 38,
+              fontSize: Global().yellowTitle,
               // fontFamily: Roboto,
             ),
           )

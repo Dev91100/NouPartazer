@@ -9,14 +9,14 @@ class UsingRightToLeftTransition extends PageRouteBuilder
   (
     {
       this.destinationPage,
-      this.theTransitionDuration = 1,
+      this.theTransitionDuration = 1100,
     }
   )
   :super
   (
     pageBuilder: (context, animation, secAnimation)
     => destinationPage,
-    transitionDuration: Duration(seconds: theTransitionDuration),
+    transitionDuration: Duration(milliseconds: theTransitionDuration),
     transitionsBuilder: 
     (
       context, 
@@ -30,11 +30,12 @@ class UsingRightToLeftTransition extends PageRouteBuilder
       return SlideTransition
       // return FadeTransition
       (
+        // textDirection: TextDirection.ltr,
         child: child,
         position: Tween
         (
           begin: Offset(1.0, 0.0),
-          end: Offset.zero,
+          end: Offset(0.0, 0.0),
         )
         .animate(animation),
         // opacity: animation,

@@ -8,9 +8,11 @@ import 'UsingUpToDownTransition.dart';
 
 class AllTransitions
 {
+  
   getTransition
   (
     {
+      int theTransitionDuration = 1100,
       BuildContext context,
       String transitionType,
       var onPress,
@@ -22,23 +24,23 @@ class AllTransitions
     switch(transitionType)
     {
       case 'scale':
-        transition = UsingScaleTransition(destinationPage: onPress, theTransitionDuration: 1);
+        transition = UsingScaleTransition(destinationPage: onPress, theTransitionDuration: theTransitionDuration);
         break;
       case 'downToUp':
-        transition = UsingDownToUpTransition(destinationPage: onPress, theTransitionDuration: 1);
+        transition = UsingDownToUpTransition(destinationPage: onPress, theTransitionDuration: theTransitionDuration);
         break;
       case 'upToDown':
-        transition = UsingUpToDownTransition(destinationPage: onPress, theTransitionDuration: 1);
+        transition = UsingUpToDownTransition(destinationPage: onPress, theTransitionDuration: theTransitionDuration);
         break;
       case 'leftToRight':
-        transition = UsingLeftToRightTransition(destinationPage: onPress, theTransitionDuration: 1);
+        transition = UsingLeftToRightTransition(destinationPage: onPress, theTransitionDuration: theTransitionDuration);
         break;
       case 'rightToLeft':
-        transition = UsingRightToLeftTransition(destinationPage: onPress, theTransitionDuration: 1);
+        transition = UsingRightToLeftTransition(destinationPage: onPress, theTransitionDuration: theTransitionDuration);
         break;
       default:
       {
-        transition = UsingLeftToRightTransition(destinationPage: onPress, theTransitionDuration: 1);
+        transition = UsingLeftToRightTransition(destinationPage: onPress, theTransitionDuration: theTransitionDuration);
       }
       break;
     }

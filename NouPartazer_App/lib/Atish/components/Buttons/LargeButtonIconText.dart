@@ -169,6 +169,7 @@ class LargeButtonIconText extends StatelessWidget
             context: context,
             transitionType: transitionType,
             onPress: onPress, 
+            theTransitionDuration: theTransitionDuration,
           );
         }
       } : () => onSuperPress(),

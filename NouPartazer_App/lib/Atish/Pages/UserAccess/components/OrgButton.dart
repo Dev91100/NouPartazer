@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
 
 class OrgButton extends StatelessWidget
 {
@@ -8,13 +9,17 @@ class OrgButton extends StatelessWidget
   final String title;
   @required
   final Widget onPress;
+  final String transitionType;
+  final int theTransitionDuration;
 
   OrgButton
   (
     {
       this.icon,
       this.title,
-      this.onPress
+      this.onPress,
+      this.theTransitionDuration = 1100,
+      this.transitionType,
     }
   );
 
@@ -78,17 +83,15 @@ class OrgButton extends StatelessWidget
 
         onPressed: ()
         {
-          Navigator.push
-          (
-            context,
-            MaterialPageRoute
+
+            AllTransitions().getTransition
             (
-              builder: (context)
-              {
-                return onPress;
-              },
-            ),
-          );
+              context: context,
+              transitionType: transitionType,
+              onPress: onPress, 
+              theTransitionDuration: theTransitionDuration,
+            );
+
         },
       ),
     );
