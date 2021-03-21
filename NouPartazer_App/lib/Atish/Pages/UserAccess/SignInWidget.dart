@@ -1,4 +1,8 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:http/http.dart' as http;
 
 import 'package:noupartazer_app/Atish/components/Buttons/LargeButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
@@ -32,6 +36,43 @@ class _SignInWidgetState extends State<SignInWidget>
     
     emailCtrl = new TextEditingController();
     passwordCtrl = new TextEditingController();
+  }
+
+Future userLogin() async
+  {
+    var url = "https://foodsharingapp.000webhostapp.com/SignIn.php";
+    var data = 
+    {
+      "email" : emailCtrl.text,
+      "password" : passwordCtrl.text,
+    };
+
+    var res = await http.post(url, body:data);
+
+    if(jsonDecode(res.body) == 'Account does not exist')
+    {
+      Fluttertoast.showToast
+      (
+        msg: "Account does not exist",
+        toastLength: Toast.LENGTH_SHORT,
+      );
+    }
+    else if(jsonDecode(res.body) == 'false')
+    {
+      Fluttertoast.showToast
+      (
+        msg: "Email or password incorrect",
+        toastLength: Toast.LENGTH_SHORT,
+      );
+    }
+    else
+    {
+      Fluttertoast.showToast
+      (
+        msg: "Access Granted",
+        toastLength: Toast.LENGTH_SHORT,
+      );
+    }
   }
 
   @override
@@ -129,10 +170,8 @@ class _SignInWidgetState extends State<SignInWidget>
               buttonColor: Color.fromRGBO(245, 197, 41, 1),
               hasIcon: false,
               elevation: 0,
-              isPageTransition: true,
-              transitionType: 'downToUp',
-              transitionDuration: 1100,
-              onPress: NGOBottomNav(),
+              hasSuperPress: true,
+              onSuperPress: userLogin,
             ),
           ),
 

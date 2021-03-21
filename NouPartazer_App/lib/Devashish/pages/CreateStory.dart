@@ -5,8 +5,6 @@ import 'package:noupartazer_app/Atish/components/Buttons/LargeCustomButtonIconTe
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 import 'package:noupartazer_app/Devashish/components/GetImage/DottedBox/DottedBoxGetImage.dart';
-import 'package:noupartazer_app/Koomalai/Pages/BottomNavigation/NGOBottomNav.dart';
-import 'package:noupartazer_app/Koomalai/Pages/HomePage/NGOHomePage.dart';
 import 'package:noupartazer_app/Yashna/Pages/StatementDialog/StoryCreated.dart';
 
 

@@ -13,6 +13,8 @@ class MemberModel extends StatelessWidget
   final bool isModalPage;
   final bool isPage;
 
+  final bool isEditable;
+
   MemberModel
   (
     {
@@ -21,6 +23,7 @@ class MemberModel extends StatelessWidget
       this.isPopUpPage = false,
       this.isModalPage = false,
       this.isPage = false,
+      this.isEditable = false,
     }
   );
 
@@ -155,7 +158,7 @@ class MemberModel extends StatelessWidget
                             ),
                           ),
 
-                          EditIconButton
+                          (isEditable) ? RoundIconButton
                           (
                             onPress: onPressDelete,
                             isPopUpPage: isPopUpPage,
@@ -171,13 +174,13 @@ class MemberModel extends StatelessWidget
                             size: 26,
                             elevation: 0,
                             iconColor: Color.fromRGBO(212, 0, 0, 1),
-                          ),
+                          ) : Container(),
                         ],
                       ),
                     ),
                     onPressed: () 
                     {
-                      showModalBottomSheet
+                      (isEditable) ? showModalBottomSheet
                       (
                         shape: RoundedRectangleBorder
                         (
@@ -189,7 +192,7 @@ class MemberModel extends StatelessWidget
                         ),
                         context: context,
                         builder: ((builder) => onPressEdit)
-                      );
+                      ) : Container();
                     },
                   ),
                 ),

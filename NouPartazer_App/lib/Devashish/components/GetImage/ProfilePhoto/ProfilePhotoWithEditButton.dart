@@ -7,10 +7,13 @@ class ProfilePhotoWithEditButton extends StatelessWidget
   final BoxConstraints constraints;
   final Function onPress;
 
+  final bool isEditable;
+
   ProfilePhotoWithEditButton
   (
     {
       this.fileImage,
+      this.isEditable = false,
       this.constraints,
       this.onPress
     }
@@ -66,7 +69,7 @@ class ProfilePhotoWithEditButton extends StatelessWidget
           ],
         ),
 
-        child: Align
+        child: (isEditable) ? Align
         (
           alignment: Alignment.bottomRight,
           
@@ -76,7 +79,7 @@ class ProfilePhotoWithEditButton extends StatelessWidget
             hasSuperPress: true,
             onSuperPress: onPress,
           )
-        ),
+        ) : Container(),
       ),
     );
   }

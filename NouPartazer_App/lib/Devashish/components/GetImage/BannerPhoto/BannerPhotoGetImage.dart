@@ -11,12 +11,14 @@ import 'package:noupartazer_app/Devashish/components/GetImage/BannerPhoto/Banner
 class BannerPhotoGetImage extends StatefulWidget
 {
   final screen;
+  final bool isEditable;
   final BoxConstraints constraints;
 
   BannerPhotoGetImage
   (
     {
       this.screen,
+      this.isEditable = false,
       this.constraints,
     }
   );
@@ -58,6 +60,7 @@ class _BannerPhotoGetImageState extends State<BannerPhotoGetImage>
           (
             fileImage: FileImage(snapshot.data),
             screen: widget.screen,
+            isEditable: widget.isEditable,
             constraints: widget.constraints,
             onPress: chooseImage,
           );
@@ -68,6 +71,7 @@ class _BannerPhotoGetImageState extends State<BannerPhotoGetImage>
           (
             fileImage: null,
             screen: widget.screen,
+            isEditable: widget.isEditable,
             constraints: widget.constraints,
             onPress: chooseImage,
           );
@@ -79,6 +83,7 @@ class _BannerPhotoGetImageState extends State<BannerPhotoGetImage>
           (
             fileImage: null,
             screen: widget.screen,
+            isEditable: widget.isEditable,
             constraints: widget.constraints,
             onPress: chooseImage,
           );

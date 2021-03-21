@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/Buttons/SmallCustomButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
-import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
 
 class StatementModel
 {

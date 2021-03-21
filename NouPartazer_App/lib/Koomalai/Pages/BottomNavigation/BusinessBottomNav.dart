@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:noupartazer_app/Koomalai/Pages/ProfilePage/Business/EditableBusinessProfile.dart';
 
 import 'package:noupartazer_app/Koomalai/Pages/TabBar/BusinessTaskTab.dart';
 
 import 'package:noupartazer_app/Devashish/pages/CreateEvent.dart';
 import 'package:noupartazer_app/Koomalai/Pages/DonationAndNGOCentresList/BusinessNGOCentresList.dart';
-import 'package:noupartazer_app/Koomalai/Pages/ProfilePage/BusinessProfile.dart';
 import 'package:noupartazer_app/Koomalai/Pages/HomePage/BusinessHomePage.dart';
 
 class BusinessBottomNav extends StatefulWidget
@@ -36,7 +36,7 @@ class _BusinessBottomNavState extends State<BusinessBottomNav>
     super.initState();
     _pageController = PageController();
     home    = BusinessHomePage();
-    profile = BusinessProfile();
+    profile = EditableBusinessProfile();
     event   = CreateEvent();
     task    = BusinessTaskTab();
     list    = BusinessNGOCentresList();

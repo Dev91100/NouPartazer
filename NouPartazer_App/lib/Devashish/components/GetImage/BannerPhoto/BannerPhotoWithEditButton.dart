@@ -8,10 +8,13 @@ class BannerPhotoWithEditButton extends StatelessWidget
   final BoxConstraints constraints;
   final Function onPress;
 
+  final bool isEditable;
+
   BannerPhotoWithEditButton
   (
     {
       this.screen,
+      this.isEditable = false,
       this.fileImage,
       this.constraints,
       this.onPress,
@@ -60,7 +63,7 @@ class BannerPhotoWithEditButton extends StatelessWidget
         ],
       ),
 
-      child: Align
+      child: (isEditable) ? Align
       (
         alignment: Alignment.bottomRight,
         
@@ -70,7 +73,7 @@ class BannerPhotoWithEditButton extends StatelessWidget
             hasSuperPress: true,
             onSuperPress: onPress,
           )
-      ),
+      ) : Container(),
     );
   }
 }

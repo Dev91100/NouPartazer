@@ -11,6 +11,7 @@ class LargeCustomButtonIconText extends StatelessWidget
   final TextDecoration textDecoration;
   final Color textColor;
   final Color iconColor;
+  final Color primaryColor;
   final bool hasBorder;
   final Color borderColor;
   final double borderWidth;
@@ -50,6 +51,7 @@ class LargeCustomButtonIconText extends StatelessWidget
       this.fontWeight = FontWeight.w700,
       this.textColor = const Color.fromRGBO(245, 197, 41, 1),
       this.iconColor = const Color.fromRGBO(255, 255, 255, 1),
+      this.primaryColor = const Color.fromRGBO(0, 50, 193, 1),
       this.hasBorder = true,
       this.borderWidth = 2,
       this.buttonColor = const Color.fromRGBO(255, 248, 97, 0.1),
@@ -82,10 +84,11 @@ class LargeCustomButtonIconText extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return ElevatedButton
+    return TextButton
     (
       style: OutlinedButton.styleFrom
       (
+        primary: primaryColor,
         backgroundColor: buttonColor,
         padding: padding,
         elevation: elevation,

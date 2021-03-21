@@ -42,44 +42,57 @@ class _NGORegistrationState extends State<NGORegistration>
     emailCtrl = new TextEditingController();
     passwordCtrl = new TextEditingController();
   }
-
-  Future register() async
+  
+  Future registerUser() async
   {
-
-    var url = "https://foodsharingapp.000webhostapp.com/register.php";
-
-    var res = await http.post
-    (
-      url,body:
-      {
-        "RegistrationNumber":"1234",
-        "RegisteredName":"Testing",
-        "NGOExpertise":"Test",
-        "MemberSize":"100",
-        "Address":"Test Address",
-        "Website":"Test@test.com",
-        "PhoneNumber":"54874511",
-      }
-    );
-
-    if(jsonDecode(res.body) == "account already exists")
+    var url = "https://foodsharingapp.000webhostapp.com/NGORegistration.php";
+    var data = 
     {
-      Fluttertoast.showToast(msg: "account exists, Please login",toastLength: Toast.LENGTH_SHORT);
+      "regNumber" : regNumberCtrl.text,
+      "regName" : regNameCtrl.text,
+      "ngoExpertise" : ngoExpertiseCtrl.text,
+      "memberSize" : memberSizeCtrl.text,
+      "address" : addressCtrl.text,
+      "website" : websiteCtrl.text,
+      "title" : titleCtrl.text,
+      "name" : nameCtrl.text,
+      "surname" : surnameCtrl.text,
+      "position" : positionCtrl.text,
+      "phoneNumber" : phoneNumberCtrl.text,
+      "email" : emailCtrl.text,
+      "password" : passwordCtrl.text,
+    };
+
+    var res = await http.post(url, body:data);
+
+    if(jsonDecode(res.body) == "account already exist")
+    {
+      Fluttertoast.showToast
+      (
+        msg: "Account already exist, please login.",
+        toastLength: Toast.LENGTH_SHORT,
+      );
     }
     else
     {
       if(jsonDecode(res.body) == "true")
       {
-        Fluttertoast.showToast(msg: "account created",toastLength: Toast.LENGTH_SHORT);
+        Fluttertoast.showToast
+        (
+          msg: "Account created.",
+          toastLength: Toast.LENGTH_SHORT,
+        );
       }
       else
       {
-        Fluttertoast.showToast(msg: "error",toastLength: Toast.LENGTH_SHORT);
+        Fluttertoast.showToast
+        (
+          msg: "Error.",
+          toastLength: Toast.LENGTH_SHORT,
+        );
       }
     }
   }
-
-  
 
   @override
   Widget build(BuildContext context)
@@ -280,6 +293,8 @@ class _NGORegistrationState extends State<NGORegistration>
                       (
                         text: 'Register',
                         hasIcon: false,
+                        hasSuperPress: true,
+                        onSuperPress: registerUser,
                       )
                     ),
                   ],

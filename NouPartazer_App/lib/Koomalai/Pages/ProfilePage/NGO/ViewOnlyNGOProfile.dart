@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:noupartazer_app/Atish/components/Buttons/RoundIconButton.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 import 'package:noupartazer_app/Atish/components/CustomDivider.dart';
 import 'package:noupartazer_app/Atish/components/LongText.dart';
@@ -12,13 +11,12 @@ import 'package:noupartazer_app/Atish/Pages/NGOProfile/MemberModel.dart';
 import 'package:noupartazer_app/Atish/Pages/Story/NGOStory/NGOStory.dart';
 import 'package:noupartazer_app/Atish/Pages/Story/NGOStory/NGOStoryList.dart';
 import 'package:noupartazer_app/Atish/Pages/Story/NGOStory/NGOStoryModelProfile.dart';
-import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/NGOAndBusinessSettings.dart';
 import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContactDialog/NGOEditName.dart';
 import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContactDialog/EditContact.dart';
 import 'package:noupartazer_app/Yashna/Pages/EditMembersDialog/EditMembersModel.dart';
 import 'package:noupartazer_app/Yashna/Pages/ConfirmationDialog/DeleteMember.dart';
 
-class NGOProfile extends StatelessWidget
+class ViewOnlyNGOProfile extends StatelessWidget
 {
   final List<NGOStory> ngoStory = ngoStoryList;
   
@@ -54,31 +52,6 @@ class NGOProfile extends StatelessWidget
                     ),
 
                     ProfilePhotoGetImage(constraints: constraints,),
-
-                    Container
-                    (
-                      alignment: Alignment.bottomRight,
-
-                      margin: EdgeInsets.only
-                      (
-                        top: screen.height * 0.31,
-                      ),
-                      child: EditIconButton
-                      (
-                        onPress: NGOAndBusinessSettings(),
-                        isPageTransition: true,
-                        transitionType: 'rightToLeft',
-                        transitionDuration: 1100,
-                        icon: Icons.settings_outlined,
-                        height: 50,
-                        width: 50,
-                        left: 10,
-                        top: 10,
-                        right: 20,
-                        bottom: constraints.maxHeight * 0.015,
-                        size: 35,
-                      ),
-                    ),
                   ],
                 ),
 

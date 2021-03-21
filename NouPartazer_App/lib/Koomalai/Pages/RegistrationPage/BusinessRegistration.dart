@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
+import 'dart:convert';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:http/http.dart' as http;
+
 import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/LargeCustomButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
-import 'package:noupartazer_app/Koomalai/Pages/BottomNavigation/BusinessBottomNav.dart';
-
 
 class BusinessRegistration extends StatefulWidget
 {
@@ -17,6 +19,8 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
 {
   final _formKey = GlobalKey<FormState>();
   TextEditingController brnCtrl, companyNameCtrl, businessNameCtrl, websiteCtrl, contactNumberCtrl, emailCtrl, passwordCtrl;
+
+  bool processing = false;
 
   @override
   void initState()
@@ -30,6 +34,51 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
     contactNumberCtrl = new TextEditingController();
     emailCtrl = new TextEditingController();
     passwordCtrl = new TextEditingController();
+  }
+
+  Future registerUser() async
+  {
+    var url = "https://foodsharingapp.000webhostapp.com/BusinessRegistration.php";
+    var data = 
+    {
+      "brn" : brnCtrl.text,
+      "companyName" : companyNameCtrl.text,
+      "businessName" : businessNameCtrl.text,
+      "website" : websiteCtrl.text,
+      "contactNumber" : contactNumberCtrl.text,
+      "email" : emailCtrl.text,
+      "password" : passwordCtrl.text,
+    };
+
+    var res = await http.post(url, body:data);
+
+    if(jsonDecode(res.body) == "account already exist")
+    {
+      Fluttertoast.showToast
+      (
+        msg: "Account already exist, please login.",
+        toastLength: Toast.LENGTH_SHORT,
+      );
+    }
+    else
+    {
+      if(jsonDecode(res.body) == "true")
+      {
+        Fluttertoast.showToast
+        (
+          msg: "Account created.",
+          toastLength: Toast.LENGTH_SHORT,
+        );
+      }
+      else
+      {
+        Fluttertoast.showToast
+        (
+          msg: "Error.",
+          toastLength: Toast.LENGTH_SHORT,
+        );
+      }
+    }
   }
 
   @override
@@ -153,15 +202,14 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
                         left: 15,
                         bottom: 40
                       ),
-                      
                       margin: EdgeInsets.only(top: 20),
                       width: constraints.maxWidth,
                       child: LargeCustomButtonIconText
                       (
                         text: 'Register',
                         hasIcon: false,
-                        isPage: true,
-                        onPress: BusinessBottomNav(),
+                        hasSuperPress: true,
+                        onSuperPress: registerUser,
                       )
                     ),
                   ],

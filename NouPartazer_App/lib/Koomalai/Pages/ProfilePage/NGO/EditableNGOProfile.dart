@@ -8,23 +8,30 @@ import 'package:noupartazer_app/Atish/components/SectionWithEditButton.dart';
 import 'package:noupartazer_app/Atish/components/ContactInfo.dart';
 import 'package:noupartazer_app/Devashish/components/GetImage/BannerPhoto/BannerPhotoGetImage.dart';
 import 'package:noupartazer_app/Devashish/components/GetImage/ProfilePhoto/ProfilePhotoGetImage.dart';
+import 'package:noupartazer_app/Atish/Pages/NGOProfile/MemberModel.dart';
 import 'package:noupartazer_app/Atish/Pages/Story/NGOStory/NGOStory.dart';
 import 'package:noupartazer_app/Atish/Pages/Story/NGOStory/NGOStoryList.dart';
-import 'package:noupartazer_app/Atish/Pages/Story/BusinessStory/BusinessStoryModelProfile.dart';
+import 'package:noupartazer_app/Atish/Pages/Story/NGOStory/NGOStoryModelProfile.dart';
 import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/NGOAndBusinessSettings.dart';
+import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContactDialog/NGOEditName.dart';
 import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContactDialog/EditContact.dart';
-import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContactDialog/BusinessEditName.dart';
+import 'package:noupartazer_app/Yashna/Pages/EditMembersDialog/EditMembersModel.dart';
+import 'package:noupartazer_app/Yashna/Pages/ConfirmationDialog/DeleteMember.dart';
 
-class BusinessProfile extends StatelessWidget
+class EditableNGOProfile extends StatelessWidget
 {
   final List<NGOStory> ngoStory = ngoStoryList;
-
+  
   @override
   Widget build(BuildContext context)
   {
+    final bool isEditable = true;
+
     final screen = MediaQuery.of(context).size;
-    var businessEditNameBottomSheet = new BusinessEditName().displayBottomSheet(context);
+    var ngoEditNameBottomSheet = new NGOEditName().displayBottomSheet(context);
     var editContactBottomSheet = new EditContact().displayBottomSheet(context);
+    var ngoEditMembersBottomSheet = new EditMembersModel().displayBottomSheet(context);
+    var deleteMemberDialog = new DeleteMember().displayDialog(context);
 
     return LayoutBuilder
     (
@@ -45,10 +52,15 @@ class BusinessProfile extends StatelessWidget
                     BannerPhotoGetImage
                     (
                       screen: screen,
+                      isEditable: isEditable,
                       constraints: constraints,
                     ),
 
-                    ProfilePhotoGetImage(constraints: constraints,),
+                    ProfilePhotoGetImage
+                    (
+                      isEditable: isEditable,
+                      constraints: constraints,
+                    ),
 
                     Container
                     (
@@ -58,10 +70,12 @@ class BusinessProfile extends StatelessWidget
                       (
                         top: screen.height * 0.31,
                       ),
-                      child: EditIconButton
+                      child: RoundIconButton
                       (
                         onPress: NGOAndBusinessSettings(),
-                        isPage: true,
+                        isPageTransition: true,
+                        transitionType: 'rightToLeft',
+                        transitionDuration: 1100,
                         icon: Icons.settings_outlined,
                         height: 50,
                         width: 50,
@@ -84,7 +98,7 @@ class BusinessProfile extends StatelessWidget
                       title: 'MY STORIES',
                     ),
 
-                    BusinessStoryModelProfile(),
+                    NGOStoryModelProfile(),
                   ],
                 ),
                 
@@ -96,10 +110,11 @@ class BusinessProfile extends StatelessWidget
                   [
                     SectionWithEditButton
                     (
+                      isEditable: isEditable,
                       title: 'Manzer Partazer Test Test Test Test',
                       fontSize: 22,
                       color: Color.fromRGBO(0, 50, 193, 1),
-                      onPress: businessEditNameBottomSheet,
+                      onPress: ngoEditNameBottomSheet,
                       isModalPage: true,
                     ),
                     
@@ -145,40 +160,62 @@ class BusinessProfile extends StatelessWidget
 
                 CustomDivider(),
 
-                Container
+                Column
                 (
-                  margin: EdgeInsets.only(bottom: 30),
-                  child: Column
-                  (
-                    children:
-                    [
-                      SectionWithEditButton
-                      (
-                        title: 'CONTACT INFO',
-                        onPress: editContactBottomSheet,
-                        isModalPage: true,
-                      ),
+                  children:
+                  [
+                    SectionWithEditButton
+                    (
+                      isEditable: isEditable,
+                      title: 'CONTACT INFO',
+                      onPress: editContactBottomSheet,
+                      isModalPage: true,
+                    ),
 
-                      ContactInfo
-                      (
-                        website: 'www.manzerpartazer.org',
-                        top: 0,
-                        icon: Icons.language_outlined,
-                      ),
-                      
-                      ContactInfo
-                      (
-                        email: 'info@manzerpartazer.org',
-                        icon: Icons.email_outlined,
-                      ),
+                    ContactInfo
+                    (
+                      website: 'www.facebook.com',
+                      top: 0,
+                      icon: Icons.language_outlined,
+                    ),
+                    
+                    ContactInfo
+                    (
+                      email: 'info@manzerpartazer.org',
+                      icon: Icons.email_outlined,
+                    ),
 
-                      ContactInfo
-                      (
-                        phoneNumber: '+230 5820 7691',
-                        icon: Icons.call_outlined,
-                      )
-                    ],
-                  ),
+                    ContactInfo
+                    (
+                      phoneNumber: '+230 5820 7691',
+                      icon: Icons.call_outlined,
+                    )
+                  ],
+                ),
+
+                CustomDivider(),
+
+                Column
+                (
+                  children:
+                  [
+                    SectionWithEditButton
+                    (
+                      isEditable: isEditable,
+                      title: 'MEMBERS',
+                      icon: Icons.add,
+                      onPress: ngoEditMembersBottomSheet,
+                      isModalPage: true,
+                    ),
+                  ]
+                ),
+
+                MemberModel
+                (
+                  isEditable: isEditable,
+                  onPressDelete: deleteMemberDialog,
+                  isPopUpPage: true,
+                  onPressEdit: ngoEditMembersBottomSheet,
                 ),
               ],
             ),   

@@ -11,10 +11,12 @@ import 'package:noupartazer_app/Devashish/components/GetImage/ProfilePhoto/Profi
 class ProfilePhotoGetImage extends StatefulWidget
 {
   final BoxConstraints constraints;
+  final bool isEditable;
 
   ProfilePhotoGetImage
   (
     {
+      this.isEditable = false,
       this.constraints,
     }
   );
@@ -55,6 +57,7 @@ class _ProfilePhotoGetImageState extends State<ProfilePhotoGetImage>
           return ProfilePhotoWithEditButton
           (
             fileImage: FileImage(snapshot.data),
+            isEditable: widget.isEditable,
             constraints: widget.constraints,
             onPress: chooseImage,
           );
@@ -64,6 +67,7 @@ class _ProfilePhotoGetImageState extends State<ProfilePhotoGetImage>
           return ProfilePhotoWithEditButton
           (
             fileImage: null,
+            isEditable: widget.isEditable,
             constraints: widget.constraints,
             onPress: chooseImage,
           );
@@ -74,6 +78,7 @@ class _ProfilePhotoGetImageState extends State<ProfilePhotoGetImage>
           return ProfilePhotoWithEditButton
           (
             fileImage: null,
+            isEditable: widget.isEditable,
             constraints: widget.constraints,
             onPress: chooseImage,
           );

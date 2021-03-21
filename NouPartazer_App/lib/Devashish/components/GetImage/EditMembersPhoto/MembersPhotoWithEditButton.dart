@@ -35,7 +35,7 @@ class MembersPhotoWithEditButton extends StatelessWidget
             backgroundColor: Color.fromRGBO(242, 242, 242, 1),
           ),
 
-          EditIconButton
+          RoundIconButton
           (
             isPage: true,
             icon: Icons.edit_outlined,
