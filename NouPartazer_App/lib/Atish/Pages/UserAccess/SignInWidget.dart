@@ -170,8 +170,8 @@ Future userLogin() async
               buttonColor: Color.fromRGBO(245, 197, 41, 1),
               hasIcon: false,
               elevation: 0,
-              hasSuperPress: true,
-              onSuperPress: userLogin,
+              isPage: true,
+              onPress: NGOBottomNav(),
             ),
           ),
 
