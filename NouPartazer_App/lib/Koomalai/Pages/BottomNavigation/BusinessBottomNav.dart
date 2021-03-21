@@ -41,7 +41,7 @@ class _BusinessBottomNavState extends State<BusinessBottomNav>
     task    = BusinessTaskTab();
     list    = BusinessNGOCentresList();
 
-    pages       = [home, profile, event, task, list];
+    pages       = [home, profile, event, list, task];
     currentPage = home;
 
     selectedColor   = const Color.fromRGBO(0, 50, 193, 1);
@@ -127,6 +127,13 @@ class _BusinessBottomNavState extends State<BusinessBottomNav>
 
             BottomNavigationBarItem
             (
+              activeIcon: Icon(Icons.favorite),
+              icon: Icon(Icons.favorite_border),
+              label: 'NGO Lists',
+            ),
+
+            BottomNavigationBarItem
+            (
               activeIcon: Icon
               (
                 Icons.assignment_turned_in,
@@ -138,13 +145,6 @@ class _BusinessBottomNavState extends State<BusinessBottomNav>
                 size: 27,
               ),
               label: 'Tasks',
-            ),
-
-            BottomNavigationBarItem
-            (
-              activeIcon: Icon(Icons.view_list),
-              icon: Icon(Icons.view_list_outlined),
-              label: 'NGO Lists',
             ),
           ],
         ),
@@ -164,7 +164,7 @@ class _BusinessBottomNavState extends State<BusinessBottomNav>
               currentPage  = pages[index];
             });
           },
-          children: [home, profile, event, task, list]
+          children: [home, profile, event, list, task]
         ),
       ),
     );

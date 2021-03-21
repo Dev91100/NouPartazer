@@ -125,8 +125,8 @@ class _NGOBottomNavState extends State<NGOBottomNav>
 
             BottomNavigationBarItem
             (
-              activeIcon: Icon(Icons.view_list),
-              icon: Icon(Icons.view_list_outlined),
+              activeIcon: Icon(Icons.favorite),
+              icon: Icon(Icons.favorite_border),
               label: 'Donation List',
             ),
 

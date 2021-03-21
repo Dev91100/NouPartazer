@@ -94,8 +94,8 @@ class _IndividualBottomNavState extends State<IndividualBottomNav>
 
             BottomNavigationBarItem
             (
-              activeIcon: Icon(Icons.view_list),
-              icon: Icon(Icons.view_list_outlined),
+              activeIcon: Icon(Icons.favorite),
+              icon: Icon(Icons.favorite_border),
               label: 'List',
             ),
 
