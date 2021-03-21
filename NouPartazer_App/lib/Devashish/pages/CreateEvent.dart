@@ -38,7 +38,7 @@ class _CreateEventState extends State<CreateEvent>
     (
       appBar: PageTitle
       (
-        hasBackButton: true,
+        text: 'CREATE EVENT',
       ),
       body: LayoutBuilder
       (

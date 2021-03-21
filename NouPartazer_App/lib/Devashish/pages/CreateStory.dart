@@ -35,7 +35,7 @@ class _CreateStoryState extends State<CreateStory>
     (
       appBar: PageTitle
       (
-        hasBackButton: true,
+        text: 'CREATE STORY',
       ),
       body: LayoutBuilder
       (
