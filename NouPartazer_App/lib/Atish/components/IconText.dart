@@ -43,7 +43,7 @@ class IconText extends StatelessWidget
           child: (hasIcon) ? Icon
           (
             icon,
-            size: iconSize,
+            size: fontSize * (5/3),
             color: iconColor,
           ) : Container(height: 0, width: 0,),
         ),

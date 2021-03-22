@@ -9,7 +9,7 @@ import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/LargeCustomButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
-
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 
 class NGORegistration extends StatefulWidget
@@ -119,7 +119,7 @@ class _NGORegistrationState extends State<NGORegistration>
                       (
                         title: 'Let\'s continue',
                         left: 0,
-                        fontSize: 45,
+                        fontSize: Global().yellowTitle,
                         color: Color.fromRGBO(245, 197, 41, 1),
                       ),
                     ),
@@ -133,7 +133,7 @@ class _NGORegistrationState extends State<NGORegistration>
                         style: TextStyle
                         (
                           color: Colors.black,
-                          fontSize: 22.0
+                          fontSize: Global().yellowTitlePara,
                         ),
                       ),
                     ),
@@ -144,7 +144,7 @@ class _NGORegistrationState extends State<NGORegistration>
                       child: SectionTitle
                       (
                         title: 'NGO INFORMATION',
-                        fontSize: 18,
+                        fontSize: Global().profileSectionTitle,
                         left: 0,
                       ),
                     ),
@@ -278,6 +278,8 @@ class _NGORegistrationState extends State<NGORegistration>
                       width: constraints.maxWidth,
                       child: LargeCustomButtonIconText
                       (
+                        padding: EdgeInsets.all(8),
+                        fontSize: Global().registerButton,
                         text: 'Register',
                         hasIcon: false,
                       )

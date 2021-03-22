@@ -17,6 +17,7 @@ import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContactDialog/NGOEditNam
 import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContactDialog/EditContact.dart';
 import 'package:noupartazer_app/Yashna/Pages/EditMembersDialog/EditMembersModel.dart';
 import 'package:noupartazer_app/Yashna/Pages/ConfirmationDialog/DeleteMember.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 class NGOProfile extends StatelessWidget
 {
@@ -89,6 +90,7 @@ class NGOProfile extends StatelessWidget
                     SectionTitle
                     (
                       title: 'MY STORIES',
+                      fontSize: Global().profileSectionTitle,
                     ),
 
                     NGOStoryModelProfile(),
@@ -104,7 +106,7 @@ class NGOProfile extends StatelessWidget
                     SectionWithEditButton
                     (
                       title: 'Manzer Partazer Test Test Test Test',
-                      fontSize: 22,
+                      fontSize: Global().profileOrganizationName,
                       color: Color.fromRGBO(0, 50, 193, 1),
                       onPress: ngoEditNameBottomSheet,
                       isModalPage: true,
@@ -119,7 +121,7 @@ class NGOProfile extends StatelessWidget
                         child: SectionTitle
                         (
                           title: 'Food Sharing Project of Mauritius Mauritius Mauritius',
-                          fontSize: 20, 
+                          fontSize: Global().profileSectionSubTitle1,
                           top: 15,
                           color: Color.fromRGBO(51, 51, 51, 1),
                         ),
@@ -142,7 +144,7 @@ class NGOProfile extends StatelessWidget
                       (
                         title: "MANZER PARTAZER is the the first food sharing project of Mauritius. Our aim is to reduce the wastage of high quality ready to eat food by simply sharing it!"
                               "We ‘save’ food which would otherwise go to waste, such as buffet leftovers in hotels or restaurants, donating it to people in need through a very simple and no-cost food sharing system.or restaurants, donating it to people in need through a very simple and no-cost food sharing system.or restaurants, donating it to people in need through a very simple and no-cost food sharing system.or restaurants, donating it to people in need through a very simple and no-cost food sharing system.",
-                        fontSize: 18,
+                        fontSize: Global().normalText,
                         fontWeight: FontWeight.w500,
                         top: screen.height * 0.015,
                       ),
@@ -160,6 +162,7 @@ class NGOProfile extends StatelessWidget
                     (
                       title: 'CONTACT INFO',
                       onPress: editContactBottomSheet,
+                      fontSize: Global().profileSectionTitle,
                       isModalPage: true,
                     ),
 
@@ -195,6 +198,7 @@ class NGOProfile extends StatelessWidget
                       title: 'MEMBERS',
                       icon: Icons.add,
                       onPress: ngoEditMembersBottomSheet,
+                      fontSize: Global().profileSectionTitle,
                       isModalPage: true,
                     ),
                   ]

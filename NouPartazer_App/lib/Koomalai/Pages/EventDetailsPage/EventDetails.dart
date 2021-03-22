@@ -9,6 +9,7 @@ import 'package:noupartazer_app/Atish/components/CardIconText.dart';
 import 'package:noupartazer_app/Atish/components/LongText.dart';
 import 'package:noupartazer_app/Atish/components/CardListTileText.dart';
 import 'package:noupartazer_app/Yashna/Pages/DonationEventDialog/AcceptDonation.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 class EventDetails extends StatelessWidget
 {
@@ -98,6 +99,7 @@ class EventDetails extends StatelessWidget
                       (
                         title: 'GROCERY DONATION',
                         align: Alignment.center,
+                        fontSize: Global().profileSectionTitle,
                       ),
                     ),
 
@@ -113,7 +115,7 @@ class EventDetails extends StatelessWidget
                           (
                             text: 'Status',
                             icon: Icons.online_prediction_outlined,
-                            fontSize: 18,
+                            fontSize: Global().statusIndicator,
                             mRight: 15,
                             iconColor: Color.fromRGBO(255, 255, 255, 1),
                           ),
@@ -126,6 +128,7 @@ class EventDetails extends StatelessWidget
                             boxColor: Color.fromRGBO(255, 248, 97, 0.2),
                             pLeft: 40,
                             pRight: 40,
+                            fontSize: Global().statusValue,
                           ),
                         ],
                       ),
@@ -143,6 +146,7 @@ class EventDetails extends StatelessWidget
                         hasBorder: false,
                         isPopUpPage: true,
                         onPress: statement,
+                        fontSize: Global().normalText,
                       ),
                     ),
                   ],
@@ -169,6 +173,7 @@ class EventDetails extends StatelessWidget
                         (
                           left: 0,
                           title: 'DATE & TIME',
+                          fontSize: Global().profileSectionTitle,
                         ),
                       ),
 
@@ -185,6 +190,8 @@ class EventDetails extends StatelessWidget
                               constraints: constraints,
                               text: '19/01/2021',
                               icon: Icons.event_outlined,
+                              fontSize: Global().normalText,
+                              iconSize: Global().normalTextIcon,
                             ),
 
                             CardIconText
@@ -192,6 +199,8 @@ class EventDetails extends StatelessWidget
                               constraints: constraints,
                               text: '19.00-22.00',
                               icon: Icons.query_builder,
+                              fontSize: Global().normalText,
+                              iconSize: Global().normalTextIcon,                              
                             ),
                           ]
                         ),
@@ -204,6 +213,7 @@ class EventDetails extends StatelessWidget
                         (
                           left: 0,
                           title: 'FOOD TYPE',
+                          fontSize: Global().profileSectionTitle,
                         ),
                       ),
                       
@@ -220,21 +230,25 @@ class EventDetails extends StatelessWidget
                             CardIconText
                             (
                               constraints: constraints,
-                              text: 'Perishable Food',
+                              text: 'Perishable',
                               textColor: Color.fromRGBO(255, 255, 255, 1),
-                              icon: Icons.event_outlined,
+                              icon: Icons.no_food,
                               iconColor: Color.fromRGBO(255, 255, 255, 1),
                               cardColor: Color.fromRGBO(255, 84, 62, 1),
+                              fontSize: Global().normalText,
+                              iconSize: Global().normalTextIcon,                              
                             ),
 
                             CardIconText
                             (
                               constraints: constraints,
-                              text: 'Non-Perishable Food',
+                              text: 'Non-Perishable',
                               textColor: Color.fromRGBO(255, 255, 255, 1),
-                              icon: Icons.query_builder,
+                              icon: Icons.fastfood,
                               iconColor: Color.fromRGBO(255, 255, 255, 1),
                               cardColor: Color.fromRGBO(27, 215, 65, 1),
+                              fontSize: Global().normalText,
+                              iconSize: Global().normalTextIcon,                              
                             ),
                           ]
                         ),
@@ -247,6 +261,7 @@ class EventDetails extends StatelessWidget
                         (
                           left: 0,
                           title: 'DESCRIPTION',
+                          fontSize: Global().profileSectionTitle,
                         ),
                       ),
 
@@ -267,7 +282,7 @@ class EventDetails extends StatelessWidget
                             child: LongText
                             (
                               title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius lectus et ante sollicitudin mattis. Morbi maximus maximus mi, non porttitor quam cursus sit amet. Vivamus in nunc id massa pretium elementum sed eu risus. Cras in ante ac nunc pretium imperdiet at a nisi. Cras placerat quis turpis a porttitor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius lectus et ante sollicitudin mattis. Morbi maximus maximus mi, non porttitor quam cursus sit amet. Vivamus in nunc id massa pretium elementum sed eu risus. Cras in ante ac nunc pretium imperdiet at a nisi. Cras placerat quis turpis a porttitor.',
-                              fontSize: 16,
+                              fontSize: Global().normalText,
                             ),
                           ),
                         ),
@@ -280,6 +295,7 @@ class EventDetails extends StatelessWidget
                         (
                           left: 0,
                           title: 'LOCATION',
+                          fontSize: Global().profileSectionTitle,
                         ),
                       ),
 
@@ -296,7 +312,9 @@ class EventDetails extends StatelessWidget
                               (
                                 constraints: constraints,
                                 title: 'Jumbo Phoenix',
+                                titleFontSize: Global().profileSectionTitle,
                                 subtitle: 'Hypermarket',
+                                subtitleFontSize: Global().profileSectionSubTitle1,
                                 icon: Icons.location_on_outlined,
                                 cardColor: Color.fromRGBO(245, 197, 41, 1),
                               ),

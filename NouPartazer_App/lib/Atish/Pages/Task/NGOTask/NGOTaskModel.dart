@@ -7,6 +7,7 @@ import 'package:noupartazer_app/Atish/components/ContainerIconText.dart';
 import 'package:noupartazer_app/Atish/components/ContainerText.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/SmallButtonIconText.dart';
 import 'package:noupartazer_app/Koomalai/Pages/EventDetailsPage/EventDetails.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 class NGOTaskModel extends StatelessWidget
 {
@@ -103,6 +104,7 @@ class NGOTaskModel extends StatelessWidget
                                 (
                                   children:
                                   [
+                                    //Date
                                     Container
                                     (
                                       margin: EdgeInsets.only(right: 10),
@@ -110,16 +112,17 @@ class NGOTaskModel extends StatelessWidget
                                       (
                                         text: date,
                                         icon: Icons.insert_invitation_outlined,
-                                        fontSize: 15,
+                                        fontSize: Global().normalText,
                                         textColor: Color.fromRGBO(0, 0, 0, 1),
                                       ),
                                     ),
                                     
+                                    //Time
                                     IconText
                                     (
                                       text: time,
                                       icon: Icons.query_builder_outlined,
-                                      fontSize: 15,
+                                      fontSize: Global().normalText,
                                       textColor: Color.fromRGBO(0, 0, 0, 1),
                                     ),
                                   ],
@@ -133,6 +136,7 @@ class NGOTaskModel extends StatelessWidget
                               [
                                 Expanded
                                 (
+                                  //Location
                                   child: Container
                                   (
                                     padding: EdgeInsets.only(bottom: 5),
@@ -143,7 +147,7 @@ class NGOTaskModel extends StatelessWidget
                                       (
                                         text: locationName,
                                         icon: Icons.location_on_outlined,
-                                        fontSize: 15,
+                                        fontSize: Global().normalText,
                                         textColor: Color.fromRGBO(0, 0, 0, 1),
                                       ),
                                     ),
@@ -159,6 +163,7 @@ class NGOTaskModel extends StatelessWidget
                 ),
               ),
             ),
+            //Tag of the Event
             Container
             (
               margin: EdgeInsets.only(top: 10),
@@ -167,9 +172,11 @@ class NGOTaskModel extends StatelessWidget
                 title: tag,
                 left: 0,
                 right: 0,
+                fontSize: Global().profileSectionTitle,
               ),
             ),
             
+            //Event Description
             Container
             (
               margin: EdgeInsets.only(top: 10),
@@ -180,7 +187,7 @@ class NGOTaskModel extends StatelessWidget
               child: LongText
               (
                 title: description,
-                fontSize: 16,
+                fontSize: Global().normalText,
                 fontWeight: FontWeight.w500,
                 left: 0,
                 right: 0
@@ -193,11 +200,12 @@ class NGOTaskModel extends StatelessWidget
               (
                 children:
                 [
+                  //Status Indicator
                   ContainerIconText
                   (
                     text: 'Status',
                     icon: Icons.online_prediction_outlined,
-                    fontSize: 18,
+                    fontSize: Global().statusIndicator,
                     mRight: 15,
                     iconColor: Color.fromRGBO(255, 255, 255, 1),
                   ),
@@ -210,6 +218,7 @@ class NGOTaskModel extends StatelessWidget
                     boxColor: Color.fromRGBO(255, 248, 97, 0.2),
                     pLeft: 40,
                     pRight: 40,
+                    fontSize: Global().statusValue,
                   ),
                 ],
               ),
@@ -233,6 +242,7 @@ class NGOTaskModel extends StatelessWidget
                     transitionType: 'rightToLeft',
                     transitionDuration: 1100,
                     isPageTransition: true,
+                    fontSize: Global().normalText,
                   ),
 
                   Container
@@ -244,6 +254,7 @@ class NGOTaskModel extends StatelessWidget
                       icon: Icons.phone_forwarded,
                       iconRight: 5,
                       buttonColor: Color.fromRGBO(245, 197, 1, 1),
+                      fontSize: Global().normalText,
                     ),
                   ),
                 ],

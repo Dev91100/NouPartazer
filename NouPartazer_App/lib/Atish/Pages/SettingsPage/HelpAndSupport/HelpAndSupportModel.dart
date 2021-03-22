@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/ListTileModel.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 
 class HelpAndSupportModel extends StatelessWidget
@@ -53,8 +54,11 @@ class HelpAndSupportModel extends StatelessWidget
           (
             leadingIcon: Icons.supervised_user_circle_outlined,
             titleText: 'About Us',
+            titleSize: Global().settingsTitle,
             subtitleText: 'Learn more about NouPartazer',
+            subTitleSize: Global().settingsSubTitle,
             trailingIcon: Icons.keyboard_arrow_right,
+            iconSize: Global().settingsIcon,
             isPage: true,
             onPress: aboutUsPage,
           ) : Container(),
@@ -64,8 +68,11 @@ class HelpAndSupportModel extends StatelessWidget
           (
             leadingIcon: Icons.assignment_outlined,
             titleText: 'Terms & Conditions',
+            titleSize: Global().settingsTitle,
             subtitleText: 'Learn more about NouPartazer',
+            subTitleSize: Global().settingsSubTitle,
             trailingIcon: Icons.keyboard_arrow_right,
+            iconSize: Global().settingsIcon,
             isPopUpPage: true,
             onPress: termsAndConditionsPage,
           ) : Container(),
@@ -75,8 +82,11 @@ class HelpAndSupportModel extends StatelessWidget
           (
             leadingIcon: Icons.privacy_tip_outlined,
             titleText: 'Privacy Policy',
+            titleSize: Global().settingsTitle,
             subtitleText: 'Learn more about NouPartazer',
+            subTitleSize: Global().settingsSubTitle,
             trailingIcon: Icons.keyboard_arrow_right,
+            iconSize: Global().settingsIcon,
             isPage: true,
             onPress: privacyPolicyPage,
           ) : Container(),
@@ -86,8 +96,11 @@ class HelpAndSupportModel extends StatelessWidget
           (
             leadingIcon: Icons.question_answer_outlined,
             titleText: 'FAQ',
+            titleSize: Global().settingsTitle,
             subtitleText: 'Learn more about NouPartazer',
+            subTitleSize: Global().settingsSubTitle,
             trailingIcon: Icons.keyboard_arrow_right,
+            iconSize: Global().settingsIcon,
             isPage: true,
             onPress: faqPage,
           ) : Container(),
@@ -97,8 +110,11 @@ class HelpAndSupportModel extends StatelessWidget
           (
             leadingIcon: Icons.perm_phone_msg_outlined,
             titleText: 'Contact Us',
+            titleSize: Global().settingsTitle,
             subtitleText: 'Learn more about NouPartazer',
+            subTitleSize: Global().settingsSubTitle,
             trailingIcon: Icons.keyboard_arrow_right,
+            iconSize: Global().settingsIcon,
             isPage: true,
             onPress: contactUsPage,
           ) : Container(),

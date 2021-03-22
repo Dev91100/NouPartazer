@@ -13,6 +13,7 @@ class ContactInfo extends StatelessWidget
   final double top;
   final Color textColor;
   final Color iconColor;
+  final double iconSize;
   // Future<void> _launched;
 
   Future<void> _launchInBrowser(String url) async       //Allows user to open a link in a separate browser
@@ -55,11 +56,12 @@ class ContactInfo extends StatelessWidget
       this.website = '',
       this.email = '',
       this.phoneNumber = '',
-      this.fontSize = 20,
+      this.fontSize = 15,
       this.textColor = const Color.fromRGBO(0, 50, 193, 1),
       this.iconColor = const Color.fromRGBO(102, 102, 102, 1),
       this.top = 15,
       this.icon,
+      this.iconSize = 21,
     }
   );
 
@@ -178,7 +180,7 @@ checkTextType()
             child: Icon
             (
               icon,
-              size: 30,
+              size: iconSize,
               color: iconColor,
             ),
           ),

@@ -7,6 +7,9 @@ class ListTileModel extends StatelessWidget
   final String subtitleText;
   final IconData trailingIcon;
   final trailingButton;
+  final double titleSize;
+  final double subTitleSize;
+  final double iconSize;
 
   final bool hasleadingIcon;
   final bool hastrailingIcon;
@@ -44,6 +47,9 @@ class ListTileModel extends StatelessWidget
       this.onPress,
       this.hasSuperPress = false,
       this.onSuperPress,
+      this.titleSize = 18,
+      this.subTitleSize = 13,
+      this.iconSize = 35,
     }
   );
 
@@ -65,7 +71,7 @@ class ListTileModel extends StatelessWidget
         style: TextStyle
         (
           color: textColor,
-          fontSize: 18.0,
+          fontSize: titleSize,
           fontWeight: FontWeight.bold,
         ),
       ),
@@ -76,7 +82,7 @@ class ListTileModel extends StatelessWidget
         subtitleText,
         style: TextStyle
         (
-          fontSize: 13.0,
+          fontSize: subTitleSize,
         ),
       ) : null,
 
@@ -84,7 +90,7 @@ class ListTileModel extends StatelessWidget
       (
         trailingIcon,
         color: trailingColor,
-        size: 35,
+        size: iconSize,
       ) : (hasTrailingButton) ? trailingButton : null,
       
       onTap: (!hasSuperPress) ? ()

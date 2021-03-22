@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import './Member.dart';
 import './MemberList.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/RoundIconButton.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 class MemberModel extends StatelessWidget 
 {
@@ -126,7 +127,7 @@ class MemberModel extends StatelessWidget
                                         memberList[index].name,
                                         style: TextStyle
                                         (
-                                          fontSize: 18,
+                                          fontSize: Global().memberName,
                                           fontWeight: FontWeight.w700,
                                           color: Color.fromRGBO(0, 50, 193, 1),
                                         ),
@@ -144,7 +145,7 @@ class MemberModel extends StatelessWidget
                                         memberList[index].position,
                                         style: TextStyle
                                         (
-                                          fontSize: 18,
+                                          fontSize: Global().normalText,
                                           color: Color.fromRGBO(102, 102, 102, 1),
                                         ),
                                       ),

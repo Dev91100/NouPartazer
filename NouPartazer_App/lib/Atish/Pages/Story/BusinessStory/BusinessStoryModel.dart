@@ -5,6 +5,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:noupartazer_app/Atish/Pages/Story/BusinessStory/BusinessStory.dart';
 import 'package:noupartazer_app/Atish/components/ContainerIconText.dart';
 import 'package:noupartazer_app/Atish/components/ContainerText.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 class BusinessStoryModel extends StatelessWidget
 {
@@ -107,7 +108,7 @@ class BusinessStoryModel extends StatelessWidget
                               style: TextStyle
                               (
                                 fontWeight: FontWeight.bold,
-                                fontSize: 30,
+                                fontSize: Global().businessPOVstoryTitle,
                                 color: new Color.fromRGBO(245, 197, 41, 1),
                               ),
                             ),
@@ -130,14 +131,14 @@ class BusinessStoryModel extends StatelessWidget
                                 style: TextStyle
                                 (
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 20,
+                                  fontSize: Global().storySubtitle,
                                   color: Colors.white,
                                 ),
                               ),
                             ),
                           ),
                         ),
-                
+                        
                         // Date & Time
                         FittedBox
                         (
@@ -150,10 +151,11 @@ class BusinessStoryModel extends StatelessWidget
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: 
                               [
+                                //Date
                                 ContainerIconText
                                 (
                                   text: st.date,
-                                  fontSize: 15,
+                                  fontSize: Global().normalText,
                                   fontWeight: FontWeight.bold,
                                   icon: Icons.calendar_today_outlined,
                                   iconSize: 20,
@@ -164,10 +166,11 @@ class BusinessStoryModel extends StatelessWidget
                                   mRight: 15,
                                 ),
 
+                                //Time
                                 ContainerIconText
                                 (
                                   text: st.time,
-                                  fontSize: 15,
+                                  fontSize: Global().normalText,
                                   fontWeight: FontWeight.bold,
                                   icon: Icons.query_builder_outlined,
                                   iconSize: 20,
@@ -192,10 +195,11 @@ class BusinessStoryModel extends StatelessWidget
                             (
                               children: 
                               [
+                                //Story Tag
                                 ContainerText
                                 (
                                   text: st.tag,
-                                  fontSize: 20,
+                                  fontSize: Global().storyTags,
                                   fontWeight: FontWeight.bold,
                                   borderColor: Color.fromRGBO(245, 197, 41, 1),
                                   borderWidth: 1.5,
@@ -205,10 +209,11 @@ class BusinessStoryModel extends StatelessWidget
                                   mRight: 10,
                                 ),
 
+                                //Food Type 1
                                 ContainerText
                                 (
                                   text: st.foodType,
-                                  fontSize: 20,
+                                  fontSize: Global().storyTags,
                                   fontWeight: FontWeight.bold,
                                   borderColor: Color.fromRGBO(245, 197, 41, 1),
                                   borderWidth: 1.5,
@@ -218,10 +223,11 @@ class BusinessStoryModel extends StatelessWidget
                                   mRight: 10,
                                 ),
                                 
+                                //Food Type 2
                                 ContainerText
                                 (
                                   text: st.foodType,
-                                  fontSize: 20,
+                                  fontSize: Global().storyTags,
                                   fontWeight: FontWeight.bold,
                                   borderColor: Color.fromRGBO(245, 197, 41, 1),
                                   borderWidth: 1.5,

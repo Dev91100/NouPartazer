@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Yashna/components/TwoButtons.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 class LanguageConfirmationModel
 {
@@ -52,7 +53,7 @@ class LanguageConfirmationModel
                       style: TextStyle
                       (
                         fontWeight: FontWeight.bold,
-                        fontSize: 20.0,
+                        fontSize: Global().profileSectionTitle,
                       )
                     ),
                         
@@ -85,7 +86,7 @@ class LanguageConfirmationModel
                           style: TextStyle
                           (
                             color: Colors.black,
-                            fontSize: 15,
+                            fontSize: Global().normalText,
                           ),
                         ),
                         dropdownColor: Colors.white,
@@ -95,7 +96,7 @@ class LanguageConfirmationModel
 
                         style: TextStyle
                         (
-                          fontSize: 15,
+                          fontSize: Global().normalText,
                           color: Color.fromRGBO(0, 0, 0, 1),
                         ),
 

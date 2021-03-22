@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:noupartazer_app/Atish/Pages/UserAccess/components/OrgButton.dart';
 import 'package:noupartazer_app/Koomalai/Pages/RegistrationPage/BusinessRegistration.dart';
 import 'package:noupartazer_app/Koomalai/Pages/RegistrationPage/NGORegistration.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 class SignUpWidget extends StatelessWidget
 {
@@ -33,7 +34,7 @@ class SignUpWidget extends StatelessWidget
               style: TextStyle
               (
                 color: Color.fromRGBO(245, 197, 41, 1),
-                fontSize: 45.0,
+                fontSize: Global().yellowTitle,
                 fontWeight: FontWeight.bold
               ),
             ),
@@ -56,7 +57,7 @@ class SignUpWidget extends StatelessWidget
               style: TextStyle
               (
                 color: Colors.white,
-                fontSize: 22.0
+                fontSize: Global().yellowTitlePara,
               ),
             ),
           ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 
 import 'package:noupartazer_app/Atish/components/ListTileModel.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 
 class SettingsModel extends StatefulWidget
@@ -101,8 +102,11 @@ class _SettingsModelState extends State<SettingsModel>
           ListTileModel
           (
             leadingIcon: Icons.notifications_none_outlined,
+            iconSize: Global().settingsIcon,
             titleText: 'Notifications',
+            titleSize: Global().settingsTitle,
             subtitleText: 'Receive notifications from the app',
+            subTitleSize: Global().settingsSubTitle,
             hastrailingIcon: false,
             hasTrailingButton: true,
             trailingButton: switchToggle(),
@@ -116,8 +120,11 @@ class _SettingsModelState extends State<SettingsModel>
           (
             leadingIcon: Icons.g_translate,
             titleText: 'Language',
+            titleSize: Global().settingsTitle,
             subtitleText: 'English',
+            subTitleSize: Global().settingsSubTitle,
             trailingIcon: Icons.keyboard_arrow_right,
+            iconSize: Global().settingsIcon,
             isModalPage: true,
             onPress: widget.languagePage,
           ) : Container(),
@@ -126,8 +133,11 @@ class _SettingsModelState extends State<SettingsModel>
           ListTileModel
           (
             leadingIcon: Icons.security_outlined,
+            iconSize: Global().settingsIcon,
             titleText: 'Security',
+            titleSize: Global().settingsTitle,
             subtitleText: 'Update password and account settings',
+            subTitleSize: Global().settingsSubTitle,
             trailingIcon: Icons.keyboard_arrow_right,
             isPage: true,
             onPress: widget.securityPage,
@@ -137,8 +147,11 @@ class _SettingsModelState extends State<SettingsModel>
           ListTileModel
           (
             leadingIcon: Icons.support_agent_outlined,
+            iconSize: Global().settingsIcon,
             titleText: 'Help & Support',
+            titleSize: Global().settingsTitle,
             subtitleText: 'For any questions, contact us',
+            subTitleSize: Global().settingsSubTitle,
             trailingIcon: Icons.keyboard_arrow_right,
             isPage: true,
             onPress: widget.helpAndSupportPage,
@@ -147,8 +160,10 @@ class _SettingsModelState extends State<SettingsModel>
           ListTileModel
           (
             leadingIcon: (widget.logOut) ? Icons.logout : Icons.settings_power,
+            iconSize: Global().settingsIcon,
             leadingColor: Color.fromRGBO(0, 50, 193, 1),
             titleText: (widget.logOut) ? 'Log out' : 'Log in',
+            titleSize: Global().settingsTitle,
             textColor: Color.fromRGBO(0, 50, 193, 1), 
             trailingIcon: Icons.keyboard_arrow_right,
             trailingColor: Color.fromRGBO(0, 50, 193, 1),

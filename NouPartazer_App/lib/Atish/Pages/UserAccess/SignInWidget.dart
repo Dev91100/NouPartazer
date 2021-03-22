@@ -5,6 +5,7 @@ import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
 import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
 import 'package:noupartazer_app/Devashish/pages/ForgotPassword.dart';
 import 'package:noupartazer_app/Koomalai/Pages/BottomNavigation/NGOBottomNav.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 class SignInWidget extends StatefulWidget
 {
@@ -58,7 +59,7 @@ class _SignInWidgetState extends State<SignInWidget>
                 style: TextStyle
                 (
                   color: Color.fromRGBO(245, 197, 41, 1),
-                  fontSize: 45.0,
+                  fontSize: Global().yellowTitle,
                   fontWeight: FontWeight.bold
                 ),
               ),
@@ -77,7 +78,7 @@ class _SignInWidgetState extends State<SignInWidget>
                 style: TextStyle
                 (
                   color: Colors.white,
-                  fontSize: 22.0
+                  fontSize: Global().yellowTitlePara,
                 ),
               ),
             ),

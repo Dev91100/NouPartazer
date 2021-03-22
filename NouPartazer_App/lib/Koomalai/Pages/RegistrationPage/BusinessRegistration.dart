@@ -5,6 +5,7 @@ import 'package:noupartazer_app/Atish/components/Buttons/LargeCustomButtonIconTe
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 import 'package:noupartazer_app/Koomalai/Pages/BottomNavigation/BusinessBottomNav.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 
 class BusinessRegistration extends StatefulWidget
@@ -70,7 +71,7 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
                       (
                         title: 'Let\'s continue',
                         left: 0,
-                        fontSize: 45,
+                        fontSize: Global().yellowTitle,
                         color: Color.fromRGBO(245, 197, 41, 1),
                       ),
                     ),
@@ -84,7 +85,7 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
                         style: TextStyle
                         (
                           color: Colors.black,
-                          fontSize: 20
+                          fontSize: Global().yellowTitlePara,
                         ),
                       ),
                     ),
@@ -158,7 +159,9 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
                       width: constraints.maxWidth,
                       child: LargeCustomButtonIconText
                       (
+                        padding: EdgeInsets.all(8),
                         text: 'Register',
+                        fontSize: Global().registerButton,
                         hasIcon: false,
                         isPage: true,
                         onPress: BusinessBottomNav(),

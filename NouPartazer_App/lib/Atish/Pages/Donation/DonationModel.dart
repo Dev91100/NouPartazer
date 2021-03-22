@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:noupartazer_app/Atish/components/IconText.dart';
 import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
 import 'package:noupartazer_app/Koomalai/Pages/EventDetailsPage/EventDetails.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 class DonationModel extends StatelessWidget
 {
@@ -116,7 +117,7 @@ class DonationModel extends StatelessWidget
                                     tag,
                                     style: TextStyle
                                     (
-                                      fontSize: 18,
+                                      fontSize: Global().tagsInDonationPage,
                                       color: Colors.black,
                                       fontWeight: FontWeight.w400,
                                     ),
@@ -143,7 +144,7 @@ class DonationModel extends StatelessWidget
                                     (
                                       Icons.fastfood,
                                       color: Color.fromRGBO(255, 84, 62, 1),
-                                      size: 18
+                                      size: Global().donationPageTagIcons,
                                     ),
                                   ),
                                   Container
@@ -152,7 +153,7 @@ class DonationModel extends StatelessWidget
                                     (
                                       Icons.no_food,
                                       color: Color.fromRGBO(0, 163, 68, 1),
-                                      size: 18
+                                      size: Global().donationPageTagIcons,
                                     ),
                                   ),
                                 ],
@@ -186,7 +187,7 @@ class DonationModel extends StatelessWidget
                                 (
                                   text: date,
                                   icon: Icons.event,
-                                  fontSize: 15,
+                                  fontSize: Global().donationTimeAndLocation,
                                   textColor: Color.fromRGBO(0, 50, 193, 1),
                                   iconColor: Color.fromRGBO(0, 50, 193, 1),
                                 ),
@@ -195,7 +196,7 @@ class DonationModel extends StatelessWidget
                                 (
                                   text: locationName,
                                   icon: Icons.location_on_outlined,
-                                  fontSize: 15,
+                                  fontSize: Global().donationTimeAndLocation,
                                   textColor: Color.fromRGBO(0, 0, 0, 1),
                                 ),
                               ],

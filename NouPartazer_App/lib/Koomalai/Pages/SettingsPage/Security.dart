@@ -6,6 +6,7 @@ import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/SmallButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
 import 'package:noupartazer_app/Yashna/Pages/ConfirmationDialog/DeactivateAccount.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 class Security extends StatefulWidget
 {
@@ -72,6 +73,7 @@ class _SecurityState extends State<Security>
                         title: 'CHANGE PASSWORD',
                         left: 0,
                         top: 15,
+                        fontSize: Global().profileSectionTitle,
                       ),
 
                       CustomTextField
@@ -102,6 +104,8 @@ class _SecurityState extends State<Security>
                         child: LargeCustomButtonIconText
                         (
                           text: 'Change Password',
+                          padding: EdgeInsets.all(8),
+                          fontSize: Global().settingsChangePWButton,
                         )
                       ),
 
@@ -119,7 +123,7 @@ class _SecurityState extends State<Security>
                   (
                     text: 'Delete my account',
                     icon: Icons.delete_outlined,
-                    fontSize: 20,
+                    fontSize: Global().normalText,
                     fontWeight: FontWeight.bold,
                     iconColor: Color.fromRGBO(212, 0, 0, 1),
                     textColor: Color.fromRGBO(212, 0, 0, 1),

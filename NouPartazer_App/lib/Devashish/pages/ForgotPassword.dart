@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+
 import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/LargeCustomButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 import 'CheckResetPW.dart';
 
@@ -56,7 +58,7 @@ class _ForgotPasswordState extends State<ForgotPassword>
                       (
                         title: 'Forgot Password?',
                         left: 0,
-                        fontSize: 35,
+                        fontSize: Global().yellowTitle,
                         color: Color.fromRGBO(245, 197, 41, 1),
                       ),
                     ),
@@ -70,7 +72,7 @@ class _ForgotPasswordState extends State<ForgotPassword>
                         style: TextStyle
                         (
                           color: Colors.black,
-                          fontSize: 18,
+                          fontSize: Global().yellowTitlePara,
                         ),
                       ),
                     ),
