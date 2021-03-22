@@ -10,6 +10,7 @@ import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 import 'package:noupartazer_app/Devashish/components/AccountCreated.dart';
 import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
+import 'package:noupartazer_app/Koomalai/Pages/BottomNavigation/BusinessBottomNav.dart';
 
 class BusinessRegistration extends StatefulWidget
 {
@@ -238,8 +239,12 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
                         text: 'Register',
                         processing: processing,
                         hasIcon: false,
-                        hasSuperPress: true,
-                        onSuperPress: registerUser,
+                        isPageTransition: true,
+                        transitionType: 'downToUp',
+                        transitionDuration: 1100,
+                        onPress: BusinessBottomNav(),
+                        // hasSuperPress: true,
+                        // onSuperPress: registerUser,
                       )
                     ),
                   ],

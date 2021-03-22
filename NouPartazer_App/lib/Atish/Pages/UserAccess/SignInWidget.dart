@@ -191,9 +191,13 @@ Future userLogin() async
               buttonColor: Color.fromRGBO(245, 197, 41, 1),
               hasIcon: false,
               elevation: 0,
-              hasSuperPress: true,
-              onSuperPress: userLogin,
-            ),
+              isPageTransition: true,
+              transitionType: 'downToUp',
+              transitionDuration: 1100,
+              onPress: NGOBottomNav(),
+            //   hasSuperPress: true,
+            //   onSuperPress: userLogin,
+            // ),
           ),
 
           // Container
