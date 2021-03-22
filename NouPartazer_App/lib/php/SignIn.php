@@ -1,38 +1,60 @@
-<?php 
-
+<?php
     require_once('Connection.php');
 
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-
-    $query = "SELECT * FROM PROFILE WHERE email LIKE '$email'";
-
-    $res = mysqli_query($conn, $query);
-    $data = mysqli_fetch_array($res);
-
-    // From table PROFILE
-    // data[0] = profileID, data[1] = ngoID, data[2] = businessID, data[3] = email 
-    if($data[3] >= 1)
+    function test_input($data)
     {
-        // Account exists
-        $query = "SELECT * FROM PROFILE WHERE password LIKE '$password'";
-
-        $res = mysqli_query($conn, $query);
-        $data = mysqli_fetch_array($res);
-
-        if($data[4] == $password)
-        {
-            //Password match
-            echo json_encode("true");
-        }
-        else
-        {
-            echo json_encode("false");
-        }
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
     }
-    else
+
+    $email = $password= "";
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
-        // Account does not exist
-        echo json_encode("Account does not exist");
+        if ((empty($_POST['email'])) || (empty($_POST['password'])))
+        {
+            echo json_encode('Incorrect Username or Password!');
+        } 
+        else 
+        {
+            $email = test_input($_POST['email']);
+            $password = test_input($_POST['password']);
+
+            // select row
+            $sql = "SELECT * FROM PROFILE WHERE email='$email'";
+            $result= mysqli_query($conn, $sql);
+
+            if(mysqli_num_rows($result) === 1)
+            {
+                $row = mysqli_fetch_assoc($result);
+
+                if($password == $row['password'])
+                {
+                    if($row['ngoID'] != null)
+                    {
+                        echo json_encode('ngo');
+                    }
+                    else if($row['businessID'] != null)
+                    {
+                        echo json_encode('business');
+                    }
+                    else
+                    {
+                        echo json_encode('false');
+                    }
+                    
+                }
+                else
+                {
+                    echo json_encode('false');
+                }
+            }
+            else
+            {
+                echo json_encode('false');
+            }
+        }
     }
 ?>

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:noupartazer_app/Atish/components/Buttons/LargeButtonIconText.dart';
+import 'package:noupartazer_app/Atish/components/Buttons/LargeCustomButtonIconText.dart';
 
 import 'package:noupartazer_app/Devashish/components/TheOutlinedButtons.dart';
 import 'package:noupartazer_app/Devashish/components/YellowTitlePara.dart';
@@ -7,18 +9,8 @@ import 'package:noupartazer_app/Devashish/components/YellowTitles.dart';
 
 import 'package:noupartazer_app/Atish/Pages/UserAccess/UserAcessPanel.dart';
 
-class CheckEmailTemplate extends StatelessWidget 
+class AccountCreated extends StatelessWidget 
 {
-  final String theParagraph;
-  final String theButtonName;
-
-  CheckEmailTemplate
-  (
-    {
-      this.theButtonName,
-      this.theParagraph,
-    }
-  );
 
   @override
   Widget build(BuildContext context) 
@@ -38,27 +30,16 @@ class CheckEmailTemplate extends StatelessWidget
           ),
           body: SingleChildScrollView
           (
-            child: Container(
-              margin: EdgeInsets.only(top: screen.padding.top),
+            child: Container
+            (
+              margin: EdgeInsets.only
+              (
+                top: screen.padding.top
+              ),
               child: Column
               (
                 children: 
                 [
-                  // TheBackButton(
-                  //     press: () {
-
-                  //       Colors.white;
-                  //       Navigator.push(
-                  //         context,
-                  //         MaterialPageRoute(
-                  //           builder: (context) {
-                  //             return LoginScreen();
-                  //           },
-                  //         ),
-                  //       );
-                  //     }
-                  // ),
-
                   Icon
                   (
                     Icons.verified, //Icon Name
@@ -69,7 +50,7 @@ class CheckEmailTemplate extends StatelessWidget
                   SizedBox(height: constraints.maxHeight * 0.06,),
                   YellowTitles
                   (
-                    textContent: "Check Your Email",
+                    textContent: "Success",
                   ),
 
                   SizedBox(height: constraints.maxHeight * 0.02,),
@@ -77,29 +58,35 @@ class CheckEmailTemplate extends StatelessWidget
                   Container
                   (
                     margin: EdgeInsets.symmetric(horizontal: constraints.maxWidth * 0.062),
-                    child: YellowTitlePara
+                    child: Text
                     (
-                      // paragraph: "We have sent you a reset password link to the registered email address.",
-                      paragraph: theParagraph,
-                      textAlignment: TextAlign.center,
+                      'Your Account has been created successfully. You may now login with your credentials',
+                      style: TextStyle
+                      (
+                        color: Colors.black,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 20,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
                   ),
 
-                  SizedBox(height: constraints.maxHeight * 0.04,),
-
-                  TheOutlinedButtons(
-                    message: theButtonName,
-                      press: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) {
-                              return UserAcessPanel();
-                            },
-                          ),
-                        );
-                      }
-
+                  Container
+                  (
+                    width: constraints.maxWidth * 0.7,
+                    margin: EdgeInsets.only(top: 20),
+                    child: LargeCustomButtonIconText
+                    (
+                      text: "Log In",
+                      textColor: Color.fromRGBO(245, 197, 41, 1),
+                      buttonColor: Color.fromRGBO(245, 197, 41, 0.2),
+                      hasIcon: false,
+                      elevation: 0,
+                      isPageTransition: true,
+                      transitionType: 'leftToRight',
+                      transitionDuration: 1100,
+                      onPress: UserAcessPanel(),
+                    ),
                   ),
                 ],
               ),

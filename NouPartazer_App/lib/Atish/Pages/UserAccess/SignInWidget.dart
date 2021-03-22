@@ -7,7 +7,7 @@ import 'package:http/http.dart' as http;
 import 'package:noupartazer_app/Atish/components/Buttons/LargeButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
 import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
-import 'package:noupartazer_app/Devashish/pages/ForgotPassword.dart';
+import 'package:noupartazer_app/Koomalai/Pages/BottomNavigation/BusinessBottomNav.dart';
 import 'package:noupartazer_app/Koomalai/Pages/BottomNavigation/NGOBottomNav.dart';
 
 class SignInWidget extends StatefulWidget
@@ -49,11 +49,22 @@ Future userLogin() async
 
     var res = await http.post(url, body:data);
 
-    if(jsonDecode(res.body) == 'Account does not exist')
+    var interface;
+
+    if(jsonDecode(res.body) == 'ngo')
+    {
+      interface = NGOBottomNav();
+    }
+    else if(jsonDecode(res.body) == 'business')
+    {
+      interface = BusinessBottomNav();
+    }
+
+    if(jsonDecode(res.body) == 'Incorrect Username or Password!')
     {
       Fluttertoast.showToast
       (
-        msg: "Account does not exist",
+        msg: "Incorrect Username or Password!",
         toastLength: Toast.LENGTH_SHORT,
       );
     }
@@ -67,6 +78,13 @@ Future userLogin() async
     }
     else
     {
+      AllTransitions().getTransition
+      (
+        context: context,
+        transitionType: 'downToUp',
+        onPress: interface,
+      );
+      
       Fluttertoast.showToast
       (
         msg: "Access Granted",
@@ -126,6 +144,7 @@ Future userLogin() async
 
           CustomTextField
           (
+            textColor: Colors.white,
             controller: emailCtrl,
             labelText: 'Email',
             labelSize: 20,
@@ -141,6 +160,7 @@ Future userLogin() async
 
           CustomTextField
           (
+            textColor: Colors.white,
             controller: passwordCtrl,
             labelText: 'Password',
             labelSize: 20,
@@ -156,7 +176,7 @@ Future userLogin() async
 
           Container
           (
-            margin: EdgeInsets.only(top: widget.constraints.maxHeight * 0.02),
+            margin: EdgeInsets.only(top: widget.constraints.maxHeight * 0.03),
             padding: EdgeInsets.only
             (
               left: 15,
@@ -170,44 +190,44 @@ Future userLogin() async
               buttonColor: Color.fromRGBO(245, 197, 41, 1),
               hasIcon: false,
               elevation: 0,
-              isPage: true,
-              onPress: NGOBottomNav(),
+              hasSuperPress: true,
+              onSuperPress: userLogin,
             ),
           ),
 
-          Container
-          (
-            margin: EdgeInsets.only(top: widget.constraints.maxHeight * 0.0025),
-            child: MaterialButton
-            (
-              child: FittedBox
-              (
-                fit: BoxFit.contain,
-                child: Text
-                (
-                  "Forgot Password?",
-                  style: TextStyle
-                  (
-                    color: Colors.white,
-                    fontSize: 22.0,
-                    decoration: TextDecoration.underline,
-                    fontWeight: FontWeight.bold
-                  ),
-                ),
-              ),
+          // Container
+          // (
+          //   margin: EdgeInsets.only(top: widget.constraints.maxHeight * 0.0025),
+          //   child: MaterialButton
+          //   (
+          //     child: FittedBox
+          //     (
+          //       fit: BoxFit.contain,
+          //       child: Text
+          //       (
+          //         "Forgot Password?",
+          //         style: TextStyle
+          //         (
+          //           color: Colors.white,
+          //           fontSize: 22.0,
+          //           decoration: TextDecoration.underline,
+          //           fontWeight: FontWeight.bold
+          //         ),
+          //       ),
+          //     ),
               
-              onPressed: ()
-              {
-                AllTransitions().getTransition
-                (
-                  context: context,
-                  transitionType: 'rightToLeft',
-                  transitionDuration: 1100,
-                  onPress: ForgotPassword(),
-                );
-              },
-            ),
-          )
+          //     onPressed: ()
+          //     {
+          //       AllTransitions().getTransition
+          //       (
+          //         context: context,
+          //         transitionType: 'rightToLeft',
+          //         transitionDuration: 1100,
+          //         onPress: ForgotPassword(),
+          //       );
+          //     },
+          //   ),
+          // )
         ],
       ),
     );

@@ -28,7 +28,6 @@ class EventDetails extends StatelessWidget
           (
             hasBackButton: true,
             text: 'EVENT DETAILS',
-            customBarColor: true,
             barColor: Color.fromRGBO(242, 242, 242, 1),
           ),
 

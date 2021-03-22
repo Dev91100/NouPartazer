@@ -29,6 +29,7 @@ dependencies:
   page_transition: ^1.1.5
   rxdart: any
   url_launcher: ^6.0.2
+  validators: ^2.0.0
 
 dev_dependencies:
   flutter_test:

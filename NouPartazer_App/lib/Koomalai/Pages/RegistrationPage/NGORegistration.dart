@@ -9,8 +9,8 @@ import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/LargeCustomButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
-
-
+import 'package:noupartazer_app/Devashish/components/AccountCreated.dart';
+import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
 
 class NGORegistration extends StatefulWidget
 {
@@ -81,6 +81,13 @@ class _NGORegistrationState extends State<NGORegistration>
         (
           msg: "Account created.",
           toastLength: Toast.LENGTH_SHORT,
+        );
+
+        AllTransitions().getTransition
+        (
+          context: context,
+          transitionType: 'rightToLeft',
+          onPress: AccountCreated(),
         );
       }
       else

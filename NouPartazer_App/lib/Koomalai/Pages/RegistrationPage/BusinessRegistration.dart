@@ -8,7 +8,8 @@ import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/LargeCustomButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
-import 'package:noupartazer_app/Koomalai/Pages/BottomNavigation/BusinessBottomNav.dart';
+import 'package:noupartazer_app/Devashish/components/AccountCreated.dart';
+import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
 
 class BusinessRegistration extends StatefulWidget
 {
@@ -39,6 +40,10 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
 
   Future registerUser() async
   {
+    setState(() {
+      processing = true;
+    });
+
     var url = "https://foodsharingapp.000webhostapp.com/BusinessRegistration.php";
     var data = 
     {
@@ -70,6 +75,13 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
           msg: "Account created.",
           toastLength: Toast.LENGTH_SHORT,
         );
+
+        AllTransitions().getTransition
+        (
+          context: context,
+          transitionType: 'rightToLeft',
+          onPress: AccountCreated(),
+        );
       }
       else
       {
@@ -80,6 +92,20 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
         );
       }
     }
+
+    setState(() {
+      processing = false;
+    });
+
+  }
+
+  void showErrorToast()
+  {
+    Fluttertoast.showToast
+    (
+      msg: "Please fill in the required fields correctly.",
+      toastLength: Toast.LENGTH_SHORT,
+    );
   }
 
   @override
@@ -89,6 +115,7 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
     (
       appBar: PageTitle
       (
+        barColor: Colors.white,
         hasBackButton: true,
       ),
       body: LayoutBuilder
@@ -192,6 +219,7 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
                       controller: passwordCtrl,
                       keyboardType: TextInputType.visiblePassword,
                       labelText: 'Password',
+                      obscureText: true,
                       hasSuffixIcon: false,
                     ),
 
@@ -208,11 +236,10 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
                       child: LargeCustomButtonIconText
                       (
                         text: 'Register',
+                        processing: processing,
                         hasIcon: false,
-                        isPage: true,
-                        onPress: BusinessBottomNav(),
-                        // hasSuperPress: true,
-                        // onSuperPress: registerUser,
+                        hasSuperPress: true,
+                        onSuperPress: registerUser,
                       )
                     ),
                   ],

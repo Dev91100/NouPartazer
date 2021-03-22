@@ -65,7 +65,7 @@ class _CreateStoryState extends State<CreateStory>
   }
 
   @override
-  Widget build(BuildContext context) 
+  Widget build(BuildContext context)
   {
     var storyCreatedDialog = new StoryCreated().displayDialog(context);
 

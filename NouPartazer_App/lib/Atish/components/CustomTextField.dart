@@ -1,12 +1,21 @@
 import 'package:flutter/material.dart';
 
+import 'package:validators/validators.dart';
+import 'package:validators/sanitizers.dart';
+
 class CustomTextField extends StatelessWidget
 {
+  final Color textColor;
+  final double textSize;
   final String labelText;
   final Color labelColor;
   final double labelSize;
   final FontWeight fontWeight;
-  final String errorText;
+  final bool obscureText;
+  final String fieldType;
+  final bool optional;
+  final int minLength;
+  final int maxLength;
   final Color fillColor;
   final bool hasBorder;
   final double borderWidth;
@@ -21,19 +30,23 @@ class CustomTextField extends StatelessWidget
   final int minLines;
   final bool alignLabel;
   final TextInputType keyboardType; 
-
   final TextEditingController controller;
-
 
   CustomTextField
   (
     {
-      this.labelText = 'This is a test',
+      this.textColor = Colors.black,
+      this.textSize = 20,
+      this.labelText = '',
       this.labelSize = 18,
       this.labelColor = const Color.fromRGBO(0, 0, 0, 1),
       this.fillColor = const Color.fromRGBO(242, 242, 242, 0.6),
       this.fontWeight = FontWeight.w700,
-      this.errorText,
+      this.obscureText = false,
+      this.fieldType,
+      this.optional = false,
+      this.minLength,
+      this.maxLength,
       this.hasSuffixIcon = true,
       this.suffixIcon = Icons.help_outline,
       this.iconSize,
@@ -54,6 +67,8 @@ class CustomTextField extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
+    String errorMsg;
+
     return Container
     (
       margin: margin,
@@ -63,13 +78,58 @@ class CustomTextField extends StatelessWidget
         keyboardType: (hasMultiline) ? TextInputType.multiline : keyboardType,
         maxLines: (hasMultiline) ? maxLines : maxLines,
         minLines: minLines,
+        obscureText: obscureText,
+        validator: (value)
+        {
+          var val = trim(value);
+
+          if(val.isEmpty && optional == false)
+          {
+            errorMsg = labelText+ 'field is required.';
+            return errorMsg;
+          }
+          
+          switch(fieldType)
+          {
+            case 'email':
+              if(!isEmail(val))
+              {
+                errorMsg = 'Please enter a valid email';
+                return errorMsg;
+              }
+              break;
+
+            case 'length':
+              if(!isLength(val, minLength, maxLength))
+              {
+                errorMsg = 'Please enter a value of the correct length';
+                return errorMsg;
+              }
+              break;
+
+            case 'alpha':
+              if(!isAlpha(val))
+              {
+                errorMsg = 'Please enter a valid ' + labelText;
+                return errorMsg;
+              }
+              break;
+          }
+
+          return null;
+        },
+        style: TextStyle
+        (
+          color: textColor,
+          fontSize: textSize,
+        ),
         decoration: InputDecoration
         (
           filled: true,
           fillColor: fillColor,
           alignLabelWithHint: alignLabel, // Align label to the top in the case of multiline
           labelText: labelText,
-          errorText: (errorText != null) ? errorText : null,
+          errorText: errorMsg,
           labelStyle: TextStyle
           (
             fontSize: labelSize,

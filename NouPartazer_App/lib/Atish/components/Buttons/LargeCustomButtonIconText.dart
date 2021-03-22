@@ -34,6 +34,7 @@ class LargeCustomButtonIconText extends StatelessWidget
   final int transitionDuration;
   final bool hasSuperPress;
   final VoidCallback onSuperPress;
+  final bool processing;
 
   LargeCustomButtonIconText
   (
@@ -64,6 +65,7 @@ class LargeCustomButtonIconText extends StatelessWidget
       this.isPageTransition = false,
       this.transitionDuration = 1100,
       this.transitionType = 'scale',
+      this.processing = false,
       this.hasSuperPress = false,
       this.onSuperPress,
     }
@@ -88,8 +90,8 @@ class LargeCustomButtonIconText extends StatelessWidget
     (
       style: OutlinedButton.styleFrom
       (
-        primary: primaryColor,
-        backgroundColor: buttonColor,
+        primary: (processing) ? Color.fromRGBO(0, 50, 193, 1) : buttonColor,
+        backgroundColor: (processing) ? Color.fromRGBO(0, 50, 193, 1) : buttonColor,
         padding: padding,
         elevation: elevation,
         shape: RoundedRectangleBorder
@@ -98,12 +100,22 @@ class LargeCustomButtonIconText extends StatelessWidget
         ),
         side: (hasBorder) ? BorderSide
         (
-          color: borderColor,
+          color: (processing) ? Colors.transparent : borderColor,
           width: borderWidth
         ) : null,
       ),
       
-      child: IconText
+      child: (processing) ? SizedBox
+      (
+        height: 26,
+        width: 26,
+        child: CircularProgressIndicator
+        (
+          strokeWidth: 2,
+          backgroundColor: Color.fromRGBO(0, 50, 193, 1)
+        ),
+      ) :
+      IconText
       (
         text: text,
         textDecoration: textDecoration,
