@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:noupartazer_app/Devashish/pages/CreateStory.dart';
 import 'package:noupartazer_app/Koomalai/Pages/DonationAndNGOCentresList/NGODonation.dart';
 import 'package:noupartazer_app/Koomalai/Pages/HomePage/NGOHomePage.dart';
-import 'package:noupartazer_app/Koomalai/Pages/ProfilePage/NGO/ViewOnlyNGOProfile.dart';
+import 'package:noupartazer_app/Koomalai/Pages/ProfilePage/NGO/EditableNGOProfile.dart';
 import 'package:noupartazer_app/Koomalai/Pages/TabBar/NGOTaskTab.dart';
 
 class NGOBottomNav extends StatefulWidget
@@ -34,7 +34,7 @@ class _NGOBottomNavState extends State<NGOBottomNav>
     super.initState();
     _pageController = PageController();
     home    = NGOHomePage();
-    profile = ViewOnlyNGOProfile();
+    profile = EditableNGOProfile();
     event   = CreateStory();
     list    = Donation();
     task    = NGOTaskTab();
