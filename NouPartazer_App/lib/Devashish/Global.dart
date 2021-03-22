@@ -24,7 +24,7 @@ class Global
   double settingsChangePWButton = 18;     //Font for the change password button
 
   double registerButton = 20;             //used in NGO and business registration
-  
+
   double businessPOVstoryTitle = 23;      //Used in the Business POV for story title
 }
 

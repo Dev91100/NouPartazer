@@ -108,7 +108,7 @@ class BusinessStoryModel extends StatelessWidget
                               style: TextStyle
                               (
                                 fontWeight: FontWeight.bold,
-                                fontSize: Global().businessPOVstoryTitle,
+                                fontSize: Global().normalText,
                                 color: new Color.fromRGBO(245, 197, 41, 1),
                               ),
                             ),

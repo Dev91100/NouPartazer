@@ -112,7 +112,7 @@ class NGOStoryModel extends StatelessWidget
                               style: TextStyle
                               (
                                 fontWeight: FontWeight.bold,
-                                fontSize: Global().normalText,
+                                fontSize: Global().businessPOVstoryTitle,
                                 color: new Color.fromRGBO(245, 197, 41, 1),
                               ),
                             ),
@@ -129,7 +129,7 @@ class NGOStoryModel extends StatelessWidget
                           child: LongText
                           (
                             title: st.description,
-                            fontSize: Global().storySubtitle,
+                            fontSize: Global().normalText,
                             fontWeight: FontWeight.w500,
                             textColor: Color.fromRGBO(255, 255, 255, 1),
                           ),
