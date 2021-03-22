@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
 
-class EditIconButton extends StatelessWidget
+class RoundIconButton extends StatelessWidget
 {
   final onPress;
   final bool isModalPage;
@@ -22,7 +22,7 @@ class EditIconButton extends StatelessWidget
   final bool hasSuperPress;
   final VoidCallback onSuperPress;
 
-  EditIconButton
+  RoundIconButton
   (
     {
       this.onPress,

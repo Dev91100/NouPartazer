@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:noupartazer_app/Atish/components/Buttons/RoundIconButton.dart';
+import 'package:noupartazer_app/Atish/components/Buttons/SettingsButton.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 import 'package:noupartazer_app/Atish/components/CustomDivider.dart';
 import 'package:noupartazer_app/Atish/components/LongText.dart';
@@ -8,16 +8,20 @@ import 'package:noupartazer_app/Atish/components/SectionWithEditButton.dart';
 import 'package:noupartazer_app/Atish/components/ContactInfo.dart';
 import 'package:noupartazer_app/Devashish/components/GetImage/BannerPhoto/BannerPhotoGetImage.dart';
 import 'package:noupartazer_app/Devashish/components/GetImage/ProfilePhoto/ProfilePhotoGetImage.dart';
-import 'package:noupartazer_app/Atish/Pages/Story/NGOStory/NGOStory.dart';
-import 'package:noupartazer_app/Atish/Pages/Story/NGOStory/NGOStoryList.dart';
 import 'package:noupartazer_app/Atish/Pages/Story/BusinessStory/BusinessStoryModelProfile.dart';
-import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/NGOAndBusinessSettings.dart';
 import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContactDialog/EditContact.dart';
 import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContactDialog/BusinessEditName.dart';
 
-class BusinessProfile extends StatelessWidget
+class BusinessProfileModel extends StatelessWidget
 {
-  final List<NGOStory> ngoStory = ngoStoryList;
+  final bool isEditable;
+
+  BusinessProfileModel
+  (
+    {
+      this.isEditable = false,
+    }
+  );
 
   @override
   Widget build(BuildContext context)
@@ -45,35 +49,27 @@ class BusinessProfile extends StatelessWidget
                     BannerPhotoGetImage
                     (
                       screen: screen,
+                      isEditable: isEditable,
                       constraints: constraints,
                     ),
 
-                    ProfilePhotoGetImage(constraints: constraints,),
+                    ProfilePhotoGetImage
+                    (
+                      isEditable: isEditable,
+                      constraints: constraints,
+                    ),
 
-                    Container
+                    (isEditable) ? Container
                     (
                       alignment: Alignment.bottomRight,
 
                       margin: EdgeInsets.only
                       (
-                        top: screen.height * 0.31,
-                      ),
-                      child: EditIconButton
-                      (
-                        isPageTransition: true,
-                        transitionType: 'rightToLeft',
-                        transitionDuration: 1100,
-                        onPress: NGOAndBusinessSettings(),                       
-                        icon: Icons.settings_outlined,
-                        height: 50,
-                        width: 50,
-                        left: 10,
-                        top: 10,
                         right: 20,
-                        bottom: constraints.maxHeight * 0.015,
-                        size: 35,
+                        top: screen.height * 0.33,
                       ),
-                    ),
+                      child: SettingsButton(),
+                    ) : Container(),
                   ],
                 ),
 
@@ -81,9 +77,12 @@ class BusinessProfile extends StatelessWidget
                 (
                   children:
                   [
-                    SectionTitle
+                    Container
                     (
-                      title: 'MY STORIES',
+                      child: SectionTitle
+                      (
+                        title: 'MY STORIES',
+                      ),
                     ),
 
                     BusinessStoryModelProfile(),
@@ -98,7 +97,8 @@ class BusinessProfile extends StatelessWidget
                   [
                     SectionWithEditButton
                     (
-                      title: 'Manzer Partazer Test Test Test Test',
+                      isEditable: isEditable,
+                      title: 'Jumbo Supermarket',
                       fontSize: 22,
                       color: Color.fromRGBO(0, 50, 193, 1),
                       onPress: businessEditNameBottomSheet,
@@ -113,7 +113,7 @@ class BusinessProfile extends StatelessWidget
                         width: screen.width * 0.9,
                         child: SectionTitle
                         (
-                          title: 'Food Sharing Project of Mauritius Mauritius Mauritius',
+                          title: 'Best supermarket chain',
                           fontSize: 20, 
                           top: 15,
                           color: Color.fromRGBO(51, 51, 51, 1),
@@ -135,8 +135,7 @@ class BusinessProfile extends StatelessWidget
                       ),
                       child: LongText
                       (
-                        title: "MANZER PARTAZER is the the first food sharing project of Mauritius. Our aim is to reduce the wastage of high quality ready to eat food by simply sharing it!"
-                              "We ‘save’ food which would otherwise go to waste, such as buffet leftovers in hotels or restaurants, donating it to people in need through a very simple and no-cost food sharing system.or restaurants, donating it to people in need through a very simple and no-cost food sharing system.or restaurants, donating it to people in need through a very simple and no-cost food sharing system.or restaurants, donating it to people in need through a very simple and no-cost food sharing system.",
+                        title: "Jumbo is the supermarket chain that has democratized mass distribution, becoming the preferred supermarket for Mauritian households. A subsidiary of the IBL group, Jumbo supermarkets have been present on the island since 1994, and are the first to have opened a supermarket in a rural area.",
                         fontSize: 18,
                         fontWeight: FontWeight.w500,
                         top: screen.height * 0.015,
@@ -154,11 +153,19 @@ class BusinessProfile extends StatelessWidget
                   (
                     children:
                     [
-                      SectionWithEditButton
+                      Container
                       (
-                        title: 'CONTACT INFO',
-                        onPress: editContactBottomSheet,
-                        isModalPage: true,
+                        child: Container
+                        (
+                          margin: (isEditable) ?  null : EdgeInsets.only(bottom: constraints.maxHeight *0.025),
+                          child: SectionWithEditButton
+                          (
+                            isEditable: isEditable,
+                            title: 'CONTACT INFO',
+                            onPress: editContactBottomSheet,
+                            isModalPage: true,
+                          ),
+                        ),
                       ),
 
                       ContactInfo

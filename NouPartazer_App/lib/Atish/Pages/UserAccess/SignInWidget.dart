@@ -1,9 +1,13 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:http/http.dart' as http;
 
 import 'package:noupartazer_app/Atish/components/Buttons/LargeButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
 import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
-import 'package:noupartazer_app/Devashish/pages/ForgotPassword.dart';
+import 'package:noupartazer_app/Koomalai/Pages/BottomNavigation/BusinessBottomNav.dart';
 import 'package:noupartazer_app/Koomalai/Pages/BottomNavigation/NGOBottomNav.dart';
 import 'package:noupartazer_app/Devashish/Global.dart';
 
@@ -33,6 +37,61 @@ class _SignInWidgetState extends State<SignInWidget>
     
     emailCtrl = new TextEditingController();
     passwordCtrl = new TextEditingController();
+  }
+
+Future userLogin() async
+  {
+    var url = "https://foodsharingapp.000webhostapp.com/SignIn.php";
+    var data = 
+    {
+      "email" : emailCtrl.text,
+      "password" : passwordCtrl.text,
+    };
+
+    var res = await http.post(url, body:data);
+
+    var interface;
+
+    if(jsonDecode(res.body) == 'ngo')
+    {
+      interface = NGOBottomNav();
+    }
+    else if(jsonDecode(res.body) == 'business')
+    {
+      interface = BusinessBottomNav();
+    }
+
+    if(jsonDecode(res.body) == 'Incorrect Username or Password!')
+    {
+      Fluttertoast.showToast
+      (
+        msg: "Incorrect Username or Password!",
+        toastLength: Toast.LENGTH_SHORT,
+      );
+    }
+    else if(jsonDecode(res.body) == 'false')
+    {
+      Fluttertoast.showToast
+      (
+        msg: "Email or password incorrect",
+        toastLength: Toast.LENGTH_SHORT,
+      );
+    }
+    else
+    {
+      AllTransitions().getTransition
+      (
+        context: context,
+        transitionType: 'downToUp',
+        onPress: interface,
+      );
+      
+      Fluttertoast.showToast
+      (
+        msg: "Access Granted",
+        toastLength: Toast.LENGTH_SHORT,
+      );
+    }
   }
 
   @override
@@ -86,6 +145,7 @@ class _SignInWidgetState extends State<SignInWidget>
 
           CustomTextField
           (
+            textColor: Colors.white,
             controller: emailCtrl,
             labelText: 'Email',
             labelSize: 20,
@@ -101,6 +161,7 @@ class _SignInWidgetState extends State<SignInWidget>
 
           CustomTextField
           (
+            textColor: Colors.white,
             controller: passwordCtrl,
             labelText: 'Password',
             labelSize: 20,
@@ -116,7 +177,7 @@ class _SignInWidgetState extends State<SignInWidget>
 
           Container
           (
-            margin: EdgeInsets.only(top: widget.constraints.maxHeight * 0.02),
+            margin: EdgeInsets.only(top: widget.constraints.maxHeight * 0.03),
             padding: EdgeInsets.only
             (
               left: 15,
@@ -130,46 +191,44 @@ class _SignInWidgetState extends State<SignInWidget>
               buttonColor: Color.fromRGBO(245, 197, 41, 1),
               hasIcon: false,
               elevation: 0,
-              isPageTransition: true,
-              transitionType: 'downToUp',
-              transitionDuration: 1100,
-              onPress: NGOBottomNav(),
+              hasSuperPress: true,
+              onSuperPress: userLogin,
             ),
           ),
 
-          Container
-          (
-            margin: EdgeInsets.only(top: widget.constraints.maxHeight * 0.0025),
-            child: MaterialButton
-            (
-              child: FittedBox
-              (
-                fit: BoxFit.contain,
-                child: Text
-                (
-                  "Forgot Password?",
-                  style: TextStyle
-                  (
-                    color: Colors.white,
-                    fontSize: 22.0,
-                    decoration: TextDecoration.underline,
-                    fontWeight: FontWeight.bold
-                  ),
-                ),
-              ),
+          // Container
+          // (
+          //   margin: EdgeInsets.only(top: widget.constraints.maxHeight * 0.0025),
+          //   child: MaterialButton
+          //   (
+          //     child: FittedBox
+          //     (
+          //       fit: BoxFit.contain,
+          //       child: Text
+          //       (
+          //         "Forgot Password?",
+          //         style: TextStyle
+          //         (
+          //           color: Colors.white,
+          //           fontSize: 22.0,
+          //           decoration: TextDecoration.underline,
+          //           fontWeight: FontWeight.bold
+          //         ),
+          //       ),
+          //     ),
               
-              onPressed: ()
-              {
-                AllTransitions().getTransition
-                (
-                  context: context,
-                  transitionType: 'rightToLeft',
-                  transitionDuration: 1100,
-                  onPress: ForgotPassword(),
-                );
-              },
-            ),
-          )
+          //     onPressed: ()
+          //     {
+          //       AllTransitions().getTransition
+          //       (
+          //         context: context,
+          //         transitionType: 'rightToLeft',
+          //         transitionDuration: 1100,
+          //         onPress: ForgotPassword(),
+          //       );
+          //     },
+          //   ),
+          // )
         ],
       ),
     );

@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 
+import 'dart:convert';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:http/http.dart' as http;
+
 import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/LargeCustomButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
-import 'package:noupartazer_app/Koomalai/Pages/BottomNavigation/BusinessBottomNav.dart';
-import 'package:noupartazer_app/Devashish/Global.dart';
-
+import 'package:noupartazer_app/Devashish/components/AccountCreated.dart';
+import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
 
 class BusinessRegistration extends StatefulWidget
 {
@@ -18,6 +21,8 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
 {
   final _formKey = GlobalKey<FormState>();
   TextEditingController brnCtrl, companyNameCtrl, businessNameCtrl, websiteCtrl, contactNumberCtrl, emailCtrl, passwordCtrl;
+
+  bool processing = false;
 
   @override
   void initState()
@@ -33,6 +38,76 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
     passwordCtrl = new TextEditingController();
   }
 
+  Future registerUser() async
+  {
+    setState(() {
+      processing = true;
+    });
+
+    var url = "https://foodsharingapp.000webhostapp.com/BusinessRegistration.php";
+    var data = 
+    {
+      "brn" : brnCtrl.text,
+      "companyName" : companyNameCtrl.text,
+      "businessName" : businessNameCtrl.text,
+      "website" : websiteCtrl.text,
+      "contactNumber" : contactNumberCtrl.text,
+      "email" : emailCtrl.text,
+      "password" : passwordCtrl.text,
+    };
+
+    var res = await http.post(url, body:data);
+
+    if(jsonDecode(res.body) == "account already exist")
+    {
+      Fluttertoast.showToast
+      (
+        msg: "Account already exist, please login.",
+        toastLength: Toast.LENGTH_SHORT,
+      );
+    }
+    else
+    {
+      if(jsonDecode(res.body) == "true")
+      {
+        Fluttertoast.showToast
+        (
+          msg: "Account created.",
+          toastLength: Toast.LENGTH_SHORT,
+        );
+
+        AllTransitions().getTransition
+        (
+          context: context,
+          transitionType: 'rightToLeft',
+          onPress: AccountCreated(),
+        );
+      }
+      else
+      {
+        Fluttertoast.showToast
+        (
+          msg: "Error.",
+          toastLength: Toast.LENGTH_SHORT,
+        );
+      }
+    }
+
+    setState(() {
+      processing = false;
+    });
+
+  }
+
+  void showErrorToast()
+  {
+    Fluttertoast.showToast
+    (
+      msg: "Please fill in the required fields correctly.",
+      toastLength: Toast.LENGTH_SHORT,
+    );
+  }
+
   @override
   Widget build(BuildContext context)
   {
@@ -40,6 +115,7 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
     (
       appBar: PageTitle
       (
+        barColor: Colors.white,
         hasBackButton: true,
       ),
       body: LayoutBuilder
@@ -71,7 +147,7 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
                       (
                         title: 'Let\'s continue',
                         left: 0,
-                        fontSize: Global().yellowTitle,
+                        fontSize: 45,
                         color: Color.fromRGBO(245, 197, 41, 1),
                       ),
                     ),
@@ -85,7 +161,7 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
                         style: TextStyle
                         (
                           color: Colors.black,
-                          fontSize: Global().yellowTitlePara,
+                          fontSize: 20
                         ),
                       ),
                     ),
@@ -143,6 +219,7 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
                       controller: passwordCtrl,
                       keyboardType: TextInputType.visiblePassword,
                       labelText: 'Password',
+                      obscureText: true,
                       hasSuffixIcon: false,
                     ),
 
@@ -154,17 +231,15 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
                         left: 15,
                         bottom: 40
                       ),
-                      
                       margin: EdgeInsets.only(top: 20),
                       width: constraints.maxWidth,
                       child: LargeCustomButtonIconText
                       (
-                        padding: EdgeInsets.all(8),
                         text: 'Register',
-                        fontSize: Global().registerButton,
+                        processing: processing,
                         hasIcon: false,
-                        isPage: true,
-                        onPress: BusinessBottomNav(),
+                        hasSuperPress: true,
+                        onSuperPress: registerUser,
                       )
                     ),
                   ],

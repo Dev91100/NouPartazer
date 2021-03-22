@@ -11,6 +11,7 @@ class LargeCustomButtonIconText extends StatelessWidget
   final TextDecoration textDecoration;
   final Color textColor;
   final Color iconColor;
+  final Color primaryColor;
   final bool hasBorder;
   final Color borderColor;
   final double borderWidth;
@@ -33,6 +34,7 @@ class LargeCustomButtonIconText extends StatelessWidget
   final int transitionDuration;
   final bool hasSuperPress;
   final VoidCallback onSuperPress;
+  final bool processing;
 
   LargeCustomButtonIconText
   (
@@ -50,6 +52,7 @@ class LargeCustomButtonIconText extends StatelessWidget
       this.fontWeight = FontWeight.w700,
       this.textColor = const Color.fromRGBO(245, 197, 41, 1),
       this.iconColor = const Color.fromRGBO(255, 255, 255, 1),
+      this.primaryColor = const Color.fromRGBO(0, 50, 193, 1),
       this.hasBorder = true,
       this.borderWidth = 2,
       this.buttonColor = const Color.fromRGBO(255, 248, 97, 0.1),
@@ -62,6 +65,7 @@ class LargeCustomButtonIconText extends StatelessWidget
       this.isPageTransition = false,
       this.transitionDuration = 1100,
       this.transitionType = 'scale',
+      this.processing = false,
       this.hasSuperPress = false,
       this.onSuperPress,
     }
@@ -82,11 +86,12 @@ class LargeCustomButtonIconText extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return ElevatedButton
+    return TextButton
     (
       style: OutlinedButton.styleFrom
       (
-        backgroundColor: buttonColor,
+        primary: (processing) ? Color.fromRGBO(0, 50, 193, 1) : buttonColor,
+        backgroundColor: (processing) ? Color.fromRGBO(0, 50, 193, 1) : buttonColor,
         padding: padding,
         elevation: elevation,
         shape: RoundedRectangleBorder
@@ -95,12 +100,22 @@ class LargeCustomButtonIconText extends StatelessWidget
         ),
         side: (hasBorder) ? BorderSide
         (
-          color: borderColor,
+          color: (processing) ? Colors.transparent : borderColor,
           width: borderWidth
         ) : null,
       ),
       
-      child: IconText
+      child: (processing) ? SizedBox
+      (
+        height: 26,
+        width: 26,
+        child: CircularProgressIndicator
+        (
+          strokeWidth: 2,
+          backgroundColor: Color.fromRGBO(0, 50, 193, 1)
+        ),
+      ) :
+      IconText
       (
         text: text,
         textDecoration: textDecoration,

@@ -18,6 +18,8 @@ class SectionWithEditButton extends StatelessWidget
     final Color color;
     final IconData icon;
 
+    final bool isEditable;
+
     SectionWithEditButton
     (
       {
@@ -29,6 +31,7 @@ class SectionWithEditButton extends StatelessWidget
         this.isPage = false,
         this.icon = Icons.create_outlined,
         this.color = const Color.fromRGBO(0, 0, 0, 1),
+        this.isEditable = false,
       }
     )
     {
@@ -39,7 +42,7 @@ class SectionWithEditButton extends StatelessWidget
         color: color,
       );
       
-      EditIconButton
+      RoundIconButton
       (
         onPress: onPress,
         isPopUpPage: isPopUpPage,
@@ -72,7 +75,7 @@ class SectionWithEditButton extends StatelessWidget
               ),
             ),
             
-            EditIconButton
+            (isEditable) ? RoundIconButton
             (
               onPress: onPress,
               isPopUpPage: isPopUpPage,
@@ -86,7 +89,7 @@ class SectionWithEditButton extends StatelessWidget
               right: 20,
               bottom: 10,
               size: 26,
-            ),
+            ) : Container(),
           ],
         );
       }   
