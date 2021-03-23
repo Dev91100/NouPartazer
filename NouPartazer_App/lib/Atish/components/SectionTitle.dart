@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 
+
 class SectionTitle extends StatelessWidget {
   @required
   final String title;
@@ -14,7 +15,7 @@ class SectionTitle extends StatelessWidget {
   (
     {
       this.title = 'This is a test',
-      this.fontSize = 22,
+      this.fontSize = 20,
       this.top = 0,
       this.left = 20,
       this.right = 20,

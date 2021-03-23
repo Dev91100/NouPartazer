@@ -21,7 +21,10 @@ class NGORegistration extends StatefulWidget
 class _NGORegistrationState extends State<NGORegistration>
 {
   final _formKey = GlobalKey<FormState>();
+  
   TextEditingController regNumberCtrl, regNameCtrl, ngoExpertiseCtrl, memberSizeCtrl, addressCtrl, websiteCtrl, titleCtrl, nameCtrl, surnameCtrl, positionCtrl, phoneNumberCtrl, emailCtrl, passwordCtrl;
+
+  bool processing = false;
 
   @override
   void initState()
@@ -43,8 +46,39 @@ class _NGORegistrationState extends State<NGORegistration>
     passwordCtrl = new TextEditingController();
   }
   
+  setValidatorTest()
+  {
+    bool validatorTest;
+
+    try
+    {
+      validatorTest = _formKey.currentState.validate();
+    } catch (e)
+    {
+      return validatorTest;
+    }
+
+  }
+
+  void showErrorToast()
+  {
+    Fluttertoast.showToast
+    (
+      msg: "Please fill in the required fields correctly.",
+      toastLength: Toast.LENGTH_SHORT,
+    );
+  }
+
   Future registerUser() async
   {
+    var test = setValidatorTest();
+
+    if(test != true)
+    {
+      showErrorToast();
+      return;
+    }
+      
     var url = "https://foodsharingapp.000webhostapp.com/NGORegistration.php";
     var data = 
     {
@@ -69,7 +103,7 @@ class _NGORegistrationState extends State<NGORegistration>
     {
       Fluttertoast.showToast
       (
-        msg: "Account already exist, please login.",
+        msg: "Account already exist, please login",
         toastLength: Toast.LENGTH_SHORT,
       );
     }
@@ -77,12 +111,6 @@ class _NGORegistrationState extends State<NGORegistration>
     {
       if(jsonDecode(res.body) == "true")
       {
-        Fluttertoast.showToast
-        (
-          msg: "Account created.",
-          toastLength: Toast.LENGTH_SHORT,
-        );
-
         AllTransitions().getTransition
         (
           context: context,
@@ -94,7 +122,7 @@ class _NGORegistrationState extends State<NGORegistration>
       {
         Fluttertoast.showToast
         (
-          msg: "Error.",
+          msg: "Server Error",
           toastLength: Toast.LENGTH_SHORT,
         );
       }
@@ -197,6 +225,7 @@ class _NGORegistrationState extends State<NGORegistration>
                     (
                       controller: memberSizeCtrl,
                       keyboardType: TextInputType.number,
+                      fieldType: 'num',
                       labelText: 'Member Size',
                       hasSuffixIcon: false,
                     ),
@@ -213,6 +242,8 @@ class _NGORegistrationState extends State<NGORegistration>
                     (
                       controller: websiteCtrl,
                       keyboardType: TextInputType.url,
+                      addAsterix: false,
+                      optional: true,
                       labelText: 'Website',
                       hasSuffixIcon: false,
                     ),
@@ -241,6 +272,7 @@ class _NGORegistrationState extends State<NGORegistration>
                     (
                       controller: nameCtrl,
                       keyboardType: TextInputType.name,
+                      fieldType: 'alpha',
                       labelText: 'Name',
                       hasSuffixIcon: false,
                     ),
@@ -249,6 +281,7 @@ class _NGORegistrationState extends State<NGORegistration>
                     (
                       controller: surnameCtrl,
                       keyboardType: TextInputType.name,
+                      fieldType: 'alpha',
                       labelText: 'Surname',
                       hasSuffixIcon: false,
                     ),
@@ -265,6 +298,9 @@ class _NGORegistrationState extends State<NGORegistration>
                     (
                       controller: phoneNumberCtrl,
                       keyboardType: TextInputType.number,
+                      fieldType: 'length',
+                      minLength: 7,
+                      maxLength: 8,
                       labelText: 'Phone Number',
                       hasSuffixIcon: false,
                     ),
@@ -273,6 +309,7 @@ class _NGORegistrationState extends State<NGORegistration>
                     (
                       controller: emailCtrl,
                       keyboardType: TextInputType.emailAddress,
+                      fieldType: 'email',
                       labelText: 'Email',
                       hasSuffixIcon: false,
                     ),
@@ -281,6 +318,7 @@ class _NGORegistrationState extends State<NGORegistration>
                     (
                       controller: passwordCtrl,
                       keyboardType: TextInputType.visiblePassword,
+                      obscureText: true,
                       labelText: 'Password',
                       hasSuffixIcon: false,
                     ),
@@ -299,8 +337,8 @@ class _NGORegistrationState extends State<NGORegistration>
                       child: LargeCustomButtonIconText
                       (
                         text: 'Register',
+                        processing: processing,
                         hasIcon: false,
-                        hasSuperPress: true,
                         onSuperPress: registerUser,
                       )
                     ),

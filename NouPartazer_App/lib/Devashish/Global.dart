@@ -1,11 +1,11 @@
 class Global
 {
   //Font Sizes
-  double yellowTitle = 35;                //Used in the those pages: SignIn, SignUp, Forgot Password, Registration
-  double normalText = 15;                 //The default font for paragraphs usually, Also used for time and date(Icons also resize automatically)==>IconText.dart
+  final double yellowTitle = 35;                //Used in the those pages: SignIn, SignUp, Forgot Password, Registration
+  final double normalText = 15;                 //The default font for paragraphs usually, Also used for time and date(Icons also resize automatically)==>IconText.dart
   double normalTextIcon;                  //Usually for icons next to 'contact us'
   
-  double profileSectionTitle = 20;        //Section Titles on the profile
+  final double profileSectionTitle = 20;        //Section Titles on the profile
   double profileSectionSubTitle1 = 17;    //A Subtitle for the description of the NGO/Business
   double profileOrganizationName = 20;    //Used in profile pages(NGO and Business)     
   double storyTags = 15;                  //Tags for the story on the homescreen

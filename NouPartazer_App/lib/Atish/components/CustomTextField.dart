@@ -10,6 +10,9 @@ class CustomTextField extends StatelessWidget
   final String labelText;
   final Color labelColor;
   final double labelSize;
+  final Color errorColor;
+  final double errorSize;
+  final String errorMsg;
   final FontWeight fontWeight;
   final bool obscureText;
   final String fieldType;
@@ -19,6 +22,8 @@ class CustomTextField extends StatelessWidget
   final Color fillColor;
   final bool hasBorder;
   final double borderWidth;
+  final Color errorBorderColor;
+  final Color focusedErrorBorderColor;
   final Color borderColor;
   final bool hasSuffixIcon;
   final IconData suffixIcon;
@@ -31,6 +36,7 @@ class CustomTextField extends StatelessWidget
   final bool alignLabel;
   final TextInputType keyboardType; 
   final TextEditingController controller;
+  final bool addAsterix;
 
   CustomTextField
   (
@@ -41,6 +47,9 @@ class CustomTextField extends StatelessWidget
       this.labelSize = 18,
       this.labelColor = const Color.fromRGBO(0, 0, 0, 1),
       this.fillColor = const Color.fromRGBO(242, 242, 242, 0.6),
+      this.errorColor,
+      this.errorSize,
+      this.errorMsg,
       this.fontWeight = FontWeight.w700,
       this.obscureText = false,
       this.fieldType,
@@ -54,6 +63,8 @@ class CustomTextField extends StatelessWidget
       this.hasBorder = false,
       this.borderWidth = 1.5,
       this.borderColor = Colors.black,
+      this.errorBorderColor,
+      this.focusedErrorBorderColor,
       this.margin = const EdgeInsets.only(top: 23),
       this.hasMultiline = false,
       this.maxLines = 1,
@@ -61,14 +72,13 @@ class CustomTextField extends StatelessWidget
       this.alignLabel = false,
       this.keyboardType,
       this.controller,
+      this.addAsterix = true,
     }
   );
 
   @override
   Widget build(BuildContext context)
   {
-    String errorMsg;
-
     return Container
     (
       margin: margin,
@@ -85,8 +95,7 @@ class CustomTextField extends StatelessWidget
 
           if(val.isEmpty && optional == false)
           {
-            errorMsg = labelText+ 'field is required.';
-            return errorMsg;
+            return (errorMsg != null) ? errorMsg : labelText + ' field is required.';
           }
           
           switch(fieldType)
@@ -94,24 +103,33 @@ class CustomTextField extends StatelessWidget
             case 'email':
               if(!isEmail(val))
               {
-                errorMsg = 'Please enter a valid email';
-                return errorMsg;
+                return 'Please enter a valid email';
               }
               break;
 
             case 'length':
               if(!isLength(val, minLength, maxLength))
               {
-                errorMsg = 'Please enter a value of the correct length';
-                return errorMsg;
+                return 'Please enter a value of the correct length';
               }
               break;
 
             case 'alpha':
               if(!isAlpha(val))
               {
-                errorMsg = 'Please enter a valid ' + labelText;
-                return errorMsg;
+                return 'Please enter a valid ' + labelText;
+              }
+              break;
+            case 'num':
+              if(!isNumeric(val))
+              {
+                return 'Please enter a valid ' + labelText;
+              }
+              break;
+            case 'alphaNumeric':
+              if(!isAlphanumeric(val))
+              {
+                return 'Please enter a valid ' + labelText;
               }
               break;
           }
@@ -128,8 +146,31 @@ class CustomTextField extends StatelessWidget
           filled: true,
           fillColor: fillColor,
           alignLabelWithHint: alignLabel, // Align label to the top in the case of multiline
-          labelText: labelText,
-          errorText: errorMsg,
+          labelText: (addAsterix) ? labelText + '*' : labelText,
+          errorStyle: TextStyle
+          (
+            color: errorColor,
+            fontSize: errorSize,
+          ),
+          errorBorder: (errorBorderColor != null) ? OutlineInputBorder
+          (
+            borderRadius: BorderRadius.all(Radius.circular(10)),
+            borderSide: BorderSide
+            (
+              width: borderWidth,
+              color: borderColor,
+            ),
+          ) : null,
+          focusedErrorBorder: (focusedErrorBorderColor != null) ? OutlineInputBorder
+          (
+            borderRadius: BorderRadius.all(Radius.circular(10)),
+            borderSide: BorderSide
+            (
+              width: borderWidth,
+              color: borderColor,
+            ),
+          ) : null,
+          // errorText: errorMsg,
           labelStyle: TextStyle
           (
             fontSize: labelSize,

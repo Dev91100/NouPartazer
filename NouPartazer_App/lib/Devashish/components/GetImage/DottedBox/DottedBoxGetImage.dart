@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'dart:io';
@@ -10,6 +12,13 @@ import 'package:noupartazer_app/Devashish/components/GetImage/DottedBox/DottedBo
 
 class DottedBoxGetImage extends StatefulWidget
 {
+  FileImage galleryImage;
+
+  FileImage getGalleryImage()
+  {
+    return galleryImage;
+  }
+
   @override
   _DottedBoxGetImageState createState() => _DottedBoxGetImageState();
 }
@@ -17,10 +26,10 @@ class DottedBoxGetImage extends StatefulWidget
 class _DottedBoxGetImageState extends State<DottedBoxGetImage>
 {
   Future<File> file;
-  // String status = '';
-  // String base64Image;
-  // File tmpFile;
-  // String errMessage = 'Error Uploading Image';
+  String status = '';
+  String base64Image;
+  File tmpFile;
+  String errMessage = 'Error Uploading Image';
 
   chooseImage()
   {
@@ -39,9 +48,11 @@ class _DottedBoxGetImageState extends State<DottedBoxGetImage>
       builder: (BuildContext context, AsyncSnapshot<File> snapshot)
       {
         if (snapshot.connectionState == ConnectionState.done && null != snapshot.data)
-          {
-          // tmpFile = snapshot.data;
-          // base64Image = base64Encode(snapshot.data.readAsBytesSync());
+        {
+          widget.galleryImage = FileImage(snapshot.data);
+          tmpFile = snapshot.data;
+          base64Image = base64Encode(snapshot.data.readAsBytesSync());
+          
           return LayoutBuilder
           (
             builder: (ctx, constraints)

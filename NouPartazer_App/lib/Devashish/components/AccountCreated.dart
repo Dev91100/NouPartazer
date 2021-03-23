@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:noupartazer_app/Atish/components/Buttons/LargeButtonIconText.dart';
-import 'package:noupartazer_app/Atish/components/Buttons/LargeCustomButtonIconText.dart';
 
-import 'package:noupartazer_app/Devashish/components/TheOutlinedButtons.dart';
-import 'package:noupartazer_app/Devashish/components/YellowTitlePara.dart';
+import 'package:noupartazer_app/Atish/components/Buttons/LargeCustomButtonIconText.dart';
 import 'package:noupartazer_app/Devashish/components/TheBackButton.dart';
 import 'package:noupartazer_app/Devashish/components/YellowTitles.dart';
-
 import 'package:noupartazer_app/Atish/Pages/UserAccess/UserAcessPanel.dart';
 
 class AccountCreated extends StatelessWidget 

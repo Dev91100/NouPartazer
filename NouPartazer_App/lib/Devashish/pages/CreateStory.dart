@@ -24,6 +24,8 @@ class _CreateStoryState extends State<CreateStory>
 
   TextEditingController titleCtrl, descriptionCtrl, tagCtrl;
 
+  bool processing = false;
+
   @override
   void initState()
   {
@@ -34,8 +36,44 @@ class _CreateStoryState extends State<CreateStory>
     tagCtrl = new TextEditingController();
   }
 
+  bool setValidatorTest()
+  {
+    bool validatorTest;
+
+    try
+    {
+      validatorTest = _formKey.currentState.validate();
+    } catch (e)
+    {
+      validatorTest = false;
+    }
+
+    return validatorTest;
+  }
+
+  void showErrorToast()
+  {
+    Fluttertoast.showToast
+    (
+      msg: "Please fill in all fields.",
+      toastLength: Toast.LENGTH_SHORT,
+    );
+  }
+
   Future createStoryFunction() async
   {
+    var test = setValidatorTest();
+
+    if(test != true)
+    {
+      showErrorToast();
+      return;
+    }
+
+    setState(() {
+      processing = true;
+    });
+
     var url = "https://foodsharingapp.000webhostapp.com/CreateStory.php";
     var data = 
     {
@@ -48,6 +86,17 @@ class _CreateStoryState extends State<CreateStory>
 
     if(jsonDecode(res.body) == "true")
     {
+      var storyCreatedDialog = new StoryCreated().displayDialog(context);
+
+      showDialog
+      (
+        context: context,
+        builder: (BuildContext context)
+        {
+          return storyCreatedDialog;
+        }
+      );
+
       Fluttertoast.showToast
       (
         msg: "Story created successfully.",
@@ -62,13 +111,15 @@ class _CreateStoryState extends State<CreateStory>
         toastLength: Toast.LENGTH_SHORT,
       );
     }
+
+    setState(() {
+      processing = false;
+    });
   }
 
   @override
   Widget build(BuildContext context)
   {
-    var storyCreatedDialog = new StoryCreated().displayDialog(context);
-
     return Scaffold
     (
       appBar: PageTitle
@@ -152,8 +203,8 @@ class _CreateStoryState extends State<CreateStory>
                       child: LargeCustomButtonIconText
                       (
                         text: 'Create Story',
+                        processing: processing,
                         hasIcon: false,
-                        hasSuperPress: true,
                         onSuperPress: createStoryFunction,
                       )
                     ),

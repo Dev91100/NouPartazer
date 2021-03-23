@@ -10,7 +10,6 @@ import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 import 'package:noupartazer_app/Devashish/components/AccountCreated.dart';
 import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
-import 'package:noupartazer_app/Koomalai/Pages/BottomNavigation/BusinessBottomNav.dart';
 
 class BusinessRegistration extends StatefulWidget
 {
@@ -38,9 +37,41 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
     emailCtrl = new TextEditingController();
     passwordCtrl = new TextEditingController();
   }
+  
+  bool setValidatorTest()
+  {
+    bool validatorTest;
+
+    try
+    {
+      validatorTest = _formKey.currentState.validate();
+    } catch (e)
+    {
+      validatorTest = false;
+    }
+
+    return validatorTest;
+  }
+
+  void showErrorToast()
+  {
+    Fluttertoast.showToast
+    (
+      msg: "Please fill in the required fields correctly.",
+      toastLength: Toast.LENGTH_SHORT,
+    );
+  }
 
   Future registerUser() async
   {
+    var test = setValidatorTest();
+
+    if(test != true)
+    {
+      showErrorToast();
+      return;
+    }
+
     setState(() {
       processing = true;
     });
@@ -88,7 +119,7 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
       {
         Fluttertoast.showToast
         (
-          msg: "Error.",
+          msg: "Server Error.",
           toastLength: Toast.LENGTH_SHORT,
         );
       }
@@ -98,15 +129,6 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
       processing = false;
     });
 
-  }
-
-  void showErrorToast()
-  {
-    Fluttertoast.showToast
-    (
-      msg: "Please fill in the required fields correctly.",
-      toastLength: Toast.LENGTH_SHORT,
-    );
   }
 
   @override
@@ -195,6 +217,8 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
                     (
                       controller: websiteCtrl,
                       keyboardType: TextInputType.url,
+                      addAsterix: false,
+                      optional: true,
                       labelText: 'Website',
                       hasSuffixIcon: false,
                     ),
@@ -203,6 +227,9 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
                     (
                       controller: contactNumberCtrl,
                       keyboardType: TextInputType.number,
+                      fieldType: 'length',
+                      minLength: 7,
+                      maxLength: 8,
                       labelText: 'Contact Number',
                       hasSuffixIcon: false,
                     ),
@@ -211,6 +238,7 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
                     (
                       controller: emailCtrl,
                       keyboardType: TextInputType.emailAddress,
+                      fieldType: 'email',
                       labelText: 'Email',
                       hasSuffixIcon: false,
                     ),
@@ -223,7 +251,7 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
                       obscureText: true,
                       hasSuffixIcon: false,
                     ),
-
+                    
                     Container
                     (
                       padding: EdgeInsets.only
@@ -239,12 +267,7 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
                         text: 'Register',
                         processing: processing,
                         hasIcon: false,
-                        isPageTransition: true,
-                        transitionType: 'downToUp',
-                        transitionDuration: 1100,
-                        onPress: BusinessBottomNav(),
-                        // hasSuperPress: true,
-                        // onSuperPress: registerUser,
+                        onSuperPress: registerUser,
                       )
                     ),
                   ],

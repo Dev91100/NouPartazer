@@ -29,6 +29,8 @@ class _SignInWidgetState extends State<SignInWidget>
   final _formKey = GlobalKey<FormState>();
 
   TextEditingController emailCtrl, passwordCtrl;
+  bool processing = false;
+
 
   @override
   void initState()
@@ -39,8 +41,44 @@ class _SignInWidgetState extends State<SignInWidget>
     passwordCtrl = new TextEditingController();
   }
 
-Future userLogin() async
+  bool setValidatorTest()
   {
+    bool validatorTest;
+
+    try
+    {
+      validatorTest = _formKey.currentState.validate();
+    } catch (e)
+    {
+      validatorTest = false;
+    }
+
+    return validatorTest;
+  }
+
+  void showErrorToast()
+  {
+    Fluttertoast.showToast
+    (
+      msg: "Incorrect email or password",
+      toastLength: Toast.LENGTH_SHORT,
+    );
+  }
+
+  Future userLogin() async
+  {
+    var test = setValidatorTest();
+
+    if(test != true)
+    {
+      showErrorToast();
+      return;
+    }
+
+    setState(() {
+      processing = true;
+    });
+
     var url = "https://foodsharingapp.000webhostapp.com/SignIn.php";
     var data = 
     {
@@ -61,23 +99,7 @@ Future userLogin() async
       interface = BusinessBottomNav();
     }
 
-    if(jsonDecode(res.body) == 'Incorrect Username or Password!')
-    {
-      Fluttertoast.showToast
-      (
-        msg: "Incorrect Username or Password!",
-        toastLength: Toast.LENGTH_SHORT,
-      );
-    }
-    else if(jsonDecode(res.body) == 'false')
-    {
-      Fluttertoast.showToast
-      (
-        msg: "Email or password incorrect",
-        toastLength: Toast.LENGTH_SHORT,
-      );
-    }
-    else
+    if(jsonDecode(res.body) != 'false')
     {
       AllTransitions().getTransition
       (
@@ -85,13 +107,19 @@ Future userLogin() async
         transitionType: 'downToUp',
         onPress: interface,
       );
-      
+    }
+    else
+    {
       Fluttertoast.showToast
       (
-        msg: "Access Granted",
+        msg: "Email or password incorrect",
         toastLength: Toast.LENGTH_SHORT,
       );
     }
+    
+    setState(() {
+      processing = false;
+    });
   }
 
   @override
@@ -151,28 +179,42 @@ Future userLogin() async
             labelSize: 20,
             iconSize: 25,
             labelColor: Colors.white,
+            errorColor: Colors.white,
+            errorSize: 14,
             suffixIcon: Icons.email_outlined,
             iconColor: Colors.white,
             hasBorder: true,
             fillColor: Colors.transparent,
             borderColor: Colors.white,
             borderWidth: 2,
+            errorBorderColor: Colors.white,
+            focusedErrorBorderColor: Colors.white,
+            keyboardType: TextInputType.emailAddress,
+            addAsterix: false,
+            optional: true,
           ),
 
           CustomTextField
           (
+            obscureText: true,
             textColor: Colors.white,
             controller: passwordCtrl,
             labelText: 'Password',
             labelSize: 20,
             iconSize: 25,
             labelColor: Colors.white,
+            errorColor: Colors.white,
+            errorSize: 14,
             suffixIcon: Icons.https_outlined,
             iconColor: Colors.white,
             hasBorder: true,
             fillColor: Colors.transparent,
             borderColor: Colors.white,
             borderWidth: 2,
+            errorBorderColor: Colors.white,
+            focusedErrorBorderColor: Colors.white,
+            addAsterix: false,
+            errorMsg: 'Email and password fields required.',
           ),
 
           Container
@@ -190,48 +232,14 @@ Future userLogin() async
               textColor: Colors.white,
               buttonColor: Color.fromRGBO(245, 197, 41, 1),
               hasIcon: false,
+              processing: processing,
               elevation: 0,
-              isPageTransition: true,
-              transitionType: 'downToUp',
-              transitionDuration: 1100,
-              onPress: NGOBottomNav(),
-            //   hasSuperPress: true,
-            //   onSuperPress: userLogin,
-            // ),
-          ),
-
-          // Container
-          // (
-          //   margin: EdgeInsets.only(top: widget.constraints.maxHeight * 0.0025),
-          //   child: MaterialButton
-          //   (
-          //     child: FittedBox
-          //     (
-          //       fit: BoxFit.contain,
-          //       child: Text
-          //       (
-          //         "Forgot Password?",
-          //         style: TextStyle
-          //         (
-          //           color: Colors.white,
-          //           fontSize: 22.0,
-          //           decoration: TextDecoration.underline,
-          //           fontWeight: FontWeight.bold
-          //         ),
-          //       ),
-          //     ),
-              
-          //     onPressed: ()
-          //     {
-          //       AllTransitions().getTransition
-          //       (
-          //         context: context,
-          //         transitionType: 'rightToLeft',
-          //         transitionDuration: 1100,
-          //         onPress: ForgotPassword(),
-          //       );
-          //     },
-          //   ),
+              // isPageTransition: true,
+              // transitionType: 'downToUp',
+              // transitionDuration: 1100,
+              // onPress: NGOBottomNav(),
+              onSuperPress: userLogin,
+            ),
           )
         ],
       ),

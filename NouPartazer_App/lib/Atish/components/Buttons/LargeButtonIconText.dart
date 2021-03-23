@@ -32,9 +32,10 @@ class LargeButtonIconText extends StatelessWidget
   final bool isPageTransition;
   final int transitionDuration;
   final String transitionType;
-  final bool hasSuperPress;
+  final bool processing;
+  final Color processingColor;
   final VoidCallback onSuperPress;
-
+  
   LargeButtonIconText
   (
     {
@@ -64,7 +65,8 @@ class LargeButtonIconText extends StatelessWidget
       this.isPageTransition = false,
       this.transitionType = 'scale',
       this.transitionDuration = 1100,
-      this.hasSuperPress = false,
+      this.processing = false,
+      this.processingColor = const Color.fromRGBO(245, 197, 41, 1),
       this.onSuperPress,
     }
   )
@@ -84,11 +86,12 @@ class LargeButtonIconText extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return ElevatedButton
+    return TextButton
     (
       style: OutlinedButton.styleFrom
       (
-        backgroundColor: buttonColor,
+        primary: (processing) ? processingColor : buttonColor,
+        backgroundColor: (processing) ? processingColor : buttonColor,
         padding: padding,
         elevation: elevation,
         shape: RoundedRectangleBorder
@@ -97,12 +100,22 @@ class LargeButtonIconText extends StatelessWidget
         ),
         side: (hasBorder) ? BorderSide
         (
-          color: borderColor,
+          color: (processing) ? Colors.transparent : borderColor,
           width: borderWidth
         ) : null,
       ),
       
-      child: IconText
+      child: (processing) ? SizedBox
+      (
+        height: 26,
+        width: 26,
+        child: CircularProgressIndicator
+        (
+          strokeWidth: 2,
+          backgroundColor: Color.fromRGBO(0, 50, 193, 1)
+        ),
+      ) :
+      IconText
       (
         text: text,
         textDecoration: textDecoration,
@@ -114,7 +127,7 @@ class LargeButtonIconText extends StatelessWidget
         iconColor: iconColor,
         iconRight: iconRight,
       ),
-      onPressed: (!hasSuperPress) ? ()
+      onPressed: (onSuperPress == null) ? ()
       {
         if(isPopUpPage)
         {

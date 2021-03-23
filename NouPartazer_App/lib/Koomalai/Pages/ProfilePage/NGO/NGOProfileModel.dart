@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:noupartazer_app/Atish/components/Buttons/SettingsButton.dart';
 
+import 'package:noupartazer_app/Atish/components/Buttons/SettingsButton.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 import 'package:noupartazer_app/Atish/components/CustomDivider.dart';
 import 'package:noupartazer_app/Atish/components/LongText.dart';
@@ -81,7 +81,7 @@ class NGOProfileModel extends StatelessWidget
 
                 Container
                 (
-                  margin: (isEditable) ?  null : EdgeInsets.only(top: constraints.maxHeight *0.025),
+                  margin: (isEditable) ?  null : EdgeInsets.only(top: constraints.maxHeight * 0.025),
                   child: Column
                   (
                     children:
@@ -160,7 +160,7 @@ class NGOProfileModel extends StatelessWidget
                   [
                     Container
                     (
-                      margin: (isEditable) ?  null : EdgeInsets.only(bottom: constraints.maxHeight *0.025),
+                      margin: (isEditable) ?  null : EdgeInsets.only(bottom: constraints.maxHeight * 0.025),
                       child: SectionWithEditButton
                       (
                         isEditable: isEditable,

@@ -32,9 +32,9 @@ class LargeCustomButtonIconText extends StatelessWidget
   final bool isPageTransition;
   final String transitionType;
   final int transitionDuration;
-  final bool hasSuperPress;
   final VoidCallback onSuperPress;
   final bool processing;
+  final Color processingColor;
 
   LargeCustomButtonIconText
   (
@@ -66,7 +66,7 @@ class LargeCustomButtonIconText extends StatelessWidget
       this.transitionDuration = 1100,
       this.transitionType = 'scale',
       this.processing = false,
-      this.hasSuperPress = false,
+      this.processingColor = const Color.fromRGBO(245, 197, 41, 1),
       this.onSuperPress,
     }
   )
@@ -90,8 +90,8 @@ class LargeCustomButtonIconText extends StatelessWidget
     (
       style: OutlinedButton.styleFrom
       (
-        primary: (processing) ? Color.fromRGBO(0, 50, 193, 1) : buttonColor,
-        backgroundColor: (processing) ? Color.fromRGBO(0, 50, 193, 1) : buttonColor,
+        primary: (processing) ? processingColor : buttonColor,
+        backgroundColor: (processing) ? processingColor : buttonColor,
         padding: padding,
         elevation: elevation,
         shape: RoundedRectangleBorder
@@ -127,7 +127,7 @@ class LargeCustomButtonIconText extends StatelessWidget
         iconColor: iconColor,
         iconRight: iconRight,
       ),
-      onPressed: (!hasSuperPress) ? ()
+      onPressed: (onSuperPress == null) ? ()
       {
         if(isPopUpPage)
         {
