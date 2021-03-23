@@ -3,6 +3,7 @@ import 'package:flutter/rendering.dart';
 
 import 'package:noupartazer_app/Atish/components/IconText.dart';
 import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 class LargeButtonIconText extends StatelessWidget
 {
@@ -48,7 +49,7 @@ class LargeButtonIconText extends StatelessWidget
       this.textDecoration = TextDecoration.none,
       this.hasIcon = true,
       this.icon = Icons.not_listed_location,
-      this.fontSize = 20,
+      this.fontSize,
       this.fontWeight = FontWeight.w600,
       this.textColor = const Color.fromRGBO(255, 255, 255, 1),
       this.iconColor = const Color.fromRGBO(255, 255, 255, 1),
@@ -70,10 +71,10 @@ class LargeButtonIconText extends StatelessWidget
   )
   {
     IconText
-    (
+    (     
       text: text,
       icon: icon,
-      fontSize: fontSize,
+      fontSize: (fontSize != null) ? fontSize: Global().largeButtonIconText,
       fontWeight: fontWeight,
       textColor: textColor,
       iconColor: iconColor,
@@ -108,7 +109,7 @@ class LargeButtonIconText extends StatelessWidget
         textDecoration: textDecoration,
         hasIcon: hasIcon,
         icon: icon,
-        fontSize: fontSize,
+        fontSize: (fontSize != null) ? fontSize: Global().largeButtonIconText,
         fontWeight: fontWeight,
         textColor: textColor,
         iconColor: iconColor,

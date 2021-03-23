@@ -1,17 +1,21 @@
+// import 'package:noupartazer_app/Devashish/Global.dart';
 class Global
 {
   //Font Sizes
+  double largeButtonIconText = 18;        //Located in LargeButtonIconText.dart-->Used for SignIn,SignUp,Skip,Login Buttons
   double yellowTitle = 35;                //Used in the those pages: SignIn, SignUp, Forgot Password, Registration
+  double yellowTitlePara = 17;            //Used in the those pages: SignIn, SignUp, Forgot Password
   double normalText = 15;                 //The default font for paragraphs usually, Also used for time and date(Icons also resize automatically)==>IconText.dart
   double normalTextIcon;                  //Usually for icons next to 'contact us'
   
+  double storyTags = 15;                  //Tags for the story on the homescreen
+  double storySubtitle = 21;              //Either for the event location or organisation name
+
   double profileSectionTitle = 20;        //Section Titles on the profile
   double profileSectionSubTitle1 = 17;    //A Subtitle for the description of the NGO/Business
   double profileOrganizationName = 20;    //Used in profile pages(NGO and Business)     
-  double storyTags = 15;                  //Tags for the story on the homescreen
-  double storySubtitle = 21;              //Either for the event location or organisation name
   double memberName = 16;                 //Member name in the menbers list
-  double yellowTitlePara = 17;            //Used in the those pages: SignIn, SignUp, Forgot Password
+  
   double statusIndicator = 11;            //BlackBox with 'Status' written on it(Used in Tasks page and (Donation page>Event))
   double statusValue = 16;                //Font for showing the current status(Pending, unassigned, etc...)
   double tagsInDonationPage = 16;         //Tag in donation page=The type of event
@@ -28,4 +32,3 @@ class Global
   double businessPOVstoryTitle = 23;      //Used in the Business POV for story title
 }
 
-// import 'package:noupartazer_app/Devashish/Global.dart';
