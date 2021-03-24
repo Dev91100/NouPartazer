@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/ListTileModel.dart';
-import 'package:noupartazer_app/Devashish/Global.dart';
 
 
 class HelpAndSupportModel extends StatelessWidget
@@ -56,7 +55,6 @@ class HelpAndSupportModel extends StatelessWidget
             titleText: 'About Us',
             subtitleText: 'Learn more about NouPartazer',
             trailingIcon: Icons.keyboard_arrow_right,
-            iconSize: Global().settingsIcon,
             isPage: true,
             onPress: aboutUsPage,
           ) : Container(),
@@ -68,7 +66,6 @@ class HelpAndSupportModel extends StatelessWidget
             titleText: 'Terms & Conditions',
             subtitleText: 'Learn more about NouPartazer',
             trailingIcon: Icons.keyboard_arrow_right,
-            iconSize: Global().settingsIcon,
             isPopUpPage: true,
             onPress: termsAndConditionsPage,
           ) : Container(),
@@ -80,7 +77,6 @@ class HelpAndSupportModel extends StatelessWidget
             titleText: 'Privacy Policy',
             subtitleText: 'Learn more about NouPartazer',
             trailingIcon: Icons.keyboard_arrow_right,
-            iconSize: Global().settingsIcon,
             isPage: true,
             onPress: privacyPolicyPage,
           ) : Container(),
@@ -92,7 +88,6 @@ class HelpAndSupportModel extends StatelessWidget
             titleText: 'FAQ',
             subtitleText: 'Learn more about NouPartazer',
             trailingIcon: Icons.keyboard_arrow_right,
-            iconSize: Global().settingsIcon,
             isPage: true,
             onPress: faqPage,
           ) : Container(),
@@ -104,7 +99,6 @@ class HelpAndSupportModel extends StatelessWidget
             titleText: 'Contact Us',
             subtitleText: 'Learn more about NouPartazer',
             trailingIcon: Icons.keyboard_arrow_right,
-            iconSize: Global().settingsIcon,
             isPage: true,
             onPress: contactUsPage,
           ) : Container(),

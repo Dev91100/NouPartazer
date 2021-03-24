@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 
 class Checkboxes extends StatefulWidget
@@ -11,7 +12,7 @@ class Checkboxes extends StatefulWidget
   (
     {
       this.option,
-      this.fontSize = 20,
+      this.fontSize,
     }
   );
 
@@ -36,7 +37,7 @@ class _CheckboxesState extends State<Checkboxes>
         widget.option,
         style: TextStyle
         (
-          fontSize: widget.fontSize,
+          fontSize: Global().normalText,
         ),
       ),
       value: checkedValue,

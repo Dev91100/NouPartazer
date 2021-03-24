@@ -1,6 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 import 'package:noupartazer_app/Koomalai/Pages/Task/BusinessTask/BusinessCompletedTask.dart';
 import 'package:noupartazer_app/Koomalai/Pages/Task/BusinessTask/BusinessOngoingTask.dart';
@@ -44,8 +45,14 @@ class _BusinessTaskTabState extends State<BusinessTaskTab>
             alignment: Alignment.center,
             child:  Text
             (
-              "TASKS",
-              style: TextStyle(color: Colors.black),
+              'TASKS', // Text Parameter
+              style: TextStyle
+              (
+                fontFamily: 'Comfortaa',
+                fontWeight: FontWeight.bold,
+                fontSize: Global().mediumText,
+                color: new Color.fromRGBO(0, 0, 0, 1),
+              ),
             ),
           ),
 
@@ -54,9 +61,17 @@ class _BusinessTaskTabState extends State<BusinessTaskTab>
             indicatorColor: Colors.black,
             indicatorWeight: 5.0,
             labelColor: Colors.black,
-            labelStyle: TextStyle(fontWeight:FontWeight.bold,fontSize: 14.0),
+            labelStyle: TextStyle
+            (
+              fontSize: Global().tinyText,
+              fontWeight:FontWeight.bold,
+            ),
             unselectedLabelColor: Colors.black54,
-            unselectedLabelStyle:TextStyle(fontWeight:FontWeight.normal,fontSize: 14.0) ,
+            unselectedLabelStyle:TextStyle
+            (
+              fontSize: Global().tinyText,
+              fontWeight:FontWeight.normal,
+            ),
             tabs:
             [
               Tab

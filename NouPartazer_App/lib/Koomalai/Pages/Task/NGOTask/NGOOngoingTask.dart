@@ -47,6 +47,7 @@ class NGOOngoingTask extends StatelessWidget
                           tag: ongoingTaskList[index].tag,
                           status: ongoingTaskList[index].status,
                         ),
+                        
                         CustomDivider
                         (
                           height: 10,

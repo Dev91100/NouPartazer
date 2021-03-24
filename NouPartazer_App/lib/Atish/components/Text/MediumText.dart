@@ -9,6 +9,7 @@ class MediumText extends StatelessWidget
   final double fontSize;
   final String fontFamily;
   final FontWeight fontWeight;
+  final TextAlign textAlign;
 
   MediumText
   (
@@ -17,7 +18,8 @@ class MediumText extends StatelessWidget
       this.textColor = Colors.black,
       this.fontSize,
       this.fontFamily,
-      this.fontWeight
+      this.fontWeight,
+      this.textAlign,
     }
   );
 
@@ -27,6 +29,7 @@ class MediumText extends StatelessWidget
     return Text
     (
       text,
+      textAlign: textAlign,
       style: TextStyle
       (
         color: textColor,

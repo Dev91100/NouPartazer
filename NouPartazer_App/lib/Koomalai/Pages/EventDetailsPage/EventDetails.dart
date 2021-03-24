@@ -98,7 +98,6 @@ class EventDetails extends StatelessWidget
                       (
                         text: 'GROCERY DONATION',
                         align: Alignment.center,
-                        fontSize: Global().profileSectionTitle,
                       ),
                     ),
 
@@ -114,7 +113,6 @@ class EventDetails extends StatelessWidget
                           (
                             text: 'Status',
                             icon: Icons.online_prediction_outlined,
-                            fontSize: Global().statusIndicator,
                             margin: EdgeInsets.only(right: 15),
                             iconColor: Color.fromRGBO(255, 255, 255, 1),
                           ),
@@ -126,7 +124,6 @@ class EventDetails extends StatelessWidget
                             borderColor: Color.fromRGBO(245, 197, 41, 1),
                             boxColor: Color.fromRGBO(255, 248, 97, 0.2),
                             padding: EdgeInsets.only(left: 40, right: 40),
-                            fontSize: Global().statusValue,
                           ),
                         ],
                       ),
@@ -170,7 +167,6 @@ class EventDetails extends StatelessWidget
                         child: SectionTitle
                         (
                           text: 'DATE & TIME',
-                          fontSize: Global().profileSectionTitle,
                         ),
                       ),
 

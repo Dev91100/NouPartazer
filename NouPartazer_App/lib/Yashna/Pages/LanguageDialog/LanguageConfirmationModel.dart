@@ -53,7 +53,6 @@ class LanguageConfirmationModel
                       style: TextStyle
                       (
                         fontWeight: FontWeight.bold,
-                        fontSize: Global().profileSectionTitle,
                       )
                     ),
                         

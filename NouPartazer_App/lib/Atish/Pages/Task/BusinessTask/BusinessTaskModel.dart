@@ -5,6 +5,8 @@ import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 import 'package:noupartazer_app/Atish/components/ContainerIconText.dart';
 import 'package:noupartazer_app/Atish/components/ContainerText.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/SmallButtonIconText.dart';
+import 'package:noupartazer_app/Atish/components/Text/NormalText.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 import 'package:noupartazer_app/Koomalai/Pages/EventDetailsPage/EventDetails.dart';
 
 class BusinessTaskModel extends StatelessWidget
@@ -56,8 +58,6 @@ class BusinessTaskModel extends StatelessWidget
               (
                 padding: const EdgeInsets.only
                 (
-                  left: 0,
-                  right: 0,
                   top: 10,
                   bottom: 10,
                 ),
@@ -112,7 +112,7 @@ class BusinessTaskModel extends StatelessWidget
                                       (
                                         text: date,
                                         icon: Icons.insert_invitation_outlined,
-                                        fontSize: 15,
+                                        fontSize: Global().tinyText,
                                         textColor: Color.fromRGBO(0, 0, 0, 1),
                                       ),
                                     ),
@@ -121,7 +121,7 @@ class BusinessTaskModel extends StatelessWidget
                                     (
                                       text: time,
                                       icon: Icons.query_builder_outlined,
-                                      fontSize: 15,
+                                      fontSize: Global().tinyText,
                                       textColor: Color.fromRGBO(0, 0, 0, 1),
                                     ),
                                   ],
@@ -145,7 +145,7 @@ class BusinessTaskModel extends StatelessWidget
                                       (
                                         text: locationName,
                                         icon: Icons.location_on_outlined,
-                                        fontSize: 15,
+                                        fontSize: Global().tinyText,
                                         textColor: Color.fromRGBO(0, 0, 0, 1),
                                       ),
                                     ),
@@ -181,25 +181,18 @@ class BusinessTaskModel extends StatelessWidget
               (
                 children:
                 [
-                  Text
+                  NormalText
                   (
-                    'Accepted By: ',
-                    style: TextStyle
-                    (
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    text: 'Accepted By: ',
+                    fontWeight: FontWeight.bold,
                   ),
-                  Text
+                  
+                  NormalText
                   (
-                    ngoName,
-                    style: TextStyle
-                    (
-                      color: Color.fromRGBO(0, 50, 193, 1),
-                      fontSize: 18,
-                      fontWeight: FontWeight.normal,
-                      decoration: TextDecoration.underline,
-                    ),
+                    text: ngoName,
+                    textColor: Color.fromRGBO(41, 90, 245, 1),
+                    fontWeight: FontWeight.bold,
+                    textDecoration: TextDecoration.underline,
                   ),
                 ],
               ),
@@ -215,7 +208,6 @@ class BusinessTaskModel extends StatelessWidget
                   (
                     text: 'Status',
                     icon: Icons.online_prediction_outlined,
-                    fontSize: 18,
                     iconColor: Color.fromRGBO(255, 255, 255, 1),
                   ),
                   ContainerText

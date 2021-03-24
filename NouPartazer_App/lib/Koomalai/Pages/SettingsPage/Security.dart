@@ -71,7 +71,6 @@ class _SecurityState extends State<Security>
                       SectionTitle
                       (
                         text: 'CHANGE PASSWORD',
-                        fontSize: Global().profileSectionTitle,
                       ),
 
                       CustomTextField
@@ -102,7 +101,6 @@ class _SecurityState extends State<Security>
                         child: LargeCustomButtonIconText
                         (
                           text: 'Change Password',
-                          fontSize: Global().settingsChangePWButton,
                         )
                       ),
 

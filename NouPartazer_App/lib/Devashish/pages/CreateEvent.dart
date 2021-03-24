@@ -7,7 +7,6 @@ import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 import 'package:noupartazer_app/Devashish/components/Checkboxes.dart';
 import 'package:noupartazer_app/Devashish/components/GetImage/DottedBox/DottedBoxGetImage.dart';
-import 'package:noupartazer_app/Devashish/Global.dart';
 import 'package:noupartazer_app/Devashish/pages/DateTask.dart';
 
 class CreateEvent extends StatefulWidget
@@ -95,7 +94,6 @@ class _CreateEventState extends State<CreateEvent>
                       child: SectionTitle
                       (
                         text: 'EVENT INFORMATION',
-                        fontSize: Global().profileSectionTitle,
                       ),
                     ),
 
@@ -157,14 +155,12 @@ class _CreateEventState extends State<CreateEvent>
                       child: Checkboxes
                       (
                         option: 'Perishable Food',
-                        fontSize: Global().smallText,
                       )
                     ),
 
                     Checkboxes
                     (
                       option: 'Non-Perishable Food',
-                      fontSize: Global().smallText,
                     ),
 
                     Container

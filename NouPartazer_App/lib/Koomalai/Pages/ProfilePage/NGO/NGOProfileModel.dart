@@ -71,7 +71,7 @@ class NGOProfileModel extends StatelessWidget
 
                       margin: EdgeInsets.only
                       (
-                        right: 20,
+                        right: 10,
                         top: screen.height * 0.33,
                       ),
                       child: SettingsButton(),
@@ -161,7 +161,6 @@ class NGOProfileModel extends StatelessWidget
                           title: 'CONTACT INFO',
                           onPress: editContactBottomSheet,
                           isModalPage: true,
-                          fontSize: 18,
                         ),
                       ),
 

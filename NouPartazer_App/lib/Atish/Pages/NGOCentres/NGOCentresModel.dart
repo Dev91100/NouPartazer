@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'package:noupartazer_app/Atish/components/Text/NormalText.dart';
+import 'package:noupartazer_app/Atish/components/Text/TinyText.dart';
+
 
 class NGOCentresModel extends StatelessWidget
 {
@@ -113,14 +116,10 @@ class NGOCentresModel extends StatelessWidget
                                 child: SingleChildScrollView
                                 (
                                   scrollDirection: Axis.horizontal,
-                                  child: Text
+                                  child: NormalText
                                   (
-                                    name,
-                                    style: TextStyle
-                                    (
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w400,
-                                    ),
+                                    text: name,
+                                    fontWeight: FontWeight.w400,
                                   ),
                                 ),
                               ),
@@ -146,7 +145,7 @@ class NGOCentresModel extends StatelessWidget
                           child: SingleChildScrollView
                           (
                             scrollDirection: Axis.horizontal,
-                            child: Text(description),
+                            child: TinyText(text: description),
                           ),
                         ),
                       ],

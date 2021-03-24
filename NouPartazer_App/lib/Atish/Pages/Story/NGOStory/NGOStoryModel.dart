@@ -5,7 +5,6 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:noupartazer_app/Atish/Pages/Story/NGOStory/NGOStory.dart';
 import 'package:noupartazer_app/Atish/components/LongText.dart';
 import 'package:noupartazer_app/Atish/components/ContainerText.dart';
-import 'package:noupartazer_app/Devashish/Global.dart';
 
 
 class NGOStoryModel extends StatelessWidget
@@ -109,7 +108,6 @@ class NGOStoryModel extends StatelessWidget
                             style: TextStyle
                             (
                               fontWeight: FontWeight.bold,
-                              fontSize: Global().businessPOVstoryTitle,
                               color: new Color.fromRGBO(245, 197, 41, 1),
                             ),
                           ),
@@ -125,7 +123,6 @@ class NGOStoryModel extends StatelessWidget
                           child: LongText
                           (
                             text: st.description,
-                            fontSize: Global().smallText,
                             fontWeight: FontWeight.w500,
                             textColor: Color.fromRGBO(255, 255, 255, 1),
                           ),
@@ -145,7 +142,6 @@ class NGOStoryModel extends StatelessWidget
                                 ContainerText
                                 (
                                   text: st.tag,
-                                  fontSize: Global().storyTags,
                                   fontWeight: FontWeight.bold,
                                   borderColor: Color.fromRGBO(245, 197, 41, 1),
                                   borderWidth: 1.5,

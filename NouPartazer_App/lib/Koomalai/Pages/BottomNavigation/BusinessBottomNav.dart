@@ -38,9 +38,9 @@ class _BusinessBottomNavState extends State<BusinessBottomNav>
     home    = BusinessHomePage();
     profile = EditableBusinessProfile();
     event   = CreateEvent();
-    task    = BusinessTaskTab();
     list    = BusinessNGOCentresList();
-
+    task    = BusinessTaskTab();
+    
     pages       = [home, profile, event, list, task];
     currentPage = home;
 

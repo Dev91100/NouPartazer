@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/Buttons/LargeCustomButtonIconText.dart';
+import 'package:noupartazer_app/Atish/components/Text/HugeText.dart';
+import 'package:noupartazer_app/Atish/components/Text/MediumText.dart';
 import 'package:noupartazer_app/Devashish/components/TheBackButton.dart';
-import 'package:noupartazer_app/Devashish/components/YellowTitles.dart';
 import 'package:noupartazer_app/Atish/Pages/UserAccess/UserAcessPanel.dart';
 
 class AccountCreated extends StatelessWidget 
@@ -44,9 +45,9 @@ class AccountCreated extends StatelessWidget
                   ),
 
                   SizedBox(height: constraints.maxHeight * 0.06,),
-                  YellowTitles
+                  HugeText
                   (
-                    textContent: "Success",
+                    text: "Success",
                   ),
 
                   SizedBox(height: constraints.maxHeight * 0.02,),
@@ -54,15 +55,9 @@ class AccountCreated extends StatelessWidget
                   Container
                   (
                     margin: EdgeInsets.symmetric(horizontal: constraints.maxWidth * 0.062),
-                    child: Text
+                    child: MediumText
                     (
-                      'Your Account has been created successfully. You may now login with your credentials',
-                      style: TextStyle
-                      (
-                        color: Colors.black,
-                        fontWeight: FontWeight.w500,
-                        fontSize: 20,
-                      ),
+                      text: 'Your Account has been created successfully. You may now login with your credentials',
                       textAlign: TextAlign.center,
                     ),
                   ),

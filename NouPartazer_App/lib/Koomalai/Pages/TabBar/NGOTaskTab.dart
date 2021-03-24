@@ -2,7 +2,7 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'package:google_fonts/google_fonts.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 import 'package:noupartazer_app/Koomalai/Pages/Task/NGOTask/NGOCancelledTask.dart';
 import 'package:noupartazer_app/Koomalai/Pages/Task/NGOTask/NGOCompletedTask.dart';
@@ -56,14 +56,12 @@ class _NGOTaskTabState extends State<NGOTaskTab>
           title: Text
           (
             'TASKS', // Text Parameter
-            style: GoogleFonts.comfortaa
+            style: TextStyle
             (
-              textStyle: TextStyle
-              (
-                fontWeight: FontWeight.bold,
-                fontSize: 18,
-                color: new Color.fromRGBO(0, 0, 0, 1),
-              ),
+              fontFamily: 'Comfortaa',
+              fontWeight: FontWeight.bold,
+              fontSize: Global().mediumText,
+              color: new Color.fromRGBO(0, 0, 0, 1),
             ),
           ),
           bottom: TabBar
@@ -73,12 +71,14 @@ class _NGOTaskTabState extends State<NGOTaskTab>
             labelColor: Colors.black,
             labelStyle: TextStyle
             (
-              fontWeight:FontWeight.bold,fontSize: 15.0
+              fontSize: Global().tinyText,
+              fontWeight:FontWeight.bold,
             ),
             unselectedLabelColor: Colors.black54,
             unselectedLabelStyle:TextStyle
             (
-              fontWeight:FontWeight.normal,fontSize: 15.0
+              fontSize: Global().tinyText,
+              fontWeight:FontWeight.normal,
             ),
             
             tabs:
