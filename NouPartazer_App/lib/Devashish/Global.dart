@@ -13,11 +13,13 @@ class Global
   // -------------------- Icon --------------------
   // Icon Size
   final double largeIcon = 40;
-  
+  final double mediumIcon = 29;
+  final double smallIcon = 26;
 
 
 // yellowTitle
 // pageTitle
+// -------------------- To be reviewed and deleted --------------------
   double largeButtonIconText = 18;        //Located in LargeButtonIconText.dart-->Used for SignIn,SignUp,Skip,Login Buttons
   double orgButtonIcon = 55;              //Used in SignUp page for OrgButtons
   double orgButtonText = 30;              //Used in SignUp page for Orgbuttons

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 import 'package:validators/validators.dart';
 import 'package:validators/sanitizers.dart';
@@ -212,7 +213,7 @@ class CustomTextField extends StatelessWidget
           (
             suffixIcon,
             color: iconColor,
-            size: (iconSize != null) ? iconSize : labelSize,
+            size: (iconSize != null) ? iconSize: Global().mediumIcon,
           ) : null,
         ),
       ),

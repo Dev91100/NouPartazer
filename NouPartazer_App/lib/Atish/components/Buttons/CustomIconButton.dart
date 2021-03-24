@@ -8,6 +8,7 @@ class CustomIconButton extends StatelessWidget
   final IconData icon;
   final double fontSize;
   final Color color;
+  final double iconSize;
 
   CustomIconButton
   (
@@ -16,6 +17,7 @@ class CustomIconButton extends StatelessWidget
       this.icon,
       this.fontSize,
       this.color = const Color.fromRGBO(51, 51, 51, 1),
+      this.iconSize,
     }
   );
 
@@ -49,7 +51,7 @@ class CustomIconButton extends StatelessWidget
             (
               icon,
               color: color,
-              size: 26,
+              size: (iconSize != null) ? iconSize: Global().smallIcon,
             ),
           ),
           Text
