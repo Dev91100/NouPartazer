@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 class SectionTitle extends StatelessWidget {
   @required
@@ -14,7 +14,7 @@ class SectionTitle extends StatelessWidget {
   (
     {
       this.title = 'This is a test',
-      this.fontSize = 22,
+      this.fontSize,
       this.top = 0,
       this.left = 20,
       this.right = 20,
@@ -49,8 +49,8 @@ class SectionTitle extends StatelessWidget {
               style: TextStyle
               (
                 color: color,
-                fontWeight: FontWeight.w900,
-                fontSize: fontSize,
+                fontWeight: FontWeight.w800,
+                fontSize: (fontSize != null) ? fontSize: Global().profileSectionTitle,
               ),
             ),
           ),

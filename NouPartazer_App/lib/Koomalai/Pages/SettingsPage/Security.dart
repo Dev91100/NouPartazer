@@ -104,7 +104,6 @@ class _SecurityState extends State<Security>
                         child: LargeCustomButtonIconText
                         (
                           text: 'Change Password',
-                          padding: EdgeInsets.all(8),
                           fontSize: Global().settingsChangePWButton,
                         )
                       ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 class OrgButton extends StatelessWidget
 {
@@ -12,6 +13,8 @@ class OrgButton extends StatelessWidget
   final Widget onPress;
   final String transitionType;
   final int transitionDuration;
+  final double fontSize;
+  final double iconSize;
 
   OrgButton
   (
@@ -21,6 +24,8 @@ class OrgButton extends StatelessWidget
       this.onPress,
       this.transitionDuration = 1100,
       this.transitionType,
+      this.fontSize,
+      this.iconSize,
     }
   );
 
@@ -66,7 +71,7 @@ class OrgButton extends StatelessWidget
               (
                 icon,
                 color: Color.fromRGBO(0, 50, 193, 1),
-                size: 55
+                size: (iconSize != null) ? fontSize: Global().orgButtonIcon, //55,
               ),
               Text
               (
@@ -75,7 +80,7 @@ class OrgButton extends StatelessWidget
                 (
                   color: Color.fromRGBO(0, 50, 193, 1),
                   fontWeight: FontWeight.bold,
-                  fontSize: 30
+                  fontSize: (fontSize != null) ? fontSize: Global().orgButtonText, //30,
                 ),
               ),
             ],

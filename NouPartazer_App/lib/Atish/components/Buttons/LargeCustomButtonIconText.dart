@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 import 'package:noupartazer_app/Atish/components/IconText.dart';
-import 'package:flutter/rendering.dart';
 import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 class LargeCustomButtonIconText extends StatelessWidget
 {
@@ -48,7 +49,7 @@ class LargeCustomButtonIconText extends StatelessWidget
       this.textDecoration = TextDecoration.none,
       this.hasIcon = false,
       this.icon = Icons.not_listed_location,
-      this.fontSize = 20,
+      this.fontSize,
       this.fontWeight = FontWeight.w700,
       this.textColor = const Color.fromRGBO(245, 197, 41, 1),
       this.iconColor = const Color.fromRGBO(255, 255, 255, 1),
@@ -59,7 +60,7 @@ class LargeCustomButtonIconText extends StatelessWidget
       this.borderColor = const Color.fromRGBO(245, 197, 41, 1),
       this.iconRight = 5,
       this.elevation = 0,
-      this.padding = const EdgeInsets.fromLTRB(15, 15, 15, 15),
+      this.padding = const EdgeInsets.all(13),
       this.borderRadius = const BorderRadius.all(Radius.circular(10)),
       this.scrollModalSheet = true,
       this.isPageTransition = false,
@@ -75,7 +76,7 @@ class LargeCustomButtonIconText extends StatelessWidget
     (
       text: text,
       icon: icon,
-      fontSize: fontSize,
+      fontSize: (fontSize != null) ? fontSize: Global().largeText,
       fontWeight: fontWeight,
       textColor: textColor,
       iconColor: iconColor,
@@ -121,7 +122,7 @@ class LargeCustomButtonIconText extends StatelessWidget
         textDecoration: textDecoration,
         hasIcon: hasIcon,
         icon: icon,
-        fontSize: fontSize,
+        fontSize: (fontSize != null) ? fontSize: Global().largeText,
         fontWeight: fontWeight,
         textColor: textColor,
         iconColor: iconColor,

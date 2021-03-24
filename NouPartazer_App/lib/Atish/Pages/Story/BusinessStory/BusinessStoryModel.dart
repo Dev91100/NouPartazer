@@ -131,7 +131,7 @@ class BusinessStoryModel extends StatelessWidget
                                 style: TextStyle
                                 (
                                   fontWeight: FontWeight.bold,
-                                  fontSize: Global().storySubtitle,
+                                  fontSize: Global().largeText,
                                   color: Colors.white,
                                 ),
                               ),
@@ -199,7 +199,7 @@ class BusinessStoryModel extends StatelessWidget
                                 ContainerText
                                 (
                                   text: st.tag,
-                                  fontSize: Global().storyTags,
+                                  fontSize: Global().normalText,
                                   fontWeight: FontWeight.bold,
                                   borderColor: Color.fromRGBO(245, 197, 41, 1),
                                   borderWidth: 1.5,
@@ -213,7 +213,7 @@ class BusinessStoryModel extends StatelessWidget
                                 ContainerText
                                 (
                                   text: st.foodType,
-                                  fontSize: Global().storyTags,
+                                  fontSize: Global().normalText,
                                   fontWeight: FontWeight.bold,
                                   borderColor: Color.fromRGBO(245, 197, 41, 1),
                                   borderWidth: 1.5,
@@ -227,7 +227,7 @@ class BusinessStoryModel extends StatelessWidget
                                 ContainerText
                                 (
                                   text: st.foodType,
-                                  fontSize: Global().storyTags,
+                                  fontSize: Global().normalText,
                                   fontWeight: FontWeight.bold,
                                   borderColor: Color.fromRGBO(245, 197, 41, 1),
                                   borderWidth: 1.5,

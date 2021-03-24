@@ -74,7 +74,7 @@ class LargeButtonIconText extends StatelessWidget
     (     
       text: text,
       icon: icon,
-      fontSize: (fontSize != null) ? fontSize: Global().largeButtonIconText,
+      fontSize: (fontSize != null) ? fontSize: Global().normalText,
       fontWeight: fontWeight,
       textColor: textColor,
       iconColor: iconColor,

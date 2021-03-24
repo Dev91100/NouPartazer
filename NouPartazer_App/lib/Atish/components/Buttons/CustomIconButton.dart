@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:noupartazer_app/Devashish/Global.dart';
+
 class CustomIconButton extends StatelessWidget
 {
   final String text;
@@ -12,7 +14,7 @@ class CustomIconButton extends StatelessWidget
     {
       this.text,
       this.icon,
-      this.fontSize = 18,
+      this.fontSize,
       this.color = const Color.fromRGBO(51, 51, 51, 1),
     }
   );
@@ -57,7 +59,7 @@ class CustomIconButton extends StatelessWidget
             style: TextStyle
             (
               color: color,
-              fontSize: fontSize
+              fontSize: (fontSize != null) ? fontSize: Global().normalText,
             )
           ),
         ],
