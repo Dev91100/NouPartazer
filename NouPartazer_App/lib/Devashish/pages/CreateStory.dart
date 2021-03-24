@@ -162,6 +162,7 @@ class _CreateStoryState extends State<CreateStory>
                     (
                       controller: titleCtrl,
                       keyboardType: TextInputType.text,
+                      fieldType: 'alpha',
                       labelText: 'Title',
                       hasSuffixIcon: false,
                     ),

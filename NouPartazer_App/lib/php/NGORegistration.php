@@ -1,42 +1,80 @@
 <?php 
     require_once("Connection.php");
 
-    $regNumber = $_POST["regNumber"];
-    $regName = $_POST["regName"];
-    $ngoExpertise = $_POST["ngoExpertise"];
-    $memberSize = $_POST["memberSize"];
-    $address = $_POST["address"];
-    $website = $_POST["website"];
-    $title = $_POST["title"];
-    $name = $_POST["name"];
-    $surname = $_POST["surname"];
-    $position = $_POST["position"];
-    $contactNumber = $_POST["contactNumber"];
-    $email = $_POST["email"];
-    $password = $_POST["password"];
-
-    $query = "SELECT * FROM NGO WHERE brn LIKE '$regNumber'";
-
-    $res = mysqli_query($conn, $query);
-    $data = mysqli_fetch_array($res);
-
-    if($data[0] >= 1)
+    function test_input($data)
     {
-        echo json_encode("account already exist");
-    } else
-    {
-        $query = "INSERT INTO NGO (regNumber, regName, ngoExpertise, memberSize, address, contactNumber, website) VALUES ('$regNumber', '$regName', '$ngoExpertise', '$memberSize', '$address', '$contactNumber', '$website')";
-
-        $res = mysqli_query($conn, $query);
-
-        if($res)
-        {
-            echo json_encode("true");
-        }
-        else
-        {
-            echo json_encode("false");
-        }
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
     }
 
+    $regNumber = test_input($_POST["regNumber"]);
+    $regName = test_input($_POST["regName"]);
+    $ngoExpertise = test_input($_POST["ngoExpertise"]);
+    $memberSize = test_input($_POST["memberSize"]);
+    $address = test_input($_POST["address"]);
+    $website = test_input($_POST["website"]);
+    $title = test_input($_POST["title"]);
+    $name = test_input($_POST["name"]);
+    $surname = test_input($_POST["surname"]);
+    $position = test_input($_POST["position"]);
+    $contactNumber = test_input($_POST["contactNumber"]);
+    $email = test_input($_POST["email"]);
+    $password = trim($_POST["password"]);
+
+
+    if($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+        $sql = "SELECT regNumber FROM NGO WHERE regNumber='$regNumber'";
+
+        $result= mysqli_query($conn, $sql);
+
+        if(mysqli_num_rows($result) >= 1)
+        {
+            echo json_encode("account already exist");
+        }
+        else 
+        {
+            $sql = "SELECT email FROM PROFILE WHERE email='$email'";
+
+            $result= mysqli_query($conn, $sql);
+
+            if(mysqli_num_rows($result) >= 1)
+            {
+                echo json_encode("account already exist");
+            }
+        }
+        // else
+        // {
+        //     echo json_encode("false");
+            // $sql = "INSERT INTO NGO (regNumber, regName, ngoExpertise, memberSize, address, contactNumber, website) VALUES ('$regNumber', '$regName', '$ngoExpertise', '$memberSize', '$address', '$contactNumber', '$website')";
+
+            // $result= mysqli_query($conn, $sql);
+
+            // if($result)
+            // {
+            //     $sql = "SELECT * FROM NGO WHERE regNumber='$regNumber'";
+            //     mysqli_query($conn, $sql);
+
+            //     if(mysqli_num_rows($result) === 1)
+            //     {
+            //         $row = mysqli_fetch_assoc($result);
+            //         $ngoID = $row['ngoID'];
+
+            //         $sql = "INSERT INTO PROFILE ngoID, email, password VALUES ('$ngoID', '$email', '$password')";
+            //         mysqli_query($conn, $sql);
+            //         echo json_encode("true");
+            //     }
+            //     else
+            //     {
+            //         echo json_encode("false");
+            //     }
+            // }
+            // else
+            // {
+            //     echo json_encode("false");
+            // }
+        // }
+    }
 ?>

@@ -4,7 +4,7 @@ final List<BusinessStory> businessStoryList =
 [
   BusinessStory
   (
-    image: './assets/JPEG/batelage.jpeg',
+    image: './assets/JPEG/Child.jpg',
     locationName: 'Four Seasons ResortFour Seasons Resort',
     locationAddress: 'La Place BelgathLa Place BelgathLa Place Belgath',
     date: '19/03/21',

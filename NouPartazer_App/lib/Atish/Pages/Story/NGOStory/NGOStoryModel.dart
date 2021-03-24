@@ -83,9 +83,9 @@ class NGOStoryModel extends StatelessWidget
                         new Color.fromRGBO(0, 0, 0, 1), // Black
                         new Color.fromRGBO(0, 0, 0, 0), // Transparent
                       ],
-                      begin: FractionalOffset(1.0, 1.1),
-                      end: FractionalOffset(1.0, 0.0),
-                      stops: [0.0,0.5],
+                      begin: FractionalOffset(2.0, 0.95),
+                      end: FractionalOffset(2.0, 0.0),
+                      stops: [0.0,0.6],
                       tileMode: TileMode.clamp,
                     ),
                     borderRadius: BorderRadius.all(Radius.circular(20))
@@ -103,18 +103,14 @@ class NGOStoryModel extends StatelessWidget
                         SingleChildScrollView
                         (
                           scrollDirection: Axis.horizontal,
-                          child: FittedBox
-                          (
-                            fit: BoxFit.contain,
-                            child: Text
-                            ( 
-                              st.title,
-                              style: TextStyle
-                              (
-                                fontWeight: FontWeight.bold,
-                                fontSize: Global().businessPOVstoryTitle,
-                                color: new Color.fromRGBO(245, 197, 41, 1),
-                              ),
+                          child: Text
+                          ( 
+                            st.title,
+                            style: TextStyle
+                            (
+                              fontWeight: FontWeight.bold,
+                              fontSize: Global().businessPOVstoryTitle,
+                              color: new Color.fromRGBO(245, 197, 41, 1),
                             ),
                           ),
                         ),

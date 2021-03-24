@@ -55,9 +55,10 @@ class _NGORegistrationState extends State<NGORegistration>
       validatorTest = _formKey.currentState.validate();
     } catch (e)
     {
-      return validatorTest;
+      validatorTest = false;
     }
 
+    return validatorTest;
   }
 
   void showErrorToast()
@@ -78,6 +79,10 @@ class _NGORegistrationState extends State<NGORegistration>
       showErrorToast();
       return;
     }
+
+    setState(() {
+      processing = true;
+    });
       
     var url = "https://foodsharingapp.000webhostapp.com/NGORegistration.php";
     var data = 
@@ -122,11 +127,15 @@ class _NGORegistrationState extends State<NGORegistration>
       {
         Fluttertoast.showToast
         (
-          msg: "Server Error",
+          msg: "No match found",
           toastLength: Toast.LENGTH_SHORT,
         );
       }
     }
+
+    setState(() {
+      processing = false;
+    });
   }
 
   @override
@@ -209,7 +218,7 @@ class _NGORegistrationState extends State<NGORegistration>
                     (
                       controller: regNameCtrl,
                       keyboardType: TextInputType.name,
-                      labelText: 'Registred Name',
+                      labelText: 'Registered Name',
                       hasSuffixIcon: false,
                     ),
 

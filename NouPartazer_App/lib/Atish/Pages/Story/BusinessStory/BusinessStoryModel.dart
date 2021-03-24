@@ -79,9 +79,9 @@ class BusinessStoryModel extends StatelessWidget
                         new Color.fromRGBO(0, 0, 0, 1), // Black
                         new Color.fromRGBO(0, 0, 0, 0), // Transparent
                       ],
-                      begin: FractionalOffset(1.0, 1.1),
-                      end: FractionalOffset(1.0, 0.0),
-                      stops: [0.0,0.5],
+                      begin: FractionalOffset(2.0, 0.95),
+                      end: FractionalOffset(2.0, 0.0),
+                      stops: [0.0,0.6],
                       tileMode: TileMode.clamp,
                     ),
                     borderRadius: BorderRadius.all(Radius.circular(20))
@@ -99,18 +99,14 @@ class BusinessStoryModel extends StatelessWidget
                         SingleChildScrollView
                         (
                           scrollDirection: Axis.horizontal,
-                          child: FittedBox
-                          (
-                            fit: BoxFit.contain,
-                            child: Text
-                            ( 
-                              st.locationName,
-                              style: TextStyle
-                              (
-                                fontWeight: FontWeight.bold,
-                                fontSize: Global().normalText,
-                                color: new Color.fromRGBO(245, 197, 41, 1),
-                              ),
+                          child: Text
+                          ( 
+                            st.locationName,
+                            style: TextStyle
+                            (
+                              fontWeight: FontWeight.bold,
+                              fontSize: Global().normalText,
+                              color: new Color.fromRGBO(245, 197, 41, 1),
                             ),
                           ),
                         ),
@@ -122,65 +118,57 @@ class BusinessStoryModel extends StatelessWidget
                           child: Container
                           (
                             margin: EdgeInsets.only(top: 10),
-                            child: FittedBox
+                            child: Text
                             (
-                              fit: BoxFit.contain,
-                              child: Text
+                              st.locationAddress,
+                              style: TextStyle
                               (
-                                st.locationAddress,
-                                style: TextStyle
-                                (
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: Global().storySubtitle,
-                                  color: Colors.white,
-                                ),
+                                fontWeight: FontWeight.bold,
+                                fontSize: Global().storySubtitle,
+                                color: Colors.white,
                               ),
                             ),
                           ),
                         ),
                         
                         // Date & Time
-                        FittedBox
+                        Container
                         (
-                          fit: BoxFit.contain,
-                          child: Container
+                          margin: EdgeInsets.only(top: 10),
+                          child: Row
                           (
-                            margin: EdgeInsets.only(top: 10),
-                            child: Row
-                            (
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: 
-                              [
-                                //Date
-                                ContainerIconText
-                                (
-                                  text: st.date,
-                                  fontSize: Global().normalText,
-                                  fontWeight: FontWeight.bold,
-                                  icon: Icons.calendar_today_outlined,
-                                  iconSize: 20,
-                                  iconColor: Color.fromRGBO(245, 197, 41, 1),
-                                  borderColor: Color.fromRGBO(245, 197, 41, 1),
-                                  boxColor: Color.fromRGBO(255, 248, 97, 0.2),
-                                  borderWidth: 1.5,
-                                  mRight: 15,
-                                ),
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: 
+                            [
+                              //Date
+                              ContainerIconText
+                              (
+                                text: st.date,
+                                fontSize: Global().normalText,
+                                fontWeight: FontWeight.bold,
+                                icon: Icons.calendar_today_outlined,
+                                iconSize: 20,
+                                iconColor: Color.fromRGBO(245, 197, 41, 1),
+                                borderColor: Color.fromRGBO(245, 197, 41, 1),
+                                boxColor: Color.fromRGBO(255, 248, 97, 0.2),
+                                borderWidth: 1.5,
+                                mRight: 15,
+                              ),
 
-                                //Time
-                                ContainerIconText
-                                (
-                                  text: st.time,
-                                  fontSize: Global().normalText,
-                                  fontWeight: FontWeight.bold,
-                                  icon: Icons.query_builder_outlined,
-                                  iconSize: 20,
-                                  iconColor: Color.fromRGBO(245, 197, 41, 1),
-                                  borderColor: Color.fromRGBO(245, 197, 41, 1),
-                                  borderWidth: 1.5,
-                                  boxColor: Color.fromRGBO(255, 248, 97, 0.2),
-                                ),
-                              ],
-                            ),
+                              //Time
+                              ContainerIconText
+                              (
+                                text: st.time,
+                                fontSize: Global().normalText,
+                                fontWeight: FontWeight.bold,
+                                icon: Icons.query_builder_outlined,
+                                iconSize: 20,
+                                iconColor: Color.fromRGBO(245, 197, 41, 1),
+                                borderColor: Color.fromRGBO(245, 197, 41, 1),
+                                borderWidth: 1.5,
+                                boxColor: Color.fromRGBO(255, 248, 97, 0.2),
+                              ),
+                            ],
                           ),
                         ),
 
