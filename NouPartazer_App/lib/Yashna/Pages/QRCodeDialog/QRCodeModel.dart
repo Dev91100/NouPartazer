@@ -53,7 +53,7 @@ class QRCodeModel
               [
                 SectionTitle
                 (
-                  title: 'QR CODE',
+                  text: 'QR CODE',
                   align: Alignment.center,
                 ),
 

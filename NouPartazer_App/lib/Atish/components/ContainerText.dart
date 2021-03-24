@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
+import 'package:noupartazer_app/Devashish/Global.dart';
+
 class ContainerText extends StatelessWidget
 {
-  final double mLeft, mTop, mRight, mBottom;
-  final double pLeft, pTop, pRight, pBottom;
+  final EdgeInsets margin;
+  final EdgeInsets padding;
   final Color borderColor;
   final Color boxColor;
   final Color textColor;
@@ -20,15 +22,9 @@ class ContainerText extends StatelessWidget
     {
       this.text = 'Test',
       this.fontWeight = FontWeight.bold,
-      this.fontSize = 18, 
-      this.mLeft    = 0, 
-      this.mTop     = 0, 
-      this.mRight   = 0, 
-      this.mBottom  = 0,
-      this.pLeft    = 5, 
-      this.pTop     = 5, 
-      this.pRight   = 5, 
-      this.pBottom  = 5,
+      this.fontSize, 
+      this.margin = const EdgeInsets.only(right: 15),
+      this.padding = const EdgeInsets.all(5),
       this.borderColor = const Color.fromRGBO(0, 0, 0, 0),
       this.boxColor = const Color.fromRGBO(0, 0, 0, 1),
       this.textColor = const Color.fromRGBO(255, 255, 255, 1),
@@ -42,20 +38,8 @@ class ContainerText extends StatelessWidget
   {
     return Container
     (
-      margin: EdgeInsets.fromLTRB
-      (
-        mLeft,
-        mTop,
-        mRight,
-        mBottom,
-      ),
-      padding: EdgeInsets.fromLTRB
-      (
-        pLeft,
-        pTop,
-        pRight,
-        pBottom,
-      ),
+      margin: margin,
+      padding: padding,
       
       decoration: BoxDecoration
       (
@@ -72,7 +56,7 @@ class ContainerText extends StatelessWidget
         text,
         style: TextStyle
         (
-          fontSize: fontSize,
+          fontSize: (fontSize != null) ? fontSize : Global().smallText,
           fontWeight: fontWeight,
           color: textColor
         ),

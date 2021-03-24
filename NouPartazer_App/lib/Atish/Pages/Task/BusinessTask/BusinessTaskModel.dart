@@ -166,9 +166,7 @@ class BusinessTaskModel extends StatelessWidget
               margin: EdgeInsets.only(top: 10),
               child: SectionTitle
               (
-                title: tag,
-                left: 0,
-                right: 0,
+                text: tag,
               ),
             ),
             
@@ -218,7 +216,6 @@ class BusinessTaskModel extends StatelessWidget
                     text: 'Status',
                     icon: Icons.online_prediction_outlined,
                     fontSize: 18,
-                    mRight: 15,
                     iconColor: Color.fromRGBO(255, 255, 255, 1),
                   ),
                   ContainerText
@@ -228,8 +225,7 @@ class BusinessTaskModel extends StatelessWidget
                     textColor: Color.fromRGBO(245, 197, 41, 1),
                     borderColor: Color.fromRGBO(245, 197, 41, 1),
                     boxColor: Color.fromRGBO(255, 248, 97, 0.2),
-                    pLeft: 40,
-                    pRight: 40,
+                    padding: EdgeInsets.only(left: 40, right: 40),
                   ),
                 ],
               ),

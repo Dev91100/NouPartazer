@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import './Member.dart';
-import './MemberList.dart';
+import 'package:noupartazer_app/Atish/Pages/NGOProfile/Member.dart';
+import 'package:noupartazer_app/Atish/Pages/NGOProfile/MemberList.dart';
+import 'package:noupartazer_app/Atish/components/Text/SmallText.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/RoundIconButton.dart';
-import 'package:noupartazer_app/Devashish/Global.dart';
 
-class MemberModel extends StatelessWidget 
+class MemberModel extends StatelessWidget
 {
   final List<Member> members = memberList;
   final onPressDelete;
@@ -54,148 +54,126 @@ class MemberModel extends StatelessWidget
               (
                 margin: EdgeInsets.only
                 (
-                  // top: top,
-                  left: 20,
-                  right: 20,
+                  top: 10,
+                  bottom: 5
                 ),
-                child: Container
+                child: ElevatedButton
                 (
-                  margin: EdgeInsets.only
+                  style: ElevatedButton.styleFrom
                   (
-                    top: 10,
-                    bottom: 5
-                  ),
-                  child: ElevatedButton
-                  (
-                    style: ElevatedButton.styleFrom
+                    primary: Colors.white,
+                    onPrimary: Colors.black,
+                    shape: RoundedRectangleBorder
                     (
-                      primary: Colors.white,
-                      onPrimary: Colors.black,
-                      shape: RoundedRectangleBorder
-                      (
-                        borderRadius: BorderRadius.all(Radius.circular(10))
-                      ),
+                      borderRadius: BorderRadius.all(Radius.circular(10))
+                    ),
+                  ),
+                  
+                  child: Padding
+                  (
+                    padding: const EdgeInsets.only
+                    (
+                      left: 0,
+                      right: 0,
+                      top: 10,
+                      bottom: 10,
                     ),
                     
-                    child: Padding
+                    child: Row
                     (
-                      padding: const EdgeInsets.only
-                      (
-                        left: 0,
-                        right: 0,
-                        top: 10,
-                        bottom: 10,
-                      ),
-                      
-                      child: Row
-                      (
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children:
-                        [
-                          Container
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children:
+                      [
+                        Container
+                        (
+                          margin: EdgeInsets.only
                           (
-                            margin: EdgeInsets.only
-                            (
-                              right: 10
-                            ),
-                            width: 70.0,
-                            height: 70.0,
-                            decoration: BoxDecoration
-                            (
-                              image: DecorationImage
-                              (
-                                image: AssetImage(memberList[index].image),
-                                fit: BoxFit.cover,
-                              ),
-                              borderRadius: BorderRadius.circular(80.0),
-                            ),
+                            right: 10
                           ),
-
-                          Expanded
+                          width: 70.0,
+                          height: 70.0,
+                          decoration: BoxDecoration
                           (
-                            child: Container
+                            image: DecorationImage
                             (
-                              child: Column
-                              (
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: 
-                                [
-                                  SingleChildScrollView
+                              image: AssetImage(memberList[index].image),
+                              fit: BoxFit.cover,
+                            ),
+                            borderRadius: BorderRadius.circular(80.0),
+                          ),
+                        ),
+
+                        Expanded
+                        (
+                          child: Container
+                          (
+                            child: Column
+                            (
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: 
+                              [
+                                SingleChildScrollView
+                                (
+                                  scrollDirection: Axis.horizontal,
+                                  child: Container
                                   (
-                                    scrollDirection: Axis.horizontal,
-                                    child: Container
+                                    child: SmallText
                                     (
-                                      child: Text
-                                      (
-                                        memberList[index].name,
-                                        style: TextStyle
-                                        (
-                                          fontSize: Global().memberName,
-                                          fontWeight: FontWeight.w700,
-                                          color: Color.fromRGBO(0, 50, 193, 1),
-                                        ),
-                                      ),
+                                      text: memberList[index].name,
+                                      textColor: Color.fromRGBO(0, 50, 193, 1),
                                     ),
                                   ),
-                                  
-                                  Container
+                                ),
+                                
+                                Container
+                                (
+                                  child: SingleChildScrollView
                                   (
-                                    child: SingleChildScrollView
+                                    scrollDirection: Axis.horizontal,
+                                    child: SmallText
                                     (
-                                      scrollDirection: Axis.horizontal,
-                                      child: Text
-                                      (
-                                        memberList[index].position,
-                                        style: TextStyle
-                                        (
-                                          fontSize: Global().normalText,
-                                          color: Color.fromRGBO(102, 102, 102, 1),
-                                        ),
-                                      ),
+                                      text: memberList[index].position,
+                                      textColor: Color.fromRGBO(102, 102, 102, 1),
                                     ),
-                                  )
-                                ],
-                              ),
+                                  ),
+                                )
+                              ],
                             ),
                           ),
-
-                          (isEditable) ? RoundIconButton
-                          (
-                            onPress: onPressDelete,
-                            isPopUpPage: isPopUpPage,
-                            isModalPage: isModalPage,
-                            isPage: isPage,
-                            icon: Icons.delete_outlined,
-                            height: 40,
-                            width: 40,
-                            left: 0,
-                            top: 0,
-                            right: 0,
-                            bottom: 0,
-                            size: 26,
-                            elevation: 0,
-                            iconColor: Color.fromRGBO(212, 0, 0, 1),
-                          ) : Container(),
-                        ],
-                      ),
-                    ),
-                    onPressed: () 
-                    {
-                      (isEditable) ? showModalBottomSheet
-                      (
-                        shape: RoundedRectangleBorder
-                        (
-                          borderRadius: BorderRadius.only
-                          (
-                            topLeft: Radius.circular(20),
-                            topRight: Radius.circular(20),
-                          )
                         ),
-                        context: context,
-                        builder: ((builder) => onPressEdit)
-                      ) : Container();
-                    },
+
+                        (isEditable) ? RoundIconButton
+                        (
+                          onPress: onPressDelete,
+                          isPopUpPage: isPopUpPage,
+                          isModalPage: isModalPage,
+                          isPage: isPage,
+                          icon: Icons.delete_outlined,
+                          height: 40,
+                          width: 40,
+                          size: 26,
+                          elevation: 0,
+                          iconColor: Color.fromRGBO(212, 0, 0, 1),
+                        ) : Container(),
+                      ],
+                    ),
                   ),
+                  onPressed: () 
+                  {
+                    (isEditable) ? showModalBottomSheet
+                    (
+                      shape: RoundedRectangleBorder
+                      (
+                        borderRadius: BorderRadius.only
+                        (
+                          topLeft: Radius.circular(20),
+                          topRight: Radius.circular(20),
+                        )
+                      ),
+                      context: context,
+                      builder: ((builder) => onPressEdit)
+                    ) : Container();
+                  },
                 ),
               );
             }

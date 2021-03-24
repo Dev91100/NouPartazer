@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 class IconText extends StatelessWidget
 {
@@ -21,7 +22,7 @@ class IconText extends StatelessWidget
       this.hasIcon = true,
       this.icon,
       this.iconSize = 25,
-      this.fontSize = 18,
+      this.fontSize,
       this.fontWeight = FontWeight.w600,
       this.iconRight = 0,
       this.textColor = const Color.fromRGBO(0, 0, 0, 1),
@@ -43,7 +44,7 @@ class IconText extends StatelessWidget
           child: (hasIcon) ? Icon
           (
             icon,
-            size: fontSize * (5/3),
+            size: iconSize,
             color: iconColor,
           ) : Container(height: 0, width: 0,),
         ),
@@ -56,7 +57,7 @@ class IconText extends StatelessWidget
             (
               color: textColor,
               fontWeight: fontWeight,
-              fontSize: fontSize,
+              fontSize: (fontSize != null) ? fontSize : Global().smallText,
               decoration: textDecoration,
             ),
           ),

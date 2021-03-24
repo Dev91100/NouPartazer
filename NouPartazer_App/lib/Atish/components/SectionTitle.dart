@@ -1,23 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:noupartazer_app/Devashish/Global.dart';
 
-class SectionTitle extends StatelessWidget {
+class SectionTitle extends StatelessWidget
+{
   @required
-  final String title;
+  final String text;
 
   final double fontSize;
-  final double top, left, right;
+  final EdgeInsets margin;
   final Color color;
   final Alignment align;
 
   SectionTitle
   (
     {
-      this.title = 'This is a test',
+      this.text = 'This is a test',
       this.fontSize,
-      this.top = 0,
-      this.left = 20,
-      this.right = 20,
+      this.margin,
       this.color = const Color.fromRGBO(0, 0, 0, 1),
       this.align = Alignment.centerLeft,
     }
@@ -26,32 +25,24 @@ class SectionTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context)
   {
-    return Container
+    return Align
     (
-      child: Align
+      alignment: align,
+      child: SingleChildScrollView
       (
-        alignment: align,
-        child: SingleChildScrollView
+        scrollDirection: Axis.horizontal,
+        child: Container
         (
-          scrollDirection: Axis.horizontal,
-          child: Container
+          margin: margin,
+          child: 
+          Text
           (
-            margin: EdgeInsets.only
+            text,
+            style: TextStyle
             (
-              top: top,
-              left: left,
-              right: right
-            ),
-            child: 
-            Text
-            (
-              title,
-              style: TextStyle
-              (
-                color: color,
-                fontWeight: FontWeight.w800,
-                fontSize: (fontSize != null) ? fontSize: Global().profileSectionTitle,
-              ),
+              color: color,
+              fontWeight: FontWeight.w800,
+              fontSize: (fontSize != null) ? fontSize: Global().mediumText,
             ),
           ),
         ),

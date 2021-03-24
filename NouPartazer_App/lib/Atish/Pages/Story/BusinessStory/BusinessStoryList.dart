@@ -5,11 +5,11 @@ final List<BusinessStory> businessStoryList =
   BusinessStory
   (
     image: './assets/JPEG/Child.jpg',
-    locationName: 'Four Seasons ResortFour Seasons Resort',
-    locationAddress: 'La Place BelgathLa Place BelgathLa Place Belgath',
+    locationName: 'Four Seasons Resort',
+    locationAddress: 'La Place Belgath',
     date: '19/03/21',
     time: '19:00-00:30',
-    tag: 'PARTY TEST TEST TEST TEST TEST',
+    tag: 'PARTY',
     foodType: 'PERISHABLE FOOD'
   ),
   BusinessStory

@@ -153,8 +153,7 @@ class _CreateStoryState extends State<CreateStory>
                     (
                       child: SectionTitle
                       (
-                        title: 'STORY INFORMATION',
-                        left: 0,
+                        text: 'STORY INFORMATION',
                       ),
                     ),
 

@@ -6,10 +6,11 @@ import 'package:http/http.dart' as http;
 
 import 'package:noupartazer_app/Atish/components/Buttons/LargeButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
+import 'package:noupartazer_app/Atish/components/Text/HugeText.dart';
+import 'package:noupartazer_app/Atish/components/Text/MediumText.dart';
 import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
 import 'package:noupartazer_app/Koomalai/Pages/BottomNavigation/BusinessBottomNav.dart';
 import 'package:noupartazer_app/Koomalai/Pages/BottomNavigation/NGOBottomNav.dart';
-import 'package:noupartazer_app/Devashish/Global.dart';
 
 class SignInWidget extends StatefulWidget
 {
@@ -131,43 +132,29 @@ class _SignInWidgetState extends State<SignInWidget>
 
       child: Column
       (
-        crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children:
         [
           Container
           (
-            alignment: Alignment.bottomLeft,
             child: FittedBox
             (
               fit: BoxFit.contain,
-              child: Text
-              (
-                "Welcome,",
-                style: TextStyle
-                (
-                  color: Color.fromRGBO(245, 197, 41, 1),
-                  fontSize: Global().yellowTitle,
-                  fontWeight: FontWeight.bold
-                ),
-              ),
+              child: HugeText(text: 'Welcome'),
             ),
           ),
 
           Container
           (
-            alignment: Alignment.bottomLeft,
-            child: FittedBox
+            margin: EdgeInsets.only
             (
-              fit: BoxFit.contain,
-              child: Text
-              (
-                "Sign in to continue",
-                style: TextStyle
-                (
-                  color: Colors.white,
-                  fontSize: Global().yellowTitlePara,
-                ),
-              ),
+              top: widget.constraints.maxHeight * 0.01,
+              bottom: widget.constraints.maxHeight * 0.01,
+            ),
+            child: MediumText
+            (
+              text: 'Sign in to continue',
+              textColor: Colors.white,
             ),
           ),
 

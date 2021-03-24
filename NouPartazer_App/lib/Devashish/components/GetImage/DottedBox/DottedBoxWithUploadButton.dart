@@ -62,7 +62,6 @@ class DottedBoxWithUploadButton extends StatelessWidget
                 text: text,
                 hasIcon: false,
                 elevation: 0,
-                hasSuperPress: true,
                 onSuperPress: onPress,
               ),
             ),

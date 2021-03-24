@@ -70,9 +70,7 @@ class _SecurityState extends State<Security>
                     [
                       SectionTitle
                       (
-                        title: 'CHANGE PASSWORD',
-                        left: 0,
-                        top: 15,
+                        text: 'CHANGE PASSWORD',
                         fontSize: Global().profileSectionTitle,
                       ),
 
@@ -122,7 +120,7 @@ class _SecurityState extends State<Security>
                   (
                     text: 'Delete my account',
                     icon: Icons.delete_outlined,
-                    fontSize: Global().normalText,
+                    fontSize: Global().smallText,
                     fontWeight: FontWeight.bold,
                     iconColor: Color.fromRGBO(212, 0, 0, 1),
                     textColor: Color.fromRGBO(212, 0, 0, 1),

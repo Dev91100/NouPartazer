@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 import 'package:noupartazer_app/Atish/components/IconText.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
 
 class SmallButtonIconText extends StatelessWidget
@@ -31,7 +32,6 @@ class SmallButtonIconText extends StatelessWidget
   final bool isPageTransition;
   final String transitionType;
   final int transitionDuration;
-  final bool hasSuperPress;
   final VoidCallback onSuperPress;
 
   SmallButtonIconText
@@ -46,7 +46,7 @@ class SmallButtonIconText extends StatelessWidget
       this.textDecoration = TextDecoration.none,
       this.hasIcon = true,
       this.icon = Icons.not_listed_location,
-      this.fontSize = 18,
+      this.fontSize,
       this.fontWeight = FontWeight.w600,
       this.textColor = const Color.fromRGBO(255, 255, 255, 1),
       this.iconColor = const Color.fromRGBO(255, 255, 255, 1),
@@ -62,7 +62,6 @@ class SmallButtonIconText extends StatelessWidget
       this.isPageTransition = false,
       this.transitionType = 'scale',
       this.transitionDuration = 1100,
-      this.hasSuperPress = false,
       this.onSuperPress,
     }
   )
@@ -71,7 +70,7 @@ class SmallButtonIconText extends StatelessWidget
     (
       text: text,
       icon: icon,
-      fontSize: fontSize,
+      fontSize: (fontSize != null) ? fontSize : Global().normalText,
       fontWeight: fontWeight,
       textColor: textColor,
       iconColor: iconColor,
@@ -106,13 +105,14 @@ class SmallButtonIconText extends StatelessWidget
         textDecoration: textDecoration,
         hasIcon: hasIcon,
         icon: icon,
-        fontSize: fontSize,
+        fontSize: (fontSize != null) ? fontSize : Global().normalText,
         fontWeight: fontWeight,
         textColor: textColor,
         iconColor: iconColor,
         iconRight: iconRight,
       ),
-      onPressed: (!hasSuperPress) ? ()
+
+      onPressed: (onSuperPress == null) ? ()
       {
         if(isPopUpPage)
         {

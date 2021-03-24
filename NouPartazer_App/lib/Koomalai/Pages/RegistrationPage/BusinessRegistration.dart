@@ -8,8 +8,11 @@ import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/LargeCustomButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
+import 'package:noupartazer_app/Atish/components/Text/HugeText.dart';
+import 'package:noupartazer_app/Atish/components/Text/MediumText.dart';
 import 'package:noupartazer_app/Devashish/components/AccountCreated.dart';
 import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
+import 'package:noupartazer_app/Koomalai/Pages/BottomNavigation/BusinessBottomNav.dart';
 
 class BusinessRegistration extends StatefulWidget
 {
@@ -166,26 +169,24 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
                   [
                     Container
                     (
-                      child: SectionTitle
+                      child: HugeText(text: 'Let\'s continue'),
+                    ),
+
+                    Container
+                    (
+                      margin: EdgeInsets.only(top: 15),
+                      child: MediumText
                       (
-                        title: 'Let\'s continue',
-                        left: 0,
-                        fontSize: 45,
-                        color: Color.fromRGBO(245, 197, 41, 1),
+                        text: "Fill in the following information",
                       ),
                     ),
 
                     Container
                     (
                       margin: EdgeInsets.only(top: 15),
-                      child: Text
+                      child: SectionTitle
                       (
-                        "Fill in the following information",
-                        style: TextStyle
-                        (
-                          color: Colors.black,
-                          fontSize: 20
-                        ),
+                        text: 'BUSINESS INFORMATION',
                       ),
                     ),
 
@@ -267,7 +268,10 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
                         text: 'Register',
                         processing: processing,
                         hasIcon: false,
-                        onSuperPress: registerUser,
+                        isPageTransition: true,
+                        transitionType: 'downToUp',
+                        onPress: BusinessBottomNav(),
+                        // onSuperPress: registerUser,
                       )
                     ),
                   ],

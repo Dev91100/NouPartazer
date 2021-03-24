@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
+import 'package:noupartazer_app/Atish/components/Text/TinyText.dart';
+
 class ListTileModel extends StatelessWidget 
 {
   final IconData leadingIcon;
@@ -7,8 +10,6 @@ class ListTileModel extends StatelessWidget
   final String subtitleText;
   final IconData trailingIcon;
   final trailingButton;
-  final double titleSize;
-  final double subTitleSize;
   final double iconSize;
 
   final bool hasleadingIcon;
@@ -47,8 +48,6 @@ class ListTileModel extends StatelessWidget
       this.onPress,
       this.hasSuperPress = false,
       this.onSuperPress,
-      this.titleSize = 18,
-      this.subTitleSize = 13,
       this.iconSize = 35,
     }
   );
@@ -65,25 +64,16 @@ class ListTileModel extends StatelessWidget
         size: iconSize,
       ) : null,
 
-      title: Text
+      title: SectionTitle
       (
-        titleText,
-        style: TextStyle
-        (
-          color: textColor,
-          fontSize: titleSize,
-          fontWeight: FontWeight.bold,
-        ),
+        text: titleText,
       ),
 
       subtitle: (subtitleText!= null) ?
-      Text
+      TinyText
       (
-        subtitleText,
-        style: TextStyle
-        (
-          fontSize: subTitleSize,
-        ),
+        text: subtitleText,
+        fontWeight: FontWeight.w300,
       ) : null,
 
       trailing: (hastrailingIcon) ? Icon

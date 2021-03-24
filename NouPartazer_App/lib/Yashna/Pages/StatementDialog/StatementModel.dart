@@ -68,10 +68,9 @@ class StatementModel
                   margin: EdgeInsets.only(top: 10),
                   child: SectionTitle
                   (
-                    title: 'Success',
+                    text: 'Success',
                     fontSize: 25,
                     align: Alignment.center,
-                    left: 0,
                   ),
                 ),
 

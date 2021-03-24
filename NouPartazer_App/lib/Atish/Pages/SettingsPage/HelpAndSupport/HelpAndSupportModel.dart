@@ -54,9 +54,7 @@ class HelpAndSupportModel extends StatelessWidget
           (
             leadingIcon: Icons.supervised_user_circle_outlined,
             titleText: 'About Us',
-            titleSize: Global().settingsTitle,
             subtitleText: 'Learn more about NouPartazer',
-            subTitleSize: Global().settingsSubTitle,
             trailingIcon: Icons.keyboard_arrow_right,
             iconSize: Global().settingsIcon,
             isPage: true,
@@ -68,9 +66,7 @@ class HelpAndSupportModel extends StatelessWidget
           (
             leadingIcon: Icons.assignment_outlined,
             titleText: 'Terms & Conditions',
-            titleSize: Global().settingsTitle,
             subtitleText: 'Learn more about NouPartazer',
-            subTitleSize: Global().settingsSubTitle,
             trailingIcon: Icons.keyboard_arrow_right,
             iconSize: Global().settingsIcon,
             isPopUpPage: true,
@@ -82,9 +78,7 @@ class HelpAndSupportModel extends StatelessWidget
           (
             leadingIcon: Icons.privacy_tip_outlined,
             titleText: 'Privacy Policy',
-            titleSize: Global().settingsTitle,
             subtitleText: 'Learn more about NouPartazer',
-            subTitleSize: Global().settingsSubTitle,
             trailingIcon: Icons.keyboard_arrow_right,
             iconSize: Global().settingsIcon,
             isPage: true,
@@ -96,9 +90,7 @@ class HelpAndSupportModel extends StatelessWidget
           (
             leadingIcon: Icons.question_answer_outlined,
             titleText: 'FAQ',
-            titleSize: Global().settingsTitle,
             subtitleText: 'Learn more about NouPartazer',
-            subTitleSize: Global().settingsSubTitle,
             trailingIcon: Icons.keyboard_arrow_right,
             iconSize: Global().settingsIcon,
             isPage: true,
@@ -110,9 +102,7 @@ class HelpAndSupportModel extends StatelessWidget
           (
             leadingIcon: Icons.perm_phone_msg_outlined,
             titleText: 'Contact Us',
-            titleSize: Global().settingsTitle,
             subtitleText: 'Learn more about NouPartazer',
-            subTitleSize: Global().settingsSubTitle,
             trailingIcon: Icons.keyboard_arrow_right,
             iconSize: Global().settingsIcon,
             isPage: true,

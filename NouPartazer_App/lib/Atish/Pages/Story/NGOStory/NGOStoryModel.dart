@@ -124,8 +124,8 @@ class NGOStoryModel extends StatelessWidget
                           ),
                           child: LongText
                           (
-                            title: st.description,
-                            fontSize: Global().normalText,
+                            text: st.description,
+                            fontSize: Global().smallText,
                             fontWeight: FontWeight.w500,
                             textColor: Color.fromRGBO(255, 255, 255, 1),
                           ),
@@ -151,8 +151,8 @@ class NGOStoryModel extends StatelessWidget
                                   borderWidth: 1.5,
                                   borderRadius: 40,
                                   boxColor: Color.fromRGBO(255, 248, 97, 0.2),
-                                  pLeft: 15, pTop:10, pRight: 15, pBottom: 10,
-                                  mRight: 10,
+                                  padding: EdgeInsets.fromLTRB(15, 10, 15, 10),
+                                  margin: EdgeInsets.only(right: 10),
                                 ),
                               ],
                             ),

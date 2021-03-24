@@ -49,7 +49,9 @@ class NGOOngoingTask extends StatelessWidget
                         ),
                         CustomDivider
                         (
-                          height: 10
+                          height: 10,
+                          indent: 20,
+                          endIndent: 20,
                         ),
                       ],
                     );

@@ -5,7 +5,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:noupartazer_app/Atish/Pages/Story/BusinessStory/BusinessStory.dart';
 import 'package:noupartazer_app/Atish/components/ContainerIconText.dart';
 import 'package:noupartazer_app/Atish/components/ContainerText.dart';
-import 'package:noupartazer_app/Devashish/Global.dart';
+import 'package:noupartazer_app/Atish/components/Text/MediumText.dart';
+import 'package:noupartazer_app/Atish/components/Text/SmallText.dart';
 
 class BusinessStoryModel extends StatelessWidget
 {
@@ -79,9 +80,9 @@ class BusinessStoryModel extends StatelessWidget
                         new Color.fromRGBO(0, 0, 0, 1), // Black
                         new Color.fromRGBO(0, 0, 0, 0), // Transparent
                       ],
-                      begin: FractionalOffset(1.0, 1.1),
-                      end: FractionalOffset(1.0, 0.0),
-                      stops: [0.0,0.5],
+                      begin: FractionalOffset(2.0, 0.95),
+                      end: FractionalOffset(2.0, 0.0),
+                      stops: [0.0,0.6],
                       tileMode: TileMode.clamp,
                     ),
                     borderRadius: BorderRadius.all(Radius.circular(20))
@@ -99,19 +100,11 @@ class BusinessStoryModel extends StatelessWidget
                         SingleChildScrollView
                         (
                           scrollDirection: Axis.horizontal,
-                          child: FittedBox
+                          child: SmallText
                           (
-                            fit: BoxFit.contain,
-                            child: Text
-                            ( 
-                              st.locationName,
-                              style: TextStyle
-                              (
-                                fontWeight: FontWeight.bold,
-                                fontSize: Global().normalText,
-                                color: new Color.fromRGBO(245, 197, 41, 1),
-                              ),
-                            ),
+                            text: st.locationName.toUpperCase(),
+                            textColor: Color.fromRGBO(245, 197, 41, 1),
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       
@@ -122,65 +115,51 @@ class BusinessStoryModel extends StatelessWidget
                           child: Container
                           (
                             margin: EdgeInsets.only(top: 10),
-                            child: FittedBox
+                            child: MediumText
                             (
-                              fit: BoxFit.contain,
-                              child: Text
-                              (
-                                st.locationAddress,
-                                style: TextStyle
-                                (
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: Global().largeText,
-                                  color: Colors.white,
-                                ),
-                              ),
+                              text: st.locationAddress.toUpperCase(),
+                              textColor: Colors.white,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
                         ),
                         
                         // Date & Time
-                        FittedBox
+                        Container
                         (
-                          fit: BoxFit.contain,
-                          child: Container
+                          margin: EdgeInsets.only(top: 10),
+                          child: Row
                           (
-                            margin: EdgeInsets.only(top: 10),
-                            child: Row
-                            (
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: 
-                              [
-                                //Date
-                                ContainerIconText
-                                (
-                                  text: st.date,
-                                  fontSize: Global().normalText,
-                                  fontWeight: FontWeight.bold,
-                                  icon: Icons.calendar_today_outlined,
-                                  iconSize: 20,
-                                  iconColor: Color.fromRGBO(245, 197, 41, 1),
-                                  borderColor: Color.fromRGBO(245, 197, 41, 1),
-                                  boxColor: Color.fromRGBO(255, 248, 97, 0.2),
-                                  borderWidth: 1.5,
-                                  mRight: 15,
-                                ),
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: 
+                            [
+                              //Date
+                              ContainerIconText
+                              (
+                                text: st.date,
+                                fontWeight: FontWeight.bold,
+                                icon: Icons.calendar_today_outlined,
+                                iconSize: 20,
+                                iconColor: Colors.white,
+                                boxColor: Colors.transparent,
+                                borderColor: Colors.white,
+                                borderWidth: 1.5,
+                                margin: EdgeInsets.only(right: 15),
+                              ),
 
-                                //Time
-                                ContainerIconText
-                                (
-                                  text: st.time,
-                                  fontSize: Global().normalText,
-                                  fontWeight: FontWeight.bold,
-                                  icon: Icons.query_builder_outlined,
-                                  iconSize: 20,
-                                  iconColor: Color.fromRGBO(245, 197, 41, 1),
-                                  borderColor: Color.fromRGBO(245, 197, 41, 1),
-                                  borderWidth: 1.5,
-                                  boxColor: Color.fromRGBO(255, 248, 97, 0.2),
-                                ),
-                              ],
-                            ),
+                              //Time
+                              ContainerIconText
+                              (
+                                text: st.time,
+                                fontWeight: FontWeight.bold,
+                                icon: Icons.query_builder_outlined,
+                                iconSize: 20,
+                                iconColor: Colors.white,
+                                boxColor: Colors.transparent,
+                                borderColor: Colors.white,
+                                borderWidth: 1.5,
+                              ),
+                            ],
                           ),
                         ),
 
@@ -199,41 +178,38 @@ class BusinessStoryModel extends StatelessWidget
                                 ContainerText
                                 (
                                   text: st.tag,
-                                  fontSize: Global().normalText,
                                   fontWeight: FontWeight.bold,
                                   borderColor: Color.fromRGBO(245, 197, 41, 1),
                                   borderWidth: 1.5,
                                   borderRadius: 40,
-                                  boxColor: Color.fromRGBO(255, 248, 97, 0.2),
-                                  pLeft: 15, pTop:10, pRight: 15, pBottom: 10,
-                                  mRight: 10,
+                                  boxColor: Colors.transparent,
+                                  padding: EdgeInsets.fromLTRB(15, 10, 15, 10),
+                                  margin: EdgeInsets.only(right: 10),
                                 ),
 
                                 //Food Type 1
                                 ContainerText
                                 (
                                   text: st.foodType,
-                                  fontSize: Global().normalText,
                                   fontWeight: FontWeight.bold,
                                   borderColor: Color.fromRGBO(245, 197, 41, 1),
                                   borderWidth: 1.5,
                                   borderRadius: 40,
-                                  boxColor: Color.fromRGBO(255, 248, 97, 0.2),
-                                  pLeft: 15, pTop:10, pRight: 15, pBottom: 10,
-                                  mRight: 10,
+                                  boxColor: Colors.transparent,
+                                  padding: EdgeInsets.fromLTRB(15, 10, 15, 10),
+                                  margin: EdgeInsets.only(right: 10),
                                 ),
                                 
                                 //Food Type 2
                                 ContainerText
                                 (
                                   text: st.foodType,
-                                  fontSize: Global().normalText,
                                   fontWeight: FontWeight.bold,
                                   borderColor: Color.fromRGBO(245, 197, 41, 1),
                                   borderWidth: 1.5,
                                   borderRadius: 40,
-                                  boxColor: Color.fromRGBO(255, 248, 97, 0.2),
-                                  pLeft: 15, pTop:10, pRight: 15, pBottom: 10,
+                                  boxColor: Colors.transparent,
+                                  padding: EdgeInsets.fromLTRB(15, 10, 15, 10),
                                 ),
                               ],
                             ),

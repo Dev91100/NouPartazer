@@ -59,7 +59,7 @@ class CustomIconButton extends StatelessWidget
             style: TextStyle
             (
               color: color,
-              fontSize: (fontSize != null) ? fontSize: Global().normalText,
+              fontSize: (fontSize != null) ? fontSize: Global().smallText,
             )
           ),
         ],

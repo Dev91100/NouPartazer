@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 class CardIconText extends StatelessWidget
 {
@@ -22,7 +23,7 @@ class CardIconText extends StatelessWidget
     {
       @required this.constraints,
       this.text = 'Test',
-      this.fontSize = 20,
+      this.fontSize,
       this.textTop = 0,
       this.textColor = const Color.fromRGBO(0, 0, 0, 1),
       this.icon = Icons.help_outline,
@@ -39,7 +40,6 @@ class CardIconText extends StatelessWidget
   {
     return Container
     (
-      // height: height,
       width: constraints.maxWidth * 0.43,
       child: Card
       (
@@ -66,11 +66,9 @@ class CardIconText extends StatelessWidget
               ),
               SectionTitle
               (
-                title: text,
+                text: text,
                 color: textColor,
-                fontSize: fontSize,
-                left: 0,
-                top: textTop,
+                fontSize: (fontSize != null) ? fontSize : Global().smallText,
               ),
             ],
           ),

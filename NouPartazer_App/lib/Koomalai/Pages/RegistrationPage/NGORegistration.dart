@@ -9,9 +9,10 @@ import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/LargeCustomButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
+import 'package:noupartazer_app/Atish/components/Text/HugeText.dart';
+import 'package:noupartazer_app/Atish/components/Text/MediumText.dart';
 import 'package:noupartazer_app/Devashish/components/AccountCreated.dart';
 import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
-import 'package:noupartazer_app/Devashish/Global.dart';
 
 class NGORegistration extends StatefulWidget
 {
@@ -173,26 +174,15 @@ class _NGORegistrationState extends State<NGORegistration>
                   [
                     Container
                     (
-                      child: SectionTitle
-                      (
-                        title: 'Let\'s continue',
-                        left: 0,
-                        fontSize: Global().yellowTitle,
-                        color: Color.fromRGBO(245, 197, 41, 1),
-                      ),
+                      child: HugeText(text: 'Let\'s continue'),
                     ),
 
                     Container
                     (
                       margin: EdgeInsets.only(top: 15),
-                      child: Text
+                      child: MediumText
                       (
-                        "Fill in the following information",
-                        style: TextStyle
-                        (
-                          color: Colors.black,
-                          fontSize: Global().yellowTitlePara,
-                        ),
+                        text: "Fill in the following information",
                       ),
                     ),
 
@@ -201,9 +191,7 @@ class _NGORegistrationState extends State<NGORegistration>
                       margin: EdgeInsets.only(top: 15),
                       child: SectionTitle
                       (
-                        title: 'NGO INFORMATION',
-                        // fontSize: 18,
-                        left: 0,
+                        text: 'NGO INFORMATION',
                       ),
                     ),
 
@@ -264,9 +252,7 @@ class _NGORegistrationState extends State<NGORegistration>
                     (
                       child: SectionTitle
                       (
-                        title: 'ACCOUNT HOLDER INFORMATION',
-                        fontSize: 18,
-                        left: 0,
+                        text: 'ACCOUNT HOLDER INFORMATION',
                       ),
                     ),
 

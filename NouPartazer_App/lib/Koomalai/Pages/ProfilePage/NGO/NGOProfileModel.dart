@@ -88,7 +88,8 @@ class NGOProfileModel extends StatelessWidget
                     [
                       SectionTitle
                       (
-                        title: 'MY STORIES',
+                        text: 'MY STORIES',
+                        margin: EdgeInsets.only(left: 20, right: 20),
                       ),
 
                       NGOStoryModelProfile(),
@@ -96,125 +97,113 @@ class NGOProfileModel extends StatelessWidget
                   ),
                 ),
                 
-                CustomDivider(),
-
-                Column
+                CustomDivider
                 (
-                  children:
-                  [
-                    SectionWithEditButton
-                    (
-                      isEditable: isEditable,
-                      title: 'Manzer Partazer Test Test Test Test',
-                      fontSize: 22,
-                      color: Color.fromRGBO(0, 50, 193, 1),
-                      onPress: ngoEditNameBottomSheet,
-                      isModalPage: true,
-                    ),
-                    
-                    Align
-                    (
-                      alignment: Alignment.centerLeft,
-                      child: Container
-                      (
-                        width: screen.width * 0.9,
-                        child: SectionTitle
-                        (
-                          title: 'Food Sharing Project of Mauritius Mauritius Mauritius',
-                          fontSize: 17, 
-                          top: 15,
-                          color: Color.fromRGBO(51, 51, 51, 1),
-                        ),
-                      ),
-                    ),
-
-                    Container
-                    (
-                      margin: EdgeInsets.only
-                      (
-                        top: 10,
-                        left: 20,
-                        right: 20
-                      ),
-                      constraints: BoxConstraints
-                      (
-                        maxHeight: constraints.maxHeight * 0.25,
-                      ),
-                      child: LongText
-                      (
-                        title: "MANZER PARTAZER is the the first food sharing project of Mauritius. Our aim is to reduce the wastage of high quality ready to eat food by simply sharing it!"
-                              "We ‘save’ food which would otherwise go to waste, such as buffet leftovers in hotels or restaurants, donating it to people in need through a very simple and no-cost food sharing system.or restaurants, donating it to people in need through a very simple and no-cost food sharing system.or restaurants, donating it to people in need through a very simple and no-cost food sharing system.or restaurants, donating it to people in need through a very simple and no-cost food sharing system.",
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                        top: screen.height * 0.015,
-                      ),
-                    ),
-                  ],
+                  indent: 20,
+                  endIndent: 20,
                 ),
 
-                CustomDivider(),
-
-                Column
+                Container
                 (
-                  children:
-                  [
-                    Container
-                    (
-                      margin: (isEditable) ?  null : EdgeInsets.only(bottom: constraints.maxHeight * 0.025),
-                      child: SectionWithEditButton
+                  margin: EdgeInsets.only
+                  (
+                    left: 20,
+                    right: 20  
+                  ),
+                  child: Column
+                  (
+                    mainAxisSize: MainAxisSize.max,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children:
+                    [
+                      SectionWithEditButton
                       (
                         isEditable: isEditable,
-                        title: 'CONTACT INFO',
-                        onPress: editContactBottomSheet,
+                        title: 'Manzer Partazer Test Test Test Test'.toUpperCase(),
+                        color: Color.fromRGBO(0, 50, 193, 1),
+                        onPress: ngoEditNameBottomSheet,
                         isModalPage: true,
-                        fontSize: 18,
                       ),
-                    ),
+                      
+                      SectionTitle
+                      (
+                        text: 'Food Sharing Project of Mauritius Mauritius Mauritius',
+                        color: Color.fromRGBO(51, 51, 51, 1),
+                      ),
 
-                    ContactInfo
-                    (
-                      website: 'www.facebook.com',
-                      top: 0,
-                      icon: Icons.language_outlined,
-                    ),
-                    
-                    ContactInfo
-                    (
-                      email: 'info@manzerpartazer.org',
-                      icon: Icons.email_outlined,
-                    ),
+                      Container
+                      (
+                        margin: EdgeInsets.only
+                        (
+                          top: 10,
+                        ),
+                        constraints: BoxConstraints
+                        (
+                          maxHeight: constraints.maxHeight * 0.25,
+                        ),
+                        child: LongText
+                        (
+                          text: "MANZER PARTAZER is the the first food sharing project of Mauritius. Our aim is to reduce the wastage of high quality ready to eat food by simply sharing it!"
+                                "We ‘save’ food which would otherwise go to waste, such as buffet leftovers in hotels or restaurants, donating it to people in need through a very simple and no-cost food sharing system.or restaurants, donating it to people in need through a very simple and no-cost food sharing system.or restaurants, donating it to people in need through a very simple and no-cost food sharing system.or restaurants, donating it to people in need through a very simple and no-cost food sharing system.",
+                          textAlign: TextAlign.justify,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
 
-                    ContactInfo
-                    (
-                      phoneNumber: '+230 5820 7691',
-                      icon: Icons.call_outlined,
-                    )
-                  ],
-                ),
+                      CustomDivider(),
 
-                CustomDivider(),
+                      Container
+                      (
+                        margin: (isEditable) ?  null : EdgeInsets.only(bottom: constraints.maxHeight * 0.025),
+                        child: SectionWithEditButton
+                        (
+                          isEditable: isEditable,
+                          title: 'CONTACT INFO',
+                          onPress: editContactBottomSheet,
+                          isModalPage: true,
+                          fontSize: 18,
+                        ),
+                      ),
 
-                Column
-                (
-                  children:
-                  [
-                    SectionWithEditButton
-                    (
-                      isEditable: isEditable,
-                      title: 'MEMBERS',
-                      icon: Icons.add,
-                      onPress: ngoEditMembersBottomSheet,
-                      isModalPage: true,
-                    ),
-                  ]
-                ),
+                      ContactInfo
+                      (
+                        website: 'www.facebook.com',
+                        margin: EdgeInsets.all(0),
+                        icon: Icons.language_outlined,
+                      ),
+                      
+                      ContactInfo
+                      (
+                        email: 'info@manzerpartazer.org',
+                        icon: Icons.email_outlined,
+                      ),
 
-                MemberModel
-                (
-                  isEditable: isEditable,
-                  onPressDelete: deleteMemberDialog,
-                  isPopUpPage: true,
-                  onPressEdit: ngoEditMembersBottomSheet,
+                      ContactInfo
+                      (
+                        phoneNumber: '+230 5820 7691',
+                        icon: Icons.call_outlined,
+                      ),
+
+                      CustomDivider(),
+
+                      SectionWithEditButton
+                      (
+                        isEditable: isEditable,
+                        title: 'MEMBERS',
+                        icon: Icons.add,
+                        onPress: ngoEditMembersBottomSheet,
+                        isModalPage: true,
+                      ),
+
+                      MemberModel
+                      (
+                        isEditable: isEditable,
+                        onPressDelete: deleteMemberDialog,
+                        isPopUpPage: true,
+                        onPressEdit: ngoEditMembersBottomSheet,
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),   

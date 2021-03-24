@@ -69,8 +69,7 @@ class _CreateEventState extends State<CreateEvent>
                     (
                       child: SectionTitle
                       (
-                        title: 'EVENT INFORMATION',
-                        left: 0,
+                        text: 'EVENT INFORMATION',
                         fontSize: Global().profileSectionTitle,
                       ),
                     ),
@@ -122,14 +121,14 @@ class _CreateEventState extends State<CreateEvent>
                       child: Checkboxes
                       (
                         option: 'Perishable Food',
-                        fontSize: Global().normalText,
+                        fontSize: Global().smallText,
                       )
                     ),
 
                     Checkboxes
                     (
                       option: 'Non-Perishable Food',
-                      fontSize: Global().normalText,
+                      fontSize: Global().smallText,
                     ),
 
                     Container

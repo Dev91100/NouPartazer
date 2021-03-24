@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/IconText.dart';
+import 'package:noupartazer_app/Atish/components/Text/NormalText.dart';
 import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
 import 'package:noupartazer_app/Koomalai/Pages/EventDetailsPage/EventDetails.dart';
 import 'package:noupartazer_app/Devashish/Global.dart';
@@ -112,15 +113,11 @@ class DonationModel extends StatelessWidget
                                 child: SingleChildScrollView
                                 (
                                   scrollDirection: Axis.horizontal,
-                                  child: Text
+                                  child: 
+                                  NormalText
                                   (
-                                    tag,
-                                    style: TextStyle
-                                    (
-                                      fontSize: Global().tagsInDonationPage,
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.w400,
-                                    ),
+                                    text: tag,
+                                    fontWeight: FontWeight.w400,
                                   ),
                                 ),
                               ),
@@ -187,7 +184,6 @@ class DonationModel extends StatelessWidget
                                 (
                                   text: date,
                                   icon: Icons.event,
-                                  fontSize: Global().donationTimeAndLocation,
                                   textColor: Color.fromRGBO(0, 50, 193, 1),
                                   iconColor: Color.fromRGBO(0, 50, 193, 1),
                                 ),
@@ -196,7 +192,6 @@ class DonationModel extends StatelessWidget
                                 (
                                   text: locationName,
                                   icon: Icons.location_on_outlined,
-                                  fontSize: Global().donationTimeAndLocation,
                                   textColor: Color.fromRGBO(0, 0, 0, 1),
                                 ),
                               ],

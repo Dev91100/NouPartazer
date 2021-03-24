@@ -96,7 +96,7 @@ class EventDetails extends StatelessWidget
                       margin: EdgeInsets.only(top: 25),
                       child: SectionTitle
                       (
-                        title: 'GROCERY DONATION',
+                        text: 'GROCERY DONATION',
                         align: Alignment.center,
                         fontSize: Global().profileSectionTitle,
                       ),
@@ -115,7 +115,7 @@ class EventDetails extends StatelessWidget
                             text: 'Status',
                             icon: Icons.online_prediction_outlined,
                             fontSize: Global().statusIndicator,
-                            mRight: 15,
+                            margin: EdgeInsets.only(right: 15),
                             iconColor: Color.fromRGBO(255, 255, 255, 1),
                           ),
                           ContainerText
@@ -125,8 +125,7 @@ class EventDetails extends StatelessWidget
                             textColor: Color.fromRGBO(245, 197, 41, 1),
                             borderColor: Color.fromRGBO(245, 197, 41, 1),
                             boxColor: Color.fromRGBO(255, 248, 97, 0.2),
-                            pLeft: 40,
-                            pRight: 40,
+                            padding: EdgeInsets.only(left: 40, right: 40),
                             fontSize: Global().statusValue,
                           ),
                         ],
@@ -145,7 +144,7 @@ class EventDetails extends StatelessWidget
                         hasBorder: false,
                         isPopUpPage: true,
                         onPress: statement,
-                        fontSize: Global().normalText,
+                        fontSize: Global().smallText,
                       ),
                     ),
                   ],
@@ -170,8 +169,7 @@ class EventDetails extends StatelessWidget
                         margin: EdgeInsets.only(top: 25),
                         child: SectionTitle
                         (
-                          left: 0,
-                          title: 'DATE & TIME',
+                          text: 'DATE & TIME',
                           fontSize: Global().profileSectionTitle,
                         ),
                       ),
@@ -189,7 +187,6 @@ class EventDetails extends StatelessWidget
                               constraints: constraints,
                               text: '19/01/2021',
                               icon: Icons.event_outlined,
-                              fontSize: Global().normalText,
                               iconSize: Global().normalTextIcon,
                             ),
 
@@ -198,7 +195,6 @@ class EventDetails extends StatelessWidget
                               constraints: constraints,
                               text: '19.00-22.00',
                               icon: Icons.query_builder,
-                              fontSize: Global().normalText,
                               iconSize: Global().normalTextIcon,                              
                             ),
                           ]
@@ -210,9 +206,7 @@ class EventDetails extends StatelessWidget
                         margin: EdgeInsets.only(top: 25),
                         child: SectionTitle
                         (
-                          left: 0,
-                          title: 'FOOD TYPE',
-                          fontSize: Global().profileSectionTitle,
+                          text: 'FOOD TYPE',
                         ),
                       ),
                       
@@ -234,7 +228,6 @@ class EventDetails extends StatelessWidget
                               icon: Icons.no_food,
                               iconColor: Color.fromRGBO(255, 255, 255, 1),
                               cardColor: Color.fromRGBO(255, 84, 62, 1),
-                              fontSize: Global().normalText,
                               iconSize: Global().normalTextIcon,                              
                             ),
 
@@ -246,7 +239,6 @@ class EventDetails extends StatelessWidget
                               icon: Icons.fastfood,
                               iconColor: Color.fromRGBO(255, 255, 255, 1),
                               cardColor: Color.fromRGBO(27, 215, 65, 1),
-                              fontSize: Global().normalText,
                               iconSize: Global().normalTextIcon,                              
                             ),
                           ]
@@ -258,9 +250,7 @@ class EventDetails extends StatelessWidget
                         margin: EdgeInsets.only(top: 25),
                         child: SectionTitle
                         (
-                          left: 0,
-                          title: 'DESCRIPTION',
-                          fontSize: Global().profileSectionTitle,
+                          text: 'DESCRIPTION',
                         ),
                       ),
 
@@ -280,8 +270,7 @@ class EventDetails extends StatelessWidget
                             margin: const EdgeInsets.all(10),
                             child: LongText
                             (
-                              title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius lectus et ante sollicitudin mattis. Morbi maximus maximus mi, non porttitor quam cursus sit amet. Vivamus in nunc id massa pretium elementum sed eu risus. Cras in ante ac nunc pretium imperdiet at a nisi. Cras placerat quis turpis a porttitor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius lectus et ante sollicitudin mattis. Morbi maximus maximus mi, non porttitor quam cursus sit amet. Vivamus in nunc id massa pretium elementum sed eu risus. Cras in ante ac nunc pretium imperdiet at a nisi. Cras placerat quis turpis a porttitor.',
-                              fontSize: Global().normalText,
+                              text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius lectus et ante sollicitudin mattis. Morbi maximus maximus mi, non porttitor quam cursus sit amet. Vivamus in nunc id massa pretium elementum sed eu risus. Cras in ante ac nunc pretium imperdiet at a nisi. Cras placerat quis turpis a porttitor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius lectus et ante sollicitudin mattis. Morbi maximus maximus mi, non porttitor quam cursus sit amet. Vivamus in nunc id massa pretium elementum sed eu risus. Cras in ante ac nunc pretium imperdiet at a nisi. Cras placerat quis turpis a porttitor.',
                             ),
                           ),
                         ),
@@ -292,9 +281,7 @@ class EventDetails extends StatelessWidget
                         margin: EdgeInsets.only(top: 25),
                         child: SectionTitle
                         (
-                          left: 0,
-                          title: 'LOCATION',
-                          fontSize: Global().profileSectionTitle,
+                          text: 'LOCATION',
                         ),
                       ),
 
@@ -311,9 +298,7 @@ class EventDetails extends StatelessWidget
                               (
                                 constraints: constraints,
                                 title: 'Jumbo Phoenix',
-                                titleFontSize: Global().profileSectionTitle,
                                 subtitle: 'Hypermarket',
-                                subtitleFontSize: Global().profileSectionSubTitle1,
                                 icon: Icons.location_on_outlined,
                                 cardColor: Color.fromRGBO(245, 197, 41, 1),
                               ),

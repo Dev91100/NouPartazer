@@ -71,7 +71,7 @@ class OrgButton extends StatelessWidget
               (
                 icon,
                 color: Color.fromRGBO(0, 50, 193, 1),
-                size: (iconSize != null) ? fontSize: Global().orgButtonIcon, //55,
+                size: (iconSize != null) ? fontSize: Global().largeIcon, //55,
               ),
               Text
               (
@@ -80,7 +80,7 @@ class OrgButton extends StatelessWidget
                 (
                   color: Color.fromRGBO(0, 50, 193, 1),
                   fontWeight: FontWeight.bold,
-                  fontSize: (fontSize != null) ? fontSize: Global().orgButtonText, //30,
+                  fontSize: (fontSize != null) ? fontSize: Global().largeText, //30,
                 ),
               ),
             ],

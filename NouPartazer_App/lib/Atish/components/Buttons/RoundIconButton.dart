@@ -11,10 +11,11 @@ class RoundIconButton extends StatelessWidget
   final bool isClose;
   final IconData icon;
   final double height, width;
-  final double left, top, right, bottom;
+  final EdgeInsets margin;
   final double size;
   final double elevation;
   final Color iconColor;
+  final Color backgroundColor;
   final bool scrollModalSheet;
   final bool isPageTransition;
   final String transitionType;
@@ -33,18 +34,16 @@ class RoundIconButton extends StatelessWidget
       this.icon,
       this.height,
       this.width,
-      this.left,
-      this.top,
-      this.right,
-      this.bottom,
+      this.margin,
       this.size,
-      this.elevation = 2,
-      this.iconColor = const Color.fromRGBO(102, 102, 102, 1),
+      this.elevation  = 0,
+      this.iconColor  = Colors.black,
+      this.backgroundColor  = Colors.white,
       this.scrollModalSheet = true,
       this.isPageTransition = false,
-      this.transitionType = 'scale',
+      this.transitionType   = 'scale',
       this.transitionDuration = 1100,
-      this.hasSuperPress = false,
+      this.hasSuperPress    = false,
       this.onSuperPress,
     }
   );
@@ -54,24 +53,13 @@ class RoundIconButton extends StatelessWidget
   {
     return Container
     (
-      margin: EdgeInsets.only
-      (
-        left: left,
-        top: top,
-        right: right,
-        bottom: bottom
-      ),
+      margin: margin,
       height: height,
       width: width,
       constraints: BoxConstraints
       (
         minWidth: height,
         minHeight: width,
-      ),
-      decoration: BoxDecoration
-      (
-        color: Colors.white,
-        shape: BoxShape.circle,
       ),
 
       child: ElevatedButton
@@ -80,16 +68,13 @@ class RoundIconButton extends StatelessWidget
         (
           elevation: elevation,
           padding: EdgeInsets.all(0),
-          primary: Colors.white,
-          onPrimary: Colors.black,
+          primary: backgroundColor,
           shape: RoundedRectangleBorder
           (
             borderRadius: BorderRadius.circular(50),
           ),
         ),
         
-        // If isModal is true then the page is a popup and the first function is executed else
-        // the second function is executed
         onPressed: (!hasSuperPress) ? () 
         {
           if(isPopUpPage)

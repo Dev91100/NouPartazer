@@ -34,8 +34,8 @@ class NGOStoryModelProfile extends StatelessWidget
               options: CarouselOptions
               (
                 disableCenter: true,
-                height: 200,
-                initialPage: 0 ,
+                height: 150,
+                initialPage: 0,
                 viewportFraction: 0.5,
                 enableInfiniteScroll: true,
                 enlargeCenterPage: true,
@@ -68,7 +68,7 @@ class NGOStoryModelProfile extends StatelessWidget
                           color: Colors.black.withOpacity(0.2),
                           spreadRadius: 2,
                           blurRadius: 2,
-                          offset: Offset(0, 2), // changes position of shadow
+                          offset: Offset(0, 2),// changes position of shadow
                         )
                       ],
                     ),

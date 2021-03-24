@@ -81,7 +81,7 @@ class BusinessProfileModel extends StatelessWidget
                     (
                       child: SectionTitle
                       (
-                        title: 'MY STORIES',
+                        text: 'MY STORIES',
                       ),
                     ),
 
@@ -89,7 +89,11 @@ class BusinessProfileModel extends StatelessWidget
                   ],
                 ),
                 
-                CustomDivider(),
+                CustomDivider
+                (
+                  indent: 20,
+                  endIndent: 20,
+                ),
 
                 Column
                 (
@@ -113,9 +117,8 @@ class BusinessProfileModel extends StatelessWidget
                         width: screen.width * 0.9,
                         child: SectionTitle
                         (
-                          title: 'Best supermarket chain',
+                          text: 'Best supermarket chain',
                           fontSize: 20, 
-                          top: 15,
                           color: Color.fromRGBO(51, 51, 51, 1),
                         ),
                       ),
@@ -135,10 +138,9 @@ class BusinessProfileModel extends StatelessWidget
                       ),
                       child: LongText
                       (
-                        title: "Jumbo is the supermarket chain that has democratized mass distribution, becoming the preferred supermarket for Mauritian households. A subsidiary of the IBL group, Jumbo supermarkets have been present on the island since 1994, and are the first to have opened a supermarket in a rural area.",
+                        text: "Jumbo is the supermarket chain that has democratized mass distribution, becoming the preferred supermarket for Mauritian households. A subsidiary of the IBL group, Jumbo supermarkets have been present on the island since 1994, and are the first to have opened a supermarket in a rural area.",
                         fontSize: 18,
                         fontWeight: FontWeight.w500,
-                        top: screen.height * 0.015,
                       ),
                     ),
                   ],
@@ -171,7 +173,6 @@ class BusinessProfileModel extends StatelessWidget
                       ContactInfo
                       (
                         website: 'www.manzerpartazer.org',
-                        top: 0,
                         icon: Icons.language_outlined,
                       ),
                       

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 import './SectionTitle.dart';
 import 'Buttons/RoundIconButton.dart';
@@ -24,7 +25,7 @@ class SectionWithEditButton extends StatelessWidget
     (
       {
         this.title,
-        this.fontSize = 22,
+        this.fontSize,
         this.onPress,
         this.isPopUpPage = false,
         this.isModalPage = false,
@@ -37,7 +38,7 @@ class SectionWithEditButton extends StatelessWidget
     {
       SectionTitle
       (
-        title: title,
+        text: title,
         fontSize: fontSize,
         color: color,
       );
@@ -65,15 +66,28 @@ class SectionWithEditButton extends StatelessWidget
           children:
           [
             Container
-            (
-              width: constraints.maxWidth * 0.7,
-              child: SectionTitle
-              (
-                title: title,
-                fontSize: fontSize,
-                color: color,
-              ),
-            ),
+             (
+               child: Expanded
+               (
+                  child: Row
+                  (
+                   mainAxisSize: MainAxisSize.min,
+                   crossAxisAlignment: CrossAxisAlignment.start,
+                   children:
+                   [
+                     Expanded
+                     (
+                        child: SectionTitle
+                       (
+                         text: title,
+                         fontSize: (fontSize != null) ? fontSize : Global().mediumText,
+                         color: color,
+                       ),
+                     ),
+                   ],
+                 ),
+               ),
+             ),
             
             (isEditable) ? RoundIconButton
             (
@@ -84,11 +98,8 @@ class SectionWithEditButton extends StatelessWidget
               icon: icon,
               height: 40,
               width: 40,
-              left: 10,
-              top: 0,
-              right: 20,
-              bottom: 10,
               size: 26,
+              margin: EdgeInsets.only(left: 10),
             ) : Container(),
           ],
         );

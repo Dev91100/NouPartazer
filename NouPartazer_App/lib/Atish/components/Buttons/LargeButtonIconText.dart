@@ -76,7 +76,7 @@ class LargeButtonIconText extends StatelessWidget
     (     
       text: text,
       icon: icon,
-      fontSize: (fontSize != null) ? fontSize: Global().normalText,
+      fontSize: (fontSize != null) ? fontSize: Global().mediumText,
       fontWeight: fontWeight,
       textColor: textColor,
       iconColor: iconColor,
@@ -122,7 +122,7 @@ class LargeButtonIconText extends StatelessWidget
         textDecoration: textDecoration,
         hasIcon: hasIcon,
         icon: icon,
-        fontSize: (fontSize != null) ? fontSize: Global().largeButtonIconText,
+        fontSize: (fontSize != null) ? fontSize: Global().mediumText,
         fontWeight: fontWeight,
         textColor: textColor,
         iconColor: iconColor,

@@ -1,15 +1,20 @@
-// import 'package:noupartazer_app/Devashish/Global.dart';
-// (fontSize != null) ? fontSize: Global().profileSectionTitle
 class Global
 {
-  //Font Sizes
-  double smallText = 15;
-  double normalText = 16;                 //list of NGO&Event counter
-  double mediumText = 17;
-  double largeText = 18;
-// normalIcon
-// middleIcon
-// largeIcon
+  // -------------------- Text --------------------
+  // Font Sizes
+  final double tinyText   = 15;
+  final double smallText  = 16;
+  final double normalText = 17;
+  final double mediumText = 18;
+  final double largeText  = 30;            // Used only in org buttons
+  final double hugeText   = 40;
+
+
+  // -------------------- Icon --------------------
+  // Icon Size
+  final double largeIcon = 40;
+  
+
 
 // yellowTitle
 // pageTitle

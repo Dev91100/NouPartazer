@@ -51,18 +51,6 @@ class _SettingsModelState extends State<SettingsModel>
       width: 80,
       child: FlutterSwitch
       (
-        // activeIcon: Icon
-        // (
-        //   Icons.notifications_active,
-        //   color: Color.fromRGBO(0, 50, 193, 1),
-        //   size: 20,
-        // ),
-        // inactiveIcon: Icon
-        // (
-        //   Icons.notifications_off,
-        //   color: Colors.black,
-        //   size: 20,
-        // ),
         activeColor: Color.fromRGBO(0, 50, 193, 1),
         inactiveColor: Color.fromRGBO(102, 102, 102, 1),
         width: 65,
@@ -104,9 +92,7 @@ class _SettingsModelState extends State<SettingsModel>
             leadingIcon: Icons.notifications_none_outlined,
             iconSize: Global().settingsIcon,
             titleText: 'Notifications',
-            titleSize: Global().settingsTitle,
             subtitleText: 'Receive notifications from the app',
-            subTitleSize: Global().settingsSubTitle,
             hastrailingIcon: false,
             hasTrailingButton: true,
             trailingButton: switchToggle(),
@@ -120,9 +106,7 @@ class _SettingsModelState extends State<SettingsModel>
           (
             leadingIcon: Icons.g_translate,
             titleText: 'Language',
-            titleSize: Global().settingsTitle,
             subtitleText: 'English',
-            subTitleSize: Global().settingsSubTitle,
             trailingIcon: Icons.keyboard_arrow_right,
             iconSize: Global().settingsIcon,
             isModalPage: true,
@@ -135,9 +119,7 @@ class _SettingsModelState extends State<SettingsModel>
             leadingIcon: Icons.security_outlined,
             iconSize: Global().settingsIcon,
             titleText: 'Security',
-            titleSize: Global().settingsTitle,
             subtitleText: 'Update password and account settings',
-            subTitleSize: Global().settingsSubTitle,
             trailingIcon: Icons.keyboard_arrow_right,
             isPage: true,
             onPress: widget.securityPage,
@@ -149,9 +131,7 @@ class _SettingsModelState extends State<SettingsModel>
             leadingIcon: Icons.support_agent_outlined,
             iconSize: Global().settingsIcon,
             titleText: 'Help & Support',
-            titleSize: Global().settingsTitle,
             subtitleText: 'For any questions, contact us',
-            subTitleSize: Global().settingsSubTitle,
             trailingIcon: Icons.keyboard_arrow_right,
             isPage: true,
             onPress: widget.helpAndSupportPage,
@@ -163,7 +143,6 @@ class _SettingsModelState extends State<SettingsModel>
             iconSize: Global().settingsIcon,
             leadingColor: Color.fromRGBO(0, 50, 193, 1),
             titleText: (widget.logOut) ? 'Log out' : 'Log in',
-            titleSize: Global().settingsTitle,
             textColor: Color.fromRGBO(0, 50, 193, 1), 
             trailingIcon: Icons.keyboard_arrow_right,
             trailingColor: Color.fromRGBO(0, 50, 193, 1),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 import 'package:url_launcher/url_launcher.dart';
 
@@ -10,10 +11,11 @@ class ContactInfo extends StatelessWidget
   final String phoneNumber;
   final double fontSize;
   final IconData icon;
-  final double top;
   final Color textColor;
   final Color iconColor;
   final double iconSize;
+  final double iconRight;
+  final EdgeInsets margin;
   // Future<void> _launched;
 
   Future<void> _launchInBrowser(String url) async       //Allows user to open a link in a separate browser
@@ -56,12 +58,13 @@ class ContactInfo extends StatelessWidget
       this.website = '',
       this.email = '',
       this.phoneNumber = '',
-      this.fontSize = 16,
+      this.fontSize,
       this.textColor = const Color.fromRGBO(0, 50, 193, 1),
       this.iconColor = const Color.fromRGBO(102, 102, 102, 1),
-      this.top = 15,
       this.icon,
       this.iconSize = 21,
+      this.iconRight = 10,
+      this.margin = const EdgeInsets.only(top: 20),
     }
   );
 
@@ -79,7 +82,7 @@ class ContactInfo extends StatelessWidget
           website,
           style: TextStyle
           (
-            fontSize: fontSize,
+            fontSize: (fontSize != null) ? fontSize : Global().mediumText,
             color: textColor,
             decoration: TextDecoration.underline,
           ),
@@ -102,7 +105,7 @@ class ContactInfo extends StatelessWidget
           email,
           style: TextStyle
           (
-            fontSize: fontSize,
+            fontSize: (fontSize != null) ? fontSize : Global().mediumText,
             color: textColor,
             decoration: TextDecoration.underline,
           ),
@@ -125,7 +128,7 @@ class ContactInfo extends StatelessWidget
           phoneNumber,
           style: TextStyle
           (
-            fontSize: fontSize,
+            fontSize: (fontSize != null) ? fontSize : Global().mediumText,
             color: textColor,
             decoration: TextDecoration.underline,
           ),
@@ -159,13 +162,9 @@ checkTextType()
   @override
   Widget build(BuildContext context)
   {
-    return Container(
-      margin: EdgeInsets.only
-      (
-        top: top,
-        left: 20,
-        right: 20
-      ),
+    return Container
+    (
+      margin: margin,
       child: Row
       (
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -175,7 +174,7 @@ checkTextType()
           (
             margin: EdgeInsets.only
             (
-              right: 10
+              right: iconRight,
             ),
             child: Icon
             (

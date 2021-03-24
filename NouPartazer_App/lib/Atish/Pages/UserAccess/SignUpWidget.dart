@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/Pages/UserAccess/components/OrgButton.dart';
+import 'package:noupartazer_app/Atish/components/Text/HugeText.dart';
+import 'package:noupartazer_app/Atish/components/Text/MediumText.dart';
 import 'package:noupartazer_app/Koomalai/Pages/RegistrationPage/BusinessRegistration.dart';
 import 'package:noupartazer_app/Koomalai/Pages/RegistrationPage/NGORegistration.dart';
-import 'package:noupartazer_app/Devashish/Global.dart';
 
 class SignUpWidget extends StatelessWidget
 {
@@ -28,16 +29,7 @@ class SignUpWidget extends StatelessWidget
           child: FittedBox
           (
             fit: BoxFit.contain,
-            child: Text
-            (
-              "Let's get started,",
-              style: TextStyle
-              (
-                color: Color.fromRGBO(245, 197, 41, 1),
-                fontSize: Global().yellowTitle,
-                fontWeight: FontWeight.bold
-              ),
-            ),
+            child: HugeText(text:"Let's get started,")
           ),
         ),
 
@@ -45,21 +37,14 @@ class SignUpWidget extends StatelessWidget
         (
           margin: EdgeInsets.only
           (
+            top: constraints.maxHeight * 0.01,
             bottom: constraints.maxHeight * 0.01,
           ),
           alignment: Alignment.bottomLeft,
-          child: FittedBox
+          child: MediumText
           (
-            fit: BoxFit.contain,
-            child: Text
-            (
-              "Choose your organisation type",
-              style: TextStyle
-              (
-                color: Colors.white,
-                fontSize: Global().yellowTitlePara,
-              ),
-            ),
+            text: "Choose your organisation type",
+            textColor: Colors.white,
           ),
         ),
         

@@ -86,7 +86,7 @@ class LanguageConfirmationModel
                           style: TextStyle
                           (
                             color: Colors.black,
-                            fontSize: Global().normalText,
+                            fontSize: Global().smallText,
                           ),
                         ),
                         dropdownColor: Colors.white,
@@ -96,7 +96,7 @@ class LanguageConfirmationModel
 
                         style: TextStyle
                         (
-                          fontSize: Global().normalText,
+                          fontSize: Global().smallText,
                           color: Color.fromRGBO(0, 0, 0, 1),
                         ),
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 class CardListTileText extends StatelessWidget
 {
@@ -25,8 +26,8 @@ class CardListTileText extends StatelessWidget
       @required this.constraints,
       this.title = 'Test',
       this.subtitle,
-      this.titleFontSize = 20,
-      this.subtitleFontSize = 18,
+      this.titleFontSize,
+      this.subtitleFontSize,
       this.titleFontWeight = FontWeight.bold,
       this.subtitleFontWeight = FontWeight.normal,
       this.textTop = 0,
@@ -86,7 +87,7 @@ class CardListTileText extends StatelessWidget
                   title,
                   style: TextStyle
                   (
-                    fontSize: titleFontSize,
+                    fontSize: (titleFontSize != null) ? titleFontSize : Global().mediumText,
                     fontWeight:titleFontWeight,
                     color: textColor,
                   )
@@ -96,7 +97,7 @@ class CardListTileText extends StatelessWidget
                   subtitle,
                   style: TextStyle
                   (
-                    fontSize: subtitleFontSize,
+                    fontSize: (subtitleFontSize != null) ? subtitleFontSize : Global().normalText,
                     fontWeight: subtitleFontWeight,
                     color: textColor,
                   )

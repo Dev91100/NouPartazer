@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/IconText.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 class ContainerIconText extends StatelessWidget
 {
-  final double mLeft, mTop, mRight, mBottom;
-  final double pLeft, pTop, pRight, pBottom;
+  final EdgeInsets margin;
+  final EdgeInsets padding;
   final Color borderColor;
   final Color boxColor;
   final Color textColor;
@@ -27,15 +28,9 @@ class ContainerIconText extends StatelessWidget
       this.fontWeight = FontWeight.normal,
       this.icon = Icons.not_listed_location,
       this.iconSize = 25,
-      this.fontSize = 18, 
-      this.mLeft    = 0, 
-      this.mTop     = 0, 
-      this.mRight   = 0, 
-      this.mBottom  = 0,
-      this.pLeft    = 5, 
-      this.pTop     = 5, 
-      this.pRight   = 5, 
-      this.pBottom  = 5,
+      this.fontSize, 
+      this.margin = const EdgeInsets.only(right: 15),
+      this.padding = const EdgeInsets.all(5),
       this.borderColor = const Color.fromRGBO(0, 0, 0, 0),
       this.boxColor = const Color.fromRGBO(0, 0, 0, 1),
       this.textColor = const Color.fromRGBO(255, 255, 255, 1),
@@ -51,7 +46,7 @@ class ContainerIconText extends StatelessWidget
       text: text,
       icon: icon,
       iconSize: iconSize,
-      fontSize: fontSize,
+      fontSize: (fontSize != null) ? fontSize : Global().smallText,
       fontWeight: fontWeight,
       textColor: textColor,
       iconColor: iconColor,
@@ -63,20 +58,8 @@ class ContainerIconText extends StatelessWidget
   {
     return Container
     (
-      margin: EdgeInsets.fromLTRB
-      (
-        mLeft,
-        mTop,
-        mRight,
-        mBottom,
-      ),
-      padding: EdgeInsets.fromLTRB
-      (
-        pLeft,
-        pTop,
-        pRight,
-        pBottom,
-      ),
+      margin: margin,
+      padding: padding,
       
       decoration: BoxDecoration
       (
@@ -93,7 +76,7 @@ class ContainerIconText extends StatelessWidget
         text: text,
         icon: icon,
         iconSize: iconSize,
-        fontSize: fontSize,
+        fontSize: (fontSize != null) ? fontSize : Global().smallText,
         fontWeight: fontWeight,
         textColor: textColor,
         iconColor: iconColor,
