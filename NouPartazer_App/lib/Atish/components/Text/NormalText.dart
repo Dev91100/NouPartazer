@@ -8,6 +8,7 @@ class NormalText extends StatelessWidget
   final Color textColor;
   final double fontSize;
   final FontWeight fontWeight;
+  final TextDecoration textDecoration;
 
   NormalText
   (
@@ -15,7 +16,8 @@ class NormalText extends StatelessWidget
       this.text = 'This is a test',
       this.textColor = Colors.black,
       this.fontSize,
-      this.fontWeight
+      this.fontWeight,
+      this.textDecoration,
     }
   );
 
@@ -29,7 +31,8 @@ class NormalText extends StatelessWidget
       (
         color: textColor,
         fontSize: (fontSize != null) ? fontSize: Global().normalText,
-        fontWeight: fontWeight
+        fontWeight: fontWeight,
+        decoration: textDecoration,
       ),
     );
   }

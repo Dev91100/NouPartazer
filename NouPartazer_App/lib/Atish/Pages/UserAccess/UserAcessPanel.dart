@@ -123,7 +123,6 @@ class _UserAcessPanelState extends State<UserAcessPanel>
                                   child: LargeButtonIconText
                                   (
                                     text: 'Sign In',
-                                    // fontSize: 20,
                                     textColor: (isSignIn) ? selectedTextColor : unselectedTextColor,
                                     hasIcon: false,
                                     elevation: 0,
@@ -139,7 +138,6 @@ class _UserAcessPanelState extends State<UserAcessPanel>
                                   child: LargeButtonIconText
                                   (
                                     text: 'Sign Up',
-                                    // fontSize: 20,
                                     textColor: (isSignUp) ? selectedTextColor : unselectedTextColor,
                                     hasIcon: false,
                                     elevation: 0,

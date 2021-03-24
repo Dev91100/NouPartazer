@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:noupartazer_app/Atish/Pages/UserAccess/components/OrgButton.dart';
 import 'package:noupartazer_app/Atish/components/Text/HugeText.dart';
 import 'package:noupartazer_app/Atish/components/Text/MediumText.dart';
-import 'package:noupartazer_app/Koomalai/Pages/RegistrationPage/BusinessRegistration.dart';
+import 'package:noupartazer_app/Devashish/components/AccountCreated.dart';
 import 'package:noupartazer_app/Koomalai/Pages/RegistrationPage/NGORegistration.dart';
 
 class SignUpWidget extends StatelessWidget
@@ -91,7 +91,7 @@ class SignUpWidget extends StatelessWidget
                 (
                   title: 'BUSINESS',
                   icon: Icons.business,
-                  onPress: BusinessRegistration(),
+                  onPress: AccountCreated(),
                   transitionType: 'rightToLeft',
                   transitionDuration: 1100,
                 ),

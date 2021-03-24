@@ -65,7 +65,7 @@ class BusinessProfileModel extends StatelessWidget
 
                       margin: EdgeInsets.only
                       (
-                        right: 20,
+                        right: 10,
                         top: screen.height * 0.33,
                       ),
                       child: SettingsButton(),
