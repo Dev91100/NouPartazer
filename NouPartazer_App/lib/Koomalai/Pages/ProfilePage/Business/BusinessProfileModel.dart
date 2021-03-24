@@ -82,6 +82,7 @@ class BusinessProfileModel extends StatelessWidget
                       child: SectionTitle
                       (
                         text: 'MY STORIES',
+                        margin: EdgeInsets.only(left: 20, right: 20),
                       ),
                     ),
 
@@ -95,66 +96,60 @@ class BusinessProfileModel extends StatelessWidget
                   endIndent: 20,
                 ),
 
-                Column
-                (
-                  children:
-                  [
-                    SectionWithEditButton
-                    (
-                      isEditable: isEditable,
-                      title: 'Jumbo Supermarket',
-                      fontSize: 22,
-                      color: Color.fromRGBO(0, 50, 193, 1),
-                      onPress: businessEditNameBottomSheet,
-                      isModalPage: true,
-                    ),
-                    
-                    Align
-                    (
-                      alignment: Alignment.centerLeft,
-                      child: Container
-                      (
-                        width: screen.width * 0.9,
-                        child: SectionTitle
-                        (
-                          text: 'Best supermarket chain',
-                          fontSize: 20, 
-                          color: Color.fromRGBO(51, 51, 51, 1),
-                        ),
-                      ),
-                    ),
-
-                    Container
-                    (
-                      margin: EdgeInsets.only
-                      (
-                        top: 10,
-                        left: 20,
-                        right: 20
-                      ),
-                      constraints: BoxConstraints
-                      (
-                        maxHeight: constraints.maxHeight * 0.25,
-                      ),
-                      child: LongText
-                      (
-                        text: "Jumbo is the supermarket chain that has democratized mass distribution, becoming the preferred supermarket for Mauritian households. A subsidiary of the IBL group, Jumbo supermarkets have been present on the island since 1994, and are the first to have opened a supermarket in a rural area.",
-                        fontSize: 18,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                  ],
-                ),
-
-                CustomDivider(),
-
                 Container
                 (
-                  margin: EdgeInsets.only(bottom: 30),
+                  margin: EdgeInsets.only
+                  (
+                    left: 20,
+                    right: 20  
+                  ),
                   child: Column
                   (
                     children:
                     [
+                      SectionWithEditButton
+                      (
+                        isEditable: isEditable,
+                        title: 'Jumbo Supermarket',
+                        color: Color.fromRGBO(0, 50, 193, 1),
+                        onPress: businessEditNameBottomSheet,
+                        isModalPage: true,
+                      ),
+                      
+                      Align
+                      (
+                        alignment: Alignment.centerLeft,
+                        child: Container
+                        (
+                          width: screen.width * 0.9,
+                          child: SectionTitle
+                          (
+                            text: 'Best supermarket chain',
+                            color: Color.fromRGBO(51, 51, 51, 1),
+                          ),
+                        ),
+                      ),
+
+                      Container
+                      (
+                        margin: EdgeInsets.only
+                        (
+                          top: 10,
+                        ),
+                        constraints: BoxConstraints
+                        (
+                          maxHeight: constraints.maxHeight * 0.25,
+                        ),
+                        child: LongText
+                        (
+                          text: "Jumbo is the supermarket chain that has democratized mass distribution, becoming the preferred supermarket for Mauritian households. A subsidiary of the IBL group, Jumbo supermarkets have been present on the island since 1994, and are the first to have opened a supermarket in a rural area.",
+                          textAlign: TextAlign.justify,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+
+                      CustomDivider(),
+
                       Container
                       (
                         child: Container
@@ -186,10 +181,12 @@ class BusinessProfileModel extends StatelessWidget
                       (
                         phoneNumber: '+230 5820 7691',
                         icon: Icons.call_outlined,
-                      )
+                      ),
+
+                      SizedBox(height: 30),
                     ],
                   ),
-                ),
+                ),             
               ],
             ),   
           )

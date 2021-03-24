@@ -12,7 +12,7 @@ class SettingsButton extends StatelessWidget
       style: ElevatedButton.styleFrom
       (
         minimumSize: Size.fromRadius(25),
-        elevation: 2,
+        elevation: 0,
         padding: EdgeInsets.all(0),
         primary: Colors.white,
         onPrimary: Colors.black,

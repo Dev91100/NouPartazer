@@ -183,7 +183,7 @@ class DonationModel extends StatelessWidget
                                 IconText
                                 (
                                   text: date,
-                                  icon: Icons.event,
+                                  icon: Icons.event_outlined,
                                   textColor: Color.fromRGBO(0, 50, 193, 1),
                                   iconColor: Color.fromRGBO(0, 50, 193, 1),
                                 ),

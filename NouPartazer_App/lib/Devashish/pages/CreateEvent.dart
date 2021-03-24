@@ -8,6 +8,7 @@ import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 import 'package:noupartazer_app/Devashish/components/Checkboxes.dart';
 import 'package:noupartazer_app/Devashish/components/GetImage/DottedBox/DottedBoxGetImage.dart';
 import 'package:noupartazer_app/Devashish/Global.dart';
+import 'package:noupartazer_app/Devashish/pages/DateTask.dart';
 
 class CreateEvent extends StatefulWidget
 {
@@ -19,6 +20,29 @@ class _CreateEventState extends State<CreateEvent>
 {
   final _formKey = GlobalKey<FormState>();
   TextEditingController locationNameCtrl, locationAddressCtrl, eventTypeCtrl, eventDescriptionCtrl, dateOfEventCtrl;
+
+  Task task = new Task();
+  DateTime selectedDate = DateTime.now();
+
+  _selectDate(BuildContext context) async
+  {
+    final DateTime picked = await showDatePicker
+    (
+      context: context,
+      initialDate: DateTime.now(),
+      firstDate: DateTime.now(),
+      lastDate: DateTime(2100)
+    );
+
+    if (picked != null && picked != selectedDate)
+    setState(()
+    {
+      selectedDate = picked;
+      var date =
+          "${picked.toLocal().day}/${picked.toLocal().month}/${picked.toLocal().year}";
+      dateOfEventCtrl.text = date;
+    });
+}
 
   @override
   void initState()
@@ -40,6 +64,7 @@ class _CreateEventState extends State<CreateEvent>
       appBar: PageTitle
       (
         text: 'CREATE EVENT',
+        barColor: Colors.white,
       ),
       body: LayoutBuilder
       (
@@ -107,12 +132,23 @@ class _CreateEventState extends State<CreateEvent>
                       maxLines: 5,
                     ),
 
-                    CustomTextField
+                    GestureDetector
                     (
-                      controller: dateOfEventCtrl,
-                      keyboardType: TextInputType.datetime,
-                      labelText: 'Date of Event',
-                      suffixIcon: Icons.date_range_outlined,
+                      onTap: () => _selectDate(context),
+                      child: AbsorbPointer
+                      (
+                        child: CustomTextField
+                        (
+                          controller: dateOfEventCtrl,
+                          keyboardType: TextInputType.datetime,
+                          labelText: 'Date of Event',
+                          suffixIcon: Icons.date_range_outlined,
+                          onSaved: (val)
+                          {
+                            task.date = selectedDate;
+                          },
+                        ),
+                      ),
                     ),
 
                     Container

@@ -37,6 +37,7 @@ class CustomTextField extends StatelessWidget
   final TextInputType keyboardType; 
   final TextEditingController controller;
   final bool addAsterix;
+  final onSaved;
 
   CustomTextField
   (
@@ -73,6 +74,7 @@ class CustomTextField extends StatelessWidget
       this.keyboardType,
       this.controller,
       this.addAsterix = true,
+      this.onSaved,
     }
   );
 
@@ -84,6 +86,7 @@ class CustomTextField extends StatelessWidget
       margin: margin,
       child: TextFormField
       (
+        onSaved: onSaved,
         controller: controller,
         keyboardType: (hasMultiline) ? TextInputType.multiline : keyboardType,
         maxLines: (hasMultiline) ? maxLines : maxLines,

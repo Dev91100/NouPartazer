@@ -34,8 +34,8 @@ class BusinessStoryModelProfile extends StatelessWidget
               options: CarouselOptions
               (
                 disableCenter: true,
-                height: 200,
-                initialPage: 0 ,
+                height: 150,
+                initialPage: 0,
                 viewportFraction: 0.5,
                 enableInfiniteScroll: true,
                 enlargeCenterPage: true,

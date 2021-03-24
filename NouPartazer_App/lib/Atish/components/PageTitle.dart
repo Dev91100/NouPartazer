@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:google_fonts/google_fonts.dart';
-import 'package:noupartazer_app/Atish/components/Text/MediumText.dart';
 import 'package:noupartazer_app/Devashish/Global.dart';
-
 import 'package:noupartazer_app/Devashish/components/TheBackButton.dart';
 
 class PageTitle extends StatefulWidget implements PreferredSizeWidget
@@ -55,7 +52,7 @@ class _PageTitleState extends State<PageTitle>
           (
             fontFamily: 'Comfortaa',
             fontWeight: FontWeight.bold,
-            fontSize: Global().normalText,
+            fontSize: Global().mediumText,
             color: widget.textColor,
           ),
         ),
