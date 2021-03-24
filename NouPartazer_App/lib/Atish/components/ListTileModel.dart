@@ -62,7 +62,7 @@ class ListTileModel extends StatelessWidget
       (
         leadingIcon,
         color: leadingColor,
-        size: 35,
+        size: iconSize,
       ) : null,
 
       title: Text

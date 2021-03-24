@@ -121,7 +121,7 @@ class NGOProfileModel extends StatelessWidget
                         child: SectionTitle
                         (
                           title: 'Food Sharing Project of Mauritius Mauritius Mauritius',
-                          fontSize: 20, 
+                          fontSize: 17, 
                           top: 15,
                           color: Color.fromRGBO(51, 51, 51, 1),
                         ),
@@ -144,7 +144,7 @@ class NGOProfileModel extends StatelessWidget
                       (
                         title: "MANZER PARTAZER is the the first food sharing project of Mauritius. Our aim is to reduce the wastage of high quality ready to eat food by simply sharing it!"
                               "We ‘save’ food which would otherwise go to waste, such as buffet leftovers in hotels or restaurants, donating it to people in need through a very simple and no-cost food sharing system.or restaurants, donating it to people in need through a very simple and no-cost food sharing system.or restaurants, donating it to people in need through a very simple and no-cost food sharing system.or restaurants, donating it to people in need through a very simple and no-cost food sharing system.",
-                        fontSize: 18,
+                        fontSize: 16,
                         fontWeight: FontWeight.w500,
                         top: screen.height * 0.015,
                       ),
@@ -167,6 +167,7 @@ class NGOProfileModel extends StatelessWidget
                         title: 'CONTACT INFO',
                         onPress: editContactBottomSheet,
                         isModalPage: true,
+                        fontSize: 18,
                       ),
                     ),
 

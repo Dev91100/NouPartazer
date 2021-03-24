@@ -172,7 +172,7 @@ class NGOTaskModel extends StatelessWidget
                 title: tag,
                 left: 0,
                 right: 0,
-                fontSize: Global().profileSectionTitle,
+                fontSize: 17,
               ),
             ),
             

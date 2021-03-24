@@ -56,7 +56,7 @@ class ContactInfo extends StatelessWidget
       this.website = '',
       this.email = '',
       this.phoneNumber = '',
-      this.fontSize = 15,
+      this.fontSize = 16,
       this.textColor = const Color.fromRGBO(0, 50, 193, 1),
       this.iconColor = const Color.fromRGBO(102, 102, 102, 1),
       this.top = 15,
