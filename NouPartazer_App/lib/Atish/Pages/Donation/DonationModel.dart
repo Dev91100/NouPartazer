@@ -31,19 +31,9 @@ class DonationModel extends StatelessWidget
   {
     return Container
     (
-      margin: EdgeInsets.only
-      (
-        // top: top,
-        left: 10,
-        right: 10,
-      ),
+      margin: EdgeInsets.symmetric(horizontal: Global().tinyPageMargin),
       child: Container
       (
-        margin: EdgeInsets.only
-        (
-          // top: 10,
-          bottom: 5
-        ),
         child: ElevatedButton
         (
           style: ElevatedButton.styleFrom
@@ -59,13 +49,7 @@ class DonationModel extends StatelessWidget
 
           child: Padding
           (
-            padding: const EdgeInsets.only
-            (
-              left: 0,
-              right: 0,
-              top: 10,
-              bottom: 10,
-            ),
+            padding: EdgeInsets.symmetric(vertical: Global().smallSpacing),
             
             child: Row
             (
@@ -76,7 +60,7 @@ class DonationModel extends StatelessWidget
                 (
                   margin: EdgeInsets.only
                   (
-                    right: 10
+                    right: Global().smallSpacing,
                   ),
                   width: 60,
                   height: 60,
@@ -109,7 +93,7 @@ class DonationModel extends StatelessWidget
                             (
                               child: Container
                               (
-                                padding: EdgeInsets.only(bottom: 5),
+                                padding: EdgeInsets.only(bottom: Global().tinySpacing),
                                 child: SingleChildScrollView
                                 (
                                   scrollDirection: Axis.horizontal,
@@ -124,7 +108,7 @@ class DonationModel extends StatelessWidget
 
                             Container
                             (
-                              padding: EdgeInsets.only(bottom: 10),
+                              padding: EdgeInsets.only(bottom: Global().smallSpacing),
                               child: Row
                               (
                                 children:
@@ -133,8 +117,7 @@ class DonationModel extends StatelessWidget
                                   (
                                     margin: EdgeInsets.only
                                     (
-                                      left: 20,
-                                      right: 10
+                                      right: Global().smallSpacing,
                                     ),
                                     child: Icon
                                     (
@@ -171,7 +154,7 @@ class DonationModel extends StatelessWidget
                               ),
                             ),
                           ),
-                          padding: EdgeInsets.only(bottom: 10),
+                          padding: EdgeInsets.only(bottom: Global().smallSpacing),
                           child: SingleChildScrollView
                           (
                             scrollDirection: Axis.horizontal,

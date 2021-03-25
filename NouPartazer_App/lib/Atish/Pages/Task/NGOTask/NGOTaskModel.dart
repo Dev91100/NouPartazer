@@ -35,7 +35,11 @@ class NGOTaskModel extends StatelessWidget
     return Card
     (
       elevation: 2,
-      margin: EdgeInsets.all(20),
+      margin: EdgeInsets.symmetric
+      (
+        vertical: Global().mediumSpacing, 
+        horizontal: Global().smallPageMargin,
+      ),
       child: Container
       (
         padding: EdgeInsets.all(10),
@@ -53,12 +57,9 @@ class NGOTaskModel extends StatelessWidget
               ),
               child: Padding
               (
-                padding: const EdgeInsets.only
+                padding: EdgeInsets.symmetric
                 (
-                  left: 0,
-                  right: 0,
-                  top: 10,
-                  bottom: 10,
+                  vertical: Global().smallSpacing,
                 ),
                 
                 child: Row
@@ -70,7 +71,7 @@ class NGOTaskModel extends StatelessWidget
                     (
                       margin: EdgeInsets.only
                       (
-                        right: 10
+                        right: Global().smallSpacing,
                       ),
                       width: 60,
                       height: 60,
@@ -96,7 +97,7 @@ class NGOTaskModel extends StatelessWidget
                           [
                             Container
                             (
-                              padding: EdgeInsets.only(bottom: 10),
+                              padding: EdgeInsets.only(bottom: Global().smallSpacing),
                               child: SingleChildScrollView
                               (
                                 scrollDirection: Axis.horizontal,
@@ -107,7 +108,7 @@ class NGOTaskModel extends StatelessWidget
                                     //Date
                                     Container
                                     (
-                                      margin: EdgeInsets.only(right: 10),
+                                      margin: EdgeInsets.only(right: Global().smallSpacing),
                                       child: IconText
                                       (
                                         text: date,
@@ -141,7 +142,7 @@ class NGOTaskModel extends StatelessWidget
                                   //Location
                                   child: Container
                                   (
-                                    padding: EdgeInsets.only(bottom: 5),
+                                    padding: EdgeInsets.only(bottom: Global().tinySpacing),
                                     child: SingleChildScrollView
                                     (
                                       scrollDirection: Axis.horizontal,
@@ -169,7 +170,7 @@ class NGOTaskModel extends StatelessWidget
             //Tag of the Event
             Container
             (
-              margin: EdgeInsets.only(top: 10),
+              margin: EdgeInsets.only(top: Global().smallSpacing),
               child: SectionTitle
               (
                 text: tag,
@@ -179,7 +180,6 @@ class NGOTaskModel extends StatelessWidget
             //Event Description
             Container
             (
-              margin: EdgeInsets.only(top: 10),
               constraints: BoxConstraints
               (
                 maxHeight: constraints.maxHeight * 0.2,
@@ -192,7 +192,7 @@ class NGOTaskModel extends StatelessWidget
             ),
             Container
             (
-              margin: EdgeInsets.only(top: 20),
+              margin: EdgeInsets.only(top: Global().mediumSpacing),
               child: Row
               (
                 children:
@@ -221,7 +221,6 @@ class NGOTaskModel extends StatelessWidget
             ),
             Container
             (
-              margin: EdgeInsets.only(top: 20),
               child: Row
               (
                 mainAxisSize: MainAxisSize.max,

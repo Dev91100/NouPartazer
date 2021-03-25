@@ -36,6 +36,7 @@ class LargeCustomButtonIconText extends StatelessWidget
   final VoidCallback onSuperPress;
   final bool processing;
   final Color processingColor;
+  final EdgeInsets margin;
 
   LargeCustomButtonIconText
   (
@@ -69,6 +70,7 @@ class LargeCustomButtonIconText extends StatelessWidget
       this.processing = false,
       this.processingColor = const Color.fromRGBO(245, 197, 41, 1),
       this.onSuperPress,
+      this.margin,
     }
   )
   {
@@ -87,105 +89,108 @@ class LargeCustomButtonIconText extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return TextButton
-    (
-      style: OutlinedButton.styleFrom
+    return Container(
+      margin: (margin!= null) ? margin : EdgeInsets.only(top: Global().largeSpacing),
+      child: TextButton
       (
-        primary: (processing) ? processingColor : buttonColor,
-        backgroundColor: (processing) ? processingColor : buttonColor,
-        padding: padding,
-        elevation: elevation,
-        shape: RoundedRectangleBorder
+        style: OutlinedButton.styleFrom
         (
-          borderRadius: borderRadius,
+          primary: (processing) ? processingColor : buttonColor,
+          backgroundColor: (processing) ? processingColor : buttonColor,
+          padding: padding,
+          elevation: elevation,
+          shape: RoundedRectangleBorder
+          (
+            borderRadius: borderRadius,
+          ),
+          side: (hasBorder) ? BorderSide
+          (
+            color: (processing) ? Colors.transparent : borderColor,
+            width: borderWidth
+          ) : null,
         ),
-        side: (hasBorder) ? BorderSide
+        
+        child: (processing) ? SizedBox
         (
-          color: (processing) ? Colors.transparent : borderColor,
-          width: borderWidth
-        ) : null,
-      ),
-      
-      child: (processing) ? SizedBox
-      (
-        height: 26,
-        width: 26,
-        child: CircularProgressIndicator
+          height: 26,
+          width: 26,
+          child: CircularProgressIndicator
+          (
+            strokeWidth: 2,
+            backgroundColor: Color.fromRGBO(0, 50, 193, 1)
+          ),
+        ) :
+        IconText
         (
-          strokeWidth: 2,
-          backgroundColor: Color.fromRGBO(0, 50, 193, 1)
+          text: text,
+          textDecoration: textDecoration,
+          hasIcon: hasIcon,
+          icon: icon,
+          fontSize: (fontSize != null) ? fontSize: Global().mediumText,
+          fontWeight: fontWeight,
+          textColor: textColor,
+          iconColor: iconColor,
+          iconRight: iconRight,
         ),
-      ) :
-      IconText
-      (
-        text: text,
-        textDecoration: textDecoration,
-        hasIcon: hasIcon,
-        icon: icon,
-        fontSize: (fontSize != null) ? fontSize: Global().mediumText,
-        fontWeight: fontWeight,
-        textColor: textColor,
-        iconColor: iconColor,
-        iconRight: iconRight,
-      ),
-      onPressed: (onSuperPress == null) ? ()
-      {
-        if(isPopUpPage)
+        onPressed: (onSuperPress == null) ? ()
         {
-          showDialog
-          (
-            context: context,
-            builder: (BuildContext context)
-            {
-              return onPress;
-            }
-          );
-        }
-        else if (isModalPage)
-        {
-          showModalBottomSheet
-          (
-            isScrollControlled: scrollModalSheet,
-            shape: RoundedRectangleBorder
+          if(isPopUpPage)
+          {
+            showDialog
             (
-              borderRadius: BorderRadius.only
-              (
-                topLeft: Radius.circular(20),
-                topRight: Radius.circular(20),
-              )
-            ),
-            context: context,
-            builder: ((builder) => onPress)
-          );
-        }
-        else if(isPage)
-        {
-          Navigator.push
-          (
-            context,
-            MaterialPageRoute
-            (
-              builder: (context)
+              context: context,
+              builder: (BuildContext context)
               {
                 return onPress;
-              },
-            ),
-          );
-        }
-        else if(isClose)
-        {
-          Navigator.of(context).pop();
-        }
-        else if(isPageTransition)
-        {
-          AllTransitions().getTransition
-          (
-            context: context,
-            transitionType: transitionType,
-            onPress: onPress, 
-          );
-        }
-      } : () => onSuperPress(),
+              }
+            );
+          }
+          else if (isModalPage)
+          {
+            showModalBottomSheet
+            (
+              isScrollControlled: scrollModalSheet,
+              shape: RoundedRectangleBorder
+              (
+                borderRadius: BorderRadius.only
+                (
+                  topLeft: Radius.circular(20),
+                  topRight: Radius.circular(20),
+                )
+              ),
+              context: context,
+              builder: ((builder) => onPress)
+            );
+          }
+          else if(isPage)
+          {
+            Navigator.push
+            (
+              context,
+              MaterialPageRoute
+              (
+                builder: (context)
+                {
+                  return onPress;
+                },
+              ),
+            );
+          }
+          else if(isClose)
+          {
+            Navigator.of(context).pop();
+          }
+          else if(isPageTransition)
+          {
+            AllTransitions().getTransition
+            (
+              context: context,
+              transitionType: transitionType,
+              onPress: onPress, 
+            );
+          }
+        } : () => onSuperPress(),
+      ),
     );
   }
 }

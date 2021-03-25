@@ -69,7 +69,7 @@ class CustomTextField extends StatelessWidget
       this.borderColor = Colors.black,
       this.errorBorderColor,
       this.focusedErrorBorderColor,
-      this.margin = const EdgeInsets.only(top: 23),
+      this.margin,
       this.hasMultiline = false,
       this.maxLines = 1,
       this.minLines = 1,
@@ -86,7 +86,7 @@ class CustomTextField extends StatelessWidget
   {
     return Container
     (
-      margin: margin,
+      margin: (margin!= null) ? margin : EdgeInsets.only(bottom: Global().mediumSpacing),
       child: TextFormField
       (
         onSaved: onSaved,

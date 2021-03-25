@@ -4,6 +4,7 @@ import 'package:noupartazer_app/Atish/Pages/NGOProfile/Member.dart';
 import 'package:noupartazer_app/Atish/Pages/NGOProfile/MemberList.dart';
 import 'package:noupartazer_app/Atish/components/Text/SmallText.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/RoundIconButton.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 class MemberModel extends StatelessWidget
 {
@@ -54,8 +55,7 @@ class MemberModel extends StatelessWidget
               (
                 margin: EdgeInsets.only
                 (
-                  top: 10,
-                  bottom: 5
+                  bottom: Global().normalSpacing,
                 ),
                 child: ElevatedButton
                 (

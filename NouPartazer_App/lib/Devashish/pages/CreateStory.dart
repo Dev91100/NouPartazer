@@ -9,6 +9,7 @@ import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/LargeCustomButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 import 'package:noupartazer_app/Devashish/components/GetImage/DottedBox/DottedBoxGetImage.dart';
 import 'package:noupartazer_app/Yashna/Pages/StatementDialog/StoryCreated.dart';
 
@@ -134,11 +135,8 @@ class _CreateStoryState extends State<CreateStory>
         {
           return Container
           (
-            margin: EdgeInsets.only
-            (
-              left: 20,
-              right: 20,
-            ),
+            margin: EdgeInsets.symmetric(horizontal: Global().smallPageMargin),
+
             child: SingleChildScrollView
             (
               child: Form
@@ -156,6 +154,7 @@ class _CreateStoryState extends State<CreateStory>
                       child: SectionTitle
                       (
                         text: 'STORY INFORMATION',
+                        margin: EdgeInsets.only(bottom: Global().mediumSpacing),  //Override
                       ),
                     ),
 
@@ -187,7 +186,7 @@ class _CreateStoryState extends State<CreateStory>
 
                     Container
                     (
-                      margin: EdgeInsets.only(top: 25),
+                      margin: EdgeInsets.only(top: Global().smallSpacing),
                       child: DottedBoxGetImage()
                     ),
 
@@ -200,7 +199,6 @@ class _CreateStoryState extends State<CreateStory>
                         bottom: 40
                       ),
                       
-                      margin: EdgeInsets.only(top: 30),
                       width: constraints.maxWidth,
                       child: LargeCustomButtonIconText
                       (

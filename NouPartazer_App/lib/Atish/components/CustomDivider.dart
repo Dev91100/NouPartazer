@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:noupartazer_app/Devashish/Global.dart';
+
 class CustomDivider extends StatelessWidget
 {
   final double indent, endIndent;
@@ -10,7 +12,7 @@ class CustomDivider extends StatelessWidget
     {
       this.indent,
       this.endIndent,
-      this.height = 45,
+      this.height,
     }
   );
 
@@ -20,7 +22,7 @@ class CustomDivider extends StatelessWidget
     return Divider
     (
       color: Color.fromRGBO(102, 102, 102, 0.3),
-      height: height,
+      height: (height != null) ? height : Global().largeSpacing,
       thickness: 1,
       indent: indent,
       endIndent: endIndent,

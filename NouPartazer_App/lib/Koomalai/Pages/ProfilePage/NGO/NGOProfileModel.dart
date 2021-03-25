@@ -6,6 +6,7 @@ import 'package:noupartazer_app/Atish/components/CustomDivider.dart';
 import 'package:noupartazer_app/Atish/components/LongText.dart';
 import 'package:noupartazer_app/Atish/components/SectionWithEditButton.dart';
 import 'package:noupartazer_app/Atish/components/ContactInfo.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 import 'package:noupartazer_app/Devashish/components/GetImage/BannerPhoto/BannerPhotoGetImage.dart';
 import 'package:noupartazer_app/Devashish/components/GetImage/ProfilePhoto/ProfilePhotoGetImage.dart';
 import 'package:noupartazer_app/Atish/Pages/NGOProfile/MemberModel.dart';
@@ -71,7 +72,7 @@ class NGOProfileModel extends StatelessWidget
 
                       margin: EdgeInsets.only
                       (
-                        right: 10,
+                        right: Global().smallSpacing,
                         top: screen.height * 0.33,
                       ),
                       child: SettingsButton(),
@@ -89,10 +90,14 @@ class NGOProfileModel extends StatelessWidget
                       SectionTitle
                       (
                         text: 'MY STORIES',
-                        margin: EdgeInsets.only(left: 20, right: 20),
+                        margin: EdgeInsets.symmetric(horizontal: Global().smallPageMargin),
                       ),
 
-                      NGOStoryModelProfile(),
+                      Container
+                      (
+                        margin: EdgeInsets.only(top: Global().smallSpacing),
+                        child: NGOStoryModelProfile()
+                      ),
                     ],
                   ),
                 ),
@@ -105,11 +110,7 @@ class NGOProfileModel extends StatelessWidget
 
                 Container
                 (
-                  margin: EdgeInsets.only
-                  (
-                    left: 20,
-                    right: 20  
-                  ),
+                  margin: EdgeInsets.symmetric(horizontal: Global().smallPageMargin),
                   child: Column
                   (
                     mainAxisSize: MainAxisSize.max,
@@ -133,10 +134,6 @@ class NGOProfileModel extends StatelessWidget
 
                       Container
                       (
-                        margin: EdgeInsets.only
-                        (
-                          top: 10,
-                        ),
                         constraints: BoxConstraints
                         (
                           maxHeight: constraints.maxHeight * 0.25,

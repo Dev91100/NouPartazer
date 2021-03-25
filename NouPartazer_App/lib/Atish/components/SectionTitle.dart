@@ -33,7 +33,7 @@ class SectionTitle extends StatelessWidget
         scrollDirection: Axis.horizontal,
         child: Container
         (
-          margin: margin,
+          margin: (margin!= null) ? margin : EdgeInsets.only(bottom: Global().smallSpacing),
           child: 
           Text
           (

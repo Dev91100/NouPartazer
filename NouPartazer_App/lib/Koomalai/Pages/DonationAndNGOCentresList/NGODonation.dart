@@ -5,6 +5,7 @@ import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/Pages/Story/BusinessStory/BusinessStory.dart';
 import 'package:noupartazer_app/Atish/Pages/Story/BusinessStory/BusinessStoryList.dart';
 import 'package:noupartazer_app/Atish/Pages/Donation/DonationModel.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 class Donation extends StatelessWidget
 {
@@ -22,6 +23,7 @@ class Donation extends StatelessWidget
           appBar: PageTitle(text: 'DONATIONS'),
           body: Container
           (
+            
             child: Column
             (
               // Makes column fit the size of its children
@@ -34,8 +36,8 @@ class Donation extends StatelessWidget
                 (
                   margin: EdgeInsets.only
                   (
-                    right: 20,
-                    bottom: 20,
+                    right: Global().smallPageMargin,
+                    bottom: Global().smallSpacing,
                   ),
                   child: CustomIconButton
                   (

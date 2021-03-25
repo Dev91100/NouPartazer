@@ -20,6 +20,7 @@ class SectionWithEditButton extends StatelessWidget
     final IconData icon;
 
     final bool isEditable;
+    final EdgeInsets margin;
 
     SectionWithEditButton
     (
@@ -33,6 +34,7 @@ class SectionWithEditButton extends StatelessWidget
         this.icon = Icons.create_outlined,
         this.color = const Color.fromRGBO(0, 0, 0, 1),
         this.isEditable = false,
+        this.margin,
       }
     )
     {
@@ -59,48 +61,51 @@ class SectionWithEditButton extends StatelessWidget
     (
       builder: (ctx, constraints)
       {
-        return Row
-        (
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children:
-          [
+        return Container(
+          child: Row
+          (
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children:
+            [
             Container
-             (
-               child: Expanded
-               (
+              (
+                
+                child: Expanded
+                (
                   child: Row
                   (
-                   mainAxisSize: MainAxisSize.min,
-                   crossAxisAlignment: CrossAxisAlignment.start,
-                   children:
-                   [
-                     Expanded
-                     (
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children:
+                    [
+                      Expanded
+                      (
                         child: SectionTitle
-                       (
-                         text: title,
-                         fontSize: (fontSize != null) ? fontSize : Global().mediumText,
-                         color: color,
-                       ),
-                     ),
-                   ],
-                 ),
-               ),
-             ),
+                        (
+                          text: title,
+                          fontSize: (fontSize != null) ? fontSize : Global().mediumText,
+                          color: color,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             
-            (isEditable) ? RoundIconButton
-            (
-              onPress: onPress,
-              isPopUpPage: isPopUpPage,
-              isModalPage: isModalPage,
-              isPage: isPage,
-              icon: icon,
-              height: 40,
-              width: 40,
-              margin: EdgeInsets.only(left: 10),
-            ) : Container(),
-          ],
+              (isEditable) ? RoundIconButton
+              (
+                onPress: onPress,
+                isPopUpPage: isPopUpPage,
+                isModalPage: isModalPage,
+                isPage: isPage,
+                icon: icon,
+                height: 40,
+                width: 40,
+                margin: EdgeInsets.only(left: 10),
+              ) : Container(),
+            ],
+          ),
         );
       }   
     );

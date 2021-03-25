@@ -26,5 +26,16 @@ class Global
   final double foodTypeIcon         = 20;
   final double settingsIcon         = 35;
 
+
+  // -------------------- Spacing --------------------
+  final double tinySpacing = 5;
+  final double smallSpacing = 12;
+  final double normalSpacing = 15;
+  final double mediumSpacing = 20;
+  final double largeSpacing = 45;
+  
+  //Exceptions
+  final double smallPageMargin   = 20;   //Left & Right values only
+  final double tinyPageMargin = 10;
 }
 

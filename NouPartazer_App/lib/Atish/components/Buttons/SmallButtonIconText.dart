@@ -33,6 +33,7 @@ class SmallButtonIconText extends StatelessWidget
   final String transitionType;
   final int transitionDuration;
   final VoidCallback onSuperPress;
+  final EdgeInsets margin;
 
   SmallButtonIconText
   (
@@ -63,6 +64,7 @@ class SmallButtonIconText extends StatelessWidget
       this.transitionType = 'scale',
       this.transitionDuration = 1100,
       this.onSuperPress,
+      this.margin,
     }
   )
   {
@@ -81,96 +83,99 @@ class SmallButtonIconText extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return TextButton
-    (
-      style: OutlinedButton.styleFrom
+    return Container(
+      margin: (margin != null) ? margin : EdgeInsets.only(top: Global().mediumSpacing),
+      child: TextButton
       (
-        backgroundColor: buttonColor,
-        padding: padding,
-        elevation: elevation,
-        shape: RoundedRectangleBorder
+        style: OutlinedButton.styleFrom
         (
-          borderRadius: borderRadius,
+          backgroundColor: buttonColor,
+          padding: padding,
+          elevation: elevation,
+          shape: RoundedRectangleBorder
+          (
+            borderRadius: borderRadius,
+          ),
+          side: (hasBorder) ? BorderSide
+          (
+            color: borderColor,
+            width: borderWidth
+          ) : null,
         ),
-        side: (hasBorder) ? BorderSide
+        
+        child: IconText
         (
-          color: borderColor,
-          width: borderWidth
-        ) : null,
-      ),
-      
-      child: IconText
-      (
-        text: text,
-        textDecoration: textDecoration,
-        hasIcon: hasIcon,
-        icon: icon,
-        fontSize: (fontSize != null) ? fontSize : Global().smallText,
-        fontWeight: fontWeight,
-        textColor: textColor,
-        iconColor: iconColor,
-        iconRight: iconRight,
-      ),
+          text: text,
+          textDecoration: textDecoration,
+          hasIcon: hasIcon,
+          icon: icon,
+          fontSize: (fontSize != null) ? fontSize : Global().smallText,
+          fontWeight: fontWeight,
+          textColor: textColor,
+          iconColor: iconColor,
+          iconRight: iconRight,
+        ),
 
-      onPressed: (onSuperPress == null) ? ()
-      {
-        if(isPopUpPage)
+        onPressed: (onSuperPress == null) ? ()
         {
-          showDialog
-          (
-            context: context,
-            builder: (BuildContext context)
-            {
-              return onPress;
-            }
-          );
-        }
-        else if (isModalPage)
-        {
-          showModalBottomSheet
-          (
-            isScrollControlled: scrollModalSheet,
-            shape: RoundedRectangleBorder
+          if(isPopUpPage)
+          {
+            showDialog
             (
-              borderRadius: BorderRadius.only
-              (
-                topLeft: Radius.circular(20),
-                topRight: Radius.circular(20),
-              )
-            ),
-            context: context,
-            builder: ((builder) => onPress)
-          );
-        }
-        else if(isPage)
-        {
-          Navigator.push
-          (
-            context,
-            MaterialPageRoute
-            (
-              builder: (context)
+              context: context,
+              builder: (BuildContext context)
               {
                 return onPress;
-              },
-            ),
-          );
-        }
-        else if(isClose)
-        {
-          Navigator.of(context).pop();
-        }
-        else if(isPageTransition)
-        {
-          AllTransitions().getTransition
-          (
-            context: context,
-            transitionType: transitionType,
-            transitionDuration: transitionDuration,
-            onPress: onPress, 
-          );
-        }
-      } : () => onSuperPress(),
+              }
+            );
+          }
+          else if (isModalPage)
+          {
+            showModalBottomSheet
+            (
+              isScrollControlled: scrollModalSheet,
+              shape: RoundedRectangleBorder
+              (
+                borderRadius: BorderRadius.only
+                (
+                  topLeft: Radius.circular(20),
+                  topRight: Radius.circular(20),
+                )
+              ),
+              context: context,
+              builder: ((builder) => onPress)
+            );
+          }
+          else if(isPage)
+          {
+            Navigator.push
+            (
+              context,
+              MaterialPageRoute
+              (
+                builder: (context)
+                {
+                  return onPress;
+                },
+              ),
+            );
+          }
+          else if(isClose)
+          {
+            Navigator.of(context).pop();
+          }
+          else if(isPageTransition)
+          {
+            AllTransitions().getTransition
+            (
+              context: context,
+              transitionType: transitionType,
+              transitionDuration: transitionDuration,
+              onPress: onPress, 
+            );
+          }
+        } : () => onSuperPress(),
+      ),
     );
   }
 }

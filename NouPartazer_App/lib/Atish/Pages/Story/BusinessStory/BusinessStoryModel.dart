@@ -115,7 +115,7 @@ class BusinessStoryModel extends StatelessWidget
                           scrollDirection: Axis.horizontal,
                           child: Container
                           (
-                            margin: EdgeInsets.only(top: 10),
+                            margin: EdgeInsets.only(top: Global().smallSpacing),
                             child: MediumText
                             (
                               text: st.locationAddress.toUpperCase(),
@@ -128,7 +128,7 @@ class BusinessStoryModel extends StatelessWidget
                         // Date & Time
                         Container
                         (
-                          margin: EdgeInsets.only(top: 10),
+                          margin: EdgeInsets.only(top: Global().smallSpacing),
                           child: Row
                           (
                             mainAxisAlignment: MainAxisAlignment.start,
@@ -170,7 +170,7 @@ class BusinessStoryModel extends StatelessWidget
                           scrollDirection: Axis.horizontal,
                           child: Container
                           (
-                            margin: EdgeInsets.only(top: 15),
+                            margin: EdgeInsets.only(top: Global().smallSpacing),
                             child: Row
                             (
                               children: 

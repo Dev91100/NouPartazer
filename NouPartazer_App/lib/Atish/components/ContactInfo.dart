@@ -64,7 +64,7 @@ class ContactInfo extends StatelessWidget
       this.icon,
       this.iconSize,
       this.iconRight = 10,
-      this.margin = const EdgeInsets.only(top: 20),
+      this.margin,
     }
   );
 
@@ -164,7 +164,7 @@ checkTextType()
   {
     return Container
     (
-      margin: margin,
+      margin: (margin != null) ? margin : EdgeInsets.only(top: Global().smallSpacing),
       child: Row
       (
         crossAxisAlignment: CrossAxisAlignment.center,
