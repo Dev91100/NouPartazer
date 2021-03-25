@@ -26,7 +26,7 @@ class Global
   final double tinyIcon = 22;
   
 
-  
+  //spacing for padding and margin(Start with Story)
   double normalTextIcon;
 }
 
