@@ -8,6 +8,7 @@ import 'package:noupartazer_app/Atish/components/Buttons/LargeButtonIconText.dar
 import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
 import 'package:noupartazer_app/Atish/components/Text/HugeText.dart';
 import 'package:noupartazer_app/Atish/components/Text/MediumText.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
 import 'package:noupartazer_app/Koomalai/Pages/BottomNavigation/BusinessBottomNav.dart';
 import 'package:noupartazer_app/Koomalai/Pages/BottomNavigation/NGOBottomNav.dart';
@@ -205,11 +206,7 @@ class _SignInWidgetState extends State<SignInWidget>
           Container
           (
             margin: EdgeInsets.only(top: widget.constraints.maxHeight * 0.03),
-            padding: EdgeInsets.only
-            (
-              left: 15,
-              right: 15,
-            ),
+            padding: EdgeInsets.symmetric(horizontal: Global().smallSpacing),
             width: widget.constraints.maxWidth,
             child: LargeButtonIconText
             (
