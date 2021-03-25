@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 class EditPhotoButton extends StatelessWidget
 {
@@ -25,10 +26,10 @@ class EditPhotoButton extends StatelessWidget
       this.T = 0.05,
       this.R = 0.07,
       this.B = 0.05,
-      this.height = 40,
-      this.width = 40,
+      this.height = 35,
+      this.width = 35,
       this.icon = Icons.create_outlined,
-      this.iconColor = const Color.fromRGBO(102, 102, 102, 1),
+      this.iconColor = Colors.black,
       this.isPopUpPage = false,
       this.isModalPage = false,
       this.isPage = false,
@@ -140,7 +141,7 @@ class EditPhotoButton extends StatelessWidget
               (
                 icon,
                 color: iconColor,
-                size: 26,
+                size: Global().smallIcon,
               ),
             ),
           );

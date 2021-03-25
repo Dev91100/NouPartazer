@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/Pages/SettingsPage/SettingsModel.dart';
-import 'package:noupartazer_app/Atish/Pages/UserAccess/UserAcessPanel.dart';
+import 'package:noupartazer_app/Atish/Pages/UserAccess/UserAccessPanel.dart';
 import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/HelpAndSupport.dart';
 
 class IndividualSettings extends StatelessWidget
@@ -26,7 +26,7 @@ class IndividualSettings extends StatelessWidget
         helpAndSupport: true,
         helpAndSupportPage: HelpAndSupport(),
         logOut: false,
-        logPage: UserAcessPanel(),
+        logPage: UserAccessPanel(),
       ),
     );
   }

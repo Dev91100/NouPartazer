@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
 
@@ -12,7 +13,7 @@ class RoundIconButton extends StatelessWidget
   final IconData icon;
   final double height, width;
   final EdgeInsets margin;
-  final double size;
+  final double iconSize;
   final double elevation;
   final Color iconColor;
   final Color backgroundColor;
@@ -32,10 +33,10 @@ class RoundIconButton extends StatelessWidget
       this.isPage      = false,
       this.isClose     = false,
       this.icon,
-      this.height,
-      this.width,
+      this.height = 35,
+      this.width = 35,
       this.margin,
-      this.size,
+      this.iconSize,
       this.elevation  = 0,
       this.iconColor  = Colors.black,
       this.backgroundColor  = Colors.white,
@@ -139,7 +140,7 @@ class RoundIconButton extends StatelessWidget
         (
           icon,
           color: iconColor,
-          size: size,
+          size: (iconSize != null) ? iconSize : Global().smallIcon,
         ),
       ),
     );

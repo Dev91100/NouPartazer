@@ -54,7 +54,7 @@ class _SettingsModelState extends State<SettingsModel>
         inactiveColor: Color.fromRGBO(102, 102, 102, 1),
         width: 65,
         height: 35,
-        valueFontSize: 12,
+        valueFontSize: 12,  // Override
         toggleSize: 20,
         value: status,
         borderRadius: 30.0,

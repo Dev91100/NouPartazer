@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/LargeCustomButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/Text/HugeText.dart';
 import 'package:noupartazer_app/Atish/components/Text/MediumText.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 import 'package:noupartazer_app/Devashish/components/TheBackButton.dart';
-import 'package:noupartazer_app/Atish/Pages/UserAccess/UserAcessPanel.dart';
+import 'package:noupartazer_app/Atish/Pages/UserAccess/UserAccessPanel.dart';
 
 class AccountCreated extends StatelessWidget 
 {
@@ -40,7 +41,7 @@ class AccountCreated extends StatelessWidget
                   Icon
                   (
                     Icons.verified, //Icon Name
-                    size: screen.size.height * 0.26, 
+                    size: Global().extraExtraLargeIcon, 
                     color: Color.fromRGBO(245,197,41,0.9),
                   ),
 
@@ -76,7 +77,7 @@ class AccountCreated extends StatelessWidget
                       isPageTransition: true,
                       transitionType: 'leftToRight',
                       transitionDuration: 1100,
-                      onPress: UserAcessPanel(),
+                      onPress: UserAccessPanel(),
                     ),
                   ),
                 ],

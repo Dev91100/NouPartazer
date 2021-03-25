@@ -141,7 +141,6 @@ class EventDetails extends StatelessWidget
                         hasBorder: false,
                         isPopUpPage: true,
                         onPress: statement,
-                        fontSize: Global().smallText,
                       ),
                     ),
                   ],
@@ -182,16 +181,14 @@ class EventDetails extends StatelessWidget
                             (
                               constraints: constraints,
                               text: '19/01/2021',
-                              icon: Icons.event_outlined,
-                              iconSize: Global().normalTextIcon,
+                              icon: Icons.event_outlined,        
                             ),
 
                             CardIconText
                             (
                               constraints: constraints,
                               text: '19.00-22.00',
-                              icon: Icons.query_builder,
-                              iconSize: Global().normalTextIcon,                              
+                              icon: Icons.query_builder,                            
                             ),
                           ]
                         ),
@@ -223,8 +220,7 @@ class EventDetails extends StatelessWidget
                               textColor: Color.fromRGBO(255, 255, 255, 1),
                               icon: Icons.no_food,
                               iconColor: Color.fromRGBO(255, 255, 255, 1),
-                              cardColor: Color.fromRGBO(255, 84, 62, 1),
-                              iconSize: Global().normalTextIcon,                              
+                              cardColor: Color.fromRGBO(255, 84, 62, 1),                            
                             ),
 
                             CardIconText
@@ -234,8 +230,7 @@ class EventDetails extends StatelessWidget
                               textColor: Color.fromRGBO(255, 255, 255, 1),
                               icon: Icons.fastfood,
                               iconColor: Color.fromRGBO(255, 255, 255, 1),
-                              cardColor: Color.fromRGBO(27, 215, 65, 1),
-                              iconSize: Global().normalTextIcon,                              
+                              cardColor: Color.fromRGBO(27, 215, 65, 1),                          
                             ),
                           ]
                         ),

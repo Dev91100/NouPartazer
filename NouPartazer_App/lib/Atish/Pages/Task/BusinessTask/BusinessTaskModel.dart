@@ -112,7 +112,7 @@ class BusinessTaskModel extends StatelessWidget
                                       (
                                         text: date,
                                         icon: Icons.insert_invitation_outlined,
-                                        fontSize: Global().tinyText,
+                                        fontSize: Global().tinyText,  // Override
                                         textColor: Color.fromRGBO(0, 0, 0, 1),
                                       ),
                                     ),
@@ -121,7 +121,7 @@ class BusinessTaskModel extends StatelessWidget
                                     (
                                       text: time,
                                       icon: Icons.query_builder_outlined,
-                                      fontSize: Global().tinyText,
+                                      fontSize: Global().tinyText,  // Override
                                       textColor: Color.fromRGBO(0, 0, 0, 1),
                                     ),
                                   ],
@@ -145,7 +145,7 @@ class BusinessTaskModel extends StatelessWidget
                                       (
                                         text: locationName,
                                         icon: Icons.location_on_outlined,
-                                        fontSize: Global().tinyText,
+                                        fontSize: Global().tinyText,  // Override
                                         textColor: Color.fromRGBO(0, 0, 0, 1),
                                       ),
                                     ),

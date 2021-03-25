@@ -7,6 +7,7 @@ import 'package:noupartazer_app/Atish/components/ContainerIconText.dart';
 import 'package:noupartazer_app/Atish/components/ContainerText.dart';
 import 'package:noupartazer_app/Atish/components/Text/MediumText.dart';
 import 'package:noupartazer_app/Atish/components/Text/SmallText.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 class BusinessStoryModel extends StatelessWidget
 {
@@ -139,7 +140,7 @@ class BusinessStoryModel extends StatelessWidget
                                 text: st.date,
                                 fontWeight: FontWeight.bold,
                                 icon: Icons.calendar_today_outlined,
-                                // iconSize: 20,
+                                iconSize: Global().tinyIcon,   //Override
                                 iconColor: Colors.white,
                                 boxColor: Colors.transparent,
                                 borderColor: Colors.white,
@@ -153,7 +154,7 @@ class BusinessStoryModel extends StatelessWidget
                                 text: st.time,
                                 fontWeight: FontWeight.bold,
                                 icon: Icons.query_builder_outlined,
-                                // iconSize: 20,
+                                iconSize: Global().tinyIcon,   //Override
                                 iconColor: Colors.white,
                                 boxColor: Colors.transparent,
                                 borderColor: Colors.white,

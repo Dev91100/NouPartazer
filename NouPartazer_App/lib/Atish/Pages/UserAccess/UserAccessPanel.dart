@@ -5,13 +5,13 @@ import 'package:noupartazer_app/Atish/Pages/UserAccess/SignUpWidget.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/LargeButtonIconText.dart';
 import 'package:noupartazer_app/Koomalai/Pages/BottomNavigation/IndividualBottomNav.dart';
 
-class UserAcessPanel extends StatefulWidget
+class UserAccessPanel extends StatefulWidget
 {
   @override
-  _UserAcessPanelState createState() => _UserAcessPanelState();
+  _UserAccessPanelState createState() => _UserAccessPanelState();
 }
 
-class _UserAcessPanelState extends State<UserAcessPanel>
+class _UserAccessPanelState extends State<UserAccessPanel>
 {
   Color selectedTextColor = Colors.black;
   Color selectedButtonColor = Colors.white;

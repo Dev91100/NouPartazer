@@ -39,7 +39,7 @@ class SectionWithEditButton extends StatelessWidget
       SectionTitle
       (
         text: title,
-        fontSize: fontSize,
+        fontSize: (fontSize != null) ? fontSize : Global().mediumText,
         color: color,
       );
       
@@ -98,7 +98,6 @@ class SectionWithEditButton extends StatelessWidget
               icon: icon,
               height: 40,
               width: 40,
-              size: 26,
               margin: EdgeInsets.only(left: 10),
             ) : Container(),
           ],

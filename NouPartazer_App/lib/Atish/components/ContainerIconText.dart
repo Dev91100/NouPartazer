@@ -27,7 +27,7 @@ class ContainerIconText extends StatelessWidget
       this.text = 'Test',
       this.fontWeight = FontWeight.normal,
       this.icon = Icons.not_listed_location,
-      this.iconSize = 25,
+      this.iconSize,
       this.fontSize, 
       this.margin = const EdgeInsets.only(right: 15),
       this.padding = const EdgeInsets.all(5),
@@ -45,7 +45,7 @@ class ContainerIconText extends StatelessWidget
     (
       text: text,
       icon: icon,
-      iconSize: iconSize,
+      iconSize: (iconSize != null) ? iconSize : Global().smallIcon,
       fontSize: (fontSize != null) ? fontSize : Global().smallText,
       fontWeight: fontWeight,
       textColor: textColor,
@@ -75,7 +75,7 @@ class ContainerIconText extends StatelessWidget
       (
         text: text,
         icon: icon,
-        iconSize: iconSize,
+        iconSize: (iconSize != null) ? iconSize : Global().smallIcon,
         fontSize: (fontSize != null) ? fontSize : Global().smallText,
         fontWeight: fontWeight,
         textColor: textColor,

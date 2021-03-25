@@ -27,7 +27,7 @@ class CardIconText extends StatelessWidget
       this.textTop = 0,
       this.textColor = const Color.fromRGBO(0, 0, 0, 1),
       this.icon = Icons.help_outline,
-      this.iconSize = 40,
+      this.iconSize,
       this.iconColor = const Color.fromRGBO(0, 0, 0, 1),
       this.height = 140,
       this.cardColor = const Color.fromRGBO(248, 248, 248, 1),
@@ -60,7 +60,7 @@ class CardIconText extends StatelessWidget
                 child: Icon
                 (
                   icon,
-                  size: iconSize,
+                  size: (iconSize != null) ? iconSize : Global().smallIcon,
                   color: iconColor,
                 ),
               ),

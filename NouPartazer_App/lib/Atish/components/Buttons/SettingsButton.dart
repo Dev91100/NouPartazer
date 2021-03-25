@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
 import 'package:noupartazer_app/Koomalai/Pages/SettingsPage/NGOAndBusinessSettings.dart';
 
@@ -36,8 +37,8 @@ class SettingsButton extends StatelessWidget
       child: Icon
       (
         Icons.settings_outlined,
-        color: Color.fromRGBO(102, 102, 102, 1),
-        size: 35,
+        color: Colors.black,
+        size: Global().settingsIcon,
       ),
     );
   }

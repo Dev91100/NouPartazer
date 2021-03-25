@@ -140,6 +140,7 @@ class DonationModel extends StatelessWidget
                                     (
                                       Icons.fastfood,
                                       color: Color.fromRGBO(255, 84, 62, 1),
+                                      size: Global().foodTypeIcon,  //Override
                                     ),
                                   ),
                                   Container
@@ -148,6 +149,7 @@ class DonationModel extends StatelessWidget
                                     (
                                       Icons.no_food,
                                       color: Color.fromRGBO(0, 163, 68, 1),
+                                      size: Global().foodTypeIcon,  //Override
                                     ),
                                   ),
                                 ],
@@ -180,7 +182,8 @@ class DonationModel extends StatelessWidget
                                 IconText
                                 (
                                   text: date,
-                                  fontSize: Global().tinyText,
+                                  fontSize: Global().tinyText,  // Override
+                                  iconSize: Global().tinyIcon,  //Override
                                   icon: Icons.event_outlined,
                                   textColor: Color.fromRGBO(0, 50, 193, 1),
                                   iconColor: Color.fromRGBO(0, 50, 193, 1),
@@ -189,7 +192,8 @@ class DonationModel extends StatelessWidget
                                 IconText
                                 (
                                   text: locationName,
-                                  fontSize: Global().tinyText,
+                                  fontSize: Global().tinyText,  // Override
+                                  iconSize: Global().tinyIcon,  //Override
                                   icon: Icons.location_on_outlined,
                                   textColor: Color.fromRGBO(0, 0, 0, 1),
                                 ),

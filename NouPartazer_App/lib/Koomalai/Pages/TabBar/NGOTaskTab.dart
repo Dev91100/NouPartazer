@@ -1,6 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:noupartazer_app/Atish/components/Text/MediumText.dart';
 
 import 'package:noupartazer_app/Devashish/Global.dart';
 
@@ -53,16 +54,11 @@ class _NGOTaskTabState extends State<NGOTaskTab>
           centerTitle: true,
           backgroundColor: Colors.transparent,
           elevation: 0,
-          title: Text
+          title: MediumText
           (
-            'TASKS', // Text Parameter
-            style: TextStyle
-            (
-              fontFamily: 'Comfortaa',
-              fontWeight: FontWeight.bold,
-              fontSize: Global().mediumText,
-              color: new Color.fromRGBO(0, 0, 0, 1),
-            ),
+            text: 'TASKS',
+            fontFamily: 'Comfortaa',
+            fontWeight: FontWeight.bold,
           ),
           bottom: TabBar
           (
@@ -71,13 +67,13 @@ class _NGOTaskTabState extends State<NGOTaskTab>
             labelColor: Colors.black,
             labelStyle: TextStyle
             (
-              fontSize: Global().tinyText,
+              fontSize: Global().tinyText,  // Override
               fontWeight:FontWeight.bold,
             ),
             unselectedLabelColor: Colors.black54,
             unselectedLabelStyle:TextStyle
             (
-              fontSize: Global().tinyText,
+              fontSize: Global().tinyText,  // Override
               fontWeight:FontWeight.normal,
             ),
             

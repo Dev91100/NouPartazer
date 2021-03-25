@@ -43,8 +43,6 @@ class TwoButtons extends StatelessWidget
           text: buttonText1,
           textDecoration: TextDecoration.underline,
           textColor: Color.fromRGBO(102, 102, 102, 1),
-          fontWeight: FontWeight.w700,
-          fontSize: 18,
           buttonColor: Colors.transparent,
           elevation: 0,
           hasIcon: false,
@@ -54,11 +52,11 @@ class TwoButtons extends StatelessWidget
 
         SmallCustomButtonIconText
         (
+          text: buttonText2,
           onPress: onPress,
           isPopUpPage: isPopUpPage,
           isModalPage: isModalPage,
           isPage: isPage,
-          text: buttonText2,
           textColor: textColor,
           buttonColor: buttonColor,
           borderColor: borderColor,

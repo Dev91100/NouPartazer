@@ -120,6 +120,8 @@ class _CreateStoryState extends State<CreateStory>
   @override
   Widget build(BuildContext context)
   {
+    var storyCreatedDialog = StoryCreated().displayDialog(context);
+
     return Scaffold
     (
       appBar: PageTitle
@@ -205,7 +207,9 @@ class _CreateStoryState extends State<CreateStory>
                         text: 'Create Story',
                         processing: processing,
                         hasIcon: false,
-                        onSuperPress: createStoryFunction,
+                        isPopUpPage: true,
+                        onPress: storyCreatedDialog,
+                        // onSuperPress: createStoryFunction,
                       )
                     ),
                   ],

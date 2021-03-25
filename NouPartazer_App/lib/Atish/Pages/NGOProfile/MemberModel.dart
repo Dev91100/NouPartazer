@@ -151,7 +151,6 @@ class MemberModel extends StatelessWidget
                           icon: Icons.delete_outlined,
                           height: 40,
                           width: 40,
-                          size: 26,
                           elevation: 0,
                           iconColor: Color.fromRGBO(212, 0, 0, 1),
                         ) : Container(),

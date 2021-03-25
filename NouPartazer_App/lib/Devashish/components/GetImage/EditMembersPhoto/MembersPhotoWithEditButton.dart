@@ -39,9 +39,6 @@ class MembersPhotoWithEditButton extends StatelessWidget
           (
             isPage: true,
             icon: Icons.edit_outlined,
-            height: 40,
-            width: 40,
-            size: 30,
             hasSuperPress: true,
             onSuperPress: onPress,
           ),

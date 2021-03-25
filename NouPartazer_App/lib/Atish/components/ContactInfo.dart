@@ -62,7 +62,7 @@ class ContactInfo extends StatelessWidget
       this.textColor = const Color.fromRGBO(0, 50, 193, 1),
       this.iconColor = const Color.fromRGBO(102, 102, 102, 1),
       this.icon,
-      this.iconSize = 21,
+      this.iconSize,
       this.iconRight = 10,
       this.margin = const EdgeInsets.only(top: 20),
     }
@@ -179,7 +179,7 @@ checkTextType()
             child: Icon
             (
               icon,
-              size: iconSize,
+              size: (iconSize != null) ? iconSize : Global().smallIcon,
               color: iconColor,
             ),
           ),

@@ -8,6 +8,7 @@ class SmallText extends StatelessWidget
   final Color textColor;
   final double fontSize;
   final FontWeight fontWeight;
+  final TextAlign textAlign;
 
   SmallText
   (
@@ -15,7 +16,8 @@ class SmallText extends StatelessWidget
       this.text = 'This is a test',
       this.textColor = Colors.black,
       this.fontSize,
-      this.fontWeight
+      this.fontWeight,
+      this.textAlign,
     }
   );
 
@@ -25,6 +27,7 @@ class SmallText extends StatelessWidget
     return Text
     (
       text,
+      textAlign: textAlign,
       style: TextStyle
       (
         color: textColor,

@@ -1,4 +1,5 @@
 import 'package:noupartazer_app/Yashna/Pages/ConfirmationDialog/ConfirmationModel.dart';
+import 'package:noupartazer_app/Atish/Pages/UserAccess/UserAccessPanel.dart';
 
 class ConfirmLogOut extends ConfirmationModel
 {
@@ -9,5 +10,9 @@ class ConfirmLogOut extends ConfirmationModel
     {
       this.text = 'Please confirm logout!'
     }
-  ) : super(text: text);
+  ) : super
+  (
+    text: text,
+    onPress: UserAccessPanel(),
+  );
 }

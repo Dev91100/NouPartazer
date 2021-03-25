@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 import 'package:noupartazer_app/Atish/components/Text/TinyText.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 class ListTileModel extends StatelessWidget 
 {
@@ -48,7 +49,7 @@ class ListTileModel extends StatelessWidget
       this.onPress,
       this.hasSuperPress = false,
       this.onSuperPress,
-      this.iconSize = 35,
+      this.iconSize,
     }
   );
 
@@ -61,7 +62,7 @@ class ListTileModel extends StatelessWidget
       (
         leadingIcon,
         color: leadingColor,
-        size: iconSize,
+        size: (iconSize != null) ? iconSize : Global().mediumIcon,
       ) : null,
 
       title: SectionTitle
@@ -80,7 +81,7 @@ class ListTileModel extends StatelessWidget
       (
         trailingIcon,
         color: trailingColor,
-        size: iconSize,
+        size: (iconSize != null) ? iconSize : Global().mediumIcon,
       ) : (hasTrailingButton) ? trailingButton : null,
       
       onTap: (!hasSuperPress) ? ()

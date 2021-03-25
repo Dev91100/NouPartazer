@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
-import 'package:noupartazer_app/Atish/Pages/UserAccess/UserAcessPanel.dart';
+import 'package:noupartazer_app/Atish/Pages/UserAccess/UserAccessPanel.dart';
 
 class CustomSplashscreen extends StatefulWidget
 {
@@ -28,7 +28,7 @@ class _CustomSplashscreenState extends State<CustomSplashscreen>
       (
         MaterialPageRoute
         (
-          builder: (BuildContext context) => UserAcessPanel()
+          builder: (BuildContext context) => UserAccessPanel()
         )
       )
     );

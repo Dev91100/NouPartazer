@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 
-import 'package:noupartazer_app/Atish/Pages/UserAccess/UserAcessPanel.dart';
+import 'package:noupartazer_app/Atish/components/Text/SmallText.dart';
 import 'package:noupartazer_app/Yashna/components/TwoButtons.dart';
 
 class ConfirmationModel
 {
-  String text;
-  String buttonText1;
-  String buttonText2;
-  Color textColor;
-  Color buttonColor;
-  Color borderColor;
-  bool hasTextField;
+  final String text;
+  final String buttonText1;
+  final String buttonText2;
+  final Color textColor;
+  final Color buttonColor;
+  final Color borderColor;
+  final bool hasTextField;
+  final onPress;
 
   ConfirmationModel
   (
@@ -23,6 +24,7 @@ class ConfirmationModel
       this.buttonColor = const Color.fromRGBO(212, 0, 0, 0.1),
       this.borderColor = const Color.fromRGBO(212, 0, 0, 1),
       this.hasTextField = false,
+      this.onPress
     }
   );
 
@@ -65,15 +67,11 @@ class ConfirmationModel
                 Container
                 (
                   margin: EdgeInsets.only(top: 10),
-                  child: Text
+                  child: SmallText
                   (
-                    text,
+                    text: text,
                     textAlign: TextAlign.center,
-                    style: TextStyle
-                    (
-                      fontWeight: FontWeight.w600,
-                      fontSize: 18,
-                    ),
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
         
@@ -97,7 +95,7 @@ class ConfirmationModel
                   margin: EdgeInsets.only(top: 20),
                   child: TwoButtons
                   (
-                    onPress: UserAcessPanel(),
+                    onPress: onPress,
                     isPage: true,
                     buttonText2: buttonText2,
                     textColor: textColor,

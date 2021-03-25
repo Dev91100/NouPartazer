@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 
-class UsingScaleTransition extends PageRouteBuilder
+class Scale extends PageRouteBuilder
 {
   final destinationPage;
   final int customTransitionDuration;
 
-  UsingScaleTransition
+  Scale
   (
     {
       this.destinationPage,
@@ -17,9 +17,9 @@ class UsingScaleTransition extends PageRouteBuilder
     transitionDuration: Duration(milliseconds: customTransitionDuration),
     transitionsBuilder: 
     (
-      BuildContext context, 
-      Animation<double> animation, 
-      Animation<double> secAnimation, 
+      BuildContext context,
+      Animation<double> animation,
+      Animation<double> secAnimation,
       Widget child,
     )
     {

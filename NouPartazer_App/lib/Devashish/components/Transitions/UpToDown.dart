@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 
-class UsingLeftToRightTransition extends PageRouteBuilder
+class UpToDown extends PageRouteBuilder
 {
   final Widget destinationPage;
   final int customTransitionDuration;
 
-  UsingLeftToRightTransition
+  UpToDown
   (
     {
       this.destinationPage,
@@ -31,8 +31,8 @@ class UsingLeftToRightTransition extends PageRouteBuilder
         child: child,
         position: Tween
         (
-          begin: Offset(-1.0, 0.0),
-          end: Offset(0.0, 0.0),
+          begin: Offset(0.0, -1.0),
+          end: Offset(0.0, 0.0)
         )
         .animate(animation),
         // opacity: animation,
