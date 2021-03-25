@@ -34,6 +34,7 @@ class NGOTaskModel extends StatelessWidget
   {
     return Card
     (
+      color: Colors.white,
       elevation: 2,
       margin: EdgeInsets.symmetric
       (

@@ -9,7 +9,6 @@ import 'package:noupartazer_app/Atish/components/CardIconText.dart';
 import 'package:noupartazer_app/Atish/components/LongText.dart';
 import 'package:noupartazer_app/Atish/components/CardListTileText.dart';
 import 'package:noupartazer_app/Yashna/Pages/DonationEventDialog/AcceptDonation.dart';
-import 'package:noupartazer_app/Devashish/Global.dart';
 
 class EventDetails extends StatelessWidget
 {

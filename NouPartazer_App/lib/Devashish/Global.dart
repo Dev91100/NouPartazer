@@ -28,6 +28,7 @@ class Global
 
 
   // -------------------- Spacing --------------------
+  // Spacing Sizes
   final double tinySpacing = 5;
   final double smallSpacing = 12;
   final double normalSpacing = 15;
@@ -35,7 +36,7 @@ class Global
   final double largeSpacing = 45;
   
   //Exceptions
-  final double smallPageMargin   = 20;   //Left & Right values only
+  final double smallPageMargin = 20;   //Left & Right values only
   final double tinyPageMargin = 10;
 }
 
