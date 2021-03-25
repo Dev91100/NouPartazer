@@ -11,22 +11,20 @@ class Global
 
   // Exceptions
   final double errorText  = 13;
-  final double foodTypeIcon = 20;
-  final double settingsIcon = 35;
-
 
 
   // -------------------- Icon --------------------
   // Icon Size
-  final double extraExtraLargeIcon = 180;
-  final double extraLargeIcon = 100;
-  final double largeIcon = 40;
-  final double mediumIcon = 29;
-  final double smallIcon = 24;
-  final double tinyIcon = 22;
+  final double extraExtraLargeIcon  = 180;
+  final double extraLargeIcon       = 100;
+  final double largeIcon            = 40;
+  final double mediumIcon           = 29;
+  final double smallIcon            = 24;
+  final double tinyIcon             = 22;
   
+  //Exceptions
+  final double foodTypeIcon         = 20;
+  final double settingsIcon         = 35;
 
-  
-  double normalTextIcon;
 }
 

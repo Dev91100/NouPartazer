@@ -29,17 +29,20 @@ class LongText extends StatelessWidget
     return SingleChildScrollView
     (
       scrollDirection: Axis.vertical,
-      child: Text
+      child: RichText
       (
-        text,
+        text: TextSpan
+        (
+          text: text,
+          style: TextStyle
+          (
+            color: textColor,
+            fontWeight: fontWeight,
+            fontSize: (fontSize != null) ? fontSize : Global().smallText,
+          ),
+        ),
         textAlign: textAlign,
         overflow: TextOverflow.visible,
-        style: TextStyle
-        (
-          color: textColor,
-          fontWeight: fontWeight,
-          fontSize: (fontSize != null) ? fontSize : Global().tinyText,
-        ),
       ),
     );
   }
