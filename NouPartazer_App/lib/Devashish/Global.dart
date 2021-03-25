@@ -13,6 +13,9 @@ class Global
   // -------------------- Icon --------------------
   // Icon Size
   final double largeIcon = 40;
+  final double mediumIcon = 29;
+  final double smallIcon = 26;
+  final double tinyIcon = 24;
   
 
   

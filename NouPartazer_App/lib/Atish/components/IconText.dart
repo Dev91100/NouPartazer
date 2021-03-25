@@ -21,7 +21,7 @@ class IconText extends StatelessWidget
       this.textDecoration = TextDecoration.none,
       this.hasIcon = true,
       this.icon,
-      this.iconSize = 25,
+      this.iconSize,
       this.fontSize,
       this.fontWeight = FontWeight.w600,
       this.iconRight = 0,
@@ -44,7 +44,7 @@ class IconText extends StatelessWidget
           child: (hasIcon) ? Icon
           (
             icon,
-            size: iconSize,
+            size: (iconSize != null) ? iconSize: Global().smallIcon,
             color: iconColor,
           ) : Container(height: 0, width: 0,),
         ),

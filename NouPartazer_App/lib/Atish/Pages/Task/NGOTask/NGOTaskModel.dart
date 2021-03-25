@@ -112,6 +112,7 @@ class NGOTaskModel extends StatelessWidget
                                       (
                                         text: date,
                                         icon: Icons.insert_invitation_outlined,
+                                        iconSize: Global().tinyIcon,
                                         fontSize: Global().tinyText,
                                         textColor: Color.fromRGBO(0, 0, 0, 1),
                                       ),
@@ -123,6 +124,7 @@ class NGOTaskModel extends StatelessWidget
                                       text: time,
                                       icon: Icons.query_builder_outlined,
                                       fontSize: Global().tinyText,
+                                      iconSize: Global().tinyIcon,
                                       textColor: Color.fromRGBO(0, 0, 0, 1),
                                     ),
                                   ],
@@ -148,6 +150,7 @@ class NGOTaskModel extends StatelessWidget
                                         text: locationName,
                                         icon: Icons.location_on_outlined,
                                         fontSize: Global().tinyText,
+                                        iconSize: Global().tinyIcon,
                                         textColor: Color.fromRGBO(0, 0, 0, 1),
                                       ),
                                     ),
