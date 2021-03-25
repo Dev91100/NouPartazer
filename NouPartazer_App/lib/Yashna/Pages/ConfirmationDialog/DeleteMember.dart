@@ -2,14 +2,14 @@ import 'package:noupartazer_app/Yashna/Pages/ConfirmationDialog/ConfirmationMode
 
 class DeleteMember extends ConfirmationModel
 {
-  String text;
-  String buttonText2;
+  final String text;
+  final String buttonText2;
 
   DeleteMember
   (
     {
       this.text = 'Are you sure you want to delete this member?',
-      this.buttonText2 = 'Delete'
+      this.buttonText2 = 'Delete',
     }
   ) : super
   (

@@ -55,7 +55,7 @@ class SmallButtonIconText extends StatelessWidget
       this.buttonColor = const Color.fromRGBO(0, 50, 193, 1),
       this.borderColor = const Color.fromRGBO(0, 0, 0, 0),
       this.iconRight = 5,
-      this.elevation = 2,
+      this.elevation = 0,
       this.padding = const EdgeInsets.fromLTRB(15, 10, 15, 10),
       this.borderRadius = const BorderRadius.all(Radius.circular(10)),
       this.scrollModalSheet = true,
@@ -70,7 +70,7 @@ class SmallButtonIconText extends StatelessWidget
     (
       text: text,
       icon: icon,
-      fontSize: (fontSize != null) ? fontSize : Global().normalText,
+      fontSize: (fontSize != null) ? fontSize : Global().smallText,
       fontWeight: fontWeight,
       textColor: textColor,
       iconColor: iconColor,
@@ -81,7 +81,7 @@ class SmallButtonIconText extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return ElevatedButton
+    return TextButton
     (
       style: OutlinedButton.styleFrom
       (
@@ -105,7 +105,7 @@ class SmallButtonIconText extends StatelessWidget
         textDecoration: textDecoration,
         hasIcon: hasIcon,
         icon: icon,
-        fontSize: (fontSize != null) ? fontSize : Global().normalText,
+        fontSize: (fontSize != null) ? fontSize : Global().smallText,
         fontWeight: fontWeight,
         textColor: textColor,
         iconColor: iconColor,

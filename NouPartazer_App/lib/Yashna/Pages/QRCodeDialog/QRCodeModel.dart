@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 class QRCodeModel
 {
@@ -51,10 +51,14 @@ class QRCodeModel
               crossAxisAlignment: CrossAxisAlignment.center,
               children:
               [
-                SectionTitle
+                Text
                 (
-                  text: 'QR CODE',
-                  align: Alignment.center,
+                  'QR CODE',
+                  style: TextStyle
+                  (
+                    fontSize: Global().normalText,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
 
                 Container
@@ -67,7 +71,7 @@ class QRCodeModel
                     style: TextStyle
                     (
                       fontWeight: FontWeight.w600,
-                      fontSize: 15,
+                      fontSize: Global().tinyText,
                     ),
                   ),
                 ),

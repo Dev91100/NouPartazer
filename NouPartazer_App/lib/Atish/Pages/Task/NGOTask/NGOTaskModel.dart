@@ -112,7 +112,7 @@ class NGOTaskModel extends StatelessWidget
                                       (
                                         text: date,
                                         icon: Icons.insert_invitation_outlined,
-                                        fontSize: Global().tinyText,
+                                        fontSize: Global().tinyText,  // Override
                                         textColor: Color.fromRGBO(0, 0, 0, 1),
                                       ),
                                     ),
@@ -122,7 +122,7 @@ class NGOTaskModel extends StatelessWidget
                                     (
                                       text: time,
                                       icon: Icons.query_builder_outlined,
-                                      fontSize: Global().tinyText,
+                                      fontSize: Global().tinyText,  // Override
                                       textColor: Color.fromRGBO(0, 0, 0, 1),
                                     ),
                                   ],
@@ -147,7 +147,7 @@ class NGOTaskModel extends StatelessWidget
                                       (
                                         text: locationName,
                                         icon: Icons.location_on_outlined,
-                                        fontSize: Global().tinyText,
+                                        fontSize: Global().tinyText,  // Override
                                         textColor: Color.fromRGBO(0, 0, 0, 1),
                                       ),
                                     ),
@@ -184,6 +184,7 @@ class NGOTaskModel extends StatelessWidget
               child: LongText
               (
                 text: description,
+                fontWeight: FontWeight.w400,
               ),
             ),
             Container
@@ -197,8 +198,11 @@ class NGOTaskModel extends StatelessWidget
                   ContainerIconText
                   (
                     text: 'Status',
+                    fontWeight: FontWeight.w500,
+                    textColor: Colors.black,
+                    boxColor: Color.fromRGBO(102, 102, 102, 0.2),
                     icon: Icons.online_prediction_outlined,
-                    iconColor: Color.fromRGBO(255, 255, 255, 1),
+                    iconColor: Colors.black,
                   ),
                   ContainerText
                   (

@@ -28,7 +28,7 @@ class EditPhotoButton extends StatelessWidget
       this.height = 40,
       this.width = 40,
       this.icon = Icons.create_outlined,
-      this.iconColor = const Color.fromRGBO(102, 102, 102, 1),
+      this.iconColor = Colors.black,
       this.isPopUpPage = false,
       this.isModalPage = false,
       this.isPage = false,

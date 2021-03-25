@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
-import 'package:noupartazer_app/Atish/components/Buttons/SmallButtonIconText.dart';
-import 'package:noupartazer_app/Atish/components/Buttons/SmallCustomButtonIconText.dart';
+import 'package:noupartazer_app/Yashna/components/TwoButtons.dart';
 
 class DonationEventModel
 {
-  @required
-  String text;
   bool _isSelected = false;
+  final String text;
+  final onPress;
 
   DonationEventModel
   (
     {
-      this.text = 'This is a test!'
+      this.text = 'This is a test!',
+      this.onPress,
     }
   );
 
@@ -58,7 +59,7 @@ class DonationEventModel
                   style: TextStyle
                   (
                     fontWeight: FontWeight.bold,
-                    fontSize: 18,
+                    fontSize: Global().mediumText,
                     color: Color.fromRGBO(0, 0, 0, 1),
                   )
                 ),
@@ -74,8 +75,7 @@ class DonationEventModel
                       textAlign: TextAlign.left,
                       style: TextStyle
                       (
-                      fontWeight: FontWeight.bold,
-                        fontSize: 15,
+                        fontSize: Global().tinyText,
                         color: Color.fromRGBO(41, 90, 245, 1),
                       )
                     ),
@@ -94,39 +94,11 @@ class DonationEventModel
                 Container
                 (
                   margin:EdgeInsets.only(top: 15),
-                  child: Row
+                  child: TwoButtons
                   (
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: 
-                    [
-                      SmallButtonIconText
-                      (
-                        text: 'Cancel',
-                        textDecoration: TextDecoration.underline,
-                        textColor: Color.fromRGBO(102, 102, 102, 1),
-                        fontWeight: FontWeight.w700,
-                        fontSize: 18,
-                        buttonColor: Colors.transparent,
-                        elevation: 0,
-                        hasIcon: false,
-                        isClose: true,
-                      ),
-
-                      SmallCustomButtonIconText
-                      (
-                        text: 'Confirm',
-                        textColor: Color.fromRGBO(245, 197, 41, 1),
-                        fontWeight: FontWeight.w700,
-                        fontSize: 18,
-                        buttonColor: Color.fromRGBO(255, 248, 97, 0.2),
-                        hasBorder: true,
-                        borderColor: Color.fromRGBO(245, 197, 41, 1),
-                        borderWidth: 2,
-                        elevation: 0,
-                        hasIcon: false,
-                        isClose: true,
-                      ),
-                    ]
+                    buttonText2: 'Confirm',
+                    onPress: onPress,
+                    isPage: true,
                   ),
                 ),
               ],

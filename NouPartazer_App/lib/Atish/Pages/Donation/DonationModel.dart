@@ -180,7 +180,7 @@ class DonationModel extends StatelessWidget
                                 IconText
                                 (
                                   text: date,
-                                  fontSize: Global().tinyText,
+                                  fontSize: Global().tinyText,  // Override
                                   icon: Icons.event_outlined,
                                   textColor: Color.fromRGBO(0, 50, 193, 1),
                                   iconColor: Color.fromRGBO(0, 50, 193, 1),
@@ -189,7 +189,7 @@ class DonationModel extends StatelessWidget
                                 IconText
                                 (
                                   text: locationName,
-                                  fontSize: Global().tinyText,
+                                  fontSize: Global().tinyText,  // Override
                                   icon: Icons.location_on_outlined,
                                   textColor: Color.fromRGBO(0, 0, 0, 1),
                                 ),

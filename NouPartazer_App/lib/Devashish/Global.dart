@@ -6,8 +6,13 @@ class Global
   final double smallText  = 16;
   final double normalText = 17;
   final double mediumText = 18;
-  final double largeText  = 30;            // Used only in org buttons
+  final double largeText  = 30;
   final double hugeText   = 40;
+
+  // Exceptions
+  final double errorText  = 13;
+
+
 
 
   // -------------------- Icon --------------------

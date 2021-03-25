@@ -6,7 +6,6 @@ import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/SmallButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
 import 'package:noupartazer_app/Yashna/Pages/ConfirmationDialog/DeactivateAccount.dart';
-import 'package:noupartazer_app/Devashish/Global.dart';
 
 class Security extends StatefulWidget
 {
@@ -118,7 +117,6 @@ class _SecurityState extends State<Security>
                   (
                     text: 'Delete my account',
                     icon: Icons.delete_outlined,
-                    fontSize: Global().smallText,
                     fontWeight: FontWeight.bold,
                     iconColor: Color.fromRGBO(212, 0, 0, 1),
                     textColor: Color.fromRGBO(212, 0, 0, 1),

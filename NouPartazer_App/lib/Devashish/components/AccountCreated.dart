@@ -4,7 +4,7 @@ import 'package:noupartazer_app/Atish/components/Buttons/LargeCustomButtonIconTe
 import 'package:noupartazer_app/Atish/components/Text/HugeText.dart';
 import 'package:noupartazer_app/Atish/components/Text/MediumText.dart';
 import 'package:noupartazer_app/Devashish/components/TheBackButton.dart';
-import 'package:noupartazer_app/Atish/Pages/UserAccess/UserAcessPanel.dart';
+import 'package:noupartazer_app/Atish/Pages/UserAccess/UserAccessPanel.dart';
 
 class AccountCreated extends StatelessWidget 
 {
@@ -76,7 +76,7 @@ class AccountCreated extends StatelessWidget
                       isPageTransition: true,
                       transitionType: 'leftToRight',
                       transitionDuration: 1100,
-                      onPress: UserAcessPanel(),
+                      onPress: UserAccessPanel(),
                     ),
                   ),
                 ],

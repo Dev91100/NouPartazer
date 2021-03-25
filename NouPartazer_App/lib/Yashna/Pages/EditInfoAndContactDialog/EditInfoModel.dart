@@ -101,7 +101,6 @@ class EditInfoModel
                         top: 20,
                         bottom: 15
                       ),
-                      
                       child: TwoButtons()
                     ),
                   ]

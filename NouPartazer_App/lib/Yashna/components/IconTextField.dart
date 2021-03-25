@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 class IconTextField extends StatelessWidget
 {
@@ -22,7 +23,7 @@ class IconTextField extends StatelessWidget
     {
       this.margin = const EdgeInsets.only(top:30),
       this.text = 'Test',
-      this.fontSize = 18,
+      this.fontSize,
       this.textColor = const Color.fromRGBO(102, 102, 102, 1),
       this.iconDistance = const EdgeInsets.only(right: 10),
       this.icon = Icons.perm_identity_outlined,
@@ -86,7 +87,7 @@ class IconTextField extends StatelessWidget
                   style: TextStyle
                   (
                     color: textColor,
-                    fontSize: fontSize,
+                    fontSize: (fontSize != null) ? fontSize : Global().tinyText,
                   ),
                 ),
 

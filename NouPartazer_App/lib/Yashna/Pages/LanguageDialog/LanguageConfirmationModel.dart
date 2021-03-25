@@ -52,6 +52,7 @@ class LanguageConfirmationModel
                       textAlign: TextAlign.center,
                       style: TextStyle
                       (
+                        fontSize: Global().normalText,
                         fontWeight: FontWeight.bold,
                       )
                     ),
@@ -85,7 +86,7 @@ class LanguageConfirmationModel
                           style: TextStyle
                           (
                             color: Colors.black,
-                            fontSize: Global().smallText,
+                            fontSize: Global().tinyText,
                           ),
                         ),
                         dropdownColor: Colors.white,
@@ -95,7 +96,7 @@ class LanguageConfirmationModel
 
                         style: TextStyle
                         (
-                          fontSize: Global().smallText,
+                          fontSize: Global().tinyText,
                           color: Color.fromRGBO(0, 0, 0, 1),
                         ),
 

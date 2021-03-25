@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/Buttons/SmallCustomButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 class StatementModel
 {
@@ -66,12 +67,15 @@ class StatementModel
                 Container
                 (
                   margin: EdgeInsets.only(top: 10),
-                  child: SectionTitle
+                  child: Text
                   (
-                    text: 'Success',
-                    fontSize: 25,
-                    align: Alignment.center,
-                  ),
+                    'Success',
+                    style: TextStyle
+                    (
+                      fontSize: Global().largeText,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ), 
                 ),
 
                 Container
@@ -84,7 +88,7 @@ class StatementModel
                     style: TextStyle
                     (
                       fontWeight: FontWeight.w600,
-                      fontSize: 18,
+                      fontSize: Global().tinyText,
                     ),
                   ),
                 ),

@@ -1,28 +1,26 @@
 import 'package:flutter/cupertino.dart';
 
-class UsingRightToLeftTransition extends PageRouteBuilder
+class LeftToRight extends PageRouteBuilder
 {
   final Widget destinationPage;
   final int customTransitionDuration;
 
-  UsingRightToLeftTransition
+  LeftToRight
   (
     {
       this.destinationPage,
-      this.customTransitionDuration = 1100,
+      this.customTransitionDuration = 1000,
     }
   )
   :super
   (
-    pageBuilder: (context, animation, secAnimation)
-    => destinationPage,
     transitionDuration: Duration(milliseconds: customTransitionDuration),
     transitionsBuilder: 
     (
-      context, 
-      animation, 
-      secAnimation, 
-      child,
+      BuildContext context, 
+      Animation<double> animation, 
+      Animation<double> secAnimation, 
+      Widget child,
     )
     {
       animation = CurvedAnimation(parent: animation, curve: Curves.linearToEaseOut);
@@ -30,11 +28,10 @@ class UsingRightToLeftTransition extends PageRouteBuilder
       return SlideTransition
       // return FadeTransition
       (
-        // textDirection: TextDirection.ltr,
         child: child,
         position: Tween
         (
-          begin: Offset(1.0, 0.0),
+          begin: Offset(-1.0, 0.0),
           end: Offset(0.0, 0.0),
         )
         .animate(animation),
@@ -44,5 +41,9 @@ class UsingRightToLeftTransition extends PageRouteBuilder
         // alignment: Alignment.bottomCenter,
       );
     },
+    pageBuilder: (BuildContext context, Animation<double> animation, Animation<double> secAnimation)
+    {
+      return destinationPage;
+    }
   );
 }

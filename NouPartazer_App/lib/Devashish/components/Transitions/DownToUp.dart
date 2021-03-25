@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 
-class UsingUpToDownTransition extends PageRouteBuilder
+class DownToUp extends PageRouteBuilder
 {
   final Widget destinationPage;
   final int customTransitionDuration;
 
-  UsingUpToDownTransition
+  DownToUp
   (
     {
       this.destinationPage,
@@ -31,7 +31,7 @@ class UsingUpToDownTransition extends PageRouteBuilder
         child: child,
         position: Tween
         (
-          begin: Offset(0.0, -1.0),
+          begin: Offset(0.0, 1.0),
           end: Offset(0.0, 0.0)
         )
         .animate(animation),

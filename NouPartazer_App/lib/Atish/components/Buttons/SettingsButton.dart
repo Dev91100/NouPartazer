@@ -36,7 +36,7 @@ class SettingsButton extends StatelessWidget
       child: Icon
       (
         Icons.settings_outlined,
-        color: Color.fromRGBO(102, 102, 102, 1),
+        color: Colors.black,
         size: 35,
       ),
     );

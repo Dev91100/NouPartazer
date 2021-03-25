@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'UsingDownToUpTransition.dart';
-import 'UsingLeftToRightTransition.dart';
-import 'UsingRightToLeftTransition.dart';
-import 'UsingScaleTransition.dart';
-import 'UsingUpToDownTransition.dart';
+import 'DownToUp.dart';
+import 'LeftToRight.dart';
+import 'RightToLeft.dart';
+import 'Scale.dart';
+import 'UpToDown.dart';
 
 class AllTransitions
 {
@@ -24,23 +24,23 @@ class AllTransitions
     switch(transitionType)
     {
       case 'scale':
-        transition = UsingScaleTransition(destinationPage: onPress, customTransitionDuration: transitionDuration);
+        transition = Scale(destinationPage: onPress, customTransitionDuration: transitionDuration);
         break;
       case 'downToUp':
-        transition = UsingDownToUpTransition(destinationPage: onPress, customTransitionDuration: transitionDuration);
+        transition = DownToUp(destinationPage: onPress, customTransitionDuration: transitionDuration);
         break;
       case 'upToDown':
-        transition = UsingUpToDownTransition(destinationPage: onPress, customTransitionDuration: transitionDuration);
+        transition = UpToDown(destinationPage: onPress, customTransitionDuration: transitionDuration);
         break;
       case 'leftToRight':
-        transition = UsingLeftToRightTransition(destinationPage: onPress, customTransitionDuration: transitionDuration);
+        transition = LeftToRight(destinationPage: onPress, customTransitionDuration: transitionDuration);
         break;
       case 'rightToLeft':
-        transition = UsingRightToLeftTransition(destinationPage: onPress, customTransitionDuration: transitionDuration);
+        transition = RightToLeft(destinationPage: onPress, customTransitionDuration: transitionDuration);
         break;
       default:
       {
-        transition = UsingLeftToRightTransition(destinationPage: onPress, customTransitionDuration: transitionDuration);
+        transition = LeftToRight(destinationPage: onPress, customTransitionDuration: transitionDuration);
       }
       break;
     }

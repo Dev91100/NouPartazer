@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:validators/validators.dart';
 import 'package:validators/sanitizers.dart';
 
+import 'package:noupartazer_app/Devashish/Global.dart';
+
 class CustomTextField extends StatelessWidget
 {
   final Color textColor;
@@ -43,15 +45,15 @@ class CustomTextField extends StatelessWidget
   (
     {
       this.textColor = Colors.black,
-      this.textSize = 20,
+      this.textSize,
       this.labelText = '',
-      this.labelSize = 18,
+      this.labelSize,
       this.labelColor = const Color.fromRGBO(0, 0, 0, 1),
       this.fillColor = const Color.fromRGBO(242, 242, 242, 0.6),
       this.errorColor,
       this.errorSize,
       this.errorMsg,
-      this.fontWeight = FontWeight.w700,
+      this.fontWeight = FontWeight.w400,
       this.obscureText = false,
       this.fieldType,
       this.optional = false,
@@ -113,7 +115,7 @@ class CustomTextField extends StatelessWidget
             case 'length':
               if(!isLength(val, minLength, maxLength))
               {
-                return 'Please enter a value of the correct length';
+                return 'Please enter a ' + labelText + ' of the correct length';
               }
               break;
 
@@ -123,12 +125,14 @@ class CustomTextField extends StatelessWidget
                 return 'Please enter a valid ' + labelText;
               }
               break;
+
             case 'num':
               if(!isNumeric(val))
               {
                 return 'Please enter a valid ' + labelText;
               }
               break;
+
             case 'alphaNumeric':
               if(!isAlphanumeric(val))
               {
@@ -142,7 +146,7 @@ class CustomTextField extends StatelessWidget
         style: TextStyle
         (
           color: textColor,
-          fontSize: textSize,
+          fontSize: (textSize != null) ? textSize : Global().normalText,
         ),
         decoration: InputDecoration
         (
@@ -150,10 +154,17 @@ class CustomTextField extends StatelessWidget
           fillColor: fillColor,
           alignLabelWithHint: alignLabel, // Align label to the top in the case of multiline
           labelText: (addAsterix) ? labelText + '*' : labelText,
+          labelStyle: TextStyle
+          (
+            fontSize: (labelSize != null) ? labelSize : Global().tinyText,
+            color: labelColor,
+            fontWeight: fontWeight,
+          ),
+
           errorStyle: TextStyle
           (
             color: errorColor,
-            fontSize: errorSize,
+            fontSize: (errorSize != null) ? errorSize : Global().errorText,
           ),
           errorBorder: (errorBorderColor != null) ? OutlineInputBorder
           (
@@ -174,12 +185,6 @@ class CustomTextField extends StatelessWidget
             ),
           ) : null,
           // errorText: errorMsg,
-          labelStyle: TextStyle
-          (
-            fontSize: labelSize,
-            color: labelColor,
-            fontWeight: fontWeight,
-          ),
           border: (hasBorder) ? OutlineInputBorder
           (
             borderRadius: BorderRadius.all(Radius.circular(10)),

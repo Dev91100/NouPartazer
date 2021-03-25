@@ -141,7 +141,6 @@ class EventDetails extends StatelessWidget
                         hasBorder: false,
                         isPopUpPage: true,
                         onPress: statement,
-                        fontSize: Global().smallText,
                       ),
                     ),
                   ],
