@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:noupartazer_app/Devashish/components/GetImage/EditMembersPhoto/MembersPhotoGetImage.dart';
 import 'package:noupartazer_app/Yashna/components/IconTextField.dart';
 import 'package:noupartazer_app/Yashna/components/TwoButtons.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 class EditMembersModel
 {
@@ -14,13 +15,11 @@ class EditMembersModel
       {
         return Container
         (
-          margin: EdgeInsets.only
-          (
-            top: 40,
-            bottom: 40,
-            left: 20,
-            right: 20,
-          ),
+          margin: EdgeInsets.symmetric
+              (
+                horizontal: Global().smallPageMargin,
+                vertical: Global().smallPageMargin,
+              ),
           child: SingleChildScrollView
           (
             child: Column
@@ -35,7 +34,6 @@ class EditMembersModel
                 IconTextField
                 (
                   keyboardType: TextInputType.name,
-                  margin: EdgeInsets.all(0),
                   text: 'FULL NAME',
                   icon: Icons.perm_identity,
                 ),
@@ -49,7 +47,6 @@ class EditMembersModel
 
                 Container
                 (
-                  margin: EdgeInsets.only(top: 25),
                   child: TwoButtons
                   (
                     buttonText2: 'Save',

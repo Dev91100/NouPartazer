@@ -260,7 +260,7 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
                       (
                         right: Global().normalSpacing,
                         left: Global().normalSpacing,
-                        bottom: Global().largeSpacing,
+                        bottom: Global().extraLargeSpacing,
                       ),
                       width: constraints.maxWidth,
                       child: LargeCustomButtonIconText

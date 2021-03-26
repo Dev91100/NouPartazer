@@ -50,12 +50,10 @@ class ConfirmationModel
               borderRadius: BorderRadius.all(Radius.circular(20)),
             ),
 
-            contentPadding: EdgeInsets.only
+            contentPadding: EdgeInsets.symmetric
             (
-              top: 20,
-              bottom: 20,
-              left: 40,
-              right: 40
+              horizontal: Global().smallPageMargin,
+              vertical: Global().smallPageMargin,
             ),
 
             content: Column
@@ -67,25 +65,22 @@ class ConfirmationModel
               [
                 Container
                 (
-                  margin: EdgeInsets.only(top: 10),
-                  child: Text
+                  margin: EdgeInsets.only(top: Global().smallSpacing),
+                  child: SmallText
                   (
-                    text,
+                    text: text,
                     textAlign: TextAlign.center,
-                    style: TextStyle
-                    (
-                      fontSize: Global().normalText,
-                      fontWeight: FontWeight.w500,
-                    ),
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
         
                 (hasTextField) ?
                 Container
                 (
-                  margin: EdgeInsets.only(top: 20),
+                  margin: EdgeInsets.only(top: Global().smallSpacing),
                   child: TextFormField
                   (
+                    obscureText: true,
                     keyboardType: TextInputType.visiblePassword,
                     decoration: InputDecoration
                     (
@@ -97,7 +92,6 @@ class ConfirmationModel
 
                 Container
                 (
-                  margin: EdgeInsets.only(top: 20),
                   child: TwoButtons
                   (
                     onPress: onPress,

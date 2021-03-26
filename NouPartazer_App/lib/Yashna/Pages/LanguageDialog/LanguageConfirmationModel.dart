@@ -31,13 +31,7 @@ class LanguageConfirmationModel
           {
             return Container
             (
-              margin: EdgeInsets.only
-              (
-                top: 40,
-                bottom: 40,
-                left: 40,
-                right: 40,
-              ),
+              margin: EdgeInsets.all(Global().smallPageMargin),
               child: SingleChildScrollView
               (
                 child: Column
@@ -74,10 +68,9 @@ class LanguageConfirmationModel
 
                       padding: EdgeInsets.only
                       (
-                        left: 10,
-                        right: 10,
+                        left: Global().smallSpacing,
                       ),
-                      margin: EdgeInsets.only(top: 15),
+                      margin: EdgeInsets.only(top: Global().normalSpacing),
                       child: DropdownButton
                       (
                         hint: Text
@@ -91,7 +84,7 @@ class LanguageConfirmationModel
                         ),
                         dropdownColor: Colors.white,
                         icon: Icon(Icons.keyboard_arrow_down),
-                        iconSize: 35,
+                        iconSize: Global().mediumIcon,
                         isExpanded: true,
 
                         style: TextStyle
@@ -134,7 +127,7 @@ class LanguageConfirmationModel
 
                     Container
                     (
-                      margin: EdgeInsets.only(top: 15),
+                      // margin: EdgeInsets.only(top: 15),
                       child: TwoButtons
                       (
                         buttonText2: buttonText2,

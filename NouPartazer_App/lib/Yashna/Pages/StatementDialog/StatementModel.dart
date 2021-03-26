@@ -41,13 +41,7 @@ class StatementModel
               borderRadius: BorderRadius.all(Radius.circular(20)),
             ),
 
-            contentPadding: EdgeInsets.only
-            (
-              top: 20,
-              bottom: 20,
-              left: 40,
-              right: 40
-            ),
+            contentPadding: EdgeInsets.all(Global().smallPageMargin),
 
             content: Column
             (
@@ -65,7 +59,7 @@ class StatementModel
 
                 Container
                 (
-                  margin: EdgeInsets.only(top: 10),
+                  margin: EdgeInsets.only(top: Global().smallSpacing),
                   child: Text
                   (
                     'Success',
@@ -79,7 +73,7 @@ class StatementModel
 
                 Container
                 (
-                  margin: EdgeInsets.only(top: 10),
+                  margin: EdgeInsets.only(top: Global().smallSpacing),
                   child: Text
                   (
                     text,
@@ -95,7 +89,7 @@ class StatementModel
                 Container
                 (
                   width: constraints.maxWidth,
-                  margin: EdgeInsets.only(top: 15),
+                  margin: EdgeInsets.only(top: Global().smallSpacing),
                   child: SmallCustomButtonIconText
                   (
                     text: 'Done',

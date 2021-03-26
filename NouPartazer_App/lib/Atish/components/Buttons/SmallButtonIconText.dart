@@ -57,7 +57,7 @@ class SmallButtonIconText extends StatelessWidget
       this.borderColor = const Color.fromRGBO(0, 0, 0, 0),
       this.iconRight = 5,
       this.elevation = 0,
-      this.padding = const EdgeInsets.fromLTRB(15, 10, 15, 10),
+      this.padding,
       this.borderRadius = const BorderRadius.all(Radius.circular(10)),
       this.scrollModalSheet = true,
       this.isPageTransition = false,
@@ -84,13 +84,17 @@ class SmallButtonIconText extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Container(
-      margin: (margin != null) ? margin : EdgeInsets.only(top: Global().mediumSpacing),
+      margin: margin,
       child: TextButton
       (
         style: OutlinedButton.styleFrom
         (
           backgroundColor: buttonColor,
-          padding: padding,
+          padding: (padding != null) ? padding : EdgeInsets.symmetric
+          (
+            horizontal: Global().normalSpacing,
+            vertical: Global().smallSpacing,
+          ),
           elevation: elevation,
           shape: RoundedRectangleBorder
           (

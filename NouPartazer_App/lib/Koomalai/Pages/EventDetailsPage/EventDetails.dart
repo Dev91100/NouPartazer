@@ -8,6 +8,7 @@ import 'package:noupartazer_app/Atish/components/Buttons/SmallButtonIconText.dar
 import 'package:noupartazer_app/Atish/components/CardIconText.dart';
 import 'package:noupartazer_app/Atish/components/LongText.dart';
 import 'package:noupartazer_app/Atish/components/CardListTileText.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 import 'package:noupartazer_app/Yashna/Pages/DonationEventDialog/AcceptDonation.dart';
 
 class EventDetails extends StatelessWidget
@@ -39,7 +40,7 @@ class EventDetails extends StatelessWidget
               (
                 padding: EdgeInsets.only
                 (
-                  bottom: 30
+                  bottom: Global().mediumSpacing,
                 ),
                 width: screen.width,
                 decoration: BoxDecoration
@@ -92,7 +93,7 @@ class EventDetails extends StatelessWidget
 
                     Container
                     (
-                      margin: EdgeInsets.only(top: 25),
+                      margin: EdgeInsets.only(top: Global().mediumSpacing),
                       child: SectionTitle
                       (
                         text: 'GROCERY DONATION',
@@ -102,7 +103,7 @@ class EventDetails extends StatelessWidget
 
                     Container
                     (
-                      margin: EdgeInsets.only(top: 25),
+                      margin: EdgeInsets.only(top: Global().mediumSpacing),
                       child: Row
                       (
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -130,7 +131,6 @@ class EventDetails extends StatelessWidget
 
                     Container
                     (
-                      margin: EdgeInsets.only(top: 25),
                       child:SmallButtonIconText
                       (
                         text: 'Accept Donation',
@@ -150,10 +150,9 @@ class EventDetails extends StatelessWidget
               (
                 child: Container
                 (
-                  margin: EdgeInsets.only
+                  margin: EdgeInsets.symmetric
                   (
-                    left: 20,
-                    right: 20,
+                    horizontal: Global().smallPageMargin,
                   ),
                   child: ListView
                   (
@@ -161,7 +160,7 @@ class EventDetails extends StatelessWidget
                     [
                       Container
                       (
-                        margin: EdgeInsets.only(top: 25),
+                        margin: EdgeInsets.only(top: Global().mediumSpacing),
                         child: SectionTitle
                         (
                           text: 'DATE & TIME',
@@ -170,7 +169,6 @@ class EventDetails extends StatelessWidget
 
                       Container
                       (
-                        margin: EdgeInsets.only(top: 15),
                         child: Row
                         (
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -195,7 +193,7 @@ class EventDetails extends StatelessWidget
 
                       Container
                       (
-                        margin: EdgeInsets.only(top: 25),
+                        margin: EdgeInsets.only(top: Global().mediumSpacing),
                         child: SectionTitle
                         (
                           text: 'FOOD TYPE',
@@ -204,7 +202,6 @@ class EventDetails extends StatelessWidget
                       
                       Container
                       (
-                        margin: EdgeInsets.only(top: 15),
                         child: Row
                         (
                           mainAxisSize: MainAxisSize.max,
@@ -237,7 +234,7 @@ class EventDetails extends StatelessWidget
 
                       Container
                       (
-                        margin: EdgeInsets.only(top: 25),
+                        margin: EdgeInsets.only(top: Global().mediumSpacing),
                         child: SectionTitle
                         (
                           text: 'DESCRIPTION',
@@ -246,7 +243,6 @@ class EventDetails extends StatelessWidget
 
                       Container
                       (
-                        margin: EdgeInsets.only(top: 15),
                         constraints: BoxConstraints
                         (
                           maxHeight: constraints.maxHeight * 0.25,
@@ -268,7 +264,7 @@ class EventDetails extends StatelessWidget
 
                       Container
                       (
-                        margin: EdgeInsets.only(top: 25),
+                        margin: EdgeInsets.only(top: Global().mediumSpacing),
                         child: SectionTitle
                         (
                           text: 'LOCATION',
@@ -283,7 +279,6 @@ class EventDetails extends StatelessWidget
                           (
                             child: Container
                             (
-                              margin: EdgeInsets.only(top: 15),
                               child: CardListTileText
                               (
                                 constraints: constraints,
@@ -299,7 +294,7 @@ class EventDetails extends StatelessWidget
 
                       SizedBox
                       (
-                        height: 25,
+                        height: Global().mediumSpacing,
                       ),
                     ]
                   ),

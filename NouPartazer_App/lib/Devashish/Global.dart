@@ -33,11 +33,13 @@ class Global
   final double smallSpacing = 12;
   final double normalSpacing = 15;
   final double mediumSpacing = 20;
-  final double largeSpacing = 45;
+  final double largeSpacing = 30;
+  final double extraLargeSpacing = 45;
   
   //Exceptions
   final double smallPageMargin = 20;   //Left & Right values only
   final double tinyPageMargin = 10;
   //Buttons and popUps to be reviewed
+  //(margin != null) ? margin :EdgeInsets.all(Global().smallSpacing)
 }
 

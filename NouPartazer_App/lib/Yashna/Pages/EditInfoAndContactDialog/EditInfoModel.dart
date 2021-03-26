@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 import 'package:noupartazer_app/Yashna/components/IconTextField.dart';
 import 'package:noupartazer_app/Yashna/components/TwoButtons.dart';
@@ -52,12 +53,10 @@ class EditInfoModel
           {
             return SingleChildScrollView
             (
-              padding: EdgeInsets.only
+              padding: EdgeInsets.symmetric
               (
-                top: 40,
-                bottom: 20,
-                left: 20,
-                right: 20
+                horizontal: Global().smallPageMargin,
+                vertical: Global().smallPageMargin,
               ),
               child: Form
               (
@@ -72,7 +71,6 @@ class EditInfoModel
                     (
                       controller: controller1,
                       keyboardType: keyboardType1,
-                      margin: EdgeInsets.all(0),
                       text: text1,
                       icon: icon1,
                     ),
@@ -96,11 +94,6 @@ class EditInfoModel
 
                     Container
                     (
-                      margin: EdgeInsets.only
-                      (
-                        top: 20,
-                        bottom: 15
-                      ),
                       child: TwoButtons()
                     ),
                   ]
