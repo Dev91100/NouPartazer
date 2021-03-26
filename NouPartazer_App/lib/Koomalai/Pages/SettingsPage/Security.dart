@@ -86,6 +86,7 @@ class _SecurityState extends State<Security>
                         keyboardType: TextInputType.visiblePassword,
                         labelText: 'New password',
                         suffixIcon: Icons.https_outlined,
+                        margin: EdgeInsets.only(bottom: 0),
                       ),
                       
                       Container

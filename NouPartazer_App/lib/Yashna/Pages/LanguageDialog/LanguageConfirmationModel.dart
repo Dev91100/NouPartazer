@@ -127,7 +127,6 @@ class LanguageConfirmationModel
 
                     Container
                     (
-                      // margin: EdgeInsets.only(top: 15),
                       child: TwoButtons
                       (
                         buttonText2: buttonText2,

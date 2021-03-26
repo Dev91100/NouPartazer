@@ -43,7 +43,7 @@ class NGOTaskModel extends StatelessWidget
       ),
       child: Container
       (
-        padding: EdgeInsets.all(10),
+        padding: EdgeInsets.all(Global().smallSpacing),
         child: Column
         (
           mainAxisAlignment: MainAxisAlignment.center,
@@ -234,18 +234,18 @@ class NGOTaskModel extends StatelessWidget
                   (
                     text: 'Call',
                     icon: Icons.phone_forwarded,
-                    iconRight: 5,
+                    iconRight: Global().tinySpacing,
                     buttonColor: Color.fromRGBO(245, 197, 1, 1),
                   ),
 
                   Container
                   (
-                    margin: EdgeInsets.only(left: 15),
+                    margin: EdgeInsets.only(left: Global().normalSpacing),
                     child: SmallButtonIconText
                     (
                       text: 'View Details',
                       icon: Icons.visibility_outlined,
-                      iconRight: 5,
+                      iconRight: Global().tinySpacing,
                       onPress: EventDetails(),
                       transitionType: 'rightToLeft',
                       transitionDuration: 1100,

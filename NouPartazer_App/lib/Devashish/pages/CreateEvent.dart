@@ -5,9 +5,9 @@ import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/LargeCustomButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
-import 'package:noupartazer_app/Devashish/components/Checkboxes.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 import 'package:noupartazer_app/Devashish/components/GetImage/DottedBox/DottedBoxGetImage.dart';
-import 'package:noupartazer_app/Devashish/pages/DateTask.dart';
+import 'package:noupartazer_app/Devashish/components/DateTask.dart';
 
 class CreateEvent extends StatefulWidget
 {
@@ -19,6 +19,9 @@ class _CreateEventState extends State<CreateEvent>
 {
   final _formKey = GlobalKey<FormState>();
   TextEditingController locationNameCtrl, locationAddressCtrl, eventTypeCtrl, eventDescriptionCtrl, dateOfEventCtrl;
+
+  bool perishableValue = false;
+  bool nonPerishableValue = false;
 
   Task task = new Task();
   DateTime selectedDate = DateTime.now();
@@ -41,7 +44,7 @@ class _CreateEventState extends State<CreateEvent>
           "${picked.toLocal().day}/${picked.toLocal().month}/${picked.toLocal().year}";
       dateOfEventCtrl.text = date;
     });
-}
+  }
 
   @override
   void initState()
@@ -71,11 +74,8 @@ class _CreateEventState extends State<CreateEvent>
         {
           return Container
           (
-            margin: EdgeInsets.only
-            (
-              left: 20,
-              right: 20,
-            ),
+            margin: EdgeInsets.symmetric(horizontal: Global().smallPageMargin),
+
             child: SingleChildScrollView
             (
               clipBehavior: Clip.none,
@@ -94,6 +94,7 @@ class _CreateEventState extends State<CreateEvent>
                       child: SectionTitle
                       (
                         text: 'EVENT INFORMATION',
+                        margin: EdgeInsets.only(bottom: Global().mediumSpacing),
                       ),
                     ),
 
@@ -149,36 +150,67 @@ class _CreateEventState extends State<CreateEvent>
                       ),
                     ),
 
-                    Container
+                    //Checkboxes
+                    CheckboxListTile
                     (
-                      margin: EdgeInsets.only(top: 10),
-                      child: Checkboxes
+                      dense: true,
+                      contentPadding: EdgeInsets.all(0),
+
+                      title: Text
                       (
-                        option: 'Perishable Food',
-                      )
-                    ),
-
-                    Checkboxes
-                    (
-                      option: 'Non-Perishable Food',
+                        'Perishable Food',
+                        style: TextStyle
+                        (
+                          fontSize: Global().normalText,
+                        ),
+                      ),
+                      value: perishableValue,
+                      onChanged: (newValue)
+                      {
+                        setState(()
+                        {
+                          perishableValue = newValue;
+                        });
+                      },
+                      controlAffinity: ListTileControlAffinity.leading, //  <-- leading Checkbox
                     ),
 
                     Container
                     (
-                      margin: EdgeInsets.only(top: 15),
+                      margin: EdgeInsets.only(bottom: Global().smallSpacing), //Override
+                      child: CheckboxListTile
+                      (
+                        dense: true,
+                        contentPadding: EdgeInsets.all(0),
+
+                        title: Text
+                        (
+                          'Non-Perishable Food',
+                          style: TextStyle
+                          (
+                            fontSize: Global().normalText,
+                          ),
+                        ),
+                        value: nonPerishableValue,
+                        onChanged: (newValue)
+                        {
+                          setState(()
+                          {
+                            nonPerishableValue = newValue;
+                          });
+                        },
+                        controlAffinity: ListTileControlAffinity.leading, //  <-- leading Checkbox
+                      ),
+                    ),
+
+                    Container
+                    (
+                      margin: EdgeInsets.only(top: Global().smallSpacing),
                       child: DottedBoxGetImage()
                     ),
 
                     Container
                     (
-                      padding: EdgeInsets.only
-                      (
-                        right: 15,
-                        left: 15,
-                        bottom: 40
-                      ),
-                      
-                      margin: EdgeInsets.only(top: 30),
                       width: constraints.maxWidth,
                       child: LargeCustomButtonIconText
                       (

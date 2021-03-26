@@ -91,7 +91,7 @@ class BusinessStoryModel extends StatelessWidget
                   // Location Name
                   child: Padding
                   (
-                    padding: const EdgeInsets.fromLTRB(15,0,15,15),
+                    padding: EdgeInsets.all(Global().smallPageMargin),
                     child: Column
                     (
                       mainAxisAlignment: MainAxisAlignment.end,

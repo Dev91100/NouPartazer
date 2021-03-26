@@ -66,7 +66,6 @@ class AccountCreated extends StatelessWidget
                   Container
                   (
                     width: constraints.maxWidth * 0.7,
-                    margin: EdgeInsets.only(top: 20),
                     child: LargeCustomButtonIconText
                     (
                       text: "Log In",

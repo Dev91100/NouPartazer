@@ -251,16 +251,11 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
                       labelText: 'Password',
                       obscureText: true,
                       hasSuffixIcon: false,
+                      margin: EdgeInsets.only(bottom: 0),
                     ),
                     
                     Container
                     (
-                      padding: EdgeInsets.only
-                      (
-                        right: Global().normalSpacing,
-                        left: Global().normalSpacing,
-                        bottom: Global().hugeSpacing,
-                      ),
                       width: constraints.maxWidth,
                       child: LargeCustomButtonIconText
                       (

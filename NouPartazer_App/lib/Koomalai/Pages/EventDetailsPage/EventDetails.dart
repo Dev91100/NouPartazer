@@ -46,16 +46,6 @@ class EventDetails extends StatelessWidget
                 decoration: BoxDecoration
                 (
                   color: Color.fromRGBO(242, 242, 242, 1),
-                  boxShadow:
-                  [
-                    BoxShadow
-                    (
-                      color: Colors.black.withOpacity(0.2),
-                      spreadRadius: 4,
-                      blurRadius: 4,
-                      offset: Offset(0, 2), // changes position of shadow
-                    ),
-                  ],
                 ),
 
                 child: Column
@@ -78,16 +68,6 @@ class EventDetails extends StatelessWidget
                         ),
 
                         borderRadius: BorderRadius.circular(150),
-                        boxShadow:
-                        [
-                          BoxShadow
-                          (
-                            color: Colors.black.withOpacity(0.2),
-                            spreadRadius: 2,
-                            blurRadius: 2,
-                            offset: Offset(0, 2), // changes position of shadow
-                          ),
-                        ],
                       ),
                     ),
 
@@ -103,7 +83,6 @@ class EventDetails extends StatelessWidget
 
                     Container
                     (
-                      margin: EdgeInsets.only(top: Global().mediumSpacing),
                       child: Row
                       (
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -131,6 +110,7 @@ class EventDetails extends StatelessWidget
 
                     Container
                     (
+                      margin: EdgeInsets.only(top: Global().mediumSpacing),
                       child:SmallButtonIconText
                       (
                         text: 'Accept Donation',
@@ -250,10 +230,9 @@ class EventDetails extends StatelessWidget
                         child: Card
                         (
                           color: Color.fromRGBO(248, 248, 248, 1),
-                          // margin: const EdgeInsets.all(20),
                           child: Container
                           (
-                            margin: const EdgeInsets.all(10),
+                            margin: EdgeInsets.all(Global().smallSpacing),
                             child: LongText
                             (
                               text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius lectus et ante sollicitudin mattis. Morbi maximus maximus mi, non porttitor quam cursus sit amet. Vivamus in nunc id massa pretium elementum sed eu risus. Cras in ante ac nunc pretium imperdiet at a nisi. Cras placerat quis turpis a porttitor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius lectus et ante sollicitudin mattis. Morbi maximus maximus mi, non porttitor quam cursus sit amet. Vivamus in nunc id massa pretium elementum sed eu risus. Cras in ante ac nunc pretium imperdiet at a nisi. Cras placerat quis turpis a porttitor.',

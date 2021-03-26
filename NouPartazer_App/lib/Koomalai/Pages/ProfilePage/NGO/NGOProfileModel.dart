@@ -140,8 +140,7 @@ class NGOProfileModel extends StatelessWidget
                         ),
                         child: LongText
                         (
-                          text: "MANZER PARTAZER is the the first food sharing project of Mauritius. Our aim is to reduce the wastage of high quality ready to eat food by simply sharing it!"
-                                "We ‘save’ food which would otherwise go to waste, such as buffet leftovers in hotels or restaurants, donating it to people in need through a very simple and no-cost food sharing system.or restaurants, donating it to people in need through a very simple and no-cost food sharing system.or restaurants, donating it to people in need through a very simple and no-cost food sharing system.or restaurants, donating it to people in need through a very simple and no-cost food sharing system.",
+                          text: "MANZER PARTAZER is the the first food sharing project of Mauritius. Our aim is to reduce the wastage of high quality ready to eat food by simply sharing it! We ‘save’ food which would otherwise go to waste, such as buffet leftovers in hotels or restaurants, donating it to people in need through a very simple and no-cost food sharing system.or restaurants, donating it to people in need through a very simple and no-cost food sharing system.or restaurants, donating it to people in need through a very simple and no-cost food sharing system.or restaurants, donating it to people in need through a very simple and no-cost food sharing system.",
                           textAlign: TextAlign.justify,
                         ),
                       ),
@@ -162,8 +161,8 @@ class NGOProfileModel extends StatelessWidget
 
                       ContactInfo
                       (
-                        website: 'www.facebook.com',
                         margin: EdgeInsets.all(0),
+                        website: 'www.facebook.com',
                         icon: Icons.language_outlined,
                       ),
                       
@@ -201,7 +200,7 @@ class NGOProfileModel extends StatelessWidget
                   ),
                 ),
               ],
-            ),   
+            ),
           )
         );
       }

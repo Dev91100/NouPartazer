@@ -204,6 +204,7 @@ class _SignInWidgetState extends State<SignInWidget>
             focusedErrorBorderColor: Colors.white,
             addAsterix: false,
             errorMsg: 'Email and password fields required.',
+            margin: EdgeInsets.only(bottom: 0),
           ),
 
           Container

@@ -315,16 +315,11 @@ class _NGORegistrationState extends State<NGORegistration>
                       obscureText: true,
                       labelText: 'Password',
                       hasSuffixIcon: false,
+                      margin: EdgeInsets.only(bottom: 0),
                     ),
 
                     Container
                     (
-                      padding: EdgeInsets.only
-                      (
-                        right: Global().normalSpacing,
-                        left: Global().normalSpacing,
-                        bottom: Global().hugeSpacing,
-                      ),
                       width: constraints.maxWidth,
                       child: LargeCustomButtonIconText
                       (

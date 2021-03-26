@@ -192,13 +192,6 @@ class _CreateStoryState extends State<CreateStory>
 
                     Container
                     (
-                      padding: EdgeInsets.only
-                      (
-                        right: 15,
-                        left: 15,
-                        bottom: 40
-                      ),
-                      
                       width: constraints.maxWidth,
                       child: LargeCustomButtonIconText
                       (

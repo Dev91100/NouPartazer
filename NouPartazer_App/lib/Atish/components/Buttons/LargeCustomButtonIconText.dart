@@ -89,8 +89,15 @@ class LargeCustomButtonIconText extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Container(
-      margin: (margin!= null) ? margin : EdgeInsets.only(top: Global().mediumSpacing),
+    return Container
+    (
+      padding: (padding != null) ? padding : EdgeInsets.only
+      (
+        right: Global().normalSpacing,
+        left: Global().normalSpacing,
+        bottom: Global().hugeSpacing,
+      ),
+      margin: (margin!= null) ? margin : EdgeInsets.only(top: Global().largeSpacing),
       child: TextButton
       (
         style: OutlinedButton.styleFrom

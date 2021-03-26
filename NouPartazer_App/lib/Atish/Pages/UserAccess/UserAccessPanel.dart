@@ -122,6 +122,7 @@ class _UserAccessPanelState extends State<UserAccessPanel>
                                   width: screen.width * 0.5,
                                   child: LargeButtonIconText
                                   (
+                                    margin: EdgeInsets.all(0),
                                     text: 'Sign In',
                                     textColor: (isSignIn) ? selectedTextColor : unselectedTextColor,
                                     hasIcon: false,
@@ -137,6 +138,7 @@ class _UserAccessPanelState extends State<UserAccessPanel>
                                   width: screen.width * 0.5,
                                   child: LargeButtonIconText
                                   (
+                                    margin: EdgeInsets.all(0),
                                     text: 'Sign Up',
                                     textColor: (isSignUp) ? selectedTextColor : unselectedTextColor,
                                     hasIcon: false,

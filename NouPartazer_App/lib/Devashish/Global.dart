@@ -1,7 +1,7 @@
 class Global
 {
   // -------------------- Text --------------------
-  // Font Sizes
+  // Font Size
   final double tinyText   = 15;
   final double smallText  = 16;
   final double normalText = 17;
@@ -28,7 +28,10 @@ class Global
 
 
   // -------------------- Spacing --------------------
-  // Spacing Sizes
+  // Spacing Size
+  final double smallPageMargin = 20;
+  final double tinyPageMargin  = 10;
+
   final double tinySpacing   = 5;
   final double smallSpacing  = 12;
   final double normalSpacing = 15;
@@ -37,9 +40,6 @@ class Global
   final double hugeSpacing   = 45;
   
   //Exceptions
-  final double smallPageMargin = 20;   //Left & Right values only
-  final double tinyPageMargin  = 10;
-  //Buttons and popUps to be reviewed
-  //(margin != null) ? margin :EdgeInsets.all(Global().smallSpacing)
+  final double ngoCentresListSpacing = 10;
 }
 
