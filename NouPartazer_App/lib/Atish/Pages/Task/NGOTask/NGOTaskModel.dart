@@ -231,13 +231,10 @@ class NGOTaskModel extends StatelessWidget
                 [
                   SmallButtonIconText
                   (
-                    text: 'View Details',
-                    icon: Icons.visibility_outlined,
+                    text: 'Call',
+                    icon: Icons.phone_forwarded,
                     iconRight: 5,
-                    onPress: EventDetails(),
-                    transitionType: 'rightToLeft',
-                    transitionDuration: 1100,
-                    isPageTransition: true,
+                    buttonColor: Color.fromRGBO(245, 197, 1, 1),
                   ),
 
                   Container
@@ -245,10 +242,13 @@ class NGOTaskModel extends StatelessWidget
                     margin: EdgeInsets.only(left: 15),
                     child: SmallButtonIconText
                     (
-                      text: 'Call',
-                      icon: Icons.phone_forwarded,
+                      text: 'View Details',
+                      icon: Icons.visibility_outlined,
                       iconRight: 5,
-                      buttonColor: Color.fromRGBO(245, 197, 1, 1),
+                      onPress: EventDetails(),
+                      transitionType: 'rightToLeft',
+                      transitionDuration: 1100,
+                      isPageTransition: true,
                     ),
                   ),
                 ],

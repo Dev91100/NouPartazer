@@ -235,29 +235,29 @@ class BusinessTaskModel extends StatelessWidget
                 mainAxisAlignment: MainAxisAlignment.start,
                 children:
                 [
+                  (canCall) ?
                   SmallButtonIconText
                   (
-                    text: 'View Details',
-                    icon: Icons.visibility_outlined,
+                    text: 'Call',
+                    icon: Icons.phone_forwarded,
                     iconRight: 5,
-                    onPress: EventDetails(),
-                    isPageTransition: true,
-                    transitionType: 'rightToLeft',
-                    transitionDuration: 1100,
-                  ),
+                    buttonColor: Color.fromRGBO(245, 197, 1, 1),
+                  ) : Container(),
 
-                  (canCall) ?
                   Container
                   (
-                    margin: EdgeInsets.only(left: 15),
+                    margin:(canCall) ? EdgeInsets.only(left: 15) : EdgeInsets.only(left: 0),
                     child: SmallButtonIconText
                     (
-                      text: 'Call',
-                      icon: Icons.phone_forwarded,
+                      text: 'View Details',
+                      icon: Icons.visibility_outlined,
                       iconRight: 5,
-                      buttonColor: Color.fromRGBO(245, 197, 1, 1),
+                      onPress: EventDetails(),
+                      transitionType: 'rightToLeft',
+                      transitionDuration: 1100,
+                      isPageTransition: true,
                     ),
-                  ): Container(),      
+                  ),
                 ],
               ),
             ),
