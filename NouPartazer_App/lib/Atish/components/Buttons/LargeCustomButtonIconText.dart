@@ -61,7 +61,7 @@ class LargeCustomButtonIconText extends StatelessWidget
       this.borderColor = const Color.fromRGBO(245, 197, 41, 1),
       this.iconRight = 5,
       this.elevation = 0,
-      this.padding = const EdgeInsets.all(13),
+      this.padding,
       this.borderRadius = const BorderRadius.all(Radius.circular(10)),
       this.scrollModalSheet = true,
       this.isPageTransition = false,
@@ -90,14 +90,14 @@ class LargeCustomButtonIconText extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Container(
-      margin: (margin!= null) ? margin : EdgeInsets.only(top: Global().largeSpacing),
+      margin: (margin!= null) ? margin : EdgeInsets.only(top: Global().mediumSpacing),
       child: TextButton
       (
         style: OutlinedButton.styleFrom
         (
           primary: (processing) ? processingColor : buttonColor,
           backgroundColor: (processing) ? processingColor : buttonColor,
-          padding: padding,
+          padding: (padding != null) ? padding : EdgeInsets.all(Global().smallSpacing),
           elevation: elevation,
           shape: RoundedRectangleBorder
           (

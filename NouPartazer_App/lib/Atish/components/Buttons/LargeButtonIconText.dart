@@ -60,7 +60,7 @@ class LargeButtonIconText extends StatelessWidget
       this.borderColor = const Color.fromRGBO(0, 0, 0, 0),
       this.iconRight = 5,
       this.elevation = 2,
-      this.padding = const EdgeInsets.fromLTRB(15, 15, 15, 15),
+      this.padding,
       this.borderRadius = const BorderRadius.all(Radius.circular(10)),
       this.scrollModalSheet = true,
       this.isPageTransition = false,
@@ -93,7 +93,7 @@ class LargeButtonIconText extends StatelessWidget
       (
         primary: (processing) ? processingColor : buttonColor,
         backgroundColor: (processing) ? processingColor : buttonColor,
-        padding: padding,
+        padding: (padding != null) ? padding : EdgeInsets.all(Global().smallSpacing),
         elevation: elevation,
         shape: RoundedRectangleBorder
         (

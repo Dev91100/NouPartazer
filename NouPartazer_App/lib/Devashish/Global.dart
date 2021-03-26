@@ -38,5 +38,6 @@ class Global
   //Exceptions
   final double smallPageMargin = 20;   //Left & Right values only
   final double tinyPageMargin = 10;
+  //Buttons and popUps to be reviewed
 }
 
