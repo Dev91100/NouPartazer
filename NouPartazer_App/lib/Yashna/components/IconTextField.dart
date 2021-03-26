@@ -21,11 +21,11 @@ class IconTextField extends StatelessWidget
   IconTextField
   (
     {
-      this.margin = const EdgeInsets.only(top:30),
+      this.margin,
       this.text = 'Test',
       this.fontSize,
       this.textColor = const Color.fromRGBO(102, 102, 102, 1),
-      this.iconDistance = const EdgeInsets.only(right: 10),
+      this.iconDistance,
       this.icon = Icons.perm_identity_outlined,
       this.iconColor = const Color.fromRGBO(102, 102, 102, 1),
       this.iconSize,
@@ -43,7 +43,7 @@ class IconTextField extends StatelessWidget
   {
     return Container
     (
-      margin: margin,
+      margin: (margin != null) ? margin :EdgeInsets.all(Global().mediumSpacing),
       child: Row
       (
         mainAxisSize: MainAxisSize.max,
@@ -51,7 +51,7 @@ class IconTextField extends StatelessWidget
         [
           Container
           (
-            margin: iconDistance,
+            margin: (iconDistance != null) ? iconDistance :EdgeInsets.only(right: Global().smallSpacing),
             child: Column
             (
               mainAxisSize: MainAxisSize.min,

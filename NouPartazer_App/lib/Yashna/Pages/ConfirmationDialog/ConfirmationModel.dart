@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/Text/SmallText.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 import 'package:noupartazer_app/Yashna/components/TwoButtons.dart';
 
 class ConfirmationModel
@@ -49,12 +50,10 @@ class ConfirmationModel
               borderRadius: BorderRadius.all(Radius.circular(20)),
             ),
 
-            contentPadding: EdgeInsets.only
+            contentPadding: EdgeInsets.symmetric
             (
-              top: 20,
-              bottom: 20,
-              left: 40,
-              right: 40
+              horizontal: Global().smallPageMargin,
+              vertical: Global().smallPageMargin,
             ),
 
             content: Column
@@ -66,7 +65,7 @@ class ConfirmationModel
               [
                 Container
                 (
-                  margin: EdgeInsets.only(top: 10),
+                  margin: EdgeInsets.only(top: Global().smallSpacing),
                   child: SmallText
                   (
                     text: text,
@@ -78,9 +77,10 @@ class ConfirmationModel
                 (hasTextField) ?
                 Container
                 (
-                  margin: EdgeInsets.only(top: 20),
+                  margin: EdgeInsets.only(top: Global().smallSpacing),
                   child: TextFormField
                   (
+                    obscureText: true,
                     keyboardType: TextInputType.visiblePassword,
                     decoration: InputDecoration
                     (
@@ -92,7 +92,6 @@ class ConfirmationModel
 
                 Container
                 (
-                  margin: EdgeInsets.only(top: 20),
                   child: TwoButtons
                   (
                     onPress: onPress,

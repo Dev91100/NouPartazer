@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
+import 'package:noupartazer_app/Atish/components/Text/SmallText.dart';
 import 'package:noupartazer_app/Devashish/Global.dart';
 
 class CardIconText extends StatelessWidget
@@ -12,7 +13,7 @@ class CardIconText extends StatelessWidget
   final BoxConstraints constraints;
   final double height; 
   final Color cardColor;
-  final EdgeInsets padding;
+  final EdgeInsets margin;
   
   final IconData icon;
   final double iconSize;
@@ -31,7 +32,7 @@ class CardIconText extends StatelessWidget
       this.iconColor = const Color.fromRGBO(0, 0, 0, 1),
       this.height = 140,
       this.cardColor = const Color.fromRGBO(248, 248, 248, 1),
-      this.padding = const EdgeInsets.all(20),
+      this.margin,
     }
   );
 
@@ -47,7 +48,7 @@ class CardIconText extends StatelessWidget
         elevation: 2,
         child: Container
         (
-          margin: padding,
+          margin: (margin != null) ? margin :EdgeInsets.all(Global().smallSpacing),
           child: Column
           (
             mainAxisAlignment: MainAxisAlignment.center,
@@ -56,7 +57,7 @@ class CardIconText extends StatelessWidget
             [
               Container
               (
-                margin: EdgeInsets.only(bottom: 15),
+                margin: EdgeInsets.only(bottom: Global().smallSpacing),
                 child: Icon
                 (
                   icon,
@@ -64,10 +65,11 @@ class CardIconText extends StatelessWidget
                   color: iconColor,
                 ),
               ),
-              SectionTitle
+              SmallText
               (
                 text: text,
-                color: textColor,
+                fontWeight: FontWeight.w500,
+                textColor: textColor,
                 fontSize: (fontSize != null) ? fontSize : Global().smallText,
               ),
             ],

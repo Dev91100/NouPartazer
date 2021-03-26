@@ -39,13 +39,7 @@ class DonationEventModel
               borderRadius: BorderRadius.all(Radius.circular(20)),
             ),
 
-            contentPadding: EdgeInsets.only
-            (
-              top: 20,
-              bottom: 20,
-              left: 20,
-              right: 20
-            ),
+            contentPadding: EdgeInsets.all(Global().smallPageMargin),
 
             content: Column
             (
@@ -66,7 +60,7 @@ class DonationEventModel
 
                 Container
                 (
-                  margin: EdgeInsets.only(top: 15),
+                  margin: EdgeInsets.only(top: Global().smallSpacing),
                   child: CheckboxListTile
                   (
                     title: Text
@@ -93,7 +87,6 @@ class DonationEventModel
 
                 Container
                 (
-                  margin:EdgeInsets.only(top: 15),
                   child: TwoButtons
                   (
                     buttonText2: 'Confirm',

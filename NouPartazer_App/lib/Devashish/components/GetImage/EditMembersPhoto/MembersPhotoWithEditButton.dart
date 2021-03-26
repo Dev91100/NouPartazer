@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/RoundIconButton.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 class MembersPhotoWithEditButton extends StatelessWidget
 {
@@ -19,7 +20,7 @@ class MembersPhotoWithEditButton extends StatelessWidget
   {
     return Container
     (
-      margin: EdgeInsets.only(bottom: 30),
+      margin: EdgeInsets.only(bottom: Global().tinySpacing),
       child: Stack
       (
         children:

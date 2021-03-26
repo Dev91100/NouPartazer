@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/Buttons/SmallButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/SmallCustomButtonIconText.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 class TwoButtons extends StatelessWidget
 {
@@ -33,35 +34,39 @@ class TwoButtons extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Row
-    (
-      mainAxisAlignment: MainAxisAlignment.center,
-      children:
-      [
-        SmallButtonIconText
-        (
-          text: buttonText1,
-          textDecoration: TextDecoration.underline,
-          textColor: Color.fromRGBO(102, 102, 102, 1),
-          buttonColor: Colors.transparent,
-          elevation: 0,
-          hasIcon: false,
-          isClose: true,
-          padding: EdgeInsets.only(right: 30),
-        ),
+    return Container(
+      margin: EdgeInsets.only(top: Global().smallSpacing),
+      child: Row
+      (
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children:
+        [
+          SmallButtonIconText
+          (
+            text: buttonText1,
+            textDecoration: TextDecoration.underline,
+            textColor: Color.fromRGBO(102, 102, 102, 1),
+            buttonColor: Colors.transparent,
+            elevation: 0,
+            hasIcon: false,
+            isClose: true,
+            margin: EdgeInsets.only(right: Global().largeSpacing),
+          ),
 
-        SmallCustomButtonIconText
-        (
-          text: buttonText2,
-          onPress: onPress,
-          isPopUpPage: isPopUpPage,
-          isModalPage: isModalPage,
-          isPage: isPage,
-          textColor: textColor,
-          buttonColor: buttonColor,
-          borderColor: borderColor,
-        ),
-      ]
+          SmallCustomButtonIconText
+          (
+            text: buttonText2,
+            onPress: onPress,
+            isPopUpPage: isPopUpPage,
+            isModalPage: isModalPage,
+            isPage: isPage,
+            textColor: textColor,
+            buttonColor: buttonColor,
+            borderColor: borderColor,
+          ),
+        ]
+      ),
     );
   }
 }

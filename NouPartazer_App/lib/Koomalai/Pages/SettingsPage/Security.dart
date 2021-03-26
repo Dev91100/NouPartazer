@@ -5,6 +5,7 @@ import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/SmallButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 import 'package:noupartazer_app/Yashna/Pages/ConfirmationDialog/DeactivateAccount.dart';
 
 class Security extends StatefulWidget
@@ -46,10 +47,9 @@ class _SecurityState extends State<Security>
         {
           return Container
           (
-            padding: EdgeInsets.only
+            padding: EdgeInsets.symmetric
             (
-              right: 20,
-              left: 20,
+              horizontal: Global().smallPageMargin,
             ),
             child: Column
             (
@@ -90,12 +90,10 @@ class _SecurityState extends State<Security>
                       
                       Container
                       (
-                        padding: EdgeInsets.only
+                        padding: EdgeInsets.symmetric
                         (
-                          right: 15,
-                          left: 15
+                          horizontal: Global().smallSpacing,
                         ),
-                        margin: EdgeInsets.only(top: 20),
                         width: constraints.maxWidth,
                         child: LargeCustomButtonIconText
                         (
@@ -111,7 +109,7 @@ class _SecurityState extends State<Security>
                 (
                   margin: EdgeInsets.only
                   (
-                    bottom: 20,
+                    bottom: Global().mediumSpacing,
                   ),
                   child: SmallButtonIconText
                   (
