@@ -3,6 +3,14 @@ import 'package:noupartazer_app/Devashish/Global.dart';
 
 class TheBackButton extends StatelessWidget
 {
+  final Color color;
+
+  TheBackButton
+  (
+    {
+      this.color = Colors.black,
+    }
+  );
   @override
   Widget build(BuildContext context)
   {
@@ -12,7 +20,7 @@ class TheBackButton extends StatelessWidget
       {
         return IconButton
         (
-          color: Colors.black,
+          color: color,
           padding: EdgeInsets.all(0),
           icon: Icon(Icons.keyboard_arrow_left),  
           iconSize: Global().largeIcon,

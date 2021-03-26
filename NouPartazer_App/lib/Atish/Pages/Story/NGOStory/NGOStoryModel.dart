@@ -5,6 +5,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:noupartazer_app/Atish/Pages/Story/NGOStory/NGOStory.dart';
 import 'package:noupartazer_app/Atish/components/LongText.dart';
 import 'package:noupartazer_app/Atish/components/ContainerText.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 
 
 class NGOStoryModel extends StatelessWidget
@@ -104,9 +105,10 @@ class NGOStoryModel extends StatelessWidget
                           scrollDirection: Axis.horizontal,
                           child: Text
                           ( 
-                            st.title,
+                            st.title.toUpperCase(),
                             style: TextStyle
                             (
+                              fontSize: Global().mediumText,
                               fontWeight: FontWeight.bold,
                               color: new Color.fromRGBO(245, 197, 41, 1),
                             ),
@@ -116,6 +118,7 @@ class NGOStoryModel extends StatelessWidget
                         // Description
                         Container
                         (
+                          margin: EdgeInsets.only(top: Global().smallSpacing),
                           constraints: BoxConstraints
                           (
                             maxHeight: constraints.maxHeight * 0.12,
@@ -123,7 +126,6 @@ class NGOStoryModel extends StatelessWidget
                           child: LongText
                           (
                             text: st.description,
-                            fontWeight: FontWeight.w500,
                             textColor: Color.fromRGBO(255, 255, 255, 1),
                           ),
                         ),
@@ -134,7 +136,7 @@ class NGOStoryModel extends StatelessWidget
                           scrollDirection: Axis.horizontal,
                           child: Container
                           (
-                            margin: EdgeInsets.only(top: 15),
+                            margin: EdgeInsets.only(top: Global().smallSpacing),
                             child: Row
                             (
                               children: 
@@ -144,7 +146,7 @@ class NGOStoryModel extends StatelessWidget
                                   text: st.tag,
                                   fontWeight: FontWeight.bold,
                                   borderColor: Color.fromRGBO(245, 197, 41, 1),
-                                  borderWidth: 1.5,
+                                  borderWidth: 1,
                                   borderRadius: 40,
                                   boxColor: Color.fromRGBO(255, 248, 97, 0.2),
                                   padding: EdgeInsets.fromLTRB(15, 10, 15, 10),

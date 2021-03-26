@@ -184,7 +184,7 @@ class BusinessTaskModel extends StatelessWidget
                   NormalText
                   (
                     text: 'Accepted By: ',
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w500,
                   ),
                   
                   NormalText
@@ -207,8 +207,11 @@ class BusinessTaskModel extends StatelessWidget
                   ContainerIconText
                   (
                     text: 'Status',
+                    fontWeight: FontWeight.w500,
+                    textColor: Colors.black,
+                    boxColor: Color.fromRGBO(102, 102, 102, 0.2),
                     icon: Icons.online_prediction_outlined,
-                    iconColor: Color.fromRGBO(255, 255, 255, 1),
+                    iconColor: Colors.black,
                   ),
                   ContainerText
                   (

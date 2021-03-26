@@ -82,7 +82,7 @@ class ContactInfo extends StatelessWidget
           website,
           style: TextStyle
           (
-            fontSize: (fontSize != null) ? fontSize : Global().mediumText,
+            fontSize: (fontSize != null) ? fontSize : Global().normalText,
             color: textColor,
             decoration: TextDecoration.underline,
           ),
@@ -105,7 +105,7 @@ class ContactInfo extends StatelessWidget
           email,
           style: TextStyle
           (
-            fontSize: (fontSize != null) ? fontSize : Global().mediumText,
+            fontSize: (fontSize != null) ? fontSize : Global().normalText,
             color: textColor,
             decoration: TextDecoration.underline,
           ),
@@ -128,7 +128,7 @@ class ContactInfo extends StatelessWidget
           phoneNumber,
           style: TextStyle
           (
-            fontSize: (fontSize != null) ? fontSize : Global().mediumText,
+            fontSize: (fontSize != null) ? fontSize : Global().normalText,
             color: textColor,
             decoration: TextDecoration.underline,
           ),
@@ -164,7 +164,7 @@ checkTextType()
   {
     return Container
     (
-      margin: (margin != null) ? margin : EdgeInsets.only(top: Global().smallSpacing),
+      margin: (margin != null) ? margin : EdgeInsets.only(top: Global().mediumSpacing),
       child: Row
       (
         crossAxisAlignment: CrossAxisAlignment.center,

@@ -7,6 +7,7 @@ class PageTitle extends StatefulWidget implements PreferredSizeWidget
 {
   final String text;
   final bool hasBackButton;
+  final Color backButtonColor;
   final Color textColor;
   final Color barColor;
 
@@ -16,6 +17,7 @@ class PageTitle extends StatefulWidget implements PreferredSizeWidget
       Key key,
       this.text = '',
       this.hasBackButton = false,
+      this.backButtonColor = Colors.black,
       this.textColor = const Color.fromRGBO(0, 0, 0, 1),
       this.barColor = const Color.fromRGBO(0, 0, 0, 0),
     }
@@ -40,7 +42,7 @@ class _PageTitleState extends State<PageTitle>
         backgroundColor: widget.barColor,
         elevation: 0,
         leading: (widget.hasBackButton) ?
-        TheBackButton() : null,
+        TheBackButton(color: widget.backButtonColor) : null,
 
         leadingWidth: (widget.hasBackButton) ? 80 : null,
 

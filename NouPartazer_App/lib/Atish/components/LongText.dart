@@ -17,7 +17,7 @@ class LongText extends StatelessWidget
     {
       this.text = 'Test',
       this.fontSize,
-      this.fontWeight = FontWeight.w500,
+      this.fontWeight = FontWeight.w400,
       this.textAlign = TextAlign.justify,
       this.textColor = const Color.fromRGBO(0, 0, 0, 1),
     }

@@ -21,6 +21,7 @@ class SectionWithEditButton extends StatelessWidget
 
     final bool isEditable;
     final EdgeInsets margin;
+    final EdgeInsets sectionTitleMargin;
 
     SectionWithEditButton
     (
@@ -35,6 +36,7 @@ class SectionWithEditButton extends StatelessWidget
         this.color = const Color.fromRGBO(0, 0, 0, 1),
         this.isEditable = false,
         this.margin,
+        this.sectionTitleMargin = const EdgeInsets.all(0),
       }
     )
     {
@@ -43,6 +45,7 @@ class SectionWithEditButton extends StatelessWidget
         text: title,
         fontSize: (fontSize != null) ? fontSize : Global().mediumText,
         color: color,
+        margin: const EdgeInsets.all(0),
       );
       
       RoundIconButton
@@ -61,7 +64,9 @@ class SectionWithEditButton extends StatelessWidget
     (
       builder: (ctx, constraints)
       {
-        return Container(
+        return Container
+        (
+          margin: (margin != null) ? margin : EdgeInsets.only(bottom: Global().smallSpacing),
           child: Row
           (
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -86,6 +91,7 @@ class SectionWithEditButton extends StatelessWidget
                           text: title,
                           fontSize: (fontSize != null) ? fontSize : Global().mediumText,
                           color: color,
+                          margin: sectionTitleMargin,
                         ),
                       ),
                     ],

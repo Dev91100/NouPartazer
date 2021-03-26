@@ -61,16 +61,16 @@ class BusinessStoryModelProfile extends StatelessWidget
                         fit: BoxFit.cover,
                       ),
                       borderRadius: BorderRadius.all(Radius.circular(20)),
-                      boxShadow:
-                      [
-                        BoxShadow
-                        (
-                          color: Colors.black.withOpacity(0.2),
-                          spreadRadius: 2,
-                          blurRadius: 2,
-                          offset: Offset(0, 2), // changes position of shadow
-                        )
-                      ],
+                      // boxShadow:
+                      // [
+                      //   BoxShadow
+                      //   (
+                      //     color: Colors.black.withOpacity(0.2),
+                      //     spreadRadius: 2,
+                      //     blurRadius: 2,
+                      //     offset: Offset(0, 2), // changes position of shadow
+                      //   )
+                      // ],
                     ),
                   ),
                 );
