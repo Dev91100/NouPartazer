@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/Text/SmallText.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 import 'package:noupartazer_app/Yashna/components/TwoButtons.dart';
 
 class ConfirmationModel
@@ -67,11 +68,15 @@ class ConfirmationModel
                 Container
                 (
                   margin: EdgeInsets.only(top: 10),
-                  child: SmallText
+                  child: Text
                   (
-                    text: text,
+                    text,
                     textAlign: TextAlign.center,
-                    fontWeight: FontWeight.w500,
+                    style: TextStyle
+                    (
+                      fontSize: Global().normalText,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                 ),
         
