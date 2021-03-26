@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:noupartazer_app/Atish/Pages/UserAccess/components/OrgButton.dart';
 import 'package:noupartazer_app/Atish/components/Text/HugeText.dart';
 import 'package:noupartazer_app/Atish/components/Text/MediumText.dart';
-import 'package:noupartazer_app/Koomalai/Pages/BottomNavigation/BusinessBottomNav.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 import 'package:noupartazer_app/Koomalai/Pages/RegistrationPage/BusinessRegistration.dart';
 import 'package:noupartazer_app/Koomalai/Pages/RegistrationPage/NGORegistration.dart';
 
@@ -38,8 +38,7 @@ class SignUpWidget extends StatelessWidget
         (
           margin: EdgeInsets.only
           (
-            top: constraints.maxHeight * 0.01,
-            bottom: constraints.maxHeight * 0.01,
+            top: Global().tinyPageMargin
           ),
           alignment: Alignment.bottomLeft,
           child: MediumText
@@ -51,51 +50,31 @@ class SignUpWidget extends StatelessWidget
         
         Container
         (
-          margin: EdgeInsets.only(top: constraints.maxHeight * 0.01),
+          margin: EdgeInsets.only(top: Global().tinySpacing),
           child: Column
           (
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children:
             [
-              Container
+              OrgButton
               (
-                height: constraints.maxHeight * 0.15,
-                width: constraints.maxWidth * 0.8,
-
-                constraints: BoxConstraints
-                (
-                  minWidth: 300,
-                  minHeight: 110
-                ),
-                child: OrgButton
-                (
-                  title: 'NGO',
-                  icon: Icons.favorite,
-                  onPress: NGORegistration(),
-                  transitionType: 'rightToLeft',
-                  transitionDuration: 1100,                  
-                ),
+                constraints: constraints,
+                title: 'NGO',
+                icon: Icons.favorite,
+                onPress: NGORegistration(),
+                transitionType: 'rightToLeft',
+                transitionDuration: 1100,                  
               ),
 
-              Container
+              OrgButton
               (
-                margin: EdgeInsets.only(top: constraints.maxHeight * 0.025,),
-                height: constraints.maxHeight * 0.15,
-                width: constraints.maxWidth * 0.8,
-                constraints: BoxConstraints
-                (
-                  minWidth: 300,
-                  minHeight: 110
-                ),
-                child: OrgButton
-                (
-                  title: 'BUSINESS',
-                  icon: Icons.business,
-                  onPress: BusinessRegistration(),
-                  transitionType: 'rightToLeft',
-                  transitionDuration: 1100,
-                ),
+                constraints: constraints,
+                title: 'BUSINESS',
+                icon: Icons.business,
+                onPress: BusinessRegistration(),
+                transitionType: 'rightToLeft',
+                transitionDuration: 1100,
               ),
             ],
           ),

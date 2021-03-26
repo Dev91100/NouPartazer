@@ -5,16 +5,15 @@ import 'package:noupartazer_app/Devashish/Global.dart';
 
 class OrgButton extends StatelessWidget
 {
-  @required
   final IconData icon;
-  @required
   final String title;
-  @required
   final Widget onPress;
   final String transitionType;
   final int transitionDuration;
   final double fontSize;
   final double iconSize;
+  final BoxConstraints constraints;
+  final EdgeInsets margin;
 
   OrgButton
   (
@@ -26,6 +25,8 @@ class OrgButton extends StatelessWidget
       this.transitionType,
       this.fontSize,
       this.iconSize,
+      this.constraints,
+      this.margin,
     }
   );
 
@@ -34,6 +35,15 @@ class OrgButton extends StatelessWidget
   {
     return Container
     (
+      margin: (margin != null) ? margin : EdgeInsets.only(top: Global().mediumSpacing), 
+      height: constraints.maxHeight * 0.15,
+      width: constraints.maxWidth * 0.8,
+
+      constraints: BoxConstraints
+      (
+        minWidth: 300,
+        minHeight: 110
+      ),
       decoration: BoxDecoration
       (
         boxShadow:
@@ -71,7 +81,7 @@ class OrgButton extends StatelessWidget
               (
                 icon,
                 color: Color.fromRGBO(0, 50, 193, 1),
-                size: (iconSize != null) ? fontSize: Global().largeIcon, //55,
+                size: (iconSize != null) ? fontSize: Global().mediumIcon, //55,
               ),
               Text
               (

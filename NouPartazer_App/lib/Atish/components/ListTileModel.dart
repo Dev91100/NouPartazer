@@ -62,7 +62,7 @@ class ListTileModel extends StatelessWidget
       (
         leadingIcon,
         color: leadingColor,
-        size: (iconSize != null) ? iconSize : Global().mediumIcon,
+        size: (iconSize != null) ? iconSize : Global().normalIcon,
       ) : null,
 
       title: SectionTitle
@@ -81,7 +81,7 @@ class ListTileModel extends StatelessWidget
       (
         trailingIcon,
         color: trailingColor,
-        size: (iconSize != null) ? iconSize : Global().mediumIcon,
+        size: (iconSize != null) ? iconSize : Global().normalIcon,
       ) : (hasTrailingButton) ? trailingButton : null,
       
       onTap: (!hasSuperPress) ? ()

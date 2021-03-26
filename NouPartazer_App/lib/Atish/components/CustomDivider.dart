@@ -22,7 +22,7 @@ class CustomDivider extends StatelessWidget
     return Divider
     (
       color: Color.fromRGBO(102, 102, 102, 0.3),
-      height: (height != null) ? height : Global().extraLargeSpacing,
+      height: (height != null) ? height : Global().hugeSpacing,
       thickness: 1,
       indent: indent,
       endIndent: endIndent,

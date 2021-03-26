@@ -53,7 +53,7 @@ class StatementModel
                 Icon
                 (
                   Icons.check_circle_outlined,
-                  size: Global().extraLargeIcon,
+                  size: Global().largeIcon,
                   color: Color.fromRGBO(0, 163, 68, 1)
                 ),
 

@@ -84,7 +84,7 @@ class LanguageConfirmationModel
                         ),
                         dropdownColor: Colors.white,
                         icon: Icon(Icons.keyboard_arrow_down),
-                        iconSize: Global().mediumIcon,
+                        iconSize: Global().normalIcon,
                         isExpanded: true,
 
                         style: TextStyle

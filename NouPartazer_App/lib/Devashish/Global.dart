@@ -15,30 +15,30 @@ class Global
 
   // -------------------- Icon --------------------
   // Icon Size
-  final double tinyIcon             = 22;
-  final double smallIcon            = 24;
-  final double mediumIcon           = 29;
-  final double largeIcon            = 40;
-  final double extraLargeIcon       = 100;
-  final double extraExtraLargeIcon  = 180;
+  final double tinyIcon   = 22;
+  final double smallIcon  = 24;
+  final double normalIcon = 29;
+  final double mediumIcon = 40;
+  final double largeIcon  = 100;
+  final double hugeIcon   = 180;
   
   //Exceptions
-  final double foodTypeIcon         = 20;
-  final double settingsIcon         = 35;
+  final double foodTypeIcon = 20;
+  final double settingsIcon = 35;
 
 
   // -------------------- Spacing --------------------
   // Spacing Sizes
-  final double tinySpacing = 5;
-  final double smallSpacing = 12;
+  final double tinySpacing   = 5;
+  final double smallSpacing  = 12;
   final double normalSpacing = 15;
   final double mediumSpacing = 20;
-  final double largeSpacing = 30;
-  final double extraLargeSpacing = 45;
+  final double largeSpacing  = 30;
+  final double hugeSpacing   = 45;
   
   //Exceptions
   final double smallPageMargin = 20;   //Left & Right values only
-  final double tinyPageMargin = 10;
+  final double tinyPageMargin  = 10;
   //Buttons and popUps to be reviewed
   //(margin != null) ? margin :EdgeInsets.all(Global().smallSpacing)
 }

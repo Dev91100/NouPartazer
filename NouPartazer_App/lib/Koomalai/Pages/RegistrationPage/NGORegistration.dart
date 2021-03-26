@@ -11,6 +11,7 @@ import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 import 'package:noupartazer_app/Atish/components/Text/HugeText.dart';
 import 'package:noupartazer_app/Atish/components/Text/MediumText.dart';
+import 'package:noupartazer_app/Devashish/Global.dart';
 import 'package:noupartazer_app/Devashish/components/AccountCreated.dart';
 import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
 
@@ -155,11 +156,7 @@ class _NGORegistrationState extends State<NGORegistration>
         {
           return Container
           (
-            margin: EdgeInsets.only
-            (
-              left: 20,
-              right: 20,
-            ),
+            margin: EdgeInsets.symmetric(horizontal: Global().smallPageMargin),
             child: SingleChildScrollView
             (
               child: Form
@@ -179,7 +176,7 @@ class _NGORegistrationState extends State<NGORegistration>
 
                     Container
                     (
-                      margin: EdgeInsets.only(top: 15),
+                      margin: EdgeInsets.only(top: Global().smallSpacing),
                       child: MediumText
                       (
                         text: "Fill in the following information",
@@ -188,7 +185,7 @@ class _NGORegistrationState extends State<NGORegistration>
 
                     Container
                     (
-                      margin: EdgeInsets.only(top: 15),
+                      margin: EdgeInsets.only(top: Global().smallSpacing),
                       child: SectionTitle
                       (
                         text: 'NGO INFORMATION',
@@ -244,6 +241,7 @@ class _NGORegistrationState extends State<NGORegistration>
                       optional: true,
                       labelText: 'Website',
                       hasSuffixIcon: false,
+                      margin: EdgeInsets.only(bottom: 0),
                     ),
 
                     CustomDivider(),
@@ -323,12 +321,10 @@ class _NGORegistrationState extends State<NGORegistration>
                     (
                       padding: EdgeInsets.only
                       (
-                        right: 15,
-                        left: 15,
-                        bottom: 40
+                        right: Global().normalSpacing,
+                        left: Global().normalSpacing,
+                        bottom: Global().hugeSpacing,
                       ),
-                      
-                      margin: EdgeInsets.only(top: 20),
                       width: constraints.maxWidth,
                       child: LargeCustomButtonIconText
                       (

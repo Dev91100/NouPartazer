@@ -151,11 +151,7 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
         {
           return Container
           (
-            margin: EdgeInsets.only
-            (
-              left: 20,
-              right: 20,
-            ),
+            margin: EdgeInsets.symmetric(horizontal: Global().smallPageMargin),
             child: SingleChildScrollView
             (
               child: Form
@@ -175,7 +171,7 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
 
                     Container
                     (
-                      margin: EdgeInsets.only(top: 15),
+                      margin: EdgeInsets.only(top: Global().smallSpacing),
                       child: MediumText
                       (
                         text: "Fill in the following information",
@@ -184,7 +180,10 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
 
                     Container
                     (
-                      margin: EdgeInsets.only(top: 15),
+                      margin: EdgeInsets.only
+                      (
+                        top: Global().smallSpacing,
+                      ),
                       child: SectionTitle
                       (
                         text: 'BUSINESS INFORMATION',
@@ -260,7 +259,7 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
                       (
                         right: Global().normalSpacing,
                         left: Global().normalSpacing,
-                        bottom: Global().extraLargeSpacing,
+                        bottom: Global().hugeSpacing,
                       ),
                       width: constraints.maxWidth,
                       child: LargeCustomButtonIconText

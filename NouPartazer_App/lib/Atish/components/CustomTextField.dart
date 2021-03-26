@@ -217,7 +217,7 @@ class CustomTextField extends StatelessWidget
           (
             suffixIcon,
             color: iconColor,
-            size: (iconSize != null) ? iconSize: Global().mediumIcon,
+            size: (iconSize != null) ? iconSize: Global().normalIcon,
           ) : null,
         ),
       ),

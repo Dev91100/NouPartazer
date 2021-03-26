@@ -41,7 +41,7 @@ class AccountCreated extends StatelessWidget
                   Icon
                   (
                     Icons.verified, //Icon Name
-                    size: Global().extraExtraLargeIcon, 
+                    size: Global().hugeIcon, 
                     color: Color.fromRGBO(245,197,41,0.9),
                   ),
 

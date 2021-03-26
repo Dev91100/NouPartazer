@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 import 'package:noupartazer_app/Atish/components/Text/SmallText.dart';
 import 'package:noupartazer_app/Devashish/Global.dart';
 

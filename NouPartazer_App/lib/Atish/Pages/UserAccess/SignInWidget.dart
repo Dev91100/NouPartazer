@@ -149,8 +149,7 @@ class _SignInWidgetState extends State<SignInWidget>
           (
             margin: EdgeInsets.only
             (
-              top: widget.constraints.maxHeight * 0.01,
-              bottom: widget.constraints.maxHeight * 0.01,
+              top: Global().tinyPageMargin
             ),
             child: MediumText
             (
@@ -159,26 +158,30 @@ class _SignInWidgetState extends State<SignInWidget>
             ),
           ),
 
-          CustomTextField
+          Container
           (
-            textColor: Colors.white,
-            controller: emailCtrl,
-            labelText: 'Email',
-            labelSize: 20,
-            labelColor: Colors.white,
-            errorColor: Colors.white,
-            errorSize: 14,
-            suffixIcon: Icons.email_outlined,
-            iconColor: Colors.white,
-            hasBorder: true,
-            fillColor: Colors.transparent,
-            borderColor: Colors.white,
-            borderWidth: 2,
-            errorBorderColor: Colors.white,
-            focusedErrorBorderColor: Colors.white,
-            keyboardType: TextInputType.emailAddress,
-            addAsterix: false,
-            optional: true,
+            margin: EdgeInsets.only(top: Global().mediumSpacing),
+            child: CustomTextField
+            (
+              textColor: Colors.white,
+              controller: emailCtrl,
+              labelText: 'Email',
+              labelSize: 20,
+              labelColor: Colors.white,
+              errorColor: Colors.white,
+              errorSize: 14,
+              suffixIcon: Icons.email_outlined,
+              iconColor: Colors.white,
+              hasBorder: true,
+              fillColor: Colors.transparent,
+              borderColor: Colors.white,
+              borderWidth: 2,
+              errorBorderColor: Colors.white,
+              focusedErrorBorderColor: Colors.white,
+              keyboardType: TextInputType.emailAddress,
+              addAsterix: false,
+              optional: true,
+            ),
           ),
 
           CustomTextField
@@ -205,7 +208,6 @@ class _SignInWidgetState extends State<SignInWidget>
 
           Container
           (
-            margin: EdgeInsets.only(top: widget.constraints.maxHeight * 0.03),
             padding: EdgeInsets.symmetric(horizontal: Global().smallSpacing),
             width: widget.constraints.maxWidth,
             child: LargeButtonIconText

@@ -222,6 +222,7 @@ class NGOTaskModel extends StatelessWidget
             ),
             Container
             (
+              margin: EdgeInsets.only(top: Global().mediumSpacing),
               child: Row
               (
                 mainAxisSize: MainAxisSize.max,

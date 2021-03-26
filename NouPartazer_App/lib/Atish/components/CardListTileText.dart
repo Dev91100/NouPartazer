@@ -66,7 +66,7 @@ class CardListTileText extends StatelessWidget
                 child: Icon
                 (
                   icon,
-                  size: (iconSize != null) ? iconSize : Global().largeIcon,
+                  size: (iconSize != null) ? iconSize : Global().mediumIcon,
                   color: iconColor,
                 ),
               ),
