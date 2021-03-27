@@ -1,23 +1,14 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'dart:io';
-// import 'dart:convert';
 
 import 'package:image_picker/image_picker.dart';
-// import 'package:http/http.dart' as http;
+import 'package:http/http.dart' as http;
 
 import 'package:noupartazer_app/Devashish/components/GetImage/DottedBox/DottedBoxWithUploadButton.dart';
 
 class DottedBoxGetImage extends StatefulWidget
 {
-  FileImage galleryImage;
-
-  FileImage getGalleryImage()
-  {
-    return galleryImage;
-  }
 
   @override
   _DottedBoxGetImageState createState() => _DottedBoxGetImageState();
@@ -25,34 +16,50 @@ class DottedBoxGetImage extends StatefulWidget
 
 class _DottedBoxGetImageState extends State<DottedBoxGetImage>
 {
-  Future<File> file;
-  String status = '';
-  String base64Image;
-  File tmpFile;
-  String errMessage = 'Error Uploading Image';
+  File _image;
+  final picker = ImagePicker();
+  var pickedImage;
 
-  chooseImage()
+  Future chooseImage() async
   {
+    pickedImage = await picker.getImage(source: ImageSource.gallery);
+    
     setState(()
     {
-      file = ImagePicker.pickImage(source: ImageSource.gallery);
+      _image = File(pickedImage.path);
     });
-    // setStatus('');
+
+    uploadImage();
+
+  }
+
+  Future uploadImage() async
+  {
+    final uri = Uri.parse("https://foodsharingapp.000webhostapp.com/UploadImage.php");
+    var request = http.MultipartRequest('POST', uri);
+    var photo = await http.MultipartFile.fromPath("image", _image.path);
+    request.files.add(photo);
+    var response = await request.send();
+
+    if(response.statusCode == 200)
+    {
+      print("Image uploaded");
+    }
+    else
+    {
+      print("Image Not Uploaded");
+    }
   }
 
   Widget showImage()
   {
     return FutureBuilder<File>
     (
-      future: file,
+      future: pickedImage,
       builder: (BuildContext context, AsyncSnapshot<File> snapshot)
       {
         if (snapshot.connectionState == ConnectionState.done && null != snapshot.data)
         {
-          widget.galleryImage = FileImage(snapshot.data);
-          tmpFile = snapshot.data;
-          base64Image = base64Encode(snapshot.data.readAsBytesSync());
-          
           return LayoutBuilder
           (
             builder: (ctx, constraints)

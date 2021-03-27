@@ -1,7 +1,11 @@
 class Global
 {
+  // -------------------- Font --------------------
+  String roboto    = 'Roboto';
+  String comfortaa = 'Comfortaa';
+
   // -------------------- Text --------------------
-  // Font Size
+  // Text Size
   final double tinyText   = 15;
   final double smallText  = 16;
   final double normalText = 17;

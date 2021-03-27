@@ -80,7 +80,7 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
       processing = true;
     });
 
-    var url = "https://foodsharingapp.000webhostapp.com/BusinessRegistration.php";
+    var uri = Uri.parse("https://foodsharingapp.000webhostapp.com/BusinessRegistration.php");
     var data = 
     {
       "brn" : brnCtrl.text,
@@ -92,7 +92,7 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
       "password" : passwordCtrl.text,
     };
 
-    var res = await http.post(url, body:data);
+    var res = await http.post(uri, body:data);
 
     if(jsonDecode(res.body) == "account already exist")
     {

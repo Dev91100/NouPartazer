@@ -87,7 +87,7 @@ class _NGORegistrationState extends State<NGORegistration>
       processing = true;
     });
       
-    var url = "https://foodsharingapp.000webhostapp.com/NGORegistration.php";
+    var uri = Uri.parse("https://foodsharingapp.000webhostapp.com/NGORegistration.php");
     var data = 
     {
       "regNumber" : regNumberCtrl.text,
@@ -105,7 +105,7 @@ class _NGORegistrationState extends State<NGORegistration>
       "password" : passwordCtrl.text,
     };
 
-    var res = await http.post(url, body:data);
+    var res = await http.post(uri, body:data);
 
     if(jsonDecode(res.body) == "account already exist")
     {

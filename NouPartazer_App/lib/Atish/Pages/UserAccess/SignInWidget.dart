@@ -81,27 +81,28 @@ class _SignInWidgetState extends State<SignInWidget>
       processing = true;
     });
 
-    var url = "https://foodsharingapp.000webhostapp.com/SignIn.php";
+    var uri = Uri.parse("https://foodsharingapp.000webhostapp.com/SignIn.php");
+
     var data = 
     {
       "email" : emailCtrl.text,
       "password" : passwordCtrl.text,
     };
 
-    var res = await http.post(url, body:data);
+    var request = await http.post(uri, body:data);
 
     var interface;
 
-    if(jsonDecode(res.body) == 'ngo')
+    if(jsonDecode(request.body) == 'ngo')
     {
       interface = NGOBottomNav();
     }
-    else if(jsonDecode(res.body) == 'business')
+    else if(jsonDecode(request.body) == 'business')
     {
       interface = BusinessBottomNav();
     }
 
-    if(jsonDecode(res.body) != 'false')
+    if(jsonDecode(request.body) != 'false')
     {
       AllTransitions().getTransition
       (
