@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 
 import 'package:noupartazer_app/Atish/components/ListTileModel.dart';
+import 'package:noupartazer_app/Global.dart';
 
 
 class SettingsModel extends StatefulWidget
@@ -76,10 +77,9 @@ class _SettingsModelState extends State<SettingsModel>
   {
     return Container
     (
-      margin:EdgeInsets.only
+      margin: EdgeInsets.symmetric
       (
-        left: 20,
-        right: 20
+        horizontal: Global().smallPageMargin
       ),
       child: Column
       (
@@ -135,11 +135,11 @@ class _SettingsModelState extends State<SettingsModel>
           ListTileModel
           (
             leadingIcon: (widget.logOut) ? Icons.logout : Icons.settings_power,
-            leadingColor: Color.fromRGBO(0, 50, 193, 1),
+            leadingColor: (widget.logOut) ? Color.fromRGBO(212, 0, 0, 1) : Color.fromRGBO(0, 50, 193, 1),
             titleText: (widget.logOut) ? 'Log out' : 'Log in',
-            textColor: Color.fromRGBO(0, 50, 193, 1), 
+            textColor: (widget.logOut) ? Color.fromRGBO(212, 0, 0, 1) : Color.fromRGBO(0, 50, 193, 1), 
             trailingIcon: Icons.keyboard_arrow_right,
-            trailingColor: Color.fromRGBO(0, 50, 193, 1),
+            trailingColor: (widget.logOut) ? Color.fromRGBO(212, 0, 0, 1) : Color.fromRGBO(0, 50, 193, 1),
             isPopUpPage: (widget.logOut) ? true : false, //If the button is logout then an alert dialog should popup
             isPage: (!widget.logOut) ? true: false, // If the button is login then it should redirect to a page
             onPress: widget.logPage,

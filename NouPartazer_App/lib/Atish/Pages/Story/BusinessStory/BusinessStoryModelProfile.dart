@@ -21,7 +21,7 @@ class BusinessStoryModelProfile extends StatelessWidget
           shrinkWrap: true,
           padding: const EdgeInsets.only
           (
-            top: 10
+            top: 0
           ),
           // Prevents vertical scrolling
           physics: NeverScrollableScrollPhysics(),

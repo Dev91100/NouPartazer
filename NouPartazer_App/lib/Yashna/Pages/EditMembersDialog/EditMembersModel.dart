@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:noupartazer_app/Devashish/components/GetImage/EditMembersPhoto/MembersPhotoGetImage.dart';
 import 'package:noupartazer_app/Yashna/components/IconTextField.dart';
 import 'package:noupartazer_app/Yashna/components/TwoButtons.dart';
-import 'package:noupartazer_app/Devashish/Global.dart';
+import 'package:noupartazer_app/Global.dart';
 
 class EditMembersModel
 {
@@ -16,10 +16,10 @@ class EditMembersModel
         return Container
         (
           margin: EdgeInsets.symmetric
-              (
-                horizontal: Global().smallPageMargin,
-                vertical: Global().smallPageMargin,
-              ),
+          (
+            horizontal: Global().tinyPageMargin,
+            vertical: Global().smallPageMargin,
+          ),
           child: SingleChildScrollView
           (
             child: Column

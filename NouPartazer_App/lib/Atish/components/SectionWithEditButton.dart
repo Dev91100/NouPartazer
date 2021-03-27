@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:noupartazer_app/Devashish/Global.dart';
+import 'package:noupartazer_app/Global.dart';
 
 import './SectionTitle.dart';
 import 'Buttons/RoundIconButton.dart';
@@ -44,7 +44,7 @@ class SectionWithEditButton extends StatelessWidget
       (
         text: title,
         fontSize: (fontSize != null) ? fontSize : Global().mediumText,
-        color: color,
+        textColor: color,
         margin: const EdgeInsets.all(0),
       );
       
@@ -90,7 +90,7 @@ class SectionWithEditButton extends StatelessWidget
                         (
                           text: title,
                           fontSize: (fontSize != null) ? fontSize : Global().mediumText,
-                          color: color,
+                          textColor: color,
                           margin: sectionTitleMargin,
                         ),
                       ),

@@ -5,8 +5,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:noupartazer_app/Atish/Pages/Story/NGOStory/NGOStory.dart';
 import 'package:noupartazer_app/Atish/components/LongText.dart';
 import 'package:noupartazer_app/Atish/components/ContainerText.dart';
-import 'package:noupartazer_app/Devashish/Global.dart';
-
+import 'package:noupartazer_app/Global.dart';
 
 class NGOStoryModel extends StatelessWidget
 {
@@ -93,7 +92,7 @@ class NGOStoryModel extends StatelessWidget
                   // Location Name
                   child: Padding
                   (
-                    padding: const EdgeInsets.fromLTRB(15,0,15,15),
+                    padding: EdgeInsets.all(Global().smallPageMargin),
                     child: Column
                     (
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -150,7 +149,7 @@ class NGOStoryModel extends StatelessWidget
                                   borderRadius: 40,
                                   boxColor: Color.fromRGBO(255, 248, 97, 0.2),
                                   padding: EdgeInsets.fromLTRB(15, 10, 15, 10),
-                                  margin: EdgeInsets.only(right: 10),
+                                  margin: EdgeInsets.only(right: Global().smallSpacing),
                                 ),
                               ],
                             ),

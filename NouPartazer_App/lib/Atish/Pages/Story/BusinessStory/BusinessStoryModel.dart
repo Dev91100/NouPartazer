@@ -7,7 +7,7 @@ import 'package:noupartazer_app/Atish/components/ContainerIconText.dart';
 import 'package:noupartazer_app/Atish/components/ContainerText.dart';
 import 'package:noupartazer_app/Atish/components/Text/MediumText.dart';
 import 'package:noupartazer_app/Atish/components/Text/SmallText.dart';
-import 'package:noupartazer_app/Devashish/Global.dart';
+import 'package:noupartazer_app/Global.dart';
 
 class BusinessStoryModel extends StatelessWidget
 {
@@ -91,7 +91,7 @@ class BusinessStoryModel extends StatelessWidget
                   // Location Name
                   child: Padding
                   (
-                    padding: const EdgeInsets.fromLTRB(15,0,15,15),
+                    padding: EdgeInsets.all(Global().smallPageMargin),
                     child: Column
                     (
                       mainAxisAlignment: MainAxisAlignment.end,

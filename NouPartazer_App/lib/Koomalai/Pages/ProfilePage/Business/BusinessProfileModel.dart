@@ -6,6 +6,7 @@ import 'package:noupartazer_app/Atish/components/CustomDivider.dart';
 import 'package:noupartazer_app/Atish/components/LongText.dart';
 import 'package:noupartazer_app/Atish/components/SectionWithEditButton.dart';
 import 'package:noupartazer_app/Atish/components/ContactInfo.dart';
+import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/Devashish/components/GetImage/BannerPhoto/BannerPhotoGetImage.dart';
 import 'package:noupartazer_app/Devashish/components/GetImage/ProfilePhoto/ProfilePhotoGetImage.dart';
 import 'package:noupartazer_app/Atish/Pages/Story/BusinessStory/BusinessStoryModelProfile.dart';
@@ -65,7 +66,7 @@ class BusinessProfileModel extends StatelessWidget
 
                       margin: EdgeInsets.only
                       (
-                        right: 10,
+                        right: Global().smallSpacing,
                         top: screen.height * 0.33,
                       ),
                       child: SettingsButton(),
@@ -73,21 +74,26 @@ class BusinessProfileModel extends StatelessWidget
                   ],
                 ),
 
-                Column
+                Container
                 (
-                  children:
-                  [
-                    Container
-                    (
-                      child: SectionTitle
+                  margin: (isEditable) ?  null : EdgeInsets.only(top: constraints.maxHeight * 0.025),
+                  child: Column
+                  (
+                    children:
+                    [
+                      SectionTitle
                       (
                         text: 'MY STORIES',
-                        margin: EdgeInsets.only(left: 20, right: 20),
+                        margin: EdgeInsets.symmetric(horizontal: Global().smallPageMargin),
                       ),
-                    ),
 
-                    BusinessStoryModelProfile(),
-                  ],
+                      Container
+                      (
+                        margin: EdgeInsets.only(top: Global().smallSpacing),
+                        child: BusinessStoryModelProfile()
+                      ),
+                    ],
+                  ),
                 ),
                 
                 CustomDivider
@@ -98,13 +104,11 @@ class BusinessProfileModel extends StatelessWidget
 
                 Container
                 (
-                  margin: EdgeInsets.only
-                  (
-                    left: 20,
-                    right: 20  
-                  ),
+                  margin: EdgeInsets.symmetric(horizontal: Global().smallPageMargin),
                   child: Column
                   (
+                    mainAxisSize: MainAxisSize.max,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children:
                     [
                       SectionWithEditButton
@@ -116,26 +120,14 @@ class BusinessProfileModel extends StatelessWidget
                         isModalPage: true,
                       ),
                       
-                      Align
+                      SectionTitle
                       (
-                        alignment: Alignment.centerLeft,
-                        child: Container
-                        (
-                          width: screen.width * 0.9,
-                          child: SectionTitle
-                          (
-                            text: 'Best supermarket chain',
-                            color: Color.fromRGBO(51, 51, 51, 1),
-                          ),
-                        ),
+                        text: 'Best supermarket chain',
+                        textColor: Color.fromRGBO(51, 51, 51, 1),
                       ),
 
                       Container
                       (
-                        margin: EdgeInsets.only
-                        (
-                          top: 10,
-                        ),
                         constraints: BoxConstraints
                         (
                           maxHeight: constraints.maxHeight * 0.25,
@@ -144,7 +136,6 @@ class BusinessProfileModel extends StatelessWidget
                         (
                           text: "Jumbo is the supermarket chain that has democratized mass distribution, becoming the preferred supermarket for Mauritian households. A subsidiary of the IBL group, Jumbo supermarkets have been present on the island since 1994, and are the first to have opened a supermarket in a rural area.",
                           textAlign: TextAlign.justify,
-                          fontWeight: FontWeight.w500,
                         ),
                       ),
 
@@ -154,7 +145,7 @@ class BusinessProfileModel extends StatelessWidget
                       (
                         child: Container
                         (
-                          margin: (isEditable) ?  null : EdgeInsets.only(bottom: constraints.maxHeight *0.025),
+                          margin: (isEditable) ?  null : EdgeInsets.only(bottom: constraints.maxHeight * 0.025),
                           child: SectionWithEditButton
                           (
                             isEditable: isEditable,
@@ -167,6 +158,7 @@ class BusinessProfileModel extends StatelessWidget
 
                       ContactInfo
                       (
+                        margin: EdgeInsets.all(0),
                         website: 'www.manzerpartazer.org',
                         icon: Icons.language_outlined,
                       ),
@@ -183,7 +175,7 @@ class BusinessProfileModel extends StatelessWidget
                         icon: Icons.call_outlined,
                       ),
 
-                      SizedBox(height: 30),
+                      SizedBox(height: Global().largeSpacing),
                     ],
                   ),
                 ),             

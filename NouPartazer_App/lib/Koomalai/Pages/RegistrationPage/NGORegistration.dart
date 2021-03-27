@@ -11,7 +11,7 @@ import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 import 'package:noupartazer_app/Atish/components/Text/HugeText.dart';
 import 'package:noupartazer_app/Atish/components/Text/MediumText.dart';
-import 'package:noupartazer_app/Devashish/Global.dart';
+import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/Devashish/components/AccountCreated.dart';
 import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
 
@@ -315,16 +315,11 @@ class _NGORegistrationState extends State<NGORegistration>
                       obscureText: true,
                       labelText: 'Password',
                       hasSuffixIcon: false,
+                      margin: EdgeInsets.only(bottom: 0),
                     ),
 
                     Container
                     (
-                      padding: EdgeInsets.only
-                      (
-                        right: Global().normalSpacing,
-                        left: Global().normalSpacing,
-                        bottom: Global().hugeSpacing,
-                      ),
                       width: constraints.maxWidth,
                       child: LargeCustomButtonIconText
                       (

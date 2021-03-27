@@ -5,7 +5,7 @@ import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/SmallButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
-import 'package:noupartazer_app/Devashish/Global.dart';
+import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/Yashna/Pages/ConfirmationDialog/DeactivateAccount.dart';
 
 class Security extends StatefulWidget
@@ -86,6 +86,7 @@ class _SecurityState extends State<Security>
                         keyboardType: TextInputType.visiblePassword,
                         labelText: 'New password',
                         suffixIcon: Icons.https_outlined,
+                        margin: EdgeInsets.only(bottom: 0),
                       ),
                       
                       Container

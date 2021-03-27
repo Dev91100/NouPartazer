@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/Text/NormalText.dart';
 import 'package:noupartazer_app/Atish/components/Text/TinyText.dart';
+import 'package:noupartazer_app/Global.dart';
 
 
 class NGOCentresModel extends StatelessWidget
@@ -36,16 +37,15 @@ class NGOCentresModel extends StatelessWidget
   {
     return Container
     (
-      margin: EdgeInsets.only
+      margin: EdgeInsets.symmetric
       (
-        left: 10,
-        right: 10,
+        horizontal: Global().smallPageMargin,
       ),
       child: Container
       (
         margin: EdgeInsets.only
         (
-          bottom: 5
+          bottom: Global().tinySpacing,
         ),
         child: ElevatedButton
         (
@@ -62,12 +62,9 @@ class NGOCentresModel extends StatelessWidget
 
           child: Padding
           (
-            padding: const EdgeInsets.only
+            padding: EdgeInsets.symmetric
             (
-              left: 0,
-              right: 0,
-              top: 10,
-              bottom: 10,
+              vertical: Global().ngoCentresListSpacing,
             ),
             
             child: Row
@@ -79,7 +76,7 @@ class NGOCentresModel extends StatelessWidget
                 (
                   margin: EdgeInsets.only
                   (
-                    right: 10
+                    right: Global().smallSpacing,
                   ),
                   width: 60,
                   height: 60,
@@ -112,7 +109,7 @@ class NGOCentresModel extends StatelessWidget
                             (
                               child: Container
                               (
-                                padding: EdgeInsets.only(bottom: 5),
+                                padding: EdgeInsets.only(bottom: Global().tinySpacing),
                                 child: SingleChildScrollView
                                 (
                                   scrollDirection: Axis.horizontal,
@@ -141,7 +138,7 @@ class NGOCentresModel extends StatelessWidget
                               ),
                             ),
                           ),
-                          padding: EdgeInsets.only(bottom: 10),
+                          padding: EdgeInsets.only(bottom: Global().smallSpacing),
                           child: SingleChildScrollView
                           (
                             scrollDirection: Axis.horizontal,

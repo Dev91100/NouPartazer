@@ -6,7 +6,7 @@ import 'package:noupartazer_app/Atish/components/ContainerIconText.dart';
 import 'package:noupartazer_app/Atish/components/ContainerText.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/SmallButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/Text/NormalText.dart';
-import 'package:noupartazer_app/Devashish/Global.dart';
+import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/Koomalai/Pages/EventDetailsPage/EventDetails.dart';
 
 class BusinessTaskModel extends StatelessWidget
@@ -38,10 +38,14 @@ class BusinessTaskModel extends StatelessWidget
     return Card
     (
       elevation: 2,
-      margin: EdgeInsets.all(20),
+      margin: EdgeInsets.symmetric
+      (
+        vertical: Global().mediumSpacing, 
+        horizontal: Global().smallPageMargin,
+      ),
       child: Container
       (
-        padding: EdgeInsets.all(10),
+        padding: EdgeInsets.all(Global().smallSpacing),
         child: Column
         (
           mainAxisAlignment: MainAxisAlignment.center,
@@ -56,10 +60,9 @@ class BusinessTaskModel extends StatelessWidget
               ),
               child: Padding
               (
-                padding: const EdgeInsets.only
+                padding: EdgeInsets.symmetric
                 (
-                  top: 10,
-                  bottom: 10,
+                  vertical: Global().smallSpacing,
                 ),
                 
                 child: Row
@@ -71,7 +74,7 @@ class BusinessTaskModel extends StatelessWidget
                     (
                       margin: EdgeInsets.only
                       (
-                        right: 10
+                        right: Global().smallSpacing,
                       ),
                       width: 60,
                       height: 60,
@@ -97,7 +100,7 @@ class BusinessTaskModel extends StatelessWidget
                           [
                             Container
                             (
-                              padding: EdgeInsets.only(bottom: 10),
+                              padding: EdgeInsets.only(bottom: Global().smallSpacing),
                               child: SingleChildScrollView
                               (
                                 scrollDirection: Axis.horizontal,
@@ -107,7 +110,7 @@ class BusinessTaskModel extends StatelessWidget
                                   [
                                     Container
                                     (
-                                      margin: EdgeInsets.only(right: 10),
+                                      margin: EdgeInsets.only(right: Global().smallSpacing),
                                       child: IconText
                                       (
                                         text: date,
@@ -137,7 +140,7 @@ class BusinessTaskModel extends StatelessWidget
                                 (
                                   child: Container
                                   (
-                                    padding: EdgeInsets.only(bottom: 5),
+                                    padding: EdgeInsets.only(bottom: Global().tinySpacing),
                                     child: SingleChildScrollView
                                     (
                                       scrollDirection: Axis.horizontal,
@@ -163,7 +166,7 @@ class BusinessTaskModel extends StatelessWidget
             ),
             Container
             (
-              margin: EdgeInsets.only(top: 10),
+              margin: EdgeInsets.only(top: Global().smallSpacing),
               child: SectionTitle
               (
                 text: tag,
@@ -172,7 +175,6 @@ class BusinessTaskModel extends StatelessWidget
             
             Container
             (
-              margin: EdgeInsets.only(top: 10),
               constraints: BoxConstraints
               (
                 maxHeight: constraints.maxHeight * 0.2,
@@ -199,7 +201,7 @@ class BusinessTaskModel extends StatelessWidget
             ),
             Container
             (
-              margin: EdgeInsets.only(top: 20),
+              margin: EdgeInsets.only(top: Global().mediumSpacing),
               child: Row
               (
                 children:
@@ -220,7 +222,11 @@ class BusinessTaskModel extends StatelessWidget
                     textColor: Color.fromRGBO(245, 197, 41, 1),
                     borderColor: Color.fromRGBO(245, 197, 41, 1),
                     boxColor: Color.fromRGBO(255, 248, 97, 0.2),
-                    padding: EdgeInsets.only(left: 40, right: 40),
+                    padding: EdgeInsets.symmetric
+                    (
+                      vertical: Global().tinySpacing,
+                      horizontal: Global().largeSpacing,  
+                    ),
                   ),
                 ],
               ),
@@ -240,18 +246,18 @@ class BusinessTaskModel extends StatelessWidget
                   (
                     text: 'Call',
                     icon: Icons.phone_forwarded,
-                    iconRight: 5,
+                    iconRight: Global().tinySpacing,
                     buttonColor: Color.fromRGBO(245, 197, 1, 1),
                   ) : Container(),
 
                   Container
                   (
-                    margin:(canCall) ? EdgeInsets.only(left: 15) : EdgeInsets.only(left: 0),
+                    margin:(canCall) ? EdgeInsets.only(left: Global().normalSpacing) : EdgeInsets.only(left: 0),
                     child: SmallButtonIconText
                     (
                       text: 'View Details',
                       icon: Icons.visibility_outlined,
-                      iconRight: 5,
+                      iconRight: Global().tinySpacing,
                       onPress: EventDetails(),
                       transitionType: 'rightToLeft',
                       transitionDuration: 1100,

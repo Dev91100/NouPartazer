@@ -8,7 +8,7 @@ import 'package:noupartazer_app/Atish/components/Buttons/LargeButtonIconText.dar
 import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
 import 'package:noupartazer_app/Atish/components/Text/HugeText.dart';
 import 'package:noupartazer_app/Atish/components/Text/MediumText.dart';
-import 'package:noupartazer_app/Devashish/Global.dart';
+import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
 import 'package:noupartazer_app/Koomalai/Pages/BottomNavigation/BusinessBottomNav.dart';
 import 'package:noupartazer_app/Koomalai/Pages/BottomNavigation/NGOBottomNav.dart';
@@ -149,7 +149,7 @@ class _SignInWidgetState extends State<SignInWidget>
           (
             margin: EdgeInsets.only
             (
-              top: Global().tinyPageMargin,
+              top: Global().tinyPageMargin
             ),
             child: MediumText
             (
@@ -181,11 +181,6 @@ class _SignInWidgetState extends State<SignInWidget>
               keyboardType: TextInputType.emailAddress,
               addAsterix: false,
               optional: true,
-              contentPadding: EdgeInsets.symmetric
-              (
-                horizontal: Global().smallSpacing, 
-                vertical: Global().mediumSpacing,
-              ),
             ),
           ),
 
@@ -209,11 +204,7 @@ class _SignInWidgetState extends State<SignInWidget>
             focusedErrorBorderColor: Colors.white,
             addAsterix: false,
             errorMsg: 'Email and password fields required.',
-            contentPadding: EdgeInsets.symmetric
-            (
-              horizontal: Global().smallSpacing, 
-              vertical: Global().mediumSpacing
-            ),
+            margin: EdgeInsets.only(bottom: 0),
           ),
 
           Container

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/Text/SmallText.dart';
-import 'package:noupartazer_app/Devashish/Global.dart';
+import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/Yashna/components/TwoButtons.dart';
 
 class ConfirmationModel
@@ -50,11 +50,7 @@ class ConfirmationModel
               borderRadius: BorderRadius.all(Radius.circular(20)),
             ),
 
-            contentPadding: EdgeInsets.symmetric
-            (
-              horizontal: Global().smallPageMargin,
-              vertical: Global().smallPageMargin,
-            ),
+            contentPadding: EdgeInsets.all(Global().smallPageMargin,),
 
             content: Column
             (

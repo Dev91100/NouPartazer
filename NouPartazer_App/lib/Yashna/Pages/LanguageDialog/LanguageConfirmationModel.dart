@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Yashna/components/TwoButtons.dart';
-import 'package:noupartazer_app/Devashish/Global.dart';
+import 'package:noupartazer_app/Global.dart';
 
 class LanguageConfirmationModel
 {
@@ -127,7 +127,6 @@ class LanguageConfirmationModel
 
                     Container
                     (
-                      // margin: EdgeInsets.only(top: 15),
                       child: TwoButtons
                       (
                         buttonText2: buttonText2,

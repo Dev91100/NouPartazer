@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/RoundIconButton.dart';
-import 'package:noupartazer_app/Devashish/Global.dart';
+import 'package:noupartazer_app/Global.dart';
 
 class MembersPhotoWithEditButton extends StatelessWidget
 {

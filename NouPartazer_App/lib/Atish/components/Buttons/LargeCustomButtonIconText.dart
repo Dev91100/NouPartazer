@@ -3,7 +3,7 @@ import 'package:flutter/rendering.dart';
 
 import 'package:noupartazer_app/Atish/components/IconText.dart';
 import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
-import 'package:noupartazer_app/Devashish/Global.dart';
+import 'package:noupartazer_app/Global.dart';
 
 class LargeCustomButtonIconText extends StatelessWidget
 {
@@ -89,8 +89,15 @@ class LargeCustomButtonIconText extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Container(
-      margin: (margin!= null) ? margin : EdgeInsets.only(top: Global().mediumSpacing),
+    return Container
+    (
+      padding: (padding != null) ? padding : EdgeInsets.only
+      (
+        right: Global().normalSpacing,
+        left: Global().normalSpacing,
+        bottom: Global().hugeSpacing,
+      ),
+      margin: (margin!= null) ? margin : EdgeInsets.only(top: Global().largeSpacing),
       child: TextButton
       (
         style: OutlinedButton.styleFrom

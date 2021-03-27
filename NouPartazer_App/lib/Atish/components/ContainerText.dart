@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:noupartazer_app/Devashish/Global.dart';
+import 'package:noupartazer_app/Global.dart';
 
 class ContainerText extends StatelessWidget
 {
@@ -38,8 +38,8 @@ class ContainerText extends StatelessWidget
   {
     return Container
     (
-      margin: margin,
-      padding: padding,
+      margin: (margin != null) ? margin : EdgeInsets.only(right: Global().normalSpacing),
+      padding: (padding != null) ? padding : EdgeInsets.symmetric(vertical: Global().tinySpacing),
       
       decoration: BoxDecoration
       (

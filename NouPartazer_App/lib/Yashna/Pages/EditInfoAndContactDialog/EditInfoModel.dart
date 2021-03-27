@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:noupartazer_app/Devashish/Global.dart';
+import 'package:noupartazer_app/Global.dart';
 
 import 'package:noupartazer_app/Yashna/components/IconTextField.dart';
 import 'package:noupartazer_app/Yashna/components/TwoButtons.dart';
@@ -55,7 +55,7 @@ class EditInfoModel
             (
               padding: EdgeInsets.symmetric
               (
-                horizontal: Global().smallPageMargin,
+                horizontal: Global().tinyPageMargin,
                 vertical: Global().smallPageMargin,
               ),
               child: Form

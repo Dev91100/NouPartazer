@@ -4,7 +4,7 @@ import 'package:noupartazer_app/Atish/components/IconText.dart';
 import 'package:noupartazer_app/Atish/components/Text/NormalText.dart';
 import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
 import 'package:noupartazer_app/Koomalai/Pages/EventDetailsPage/EventDetails.dart';
-import 'package:noupartazer_app/Devashish/Global.dart';
+import 'package:noupartazer_app/Global.dart';
 
 class DonationModel extends StatelessWidget
 {

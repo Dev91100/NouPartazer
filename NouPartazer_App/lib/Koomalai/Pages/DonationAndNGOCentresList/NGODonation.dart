@@ -5,7 +5,7 @@ import 'package:noupartazer_app/Atish/components/PageTitle.dart';
 import 'package:noupartazer_app/Atish/Pages/Story/BusinessStory/BusinessStory.dart';
 import 'package:noupartazer_app/Atish/Pages/Story/BusinessStory/BusinessStoryList.dart';
 import 'package:noupartazer_app/Atish/Pages/Donation/DonationModel.dart';
-import 'package:noupartazer_app/Devashish/Global.dart';
+import 'package:noupartazer_app/Global.dart';
 
 class Donation extends StatelessWidget
 {

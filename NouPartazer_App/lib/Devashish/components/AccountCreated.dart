@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/LargeCustomButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/Text/HugeText.dart';
 import 'package:noupartazer_app/Atish/components/Text/MediumText.dart';
-import 'package:noupartazer_app/Devashish/Global.dart';
+import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/Devashish/components/TheBackButton.dart';
 import 'package:noupartazer_app/Atish/Pages/UserAccess/UserAccessPanel.dart';
 
@@ -66,7 +66,6 @@ class AccountCreated extends StatelessWidget
                   Container
                   (
                     width: constraints.maxWidth * 0.7,
-                    margin: EdgeInsets.only(top: 20),
                     child: LargeCustomButtonIconText
                     (
                       text: "Log In",

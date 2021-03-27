@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:noupartazer_app/Atish/components/Text/MediumText.dart';
 
-import 'package:noupartazer_app/Devashish/Global.dart';
+import 'package:noupartazer_app/Global.dart';
 
 import 'package:noupartazer_app/Koomalai/Pages/Task/NGOTask/NGOCancelledTask.dart';
 import 'package:noupartazer_app/Koomalai/Pages/Task/NGOTask/NGOCompletedTask.dart';
