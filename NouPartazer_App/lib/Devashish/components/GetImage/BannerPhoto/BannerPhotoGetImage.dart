@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-import 'dart:io';
 import 'dart:convert';
+import 'package:crypto/crypto.dart';
+
+import 'dart:io';
 import 'package:http/http.dart' as http;
 
+import 'package:path/path.dart' as p;
 import 'package:image_picker/image_picker.dart';
 
 import 'package:noupartazer_app/Devashish/components/GetImage/BannerPhoto/BannerPhotoWithEditButton.dart';
@@ -30,107 +33,74 @@ class BannerPhotoGetImage extends StatefulWidget
 
 class _BannerPhotoGetImageState extends State<BannerPhotoGetImage>
 {
-  static final String uploadEndPoint = "https://foodsharingapp.000webhostapp.com/UploadImage.php";
-  Future<File> file;
-  String status = '';
-  String base64Image;
-  File tmpFile;
-  String errMessage = 'Error Uploading Image';
+  File _image;
+  final picker = ImagePicker();
+  var pickedImage;
+  var imageExtension;
 
-  chooseImage()
+  Future chooseImage() async
   {
+    pickedImage = await picker.getImage(source: ImageSource.gallery);
+
     setState(()
     {
-      file = ImagePicker.pickImage(source: ImageSource.gallery);
+      _image = File(pickedImage.path);
+      imageExtension = p.extension(pickedImage.path);
     });
-    // setStatus('');
+
+    uploadImage();
+
   }
 
-  setStatus(String message)
+  Future uploadImage() async
   {
-    setState(()
-    {
-      status = message;  
-    });
-  }
+    final uri = Uri.parse("https://foodsharingapp.000webhostapp.com/UploadImage.php");
+    var request = http.MultipartRequest('POST', uri);
+    request.fields['name'] = md5.convert(utf8.encode(DateTime.now().toString())).toString() + imageExtension;
 
-  startUpload()
-  {
-    setStatus("Uploading Image...");
-    if(null == tmpFile)
+    var photo = await http.MultipartFile.fromPath("image", _image.path);
+    request.files.add(photo);
+    
+    var response = await request.send();
+
+    if(response.statusCode == 200)
     {
-      setStatus(errMessage);
-      return;
+      print("Image uploaded");
     }
-    String fileName = tmpFile.path.split('/').last;
-    upload(fileName);
-  }
-
-  upload(String fileName)
-  {
-    http.post
-    (
-      uploadEndPoint,
-      body: 
-      {
-        "image": base64Image,
-        "name": fileName,
-      },
-    ) .then((result)
+    else
     {
-      setStatus(result.statusCode == 200 ? result.body: errMessage);
-    }).catchError((error)
-    {
-      setStatus(error);
-    });
+      print("Image Not Uploaded");
+    }
   }
 
   Widget showImage()
   {
-    return FutureBuilder<File>
-    (
-      future: file,
-      builder: (BuildContext context, AsyncSnapshot<File> snapshot)
+  {
+      if (pickedImage != null)
       {
-        if (snapshot.connectionState == ConnectionState.done && null != snapshot.data)
-        {
-          tmpFile = snapshot.data;
-          base64Image = base64Encode(snapshot.data.readAsBytesSync());
+        
+        return BannerPhotoWithEditButton
+        (
+          fileImage: FileImage(File(pickedImage.path)),
+          screen: widget.screen,
+          isEditable: widget.isEditable,
+          constraints: widget.constraints,
+          onPress: chooseImage,
+        );
 
-          return BannerPhotoWithEditButton
-          (
-            fileImage: FileImage(snapshot.data),
-            screen: widget.screen,
-            isEditable: widget.isEditable,
-            constraints: widget.constraints,
-            onPress: chooseImage,
-          );
-
-        } else if (null != snapshot.error)
-        {
-          return BannerPhotoWithEditButton
-          (
-            fileImage: null,
-            screen: widget.screen,
-            isEditable: widget.isEditable,
-            constraints: widget.constraints,
-            onPress: chooseImage,
-          );
-
-        }
-        else
-        {
-          return BannerPhotoWithEditButton
-          (
-            fileImage: null,
-            screen: widget.screen,
-            isEditable: widget.isEditable,
-            constraints: widget.constraints,
-            onPress: chooseImage,
-          );
-        }
-      },
-    );
+      }
+      else
+      {
+        return BannerPhotoWithEditButton
+        (
+          fileImage: null,
+          screen: widget.screen,
+          isEditable: widget.isEditable,
+          constraints: widget.constraints,
+          onPress: chooseImage,
+        );
+      }
+    }
   }
 
   @override

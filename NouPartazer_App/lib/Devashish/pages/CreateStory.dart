@@ -75,7 +75,7 @@ class _CreateStoryState extends State<CreateStory>
       processing = true;
     });
 
-    var url = "https://foodsharingapp.000webhostapp.com/CreateStory.php";
+    var uri = Uri.parse("https://foodsharingapp.000webhostapp.com/CreateStory.php");
     var data = 
     {
       "title" : titleCtrl.text,
@@ -83,7 +83,7 @@ class _CreateStoryState extends State<CreateStory>
       "tag" : tagCtrl.text,
     };
 
-    var res = await http.post(url, body:data);
+    var res = await http.post(uri, body:data);
 
     if(jsonDecode(res.body) == "true")
     {
