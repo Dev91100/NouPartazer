@@ -40,6 +40,7 @@ class CustomTextField extends StatelessWidget
   final TextEditingController controller;
   final bool addAsterix;
   final onSaved;
+  final EdgeInsets contentPadding;
 
   CustomTextField
   (
@@ -53,7 +54,7 @@ class CustomTextField extends StatelessWidget
       this.errorColor,
       this.errorSize,
       this.errorMsg,
-      this.fontWeight = FontWeight.w400,
+      this.fontWeight,
       this.obscureText = false,
       this.fieldType,
       this.optional = false,
@@ -77,6 +78,7 @@ class CustomTextField extends StatelessWidget
       this.controller,
       this.addAsterix = true,
       this.onSaved,
+      this.contentPadding,
     }
   );
 
@@ -150,15 +152,24 @@ class CustomTextField extends StatelessWidget
         ),
         decoration: InputDecoration
         (
+          contentPadding: (contentPadding != null ) ? contentPadding : EdgeInsets.only
+          (
+            left: 15,
+            top: 5,
+            right: 15,
+            bottom: 10,
+          ),
+          
+          isDense: true,
           filled: true,
           fillColor: fillColor,
           alignLabelWithHint: alignLabel, // Align label to the top in the case of multiline
           labelText: (addAsterix) ? labelText + '*' : labelText,
           labelStyle: TextStyle
           (
-            fontSize: (labelSize != null) ? labelSize : Global().tinyText,
+            fontSize: (labelSize != null) ? labelSize : Global().normalText,
             color: labelColor,
-            fontWeight: fontWeight,
+            fontWeight: (fontWeight != null) ? fontWeight: FontWeight.w400,
           ),
 
           errorStyle: TextStyle

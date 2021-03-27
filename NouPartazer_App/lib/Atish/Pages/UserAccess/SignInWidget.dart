@@ -149,7 +149,7 @@ class _SignInWidgetState extends State<SignInWidget>
           (
             margin: EdgeInsets.only
             (
-              top: Global().tinyPageMargin
+              top: Global().tinyPageMargin,
             ),
             child: MediumText
             (
@@ -181,6 +181,11 @@ class _SignInWidgetState extends State<SignInWidget>
               keyboardType: TextInputType.emailAddress,
               addAsterix: false,
               optional: true,
+              contentPadding: EdgeInsets.symmetric
+              (
+                horizontal: Global().smallSpacing, 
+                vertical: Global().mediumSpacing,
+              ),
             ),
           ),
 
@@ -204,6 +209,11 @@ class _SignInWidgetState extends State<SignInWidget>
             focusedErrorBorderColor: Colors.white,
             addAsterix: false,
             errorMsg: 'Email and password fields required.',
+            contentPadding: EdgeInsets.symmetric
+            (
+              horizontal: Global().smallSpacing, 
+              vertical: Global().mediumSpacing
+            ),
           ),
 
           Container
