@@ -6,7 +6,7 @@ import 'package:noupartazer_app/Atish/components/CustomDivider.dart';
 import 'package:noupartazer_app/Atish/components/LongText.dart';
 import 'package:noupartazer_app/Atish/components/SectionWithEditButton.dart';
 import 'package:noupartazer_app/Atish/components/ContactInfo.dart';
-import 'package:noupartazer_app/Devashish/Global.dart';
+import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/Devashish/components/GetImage/BannerPhoto/BannerPhotoGetImage.dart';
 import 'package:noupartazer_app/Devashish/components/GetImage/ProfilePhoto/ProfilePhotoGetImage.dart';
 import 'package:noupartazer_app/Atish/Pages/Story/BusinessStory/BusinessStoryModelProfile.dart';

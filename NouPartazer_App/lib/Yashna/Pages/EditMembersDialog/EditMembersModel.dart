@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:noupartazer_app/Devashish/components/GetImage/EditMembersPhoto/MembersPhotoGetImage.dart';
 import 'package:noupartazer_app/Yashna/components/IconTextField.dart';
 import 'package:noupartazer_app/Yashna/components/TwoButtons.dart';
-import 'package:noupartazer_app/Devashish/Global.dart';
+import 'package:noupartazer_app/Global.dart';
 
 class EditMembersModel
 {

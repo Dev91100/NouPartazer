@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:validators/validators.dart';
 import 'package:validators/sanitizers.dart';
 
-import 'package:noupartazer_app/Devashish/Global.dart';
+import 'package:noupartazer_app/Global.dart';
 
 class CustomTextField extends StatelessWidget
 {

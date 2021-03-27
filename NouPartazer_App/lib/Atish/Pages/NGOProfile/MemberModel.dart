@@ -4,7 +4,7 @@ import 'package:noupartazer_app/Atish/Pages/NGOProfile/Member.dart';
 import 'package:noupartazer_app/Atish/Pages/NGOProfile/MemberList.dart';
 import 'package:noupartazer_app/Atish/components/Text/SmallText.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/RoundIconButton.dart';
-import 'package:noupartazer_app/Devashish/Global.dart';
+import 'package:noupartazer_app/Global.dart';
 
 class MemberModel extends StatelessWidget
 {

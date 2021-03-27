@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/Text/NormalText.dart';
 import 'package:noupartazer_app/Atish/components/Text/TinyText.dart';
-import 'package:noupartazer_app/Devashish/Global.dart';
+import 'package:noupartazer_app/Global.dart';
 
 
 class NGOCentresModel extends StatelessWidget

@@ -30,17 +30,6 @@ class MyApp extends StatelessWidget
         primaryColor: primary1,
         accentColor: secondary1,
         scaffoldBackgroundColor: Colors.white,
-
-        textTheme: TextTheme
-        (
-          headline1: TextStyle
-          (
-            fontFamily: 'Comfortaa',
-            fontWeight: FontWeight.bold,
-            fontSize: 18,
-            color: new Color.fromRGBO(0, 0, 0, 1),
-          ),
-        )
       ),
       home: CustomSplashscreen(),
     );

@@ -5,7 +5,7 @@ import 'package:noupartazer_app/Atish/components/Buttons/CustomIconButton.dart';
 import 'package:noupartazer_app/Atish/Pages/NGOCentres/NGOCentresModel.dart';
 import 'package:noupartazer_app/Atish/Pages/NGOCentres/NGOCentres.dart';
 import 'package:noupartazer_app/Atish/Pages/NGOCentres/NGOCentresList.dart';
-import 'package:noupartazer_app/Devashish/Global.dart';
+import 'package:noupartazer_app/Global.dart';
 
 class NGOCentresListWithCounter extends StatelessWidget
 {

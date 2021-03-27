@@ -3,7 +3,7 @@ import 'package:flutter/rendering.dart';
 
 import 'package:noupartazer_app/Atish/components/IconText.dart';
 import 'package:noupartazer_app/Devashish/components/Transitions/AllTransitions.dart';
-import 'package:noupartazer_app/Devashish/Global.dart';
+import 'package:noupartazer_app/Global.dart';
 
 class LargeCustomButtonIconText extends StatelessWidget
 {
