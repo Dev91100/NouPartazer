@@ -9,6 +9,7 @@ class ContainerText extends StatelessWidget
   final Color borderColor;
   final Color boxColor;
   final Color textColor;
+  final TextAlign textAlign;
 
   final double borderWidth;
   final double borderRadius;
@@ -22,7 +23,8 @@ class ContainerText extends StatelessWidget
     {
       this.text = 'Test',
       this.fontWeight = FontWeight.bold,
-      this.fontSize, 
+      this.fontSize,
+      this.textAlign,
       this.margin = const EdgeInsets.only(right: 15),
       this.padding = const EdgeInsets.all(5),
       this.borderColor = const Color.fromRGBO(0, 0, 0, 0),
@@ -54,6 +56,7 @@ class ContainerText extends StatelessWidget
       child: Text
       (
         text,
+        textAlign: textAlign,
         style: TextStyle
         (
           fontSize: (fontSize != null) ? fontSize : Global().smallText,

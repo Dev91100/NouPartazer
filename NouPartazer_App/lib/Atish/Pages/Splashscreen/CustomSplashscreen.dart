@@ -1,9 +1,12 @@
+import 'dart:async';
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'dart:async';
 
 import 'package:noupartazer_app/Atish/Pages/UserAccess/UserAccessPanel.dart';
-import 'package:connectivity/connectivity.dart';
+import 'package:noupartazer_app/Atish/components/ContainerText.dart';
+import 'package:noupartazer_app/Global.dart';
 
 class CustomSplashscreen extends StatefulWidget
 {
@@ -17,60 +20,54 @@ class CustomSplashscreen extends StatefulWidget
 
 class _CustomSplashscreenState extends State<CustomSplashscreen>
 {
+  bool connected = true;
 
   @override
   void initState()
   {
     super.initState();
 
-if (_checkInternetConnectivity().toString() == 'true')
-{
-  Navigator.of(context).pushReplacement
-  (
-    MaterialPageRoute
-    (
-      builder: (BuildContext context) => UserAccessPanel()
-    )
-  );
-}
-else
-{
-  Fluttertoast.showToast
-  (
-    msg: "No internet Connectivity",
-    toastLength: Toast.LENGTH_SHORT,
-  );
-}
-
-    // Timer
-    // (
-    //   Duration(seconds: 5),
-      
-      // () => Navigator.of(context).pushReplacement
-      // (
-      //   MaterialPageRoute
-      //   (
-      //     builder: (BuildContext context) => UserAccessPanel()
-      //   )
-      // )
-    // );
+    _checkInternetConnectivity();
   }
 
-  Future<bool> _checkInternetConnectivity() async
+  _checkInternetConnectivity() async
   {
-    var connectivityResult = await (Connectivity().checkConnectivity());
-    if (connectivityResult == ConnectivityResult.mobile) {
-      return Future<bool>.value(true);
-      // I am connected to a mobile network.
-    } else if (connectivityResult == ConnectivityResult.wifi) {
-      return Future<bool>.value(true);
-      // I am connected to a wifi network.
-    }
-    else
+    try
     {
-      return Future<bool>.value(false);
+      final result = await InternetAddress.lookup('google.com');
+
+      if (result.isNotEmpty && result[0].rawAddress.isNotEmpty)
+      {
+        connected = true;
+
+        Timer
+        (
+          Duration(seconds: 3),
+          ()=>Navigator.of(context).pushReplacement
+          (
+            MaterialPageRoute
+            (
+              builder: (BuildContext context) => UserAccessPanel()
+            )
+          ),
+        );
+      }
+    }
+    on SocketException catch (_)
+    {
+      setState(()
+      {
+        connected = false;
+      });
+      
+      Fluttertoast.showToast
+      (
+        msg: "No internet Connectivity",
+        toastLength: Toast.LENGTH_SHORT,
+      );
     }
   }
+
   @override
   Widget build(BuildContext context)
   {
@@ -217,7 +214,22 @@ else
                       (
                         top: constraints.maxHeight * 0.05,
                       ),
-                      child: CircularProgressIndicator(),
+                      child: (connected) ? CircularProgressIndicator() :
+                      ContainerText
+                      (
+                        text: 'No internet connectivity',
+                        textColor: Colors.white,
+                        fontWeight: FontWeight.w300,
+                        textAlign: TextAlign.center,
+                        fontSize: Global().tinyText,
+                        boxColor: Color.fromRGBO(0, 0, 0, 0.5),
+                        padding: EdgeInsets.symmetric
+                        (
+                          vertical: 10,
+                          horizontal: 15
+                        ),
+                        borderRadius: 20,
+                      ),
                     )
                   ]
                 ),
