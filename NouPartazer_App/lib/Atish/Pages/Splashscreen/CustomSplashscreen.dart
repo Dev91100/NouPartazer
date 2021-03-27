@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'dart:async';
 
 import 'package:noupartazer_app/Atish/Pages/UserAccess/UserAccessPanel.dart';
+import 'package:connectivity/connectivity.dart';
 
 class CustomSplashscreen extends StatefulWidget
 {
@@ -20,20 +22,55 @@ class _CustomSplashscreenState extends State<CustomSplashscreen>
   void initState()
   {
     super.initState();
-    Timer
+
+if (_checkInternetConnectivity().toString() == 'true')
+{
+  Navigator.of(context).pushReplacement
+  (
+    MaterialPageRoute
     (
-      Duration(seconds: 5),
+      builder: (BuildContext context) => UserAccessPanel()
+    )
+  );
+}
+else
+{
+  Fluttertoast.showToast
+  (
+    msg: "No internet Connectivity",
+    toastLength: Toast.LENGTH_SHORT,
+  );
+}
+
+    // Timer
+    // (
+    //   Duration(seconds: 5),
       
-      () => Navigator.of(context).pushReplacement
-      (
-        MaterialPageRoute
-        (
-          builder: (BuildContext context) => UserAccessPanel()
-        )
-      )
-    );
+      // () => Navigator.of(context).pushReplacement
+      // (
+      //   MaterialPageRoute
+      //   (
+      //     builder: (BuildContext context) => UserAccessPanel()
+      //   )
+      // )
+    // );
   }
 
+  Future<bool> _checkInternetConnectivity() async
+  {
+    var connectivityResult = await (Connectivity().checkConnectivity());
+    if (connectivityResult == ConnectivityResult.mobile) {
+      return Future<bool>.value(true);
+      // I am connected to a mobile network.
+    } else if (connectivityResult == ConnectivityResult.wifi) {
+      return Future<bool>.value(true);
+      // I am connected to a wifi network.
+    }
+    else
+    {
+      return Future<bool>.value(false);
+    }
+  }
   @override
   Widget build(BuildContext context)
   {
