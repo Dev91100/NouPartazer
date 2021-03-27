@@ -123,7 +123,7 @@ class BusinessProfileModel extends StatelessWidget
                       SectionTitle
                       (
                         text: 'Best supermarket chain',
-                        color: Color.fromRGBO(51, 51, 51, 1),
+                        textColor: Color.fromRGBO(51, 51, 51, 1),
                       ),
 
                       Container

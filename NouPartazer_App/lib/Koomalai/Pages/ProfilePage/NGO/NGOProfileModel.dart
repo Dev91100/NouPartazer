@@ -129,7 +129,7 @@ class NGOProfileModel extends StatelessWidget
                       SectionTitle
                       (
                         text: 'Food Sharing Project of Mauritius Mauritius Mauritius',
-                        color: Color.fromRGBO(51, 51, 51, 1),
+                        textColor: Color.fromRGBO(51, 51, 51, 1),
                       ),
 
                       Container

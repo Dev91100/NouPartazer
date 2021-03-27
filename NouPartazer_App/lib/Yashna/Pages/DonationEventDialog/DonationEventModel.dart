@@ -28,7 +28,6 @@ class DonationEventModel
           data: ButtonBarThemeData
           (
             alignment: MainAxisAlignment.center,
-            //buttonPadding: EdgeInsets.all(20),
             mainAxisSize: MainAxisSize.min,
           ),
         

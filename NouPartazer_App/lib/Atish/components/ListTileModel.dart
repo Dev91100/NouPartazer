@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
-import 'package:noupartazer_app/Atish/components/Text/TinyText.dart';
 import 'package:noupartazer_app/Devashish/Global.dart';
 
 class ListTileModel extends StatelessWidget 
@@ -68,13 +67,19 @@ class ListTileModel extends StatelessWidget
       title: SectionTitle
       (
         text: titleText,
+        textColor: textColor,
+        margin: EdgeInsets.only(bottom: 0),
       ),
 
       subtitle: (subtitleText!= null) ?
-      TinyText
+      Text
       (
-        text: subtitleText,
-        fontWeight: FontWeight.w300,
+        subtitleText,
+        style: TextStyle
+        (
+          fontSize: Global().tinyText,
+          fontWeight: FontWeight.w300,
+        ),
       ) : null,
 
       trailing: (hastrailingIcon) ? Icon

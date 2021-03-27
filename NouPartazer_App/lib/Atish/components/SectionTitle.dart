@@ -8,7 +8,7 @@ class SectionTitle extends StatelessWidget
 
   final double fontSize;
   final EdgeInsets margin;
-  final Color color;
+  final Color textColor;
   final Alignment align;
 
   SectionTitle
@@ -17,7 +17,7 @@ class SectionTitle extends StatelessWidget
       this.text = 'This is a test',
       this.fontSize,
       this.margin,
-      this.color = const Color.fromRGBO(0, 0, 0, 1),
+      this.textColor = const Color.fromRGBO(0, 0, 0, 1),
       this.align = Alignment.centerLeft,
     }
   );
@@ -40,7 +40,7 @@ class SectionTitle extends StatelessWidget
             text,
             style: TextStyle
             (
-              color: color,
+              color: textColor,
               fontWeight: FontWeight.w800,
               fontSize: (fontSize != null) ? fontSize: Global().mediumText,
             ),

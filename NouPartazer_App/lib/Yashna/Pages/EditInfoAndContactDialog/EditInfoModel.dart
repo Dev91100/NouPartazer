@@ -55,7 +55,7 @@ class EditInfoModel
             (
               padding: EdgeInsets.symmetric
               (
-                horizontal: Global().smallPageMargin,
+                horizontal: Global().tinyPageMargin,
                 vertical: Global().smallPageMargin,
               ),
               child: Form

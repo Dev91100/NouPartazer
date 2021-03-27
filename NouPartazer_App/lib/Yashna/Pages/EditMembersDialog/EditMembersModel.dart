@@ -16,10 +16,10 @@ class EditMembersModel
         return Container
         (
           margin: EdgeInsets.symmetric
-              (
-                horizontal: Global().smallPageMargin,
-                vertical: Global().smallPageMargin,
-              ),
+          (
+            horizontal: Global().tinyPageMargin,
+            vertical: Global().smallPageMargin,
+          ),
           child: SingleChildScrollView
           (
             child: Column

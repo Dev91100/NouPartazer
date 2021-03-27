@@ -61,13 +61,13 @@ class IconTextField extends StatelessWidget
                 (
                   icon,
                   color: Colors.transparent,
-                  size: (iconSize != null) ? iconSize : Global().tinyIcon,
+                  size: (iconSize != null) ? iconSize : Global().normalIcon,
                 ),
                 Icon
                 (
                   icon,
                   color: iconColor,
-                  size: (iconSize != null) ? iconSize : Global().tinyIcon,
+                  size: (iconSize != null) ? iconSize : Global().normalIcon,
                 ),
               ],
             ),

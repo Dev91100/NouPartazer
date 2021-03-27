@@ -50,11 +50,7 @@ class ConfirmationModel
               borderRadius: BorderRadius.all(Radius.circular(20)),
             ),
 
-            contentPadding: EdgeInsets.symmetric
-            (
-              horizontal: Global().smallPageMargin,
-              vertical: Global().smallPageMargin,
-            ),
+            contentPadding: EdgeInsets.all(Global().smallPageMargin,),
 
             content: Column
             (

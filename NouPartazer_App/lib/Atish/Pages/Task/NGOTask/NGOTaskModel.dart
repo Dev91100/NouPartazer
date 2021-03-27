@@ -215,7 +215,11 @@ class NGOTaskModel extends StatelessWidget
                     textColor: Color.fromRGBO(245, 197, 41, 1),
                     borderColor: Color.fromRGBO(245, 197, 41, 1),
                     boxColor: Color.fromRGBO(255, 248, 97, 0.2),
-                    padding: EdgeInsets.only(left: 40, right: 40),
+                    padding: EdgeInsets.symmetric
+                    (
+                      vertical: Global().tinySpacing,
+                      horizontal: Global().largeSpacing,  
+                    ),
                   ),
                 ],
               ),
