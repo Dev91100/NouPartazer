@@ -17,10 +17,12 @@ class BannerPhotoGetImage extends StatefulWidget
   final screen;
   final bool isEditable;
   final BoxConstraints constraints;
+  var photo;
 
   BannerPhotoGetImage
   (
     {
+      this.photo,
       this.screen,
       this.isEditable = false,
       this.constraints,
@@ -44,8 +46,12 @@ class _BannerPhotoGetImageState extends State<BannerPhotoGetImage>
 
     setState(()
     {
-      _image = File(pickedImage.path);
-      imageExtension = p.extension(pickedImage.path);
+      if(pickedImage != null)
+      {
+        _image = File(pickedImage.path);
+        imageExtension = p.extension(pickedImage.path);
+        widget.photo = null;
+      }
     });
 
     uploadImage();
@@ -55,6 +61,7 @@ class _BannerPhotoGetImageState extends State<BannerPhotoGetImage>
   Future uploadImage() async
   {
     final uri = Uri.parse("https://foodsharingapp.000webhostapp.com/UploadImage.php");
+    
     var request = http.MultipartRequest('POST', uri);
     request.fields['name'] = md5.convert(utf8.encode(DateTime.now().toString())).toString() + imageExtension;
 
@@ -75,31 +82,29 @@ class _BannerPhotoGetImageState extends State<BannerPhotoGetImage>
 
   Widget showImage()
   {
-  {
-      if (pickedImage != null)
-      {
-        
-        return BannerPhotoWithEditButton
-        (
-          fileImage: FileImage(File(pickedImage.path)),
-          screen: widget.screen,
-          isEditable: widget.isEditable,
-          constraints: widget.constraints,
-          onPress: chooseImage,
-        );
+    if (pickedImage != null || widget.photo != null)
+    {
+      
+      return BannerPhotoWithEditButton
+      (
+        fileImage: (widget.photo != null) ? FileImage(File(widget.photo)) : FileImage(File(pickedImage.path)),
+        screen: widget.screen,
+        isEditable: widget.isEditable,
+        constraints: widget.constraints,
+        onPress: chooseImage,
+      );
 
-      }
-      else
-      {
-        return BannerPhotoWithEditButton
-        (
-          fileImage: null,
-          screen: widget.screen,
-          isEditable: widget.isEditable,
-          constraints: widget.constraints,
-          onPress: chooseImage,
-        );
-      }
+    }
+    else
+    {
+      return BannerPhotoWithEditButton
+      (
+        fileImage: null,
+        screen: widget.screen,
+        isEditable: widget.isEditable,
+        constraints: widget.constraints,
+        onPress: chooseImage,
+      );
     }
   }
 

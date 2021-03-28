@@ -1,4 +1,8 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+
+import 'package:http/http.dart' as http;
 
 import 'package:noupartazer_app/Atish/components/Buttons/SettingsButton.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
@@ -16,7 +20,7 @@ import 'package:noupartazer_app/Yashna/Pages/EditInfoAndContactDialog/EditContac
 import 'package:noupartazer_app/Yashna/Pages/EditMembersDialog/EditMembersModel.dart';
 import 'package:noupartazer_app/Yashna/Pages/ConfirmationDialog/DeleteMember.dart';
 
-class NGOProfileModel extends StatelessWidget
+class NGOProfileModel extends StatefulWidget
 { 
   final bool isEditable;
 
@@ -26,6 +30,38 @@ class NGOProfileModel extends StatelessWidget
       this.isEditable = false,
     }
   );
+
+  @override
+  _NGOProfileModelState createState() => _NGOProfileModelState();
+}
+
+class _NGOProfileModelState extends State<NGOProfileModel>
+{
+  var bannerImage;
+
+  Future userLogin() async
+  {
+    var uri = Uri.parse("https://foodsharingapp.000webhostapp.com/RetrieveImage.php");
+    
+    var data = 
+    {
+      "email" : 'test@test.com',
+    };
+
+    var request = await http.post(uri, body:data);
+
+    var getImageName = jsonDecode(request.body);
+
+    bannerImage = Image.network("https://foodsharingapp.000webhostapp.com/uploads/" + getImageName);
+
+  }
+
+  @override
+  void initState()
+  {
+    super.initState();
+    userLogin();
+  }
 
   @override
   Widget build(BuildContext context)
@@ -55,18 +91,19 @@ class NGOProfileModel extends StatelessWidget
                   [
                     BannerPhotoGetImage
                     (
+                      photo: bannerImage,
                       screen: screen,
-                      isEditable: isEditable,
+                      isEditable: widget.isEditable,
                       constraints: constraints,
                     ),
 
                     ProfilePhotoGetImage
                     (
-                      isEditable: isEditable,
+                      isEditable: widget.isEditable,
                       constraints: constraints,
                     ),
 
-                    (isEditable) ? Container
+                    (widget.isEditable) ? Container
                     (
                       alignment: Alignment.bottomRight,
 
@@ -82,7 +119,7 @@ class NGOProfileModel extends StatelessWidget
 
                 Container
                 (
-                  margin: (isEditable) ?  null : EdgeInsets.only(top: constraints.maxHeight * 0.025),
+                  margin: (widget.isEditable) ?  null : EdgeInsets.only(top: constraints.maxHeight * 0.025),
                   child: Column
                   (
                     children:
@@ -119,7 +156,7 @@ class NGOProfileModel extends StatelessWidget
                     [
                       SectionWithEditButton
                       (
-                        isEditable: isEditable,
+                        isEditable: widget.isEditable,
                         title: 'Manzer Partazer Test Test Test Test'.toUpperCase(),
                         color: Color.fromRGBO(0, 50, 193, 1),
                         onPress: ngoEditNameBottomSheet,
@@ -149,10 +186,10 @@ class NGOProfileModel extends StatelessWidget
 
                       Container
                       (
-                        margin: (isEditable) ?  null : EdgeInsets.only(bottom: constraints.maxHeight * 0.025),
+                        margin: (widget.isEditable) ?  null : EdgeInsets.only(bottom: constraints.maxHeight * 0.025),
                         child: SectionWithEditButton
                         (
-                          isEditable: isEditable,
+                          isEditable: widget.isEditable,
                           title: 'CONTACT INFO',
                           onPress: editContactBottomSheet,
                           isModalPage: true,
@@ -182,7 +219,7 @@ class NGOProfileModel extends StatelessWidget
 
                       SectionWithEditButton
                       (
-                        isEditable: isEditable,
+                        isEditable: widget.isEditable,
                         title: 'MEMBERS',
                         icon: Icons.add,
                         onPress: ngoEditMembersBottomSheet,
@@ -191,7 +228,7 @@ class NGOProfileModel extends StatelessWidget
 
                       MemberModel
                       (
-                        isEditable: isEditable,
+                        isEditable: widget.isEditable,
                         onPressDelete: deleteMemberDialog,
                         isPopUpPage: true,
                         onPressEdit: ngoEditMembersBottomSheet,

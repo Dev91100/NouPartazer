@@ -63,7 +63,7 @@ class _NGOTaskTabState extends State<NGOTaskTab>
           bottom: TabBar
           (
             indicatorColor: Colors.black,
-            indicatorWeight: 5.0,
+            indicatorWeight: 3.5,
             labelColor: Colors.black,
             labelStyle: TextStyle
             (

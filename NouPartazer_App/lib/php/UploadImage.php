@@ -1,13 +1,18 @@
 <?php 
     require_once("Connection.php");
 
-    $image = $_FILES["image"]['name'];
+    $target_dir = "uploads/";
     $name = $_POST['name'];
+    $target_file = $target_dir . $name;
 
-    $imagePath = 'Uploads/'.$image;
-    $tmp_name = $_FilES['image']['tmp_name'];
-
-    move_uploaded_file($tmp_name, $imagePath);
+    if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file))
+    {
+        echo json_encode("true");
+    }
+    else
+    {
+        echo json_encode("false");
+    }
 
     $email = "test@test.com";
     $password = "test1234";
