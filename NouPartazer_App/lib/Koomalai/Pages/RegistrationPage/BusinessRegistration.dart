@@ -94,7 +94,7 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
 
     var res = await http.post(uri, body:data);
 
-    if(jsonDecode(res.body) == "account already exist")
+    if(jsonDecode(res.body) == "account already exists")
     {
       Fluttertoast.showToast
       (
@@ -262,10 +262,10 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
                         text: 'Register',
                         processing: processing,
                         hasIcon: false,
-                        isPageTransition: true,
-                        transitionType: 'downToUp',
-                        onPress: BusinessBottomNav(),
-                        // onSuperPress: registerUser,
+                        // isPageTransition: true,
+                        // transitionType: 'downToUp',
+                        // onPress: BusinessBottomNav(),
+                        onSuperPress: registerUser,
                       )
                     ),
                   ],
