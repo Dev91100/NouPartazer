@@ -24,12 +24,12 @@
     $row = mysqli_fetch_assoc($res);
     $emailToBeChecked = $row['email'];
 
-    if ($brn == $brnToBeChecked && $email == $emailToBeChecked)
+    if ($brn == $brnToBeChecked || $email == $emailToBeChecked)
     {
-        echo json_encode("account already exist");
+        echo json_encode("account already exists");
     }
     else
-    {    //Insert most of the data retrieved int business table
+    {    //Insert most of the data retrieved in business table
         $query = "INSERT INTO BUSINESS (brn, companyName, businessName, website, contactNumber) VALUES ('$brn', '$companyName', '$businessName', '$website', '$contactNumber')";
         $res = mysqli_query($conn, $query);
 

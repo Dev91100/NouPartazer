@@ -62,7 +62,7 @@ class _CustomSplashscreenState extends State<CustomSplashscreen>
       
       Fluttertoast.showToast
       (
-        msg: "No internet Connectivity",
+        msg: "No Internet Connection",
         toastLength: Toast.LENGTH_SHORT,
       );
     }

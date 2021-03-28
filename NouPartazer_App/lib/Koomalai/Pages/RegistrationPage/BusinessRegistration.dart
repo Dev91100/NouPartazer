@@ -98,7 +98,7 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
     {
       Fluttertoast.showToast
       (
-        msg: "Account already exist, please login.",
+        msg: "Email or BRN already exist",
         toastLength: Toast.LENGTH_SHORT,
       );
     }
@@ -108,7 +108,7 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
       {
         Fluttertoast.showToast
         (
-          msg: "Account created.",
+          msg: "Your account has been created",
           toastLength: Toast.LENGTH_SHORT,
         );
 
@@ -123,7 +123,7 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
       {
         Fluttertoast.showToast
         (
-          msg: "Server Error.",
+          msg: "Server error, please try again",
           toastLength: Toast.LENGTH_SHORT,
         );
       }
