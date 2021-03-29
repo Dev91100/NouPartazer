@@ -33,13 +33,13 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
   {
     super.initState();
     
-    brnCtrl = new TextEditingController();
-    companyNameCtrl = new TextEditingController();
-    businessNameCtrl = new TextEditingController();
-    websiteCtrl = new TextEditingController();
+    brnCtrl           = new TextEditingController();
+    companyNameCtrl   = new TextEditingController();
+    businessNameCtrl  = new TextEditingController();
+    websiteCtrl       = new TextEditingController();
     contactNumberCtrl = new TextEditingController();
-    emailCtrl = new TextEditingController();
-    passwordCtrl = new TextEditingController();
+    emailCtrl         = new TextEditingController();
+    passwordCtrl      = new TextEditingController();
   }
   
   bool setValidatorTest()
@@ -262,10 +262,10 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
                         text: 'Register',
                         processing: processing,
                         hasIcon: false,
-                        // isPageTransition: true,
-                        // transitionType: 'downToUp',
-                        // onPress: BusinessBottomNav(),
-                        onSuperPress: registerUser,
+                        isPageTransition: true,
+                        transitionType: 'downToUp',
+                        onPress: BusinessBottomNav(),
+                        // onSuperPress: registerUser,
                       )
                     ),
                   ],

@@ -89,7 +89,6 @@ class DonationEventModel
                   child: TwoButtons
                   (
                     buttonText2: 'Confirm',
-                    onPress: onPress,
                     isPage: true,
                   ),
                 ),

@@ -93,7 +93,7 @@ class StatementModel
                   child: SmallCustomButtonIconText
                   (
                     text: 'Done',
-                    onPress: onPress,
+                    isClose: true,
                   ),
                 ),
               ],

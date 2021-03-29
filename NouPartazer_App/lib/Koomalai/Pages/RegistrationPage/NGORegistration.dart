@@ -25,7 +25,7 @@ class _NGORegistrationState extends State<NGORegistration>
 {
   final _formKey = GlobalKey<FormState>();
   
-  TextEditingController regNumberCtrl, regNameCtrl, ngoExpertiseCtrl, memberSizeCtrl, addressCtrl, websiteCtrl, titleCtrl, nameCtrl, surnameCtrl, positionCtrl, phoneNumberCtrl, emailCtrl, passwordCtrl;
+  TextEditingController regNumberCtrl, regNameCtrl, ngoExpertiseCtrl, memberSizeCtrl, addressCtrl, websiteCtrl, titleCtrl, nameCtrl, surnameCtrl, positionCtrl, contactNumberCtrl, emailCtrl, passwordCtrl;
 
   bool processing = false;
 
@@ -44,7 +44,7 @@ class _NGORegistrationState extends State<NGORegistration>
     nameCtrl = new TextEditingController();
     surnameCtrl = new TextEditingController();
     positionCtrl = new TextEditingController();
-    phoneNumberCtrl = new TextEditingController();
+    contactNumberCtrl = new TextEditingController();
     emailCtrl = new TextEditingController();
     passwordCtrl = new TextEditingController();
   }
@@ -100,18 +100,18 @@ class _NGORegistrationState extends State<NGORegistration>
       "name" : nameCtrl.text,
       "surname" : surnameCtrl.text,
       "position" : positionCtrl.text,
-      "phoneNumber" : phoneNumberCtrl.text,
+      "contactNumber" : contactNumberCtrl.text,
       "email" : emailCtrl.text,
       "password" : passwordCtrl.text,
     };
 
     var res = await http.post(uri, body:data);
 
-    if(jsonDecode(res.body) == "account already exist")
+    if(jsonDecode(res.body) == "account already exists")
     {
       Fluttertoast.showToast
       (
-        msg: "Account already exist, please login",
+        msg: "Email or Registration Number already exist",
         toastLength: Toast.LENGTH_SHORT,
       );
     }
@@ -130,7 +130,7 @@ class _NGORegistrationState extends State<NGORegistration>
       {
         Fluttertoast.showToast
         (
-          msg: "No match found",
+          msg: "Server error, please try again",
           toastLength: Toast.LENGTH_SHORT,
         );
       }
@@ -290,7 +290,7 @@ class _NGORegistrationState extends State<NGORegistration>
 
                     CustomTextField
                     (
-                      controller: phoneNumberCtrl,
+                      controller: contactNumberCtrl,
                       keyboardType: TextInputType.number,
                       fieldType: 'length',
                       minLength: 7,

@@ -9,72 +9,106 @@
         return $data;
     }
 
-    $regNumber = test_input($_POST["regNumber"]);
-    $regName = test_input($_POST["regName"]);
-    $ngoExpertise = test_input($_POST["ngoExpertise"]);
-    $memberSize = test_input($_POST["memberSize"]);
-    $address = test_input($_POST["address"]);
-    $website = test_input($_POST["website"]);
-    $title = test_input($_POST["title"]);
-    $name = test_input($_POST["name"]);
-    $surname = test_input($_POST["surname"]);
-    $position = test_input($_POST["position"]);
+    $regNumber     = test_input($_POST["regNumber"]);
+    $regName       = test_input($_POST["regName"]);
+    $ngoExpertise  = test_input($_POST["ngoExpertise"]);
+    $memberSize    = test_input($_POST["memberSize"]);
+    $address       = test_input($_POST["address"]);
+    $website       = test_input($_POST["website"]);
+    $title         = test_input($_POST["title"]);
+    $name          = test_input($_POST["name"]);
+    $surname       = test_input($_POST["surname"]);
+    $position      = test_input($_POST["position"]);
     $contactNumber = test_input($_POST["contactNumber"]);
-    $email = test_input($_POST["email"]);
-    $password = trim($_POST["password"]);
+    $email         = test_input($_POST["email"]);
+    $password      = trim($_POST["password"]);
 
+    /*
+    select regNumber and put result in a variable
+    select email and put result in a variable
+    compare both variables if they are the same as entered in the text fields
+    */
+    $query = "SELECT regNumber FROM NGO WHERE regNumber='$regNumber'";
+    $res = mysqli_query($conn, $query);
+    $row = mysqli_fetch_assoc($res);
+    $regNumberToBeChecked = $row['regNumber'];
 
-    if($_SERVER["REQUEST_METHOD"] == "POST")
+    $query = "SELECT email FROM PROFILE WHERE email='$email'";
+    $res = mysqli_query($conn, $query);
+    $row = mysqli_fetch_assoc($res);
+    $emailToBeChecked = $row['email'];
+
+    if ($regNumber == $regNumberToBeChecked || $email == $emailToBeChecked)
     {
-        $sql = "SELECT regNumber FROM NGO WHERE regNumber='$regNumber'";
+        echo json_encode("account already exists");
+    }
+    else
+    {    //Insert most of the data retrieved in ngo table
+        $query = "INSERT INTO NGO (regNumber, regName, ngoExpertise, memberSize, address, website, title, name, surname, position, contactNumber) VALUES ('$regNumber', '$regName', '$ngoExpertise', '$memberSize', '$address', '$website', '$title', '$name', '$surname', '$position', '$contactNumber')";
 
-        $result= mysqli_query($conn, $sql);
+        $res = mysqli_query($conn, $query);
 
-        if(mysqli_num_rows($result) >= 1)
+        if($res)
         {
-            echo json_encode("account already exist");
-        }
-        else 
-        {
-            $sql = "SELECT email FROM PROFILE WHERE email='$email'";
-
-            $result= mysqli_query($conn, $sql);
-
-            if(mysqli_num_rows($result) >= 1)
+            $query = "SELECT ngoID FROM NGO WHERE regNumber='$regNumber'";
+            $res = mysqli_query($conn, $query);
+            
+            if($res)
             {
-                echo json_encode("account already exist");
+                //Insert remaining data into profile table
+                $row = mysqli_fetch_assoc($res);
+                $ngoID = $row['ngoID'];
+
+                $query = "INSERT INTO PROFILE (ngoID, email, password) VALUES ('$ngoID', '$email', '$password')";
+                $res = mysqli_query($conn, $query);
+                if ($res)
+                {
+                    $mainDirectory = 'uploads/' . 'ngo/' . $regNumber;
+
+                    $directory = $mainDirectory . '/banner';
+                    if(!file_exists($directory))
+                    {
+                        mkdir($directory, 0777, true);
+                    }
+
+                    $directory = $mainDirectory . '/profile';
+                    if(!file_exists($directory))
+                    {
+                        mkdir($directory, 0777, true);
+                    }
+
+                    $directory = $mainDirectory . '/members';
+                    if(!file_exists($directory))
+                    {
+                        mkdir($directory, 0777, true);
+                    }
+
+                    $directory = $mainDirectory . '/story';
+                    if(!file_exists($directory))
+                    {
+                        mkdir($directory, 0777, true);
+                    }
+
+                    $directory = $mainDirectory . '/tmp';
+                    if(!file_exists($directory))
+                    {
+                        mkdir($directory, 0777, true);
+                    }
+                    echo json_encode("true");
+                }
+                else
+                {
+                    echo json_encode("false");
+                }
+            }
+            else
+            {
+                echo json_encode("false");
             }
         }
-        // else
-        // {
-        //     echo json_encode("false");
-            // $sql = "INSERT INTO NGO (regNumber, regName, ngoExpertise, memberSize, address, contactNumber, website) VALUES ('$regNumber', '$regName', '$ngoExpertise', '$memberSize', '$address', '$contactNumber', '$website')";
-
-            // $result= mysqli_query($conn, $sql);
-
-            // if($result)
-            // {
-            //     $sql = "SELECT * FROM NGO WHERE regNumber='$regNumber'";
-            //     mysqli_query($conn, $sql);
-
-            //     if(mysqli_num_rows($result) === 1)
-            //     {
-            //         $row = mysqli_fetch_assoc($result);
-            //         $ngoID = $row['ngoID'];
-
-            //         $sql = "INSERT INTO PROFILE ngoID, email, password VALUES ('$ngoID', '$email', '$password')";
-            //         mysqli_query($conn, $sql);
-            //         echo json_encode("true");
-            //     }
-            //     else
-            //     {
-            //         echo json_encode("false");
-            //     }
-            // }
-            // else
-            // {
-            //     echo json_encode("false");
-            // }
-        // }
+        else
+        {
+            echo json_encode("false");
+        }
     }
 ?>

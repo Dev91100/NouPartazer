@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:image_picker/image_picker.dart';
+import 'package:crypto/crypto.dart';
 import 'package:http/http.dart' as http;
+import 'package:path/path.dart' as p;
 
 import 'package:noupartazer_app/Devashish/components/GetImage/ProfilePhoto/ProfilePhotoWithEditButton.dart';
 
@@ -29,14 +32,19 @@ class _ProfilePhotoGetImageState extends State<ProfilePhotoGetImage>
   File _image;
   final picker = ImagePicker();
   var pickedImage;
+  var imageExtension;
 
   Future chooseImage() async
   {
     pickedImage = await picker.getImage(source: ImageSource.gallery);
-    
+
     setState(()
     {
-      _image = File(pickedImage.path);
+      if(pickedImage != null)
+      {
+        _image = File(pickedImage.path);
+        imageExtension = p.extension(pickedImage.path);
+      }
     });
 
     uploadImage();
@@ -46,9 +54,17 @@ class _ProfilePhotoGetImageState extends State<ProfilePhotoGetImage>
   Future uploadImage() async
   {
     final uri = Uri.parse("https://foodsharingapp.000webhostapp.com/UploadImage.php");
+    
     var request = http.MultipartRequest('POST', uri);
+    request.fields['name']        = md5.convert(utf8.encode(DateTime.now().toString())).toString() + imageExtension;
+    request.fields['org']         = 'ngo' + '/';
+    request.fields['orgID']       = 'reg1234' + '/';
+    request.fields['folderType']  = 'profile' + '/';
+    request.fields['deletePhoto'] = 'true';
+
     var photo = await http.MultipartFile.fromPath("image", _image.path);
     request.files.add(photo);
+    
     var response = await request.send();
 
     if(response.statusCode == 200)
@@ -63,47 +79,27 @@ class _ProfilePhotoGetImageState extends State<ProfilePhotoGetImage>
 
   Widget showImage()
   {
-    return FutureBuilder<File>
-    (
-      future: pickedImage,
-      builder: (BuildContext context, AsyncSnapshot<File> snapshot)
-      {
-        if (snapshot.connectionState == ConnectionState.done && null != snapshot.data)
-        {
-          // tmpFile = snapshot.data;
-          // base64Image = base64Encode(snapshot.data.readAsBytesSync());
+    if (pickedImage != null)
+    {
+      return ProfilePhotoWithEditButton
+      (
+        fileImage: FileImage(File(pickedImage.path)),
+        isEditable: widget.isEditable,
+        constraints: widget.constraints,
+        onPress: chooseImage,
+      );
 
-          return ProfilePhotoWithEditButton
-          (
-            fileImage: FileImage(snapshot.data),
-            isEditable: widget.isEditable,
-            constraints: widget.constraints,
-            onPress: chooseImage,
-          );
-
-        } else if (null != snapshot.error)
-        {
-          return ProfilePhotoWithEditButton
-          (
-            fileImage: null,
-            isEditable: widget.isEditable,
-            constraints: widget.constraints,
-            onPress: chooseImage,
-          );
-
-        }
-        else
-        {
-          return ProfilePhotoWithEditButton
-          (
-            fileImage: null,
-            isEditable: widget.isEditable,
-            constraints: widget.constraints,
-            onPress: chooseImage,
-          );
-        }
-      },
-    );
+    }
+    else
+    {
+      return ProfilePhotoWithEditButton
+      (
+        fileImage: null,
+        isEditable: widget.isEditable,
+        constraints: widget.constraints,
+        onPress: chooseImage,
+      );
+    }
   }
 
   @override

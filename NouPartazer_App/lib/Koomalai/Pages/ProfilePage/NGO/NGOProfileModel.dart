@@ -1,16 +1,12 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 
-import 'package:http/http.dart' as http;
-
+import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/SettingsButton.dart';
 import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 import 'package:noupartazer_app/Atish/components/CustomDivider.dart';
 import 'package:noupartazer_app/Atish/components/LongText.dart';
 import 'package:noupartazer_app/Atish/components/SectionWithEditButton.dart';
 import 'package:noupartazer_app/Atish/components/ContactInfo.dart';
-import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/Devashish/components/GetImage/BannerPhoto/BannerPhotoGetImage.dart';
 import 'package:noupartazer_app/Devashish/components/GetImage/ProfilePhoto/ProfilePhotoGetImage.dart';
 import 'package:noupartazer_app/Atish/Pages/NGOProfile/MemberModel.dart';
@@ -37,32 +33,6 @@ class NGOProfileModel extends StatefulWidget
 
 class _NGOProfileModelState extends State<NGOProfileModel>
 {
-  var bannerImage;
-
-  Future userLogin() async
-  {
-    var uri = Uri.parse("https://foodsharingapp.000webhostapp.com/RetrieveImage.php");
-    
-    var data = 
-    {
-      "email" : 'test@test.com',
-    };
-
-    var request = await http.post(uri, body:data);
-
-    var getImageName = jsonDecode(request.body);
-
-    bannerImage = Image.network("https://foodsharingapp.000webhostapp.com/uploads/" + getImageName);
-
-  }
-
-  @override
-  void initState()
-  {
-    super.initState();
-    userLogin();
-  }
-
   @override
   Widget build(BuildContext context)
   {
@@ -91,7 +61,6 @@ class _NGOProfileModelState extends State<NGOProfileModel>
                   [
                     BannerPhotoGetImage
                     (
-                      photo: bannerImage,
                       screen: screen,
                       isEditable: widget.isEditable,
                       constraints: constraints,

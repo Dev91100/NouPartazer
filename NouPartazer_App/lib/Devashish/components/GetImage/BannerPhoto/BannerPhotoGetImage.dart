@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 import 'dart:convert';
-import 'package:crypto/crypto.dart';
-
 import 'dart:io';
-import 'package:http/http.dart' as http;
 
+import 'package:crypto/crypto.dart';
+import 'package:http/http.dart' as http;
 import 'package:path/path.dart' as p;
 import 'package:image_picker/image_picker.dart';
 
@@ -17,12 +16,10 @@ class BannerPhotoGetImage extends StatefulWidget
   final screen;
   final bool isEditable;
   final BoxConstraints constraints;
-  var photo;
 
   BannerPhotoGetImage
   (
     {
-      this.photo,
       this.screen,
       this.isEditable = false,
       this.constraints,
@@ -50,7 +47,6 @@ class _BannerPhotoGetImageState extends State<BannerPhotoGetImage>
       {
         _image = File(pickedImage.path);
         imageExtension = p.extension(pickedImage.path);
-        widget.photo = null;
       }
     });
 
@@ -63,7 +59,11 @@ class _BannerPhotoGetImageState extends State<BannerPhotoGetImage>
     final uri = Uri.parse("https://foodsharingapp.000webhostapp.com/UploadImage.php");
     
     var request = http.MultipartRequest('POST', uri);
-    request.fields['name'] = md5.convert(utf8.encode(DateTime.now().toString())).toString() + imageExtension;
+    request.fields['name']        = md5.convert(utf8.encode(DateTime.now().toString())).toString() + imageExtension;
+    request.fields['org']         = 'ngo' + '/';
+    request.fields['orgID']       = 'reg1234' + '/';
+    request.fields['folderType']  = 'banner' + '/';
+    request.fields['deletePhoto'] = 'true';
 
     var photo = await http.MultipartFile.fromPath("image", _image.path);
     request.files.add(photo);
@@ -82,12 +82,11 @@ class _BannerPhotoGetImageState extends State<BannerPhotoGetImage>
 
   Widget showImage()
   {
-    if (pickedImage != null || widget.photo != null)
+    if (pickedImage != null)
     {
-      
       return BannerPhotoWithEditButton
       (
-        fileImage: (widget.photo != null) ? FileImage(File(widget.photo)) : FileImage(File(pickedImage.path)),
+        fileImage: FileImage(File(pickedImage.path)),
         screen: widget.screen,
         isEditable: widget.isEditable,
         constraints: widget.constraints,

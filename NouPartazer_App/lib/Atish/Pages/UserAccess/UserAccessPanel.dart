@@ -86,6 +86,7 @@ class _UserAccessPanelState extends State<UserAccessPanel>
 
                           child: LargeButtonIconText
                           (
+                            margin: EdgeInsets.all(0),
                             text: 'Skip',
                             textColor: Colors.white,
                             buttonColor: Color.fromRGBO(0, 0, 0, 0.6),

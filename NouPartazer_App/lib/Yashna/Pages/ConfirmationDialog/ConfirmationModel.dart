@@ -90,7 +90,6 @@ class ConfirmationModel
                 (
                   child: TwoButtons
                   (
-                    onPress: onPress,
                     isPage: true,
                     buttonText2: buttonText2,
                     textColor: textColor,

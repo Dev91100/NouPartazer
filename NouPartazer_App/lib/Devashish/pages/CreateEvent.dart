@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
+import 'dart:convert';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:http/http.dart' as http;
+
 import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/LargeCustomButtonIconText.dart';
 import 'package:noupartazer_app/Atish/components/PageTitle.dart';
@@ -8,6 +12,7 @@ import 'package:noupartazer_app/Atish/components/SectionTitle.dart';
 import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/Devashish/components/GetImage/DottedBox/DottedBoxGetImage.dart';
 import 'package:noupartazer_app/Devashish/components/DateTask.dart';
+import 'package:noupartazer_app/Yashna/Pages/StatementDialog/EventCreated.dart';
 
 class CreateEvent extends StatefulWidget
 {
@@ -20,12 +25,15 @@ class _CreateEventState extends State<CreateEvent>
   final _formKey = GlobalKey<FormState>();
   TextEditingController locationNameCtrl, locationAddressCtrl, eventTypeCtrl, eventDescriptionCtrl, dateOfEventCtrl;
 
-  bool perishableValue = false;
+  bool processing = false;
+
+  bool perishableValue    = false;
   bool nonPerishableValue = false;
 
   Task task = new Task();
   DateTime selectedDate = DateTime.now();
 
+  // Date Picker
   _selectDate(BuildContext context) async
   {
     final DateTime picked = await showDatePicker
@@ -41,7 +49,7 @@ class _CreateEventState extends State<CreateEvent>
     {
       selectedDate = picked;
       var date =
-          "${picked.toLocal().day}/${picked.toLocal().month}/${picked.toLocal().year}";
+          "${picked.toLocal().month}/${picked.toLocal().day}/${picked.toLocal().year}";
       dateOfEventCtrl.text = date;
     });
   }
@@ -51,11 +59,93 @@ class _CreateEventState extends State<CreateEvent>
   {
     super.initState();
     
-    locationNameCtrl = new TextEditingController();
-    locationAddressCtrl = new TextEditingController();
-    eventTypeCtrl = new TextEditingController();
+    locationNameCtrl     = new TextEditingController();
+    locationAddressCtrl  = new TextEditingController();
+    eventTypeCtrl        = new TextEditingController();
     eventDescriptionCtrl = new TextEditingController();
-    dateOfEventCtrl = new TextEditingController();
+    dateOfEventCtrl      = new TextEditingController();
+  }
+
+  bool setValidatorTest()
+  {
+    bool validatorTest;
+
+    try
+    {
+      validatorTest = _formKey.currentState.validate();
+    } catch (e)
+    {
+      validatorTest = false;
+    }
+
+    return validatorTest;
+  }
+
+  void showErrorToast()
+  {
+    Fluttertoast.showToast
+    (
+      msg: "Please fill in all fields.",
+      toastLength: Toast.LENGTH_SHORT,
+    );
+  }
+
+  Future createEventFunction() async
+  {
+    var test = setValidatorTest();
+
+    if(test != true)
+    {
+      showErrorToast();
+      return;
+    }
+
+    setState(()
+    {
+      processing = true;
+    });
+
+    var uri  = Uri.parse("https://foodsharingapp.000webhostapp.com/CreateEvent.php");
+    var data = 
+    {
+      "locationName"     : locationNameCtrl.text,
+      "locationAddress"  : locationAddressCtrl.text,
+      "eventType"        : eventTypeCtrl.text,
+      "eventDescription" : eventDescriptionCtrl.text,
+      "dateOfEvent"      : dateOfEventCtrl.text,
+      "perishable"       : perishableValue.toString(),
+      "nonPerishable"    : nonPerishableValue.toString(),
+      "orgID"            : 'bus1234' + '/',
+    };
+
+    var res = await http.post(uri, body:data);
+
+    if(jsonDecode(res.body) == "true")
+    {
+      var eventCreatedDialog = new EventCreated().displayDialog(context);
+
+      showDialog
+      (
+        context: context,
+        builder: (BuildContext context)
+        {
+          return eventCreatedDialog;
+        }
+      );
+    }
+    else
+    {
+      Fluttertoast.showToast
+      (
+        msg: "Server error",
+        toastLength: Toast.LENGTH_SHORT,
+      );
+    }
+
+    setState(()
+    {
+      processing = false;
+    });
   }
 
   @override
@@ -89,13 +179,10 @@ class _CreateEventState extends State<CreateEvent>
                   mainAxisAlignment: MainAxisAlignment.start,
                   children:
                   [
-                    Container
+                    SectionTitle
                     (
-                      child: SectionTitle
-                      (
-                        text: 'EVENT INFORMATION',
-                        margin: EdgeInsets.only(bottom: Global().mediumSpacing),
-                      ),
+                      text: 'EVENT INFORMATION',
+                      margin: EdgeInsets.only(bottom: Global().mediumSpacing),
                     ),
 
                     CustomTextField
@@ -216,6 +303,8 @@ class _CreateEventState extends State<CreateEvent>
                       (
                         text: 'Create Event',
                         hasIcon: false,
+                        processing: processing,
+                        onSuperPress: createEventFunction,
                       )
                     ),
                   ],

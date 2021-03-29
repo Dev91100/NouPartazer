@@ -32,9 +32,9 @@ class _CreateStoryState extends State<CreateStory>
   {
     super.initState();
     
-    titleCtrl = new TextEditingController();
+    titleCtrl       = new TextEditingController();
     descriptionCtrl = new TextEditingController();
-    tagCtrl = new TextEditingController();
+    tagCtrl         = new TextEditingController();
   }
 
   bool setValidatorTest()
@@ -71,16 +71,18 @@ class _CreateStoryState extends State<CreateStory>
       return;
     }
 
-    setState(() {
+    setState(()
+    {
       processing = true;
     });
 
-    var uri = Uri.parse("https://foodsharingapp.000webhostapp.com/CreateStory.php");
+    var uri  = Uri.parse("https://foodsharingapp.000webhostapp.com/CreateStory.php");
     var data = 
     {
-      "title" : titleCtrl.text,
+      "title"       : titleCtrl.text,
       "description" : descriptionCtrl.text,
-      "tag" : tagCtrl.text,
+      "tag"         : tagCtrl.text,
+      "orgID"       : 'reg1234' + '/',
     };
 
     var res = await http.post(uri, body:data);
@@ -97,23 +99,18 @@ class _CreateStoryState extends State<CreateStory>
           return storyCreatedDialog;
         }
       );
-
-      Fluttertoast.showToast
-      (
-        msg: "Story created successfully.",
-        toastLength: Toast.LENGTH_SHORT,
-      );
     }
     else
     {
       Fluttertoast.showToast
       (
-        msg: "Error.",
+        msg: "Server error",
         toastLength: Toast.LENGTH_SHORT,
       );
     }
 
-    setState(() {
+    setState(()
+    {
       processing = false;
     });
   }
@@ -121,8 +118,6 @@ class _CreateStoryState extends State<CreateStory>
   @override
   Widget build(BuildContext context)
   {
-    var storyCreatedDialog = StoryCreated().displayDialog(context);
-
     return Scaffold
     (
       appBar: PageTitle
@@ -196,11 +191,9 @@ class _CreateStoryState extends State<CreateStory>
                       child: LargeCustomButtonIconText
                       (
                         text: 'Create Story',
-                        processing: processing,
                         hasIcon: false,
-                        isPopUpPage: true,
-                        onPress: storyCreatedDialog,
-                        // onSuperPress: createStoryFunction,
+                        processing: processing,
+                        onSuperPress: createStoryFunction,
                       )
                     ),
                   ],

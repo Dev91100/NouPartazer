@@ -32,7 +32,8 @@ class SmallCustomButtonIconText extends StatelessWidget
   final bool isPageTransition;
   final String transitionType;
   final int transitionDuration;
-  final bool hasSuperPress;
+  final bool processing;
+  final Color processingColor;
   final VoidCallback onSuperPress;
 
   SmallCustomButtonIconText
@@ -63,7 +64,8 @@ class SmallCustomButtonIconText extends StatelessWidget
       this.isPageTransition = false,
       this.transitionType = 'scale',
       this.transitionDuration = 1100,
-      this.hasSuperPress = false,
+      this.processingColor = const Color.fromRGBO(245, 197, 41, 1),
+      this.processing = false,
       this.onSuperPress,
     }
   )
@@ -87,7 +89,8 @@ class SmallCustomButtonIconText extends StatelessWidget
     (
       style: OutlinedButton.styleFrom
       (
-        backgroundColor: buttonColor,
+        primary: (processing) ? processingColor : buttonColor,
+        backgroundColor: (processing) ? processingColor : buttonColor,
         padding: padding,
         elevation: elevation,
         shape: RoundedRectangleBorder
@@ -96,12 +99,22 @@ class SmallCustomButtonIconText extends StatelessWidget
         ),
         side: (hasBorder) ? BorderSide
         (
-          color: borderColor,
+          color: (processing) ? Colors.transparent : borderColor,
           width: borderWidth
         ) : null,
       ),
       
-      child: IconText
+      child: (processing) ? SizedBox
+      (
+        height: 15,
+        width: 15,
+        child: CircularProgressIndicator
+        (
+          strokeWidth: 2,
+          backgroundColor: Color.fromRGBO(0, 50, 193, 1)
+        ),
+      ) :
+      IconText
       (
         text: text,
         textDecoration: textDecoration,
@@ -113,7 +126,7 @@ class SmallCustomButtonIconText extends StatelessWidget
         iconColor: iconColor,
         iconRight: iconRight,
       ),
-      onPressed: (!hasSuperPress) ? ()
+      onPressed: (onSuperPress == null) ? ()
       {
         if(isPopUpPage)
         {

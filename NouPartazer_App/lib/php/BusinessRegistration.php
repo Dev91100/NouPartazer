@@ -1,13 +1,21 @@
 <?php 
     require_once("Connection.php");
 
-    $brn = $_POST["brn"];
-    $companyName = $_POST["companyName"];
-    $businessName = $_POST["businessName"];
-    $website = $_POST["website"];
-    $contactNumber = $_POST["contactNumber"];
-    $email = $_POST["email"];
-    $password = $_POST["password"];
+    function test_input($data)
+    {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
+    $brn           = test_input($_POST["brn"]);
+    $companyName   = test_input($_POST["companyName"]);
+    $businessName  = test_input($_POST["businessName"]);
+    $website       = test_input($_POST["website"]);
+    $contactNumber = test_input($_POST["contactNumber"]);
+    $email         = test_input($_POST["email"]);
+    $password      = trim($_POST["password"]);
 
     /*
     select brn and put result in a variable
@@ -37,29 +45,53 @@
         {
             $query = "SELECT businessID FROM BUSINESS WHERE brn='$brn'";
             $res = mysqli_query($conn, $query);
-            $row = mysqli_fetch_assoc($res);
-            $businessID = $row['businessID'];
-
+            
             if($res)
             {
                 //Insert remaining data into profile table
+                $row = mysqli_fetch_assoc($res);
+                $businessID = $row['businessID'];
+
                 $query = "INSERT INTO PROFILE (businessID, email, password) VALUES ('$businessID', '$email', '$password')";
                 $res = mysqli_query($conn, $query);
                 if ($res)
                 {
+                    $mainDirectory = 'uploads/' . 'business/' . $brn;
+
+                    $directory = $mainDirectory . '/banner';
+                    if(!file_exists($directory))
+                    {
+                        mkdir($directory, 0777, true);
+                    }
+
+                    $directory = $mainDirectory . '/profile';
+                    if(!file_exists($directory))
+                    {
+                        mkdir($directory, 0777, true);
+                    }
+
+                    $directory = $mainDirectory . '/event';
+                    if(!file_exists($directory))
+                    {
+                        mkdir($directory, 0777, true);
+                    }
+
+                    $directory = $mainDirectory . '/tmp';
+                    if(!file_exists($directory))
+                    {
+                        mkdir($directory, 0777, true);
+                    }
                     echo json_encode("true");
                 }
                 else
                 {
                     echo json_encode("false");
                 }
-                
             }
             else
             {
                 echo json_encode("false");
             }
-
         }
         else
         {
