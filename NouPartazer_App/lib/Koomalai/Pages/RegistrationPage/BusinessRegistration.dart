@@ -66,74 +66,74 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
     );
   }
 
-  Future registerUser() async
-  {
-    var test = setValidatorTest();
+  // Future registerUser() async
+  // {
+  //   var test = setValidatorTest();
 
-    if(test != true)
-    {
-      showErrorToast();
-      return;
-    }
+  //   if(test != true)
+  //   {
+  //     showErrorToast();
+  //     return;
+  //   }
 
-    setState(() {
-      processing = true;
-    });
+  //   setState(() {
+  //     processing = true;
+  //   });
 
-    var uri = Uri.parse("https://foodsharingapp.000webhostapp.com/BusinessRegistration.php");
-    var data = 
-    {
-      "brn" : brnCtrl.text,
-      "companyName" : companyNameCtrl.text,
-      "businessName" : businessNameCtrl.text,
-      "website" : websiteCtrl.text,
-      "contactNumber" : contactNumberCtrl.text,
-      "email" : emailCtrl.text,
-      "password" : passwordCtrl.text,
-    };
+  //   var uri = Uri.parse("https://foodsharingapp.000webhostapp.com/BusinessRegistration.php");
+  //   var data = 
+  //   {
+  //     "brn" : brnCtrl.text,
+  //     "companyName" : companyNameCtrl.text,
+  //     "businessName" : businessNameCtrl.text,
+  //     "website" : websiteCtrl.text,
+  //     "contactNumber" : contactNumberCtrl.text,
+  //     "email" : emailCtrl.text,
+  //     "password" : passwordCtrl.text,
+  //   };
 
-    var res = await http.post(uri, body:data);
+  //   var res = await http.post(uri, body:data);
 
-    if(jsonDecode(res.body) == "account already exists")
-    {
-      Fluttertoast.showToast
-      (
-        msg: "Email or BRN already exist",
-        toastLength: Toast.LENGTH_SHORT,
-      );
-    }
-    else
-    {
-      if(jsonDecode(res.body) == "true")
-      {
-        Fluttertoast.showToast
-        (
-          msg: "Your account has been created",
-          toastLength: Toast.LENGTH_SHORT,
-        );
+  //   if(jsonDecode(res.body) == "account already exists")
+  //   {
+  //     Fluttertoast.showToast
+  //     (
+  //       msg: "Email or BRN already exist",
+  //       toastLength: Toast.LENGTH_SHORT,
+  //     );
+  //   }
+  //   else
+  //   {
+  //     if(jsonDecode(res.body) == "true")
+  //     {
+  //       Fluttertoast.showToast
+  //       (
+  //         msg: "Your account has been created",
+  //         toastLength: Toast.LENGTH_SHORT,
+  //       );
 
-        AllTransitions().getTransition
-        (
-          context: context,
-          transitionType: 'rightToLeft',
-          onPress: AccountCreated(),
-        );
-      }
-      else
-      {
-        Fluttertoast.showToast
-        (
-          msg: "Server error, please try again",
-          toastLength: Toast.LENGTH_SHORT,
-        );
-      }
-    }
+  //       AllTransitions().getTransition
+  //       (
+  //         context: context,
+  //         transitionType: 'rightToLeft',
+  //         onPress: AccountCreated(),
+  //       );
+  //     }
+  //     else
+  //     {
+  //       Fluttertoast.showToast
+  //       (
+  //         msg: "Server error, please try again",
+  //         toastLength: Toast.LENGTH_SHORT,
+  //       );
+  //     }
+  //   }
 
-    setState(() {
-      processing = false;
-    });
+  //   setState(() {
+  //     processing = false;
+  //   });
 
-  }
+  // }
 
   @override
   Widget build(BuildContext context)

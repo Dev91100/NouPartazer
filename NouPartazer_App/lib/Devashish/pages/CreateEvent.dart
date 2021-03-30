@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'dart:convert';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
+import 'package:time_range_picker/time_range_picker.dart';
 
 import 'package:noupartazer_app/Atish/components/CustomTextField.dart';
 import 'package:noupartazer_app/Atish/components/Buttons/LargeCustomButtonIconText.dart';
@@ -23,7 +24,7 @@ class CreateEvent extends StatefulWidget
 class _CreateEventState extends State<CreateEvent>
 {
   final _formKey = GlobalKey<FormState>();
-  TextEditingController locationNameCtrl, locationAddressCtrl, eventTypeCtrl, eventDescriptionCtrl, dateOfEventCtrl;
+  TextEditingController locationNameCtrl, locationAddressCtrl, eventTypeCtrl, eventDescriptionCtrl, dateOfEventCtrl, timeRangeCtrl;
 
   bool processing = false;
 
@@ -32,6 +33,12 @@ class _CreateEventState extends State<CreateEvent>
 
   Task task = new Task();
   DateTime selectedDate = DateTime.now();
+  TimeRange selectedTimeRange = TimeRange
+  (
+    startTime: TimeOfDay(hour: 16, minute: 0), 
+    endTime: TimeOfDay(hour: 18, minute: 0)
+  );
+  
 
   // Date Picker
   _selectDate(BuildContext context) async
@@ -54,6 +61,31 @@ class _CreateEventState extends State<CreateEvent>
     });
   }
 
+  //Time Range Picker
+  _selectTimeRange(BuildContext context) async
+  {
+    final TimeRange eventTimeRange = await showTimeRangePicker
+    (
+
+      context: context,
+      use24HourFormat: false,
+      // interval: Duration(hours: 1),
+      useRootNavigator: true,
+      ticks: 24,
+      ticksWidth: 3,
+      start: TimeOfDay(hour: 16, minute: 0),
+      end: TimeOfDay(hour: 18, minute: 0),
+    );
+    if (eventTimeRange != null && eventTimeRange != selectedTimeRange)
+    setState(()
+    {
+      selectedTimeRange = eventTimeRange;
+      print("result " + eventTimeRange.toString());
+      timeRangeCtrl.text = eventTimeRange.startTime.format(context).toString() + " to " + eventTimeRange.endTime.format(context).toString();      
+    });
+
+  }
+
   @override
   void initState()
   {
@@ -64,6 +96,7 @@ class _CreateEventState extends State<CreateEvent>
     eventTypeCtrl        = new TextEditingController();
     eventDescriptionCtrl = new TextEditingController();
     dateOfEventCtrl      = new TextEditingController();
+    timeRangeCtrl        = new TextEditingController();
   }
 
   bool setValidatorTest()
@@ -226,7 +259,7 @@ class _CreateEventState extends State<CreateEvent>
                         child: CustomTextField
                         (
                           controller: dateOfEventCtrl,
-                          keyboardType: TextInputType.datetime,
+                          // keyboardType: TextInputType.datetime,
                           labelText: 'Date of Event',
                           suffixIcon: Icons.date_range_outlined,
                           onSaved: (val)
@@ -237,6 +270,24 @@ class _CreateEventState extends State<CreateEvent>
                       ),
                     ),
 
+                    GestureDetector
+                    (
+                      onTap: () => _selectTimeRange(context),
+                      child: AbsorbPointer
+                      (
+                        child: CustomTextField
+                        (
+                          controller: timeRangeCtrl,
+                          labelText: 'Time of Event',
+                          suffixIcon: Icons.date_range_outlined,
+                          onSaved: (val)
+                          {
+                            task.timeRange = selectedTimeRange;
+                          },
+                        ),
+                      ),
+                    ),
+                    
                     //Checkboxes
                     CheckboxListTile
                     (
