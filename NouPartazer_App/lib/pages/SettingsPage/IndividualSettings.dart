@@ -23,8 +23,7 @@ class IndividualSettings extends StatelessWidget
       (
         notifications: true,
         language: true,
-        helpAndSupport: true,
-        helpAndSupportPage: HelpAndSupport(),
+        aboutUs: true,
         logOut: false,
         logPage: UserAccessPanel(),
       ),

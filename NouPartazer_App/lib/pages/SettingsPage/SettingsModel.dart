@@ -11,11 +11,13 @@ class SettingsModel extends StatefulWidget
   final bool language;
   final bool security;
   final bool helpAndSupport;
+  final bool aboutUs;
   final bool logOut;
 
   final notificationsPage;
   final languagePage;
   final helpAndSupportPage;
+  final aboutUsPage;
   final securityPage;
   final logPage;
 
@@ -26,11 +28,13 @@ class SettingsModel extends StatefulWidget
       this.language = false,
       this.security = false,
       this.helpAndSupport = false,
+      this.aboutUs = false,
       this.logOut = true,
 
       this.notificationsPage,
       this.languagePage,
       this.helpAndSupportPage,
+      this.aboutUsPage,
       this.securityPage,
       this.logPage,
     } 
@@ -75,6 +79,28 @@ class _SettingsModelState extends State<SettingsModel>
   @override
   Widget build(BuildContext context)
   {
+    aboutUsDialog()
+    {
+      return showAboutDialog
+      (
+        context: context,
+        applicationName: 'NouPartazer',
+        applicationLegalese: 'Thank you for downloading our app.',
+        applicationIcon: Container
+        (
+          width: 50,
+          height: 50,
+          decoration: BoxDecoration
+          (
+            image: DecorationImage
+            (
+              image: AssetImage('./assets/PNG/NouPartazer AppIcon_Small.png'),
+            ),
+          ),
+        ),
+        applicationVersion: '1.0',
+      );
+    }
     return Container
     (
       margin: EdgeInsets.symmetric
@@ -119,6 +145,16 @@ class _SettingsModelState extends State<SettingsModel>
             trailingIcon: Icons.keyboard_arrow_right,
             isPage: true,
             onPress: widget.securityPage,
+          ) : Container(),
+
+          (widget.aboutUs) ?
+          ListTileModel
+          (
+            leadingIcon: Icons.info_outlined,
+            titleText: 'About This App',
+            subtitleText: 'Learn more about our app',
+            trailingIcon: Icons.keyboard_arrow_right,
+            onSuperPress: aboutUsDialog,
           ) : Container(),
 
           (widget.helpAndSupport) ?
