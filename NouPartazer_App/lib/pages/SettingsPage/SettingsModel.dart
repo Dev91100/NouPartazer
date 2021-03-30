@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_switch/flutter_switch.dart';
 
 import 'package:noupartazer_app/components/ListTileModel.dart';
 import 'package:noupartazer_app/Global.dart';
@@ -46,33 +45,36 @@ class SettingsModel extends StatefulWidget
 
 class _SettingsModelState extends State<SettingsModel>
 {
-  bool status = false;
+  bool isSwitched = false;
+  
+  void toggleSwitch(bool value)
+  {  
+    if(isSwitched == false)  
+    {  
+      setState(()
+      {  
+        isSwitched = true;  
+      });  
+    }  
+    else  
+    {  
+      setState(()
+      {  
+        isSwitched = false;   
+      }); 
+    }  
+  }  
 
-  Widget switchToggle()
+  showSwitch()
   {
-    return Container
-    (
-      width: 80,
-      child: FlutterSwitch
-      (
-        activeColor: Color.fromRGBO(0, 50, 193, 1),
-        inactiveColor: Color.fromRGBO(102, 102, 102, 1),
-        width: 65,
-        height: 35,
-        valueFontSize: 12,  // Override
-        toggleSize: 20,
-        value: status,
-        borderRadius: 30.0,
-        padding: 8.0,
-        showOnOff: true,
-        onToggle: (val)
-        {
-          setState(()
-          {
-            status = val;
-          });
-        },
-      ),
+    return Switch
+    (  
+      onChanged: toggleSwitch,  
+      value: isSwitched,  
+      activeColor: Color.fromRGBO(0, 50, 193, 1),  
+      activeTrackColor: Color.fromRGBO(116, 135, 255, 1),
+      inactiveThumbColor: Color.fromRGBO(102, 102, 102, 1),  
+      inactiveTrackColor: Color.fromRGBO(102, 102, 102, 0.5),  
     );
   }
 
@@ -119,10 +121,8 @@ class _SettingsModelState extends State<SettingsModel>
             subtitleText: 'Receive notifications from the app',
             hastrailingIcon: false,
             hasTrailingButton: true,
-            trailingButton: switchToggle(),
+            trailingButton: showSwitch(),
             trailingColor: Color.fromRGBO(0, 50, 193, 1),
-            isPopUpPage: true,
-            onPress: widget.notificationsPage,
           ) : Container(),
 
           (widget.language) ?

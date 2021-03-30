@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:noupartazer_app/components/PageTitle.dart';
 import 'package:noupartazer_app/Pages/SettingsPage/SettingsModel.dart';
 import 'package:noupartazer_app/Pages/Dialogs/ConfirmationDialog/ConfirmLogOut.dart';
-import 'package:noupartazer_app/pages/SettingsPage/HelpAndSupport/HelpAndSupport.dart';
 import 'package:noupartazer_app/pages/SettingsPage/Security.dart';
 import 'package:noupartazer_app/Pages/Dialogs/LanguageDialog/ConfirmLanguage.dart';
 import 'package:noupartazer_app/Pages/Dialogs/QRcodeDialog/QrCode.dart';
