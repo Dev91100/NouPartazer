@@ -4,6 +4,7 @@ class Global
   String roboto    = 'Roboto';
   String comfortaa = 'Comfortaa';
 
+
   // -------------------- Text --------------------
   // Text Size
   final double tinyText   = 15;
