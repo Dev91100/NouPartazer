@@ -4,7 +4,7 @@ import 'package:noupartazer_app/pages/Story/NGOStory/CreateStory.dart';
 import 'package:noupartazer_app/Pages/DonationAndNGOCentresList/NGODonation.dart';
 import 'package:noupartazer_app/Pages/HomePage/NGOHomePage.dart';
 import 'package:noupartazer_app/Pages/ProfilePage/NGO/EditableNGOProfile.dart';
-import 'package:noupartazer_app/Pages/TabBar/NGOTaskTab.dart';
+import 'package:noupartazer_app/Pages/Task/TabBar/NGOTaskTab.dart';
 
 class NGOBottomNav extends StatefulWidget
 {

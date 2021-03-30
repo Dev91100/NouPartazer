@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Pages/ProfilePage/Business/EditableBusinessProfile.dart';
-import 'package:noupartazer_app/Pages/TabBar/BusinessTaskTab.dart';
+import 'package:noupartazer_app/Pages/Task/TabBar/BusinessTaskTab.dart';
 import 'package:noupartazer_app/pages/Story/BusinessStory/CreateEvent.dart';
 import 'package:noupartazer_app/Pages/DonationAndNGOCentresList/BusinessNGOCentresList.dart';
 import 'package:noupartazer_app/Pages/HomePage/BusinessHomePage.dart';

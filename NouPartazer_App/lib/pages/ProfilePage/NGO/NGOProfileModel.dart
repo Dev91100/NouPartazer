@@ -9,7 +9,7 @@ import 'package:noupartazer_app/components/SectionWithEditButton.dart';
 import 'package:noupartazer_app/components/ContactInfo.dart';
 import 'package:noupartazer_app/components/GetImage/BannerPhoto/BannerPhotoGetImage.dart';
 import 'package:noupartazer_app/components/GetImage/ProfilePhoto/ProfilePhotoGetImage.dart';
-import 'package:noupartazer_app/Pages/NGOProfile/MemberModel.dart';
+import 'package:noupartazer_app/Pages/ProfilePage/NGO/NGOMembers/MemberModel.dart';
 import 'package:noupartazer_app/Pages/Story/NGOStory/NGOStoryModelProfile.dart';
 import 'package:noupartazer_app/Pages/Dialogs/EditInfoAndContactDialog/NGOEditName.dart';
 import 'package:noupartazer_app/Pages/Dialogs/EditInfoAndContactDialog/EditContact.dart';

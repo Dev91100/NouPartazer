@@ -1,4 +1,4 @@
-import 'package:noupartazer_app/Pages/NGOCentres/NGOCentres.dart';
+import 'package:noupartazer_app/Pages/DonationAndNGOCentresList/NGOCentres/NGOCentres.dart';
 
 final List<NGOCentres> ngoCentresList =
 [

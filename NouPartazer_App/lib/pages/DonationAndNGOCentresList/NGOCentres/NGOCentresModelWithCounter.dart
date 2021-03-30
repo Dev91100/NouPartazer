@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/components/PageTitle.dart';
 import 'package:noupartazer_app/components/Buttons/CustomIconButton.dart';
-import 'package:noupartazer_app/Pages/NGOCentres/NGOCentresModel.dart';
-import 'package:noupartazer_app/Pages/NGOCentres/NGOCentres.dart';
-import 'package:noupartazer_app/Pages/NGOCentres/NGOCentresList.dart';
+import 'package:noupartazer_app/Pages/DonationAndNGOCentresList/NGOCentres/NGOCentresModel.dart';
+import 'package:noupartazer_app/Pages/DonationAndNGOCentresList/NGOCentres/NGOCentres.dart';
+import 'package:noupartazer_app/Pages/DonationAndNGOCentresList/NGOCentres/NGOCentresList.dart';
 
 class NGOCentresModelWithCounter extends StatelessWidget
 {
