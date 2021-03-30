@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 
-import 'package:noupartazer_app/components/ListTileModel.dart';
 import 'package:noupartazer_app/Global.dart';
+import 'package:noupartazer_app/components/ListTileModel.dart';
 
 
 class SettingsModel extends StatefulWidget

@@ -6,11 +6,11 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
 import 'package:time_range_picker/time_range_picker.dart';
 
+import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/components/CustomTextField.dart';
 import 'package:noupartazer_app/components/Buttons/LargeCustomButtonIconText.dart';
 import 'package:noupartazer_app/components/PageTitle.dart';
 import 'package:noupartazer_app/components/SectionTitle.dart';
-import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/components/GetImage/DottedBox/DottedBoxGetImage.dart';
 import 'package:noupartazer_app/components/DateTask.dart';
 import 'package:noupartazer_app/Pages/Dialogs/StatementDialog/EventCreated.dart';

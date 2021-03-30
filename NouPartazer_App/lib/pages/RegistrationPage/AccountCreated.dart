@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/components/Buttons/LargeCustomButtonIconText.dart';
 import 'package:noupartazer_app/components/Text/HugeText.dart';
 import 'package:noupartazer_app/components/Text/MediumText.dart';
-import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/components/TheBackButton.dart';
 import 'package:noupartazer_app/Pages/UserAccess/UserAccessPanel.dart';
 

@@ -4,9 +4,9 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
+import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/Pages/UserAccess/UserAccessPanel.dart';
 import 'package:noupartazer_app/components/ContainerText.dart';
-import 'package:noupartazer_app/Global.dart';
 
 class CustomSplashscreen extends StatefulWidget
 {

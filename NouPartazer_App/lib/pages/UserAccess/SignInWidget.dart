@@ -4,16 +4,17 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
 
+import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/components/Buttons/LargeButtonIconText.dart';
 import 'package:noupartazer_app/components/CustomTextField.dart';
 import 'package:noupartazer_app/components/Text/HugeText.dart';
 import 'package:noupartazer_app/components/Text/MediumText.dart';
-import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/components/Transitions/AllTransitions.dart';
-import 'package:noupartazer_app/Pages/BottomNavigation/BusinessBottomNav.dart';
-import 'package:noupartazer_app/Pages/BottomNavigation/NGOBottomNav.dart';
 import 'package:noupartazer_app/database/Repository.dart';
 import 'package:noupartazer_app/database/UserDataModel.dart';
+import 'package:noupartazer_app/Pages/BottomNavigation/BusinessBottomNav.dart';
+import 'package:noupartazer_app/Pages/BottomNavigation/NGOBottomNav.dart';
+
 
 class SignInWidget extends StatefulWidget
 {

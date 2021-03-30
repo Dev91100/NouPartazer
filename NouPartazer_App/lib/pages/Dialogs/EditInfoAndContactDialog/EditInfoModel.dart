@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:noupartazer_app/Global.dart';
 
+import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/Pages/Dialogs/components/IconTextField.dart';
 import 'package:noupartazer_app/Pages/Dialogs/components/TwoButtons.dart';
+
+//This file builds a customizable model for editing profile information related bottom sheets
 
 class EditInfoModel
 {

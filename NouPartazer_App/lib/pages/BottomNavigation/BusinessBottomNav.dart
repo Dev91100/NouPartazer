@@ -7,6 +7,8 @@ import 'package:noupartazer_app/pages/Story/BusinessStory/CreateEvent.dart';
 import 'package:noupartazer_app/Pages/DonationAndNGOCentresList/BusinessNGOCentresList.dart';
 import 'package:noupartazer_app/Pages/HomePage/BusinessHomePage.dart';
 
+//This file controls the bottom navigation bar in the business POV
+
 class BusinessBottomNav extends StatefulWidget
 {
   @override
