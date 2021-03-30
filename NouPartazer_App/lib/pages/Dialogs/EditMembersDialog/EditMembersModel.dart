@@ -82,7 +82,6 @@ class EditMembersModel
           };
 
           var res = await http.post(uri, body:data);
-          
 
           if(jsonDecode(res.body) == "true")
           {

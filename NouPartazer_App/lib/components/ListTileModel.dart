@@ -26,7 +26,6 @@ class ListTileModel extends StatelessWidget
   final bool isPage;
   final onPress;
 
-  final bool hasSuperPress;
   final VoidCallback onSuperPress;
 
   ListTileModel
@@ -47,7 +46,6 @@ class ListTileModel extends StatelessWidget
       this.isPopUpPage = false,
       this.isPage = false,
       this.onPress,
-      this.hasSuperPress = false,
       this.onSuperPress,
       this.iconSize,
     }
@@ -90,7 +88,7 @@ class ListTileModel extends StatelessWidget
         size: (iconSize != null) ? iconSize : Global().normalIcon,
       ) : (hasTrailingButton) ? trailingButton : null,
       
-      onTap: (!hasSuperPress) ? ()
+      onTap: (onSuperPress == null) ? ()
       {
         if(isPopUpPage)
           {

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_switch/flutter_switch.dart';
 
 import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/components/ListTileModel.dart';
@@ -11,11 +10,13 @@ class SettingsModel extends StatefulWidget
   final bool language;
   final bool security;
   final bool helpAndSupport;
+  final bool aboutUs;
   final bool logOut;
 
   final notificationsPage;
   final languagePage;
   final helpAndSupportPage;
+  final aboutUsPage;
   final securityPage;
   final logPage;
 
@@ -26,11 +27,13 @@ class SettingsModel extends StatefulWidget
       this.language = false,
       this.security = false,
       this.helpAndSupport = false,
+      this.aboutUs = false,
       this.logOut = true,
 
       this.notificationsPage,
       this.languagePage,
       this.helpAndSupportPage,
+      this.aboutUsPage,
       this.securityPage,
       this.logPage,
     } 
@@ -42,39 +45,64 @@ class SettingsModel extends StatefulWidget
 
 class _SettingsModelState extends State<SettingsModel>
 {
-  bool status = false;
+  bool isSwitched = false;
+  
+  void toggleSwitch(bool value)
+  {  
+    if(isSwitched == false)  
+    {  
+      setState(()
+      {  
+        isSwitched = true;  
+      });  
+    }  
+    else  
+    {  
+      setState(()
+      {  
+        isSwitched = false;   
+      }); 
+    }  
+  }  
 
-  Widget switchToggle()
+  showSwitch()
   {
-    return Container
-    (
-      width: 80,
-      child: FlutterSwitch
-      (
-        activeColor: Color.fromRGBO(0, 50, 193, 1),
-        inactiveColor: Color.fromRGBO(102, 102, 102, 1),
-        width: 65,
-        height: 35,
-        valueFontSize: 12,  // Override
-        toggleSize: 20,
-        value: status,
-        borderRadius: 30.0,
-        padding: 8.0,
-        showOnOff: true,
-        onToggle: (val)
-        {
-          setState(()
-          {
-            status = val;
-          });
-        },
-      ),
+    return Switch
+    (  
+      onChanged: toggleSwitch,  
+      value: isSwitched,  
+      activeColor: Color.fromRGBO(0, 50, 193, 1),  
+      activeTrackColor: Color.fromRGBO(116, 135, 255, 1),
+      inactiveThumbColor: Color.fromRGBO(102, 102, 102, 1),  
+      inactiveTrackColor: Color.fromRGBO(102, 102, 102, 0.5),  
     );
   }
 
   @override
   Widget build(BuildContext context)
   {
+    aboutUsDialog()
+    {
+      return showAboutDialog
+      (
+        context: context,
+        applicationName: 'NouPartazer',
+        applicationLegalese: 'Thank you for downloading our app.',
+        applicationIcon: Container
+        (
+          width: 50,
+          height: 50,
+          decoration: BoxDecoration
+          (
+            image: DecorationImage
+            (
+              image: AssetImage('./assets/PNG/NouPartazer AppIcon_Small.png'),
+            ),
+          ),
+        ),
+        applicationVersion: '1.0',
+      );
+    }
     return Container
     (
       margin: EdgeInsets.symmetric
@@ -93,10 +121,8 @@ class _SettingsModelState extends State<SettingsModel>
             subtitleText: 'Receive notifications from the app',
             hastrailingIcon: false,
             hasTrailingButton: true,
-            trailingButton: switchToggle(),
+            trailingButton: showSwitch(),
             trailingColor: Color.fromRGBO(0, 50, 193, 1),
-            isPopUpPage: true,
-            onPress: widget.notificationsPage,
           ) : Container(),
 
           (widget.language) ?
@@ -119,6 +145,16 @@ class _SettingsModelState extends State<SettingsModel>
             trailingIcon: Icons.keyboard_arrow_right,
             isPage: true,
             onPress: widget.securityPage,
+          ) : Container(),
+
+          (widget.aboutUs) ?
+          ListTileModel
+          (
+            leadingIcon: Icons.info_outlined,
+            titleText: 'About This App',
+            subtitleText: 'Learn more about our app',
+            trailingIcon: Icons.keyboard_arrow_right,
+            onSuperPress: aboutUsDialog,
           ) : Container(),
 
           (widget.helpAndSupport) ?
