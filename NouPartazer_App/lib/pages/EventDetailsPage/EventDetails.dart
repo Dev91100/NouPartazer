@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/components/PageTitle.dart';
 import 'package:noupartazer_app/components/SectionTitle.dart';
 import 'package:noupartazer_app/components/ContainerIconText.dart';
@@ -9,6 +8,7 @@ import 'package:noupartazer_app/components/Buttons/SmallButtonIconText.dart';
 import 'package:noupartazer_app/components/CardIconText.dart';
 import 'package:noupartazer_app/components/LongText.dart';
 import 'package:noupartazer_app/components/CardListTileText.dart';
+import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/Pages/Dialogs/DonationEventDialog/AcceptDonation.dart';
 
 class EventDetails extends StatelessWidget

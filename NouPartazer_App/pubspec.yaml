@@ -28,7 +28,6 @@ dependencies:
   path_provider: ^2.0.1
   rxdart: any
   sqflite: ^2.0.0+3
-  time_range_picker: ^2.0.1
   url_launcher: ^6.0.2
   validators: ^2.0.0
 

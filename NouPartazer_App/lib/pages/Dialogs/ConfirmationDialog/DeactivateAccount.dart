@@ -1,7 +1,5 @@
 import 'package:noupartazer_app/Pages/Dialogs/ConfirmationDialog/ConfirmationModel.dart';
 
-//This file is the alert dialog to deactivate an account
-
 class DeactivateAccount extends ConfirmationModel
 {
   String text;

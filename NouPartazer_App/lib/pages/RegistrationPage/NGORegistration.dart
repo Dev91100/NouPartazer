@@ -4,7 +4,6 @@ import 'dart:convert';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
 
-import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/components/CustomDivider.dart';
 import 'package:noupartazer_app/components/CustomTextField.dart';
 import 'package:noupartazer_app/components/Buttons/LargeCustomButtonIconText.dart';
@@ -12,8 +11,9 @@ import 'package:noupartazer_app/components/PageTitle.dart';
 import 'package:noupartazer_app/components/SectionTitle.dart';
 import 'package:noupartazer_app/components/Text/HugeText.dart';
 import 'package:noupartazer_app/components/Text/MediumText.dart';
-import 'package:noupartazer_app/components/Transitions/AllTransitions.dart';
+import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/pages/RegistrationPage/AccountCreated.dart';
+import 'package:noupartazer_app/components/Transitions/AllTransitions.dart';
 
 class NGORegistration extends StatefulWidget
 {

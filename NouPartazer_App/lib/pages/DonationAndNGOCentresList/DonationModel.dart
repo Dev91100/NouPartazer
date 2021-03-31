@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/components/IconText.dart';
 import 'package:noupartazer_app/components/Text/NormalText.dart';
 import 'package:noupartazer_app/components/Transitions/AllTransitions.dart';
 import 'package:noupartazer_app/Pages/EventDetailsPage/EventDetails.dart';
+import 'package:noupartazer_app/Global.dart';
 
 class DonationModel extends StatelessWidget
 {

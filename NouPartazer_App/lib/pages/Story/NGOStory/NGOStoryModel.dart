@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:carousel_slider/carousel_slider.dart';
 
-import 'package:noupartazer_app/Global.dart';
+import 'package:noupartazer_app/Pages/Story/NGOStory/NGOStory.dart';
 import 'package:noupartazer_app/components/LongText.dart';
 import 'package:noupartazer_app/components/ContainerText.dart';
-import 'package:noupartazer_app/Pages/Story/NGOStory/NGOStory.dart';
+import 'package:noupartazer_app/Global.dart';
 
 class NGOStoryModel extends StatelessWidget
 {

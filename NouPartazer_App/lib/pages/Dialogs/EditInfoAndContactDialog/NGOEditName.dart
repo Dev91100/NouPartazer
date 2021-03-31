@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Pages/Dialogs/EditInfoAndContactDialog/EditInfoModel.dart';
 
-//This file allows an NGO to edit its name and description
-
 class NGOEditName extends EditInfoModel
 {
   String title;

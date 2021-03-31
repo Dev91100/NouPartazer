@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:noupartazer_app/components/Buttons/LargeButtonIconText.dart';
-import 'package:noupartazer_app/Pages/BottomNavigation/IndividualBottomNav.dart';
 import 'package:noupartazer_app/Pages/UserAccess/SignInWidget.dart';
 import 'package:noupartazer_app/Pages/UserAccess/SignUpWidget.dart';
+import 'package:noupartazer_app/components/Buttons/LargeButtonIconText.dart';
+import 'package:noupartazer_app/Pages/BottomNavigation/IndividualBottomNav.dart';
 
 class UserAccessPanel extends StatefulWidget
 {

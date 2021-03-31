@@ -1,10 +1,10 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:noupartazer_app/components/CustomDivider.dart';
 import 'package:noupartazer_app/Pages/Task/NGOTask/NGOTaskModel.dart';
 import 'package:noupartazer_app/Pages/Task/NGOTask/NGOTask.dart';
 import 'package:noupartazer_app/Pages/Task/NGOTask/CancelledTaskList.dart';
+import 'package:noupartazer_app/components/CustomDivider.dart';
 
 class NGOCancelledTask extends StatelessWidget
 {

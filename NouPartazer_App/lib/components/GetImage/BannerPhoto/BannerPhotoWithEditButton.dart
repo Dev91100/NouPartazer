@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:noupartazer_app/components/Buttons/RoundPhotoButton.dart';
 
 class BannerPhotoWithEditButton extends StatelessWidget

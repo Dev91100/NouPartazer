@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'package:noupartazer_app/Global.dart';
+import 'package:noupartazer_app/Pages/UserAccess/components/OrgButton.dart';
 import 'package:noupartazer_app/components/Text/HugeText.dart';
 import 'package:noupartazer_app/components/Text/MediumText.dart';
+import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/Pages/RegistrationPage/BusinessRegistration.dart';
 import 'package:noupartazer_app/Pages/RegistrationPage/NGORegistration.dart';
-import 'package:noupartazer_app/Pages/UserAccess/components/OrgButton.dart';
 
 class SignUpWidget extends StatelessWidget
 {

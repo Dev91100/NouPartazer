@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 import 'package:noupartazer_app/Pages/Splashscreen/CustomSplashscreen.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget

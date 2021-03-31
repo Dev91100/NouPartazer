@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
 import 'package:noupartazer_app/Global.dart';
+
 import './SectionTitle.dart';
 import 'Buttons/RoundIconButton.dart';
 

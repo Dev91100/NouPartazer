@@ -1,7 +1,5 @@
 import 'package:noupartazer_app/Pages/Dialogs/DonationEventDialog/DonationEventModel.dart';
 
-//This file is the alert dialog to accept a donation
-
 class AcceptDonation extends DonationEventModel
 {
   String text;

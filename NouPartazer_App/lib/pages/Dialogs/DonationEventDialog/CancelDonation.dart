@@ -1,7 +1,5 @@
 import 'package:noupartazer_app/Pages/Dialogs/DonationEventDialog/DonationEventModel.dart';
 
-//This file is the alert dialog to cancel a donation
-
 class CancelDonation extends DonationEventModel
 {
   final String text;

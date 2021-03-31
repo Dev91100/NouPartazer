@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:noupartazer_app/Global.dart';
 
 class SectionTitle extends StatelessWidget

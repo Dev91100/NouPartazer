@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-
 import 'package:noupartazer_app/Global.dart';
-import 'package:noupartazer_app/Pages/Dialogs/components/TwoButtons.dart';
 
-//This file builds a customizable model for donation/event related dialogs
+import 'package:noupartazer_app/Pages/Dialogs/components/TwoButtons.dart';
 
 class DonationEventModel
 {

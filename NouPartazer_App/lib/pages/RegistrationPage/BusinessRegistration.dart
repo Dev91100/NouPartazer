@@ -15,8 +15,6 @@ import 'package:noupartazer_app/components/Transitions/AllTransitions.dart';
 import 'package:noupartazer_app/Pages/BottomNavigation/BusinessBottomNav.dart';
 import 'package:noupartazer_app/components/Buttons/LargeCustomButtonIconText.dart';
 
-//This file controls the registration of a business
-
 class BusinessRegistration extends StatefulWidget
 {
   @override

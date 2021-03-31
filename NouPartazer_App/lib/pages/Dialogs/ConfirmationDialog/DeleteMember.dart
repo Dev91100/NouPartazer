@@ -1,7 +1,5 @@
 import 'package:noupartazer_app/Pages/Dialogs/ConfirmationDialog/ConfirmationModel.dart';
 
-//This file is the alert dialog to delete a member in an NGO
-
 class DeleteMember extends ConfirmationModel
 {
   final String text;
