@@ -15,7 +15,7 @@ In order to run the mobile application, the following minimum requirements shoul
 - Mobile hardware: ARM Android devices.
 
 ## Installation
-- First of all, you have to download our NouPartzer_App.apk (Or app-release.apk) to your device. APP - You can find it in our NouPartzer_App -> apk -> noupartazer-release.apk.
+- First of all, you have to download our noupartazer-release.apk to your device. You can find it in folder NouPartzer_App -> apk -> noupartazer-release.apk.
 - After that, make sure your device allows app from outside the Playstore to be installed.
 - Install the app, and enjoy!
 
