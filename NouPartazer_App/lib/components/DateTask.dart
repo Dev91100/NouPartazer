@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:time_range_picker/time_range_picker.dart';
 
 class Task {

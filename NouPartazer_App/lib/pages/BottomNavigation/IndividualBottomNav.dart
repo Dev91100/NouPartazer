@@ -91,7 +91,7 @@ class _IndividualBottomNavState extends State<IndividualBottomNav>
             (
               activeIcon: Icon(Icons.home),
               icon: Icon(Icons.home_outlined),
-              label: 'home',
+              label: 'Home',
             ),
 
             BottomNavigationBarItem

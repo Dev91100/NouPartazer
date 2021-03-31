@@ -1,12 +1,14 @@
+import 'package:flutter/material.dart';
 import 'dart:async';
 import 'dart:io';
 
-import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 import 'package:noupartazer_app/Global.dart';
-import 'package:noupartazer_app/Pages/UserAccess/UserAccessPanel.dart';
+import 'package:noupartazer_app/database/DatabaseQuery.dart';
 import 'package:noupartazer_app/components/ContainerText.dart';
+import 'package:noupartazer_app/Pages/UserAccess/UserAccessPanel.dart';
+import 'package:noupartazer_app/database/Tables/PROFILE.dart';
 
 class CustomSplashscreen extends StatefulWidget
 {
@@ -21,6 +23,8 @@ class CustomSplashscreen extends StatefulWidget
 class _CustomSplashscreenState extends State<CustomSplashscreen>
 {
   bool connected = true;
+  DatabaseQuery _query;
+  List<PROFILE> _orgDataList;
 
   @override
   void initState()
@@ -28,6 +32,8 @@ class _CustomSplashscreenState extends State<CustomSplashscreen>
     super.initState();
 
     _checkInternetConnectivity();
+    _query = DatabaseQuery();
+    readUserData();
   }
 
   _checkInternetConnectivity() async
@@ -66,6 +72,31 @@ class _CustomSplashscreenState extends State<CustomSplashscreen>
         toastLength: Toast.LENGTH_SHORT,
       );
     }
+  }
+
+  readUserData() async
+  {
+    _orgDataList = [];
+    var orgData = await _query.readData('PROFILE');
+
+    orgData.forEach((data)
+    {
+
+      var profile = PROFILE();
+
+      profile.profileID   = data['userID'];
+      profile.ngoID       = data['ngoID'];
+      profile.businessID  = data['businessID'];
+      profile.email       = data['email'];
+      profile.password    = data['password'];
+      profile.description = data['description'];
+
+      _orgDataList.add(profile);
+
+    });
+    print("UserID " + _orgDataList[0].profileID.toString());
+    
+    return orgData;
   }
 
   @override
@@ -217,7 +248,7 @@ class _CustomSplashscreenState extends State<CustomSplashscreen>
                       child: (connected) ? CircularProgressIndicator() :
                       ContainerText
                       (
-                        text: 'No internet connectivity',
+                        text: 'No internet connection',
                         textColor: Colors.white,
                         fontWeight: FontWeight.w300,
                         textAlign: TextAlign.center,

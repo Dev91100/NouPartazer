@@ -103,7 +103,7 @@ class _NGOBottomNavState extends State<NGOBottomNav>
             (
               activeIcon: Icon(Icons.home),
               icon: Icon(Icons.home_outlined),
-              label: 'home',
+              label: 'Home',
             ),
 
             BottomNavigationBarItem
@@ -122,7 +122,7 @@ class _NGOBottomNavState extends State<NGOBottomNav>
                 size: 50.0,
               ),
 
-              label: 'Add Stories',
+              label: 'Create Story',
             ),
 
             BottomNavigationBarItem

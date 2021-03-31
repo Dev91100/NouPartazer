@@ -104,7 +104,7 @@ class _BusinessBottomNavState extends State<BusinessBottomNav>
             (
               activeIcon: Icon(Icons.home),
               icon: Icon(Icons.home_outlined),
-              label: 'home',
+              label: 'Home',
             ),
 
             BottomNavigationBarItem
@@ -123,7 +123,7 @@ class _BusinessBottomNavState extends State<BusinessBottomNav>
                 size: 50.0,
               ),
 
-              label: 'Add Stories',
+              label: 'Create Event',
             ),
 
             BottomNavigationBarItem

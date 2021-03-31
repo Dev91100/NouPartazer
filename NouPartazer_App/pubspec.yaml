@@ -20,9 +20,7 @@ dependencies:
   flutter:
     sdk: flutter
   carousel_slider: ^3.0.0
-  connectivity: ^3.0.3
   dotted_border: ^1.0.7
-  flutter_switch: ^0.3.0
   fluttertoast: null
   http: ^0.13.0
   image_picker: ^0.7.3
