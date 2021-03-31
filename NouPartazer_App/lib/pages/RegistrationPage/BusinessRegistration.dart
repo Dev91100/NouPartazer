@@ -13,7 +13,6 @@ import 'package:noupartazer_app/components/Text/HugeText.dart';
 import 'package:noupartazer_app/components/Text/MediumText.dart';
 import 'package:noupartazer_app/pages/RegistrationPage/AccountCreated.dart';
 import 'package:noupartazer_app/components/Transitions/AllTransitions.dart';
-import 'package:noupartazer_app/Pages/BottomNavigation/BusinessBottomNav.dart';
 
 class BusinessRegistration extends StatefulWidget
 {
@@ -262,10 +261,10 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
                         text: 'Register',
                         processing: processing,
                         hasIcon: false,
-                        isPageTransition: true,
-                        transitionType: 'downToUp',
-                        onPress: BusinessBottomNav(),
-                        // onSuperPress: registerUser,
+                        // isPageTransition: true,
+                        // transitionType: 'downToUp',
+                        // onPress: BusinessBottomNav(),
+                        onSuperPress: registerUser,
                       )
                     ),
                   ],
