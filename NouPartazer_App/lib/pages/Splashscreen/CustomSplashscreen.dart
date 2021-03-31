@@ -94,7 +94,11 @@ class _CustomSplashscreenState extends State<CustomSplashscreen>
       _orgDataList.add(profile);
 
     });
-    print("UserID " + _orgDataList[0].profileID.toString());
+
+    if(_orgDataList.length > 0)
+    {
+      print("UserID " + _orgDataList[0].profileID.toString());
+    }
     
     return orgData;
   }
