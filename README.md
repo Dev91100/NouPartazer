@@ -17,6 +17,9 @@ Some NGOs in Mauritius combat these social plagues by distributing food accross 
 - To promote food collection events from NGOs.
 - To make NGOs aware of donations from businesses.
 
+## Prototype Link
+https://www.figma.com/proto/OvWVrnTGk5ipVXaHMyaiEx/NouPartazer_2?node-id=495%3A1311&viewport=1308%2C-3593%2C0.5543531775474548&scaling=contain
+
 ## System requirements
 In order to run the mobile application, the following minimum requirements should be met:
 - Mobile operating systems: Android Jelly Bean, v16, 4.1.x or newer.
