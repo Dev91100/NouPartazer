@@ -35,7 +35,7 @@ In order to run the mobile application, the following minimum requirements shoul
 ## Usage
 #### Note : your device must have an active internet connection to access the app
 ### First Use
-If you are a new user to our app, you can choose to sign up for a free account. There are a few steps in our signup. When creating your account, you have to choose whether you represent an Non-Governmental-Organisation or an enterprise. Additionally, you have to provide the required information to complete the signup.
+If you are a new user to our app, you can choose to sign up for a free account. There are a few steps in our signup. When creating your account, you have to choose whether you represent an **Non-Governmental-Organisation(NGO)** or an **Enterprise/Business**. Additionally, you have to provide the required information to complete the signup.
 
 If you want to skip the registration process, we have already created two accounts which can be used to access the NGO interface and Business interface respectively
 
