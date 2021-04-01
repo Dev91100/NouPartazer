@@ -67,9 +67,9 @@ A business or an individual who wants to donate to a particular NGO can scroll t
 
 <br>
 
-#### Use case #3 - Marriage Food Surplus
-During normal times & the marriage season, there is a relatively high number of marriages being carried out in our small country of Mauritius. These marriages typically have hundreds of guests and can last a few days.
+#### Use case #3 - Wedding food surplus
+During wedding season, there is a relatively high number of marriage ceremonies being carried out in our small country of Mauritius. These ceremonies typically have hundreds of guests and can last a few days.
 
-It is very likely that there is a food surplus. We have actually experienced that quite the number if times here. The organisers usuually try to convince some of the guests and close relatives to take some of the food home. Despite of this, there is still a huge amount of left over food as well as ingredients. Those ingredients are sometimes 1 month away from expiry because it was obtained at a cheaper rate in order to reduce the cost of the wedding.
+There is a high probability of food surpluses that are wasted during these events. The organisers usually try to redistribute some of the surpluses to guests and relatives. Despite of this, there is still a huge amount of left over food including various ingredients such as vegtables and meat. Those ingredients are sometimes 1 month away from expiry because it was obtained at a cheaper rate in order to reduce the cost of the wedding.
 
-Using NouPartazer, we believe that the food wastage will be greatly reduced and those food will reach the mouths of the needier people through NGOs. Those NGOs will also be very visible and the Government itself may encourage them to use this app.
+Using NouPartazer, the organisers can create a donation event so that the food wastage is greatly reduced and instead the food will reach the mouths of the needier people through NGOs.
