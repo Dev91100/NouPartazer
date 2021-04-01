@@ -24,8 +24,8 @@ https://www.figma.com/proto/OvWVrnTGk5ipVXaHMyaiEx/NouPartazer_2?node-id=495%3A1
 
 ## System requirements
 In order to run the mobile application, the following minimum requirements should be met:
-- Mobile operating systems: Android Jelly Bean, v16, 4.1.x or newer.
-- Mobile hardware: ARM Android devices.
+- Mobile operating systems: **Android Jelly Bean, v16, 4.1.x or newer.**
+- Mobile hardware         : **ARM Android devices.**
 
 ## Installation
 - First of all, you have to download our noupartazer-release.apk to your device. You can find it in folder <br>**NouPartzer_App -> apk -> noupartazer-release.apk**
@@ -40,9 +40,9 @@ If you are a new user to our app, you can choose to sign up for a free account. 
 If you want to skip the registration process, we have already created two accounts which can be used to access the NGO interface and Business interface respectively
 
 #### To login as an NGO
-email: ngo1@test.com
-<br>password: 1234</br>
+Email   : **ngo1@test.com**<br>
+Password: **1234**</br>
 
 #### To login as a business
-email: com@gmail.com
-<br>password: 123467</br>
+Email   : **com@gmail.com**<br>
+Password: **123467**</br>
