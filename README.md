@@ -9,7 +9,7 @@ The causes of hunger and malnutrition include **poverty, inequalities** and **na
 Some NGOs in Mauritius combat these social plagues by distributing food accross the island. However, their only platforms are online through a website which limits their visibility and accessibilty from those who want to donate and participate in this combat. Nowadays smartphones are more accessible than computers and an app well designed is more user friendly and intuitive than a website. Our solution can greatly help to achieve one or more of the United Nations 17 Sustainable Development Goals including **'Zero Hunger'** and **'No Poverty'** which are our main targets.
 
 ## Solution proposed
-**NouPartazer(WeShare)** is a food sharing app which aims at reducing the problem of hunger in Mauritius. The mobile application will facilitate the process of food collect between three main stakeholders: **NGOs, Businesses** and **Individuals**.
+**NouPartazer(WeShare)** is a food sharing app which aims at reducing the problem of hunger in Mauritius. The mobile application will facilitate the process of food collection between three main stakeholders: **NGOs, Businesses** and **Individuals**.
 
 **Our objectives are as follows:**
 - To create a user friendly platform for its users.
