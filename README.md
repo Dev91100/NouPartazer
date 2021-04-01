@@ -47,6 +47,9 @@ Password: **1234**</br>
 Email   : **com@gmail.com**<br>
 Password: **123467**</br>
 
+#### To access the individual interface
+Press **Skip** on the SignIn/Signup page
+
 ---
 
 ### Use cases
