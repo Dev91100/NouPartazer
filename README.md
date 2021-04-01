@@ -18,6 +18,7 @@ Some NGOs in Mauritius combat these social plagues by distributing food accross 
 - To make NGOs aware of donations from businesses.
 
 ## Prototype Link
+You can view our figma prototype using the link below:
 https://www.figma.com/proto/OvWVrnTGk5ipVXaHMyaiEx/NouPartazer_2?node-id=495%3A1311&viewport=1308%2C-3593%2C0.5543531775474548&scaling=contain
 
 ## System requirements
