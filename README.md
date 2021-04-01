@@ -76,5 +76,5 @@ Using NouPartazer, the organisers can create a donation event so that the food w
 
 <br>
 
-#### Use case #4 - NGO promote food collect event
+#### Use case #4 - NGO promote food collection event
 Through the creation of stories within the app, an NGO can promote its food collection events. Both individuals and businesses can view these stories thus attracting more people to contribute.
