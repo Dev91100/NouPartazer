@@ -58,4 +58,4 @@ A typical restaurant has surplus of food every week that are thrown away. Instea
 
 This donation will be visible to all NGOs which are registered in the app. An NGO which is interested and able to handle perishable food can accept this donation and get prepared to go and collect the food so that it can be redistributed to people in need.
 
-Using the task page, both the restaurant and NGO can keep track of the donation status and with the QR Code scanning process, the business can confirm the identity of the NGO which is collecting the food.
+Using the task page, both the restaurant and NGO can keep track of the donation status and with the QR Code scanning process, the business can both confirm the identity of the NGO which is collecting the food and confirm the food donation process.
