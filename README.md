@@ -15,12 +15,12 @@ In order to run the mobile application, the following minimum requirements shoul
 - Mobile hardware: ARM Android devices.
 
 ## Installation
-- First of all, you have to download our noupartazer-release.apk to your device. You can find it in folder NouPartzer_App -> apk -> noupartazer-release.apk.
+- First of all, you have to download our noupartazer-release.apk to your device. You can find it in folder **NouPartzer_App -> apk -> noupartazer-release.apk**
 - After that, make sure your device allows app from outside the Playstore to be installed.
 - Install the app, and enjoy!
 
 ## Usage
-#### First Use
+**First Use**
 If you are a new user to our app, you can choose to sign up for a free account. There are a few steps in our signup. When creating your account, you have to choose whether you represent an Non-Governmental-Organisation or an enterprise. Additionally, you have to provide a little bit of information to complete the signup.
 
 ## Login passwords to test the app
