@@ -47,8 +47,9 @@ Password: **1234**</br>
 Email   : **com@gmail.com**<br>
 Password: **123467**</br>
 
-### How to use the app?
+### Use cases
 #### Use case #1 - Restaurant food surplus
+---
 A restaurant can have surplus of food every week that are thrown away. Instead of wasting the food, the owner of the restaurant can create an account in NouPartazer(WeShare) and post a donation event with details such as food type, which in this case is perishable food, a date and time when an NGO can come and collect the food and more details about the location of the restaurant.<br>
 
 This donation will be visible to all NGOs which are registered in the app. An NGO which is interested and able to handle perishable food can accept this donation and get prepared to go and collect the food so that it can be redistributed to people in need.
