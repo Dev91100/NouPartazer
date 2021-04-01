@@ -8,7 +8,7 @@ The causes of hunger and malnutrition include **poverty, inequalities** and **na
 
 Some NGOs in Mauritius combat these social plagues by distributing food accross the island. However, their only platforms are online through a website which limits their visibility and accessibilty from those who want to donate and participate in this combat. Nowadays smartphones are more accessible than computers and an app well designed is more user friendly and intuitive than a website. Our solution can greatly help to achieve one or more of the United Nations 17 Sustainable Development Goals including **'Zero Hunger'** and **'No Poverty'** which are our main targets.
 
-## About our app
+## Solution proposed
 **NouPartazer(WeShare)** is a food sharing app which aims at reducing the problem of hunger in Mauritius. The mobile application will facilitate the process of food collect between three main stakeholders: **NGOs, Businesses** and **Individuals**.
 
 **Our objectives are as follows:**
@@ -48,7 +48,7 @@ Email   : **com@gmail.com**<br>
 Password: **123467**</br>
 
 ### How to use the app?
-#### UseCase #1 - Restaurant food surplus
+#### Use case #1 - Restaurant food surplus
 A restaurant can have surplus of food every week that are thrown away. Instead of wasting the food, the owner of the restaurant can create an account in NouPartazer(WeShare) and post a donation event with details such as food type, which in this case is perishable food, a date and time when an NGO can come and collect the food and more details about the location of the restaurant.<br>
 
 This donation will be visible to all NGOs which are registered in the app. An NGO which is interested and able to handle perishable food can accept this donation and get prepared to go and collect the food so that it can be redistributed to people in need.
