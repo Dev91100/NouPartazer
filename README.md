@@ -40,12 +40,12 @@ If you are a new user to our app, you can choose to sign up for a free account. 
 If you want to skip the registration process, we have already created two accounts which can be used to access the NGO interface and Business interface respectively
 
 #### To login as an NGO
-Email   : **ngo1@test.com**<br>
+Email   : **ngo@test.com**<br>
 Password: **1234**</br>
 
 #### To login as a business
-Email   : **com@gmail.com**<br>
-Password: **123467**</br>
+Email   : **com@test.com**<br>
+Password: **1234**</br>
 
 #### To access the individual interface
 Press **Skip** on the SignIn/Signup page
