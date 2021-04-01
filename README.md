@@ -3,15 +3,6 @@ Food Sharing App
 
 <a href="https://drive.google.com/uc?export=view&id=1SLaJFSs542l1HZ7zWxCYHRHsTtjOOzHO"><img src="https://drive.google.com/uc?export=view&id=1SLaJFSs542l1HZ7zWxCYHRHsTtjOOzHO" style="width: 500px; max-width: 100%; height: auto" title="Click for the larger version." /></a>
 
-## Login passwords to test the app
-#### To login as an NGO
-email: ngo1@test.com
-<br>password: 1234</br>
-
-#### To login as a business
-email: com@gmail.com
-<br>password: 123467</br>
-
 ## The problem identified
 Food wastage is quite an overlooked problem in the general society. It is present in every country including ours which is Mauritius. The sad reality is that it will always be present. However, it is possible to reduce it to a minimum. This can greatly help to achieve one or more of the United Nations 17 Sustainable Development Goals including 'Zero Hunger' and 'No Poverty' which are our main targets.
 
@@ -32,3 +23,13 @@ In order to run the mobile application, the following minimum requirements shoul
 #### First Use
 If you are a new user to our app, you can choose to sign up for a free account. There are a few steps in our signup. When creating your account, you have to choose whether you represent an Non-Governmental-Organisation or an enterprise. Additionally, you have to provide a little bit of information to complete the signup.
 
+## Login passwords to test the app
+We have already created two accounts which can be used to access the NGO interface and Business interface respectively
+
+#### To login as an NGO
+email: ngo1@test.com
+<br>password: 1234</br>
+
+#### To login as a business
+email: com@gmail.com
+<br>password: 123467</br>
