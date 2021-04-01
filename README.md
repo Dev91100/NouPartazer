@@ -59,3 +59,6 @@ A typical restaurant has surplus of food every week that are thrown away. Instea
 This donation will be visible to all NGOs which are registered in the app. An NGO which is interested and able to handle perishable food can accept this donation and get prepared to go and collect the food so that it can be redistributed to people in need.
 
 Using the task page, both the restaurant and NGO can keep track of the donation status and with the QR Code scanning process, the business can both confirm the identity of the NGO which is collecting the food and confirm the food donation process.
+
+#### Use case #2 - NGOs visibility and accessibility
+A business or an individual who wants to donate to a particular NGO can scroll through the list of registered NGOs and get easy access to their information such as contact details, email and website. The app promotes the visibility of NGOs thus increasing the amount of donations and/or sponsors they obtain.
