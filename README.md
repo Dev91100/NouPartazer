@@ -33,7 +33,7 @@ In order to run the mobile application, the following minimum requirements shoul
 - Install the app, and follow the instructions below on how to use it.
 
 ## Usage
-#### Note : your device must have an active internet connection to access the app
+#### Note : *your device must have an active internet connection to access the app*
 ### First Use
 If you are a new user to our app, you can choose to sign up for a free account. There are a few steps in our signup. When creating your account, you have to choose whether you represent a **Non-Governmental-Organisation(NGO)** or an **Enterprise/Business**. Additionally, you have to provide the required information to complete the signup.
 
