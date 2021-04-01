@@ -126,7 +126,7 @@ class _NGOProfileModelState extends State<NGOProfileModel>
                       SectionWithEditButton
                       (
                         isEditable: widget.isEditable,
-                        title: 'Manzer Partazer Test Test Test Test'.toUpperCase(),
+                        title: 'Manzer Partazer'.toUpperCase(),
                         color: Color.fromRGBO(0, 50, 193, 1),
                         onPress: ngoEditNameBottomSheet,
                         isModalPage: true,
@@ -134,7 +134,7 @@ class _NGOProfileModelState extends State<NGOProfileModel>
                       
                       SectionTitle
                       (
-                        text: 'Food Sharing Project of Mauritius Mauritius Mauritius',
+                        text: 'Food Sharing Project of Mauritius',
                         textColor: Color.fromRGBO(51, 51, 51, 1),
                       ),
 
@@ -180,7 +180,7 @@ class _NGOProfileModelState extends State<NGOProfileModel>
 
                       ContactInfo
                       (
-                        phoneNumber: '+230 5820 7691',
+                        phoneNumber: '+230 5575 2567',
                         icon: Icons.call_outlined,
                       ),
 
