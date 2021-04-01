@@ -64,3 +64,12 @@ Using the task page, both the restaurant and NGO can keep track of the donation 
 
 #### Use case #2 - NGOs visibility and accessibility
 A business or an individual who wants to donate to a particular NGO can scroll through the list of registered NGOs and get easy access to their information such as contact details, email and website. The app promotes the visibility of NGOs thus increasing the amount of donations and/or sponsors they obtain.
+
+<br>
+
+#### Use case #3 - Marriage Food Surplus
+During normal times & the marriage season, there is a relatively high number of marriages being carried out in our small country of Mauritius. These marriages typically have hundreds of guests and can last a few days.
+
+It is very likely that there is a food surplus. We have actually experienced that quite the number if times here. The organisers usuually try to convince some of the guests and close relatives to take some of the food home. Despite of this, there is still a huge amount of left over food as well as ingredients. Those ingredients are sometimes 1 month away from expiry because it was obtained at a cheaper rate in order to reduce the cost of the wedding.
+
+Using NouPartazer, we believe that the food wastage will be greatly reduced and those food will reach the mouths of the needier people through NGOs. Those NGOs will also be very visible and the Government itself may encourage them to use this app.
