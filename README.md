@@ -1,38 +1,38 @@
 # NouPartazer (WeShare)
 Food Sharing App
 
-<a href="https://drive.google.com/uc?export=view&id=1SLaJFSs542l1HZ7zWxCYHRHsTtjOOzHO"><img src="https://drive.google.com/uc?export=view&id=1SLaJFSs542l1HZ7zWxCYHRHsTtjOOzHO" style="width: 500px; max-width: 100%; height: auto" title="Click for the larger version." /></a>
+<a href="https://drive.google.com/uc?export=view&id=1SLaJFSs542l1HZ7zWxCYHRHsTtjOOzHO"><img src="https://drive.google.com/uc?export=view&id=1SLaJFSs542l1HZ7zWxCYHRHsTtjOOzHO" style="width: 500px; max-width: 100%; height: auto" title="Click for the larger version." /></a><br><br>
 
-## Problem identified
+## **Problem identified**
 The causes of hunger and malnutrition include **poverty, inequalities** and **natural disasters**. Unfortunately, Mauritius has been experiencing all 3 of these in 2020. Although severe poverty is rare in Mauritius compared to other parts of Africa, the country contains a minority of very **poor households**, most of which are located in rural areas. The current global pandemic has had a strong negative impact on food supply chains worldwide by simultaneously affecting farm production, food processing, transport and logistics as well as final demand. This, combined with supermarkets closing for several weeks, has **increased the levels of poverty and hunger** in Mauritius.
 
-Some NGOs in Mauritius combat these social plagues by distributing food accross the island. However, their only platforms are online through a website which limits their visibility and accessibilty from those who want to donate and participate in this combat. Nowadays smartphones are more accessible than computers and an app well designed is more user friendly and intuitive than a website. Our solution can greatly help to achieve one or more of the United Nations 17 Sustainable Development Goals including **'Zero Hunger'** and **'No Poverty'** which are our main targets.
+Some NGOs in Mauritius combat these social plagues by distributing food accross the island. However, their only platforms are online through a website which limits their visibility and accessibilty from those who want to donate and participate in this combat. Nowadays smartphones are more accessible than computers and an app well designed is more user friendly and intuitive than a website. Our solution can greatly help to achieve one or more of the United Nations 17 Sustainable Development Goals including **'Zero Hunger'** and **'No Poverty'** which are our main targets.<br><br>
 
-## Solution proposed
+## **Solution proposed**
 **NouPartazer(WeShare)** is a food sharing app which aims at reducing the problem of hunger in Mauritius. The mobile application will facilitate the process of food collection between three main stakeholders: **NGOs, Businesses** and **Individuals**.
 
 **Our objectives are as follows:**
 - To create a user friendly platform for its users.
 - To reduce food wastage and provide to vulnerable families.
 - To promote food collection events from NGOs.
-- To make NGOs aware of donations from businesses.
+- To make NGOs aware of donations from businesses.<br><br>
 
-## Prototype link
+## **Prototype link**
 You can view our figma prototype using the link below:<br>
 ***Press(R) to restart the prototype*** <br>
-**https://www.figma.com/proto/OvWVrnTGk5ipVXaHMyaiEx/NouPartazer_2?node-id=495%3A1311&viewport=1308%2C-3593%2C0.5543531775474548&scaling=contain**
+**https://www.figma.com/proto/OvWVrnTGk5ipVXaHMyaiEx/NouPartazer_2?node-id=495%3A1311&viewport=1308%2C-3593%2C0.5543531775474548&scaling=contain**<br><br>
 
-## System requirements
+## **System requirements**
 In order to run the mobile application, the following minimum requirements should be met:
 - Mobile operating systems: **Android Jelly Bean, v16, 4.1.x or newer.**
-- Mobile hardware         : **ARM Android devices.**
+- Mobile hardware         : **ARM Android devices.**<br><br>
 
-## APK Installation
+## **APK Installation**
 - First of all, you have to download the ***noupartazer-release.apk*** file to your device. You can find it in folder <br>**NouPartazer_App -> apk -> noupartazer-release.apk**
 - After that, make sure your device allows app from outside the Playstore to be installed.
-- Install the app, and follow the instructions below on how to use it.
+- Install the app, and follow the instructions below on how to use it.<br><br>
 
-## Usage
+## **Usage**
 #### Note : *your device must have an active internet connection to access the app*
 ### First Use
 If you are a new user to our app, you can choose to sign up for a free account. There are a few steps in our signup. When creating your account, you have to choose whether you represent a **Non-Governmental-Organisation(NGO)** or an **Enterprise/Business**. Additionally, you have to provide the required information to complete the signup.
@@ -52,7 +52,7 @@ Press **Skip** on the SignIn/Signup page
 
 ---
 
-### Use cases
+### **Use cases**
 #### Use case #1 - Restaurant food surplus
 A typical restaurant has surplus of food every week that are thrown away. Instead of wasting the food, the owner of the restaurant creates an account in NouPartazer(WeShare) and posts a donation event with details such as food type, *which in this case is perishable food*, a date and time when an NGO can come and collect the food and more details about the location of the restaurant.<br>
 
