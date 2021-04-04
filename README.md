@@ -53,22 +53,22 @@ Press **Skip** on the SignIn/Signup page
 ---
 
 ### **Use cases**
-#### Use case #1 - Restaurant food surplus
+- #### Use case #1 - Restaurant food surplus
 A typical restaurant has surplus of food every week that are thrown away. Instead of wasting the food, the owner of the restaurant creates an account in NouPartazer(WeShare) and posts a donation event with details such as food type, *which in this case is perishable food*, a date and time when an NGO can come and collect the food and more details about the location of the restaurant.<br>
 
 This donation will be visible to all NGOs which are registered in the app. An NGO which is interested and able to handle perishable food can accept this donation and get prepared to go and collect the food so that it can be redistributed to people in need.
 
 Using the task page, both the restaurant and NGO can keep track of the donation status and with the QR Code scanning process, the business can both confirm the identity of the NGO which is collecting the food and confirm the food donation process.
 
-#### Use case #2 - NGOs visibility and accessibility
+- #### Use case #2 - NGOs visibility and accessibility
 A business or an individual who wants to donate to a particular NGO can scroll through the list of registered NGOs and get easy access to their information such as contact details, email and website. The app promotes the visibility of NGOs thus increasing the amount of donations and/or sponsors they obtain.
 
-#### Use case #3 - Wedding food surplus
+- #### Use case #3 - Wedding food surplus
 During wedding season, there is a relatively high number of marriage ceremonies being carried out in our small country of Mauritius. These ceremonies typically have hundreds of guests and can last a few days.
 
 There is a high probability of food surpluses that are wasted during these events. The organisers usually try to redistribute some of the surpluses to guests and relatives. Despite of this, there is still a huge amount of left over food including various ingredients such as vegetables and meat. Those ingredients are sometimes 1 month away from expiry because it was obtained at a cheaper rate in order to reduce the cost of the wedding.
 
 Using NouPartazer, the organisers can create a donation event so that the food wastage is greatly reduced and instead the food will reach the mouths of the needier people through NGOs.
 
-#### Use case #4 - NGO promote food collection event
+- #### Use case #4 - NGO promote food collection event
 Through the creation of stories within the app, an NGO can promote its food collection events. Both individuals and businesses can view these stories thus attracting more people to contribute.
