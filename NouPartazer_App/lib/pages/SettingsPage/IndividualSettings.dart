@@ -23,6 +23,7 @@ class IndividualSettings extends StatelessWidget
       body: SettingsModel
       (
         notifications: true,
+        appearance: true,
         language: true,
         languagePage: confirmLanguageDialog,
         aboutUs: true,

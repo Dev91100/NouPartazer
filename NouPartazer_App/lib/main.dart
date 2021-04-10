@@ -36,8 +36,8 @@ class MyApp extends StatelessWidget
 
     return ColorFiltered
     (
-      colorFilter: ColorFilter.mode(Colors.yellow.shade100, BlendMode.multiply), //Eye care mode
-      // colorFilter: ColorFilter.mode(Colors.transparent, BlendMode.color), //No eye care mode
+      // colorFilter: ColorFilter.mode(Colors.yellow.shade100, BlendMode.multiply), //Eye care mode
+      colorFilter: ColorFilter.mode(Colors.transparent, BlendMode.color), //No eye care mode
       child: MaterialApp
       (
         debugShowCheckedModeBanner: false,

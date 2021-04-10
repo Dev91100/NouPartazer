@@ -7,6 +7,7 @@ import 'package:noupartazer_app/components/ListTileModel.dart';
 class SettingsModel extends StatefulWidget
 {
   final bool notifications;
+  final bool appearance;
   final bool language;
   final bool security;
   final bool helpAndSupport;
@@ -14,6 +15,7 @@ class SettingsModel extends StatefulWidget
   final bool logOut;
 
   final notificationsPage;
+  final appearancePage;
   final languagePage;
   final helpAndSupportPage;
   final aboutUsPage;
@@ -24,6 +26,7 @@ class SettingsModel extends StatefulWidget
   (
     {
       this.notifications = false,
+      this.appearance = false,
       this.language = false,
       this.security = false,
       this.helpAndSupport = false,
@@ -31,6 +34,7 @@ class SettingsModel extends StatefulWidget
       this.logOut = true,
 
       this.notificationsPage,
+      this.appearancePage,
       this.languagePage,
       this.helpAndSupportPage,
       this.aboutUsPage,
@@ -113,6 +117,7 @@ class _SettingsModelState extends State<SettingsModel>
       (
         children:
         [
+
           (widget.notifications) ?
           ListTileModel
           (
@@ -123,6 +128,18 @@ class _SettingsModelState extends State<SettingsModel>
             hasTrailingButton: true,
             trailingButton: showSwitch(),
             trailingColor: Color.fromRGBO(0, 50, 193, 1),
+          ) : Container(),
+
+          (widget.appearance) ?
+          ListTileModel
+          (
+            leadingIcon: Icons.notifications_none_outlined,
+            titleText: 'Appearance',
+            subtitleText: 'Change the general appearance of the app',
+            hastrailingIcon: true,
+            trailingIcon: Icons.keyboard_arrow_right,
+            isPage: true,
+            onPress: widget.appearancePage,
           ) : Container(),
 
           (widget.language) ?
