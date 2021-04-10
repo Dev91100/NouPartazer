@@ -159,19 +159,19 @@ class BusinessProfileModel extends StatelessWidget
                       ContactInfo
                       (
                         margin: EdgeInsets.all(0),
-                        website: 'www.manzerpartazer.org',
+                        website: 'www.jumbosupermarket.org',
                         icon: Icons.language_outlined,
                       ),
                       
                       ContactInfo
                       (
-                        email: 'info@manzerpartazer.org',
+                        email: 'jumbo@email.com',
                         icon: Icons.email_outlined,
                       ),
 
                       ContactInfo
                       (
-                        phoneNumber: '+230 5820 7691',
+                        phoneNumber: '+230 5575 2567',
                         icon: Icons.call_outlined,
                       ),
 

@@ -15,7 +15,7 @@ class NGOHomePage extends StatelessWidget
       {
         return Scaffold
         (
-          appBar: PageTitle(text: 'STORIES'),
+          appBar: PageTitle(text: 'DONATIONS'),
           body: Container
           (
             child: BusinessStoryModel

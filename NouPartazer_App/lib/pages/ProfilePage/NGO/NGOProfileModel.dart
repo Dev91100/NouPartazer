@@ -180,7 +180,7 @@ class _NGOProfileModelState extends State<NGOProfileModel>
 
                       ContactInfo
                       (
-                        phoneNumber: '+230 5820 7691',
+                        phoneNumber: '+230 5575 2567',
                         icon: Icons.call_outlined,
                       ),
 
