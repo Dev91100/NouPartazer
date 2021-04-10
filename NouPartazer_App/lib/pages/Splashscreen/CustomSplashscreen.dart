@@ -33,7 +33,7 @@ class _CustomSplashscreenState extends State<CustomSplashscreen>
 
     _checkInternetConnectivity();
     _query = DatabaseQuery();
-    readUserData();
+    // readUserData();
   }
 
   _checkInternetConnectivity() async
@@ -74,34 +74,34 @@ class _CustomSplashscreenState extends State<CustomSplashscreen>
     }
   }
 
-  readUserData() async
-  {
-    _orgDataList = [];
-    var orgData = await _query.readData('PROFILE');
+  // readUserData() async
+  // {
+  //   _orgDataList = [];
+  //   var orgData = await _query.readData('PROFILE');
 
-    orgData.forEach((data)
-    {
+  //   orgData.forEach((data)
+  //   {
 
-      var profile = PROFILE();
+  //     var profile = PROFILE();
 
-      profile.profileID   = data['userID'];
-      profile.ngoID       = data['ngoID'];
-      profile.businessID  = data['businessID'];
-      profile.email       = data['email'];
-      profile.password    = data['password'];
-      profile.description = data['description'];
+  //     profile.profileID   = data['userID'];
+  //     profile.ngoID       = data['ngoID'];
+  //     profile.businessID  = data['businessID'];
+  //     profile.email       = data['email'];
+  //     profile.password    = data['password'];
+  //     profile.description = data['description'];
 
-      _orgDataList.add(profile);
+  //     _orgDataList.add(profile);
 
-    });
+  //   });
 
-    if(_orgDataList.length > 0)
-    {
-      print("UserID " + _orgDataList[0].profileID.toString());
-    }
+  //   if(_orgDataList.length > 0)
+  //   {
+  //     print("UserID " + _orgDataList[0].profileID.toString());
+  //   }
     
-    return orgData;
-  }
+  //   return orgData;
+  // }
 
   @override
   Widget build(BuildContext context)
