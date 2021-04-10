@@ -13,6 +13,7 @@ import 'package:noupartazer_app/components/CustomTextField.dart';
 import 'package:noupartazer_app/components/Transitions/AllTransitions.dart';
 import 'package:noupartazer_app/components/Buttons/LargeButtonIconText.dart';
 import 'package:noupartazer_app/Pages/BottomNavigation/BusinessBottomNav.dart';
+import 'package:noupartazer_app/database/Tables/PROFILE.dart';
 import 'package:noupartazer_app/pages/BottomNavigation/NGOBottomNav.dart';
 
 
@@ -38,7 +39,7 @@ class _SignInWidgetState extends State<SignInWidget>
 
   DatabaseQuery _query;
 
-  List<UserDataModel> _userDataList;
+  List<PROFILE> _profileDataList;
 
   @override
   void initState()
@@ -53,25 +54,25 @@ class _SignInWidgetState extends State<SignInWidget>
   }
 
   // Insert data in table
-  // insertUserData({String tableName = 'USERDATA', var data}) async
-  // {
-  //   return await _repository.insertData(tableName, data);
-  // }
+  insertUserData({String tableName = 'PROFILE', var data}) async
+  {
+    return await _query.insertData(tableName, data);
+  }
 
   // Read data from table
   readUserData() async
   {
-    _userDataList = [];
-    var userData = await _repository.readData('USERDATA');
+    _profileDataList = [];
+    var userData = await _query.readData('PROFILE');
     userData.forEach((data)
     {
       setState(() {
-        var userDataModel = UserDataModel();
-        userDataModel.userID = data['userID'];
-        _userDataList.add(userDataModel);
+        var profile = PROFILE();
+        profile.email = data['email'];
+        _profileDataList.add(profile);
       });
     });
-    print("UserID " + _userDataList[0].userID.toString());
+    print("Email: " + _profileDataList[0].email.toString());
     return userData;
   }
 
@@ -136,15 +137,15 @@ class _SignInWidgetState extends State<SignInWidget>
 
     if(jsonDecode(request.body) != 'false')
     {
-      // var result = await insertUserData
-      // (
-      //   data: UserDataModel
-      //   (
-      //     userID: 5,
-      //   ).userDataMap()
-      // );
+      var result = await insertUserData
+      (
+        data: PROFILE
+        (
+          email: "test@emailsqf.com",
+        ).generateMap()
+      );
 
-      // print(result);
+      print(result);
 
       AllTransitions().getTransition
       (
@@ -275,9 +276,9 @@ class _SignInWidgetState extends State<SignInWidget>
               isPageTransition: true,
               transitionType: 'downToUp',
               transitionDuration: 1100,
-              onPress: NGOBottomNav(),
-              // isAsync: true,
-              // onSuperPress: userLogin,
+              // onPress: NGOBottomNav(),
+              isAsync: true,
+              onSuperPress: userLogin,
             ),
           )
         ],
