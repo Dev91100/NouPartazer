@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
-import 'package:noupartazer_app/components/Buttons/SmallButtonIconText.dart';
-import 'package:noupartazer_app/components/Buttons/SmallCustomButtonIconText.dart';
 
 import 'package:noupartazer_app/Global.dart';
+import 'package:noupartazer_app/components/Buttons/SmallButtonIconText.dart';
+import 'package:noupartazer_app/components/Buttons/SmallCustomButtonIconText.dart';
 import 'package:noupartazer_app/components/GetImage/EditMembersPhoto/MembersPhotoGetImage.dart';
 import 'package:noupartazer_app/Pages/Dialogs/components/IconTextField.dart';
+
+//This file builds a customizable model for editing members of an NGO
 
 class EditMembersModel
 {
@@ -80,7 +82,6 @@ class EditMembersModel
           };
 
           var res = await http.post(uri, body:data);
-          
 
           if(jsonDecode(res.body) == "true")
           {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-import 'package:noupartazer_app/components/IconText.dart';
 import 'package:noupartazer_app/Global.dart';
+import 'package:noupartazer_app/components/IconText.dart';
 import 'package:noupartazer_app/components/Transitions/AllTransitions.dart';
 
 class SmallCustomButtonIconText extends StatelessWidget

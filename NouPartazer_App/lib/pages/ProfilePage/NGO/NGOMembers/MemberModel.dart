@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'package:noupartazer_app/Pages/ProfilePage/NGO/NGOMembers/Member.dart';
-import 'package:noupartazer_app/Pages/ProfilePage/NGO/NGOMembers/MemberList.dart';
+import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/components/Text/SmallText.dart';
 import 'package:noupartazer_app/components/Buttons/RoundIconButton.dart';
-import 'package:noupartazer_app/Global.dart';
+import 'package:noupartazer_app/Pages/ProfilePage/NGO/NGOMembers/Member.dart';
+import 'package:noupartazer_app/Pages/ProfilePage/NGO/NGOMembers/MemberList.dart';
 
 class MemberModel extends StatelessWidget
 {

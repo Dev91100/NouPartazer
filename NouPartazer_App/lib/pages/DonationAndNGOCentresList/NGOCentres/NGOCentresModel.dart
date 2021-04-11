@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/components/Text/NormalText.dart';
 import 'package:noupartazer_app/components/Text/TinyText.dart';
-import 'package:noupartazer_app/Global.dart';
-import 'package:noupartazer_app/components/Transitions/AllTransitions.dart';
-import 'package:noupartazer_app/pages/ProfilePage/NGO/ViewOnlyNGOProfile.dart';
-
 
 class NGOCentresModel extends StatelessWidget
 {
@@ -156,11 +153,16 @@ class NGOCentresModel extends StatelessWidget
           ),
           onPressed: () 
           {
-            AllTransitions().getTransition
+            Navigator.push
             (
-              context: context,
-              transitionType: 'rightToLeft',
-              onPress: ViewOnlyNGOProfile(),
+              context,
+              MaterialPageRoute
+              (
+                builder: (context)
+                {
+                  return ;
+                },
+              ),
             );
           },
         ),

@@ -6,6 +6,8 @@ import 'package:noupartazer_app/Pages/HomePage/NGOHomePage.dart';
 import 'package:noupartazer_app/Pages/ProfilePage/NGO/EditableNGOProfile.dart';
 import 'package:noupartazer_app/Pages/Task/TabBar/NGOTaskTab.dart';
 
+//This file controls the bottom navigation bar in the NGO POV
+
 class NGOBottomNav extends StatefulWidget
 {
   @override
@@ -101,7 +103,7 @@ class _NGOBottomNavState extends State<NGOBottomNav>
             (
               activeIcon: Icon(Icons.home),
               icon: Icon(Icons.home_outlined),
-              label: 'home',
+              label: 'Home',
             ),
 
             BottomNavigationBarItem
@@ -120,7 +122,7 @@ class _NGOBottomNavState extends State<NGOBottomNav>
                 size: 50.0,
               ),
 
-              label: 'Add Stories',
+              label: 'Create Story',
             ),
 
             BottomNavigationBarItem

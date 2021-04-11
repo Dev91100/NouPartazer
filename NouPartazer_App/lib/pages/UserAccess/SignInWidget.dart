@@ -1,19 +1,21 @@
+import 'package:flutter/material.dart';
 import 'dart:convert';
 
-import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
 
-import 'package:noupartazer_app/components/Buttons/LargeButtonIconText.dart';
-import 'package:noupartazer_app/components/CustomTextField.dart';
+import 'package:noupartazer_app/Global.dart';
+import 'package:noupartazer_app/database/Tables/NGO.dart';
+import 'package:noupartazer_app/database/DatabaseQuery.dart';
 import 'package:noupartazer_app/components/Text/HugeText.dart';
 import 'package:noupartazer_app/components/Text/MediumText.dart';
-import 'package:noupartazer_app/Global.dart';
+import 'package:noupartazer_app/components/CustomTextField.dart';
 import 'package:noupartazer_app/components/Transitions/AllTransitions.dart';
+import 'package:noupartazer_app/components/Buttons/LargeButtonIconText.dart';
 import 'package:noupartazer_app/Pages/BottomNavigation/BusinessBottomNav.dart';
-import 'package:noupartazer_app/Pages/BottomNavigation/NGOBottomNav.dart';
-import 'package:noupartazer_app/database/Repository.dart';
-import 'package:noupartazer_app/database/UserDataModel.dart';
+import 'package:noupartazer_app/database/Tables/PROFILE.dart';
+import 'package:noupartazer_app/pages/BottomNavigation/NGOBottomNav.dart';
+
 
 class SignInWidget extends StatefulWidget
 {
@@ -35,16 +37,16 @@ class _SignInWidgetState extends State<SignInWidget>
   TextEditingController emailCtrl, passwordCtrl;
   bool processing = false;
 
-  Repository _repository;
+  DatabaseQuery _query;
 
-  List<UserDataModel> _userDataList;
+  List<PROFILE> _profileDataList;
 
   @override
   void initState()
   {
     super.initState();
     
-    _repository = Repository();
+    _query = DatabaseQuery();
     readUserData();
 
     emailCtrl = new TextEditingController();
@@ -52,25 +54,25 @@ class _SignInWidgetState extends State<SignInWidget>
   }
 
   // Insert data in table
-  insertUserData({String tableName = 'USERDATA', var data}) async
+  insertUserData({String tableName = 'PROFILE', var data}) async
   {
-    return await _repository.insertData(tableName, data);
+    return await _query.insertData(tableName, data);
   }
 
   // Read data from table
   readUserData() async
   {
-    _userDataList = [];
-    var userData = await _repository.readData('USERDATA');
+    _profileDataList = [];
+    var userData = await _query.readData('PROFILE');
     userData.forEach((data)
     {
       setState(() {
-        var userDataModel = UserDataModel();
-        userDataModel.userID = data['userID'];
-        _userDataList.add(userDataModel);
+        var profile = PROFILE();
+        profile.email = data['email'];
+        _profileDataList.add(profile);
       });
     });
-    print("UserID " + _userDataList[0].userID.toString());
+    print("Email: " + _profileDataList[0].email.toString());
     return userData;
   }
 
@@ -137,10 +139,10 @@ class _SignInWidgetState extends State<SignInWidget>
     {
       var result = await insertUserData
       (
-        data: UserDataModel
+        data: PROFILE
         (
-          userID: 5,
-        ).userDataMap()
+          email: "test@emailsqf.com",
+        ).generateMap()
       );
 
       print(result);
@@ -271,9 +273,9 @@ class _SignInWidgetState extends State<SignInWidget>
               hasIcon: false,
               processing: processing,
               elevation: 0,
-              // isPageTransition: true,
-              // transitionType: 'downToUp',
-              // transitionDuration: 1100,
+              isPageTransition: true,
+              transitionType: 'downToUp',
+              transitionDuration: 1100,
               // onPress: NGOBottomNav(),
               isAsync: true,
               onSuperPress: userLogin,

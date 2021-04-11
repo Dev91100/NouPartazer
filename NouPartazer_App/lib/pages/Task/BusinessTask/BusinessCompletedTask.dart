@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'package:noupartazer_app/components/CustomDivider.dart';
 import 'package:noupartazer_app/Pages/Task/BusinessTask/BusinessTaskModel.dart';
 import 'package:noupartazer_app/Pages/Task/BusinessTask/BusinessTask.dart';
 import 'package:noupartazer_app/Pages/Task/BusinessTask/CompletedTaskList.dart';
-import 'package:noupartazer_app/components/CustomDivider.dart';
 
 class BusinessCompletedTask extends StatelessWidget
 {

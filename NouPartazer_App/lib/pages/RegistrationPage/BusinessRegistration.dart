@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
 import 'dart:convert';
 
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
+import 'package:fluttertoast/fluttertoast.dart';
 
 import 'package:noupartazer_app/Global.dart';
-import 'package:noupartazer_app/components/CustomTextField.dart';
-import 'package:noupartazer_app/components/Buttons/LargeCustomButtonIconText.dart';
 import 'package:noupartazer_app/components/PageTitle.dart';
 import 'package:noupartazer_app/components/SectionTitle.dart';
 import 'package:noupartazer_app/components/Text/HugeText.dart';
 import 'package:noupartazer_app/components/Text/MediumText.dart';
+import 'package:noupartazer_app/components/CustomTextField.dart';
 import 'package:noupartazer_app/pages/RegistrationPage/AccountCreated.dart';
 import 'package:noupartazer_app/components/Transitions/AllTransitions.dart';
+import 'package:noupartazer_app/Pages/BottomNavigation/BusinessBottomNav.dart';
+import 'package:noupartazer_app/components/Buttons/LargeCustomButtonIconText.dart';
+
+//This file controls the registration of a business
 
 class BusinessRegistration extends StatefulWidget
 {
@@ -261,10 +264,10 @@ class _BusinessRegistrationState extends State<BusinessRegistration>
                         text: 'Register',
                         processing: processing,
                         hasIcon: false,
-                        // isPageTransition: true,
-                        // transitionType: 'downToUp',
-                        // onPress: BusinessBottomNav(),
-                        onSuperPress: registerUser,
+                        isPageTransition: true,
+                        transitionType: 'downToUp',
+                        onPress: BusinessBottomNav(),
+                        // onSuperPress: registerUser,
                       )
                     ),
                   ],

@@ -1,11 +1,11 @@
 import 'package:noupartazer_app/database/DatabaseConnection.dart';
 import 'package:sqflite/sqflite.dart';
 
-class Repository
+class DatabaseQuery
 {
   DatabaseConnection _databaseConnection;
 
-  Repository()
+  DatabaseQuery()
   {
     _databaseConnection = DatabaseConnection();
   }

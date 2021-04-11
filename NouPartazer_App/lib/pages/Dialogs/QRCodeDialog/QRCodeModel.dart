@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Global.dart';
 
+//This file builds a customizable model for showing a QR code in an dialog box
+
 class QRCodeModel
 {
   String text;

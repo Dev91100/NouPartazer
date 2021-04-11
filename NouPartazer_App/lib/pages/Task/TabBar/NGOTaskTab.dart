@@ -1,10 +1,9 @@
 import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:noupartazer_app/components/Text/MediumText.dart';
 
 import 'package:noupartazer_app/Global.dart';
-
+import 'package:noupartazer_app/components/Text/MediumText.dart';
 import 'package:noupartazer_app/pages/Task/NGOTask/NGOCancelledTask.dart';
 import 'package:noupartazer_app/pages/Task/NGOTask/NGOCompletedTask.dart';
 import 'package:noupartazer_app/pages/Task/NGOTask/NGOOngoingTask.dart';

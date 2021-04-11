@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:noupartazer_app/Pages/Dialogs/EditInfoAndContactDialog/EditInfoModel.dart';
 
+//This file allows a business to edit its contact information that is displayed
+
 class EditContact extends EditInfoModel
 {
   String title;

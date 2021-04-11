@@ -4,6 +4,8 @@ import 'package:noupartazer_app/Pages/DonationAndNGOCentresList/IndividualNGOCen
 import 'package:noupartazer_app/Pages/HomePage/IndividualHomePage.dart';
 import 'package:noupartazer_app/pages/SettingsPage/IndividualSettings.dart';
 
+//This file controls the bottom navigation bar in the individual POV
+
 class IndividualBottomNav extends StatefulWidget
 {
   @override
@@ -89,7 +91,7 @@ class _IndividualBottomNavState extends State<IndividualBottomNav>
             (
               activeIcon: Icon(Icons.home),
               icon: Icon(Icons.home_outlined),
-              label: 'home',
+              label: 'Home',
             ),
 
             BottomNavigationBarItem

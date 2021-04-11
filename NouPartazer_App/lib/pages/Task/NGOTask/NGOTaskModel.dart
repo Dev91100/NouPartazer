@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/components/IconText.dart';
 import 'package:noupartazer_app/components/SectionTitle.dart';
 import 'package:noupartazer_app/components/LongText.dart';
@@ -7,7 +8,6 @@ import 'package:noupartazer_app/components/ContainerIconText.dart';
 import 'package:noupartazer_app/components/ContainerText.dart';
 import 'package:noupartazer_app/components/Buttons/SmallButtonIconText.dart';
 import 'package:noupartazer_app/Pages/EventDetailsPage/EventDetails.dart';
-import 'package:noupartazer_app/Global.dart';
 
 class NGOTaskModel extends StatelessWidget
 {

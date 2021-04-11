@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
+import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/components/Buttons/LargeCustomButtonIconText.dart';
 import 'package:noupartazer_app/components/PageTitle.dart';
 import 'package:noupartazer_app/components/SectionTitle.dart';
 import 'package:noupartazer_app/components/Buttons/SmallButtonIconText.dart';
 import 'package:noupartazer_app/components/CustomTextField.dart';
-import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/Pages/Dialogs/ConfirmationDialog/DeactivateAccount.dart';
 
 class Security extends StatefulWidget

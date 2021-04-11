@@ -7,6 +7,8 @@ import 'package:noupartazer_app/pages/Story/BusinessStory/CreateEvent.dart';
 import 'package:noupartazer_app/Pages/DonationAndNGOCentresList/BusinessNGOCentresList.dart';
 import 'package:noupartazer_app/Pages/HomePage/BusinessHomePage.dart';
 
+//This file controls the bottom navigation bar in the business POV
+
 class BusinessBottomNav extends StatefulWidget
 {
   @override
@@ -102,7 +104,7 @@ class _BusinessBottomNavState extends State<BusinessBottomNav>
             (
               activeIcon: Icon(Icons.home),
               icon: Icon(Icons.home_outlined),
-              label: 'home',
+              label: 'Home',
             ),
 
             BottomNavigationBarItem
@@ -121,7 +123,7 @@ class _BusinessBottomNavState extends State<BusinessBottomNav>
                 size: 50.0,
               ),
 
-              label: 'Add Stories',
+              label: 'Create Event',
             ),
 
             BottomNavigationBarItem

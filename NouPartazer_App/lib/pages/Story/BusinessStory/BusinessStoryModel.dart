@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 import 'package:carousel_slider/carousel_slider.dart';
 
-import 'package:noupartazer_app/Pages/Story/BusinessStory/BusinessStory.dart';
+import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/components/ContainerIconText.dart';
 import 'package:noupartazer_app/components/ContainerText.dart';
 import 'package:noupartazer_app/components/Text/MediumText.dart';
 import 'package:noupartazer_app/components/Text/SmallText.dart';
-import 'package:noupartazer_app/Global.dart';
+import 'package:noupartazer_app/Pages/Story/BusinessStory/BusinessStory.dart';
 
 class BusinessStoryModel extends StatelessWidget
 {

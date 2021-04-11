@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
+import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/components/Buttons/SettingsButton.dart';
 import 'package:noupartazer_app/components/SectionTitle.dart';
 import 'package:noupartazer_app/components/CustomDivider.dart';
 import 'package:noupartazer_app/components/LongText.dart';
 import 'package:noupartazer_app/components/SectionWithEditButton.dart';
 import 'package:noupartazer_app/components/ContactInfo.dart';
-import 'package:noupartazer_app/Global.dart';
 import 'package:noupartazer_app/components/GetImage/BannerPhoto/BannerPhotoGetImage.dart';
 import 'package:noupartazer_app/components/GetImage/ProfilePhoto/ProfilePhotoGetImage.dart';
 import 'package:noupartazer_app/Pages/Story/BusinessStory/BusinessStoryModelProfile.dart';
