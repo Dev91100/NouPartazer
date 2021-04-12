@@ -1,4 +1,4 @@
-package com.example.NouPartazer_App
+package com.example.noupartazer_app
 
 import io.flutter.embedding.android.FlutterActivity
 
